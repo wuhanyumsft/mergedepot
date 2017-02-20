@@ -1,8 +1,8 @@
 echo "Hello World."
 # Include
 #$currentDir = $($MyInvocation.MyCommand.Definition) | Split-Path
-#. "$currentDir/../utility/common.ps1"
-#. "$currentDir/../utility/console.utility.ps1"
+#. "$currentDir/utility/common.ps1"
+#. "$currentDir/utility/console.utility.ps1"
 
 # Main
 $errorActionPreference = 'Stop'
