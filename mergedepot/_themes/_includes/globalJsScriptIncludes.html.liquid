@@ -1,0 +1,77 @@
+{%- assign contentLocale = page.locale | downcase -%}
+{%- if contentLocale == null or contentLocale == blank -%}
+{%- assign contentLocale = 'en-us' -%}
+{%- endif -%}
+{%- comment -%}
+This is a total abuse of all that is right and decent.
+Starting off, this is a misuse of the style command. 
+After capturing the output of the first abuse, all of the extra not needed stuff is removed. 
+Note that at this time, the trim filter is not working in liquid.
+Then take what is left, add the rest of the path to the script file and jam it into a script tag.
+Unless we have detected a dev build, of course.
+-- Hang my head low --
+{%- endcomment -%}
+{%- capture tempStyleTag -%}{%- style global -%}{%- endcapture -%}
+{%- assign tempStyleTag = tempStyleTag | remove: 'rel="stylesheet"' -%}
+{%- assign tempStyleTag = tempStyleTag | remove: '<link' -%}
+{%- assign tempStyleTag = tempStyleTag | remove: 'href="' -%}
+{%- assign tempStyleTag = tempStyleTag | remove: '">' -%}
+{%- assign pathToGlobal = tempStyleTag | remove: ' ' -%}
+{%- assign pathToTheme = pathToGlobal | remove: 'global' -%}
+
+<script>
+	msDocs.data.pathToTheme = '{{pathToTheme}}';
+	msDocs.data.brand = '{{brand}}';
+{%- if page._op_defaultDevLang != null and page._op_defaultDevLang != blank -%}
+	msDocs.settings.defaultDevLang = '{{page._op_defaultDevLang}}'		
+{%- endif -%}
+</script>
+
+{%- if brand == 'azure' -%}
+<link rel="stylesheet" href="{{pathToGlobal}}/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/{{- contentLocale -}}/asset/menucss/">
+{%- endif -%}
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="{{pathToGlobal}}/js/polyfills/all.js"></script>
+	{%- if brand == 'azure' -%}
+	<script src="{{pathToGlobal}}/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+	{%- endif -%}
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="{{pathToGlobal}}/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+{%- if brand != 'azure' -%}
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async defer></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async defer></script>
+{%- endif -%}
+
+{%- if page._op_isLocalBuild -%}
+{%- comment -%}
+	While the global script include file is being hand-bundled and minimized, 
+	put all of those files here for dev.
+	This should be a list of all files, in order, included in 
+	/global/js/global.js
+	and
+	/global/js/global.min.js
+{%- endcomment -%}
+  <script src="{{pathToGlobal}}/js/detectJs.js"></script>
+  <script src="{{pathToGlobal}}/js/IE10MobileFix.js"></script>
+  <script src="{{pathToGlobal}}/js/jquery/plugins/jquery.domReadyShield.js"></script>
+  <script src="{{pathToGlobal}}/js/jquery/plugins/jquery.lald.js"></script>
+  <script src="{{pathToGlobal}}/js/jquery/plugins/jquery.addState.js"></script>
+  <script src="{{pathToGlobal}}/js/jquery/plugins/jquery.ifThen.js"></script>
+  <script src="{{pathToGlobal}}/js/localStorage.js"></script>
+  <script src="{{pathToGlobal}}/js/themeSwitcher.js"></script>
+  <script src="{{pathToGlobal}}/js/get_removeLocal.js"></script>
+  <script src="{{pathToGlobal}}/js/getParam.js"></script>
+  <script src="{{pathToGlobal}}/js/toc.js"></script>
+{%- else -%}
+  <script src="{{pathToGlobal}}/js/global.min.js?v=31"></script>
+{%- endif -%}
+{%- if brand == 'azure' -%}
+  <script src="{{pathToGlobal}}/js/azureHeader/loader.js?v=4"></script>
+{%- endif -%}

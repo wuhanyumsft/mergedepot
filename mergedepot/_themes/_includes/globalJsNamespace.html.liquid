@@ -1,0 +1,19 @@
+<script>
+	var msDocs = {
+		data:{
+			{%- if contentLocale == null or contentLocale == blank -%}
+			contentLocale: 'en-us'
+			{%- else -%}
+			contentLocale: '{{contentLocale}}'
+			{%- endif -%}
+		},
+		functions:{},
+		settings:{
+			{%- if extendBreadcrumb -%}
+			extendBreadcrumb: true
+			{%- else -%}
+			extendBreadcrumb: false
+			{%- endif -%}
+		}
+	};
+	</script>

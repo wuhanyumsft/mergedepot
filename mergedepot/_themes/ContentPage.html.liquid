@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+{% assign contentLocale = page.locale | downcase %}
+{% assign pageTemplate = 'ContentPage' %}
+{% if page._op_extendBreadcrumb %}
+  {% assign extendBreadcrumb = page._op_extendBreadcrumb %}
+{% else %}
+  {% assign extendBreadcrumb = false %}
+{% endif %}
+{%- if page._op_layout == "Reference" -%}
+{%- assign className = " reference" -%}
+{% elsif page._op_layout == "Rest" %}
+{%- assign className = " rest" -%}
+{%- endif -%}
+{%- if contentLocale == null or contentLocale == blank or contentLocale == 'en-us' -%}
+<html class="no-js{{className}}" lang="en-us" dir="ltr" >
+{%- elseif contentLocale == 'ar-sa' or contentLocale == 'he-il' -%}
+<html class="no-js{{className}}" lang="{{ contentLocale }}" dir="rtl" >
+{%- else -%}
+<html class="no-js{{className}}" lang="{{ contentLocale }}" dir="ltr" >
+{%- endif -%}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="{{ page._op_ogTitle }}"/>
+    <meta name="ms.pagetype" content="contentpage" />
+    <meta name="ms.sitename" content="DOCS" />
+    {{ metadata }}
+    {% if page._op_searchScope and page._op_searchScope.size > 0 %}
+    <meta name="scope" content="{{ page._op_searchScope | join: ', ' }}" />
+    {% endif %}
+    {% if page._op_brand %}
+      {% assign brand = page._op_brand %}
+    <meta name="brand" content="{{ brand }}" />
+    {% else %}
+      {% assign brand = '' %}
+    {% endif %}
+    {% if page._op_canonicalUrl != null %}<link href="{{ page._op_canonicalUrl }}" rel="canonical">{% endif %}
+    <title>{{ page.title }}</title>
+    {% style css\1799cb50375cce4bc4c6.contentpage.css %}
+    <script>
+	var msDocs = {
+		data:{
+			{%- if contentLocale == null or contentLocale == blank -%}
+			contentLocale: 'en-us'
+			{%- else -%}
+			contentLocale: '{{contentLocale}}'
+			{%- endif -%}
+		},
+		functions:{},
+		settings:{
+			{%- if extendBreadcrumb -%}
+			extendBreadcrumb: true
+			{%- else -%}
+			extendBreadcrumb: false
+			{%- endif -%}
+		}
+	};
+	</script>
+    {%- assign contentLocale = page.locale | downcase -%}
+{%- if contentLocale == null or contentLocale == blank -%}
+{%- assign contentLocale = 'en-us' -%}
+{%- endif -%}
+{%- comment -%}
+This is a total abuse of all that is right and decent.
+Starting off, this is a misuse of the style command. 
+After capturing the output of the first abuse, all of the extra not needed stuff is removed. 
+Note that at this time, the trim filter is not working in liquid.
+Then take what is left, add the rest of the path to the script file and jam it into a script tag.
+Unless we have detected a dev build, of course.
+-- Hang my head low --
+{%- endcomment -%}
+{%- capture tempStyleTag -%}{%- style global -%}{%- endcapture -%}
+{%- assign tempStyleTag = tempStyleTag | remove: 'rel="stylesheet"' -%}
+{%- assign tempStyleTag = tempStyleTag | remove: '<link' -%}
+{%- assign tempStyleTag = tempStyleTag | remove: 'href="' -%}
+{%- assign tempStyleTag = tempStyleTag | remove: '">' -%}
+{%- assign pathToGlobal = tempStyleTag | remove: ' ' -%}
+{%- assign pathToTheme = pathToGlobal | remove: 'global' -%}
+
+<script>
+	msDocs.data.pathToTheme = '{{pathToTheme}}';
+	msDocs.data.brand = '{{brand}}';
+{%- if page._op_defaultDevLang != null and page._op_defaultDevLang != blank -%}
+	msDocs.settings.defaultDevLang = '{{page._op_defaultDevLang}}'		
+{%- endif -%}
+</script>
+
+{%- if brand == 'azure' -%}
+<link rel="stylesheet" href="{{pathToGlobal}}/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/{{- contentLocale -}}/asset/menucss/">
+{%- endif -%}
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="{{pathToGlobal}}/js/polyfills/all.js"></script>
+	{%- if brand == 'azure' -%}
+	<script src="{{pathToGlobal}}/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+	{%- endif -%}
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="{{pathToGlobal}}/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+{%- if brand != 'azure' -%}
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async defer></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async defer></script>
+{%- endif -%}
+
+{%- if page._op_isLocalBuild -%}
+{%- comment -%}
+	While the global script include file is being hand-bundled and minimized, 
+	put all of those files here for dev.
+	This should be a list of all files, in order, included in 
+	/global/js/global.js
+	and
+	/global/js/global.min.js
+{%- endcomment -%}
+  <script src="{{pathToGlobal}}/js/detectJs.js"></script>
+  <script src="{{pathToGlobal}}/js/IE10MobileFix.js"></script>
+  <script src="{{pathToGlobal}}/js/jquery/plugins/jquery.domReadyShield.js"></script>
+  <script src="{{pathToGlobal}}/js/jquery/plugins/jquery.lald.js"></script>
+  <script src="{{pathToGlobal}}/js/jquery/plugins/jquery.addState.js"></script>
+  <script src="{{pathToGlobal}}/js/jquery/plugins/jquery.ifThen.js"></script>
+  <script src="{{pathToGlobal}}/js/localStorage.js"></script>
+  <script src="{{pathToGlobal}}/js/themeSwitcher.js"></script>
+  <script src="{{pathToGlobal}}/js/get_removeLocal.js"></script>
+  <script src="{{pathToGlobal}}/js/getParam.js"></script>
+  <script src="{{pathToGlobal}}/js/toc.js"></script>
+{%- else -%}
+  <script src="{{pathToGlobal}}/js/global.min.js?v=31"></script>
+{%- endif -%}
+{%- if brand == 'azure' -%}
+  <script src="{{pathToGlobal}}/js/azureHeader/loader.js?v=4"></script>
+{%- endif -%}
+
+  </head>
+  <body class="contentpage">
+    {%- assign contentLocale = page.locale | downcase -%}
+{%- if contentLocale == null or contentLocale == blank -%}
+{%- assign contentLocale = 'en-us' -%}
+{%- endif -%}
+
+{%- if brand == 'azure' -%}
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/{{- contentLocale -}}/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewBox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z" />
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z" />
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z" />
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z" />
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z" />
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z" />
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z" />
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z" />
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z" />
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z" />
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z" />
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z" />
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z" />
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+{% else %}
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+{%- endif -%}
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+{% if pageTemplate != 'ContentPage' and pageTemplate != 'HubPage' and pageTemplate != 'LandingPage' and pageTemplate != 'SearchPage' %}
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    {% if pageTemplate == 'Conceptual' or pageTemplate == 'NamespaceListPage' %}
+                        {% if contentLocale == null or contentLocale == blank or contentLocale contains 'en-' %}
+                            <li>
+                                <a href="#comments-container" id="comments-link" ms.cmpnm="comments">
+                                    <i class="icon icon-comments"></i>Liquid error: Can't find the localized string comments for template ContentPage.
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endif %}
+                    {% unless hideEdit %}
+                        {% if page.open_to_public_contributors %}                        
+                            <li id="contenteditbtn">
+                                <a href="{{ page.content_git_url }}" title="Liquid error: Can't find the localized string editdesc for template ContentPage." ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Liquid error: Can't find the localized string edit for template ContentPage.
+                                </a>
+                            </li>
+                        {% else %}
+                            <li id="contenteditbtn" hidden >
+                                <a href="{{ page.content_git_url }}" title="Liquid error: Can't find the localized string editdesc for template ContentPage." ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Liquid error: Can't find the localized string edit for template ContentPage.
+                                </a>
+                            </li>             
+                        {% endif %}
+                    {% endunless %}
+					{% unless hideViewSource %}
+						{% if page.source_url != null and page.source_url != blank %}
+							<li>
+								<a href="{{ page.source_url}}" ms.cmpnm="viewsource"><i class="icon icon-code"></i>Liquid error: Can't find the localized string view.source for template ContentPage.</a>
+							</li>
+						{% endif %}
+					{% endunless %}
+                    <li>
+                        <a href="#" class="sharebutton" title="Liquid error: Can't find the localized string sharedesc for template ContentPage." ms.cmpnm="share"><i class="icon icon-share"></i>Liquid error: Can't find the localized string share for template ContentPage.</a>
+                        <div class="share-container">
+                            {% if contentLocale != 'zh-cn' %}
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Liquid error: Can't find the localized string twitter for template ContentPage.</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Liquid error: Can't find the localized string facebook for template ContentPage.</a></div>
+                            {% endif %}
+                            {% if contentLocale == 'ru-ru' %}
+                                <div><a href="" class="share-vk" ms.cmpnm="vk"><i class="icon icon-vk"></i>ВКонтакте</a></div>
+                            {% endif %}
+                            {% if contentLocale == 'zh-cn' %}
+                                <div class="share-separator"><a href="" class="share-weibo" ms.cmpnm="weibo"><i class="icon icon-weibo"></i>&nbsp;微博</a></div>
+                                <div><a class="share-wechat"><i class="icon icon-wechat" ms.cmpnm="wechat"></i>&nbsp;微信扫一扫</a></div>
+                                <div id="shareWithQrcode"></div>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    {% if page.platforms != null %}
+                        <li>
+                            <label for="platform-selector">Liquid error: Can't find the localized string platform for template ContentPage.</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                {% for platform in page.platforms %}
+                                <option value="platform-{{ platform }}">{{ platform }}</option>
+                                {% endfor %}
+                            </select>
+                        </li>
+                    {% endif %}
+                    {% if page.dev_langs != null and page.dev_langs.size > 1 %}
+                        <li>
+                            <label for="lang-selector">Liquid error: Can't find the localized string language for template ContentPage.</label>
+                            <select name="lang-selector" id="lang-selector">
+                                {% for lang in page.dev_langs %}
+                                <option value="lang-{{ lang }}">{{ lang | name_value_map: '"vb":"VB","csharp":"C#","cpp":"C++","java":"Java"' }}</option>
+                                {% endfor %}
+                            </select>
+                        </li>
+                    {% endif %}
+                    <li>
+                        <label for="theme-selector">Liquid error: Can't find the localized string theme for template ContentPage.</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload"></option>
+                            <option value="">Liquid error: Can't find the localized string theme.light for template ContentPage.</option>
+                            <option value="theme_night">Liquid error: Can't find the localized string theme.dark for template ContentPage.</option>
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>Liquid error: Can't find the localized string in.this.article for template ContentPage.</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+{% endif %}
+
+{%- if brand == 'azure' -%}
+
+</div>
+
+{% else %}
+
+</header>
+
+{%- endif -%}
+    <main ms.pgarea="body">
+      <div class="container">
+        <div id="main">        
+          {% if page._op_rawTitle and page._op_rawTitle.size > 0 %}
+            {{ page._op_rawTitle }}
+          {% endif %}
+          {{ content }}	      
+	      </div>
+      </div>
+    </main>
+    <div id="footerPlaceholder"></div>
+    {% if page._op_featureFlags and page._op_featureFlags.size > 0 and page._op_featureFlags contains 'usabilla' %}
+<!-- begin usabilla live embed code -->
+<script type="text/javascript">/*{literal}<![CDATA[*/window.lightningjs||function(c){function g(b,d){d&&(d+=(/\?/.test(d)?"&":"?")+"lv=1");c[b]||function(){var i=window,h=document,j=b,g=h.location.protocol,l="load",k=0;(function(){function b(){a.P(l);a.w=1;c[j]("_load")}c[j]=function(){function m(){m.id=e;return c[j].apply(m,arguments)}var b,e=++k;b=this&&this!=i?this.id||0:0;(a.s=a.s||[]).push([e,b,arguments]);m.then=function(b,c,h){var d=a.fh[e]=a.fh[e]||[],j=a.eh[e]=a.eh[e]||[],f=a.ph[e]=a.ph[e]||[];b&&d.push(b);c&&j.push(c);h&&f.push(h);return m};return m};var a=c[j]._={};a.fh={};a.eh={};a.ph={};a.l=d?d.replace(/^\/\//,(g=="https:"?g:"http:")+"//"):d;a.p={0:+new Date};a.P=function(b){a.p[b]=new Date-a.p[0]};a.w&&b();i.addEventListener?i.addEventListener(l,b,!1):i.attachEvent("on"+l,b);var q=function(){function b(){return["<head></head><",c,' onload="var d=',n,";d.getElementsByTagName('head')[0].",d,"(d.",g,"('script')).",i,"='",a.l,"'\"></",c,">"].join("")}var c="body",e=h[c];if(!e)return setTimeout(q,100);a.P(1);var d="appendChild",g="createElement",i="src",k=h[g]("div"),l=k[d](h[g]("div")),f=h[g]("iframe"),n="document",p;k.style.display="none";e.insertBefore(k,e.firstChild).id=o+"-"+j;f.frameBorder="0";f.id=o+"-frame-"+j;/MSIE[ ]+6/.test(navigator.userAgent)&&(f[i]="javascript:false");f.allowTransparency="true";l[d](f);try{f.contentWindow[n].open()}catch(s){a.domain=h.domain,p="javascript:var d="+n+".open();d.domain='"+h.domain+"';",f[i]=p+"void(0);"}try{var r=f.contentWindow[n];r.write(b());r.close()}catch(t){f[i]=p+'d.write("'+b().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};a.l&&setTimeout(q,0)})()}();c[b].lv="1";return c[b]}var o="lightningjs",k=window[o]=g(o);k.require=g;k.modules=c}({});
+window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/3538ce8ce4c2.js");
+/*]]>{/literal}*/</script>
+<!-- end usabilla live embed code -->
+{% endif %}
+    {% js javascript\1799cb50375cce4bc4c6.contentpage.js %}
+  </body>
+</html>

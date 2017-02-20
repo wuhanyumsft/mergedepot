@@ -1,0 +1,12 @@
+{%- if page._op_layout == "Reference" -%}
+{%- assign className = " reference" -%}
+{% elsif page._op_layout == "Rest" %}
+{%- assign className = " rest" -%}
+{%- endif -%}
+{%- if contentLocale == null or contentLocale == blank or contentLocale == 'en-us' -%}
+<html class="no-js{{className}}" lang="en-us" dir="ltr" >
+{%- elseif contentLocale == 'ar-sa' or contentLocale == 'he-il' -%}
+<html class="no-js{{className}}" lang="{{ contentLocale }}" dir="rtl" >
+{%- else -%}
+<html class="no-js{{className}}" lang="{{ contentLocale }}" dir="ltr" >
+{%- endif -%}
