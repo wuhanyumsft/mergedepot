@@ -1,5 +1,13 @@
 echo "Hello World."
 
+Function CreateFolderIfNotExists([string]$folder)
+{
+    if(!(Test-Path "$folder"))
+    {
+        New-Item "$folder" -ItemType Directory
+    }
+}
+
 Function DownloadFile([string]$source, [string]$destination, [bool]$forceDownload, [int]$timeoutSec = -1)
 {
     if($forceDownload -or !(IsPathExists($destination)))
