@@ -1,4 +1,4 @@
-echo "Hello World."
+Write-HostWithTimestamp "Hello World."
 
 Function RetryCommand
 {
@@ -60,11 +60,11 @@ Function DownloadFile([string]$source, [string]$destination, [bool]$forceDownloa
         CreateFolderIfNotExists($destinationFolder)
         if ($timeoutSec -lt 0)
         {
-            RetryCommand -Command 'Invoke-WebRequest' -Args @{ Uri = $source; OutFile = $destination; }
+            Invoke-WebRequest -Uri $source -OutFile $destination
         }
         else
         {
-            RetryCommand -Command 'Invoke-WebRequest' -Args @{ Uri = $source; OutFile = $destination; TimeoutSec = $timeoutSec }
+            Invoke-WebRequest -Uri $source -OutFile $destination -TimeoutSec $timeoutSec
         }
     }
 }
