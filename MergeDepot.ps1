@@ -1,4 +1,23 @@
 echo "Hello World."
+
+Function DownloadFile([string]$source, [string]$destination, [bool]$forceDownload, [int]$timeoutSec = -1)
+{
+    if($forceDownload -or !(IsPathExists($destination)))
+    {
+        Write-HostWithTimestamp "Download file to $destination from $source with force: $forceDownload"
+        $destinationFolder = Split-Path -Parent $destination
+        CreateFolderIfNotExists($destinationFolder)
+        if ($timeoutSec -lt 0)
+        {
+            RetryCommand -Command 'Invoke-WebRequest' -Args @{ Uri = $source; OutFile = $destination; }
+        }
+        else
+        {
+            RetryCommand -Command 'Invoke-WebRequest' -Args @{ Uri = $source; OutFile = $destination; TimeoutSec = $timeoutSec }
+        }
+    }
+}
+
 # Include
 $currentDir = $($MyInvocation.MyCommand.Definition) | Split-Path
 . "$currentDir/utility/common.ps1"
