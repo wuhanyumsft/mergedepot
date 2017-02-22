@@ -1,10 +1,5 @@
 echo "Hello World."
 
-# Include
-$currentDir = $($MyInvocation.MyCommand.Definition) | Split-Path
-. "$currentDir/utility/common.ps1"
-. "$currentDir/utility/console.utility.ps1"
-
 # Main
 $errorActionPreference = 'Stop'
 
@@ -16,13 +11,16 @@ $azureTransformContainerUrl = "https://opbuildstoragesandbox2.blob.core.windows.
 New-Item ".optemp" -ItemType Directory
 $AzureMarkdownRewriterToolSource = "$azureTransformContainerUrl/.optemp/AzureMarkdownRewriterTool-v8.zip"
 $AzureMarkdownRewriterToolDestination = "$repositoryRoot\.optemp\AzureMarkdownRewriterTool.zip"
+echo 'Start Download!'
 Invoke-WebRequest -Uri $AzureMarkdownRewriterToolSource -OutFile $AzureMarkdownRewriterToolDestination
+echo 'Download Success!'
+
 $AzureMarkdownRewriterToolUnzipFolder = "$repositoryRoot\.optemp\AzureMarkdownRewriterTool"
 if((Test-Path "$AzureMarkdownRewriterToolUnzipFolder"))
 {
     Remove-Item $AzureMarkdownRewriterToolUnzipFolder -Force -Recurse
 }
-echo 'Download Success!'
+
 [System.IO.Compression.ZipFile]::ExtractToDirectory($AzureMarkdownRewriterToolDestination, $AzureMarkdownRewriterToolUnzipFolder)
 echo 'Extract Success!'
 $AzureMarkdownRewriterTool = "$AzureMarkdownRewriterToolUnzipFolder\Microsoft.DocAsCode.Tools.AzureMarkdownRewriterTool.exe"
