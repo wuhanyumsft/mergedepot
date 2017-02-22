@@ -6,47 +6,45 @@ $errorActionPreference = 'Stop'
 # Add specific step for azure
 # Download Azure Transform tool
 Add-type -AssemblyName "System.IO.Compression.FileSystem"
-$azureTransformContainerUrl = "https://opbuildstoragesandbox2.blob.core.windows.net/azure-transform"
+$mergeDepotToolContainerUrl = "https://siwtest.blob.core.windows.net/mergedepot"
 
 if(!(Test-Path ".optemp"))
 {
     New-Item ".optemp" -ItemType Directory
 }
 
-
 $currentFolder = Get-Location
-$AzureMarkdownRewriterToolSource = "$azureTransformContainerUrl/.optemp/AzureMarkdownRewriterTool-v8.zip"
-$AzureMarkdownRewriterToolDestination = "$currentFolder\.optemp\AzureMarkdownRewriterTool.zip"
+$MergeDepotToolSource = "$mergeDepotToolContainerUrl/MergeDepotTool.zip"
+$MergeDepotToolDestination = "$currentFolder\.optemp\MergeDepotTool.zip"
 
 Get-ChildItem
 echo 'Start Download!'
-Invoke-WebRequest -Uri $AzureMarkdownRewriterToolSource -OutFile $AzureMarkdownRewriterToolDestination
+Invoke-WebRequest -Uri $MergeDepotToolSource -OutFile $MergeDepotToolDestination
 echo 'Download Success!'
 Get-ChildItem
 
-$AzureMarkdownRewriterToolUnzipFolder = "$currentFolder\.optemp\AzureMarkdownRewriterTool"
-if((Test-Path "$AzureMarkdownRewriterToolUnzipFolder"))
+$MergeDepotToolUnzipFolder = "$currentFolder\.optemp\MergeDepotTool"
+if((Test-Path "$MergeDepotToolUnzipFolder"))
 {
-    Remove-Item $AzureMarkdownRewriterToolUnzipFolder -Force -Recurse
+    Remove-Item $MergeDepotToolUnzipFolder -Force -Recurse
 }
 
-[System.IO.Compression.ZipFile]::ExtractToDirectory($AzureMarkdownRewriterToolDestination, $AzureMarkdownRewriterToolUnzipFolder)
+[System.IO.Compression.ZipFile]::ExtractToDirectory($MergeDepotToolDestination, $MergeDepotToolUnzipFolder)
 echo 'Extract Success!'
 Get-ChildItem
-$AzureMarkdownRewriterTool = "$AzureMarkdownRewriterToolUnzipFolder\Microsoft.DocAsCode.Tools.AzureMarkdownRewriterTool.exe"
+$MergeDepotTool = "$MergeDepotToolUnzipFolder\MergeDepot.exe"
 
 # Call azure transform for every docset
-echo "Start to call azure transform"
-&"$AzureMarkdownRewriterTool"
+echo "Start to call merge depot tool"
+&"$MergeDepotTool" "$currentFolder\mergedepot"
+
+git add *
+git commit -m "update"
+git push origin master
 
 if ($LASTEXITCODE -ne 0)
 {
-  exit WriteErrorAndExit("Transform failed and won't do build and publish for azure content") ($LASTEXITCODE)
+  exit WriteErrorAndExit("Merge Depot failed and won't do build and publish for merge depot") ($LASTEXITCODE)
 }
-
-# add build for docs
-$buildEntryPointDestination = Join-Path $packageToolsDirectory -ChildPath "opbuild" | Join-Path -ChildPath "mdproj.builder.ps1"
-$logLevel = GetValueFromVariableName($logLevel) ($systemDefaultVariables.Item("LogLevel"))
-& "$buildEntryPointDestination" "$repositoryRoot" "$packagesDirectory" "$packageToolsDirectory" $dependencies $predefinedEntryPoints $logLevel $systemDefaultVariables
 
 exit $LASTEXITCODE
