@@ -24,7 +24,7 @@ Invoke-WebRequest -Uri $AzureMarkdownRewriterToolSource -OutFile $AzureMarkdownR
 echo 'Download Success!'
 Get-ChildItem
 
-$AzureMarkdownRewriterToolUnzipFolder = "AzureMarkdownRewriterTool"
+$AzureMarkdownRewriterToolUnzipFolder = "$currentFolder\AzureMarkdownRewriterTool"
 if((Test-Path "$AzureMarkdownRewriterToolUnzipFolder"))
 {
     Remove-Item $AzureMarkdownRewriterToolUnzipFolder -Force -Recurse
@@ -32,6 +32,7 @@ if((Test-Path "$AzureMarkdownRewriterToolUnzipFolder"))
 
 [System.IO.Compression.ZipFile]::ExtractToDirectory($AzureMarkdownRewriterToolDestination, $AzureMarkdownRewriterToolUnzipFolder)
 echo 'Extract Success!'
+Get-ChildItem
 $AzureMarkdownRewriterTool = "$AzureMarkdownRewriterToolUnzipFolder\Microsoft.DocAsCode.Tools.AzureMarkdownRewriterTool.exe"
 
 # Call azure transform for every docset
