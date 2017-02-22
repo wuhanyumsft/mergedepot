@@ -16,7 +16,7 @@ if(!(Test-Path ".optemp"))
 
 $currentFolder = Get-Location
 $AzureMarkdownRewriterToolSource = "$azureTransformContainerUrl/.optemp/AzureMarkdownRewriterTool-v8.zip"
-$AzureMarkdownRewriterToolDestination = "$currentFolder\AzureMarkdownRewriterTool.zip"
+$AzureMarkdownRewriterToolDestination = "$currentFolder\.optemp\AzureMarkdownRewriterTool.zip"
 
 Get-ChildItem
 echo 'Start Download!'
@@ -24,7 +24,7 @@ Invoke-WebRequest -Uri $AzureMarkdownRewriterToolSource -OutFile $AzureMarkdownR
 echo 'Download Success!'
 Get-ChildItem
 
-$AzureMarkdownRewriterToolUnzipFolder = "$currentFolder\AzureMarkdownRewriterTool"
+$AzureMarkdownRewriterToolUnzipFolder = "$currentFolder\.optemp\AzureMarkdownRewriterTool"
 if((Test-Path "$AzureMarkdownRewriterToolUnzipFolder"))
 {
     Remove-Item $AzureMarkdownRewriterToolUnzipFolder -Force -Recurse
