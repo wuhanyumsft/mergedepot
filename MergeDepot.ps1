@@ -1,8 +1,5 @@
 echo "Hello World."
 
-# Main
-$errorActionPreference = 'Stop'
-
 # Add specific step for azure
 # Download Azure Transform tool
 Add-type -AssemblyName "System.IO.Compression.FileSystem"
@@ -37,10 +34,13 @@ $MergeDepotTool = "$MergeDepotToolUnzipFolder\MergeDepot.exe"
 # Call azure transform for every docset
 echo "Start to call merge depot tool"
 &"$MergeDepotTool" "$currentFolder\mergedepot"
+echo "Finish calling merge depot tool"
 
+echo "Start to push to git repository"
 git add *
 git commit -m "update"
 git push origin master
+echo "Finish pushing to git repository"
 
 if ($LASTEXITCODE -ne 0)
 {
