@@ -1,0 +1,2250 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="StreamWriter class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/System.IO/System.IO.StreamWriter.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO/System.IO.StreamWriter.yml">
+<meta name="APIName" content="System.IO.StreamWriter">
+<meta name="APIName" content="System.IO.StreamWriter..ctor">
+<meta name="APIName" content="System.IO.StreamWriter.AutoFlush">
+<meta name="APIName" content="System.IO.StreamWriter.BaseStream">
+<meta name="APIName" content="System.IO.StreamWriter.Close">
+<meta name="APIName" content="System.IO.StreamWriter.Dispose">
+<meta name="APIName" content="System.IO.StreamWriter.Encoding">
+<meta name="APIName" content="System.IO.StreamWriter.Flush">
+<meta name="APIName" content="System.IO.StreamWriter.FlushAsync">
+<meta name="APIName" content="System.IO.StreamWriter.Null">
+<meta name="APIName" content="System.IO.StreamWriter.Write">
+<meta name="APIName" content="System.IO.StreamWriter.WriteAsync">
+<meta name="APIName" content="System.IO.StreamWriter.WriteLineAsync">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="28dafdf9-0e61-e377-338b-9242d765c77f">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Implements a  for writing characters to a stream in a particular encoding.  
+ To browse the .NET Framework source code for this type, see the Reference Source.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.StreamWriter">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.io/system.io.streamwriter" rel="canonical">
+    <title>StreamWriter class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_StreamWriter">
+      <span class="lang-csharp">StreamWriter</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Implements a <see cref="T:System.IO.TextWriter"> for writing characters to a stream in a particular encoding.  <p>
+<p> To browse the .NET Framework source code for this type, see the <a href="http://referencesource.microsoft.com/#mscorlib/system/io/streamwriter.cs#9e38cb1c84769eba">Reference Source</a>.</p>
+</see>
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public class StreamWriter : System.IO.TextWriter</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject">MarshalByRefObject</a>
+          </div>
+        </li>
+        <li class="l2">
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter">System.IO.TextWriter</a>
+          </div>
+        </li>
+      <li class="l3">
+        <div class="xref">
+          <div class="lang-csharp">StreamWriter</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_CoreNewLine">CoreNewLine</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Dispose">Dispose()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_FormatProvider">FormatProvider</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_NewLine">NewLine</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Synchronized_System_IO_TextWriter_">Synchronized(TextWriter)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Boolean_">Write(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Decimal_">Write(Decimal)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Double_">Write(Double)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Int32_">Write(Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Int64_">Write(Int64)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Object_">Write(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Single_">Write(Single)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_String_System_Object_">Write(String,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_String_System_Object_System_Object_">Write(String,Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_String_System_Object_System_Object_System_Object_">Write(String,Object,Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_String_System_Object___">Write(String,Object[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_UInt32_">Write(UInt32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_UInt64_">Write(UInt64)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteAsync_System_Char___">WriteAsync(Char[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine">WriteLine()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Boolean_">WriteLine(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Char_">WriteLine(Char)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Char___">WriteLine(Char[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Char___System_Int32_System_Int32_">WriteLine(Char[],Int32,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Decimal_">WriteLine(Decimal)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Double_">WriteLine(Double)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Int32_">WriteLine(Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Int64_">WriteLine(Int64)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Object_">WriteLine(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Single_">WriteLine(Single)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_String_">WriteLine(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_String_System_Object_">WriteLine(String,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_String_System_Object_System_Object_">WriteLine(String,Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_String_System_Object_System_Object_System_Object_">WriteLine(String,Object,Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_String_System_Object___">WriteLine(String,Object[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_UInt32_">WriteLine(UInt32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_UInt64_">WriteLine(UInt64)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLineAsync_System_Char___">WriteLineAsync(Char[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_CreateObjRef_System_Type_">CreateObjRef(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_GetLifetimeService">GetLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_InitializeLifetimeService">InitializeLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_MemberwiseClone_System_Boolean_">MemberwiseClone(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <div class="NOTE"><h5>Note</h5><p> To view the .NET Framework source code for this type, see the <a href="http://referencesource.microsoft.com/#mscorlib/system/io/streamwriter.cs#9e38cb1c84769eba">Reference Source</a>. You can browse through the source code online, download the reference for offline viewing, and step through the sources (including patches and updates) during debugging; see <a href="http://referencesource.microsoft.com/">instructions</a>.  </p>
+</div>
+<p> StreamWriter is designed for character output in a particular encoding, whereas classes derived from <a class="xref" href="system.io.stream">Stream</a> are designed for byte input and output.  </p>
+<div class="IMPORTANT"><h5>Important</h5><p> This type implements the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <a class="xref" href="../system/system.idisposable#System_IDisposable_Dispose_">Dispose</a> method in a <code>try</code>/<code>catch</code> block. To dispose of it indirectly, use a language construct such as <code>using</code> (in C#) or <code>Using</code> (in Visual Basic). For more information, see the â€œUsing an Object that Implements IDisposableâ€ section in the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface topic.  </p>
+</div>
+<p> StreamWriter defaults to using an instance of <a class="xref" href="../system.text/system.text.utf8encoding">UTF8Encoding</a> unless specified otherwise. This instance of <code>UTF8Encoding</code> is constructed without a byte order mark (BOM), so its <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method returns an empty byte array. The default UTF-8 encoding for this constructor throws an exception on invalid bytes. This behavior is different from the behavior provided by the encoding object in the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_UTF8_">UTF8</a> property. To specify a BOM and determine whether an exception is thrown on invalid bytes, use a constructor that accepts an encoding object as a parameter, such as <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter__ctor_System_String_System_Boolean_System_Text_Encoding_">StreamWriter(String,Boolean,Encoding)</a> or <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter__ctor_">StreamWriter</a>.  </p>
+<p> By default, a StreamWriter is not thread safe. See <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Synchronized_">Synchronized</a> for a thread-safe wrapper.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter__ctor_System_IO_Stream_">StreamWriter(Stream)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified stream by using UTF-8 encoding and the default buffer size.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter__ctor_System_String_">StreamWriter(String)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified file by using the default encoding and buffer size.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter__ctor_System_IO_Stream_System_Text_Encoding_">StreamWriter(Stream,Encoding)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified stream by using the specified encoding and the default buffer size.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter__ctor_System_String_System_Boolean_">StreamWriter(String,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified file by using the default encoding and buffer size. If the file exists, it can be either overwritten or appended to. If the file does not exist, this constructor creates a new file.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter__ctor_System_IO_Stream_System_Text_Encoding_System_Int32_">StreamWriter(Stream,Encoding,Int32)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified stream by using the specified encoding and buffer size.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter__ctor_System_String_System_Boolean_System_Text_Encoding_">StreamWriter(String,Boolean,Encoding)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified file by using the specified encoding and default buffer size. If the file exists, it can be either overwritten or appended to. If the file does not exist, this constructor creates a new file.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter__ctor_System_IO_Stream_System_Text_Encoding_System_Int32_System_Boolean_">StreamWriter(Stream,Encoding,Int32,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified stream by using the specified encoding and buffer size, and optionally leaves the stream open.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter__ctor_System_String_System_Boolean_System_Text_Encoding_System_Int32_">StreamWriter(String,Boolean,Encoding,Int32)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified file on the specified path, using the specified encoding and buffer size. If the file exists, it can be either overwritten or appended to. If the file does not exist, this constructor creates a new file.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Fields
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_Null">Null</a></div>
+          </td>
+            <td>
+            <p>Provides a <code>StreamWriter</code> with no backing store that can be written to, but not read from.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_AutoFlush">AutoFlush</a></div>
+          </td>
+            <td>
+            <p>Gets or sets a value indicating whether the <see cref="T:System.IO.StreamWriter"> will flush its buffer to the underlying stream after every call to <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Write_">Write</a>.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_BaseStream">BaseStream</a></div>
+          </td>
+            <td>
+            <p>Gets the underlying stream that interfaces with a backing store.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_Encoding">Encoding</a></div>
+          </td>
+            <td>
+            <p>Gets the <see cref="T:System.Text.Encoding"> in which the output is written.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_Close">Close()</a></div>
+          </td>
+            <td>
+            <p>Closes the current <code>StreamWriter</code> object and the underlying stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.StreamWriter"> and optionally releases the managed resources.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_Flush">Flush()</a></div>
+          </td>
+            <td>
+            <p>Clears all buffers for the current writer and causes any buffered data to be written to the underlying stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_FlushAsync">FlushAsync()</a></div>
+          </td>
+            <td>
+            <p>Clears all buffers for this stream asynchronously and causes any buffered data to be written to the underlying device.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_Write_System_Char_">Write(Char)</a></div>
+          </td>
+            <td>
+            <p>Writes a character to the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_Write_System_Char___">Write(Char[])</a></div>
+          </td>
+            <td>
+            <p>Writes a character array to the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_Write_System_String_">Write(String)</a></div>
+          </td>
+            <td>
+            <p>Writes a string to the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_Write_System_Char___System_Int32_System_Int32_">Write(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Writes a subarray of characters to the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_WriteAsync_System_Char_">WriteAsync(Char)</a></div>
+          </td>
+            <td>
+            <p>Writes a character to the stream asynchronously.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_WriteAsync_System_String_">WriteAsync(String)</a></div>
+          </td>
+            <td>
+            <p>Writes a string to the stream asynchronously.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_WriteAsync_System_Char___System_Int32_System_Int32_">WriteAsync(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Writes a subarray of characters to the stream asynchronously.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_WriteLineAsync">WriteLineAsync()</a></div>
+          </td>
+            <td>
+            <p>Writes a line terminator asynchronously to the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_WriteLineAsync_System_Char_">WriteLineAsync(Char)</a></div>
+          </td>
+            <td>
+            <p>Writes a character followed by a line terminator asynchronously to the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_WriteLineAsync_System_String_">WriteLineAsync(String)</a></div>
+          </td>
+            <td>
+            <p>Writes a string followed by a line terminator asynchronously to the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamWriter_WriteLineAsync_System_Char___System_Int32_System_Int32_">WriteLineAsync(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Writes a subarray of characters followed by a line terminator asynchronously to the stream.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter__ctor_System_IO_Stream_">
+    
+            <a id="System_IO_StreamWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamWriter(Stream)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified stream by using UTF-8 encoding and the default buffer size.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamWriter (System.IO.Stream stream);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to write to.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor creates a <a class="xref" href="system.io.streamwriter">StreamWriter</a> with UTF-8 encoding without a Byte-Order Mark (BOM), so its <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method returns an empty byte array. The default UTF-8 encoding for this constructor throws an exception on invalid bytes. This behavior is different from the behavior provided by the encoding object in the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_UTF8_">UTF8</a> property. To specify whether an exception is thrown on invalid bytes, use a constructor that accepts an encoding object as a parameter, such as <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter__ctor_">StreamWriter</a>. The <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_BaseStream_">BaseStream</a> property is initialized using the  parameter. The position of the stream is not reset.  </p>
+<p> The <a class="xref" href="system.io.streamwriter">StreamWriter</a> object calls <a class="xref" href="system.io.stream#System_IO_Stream_Dispose">Dispose()</a> on the provided <a class="xref" href="system.io.stream">Stream</a> object when <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Dispose_">Dispose</a> is called.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this constructor.  
+  
+ [!CODE [System.IO.StreamWriter.ctor#1](../CodeSnippet/VS_Snippets_CLR_System/system.io.streamwriter.ctor#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter__ctor_System_String_">
+    
+            <a id="System_IO_StreamWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamWriter(String)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified file by using the default encoding and buffer size.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamWriter (string path);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The complete file path to write to.  can be a file name.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor creates a <a class="xref" href="system.io.streamwriter">StreamWriter</a> with UTF-8 encoding without a Byte-Order Mark (BOM), so its <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method returns an empty byte array. The default UTF-8 encoding for this constructor throws an exception on invalid bytes. This behavior is different from the behavior provided by the encoding object in the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_UTF8_">UTF8</a> property. To specify a BOM and determine whether an exception is thrown on invalid bytes, use a constructor that accepts an encoding object as a parameter, such as <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter__ctor_System_String_System_Boolean_System_Text_Encoding_">StreamWriter(String,Boolean,Encoding)</a>.  </p>
+<p> The  parameter can be a file name, including a file on a Universal Naming Convention (UNC) share. If the file exists, it is overwritten; otherwise, a new file is created.  </p>
+<p> The  parameter is not required to be a file stored on disk; it can be any part of a system that supports access using streams.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this constructor.  
+  
+ [!CODE [System.IO.StreamWriter.ctor#5](../CodeSnippet/VS_Snippets_CLR_System/system.io.streamwriter.ctor#5)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter__ctor_System_IO_Stream_System_Text_Encoding_">
+    
+            <a id="System_IO_StreamWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamWriter(Stream,Encoding)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified stream by using the specified encoding and the default buffer size.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamWriter (System.IO.Stream stream, System.Text.Encoding encoding);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to write to.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor initializes the <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Encoding_">Encoding</a> property using the encoding parameter, and the <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_BaseStream_">BaseStream</a> property using the stream parameter. The position of the stream is not reset. For additional information, see <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Encoding_">Encoding</a>.  </p>
+<p> The <a class="xref" href="system.io.streamwriter">StreamWriter</a> object calls <a class="xref" href="system.io.stream#System_IO_Stream_Dispose">Dispose()</a> on the provided <a class="xref" href="system.io.stream">Stream</a> object when <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Dispose_">Dispose</a> is called.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates this constructor.  
+  
+ [!CODE [System.IO.StreamWriter.ctor#2](../CodeSnippet/VS_Snippets_CLR_System/system.io.streamwriter.ctor#2)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter__ctor_System_String_System_Boolean_">
+    
+            <a id="System_IO_StreamWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamWriter(String,Boolean)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified file by using the default encoding and buffer size. If the file exists, it can be either overwritten or appended to. If the file does not exist, this constructor creates a new file.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamWriter (string path, bool append);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The complete file path to write to.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>append</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to append data to the file; <code>false</code> to overwrite the file. If the specified file does not exist, this parameter has no effect, and the constructor creates a new file.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor creates a <a class="xref" href="system.io.streamwriter">StreamWriter</a> with UTF-8 encoding without a Byte-Order Mark (BOM), so its <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method returns an empty byte array. The default UTF-8 encoding for this constructor throws an exception on invalid bytes. This behavior is different from the behavior provided by the encoding object in the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_UTF8_">UTF8</a> property. To specify a BOM and determine whether an exception is thrown on invalid bytes, use a constructor that accepts an encoding object as a parameter, such as <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter__ctor_System_String_System_Boolean_System_Text_Encoding_">StreamWriter(String,Boolean,Encoding)</a>.  </p>
+<p> The  parameter can be a file name, including a file on a Universal Naming Convention (UNC) share.  </p>
+<p> The  parameter is not required to be a file stored on disk; it can be any part of a system that supports access using streams.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this constructor.  
+  
+ [!CODE [System.IO.StreamWriter.ctor#6](../CodeSnippet/VS_Snippets_CLR_System/system.io.streamwriter.ctor#6)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter__ctor_System_IO_Stream_System_Text_Encoding_System_Int32_">
+    
+            <a id="System_IO_StreamWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamWriter(Stream,Encoding,Int32)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified stream by using the specified encoding and buffer size.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamWriter (System.IO.Stream stream, System.Text.Encoding encoding, int bufferSize);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to write to.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>bufferSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The buffer size, in bytes.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor initializes the <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Encoding_">Encoding</a> property using the  parameter, and the <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_BaseStream_">BaseStream</a> property using the  parameter. The position of the stream is not reset. For additional information, see <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Encoding_">Encoding</a>.  </p>
+<p> The <a class="xref" href="system.io.streamwriter">StreamWriter</a> object calls <a class="xref" href="system.io.stream#System_IO_Stream_Dispose">Dispose()</a> on the provided <a class="xref" href="system.io.stream">Stream</a> object when <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Dispose_">Dispose</a> is called.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates this constructor.  
+  
+ [!CODE [System.IO.StreamWriter.ctor#3](../CodeSnippet/VS_Snippets_CLR_System/system.io.streamwriter.ctor#3)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter__ctor_System_String_System_Boolean_System_Text_Encoding_">
+    
+            <a id="System_IO_StreamWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamWriter(String,Boolean,Encoding)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified file by using the specified encoding and default buffer size. If the file exists, it can be either overwritten or appended to. If the file does not exist, this constructor creates a new file.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamWriter (string path, bool append, System.Text.Encoding encoding);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The complete file path to write to.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>append</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to append data to the file; <code>false</code> to overwrite the file. If the specified file does not exist, this parameter has no effect, and the constructor creates a new file.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor initializes the <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Encoding_">Encoding</a> property using the encoding parameter. For additional information, see <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Encoding_">Encoding</a>.  </p>
+<p> can be a file name, including a file on a Universal Naming Convention (UNC) share.  </p>
+<p> is not required to be a file stored on disk; it can be any part of a system that supports access via streams.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates this constructor.  
+  
+ [!CODE [System.IO.StreamWriter.ctor#7](../CodeSnippet/VS_Snippets_CLR_System/system.io.streamwriter.ctor#7)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter__ctor_System_IO_Stream_System_Text_Encoding_System_Int32_System_Boolean_">
+    
+            <a id="System_IO_StreamWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamWriter(Stream,Encoding,Int32,Boolean)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified stream by using the specified encoding and buffer size, and optionally leaves the stream open.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamWriter (System.IO.Stream stream, System.Text.Encoding encoding, int bufferSize, bool leaveOpen);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to write to.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>bufferSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The buffer size, in bytes.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>leaveOpen</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to leave the stream open after the <see cref="T:System.IO.StreamWriter"> object is disposed; otherwise, <code>false</code>.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Unless you set the  parameter to <code>true</code>, the <a class="xref" href="system.io.streamwriter">StreamWriter</a> object calls <a class="xref" href="system.io.stream#System_IO_Stream_Dispose">Dispose()</a> on the provided <a class="xref" href="system.io.stream">Stream</a> object when <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Dispose_">Dispose</a> is called.  </p>
+<p> This constructor initializes the <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Encoding_">Encoding</a> property by using the  parameter, and initializes the <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_BaseStream_">BaseStream</a> property by using the  parameter. The position of the stream is not reset. For additional information, see the <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Encoding_">Encoding</a> property.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.</p>
+</div>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates this constructor.  
+  
+ [!CODE [System.IO.StreamWriter.ctor#4](../CodeSnippet/VS_Snippets_CLR_System/system.io.streamwriter.ctor#4)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter__ctor_System_String_System_Boolean_System_Text_Encoding_System_Int32_">
+    
+            <a id="System_IO_StreamWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamWriter(String,Boolean,Encoding,Int32)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamWriter"> class for the specified file on the specified path, using the specified encoding and buffer size. If the file exists, it can be either overwritten or appended to. If the file does not exist, this constructor creates a new file.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamWriter (string path, bool append, System.Text.Encoding encoding, int bufferSize);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The complete file path to write to.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>append</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to append data to the file; <code>false</code> to overwrite the file. If the specified file does not exist, this parameter has no effect, and the constructor creates a new file.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>bufferSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The buffer size, in bytes.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor initializes the <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Encoding_">Encoding</a> property using the encoding parameter. For additional information, see <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Encoding_">Encoding</a>.  </p>
+<p> can be a file name, including a file on a Universal Naming Convention (UNC) share.  </p>
+<p> is not required to be a file stored on disk; it can be any part of a system that supports access via streams.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates this constructor.  
+  
+ [!CODE [System.IO.StreamWriter.ctor#8](../CodeSnippet/VS_Snippets_CLR_System/system.io.streamwriter.ctor#8)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="fields">
+        <h2>Fields
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_Null">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Null</div>        
+          </div>
+    
+            <p>Provides a <code>StreamWriter</code> with no backing store that can be written to, but not read from.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly System.IO.StreamWriter Null;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use <code>Null</code> to redirect output to a <code>StreamWriter</code> that will not consume any operating system resources.  </p>
+<p> When the <code>StreamWriter.Write</code> methods are invoked on <code>Null</code>, the call simply returns, and no data is actually written to any backing store.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates a use of the `Null` field.  
+  
+ [!CODE [System.IO.StreamWriter#6](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamWriter#6)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_AutoFlush">
+    
+            <a id="System_IO_StreamWriter_AutoFlush_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AutoFlush</div>        
+          </div>
+    
+            <p>Gets or sets a value indicating whether the <see cref="T:System.IO.StreamWriter"> will flush its buffer to the underlying stream after every call to <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Write_">Write</a>.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool AutoFlush { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> to force <see cref="T:System.IO.StreamWriter"> to flush its buffer; otherwise, <code>false</code>.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Flushing the stream will not flush its underlying encoder unless you explicitly call <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Flush_">Flush</a> or <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Close_">Close</a>. Setting AutoFlush to <code>true</code> means that data will be flushed from the buffer to the stream after each write operation, but the encoder state will not be flushed. This allows the encoder to keep its state (partial characters) so that it can encode the next block of characters correctly. This scenario affects UTF8 and UTF7 where certain characters can only be encoded after the encoder receives the adjacent character or characters.  </p>
+<p> When <code>AutoFlush</code> is set to <code>false</code>, <code>StreamWriter</code> will do a limited amount of buffering, both internally and potentially in the encoder from the encoding you passed in. You can get better performance by setting <code>AutoFlush</code> to <code>false</code>, assuming that you always call <code>Close</code> (or at least <code>Flush</code>) when you&#39;re done writing with a <code>StreamWriter</code>.  </p>
+<p> For example, set <code>AutoFlush</code> to <code>true</code> when you are writing to a device where the user expects immediate feedback. <code>Console.Out</code> is one of these cases: The <code>StreamWriter</code> used internally for writing to <code>Console</code> flushes all its internal state except the encoder state after every call to <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Write_">Write</a>.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows the syntax for using the `AutoFlush` property.  
+  
+ [!CODE [System.IO.StreamWriter#5](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamWriter#5)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_BaseStream">
+    
+            <a id="System_IO_StreamWriter_BaseStream_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BaseStream</div>        
+          </div>
+    
+            <p>Gets the underlying stream that interfaces with a backing store.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.IO.Stream BaseStream { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </div>
+                  <p>The stream this <code>StreamWriter</code> is writing to.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to use a StreamWriter object to write a file that lists the directories on the C drive, and then uses a <xref:system.io.streamreader> object to read and display each directory name. A good practice is to use these objects in a `using` statement so that the unmanaged resources are correctly disposed. The `using` statement automatically calls <xref:system.idisposable.dispose%2a> on the object when the code that is using it has completed. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!code-cs[StreamReadWrite#1](../../add/codesnippet/CSharp/streamreadwrite/program.cs#1)]
+ [!code-vb[StreamReadWrite#1](../../add/codesnippet/VisualBasic/readwrite/module1.vb#1)]
+    
+    
+        </xref:system.idisposable.dispose%2a></xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_Encoding">
+    
+            <a id="System_IO_StreamWriter_Encoding_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Encoding</div>        
+          </div>
+    
+            <p>Gets the <see cref="T:System.Text.Encoding"> in which the output is written.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Text.Encoding Encoding { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </div>
+                  <p>The <see cref="T:System.Text.Encoding"> specified in the constructor for the current instance, or <a class="xref" href="../system.text/system.text.utf8encoding">UTF8Encoding</a> if an encoding was not specified.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This property is necessary for some XML scenarios where a header must be written containing the encoding used by the <a class="xref" href="system.io.streamwriter">StreamWriter</a>. This allows the XML code to consume an arbitrary <a class="xref" href="system.io.streamwriter">StreamWriter</a> and generate the correct XML header.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example retrieves the encoding of the specified <xref:system.io.streamwriter> instance.  
+  
+ [!CODE [System.IO.StreamWriter#11](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamWriter#11)]
+    
+    
+        </xref:system.io.streamwriter></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_Close">
+    
+            <a id="System_IO_StreamWriter_Close_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Close()</div>        
+          </div>
+    
+            <p>Closes the current <code>StreamWriter</code> object and the underlying stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Close ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.stream#System_IO_Stream_Close_">Close</a>.  </p>
+<p> This implementation of Close calls the <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Dispose_">Dispose</a> method passing a <code>true</code> value.  </p>
+<p> You must call Close to ensure that all data is correctly written out to the underlying stream. Following a call to Close, any operations on the <a class="xref" href="system.io.streamwriter">StreamWriter</a> might raise exceptions. If there is insufficient space on the disk, calling Close will raise an exception.  </p>
+<p> Flushing the stream will not flush its underlying encoder unless you explicitly call <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Flush_">Flush</a> or Close. Setting <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> to <code>true</code> means that data will be flushed from the buffer to the stream, but the encoder state will not be flushed. This allows the encoder to keep its state (partial characters) so that it can encode the next block of characters correctly. This scenario affects UTF8 and UTF7 where certain characters can only be encoded after the encoder receives the adjacent character or characters.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the `Close` method.  
+  
+ [!CODE [System.IO.StreamWriter#17](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamWriter#17)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_Dispose_System_Boolean_">
+    
+            <a id="System_IO_StreamWriter_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.StreamWriter"> and optionally releases the managed resources.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only unmanaged resources.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>When the  parameter is <code>true</code>, this method releases all resources held by any managed objects that this <a class="xref" href="system.io.streamwriter">StreamWriter</a> references. This method invokes the <code>Dispose</code> method of each referenced object.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to use a StreamWriter object to write a file that lists the directories on the C drive, and then uses a <xref:system.io.streamreader> object to read and display each directory name. A good practice is to use these objects in a `using` statement so that the unmanaged resources are correctly disposed. The `using` statement automatically calls <xref:system.idisposable.dispose%2a> on the object when the code that is using it has completed. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!code-cs[StreamReadWrite#1](../../add/codesnippet/CSharp/streamreadwrite/program.cs#1)]
+ [!code-vb[StreamReadWrite#1](../../add/codesnippet/VisualBasic/readwrite/module1.vb#1)]
+    
+    
+        </xref:system.idisposable.dispose%2a></xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_Flush">
+    
+            <a id="System_IO_StreamWriter_Flush_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Flush()</div>        
+          </div>
+    
+            <p>Clears all buffers for the current writer and causes any buffered data to be written to the underlying stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Flush ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Flush_">Flush</a>.  </p>
+<p> Flushing the stream will not flush its underlying encoder unless you explicitly call <code>Flush</code> or <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Close_">Close</a>. Setting <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> to <code>true</code> means that data will be flushed from the buffer to the stream after each write operation, but the encoder state will not be flushed. This allows the encoder to keep its state (partial characters) so that it can encode the next block of characters correctly. This scenario affects UTF8 and UTF7 where certain characters can only be encoded after the encoder receives the adjacent character or characters.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to use a StreamWriter object to write a file that lists the directories on the C drive, and then uses a <xref:system.io.streamreader> object to read and display each directory name. A good practice is to use these objects in a `using` statement so that the unmanaged resources are correctly disposed. The `using` statement automatically calls <xref:system.idisposable.dispose%2a> on the object when the code that is using it has completed. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!code-cs[StreamReadWrite#1](../../add/codesnippet/CSharp/streamreadwrite/program.cs#1)]
+ [!code-vb[StreamReadWrite#1](../../add/codesnippet/VisualBasic/readwrite/module1.vb#1)]
+    
+    
+        </xref:system.idisposable.dispose%2a></xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_FlushAsync">
+    
+            <a id="System_IO_StreamWriter_FlushAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FlushAsync()</div>        
+          </div>
+    
+            <p>Clears all buffers for this stream asynchronously and causes any buffered data to be written to the underlying device.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task FlushAsync ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous flush operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to use a StreamWriter object to write a file that lists the directories on the C drive, and then uses a <xref:system.io.streamreader> object to read and display each directory name. A good practice is to use these objects in a `using` statement so that the unmanaged resources are correctly disposed. The `using` statement automatically calls <xref:system.idisposable.dispose%2a> on the object when the code that is using it has completed. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!code-cs[StreamReadWrite#1](../../add/codesnippet/CSharp/streamreadwrite/program.cs#1)]
+ [!code-vb[StreamReadWrite#1](../../add/codesnippet/VisualBasic/readwrite/module1.vb#1)]
+    
+    
+        </xref:system.idisposable.dispose%2a></xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_Write_System_Char_">
+    
+            <a id="System_IO_StreamWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Char)</div>        
+          </div>
+    
+            <p>Writes a character to the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Write (char value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character to write to the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_">Write</a>.  </p>
+<p> The specified character is written to the underlying stream unless the end of the stream is reached prematurely. If <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> is <code>true</code>, <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Flush_">Flush</a> is invoked automatically.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to use a StreamWriter object to write a file that lists the directories on the C drive, and then uses a <xref:system.io.streamreader> object to read and display each directory name. A good practice is to use these objects in a `using` statement so that the unmanaged resources are correctly disposed. The `using` statement automatically calls <xref:system.idisposable.dispose%2a> on the object when the code that is using it has completed. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!code-cs[StreamReadWrite#1](../../add/codesnippet/CSharp/streamreadwrite/program.cs#1)]
+ [!code-vb[StreamReadWrite#1](../../add/codesnippet/VisualBasic/readwrite/module1.vb#1)]
+    
+    
+        </xref:system.idisposable.dispose%2a></xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_Write_System_Char___">
+    
+            <a id="System_IO_StreamWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Char[])</div>        
+          </div>
+    
+            <p>Writes a character array to the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Write (char[] buffer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>A character array containing the data to write. If  is <code>null</code>, nothing is written.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_">Write</a>.  </p>
+<p> The specified characters are written to the underlying stream unless the end of the stream is reached prematurely. If <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> is <code>true</code>, <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Flush_">Flush</a> is invoked automatically.  </p>
+<p> This method might provide faster performance than <code>Write</code> () because it has fewer arguments to check.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to use a StreamWriter object to write a file that lists the directories on the C drive, and then uses a <xref:system.io.streamreader> object to read and display each directory name. A good practice is to use these objects in a `using` statement so that the unmanaged resources are correctly disposed. The `using` statement automatically calls <xref:system.idisposable.dispose%2a> on the object when the code that is using it has completed. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!code-cs[StreamReadWrite#1](../../add/codesnippet/CSharp/streamreadwrite/program.cs#1)]
+ [!code-vb[StreamReadWrite#1](../../add/codesnippet/VisualBasic/readwrite/module1.vb#1)]
+    
+    
+        </xref:system.idisposable.dispose%2a></xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_Write_System_String_">
+    
+            <a id="System_IO_StreamWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(String)</div>        
+          </div>
+    
+            <p>Writes a string to the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Write (string value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The string to write to the stream. If  is null, nothing is written.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_">Write</a>.  </p>
+<p> The specified <a class="xref" href="../system/system.string">String</a> is written to the underlying stream unless the end of the stream is reached prematurely.  </p>
+<p> <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Flush_">Flush</a> is invoked automatically if <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> is <code>true</code>. If  is <code>null</code>, no entries are written.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to use a StreamWriter object to write a file that lists the directories on the C drive, and then uses a <xref:system.io.streamreader> object to read and display each directory name. A good practice is to use these objects in a `using` statement so that the unmanaged resources are correctly disposed. The `using` statement automatically calls <xref:system.idisposable.dispose%2a> on the object when the code that is using it has completed. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!code-cs[StreamReadWrite#1](../../add/codesnippet/CSharp/streamreadwrite/program.cs#1)]
+ [!code-vb[StreamReadWrite#1](../../add/codesnippet/VisualBasic/readwrite/module1.vb#1)]
+    
+    
+        </xref:system.idisposable.dispose%2a></xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_Write_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StreamWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Writes a subarray of characters to the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Write (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>A character array that contains the data to write.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character position in the buffer at which to start reading data.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of characters to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_">Write</a>.  </p>
+<p> The characters are read from  beginning at  and continuing through  + ( - 1). All characters are written to the underlying stream unless the end of the underlying stream is reached prematurely. <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_Flush_">Flush</a> is invoked automatically if <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> is <code>true</code>.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            This example writes eight characters from a 13-element array to a file, beginning at the third element of the array.  
+  
+ [!CODE [Classic StreamWriter.Write2 Example#1](../CodeSnippet/VS_Snippets_CLR_Classic/classic StreamWriter.Write2 Example#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_WriteAsync_System_Char_">
+    
+            <a id="System_IO_StreamWriter_WriteAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteAsync(Char)</div>        
+          </div>
+    
+            <p>Writes a character to the stream asynchronously.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteAsync (char value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character to write to the stream.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a single character (the letter "a") to a text file by using the WriteAsync method.  
+  
+ [!CODE [System.IO.StreamWriter#20](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamWriter#20)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_WriteAsync_System_String_">
+    
+            <a id="System_IO_StreamWriter_WriteAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteAsync(String)</div>        
+          </div>
+    
+            <p>Writes a string to the stream asynchronously.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteAsync (string value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The string to write to the stream. If  is <code>null</code>, nothing is written.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a string to a text file by using the WriteAsync method.  
+  
+ [!CODE [System.IO.StreamWriter#21](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamWriter#21)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_WriteAsync_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StreamWriter_WriteAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteAsync(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Writes a subarray of characters to the stream asynchronously.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteAsync (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>A character array that contains the data to write.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character position in the buffer at which to begin reading data.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of characters to write.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write multiple characters to a text file by using the WriteAsync method.  
+  
+ [!CODE [System.IO.StreamWriter#24](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamWriter#24)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_WriteLineAsync">
+    
+            <a id="System_IO_StreamWriter_WriteLineAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteLineAsync()</div>        
+          </div>
+    
+            <p>Writes a line terminator asynchronously to the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteLineAsync ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The line terminator is defined by the <a class="xref" href="system.io.textwriter#System_IO_TextWriter_NewLine_">NewLine</a> property.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to use a StreamWriter object to write a file that lists the directories on the C drive, and then uses a <xref:system.io.streamreader> object to read and display each directory name. A good practice is to use these objects in a `using` statement so that the unmanaged resources are correctly disposed. The `using` statement automatically calls <xref:system.idisposable.dispose%2a> on the object when the code that is using it has completed. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!code-cs[StreamReadWrite#1](../../add/codesnippet/CSharp/streamreadwrite/program.cs#1)]
+ [!code-vb[StreamReadWrite#1](../../add/codesnippet/VisualBasic/readwrite/module1.vb#1)]
+    
+    
+        </xref:system.idisposable.dispose%2a></xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_WriteLineAsync_System_Char_">
+    
+            <a id="System_IO_StreamWriter_WriteLineAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteLineAsync(Char)</div>        
+          </div>
+    
+            <p>Writes a character followed by a line terminator asynchronously to the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteLineAsync (char value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character to write to the stream.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The line terminator is defined by the <a class="xref" href="system.io.textwriter#System_IO_TextWriter_NewLine_">NewLine</a> property.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to write a single character (the letter "a") to a line in a text file, followed by another line that contains a single character (the letter "b"), by using the WriteLineAsync method.  
+  
+ [!CODE [System.IO.StreamWriter#22](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamWriter#22)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_WriteLineAsync_System_String_">
+    
+            <a id="System_IO_StreamWriter_WriteLineAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteLineAsync(String)</div>        
+          </div>
+    
+            <p>Writes a string followed by a line terminator asynchronously to the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteLineAsync (string value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The string to write. If the value is <code>null</code>, only a line terminator is written.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The line terminator is defined by the <a class="xref" href="system.io.textwriter#System_IO_TextWriter_NewLine_">NewLine</a> property.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to write two lines that consist of string values to a text file by using the WriteLineAsync method.  
+  
+ [!CODE [System.IO.StreamWriter#23](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamWriter#23)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamWriter_WriteLineAsync_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StreamWriter_WriteLineAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteLineAsync(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Writes a subarray of characters followed by a line terminator asynchronously to the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteLineAsync (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The character array to write data from.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character position in the buffer at which to start reading data.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of characters to write.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The line terminator is defined by the <a class="xref" href="system.io.textwriter#System_IO_TextWriter_NewLine_">NewLine</a> property.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to write characters to two separate lines in a text file by using the WriteLineAsync method. The first line contains the first 11 characters from the string (the letters "First line" followed by a space). The second line contains the remaining characters from the string (the letters "and second line").  
+  
+ [!CODE [System.IO.StreamWriter#25](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamWriter#25)]
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

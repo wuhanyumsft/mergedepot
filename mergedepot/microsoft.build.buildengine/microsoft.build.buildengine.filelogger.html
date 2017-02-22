@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="FileLogger class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/Microsoft.Build.BuildEngine/Microsoft.Build.BuildEngine.FileLogger.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/Microsoft.Build.BuildEngine/Microsoft.Build.BuildEngine.FileLogger.yml">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.FileLogger">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.FileLogger..ctor">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.FileLogger.Initialize">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.FileLogger.Shutdown">
+<meta name="APILocation" content="Microsoft.Build.Engine.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="5fe887f6-8d7b-60a8-3904-668b45a06385">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Extends the  to log messages to a file rather than the console window.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Build.BuildEngine.FileLogger">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/microsoft.build.buildengine/microsoft.build.buildengine.filelogger" rel="canonical">
+    <title>FileLogger class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Build_BuildEngine_FileLogger">
+      <span class="lang-csharp">FileLogger</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Extends the <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger"> to log messages to a file rather than the console window.<p>
+</see>
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public class FileLogger : Microsoft.Build.BuildEngine.ConsoleLogger</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger">Microsoft.Build.BuildEngine.ConsoleLogger</a>
+          </div>
+        </li>
+      <li class="l2">
+        <div class="xref">
+          <div class="lang-csharp">FileLogger</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_ApplyParameter_System_String_System_String_">ApplyParameter(String,String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_BuildFinishedHandler_System_Object_Microsoft_Build_Framework_BuildFinishedEventArgs_">BuildFinishedHandler(Object,BuildFinishedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_BuildStartedHandler_System_Object_Microsoft_Build_Framework_BuildStartedEventArgs_">BuildStartedHandler(Object,BuildStartedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_CustomEventHandler_System_Object_Microsoft_Build_Framework_CustomBuildEventArgs_">CustomEventHandler(Object,CustomBuildEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_ErrorHandler_System_Object_Microsoft_Build_Framework_BuildErrorEventArgs_">ErrorHandler(Object,BuildErrorEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_MessageHandler_System_Object_Microsoft_Build_Framework_BuildMessageEventArgs_">MessageHandler(Object,BuildMessageEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_Parameters">Parameters</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_ProjectFinishedHandler_System_Object_Microsoft_Build_Framework_ProjectFinishedEventArgs_">ProjectFinishedHandler(Object,ProjectFinishedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_ProjectStartedHandler_System_Object_Microsoft_Build_Framework_ProjectStartedEventArgs_">ProjectStartedHandler(Object,ProjectStartedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_ShowSummary">ShowSummary</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_SkipProjectStartedText">SkipProjectStartedText</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_TargetFinishedHandler_System_Object_Microsoft_Build_Framework_TargetFinishedEventArgs_">TargetFinishedHandler(Object,TargetFinishedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_TargetStartedHandler_System_Object_Microsoft_Build_Framework_TargetStartedEventArgs_">TargetStartedHandler(Object,TargetStartedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_TaskFinishedHandler_System_Object_Microsoft_Build_Framework_TaskFinishedEventArgs_">TaskFinishedHandler(Object,TaskFinishedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_TaskStartedHandler_System_Object_Microsoft_Build_Framework_TaskStartedEventArgs_">TaskStartedHandler(Object,TaskStartedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_Verbosity">Verbosity</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_WarningHandler_System_Object_Microsoft_Build_Framework_BuildWarningEventArgs_">WarningHandler(Object,BuildWarningEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.buildengine.consolelogger#Microsoft_Build_BuildEngine_ConsoleLogger_WriteHandler">WriteHandler</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <p>The FileLogger writes messages to a file in exactly the same format as the <a class="xref" href="microsoft.build.buildengine.consolelogger">ConsoleLogger</a> writes messages to the console window.</p>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_FileLogger__ctor">FileLogger()</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.FileLogger"> class.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_FileLogger_Initialize_Microsoft_Build_Framework_IEventSource_">Initialize(IEventSource)</a></div>
+          </td>
+            <td>
+            <p>Registers the logger for the specified events.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_FileLogger_Initialize_Microsoft_Build_Framework_IEventSource_System_Int32_">Initialize(IEventSource,Int32)</a></div>
+          </td>
+            <td>
+            <p>Registers the logger for the specified events.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_FileLogger_Shutdown">Shutdown()</a></div>
+          </td>
+            <td>
+            <p>Stops the logger, releases all resources, and closes the file to which the logger was writing.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_FileLogger__ctor">
+    
+            <a id="Microsoft_Build_BuildEngine_FileLogger__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FileLogger()</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.FileLogger"> class.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public FileLogger ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates an <xref:microsoft.build.buildengine.engine> object and uses the <xref:microsoft.build.buildengine.engine.buildprojectfile%2a> method to build a project file. The <xref:microsoft.build.buildengine.filelogger> class is used to log information to a file.  
+  
+ [!code-vb[msbuild_BuildAProject#1](../../add/codesnippet/VisualBasic/BuildAProjectVB/Module1.vb#1)]
+ [!code-cs[msbuild_BuildAProject#1](../../add/codesnippet/CSharp/BuildAProjectCS/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.filelogger></xref:microsoft.build.buildengine.engine.buildprojectfile%2a></xref:microsoft.build.buildengine.engine></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_FileLogger_Initialize_Microsoft_Build_Framework_IEventSource_">
+    
+            <a id="Microsoft_Build_BuildEngine_FileLogger_Initialize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Initialize(IEventSource)</div>        
+          </div>
+    
+            <p>Registers the logger for the specified events.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Initialize (Microsoft.Build.Framework.IEventSource eventSource);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventSource</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../microsoft.build.framework/microsoft.build.framework.ieventsource">IEventSource</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <see cref="T:Microsoft.Build.Framework.IEventSource"> to register with the logger.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_FileLogger_Initialize_Microsoft_Build_Framework_IEventSource_System_Int32_">
+    
+            <a id="Microsoft_Build_BuildEngine_FileLogger_Initialize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Initialize(IEventSource,Int32)</div>        
+          </div>
+    
+            <p>Registers the logger for the specified events.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventSource</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../microsoft.build.framework/microsoft.build.framework.ieventsource">IEventSource</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <see cref="T:Microsoft.Build.Framework.IEventSource"> to register with the logger.<p>
+</see>
+                </li>
+                <li>
+                  <dl>
+                  <dt>nodeCount</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>An integer representing the node ID for the event source.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_FileLogger_Shutdown">
+    
+            <a id="Microsoft_Build_BuildEngine_FileLogger_Shutdown_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Shutdown()</div>        
+          </div>
+    
+            <p>Stops the logger, releases all resources, and closes the file to which the logger was writing.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Shutdown ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

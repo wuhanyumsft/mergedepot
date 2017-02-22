@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="ProjectTargetElement class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/Microsoft.Build.Construction/Microsoft.Build.Construction.ProjectTargetElement.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/Microsoft.Build.Construction/Microsoft.Build.Construction.ProjectTargetElement.yml">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.AddItemGroup">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.AddPropertyGroup">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.AddTask">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.AfterTargets">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.AfterTargetsLocation">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.BeforeTargets">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.BeforeTargetsLocation">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.DependsOnTargets">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.DependsOnTargetsLocation">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.Inputs">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.InputsLocation">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.ItemGroups">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.KeepDuplicateOutputs">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.KeepDuplicateOutputsLocation">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.Name">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.NameLocation">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.OnErrors">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.Outputs">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.OutputsLocation">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.PropertyGroups">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.Returns">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.ReturnsLocation">
+<meta name="APIName" content="Microsoft.Build.Construction.ProjectTargetElement.Tasks">
+<meta name="APILocation" content="Microsoft.Build.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="9a674bd4-5fa2-9411-bdb4-673b243efb41">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Represents a Target Element (MSBuild) in an MSBuild project.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Build.Construction.ProjectTargetElement">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/microsoft.build.construction/microsoft.build.construction.projecttargetelement" rel="canonical">
+    <title>ProjectTargetElement class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Build_Construction_ProjectTargetElement">
+      <span class="lang-csharp">ProjectTargetElement</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Represents a <a href="../topic/target%20element%20(msbuild)">Target Element (MSBuild)</a> in an MSBuild project.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Diagnostics.DebuggerDisplay(&quot;Name={Name} #Children={Count} Condition={Condition}&quot;)]
+public class ProjectTargetElement : Microsoft.Build.Construction.ProjectElementContainer</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelement">ProjectElement</a>
+          </div>
+        </li>
+        <li class="l2">
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer">Microsoft.Build.Construction.ProjectElementContainer</a>
+          </div>
+        </li>
+      <li class="l3">
+        <div class="xref">
+          <div class="lang-csharp">ProjectTargetElement</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelement#Microsoft_Build_Construction_ProjectElement_AllParents">AllParents</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelement#Microsoft_Build_Construction_ProjectElement_Condition">Condition</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelement#Microsoft_Build_Construction_ProjectElement_ConditionLocation">ConditionLocation</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelement#Microsoft_Build_Construction_ProjectElement_ContainingProject">ContainingProject</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelement#Microsoft_Build_Construction_ProjectElement_Label">Label</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelement#Microsoft_Build_Construction_ProjectElement_LabelLocation">LabelLocation</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelement#Microsoft_Build_Construction_ProjectElement_Location">Location</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelement#Microsoft_Build_Construction_ProjectElement_NextSibling">NextSibling</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelement#Microsoft_Build_Construction_ProjectElement_Parent">Parent</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelement#Microsoft_Build_Construction_ProjectElement_PreviousSibling">PreviousSibling</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer#Microsoft_Build_Construction_ProjectElementContainer_AllChildren">AllChildren</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer#Microsoft_Build_Construction_ProjectElementContainer_AppendChild_Microsoft_Build_Construction_ProjectElement_">AppendChild(ProjectElement)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer#Microsoft_Build_Construction_ProjectElementContainer_Children">Children</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer#Microsoft_Build_Construction_ProjectElementContainer_ChildrenReversed">ChildrenReversed</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer#Microsoft_Build_Construction_ProjectElementContainer_Count">Count</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer#Microsoft_Build_Construction_ProjectElementContainer_FirstChild">FirstChild</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer#Microsoft_Build_Construction_ProjectElementContainer_InsertAfterChild_Microsoft_Build_Construction_ProjectElement_Microsoft_Build_Construction_ProjectElement_">InsertAfterChild(ProjectElement,ProjectElement)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer#Microsoft_Build_Construction_ProjectElementContainer_InsertBeforeChild_Microsoft_Build_Construction_ProjectElement_Microsoft_Build_Construction_ProjectElement_">InsertBeforeChild(ProjectElement,ProjectElement)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer#Microsoft_Build_Construction_ProjectElementContainer_LastChild">LastChild</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer#Microsoft_Build_Construction_ProjectElementContainer_PrependChild_Microsoft_Build_Construction_ProjectElement_">PrependChild(ProjectElement)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer#Microsoft_Build_Construction_ProjectElementContainer_RemoveAllChildren">RemoveAllChildren()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.construction.projectelementcontainer#Microsoft_Build_Construction_ProjectElementContainer_RemoveChild_Microsoft_Build_Construction_ProjectElement_">RemoveChild(ProjectElement)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_AfterTargets">AfterTargets</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the <code>AfterTargets</code> attribute value.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_AfterTargetsLocation">AfterTargetsLocation</a></div>
+          </td>
+            <td>
+            <p>Location of the AfterTargets attribute</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_BeforeTargets">BeforeTargets</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the BeforeTargets attribute value.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_BeforeTargetsLocation">BeforeTargetsLocation</a></div>
+          </td>
+            <td>
+            <p>Location of the BeforeTargets attribute</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_DependsOnTargets">DependsOnTargets</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the DependsOnTargets attribute value.  Returns empty string if it is not present. Removes the attribute if the value to set is empty.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_DependsOnTargetsLocation">DependsOnTargetsLocation</a></div>
+          </td>
+            <td>
+            <p>Location of the DependsOnTargets attribute</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_Inputs">Inputs</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the Inputs attribute value.  Returns empty string if it is not present. Removes the attribute if the value to set is empty.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_InputsLocation">InputsLocation</a></div>
+          </td>
+            <td>
+            <p>Location of the Inputs attribute</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_ItemGroups">ItemGroups</a></div>
+          </td>
+            <td>
+            <p>Gets all child item groups</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_KeepDuplicateOutputs">KeepDuplicateOutputs</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the TrimDuplicateOutputs attribute value.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_KeepDuplicateOutputsLocation">KeepDuplicateOutputsLocation</a></div>
+          </td>
+            <td>
+            <p>Location of the TrimDuplicateOutputs attribute</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_Name">Name</a></div>
+          </td>
+            <td>
+            <p>Gets and sets the name of the this target.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_NameLocation">NameLocation</a></div>
+          </td>
+            <td>
+            <p>Location of the Name attribute</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_OnErrors">OnErrors</a></div>
+          </td>
+            <td>
+            <p>Get all child <a href="../topic/onerror%20element%20(msbuild)">OnError Element (MSBuild)</a>.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_Outputs">Outputs</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the Outputs attribute value.  Returns empty string if it is not present. Removes the attribute if the value to set is empty.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_OutputsLocation">OutputsLocation</a></div>
+          </td>
+            <td>
+            <p>Location of the Outputs attribute</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_PropertyGroups">PropertyGroups</a></div>
+          </td>
+            <td>
+            <p>Gets all child property groups.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_Returns">Returns</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the Returns attribute value.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_ReturnsLocation">ReturnsLocation</a></div>
+          </td>
+            <td>
+            <p>Location of the Returns attribute</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_Tasks">Tasks</a></div>
+          </td>
+            <td>
+            <p>Gets all child tasks.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_AddItemGroup">AddItemGroup()</a></div>
+          </td>
+            <td>
+            <p>Adds an item group after the last child.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_AddPropertyGroup">AddPropertyGroup()</a></div>
+          </td>
+            <td>
+            <p>Adds a property group after the last child.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Construction_ProjectTargetElement_AddTask_System_String_">AddTask(String)</a></div>
+          </td>
+            <td>
+            <p>Adds a task to this target after any existing task.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_AfterTargets">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_AfterTargets_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AfterTargets</div>        
+          </div>
+    
+            <p>Gets or sets the <code>AfterTargets</code> attribute value.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string AfterTargets { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Returns the <code>AfterTargets</code> attribute value. Returns an empty string if the attribute is not present.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Removes the <code>AfterTargets</code> attribute if set to null or an empty string.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_AfterTargetsLocation">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_AfterTargetsLocation_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AfterTargetsLocation</div>        
+          </div>
+    
+            <p>Location of the AfterTargets attribute</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Construction.ElementLocation AfterTargetsLocation { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.construction.elementlocation">ElementLocation</a></div>
+                  </div>
+                  <p>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation">.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_BeforeTargets">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_BeforeTargets_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BeforeTargets</div>        
+          </div>
+    
+            <p>Gets or sets the BeforeTargets attribute value.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string BeforeTargets { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Returns the BeforeTargets attribute value. Returns an empty string if the attribute is not present.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Removes the BeforeTargets attribute if set to null or an empty string.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_BeforeTargetsLocation">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_BeforeTargetsLocation_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BeforeTargetsLocation</div>        
+          </div>
+    
+            <p>Location of the BeforeTargets attribute</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Construction.ElementLocation BeforeTargetsLocation { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.construction.elementlocation">ElementLocation</a></div>
+                  </div>
+                  <p>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation">.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_DependsOnTargets">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_DependsOnTargets_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DependsOnTargets</div>        
+          </div>
+    
+            <p>Gets or sets the DependsOnTargets attribute value.  Returns empty string if it is not present. Removes the attribute if the value to set is empty.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string DependsOnTargets { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Returns the DependsOnTargets attribute value. Returns an empty string if the attribute is not present.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Removes the DependsOnTargets attribute if the value to set is set to null or an empty string.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_DependsOnTargetsLocation">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_DependsOnTargetsLocation_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DependsOnTargetsLocation</div>        
+          </div>
+    
+            <p>Location of the DependsOnTargets attribute</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Construction.ElementLocation DependsOnTargetsLocation { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.construction.elementlocation">ElementLocation</a></div>
+                  </div>
+                  <p>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation">.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_Inputs">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_Inputs_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Inputs</div>        
+          </div>
+    
+            <p>Gets or sets the Inputs attribute value.  Returns empty string if it is not present. Removes the attribute if the value to set is empty.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Inputs { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Returns the Inputs attribute value. Returns an empty string if the attribute is not present.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Removes the Inputs attribute if the value to set is set to null or an empty string.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_InputsLocation">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_InputsLocation_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">InputsLocation</div>        
+          </div>
+    
+            <p>Location of the Inputs attribute</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Construction.ElementLocation InputsLocation { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.construction.elementlocation">ElementLocation</a></div>
+                  </div>
+                  <p>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation">.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_ItemGroups">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_ItemGroups_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ItemGroups</div>        
+          </div>
+    
+            <p>Gets all child item groups</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectItemGroupElement&gt; ItemGroups { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="microsoft.build.construction.projectitemgroupelement">ProjectItemGroupElement</a>&gt;</div>
+                  </div>
+                  <p>Returns all child item groups.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_KeepDuplicateOutputs">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_KeepDuplicateOutputs_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">KeepDuplicateOutputs</div>        
+          </div>
+    
+            <p>Gets or sets the TrimDuplicateOutputs attribute value.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string KeepDuplicateOutputs { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Returns the TrimDuplicateOutputs attribute value. Returns an empty string if the attribute is not present.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Removes the TrimDuplicateOutputs attribute if the value to set is set to null or an empty string.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_KeepDuplicateOutputsLocation">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_KeepDuplicateOutputsLocation_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">KeepDuplicateOutputsLocation</div>        
+          </div>
+    
+            <p>Location of the TrimDuplicateOutputs attribute</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Construction.ElementLocation KeepDuplicateOutputsLocation { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.construction.elementlocation">ElementLocation</a></div>
+                  </div>
+                  <p>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation">.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_Name">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_Name_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Name</div>        
+          </div>
+    
+            <p>Gets and sets the name of the this target.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Name { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Returns the name of the this target.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_NameLocation">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_NameLocation_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NameLocation</div>        
+          </div>
+    
+            <p>Location of the Name attribute</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Construction.ElementLocation NameLocation { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.construction.elementlocation">ElementLocation</a></div>
+                  </div>
+                  <p>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation">.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_OnErrors">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_OnErrors_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnErrors</div>        
+          </div>
+    
+            <p>Get all child <a href="../topic/onerror%20element%20(msbuild)">OnError Element (MSBuild)</a>.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectOnErrorElement&gt; OnErrors { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="microsoft.build.construction.projectonerrorelement">ProjectOnErrorElement</a>&gt;</div>
+                  </div>
+                  <p>Returns all child OnError elements.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_Outputs">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_Outputs_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Outputs</div>        
+          </div>
+    
+            <p>Gets or sets the Outputs attribute value.  Returns empty string if it is not present. Removes the attribute if the value to set is empty.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Outputs { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Returns the Outputs attribute value. Returns an empty string if the attribute is not present.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Removes the Outputs attribute if the value to set is set to null or an empty string.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_OutputsLocation">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_OutputsLocation_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OutputsLocation</div>        
+          </div>
+    
+            <p>Location of the Outputs attribute</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Construction.ElementLocation OutputsLocation { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.construction.elementlocation">ElementLocation</a></div>
+                  </div>
+                  <p>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation">.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_PropertyGroups">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_PropertyGroups_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PropertyGroups</div>        
+          </div>
+    
+            <p>Gets all child property groups.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectPropertyGroupElement&gt; PropertyGroups { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="microsoft.build.construction.projectpropertygroupelement">ProjectPropertyGroupElement</a>&gt;</div>
+                  </div>
+                  <p>Returns all child property groups.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_Returns">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_Returns_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Returns</div>        
+          </div>
+    
+            <p>Gets or sets the Returns attribute value.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Returns { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Returns the returns attribute value; null if the attribute is not present</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Removes the attribute only if the value is set to null. An empty string is an allowable value for both getting and setting.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_ReturnsLocation">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_ReturnsLocation_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReturnsLocation</div>        
+          </div>
+    
+            <p>Location of the Returns attribute</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Construction.ElementLocation ReturnsLocation { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.construction.elementlocation">ElementLocation</a></div>
+                  </div>
+                  <p>Returns <see cref="T:Microsoft.Build.Construction.ElementLocation">.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_Tasks">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_Tasks_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Tasks</div>        
+          </div>
+    
+            <p>Gets all child tasks.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.Generic.ICollection&lt;Microsoft.Build.Construction.ProjectTaskElement&gt; Tasks { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="microsoft.build.construction.projecttaskelement">ProjectTaskElement</a>&gt;</div>
+                  </div>
+                  <p>Returns all child tasks.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_AddItemGroup">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_AddItemGroup_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddItemGroup()</div>        
+          </div>
+    
+            <p>Adds an item group after the last child.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Construction.ProjectItemGroupElement AddItemGroup ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.construction.projectitemgroupelement">ProjectItemGroupElement</a></div>
+                  </div>
+                  <p>Returns the added item group.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Convenience method that picks a location based on a heuristic.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_AddPropertyGroup">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_AddPropertyGroup_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddPropertyGroup()</div>        
+          </div>
+    
+            <p>Adds a property group after the last child.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Construction.ProjectPropertyGroupElement AddPropertyGroup ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.construction.projectpropertygroupelement">ProjectPropertyGroupElement</a></div>
+                  </div>
+                  <p>Returns the added property group.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Convenience method that picks a location based on a heuristic.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Construction_ProjectTargetElement_AddTask_System_String_">
+    
+            <a id="Microsoft_Build_Construction_ProjectTargetElement_AddTask_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddTask(String)</div>        
+          </div>
+    
+            <p>Adds a task to this target after any existing task.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Construction.ProjectTaskElement AddTask (string taskName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>taskName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The name of the task to add.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.construction.projecttaskelement">ProjectTaskElement</a></div>
+                  </div>
+                  <p>Returns the added task.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Convenience method to add a task to this target.</p>
+
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

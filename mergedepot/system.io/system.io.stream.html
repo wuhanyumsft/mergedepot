@@ -1,0 +1,2822 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Stream class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/System.IO/System.IO.Stream.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO/System.IO.Stream.yml">
+<meta name="APIName" content="System.IO.Stream">
+<meta name="APIName" content="System.IO.Stream..ctor">
+<meta name="APIName" content="System.IO.Stream.BeginRead">
+<meta name="APIName" content="System.IO.Stream.BeginWrite">
+<meta name="APIName" content="System.IO.Stream.CanRead">
+<meta name="APIName" content="System.IO.Stream.CanSeek">
+<meta name="APIName" content="System.IO.Stream.CanTimeout">
+<meta name="APIName" content="System.IO.Stream.CanWrite">
+<meta name="APIName" content="System.IO.Stream.Close">
+<meta name="APIName" content="System.IO.Stream.CopyTo">
+<meta name="APIName" content="System.IO.Stream.CopyToAsync">
+<meta name="APIName" content="System.IO.Stream.CreateWaitHandle">
+<meta name="APIName" content="System.IO.Stream.Dispose">
+<meta name="APIName" content="System.IO.Stream.EndRead">
+<meta name="APIName" content="System.IO.Stream.EndWrite">
+<meta name="APIName" content="System.IO.Stream.Flush">
+<meta name="APIName" content="System.IO.Stream.FlushAsync">
+<meta name="APIName" content="System.IO.Stream.Length">
+<meta name="APIName" content="System.IO.Stream.Null">
+<meta name="APIName" content="System.IO.Stream.ObjectInvariant">
+<meta name="APIName" content="System.IO.Stream.Position">
+<meta name="APIName" content="System.IO.Stream.Read">
+<meta name="APIName" content="System.IO.Stream.ReadAsync">
+<meta name="APIName" content="System.IO.Stream.ReadByte">
+<meta name="APIName" content="System.IO.Stream.ReadTimeout">
+<meta name="APIName" content="System.IO.Stream.Seek">
+<meta name="APIName" content="System.IO.Stream.SetLength">
+<meta name="APIName" content="System.IO.Stream.Synchronized">
+<meta name="APIName" content="System.IO.Stream.Write">
+<meta name="APIName" content="System.IO.Stream.WriteAsync">
+<meta name="APIName" content="System.IO.Stream.WriteByte">
+<meta name="APIName" content="System.IO.Stream.WriteTimeout">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="bec2de74-f6a6-731d-fa46-c1df5705099b">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Provides a generic view of a sequence of bytes. This is an abstract class.  
+ To browse the .NET Framework source code for this type, see the Reference Source.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.Stream">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.io/system.io.stream" rel="canonical">
+    <title>Stream class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_Stream">
+      <span class="lang-csharp">Stream</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Provides a generic view of a sequence of bytes. This is an abstract class.  </p>
+<p> To browse the .NET Framework source code for this type, see the <a href="http://referencesource.microsoft.com/#mscorlib/system/io/stream.cs#f956b0c07e86df64">Reference Source</a>.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public abstract class Stream : MarshalByRefObject, IDisposable</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject">System.MarshalByRefObject</a>
+          </div>
+        </li>
+      <li class="l2">
+        <div class="xref">
+          <div class="lang-csharp">Stream</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_CreateObjRef_System_Type_">CreateObjRef(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_GetLifetimeService">GetLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_InitializeLifetimeService">InitializeLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_MemberwiseClone_System_Boolean_">MemberwiseClone(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <div class="NOTE"><h5>Note</h5><p> To view the .NET Framework source code for this type, see the <a href="http://referencesource.microsoft.com/#mscorlib/system/io/stream.cs#f956b0c07e86df64">Reference Source</a>. You can browse through the source code online, download the reference for offline viewing, and step through the sources (including patches and updates) during debugging; see <a href="http://referencesource.microsoft.com/">instructions</a>.  </p>
+</div>
+<p> Stream is the abstract base class of all streams. A stream is an abstraction of a sequence of bytes, such as a file, an input/output device, an inter-process communication pipe, or a TCP/IP socket. The Stream class and its derived classes provide a generic view of these different types of input and output, and isolate the programmer from the specific details of the operating system and the underlying devices.  </p>
+<p> Streams involve three fundamental operations:  </p>
+<ul>
+<li><p>You can read from streams. Reading is the transfer of data from a stream into a data structure, such as an array of bytes.  </p>
+</li>
+<li><p>You can write to streams. Writing is the transfer of data from a data structure into a stream.  </p>
+</li>
+<li><p>Streams can support seeking. Seeking refers to querying and modifying the current position within a stream. Seek capability depends on the kind of backing store a stream has. For example, network streams have no unified concept of a current position, and therefore typically do not support seeking.  </p>
+<p>Some of the more commonly used streams that inherit from Stream are <a class="xref" href="system.io.filestream">FileStream</a>, and <a class="xref" href="system.io.memorystream">MemoryStream</a>.  </p>
+<p>Depending on the underlying data source or repository, streams might support only some of these capabilities. You can query a stream for its capabilities by using the <a class="xref" href="system.io.stream#System_IO_Stream_CanRead_">CanRead</a>, <a class="xref" href="system.io.stream#System_IO_Stream_CanWrite_">CanWrite</a>, and <a class="xref" href="system.io.stream#System_IO_Stream_CanSeek_">CanSeek</a> properties of the Stream class.  </p>
+<p>The <a class="xref" href="system.io.stream#System_IO_Stream_Read_">Read</a> and <a class="xref" href="system.io.stream#System_IO_Stream_Write_">Write</a> methods read and write data in a variety of formats. For streams that support seeking, use the <a class="xref" href="system.io.stream#System_IO_Stream_Seek_">Seek</a> and <a class="xref" href="system.io.stream#System_IO_Stream_SetLength_">SetLength</a> methods and the <a class="xref" href="system.io.stream#System_IO_Stream_Position_">Position</a> and <a class="xref" href="system.io.stream#System_IO_Stream_Length_">Length</a> properties to query and modify the current position and length of a stream.  </p>
+<p>This type implements the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <a class="xref" href="../system/system.idisposable#System_IDisposable_Dispose_">Dispose</a> method in a <code>try</code>/<code>catch</code> block. To dispose of it indirectly, use a language construct such as <code>using</code> (in C#) or <code>Using</code> (in Visual Basic). For more information, see the â€œUsing an Object that Implements IDisposableâ€ section in the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface topic.  </p>
+<p>Disposing a Stream object flushes any buffered data, and essentially calls the <a class="xref" href="system.io.stream#System_IO_Stream_Flush_">Flush</a> method for you. <a class="xref" href="system.io.stream#System_IO_Stream_Dispose_">Dispose</a> also releases operating system resources such as file handles, network connections, or memory used for any internal buffering. The <a class="xref" href="system.io.bufferedstream">BufferedStream</a> class provides the capability of wrapping a buffered stream around another stream in order to improve read and write performance.  </p>
+<p>Starting with the <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/net-v45-md.md&quot; -->.NET Framework 4.5<!--END INCLUDE -->, the Stream class includes async methods to simplify asynchronous operations. An async method contains <code>Async</code> in its name, such as <a class="xref" href="system.io.stream#System_IO_Stream_ReadAsync_">ReadAsync</a>, <a class="xref" href="system.io.stream#System_IO_Stream_WriteAsync_">WriteAsync</a>, <a class="xref" href="system.io.stream#System_IO_Stream_CopyToAsync_">CopyToAsync</a>, and <a class="xref" href="system.io.stream#System_IO_Stream_FlushAsync_">FlushAsync</a>. These methods enable you to perform resource-intensive I/O operations without blocking the main thread. This performance consideration is particularly important in a <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/win8-appname-long-md.md&quot; -->Windows 8.x Store<!--END INCLUDE --> app or <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]:Couldn&#39;t find file Token/desktop_appname_md.md. -->[!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]<!--END ERROR INCLUDE --> app where a time-consuming stream operation can block the UI thread and make your app appear as if it is not working. The async methods are used in conjunction with the <code>async</code> and <code>await</code> keywords in Visual Basic and C#.  </p>
+<p>When used in a <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/win8-appname-long-md.md&quot; -->Windows 8.x Store<!--END INCLUDE --> app, Stream includes two extension methods: &lt;xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A&gt; and &lt;xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A&gt;. These methods convert a Stream object to a stream in the <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/wrt-md.md&quot; -->Windows Runtime<!--END INCLUDE -->. You can also convert a stream in the <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/wrt-md.md&quot; -->Windows Runtime<!--END INCLUDE --> to a Stream object by using the &lt;xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A&gt; and &lt;xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForWrite%2A&gt; methods. For more information, see <a href="../Topic/How%20to:%20Convert%20Between%20.NET%20Framework%20Streams%20and%20Windows%20Runtime%20Streams.md">How to: Convert Between .NET Framework Streams and Windows Runtime Streams</a>  </p>
+<p>Some stream implementations perform local buffering of the underlying data to improve performance. For such streams, you can use the <a class="xref" href="system.io.stream#System_IO_Stream_Flush_">Flush</a> or <a class="xref" href="system.io.stream#System_IO_Stream_FlushAsync_">FlushAsync</a> method to clear any internal buffers and ensure that all data has been written to the underlying data source or repository.  </p>
+<p>If you need a stream with no backing store (also known as a bit bucket), use the <a class="xref" href="system.io.stream#System_IO_Stream_Null">Null</a> field to retrieve an instance of a stream that is designed for this purpose.</p>
+</li>
+</ul>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream__ctor">Stream()</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.Stream"> class.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Fields
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_Null">Null</a></div>
+          </td>
+            <td>
+            <p>A <code>Stream</code> with no backing store.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_CanRead">CanRead</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, gets a value indicating whether the current stream supports reading.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_CanSeek">CanSeek</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, gets a value indicating whether the current stream supports seeking.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_CanTimeout">CanTimeout</a></div>
+          </td>
+            <td>
+            <p>Gets a value that determines whether the current stream can time out.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_CanWrite">CanWrite</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, gets a value indicating whether the current stream supports writing.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_Length">Length</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, gets the length in bytes of the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_Position">Position</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, gets or sets the position within the current stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_ReadTimeout">ReadTimeout</a></div>
+          </td>
+            <td>
+            <p>Gets or sets a value, in miliseconds, that determines how long the stream will attempt to read before timing out.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_WriteTimeout">WriteTimeout</a></div>
+          </td>
+            <td>
+            <p>Gets or sets a value, in miliseconds, that determines how long the stream will attempt to write before timing out.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_BeginRead_System_Byte___System_Int32_System_Int32_System_AsyncCallback_System_Object_">BeginRead(Byte[],Int32,Int32,AsyncCallback,Object)</a></div>
+          </td>
+            <td>
+            <p>Begins an asynchronous read operation. (Consider using <a class="xref" href="system.io.stream#System_IO_Stream_ReadAsync_">ReadAsync</a> instead; see the Remarks section.)</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_BeginWrite_System_Byte___System_Int32_System_Int32_System_AsyncCallback_System_Object_">BeginWrite(Byte[],Int32,Int32,AsyncCallback,Object)</a></div>
+          </td>
+            <td>
+            <p>Begins an asynchronous write operation. (Consider using <a class="xref" href="system.io.stream#System_IO_Stream_WriteAsync_">WriteAsync</a> instead; see the Remarks section.)</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_Close">Close()</a></div>
+          </td>
+            <td>
+            <p>Closes the current stream and releases any resources (such as sockets and file handles) associated with the current stream. Instead of calling this method, ensure that the stream is properly disposed.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_CopyTo_System_IO_Stream_">CopyTo(Stream)</a></div>
+          </td>
+            <td>
+            <p>Reads the bytes from the current stream and writes them to another stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_CopyTo_System_IO_Stream_System_Int32_">CopyTo(Stream,Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads the bytes from the current stream and writes them to another stream, using a specified buffer size.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_CopyToAsync_System_IO_Stream_">CopyToAsync(Stream)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously reads the bytes from the current stream and writes them to another stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_CopyToAsync_System_IO_Stream_System_Int32_">CopyToAsync(Stream,Int32)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_CopyToAsync_System_IO_Stream_System_Int32_System_Threading_CancellationToken_">CopyToAsync(Stream,Int32,CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size and cancellation token.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_CreateWaitHandle">CreateWaitHandle()</a></div>
+          </td>
+            <td>
+            <p>Allocates a <a class="xref" href="../system.threading/system.threading.waithandle">WaitHandle</a> object.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_Dispose">Dispose()</a></div>
+          </td>
+            <td>
+            <p>Releases all resources used by the <see cref="T:System.IO.Stream">.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.Stream"> and optionally releases the managed resources.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_EndRead_System_IAsyncResult_">EndRead(IAsyncResult)</a></div>
+          </td>
+            <td>
+            <p>Waits for the pending asynchronous read to complete. (Consider using <a class="xref" href="system.io.stream#System_IO_Stream_ReadAsync_">ReadAsync</a> instead; see the Remarks section.)</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_EndWrite_System_IAsyncResult_">EndWrite(IAsyncResult)</a></div>
+          </td>
+            <td>
+            <p>Ends an asynchronous write operation. (Consider using <a class="xref" href="system.io.stream#System_IO_Stream_WriteAsync_">WriteAsync</a> instead; see the Remarks section.)</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_Flush">Flush()</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_FlushAsync">FlushAsync()</a></div>
+          </td>
+            <td>
+            <p>Asynchronously clears all buffers for this stream and causes any buffered data to be written to the underlying device.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_FlushAsync_System_Threading_CancellationToken_">FlushAsync(CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously clears all buffers for this stream, causes any buffered data to be written to the underlying device, and monitors cancellation requests.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_ObjectInvariant">ObjectInvariant()</a></div>
+          </td>
+            <td>
+            <p>Provides support for a <a class="xref" href="../system.diagnostics.contracts/system.diagnostics.contracts.contract">Contract</a>.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_Read_System_Byte___System_Int32_System_Int32_">Read(Byte[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_ReadAsync_System_Byte___System_Int32_System_Int32_">ReadAsync(Byte[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_ReadAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">ReadAsync(Byte[],Int32,Int32,CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_ReadByte">ReadByte()</a></div>
+          </td>
+            <td>
+            <p>Reads a byte from the stream and advances the position within the stream by one byte, or returns -1 if at the end of the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_Seek_System_Int64_System_IO_SeekOrigin_">Seek(Int64,SeekOrigin)</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, sets the position within the current stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_SetLength_System_Int64_">SetLength(Int64)</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, sets the length of the current stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_Synchronized_System_IO_Stream_">Synchronized(Stream)</a></div>
+          </td>
+            <td>
+            <p>Creates a thread-safe (synchronized) wrapper around the specified <see cref="T:System.IO.Stream"> object.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_Write_System_Byte___System_Int32_System_Int32_">Write(Byte[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_WriteAsync_System_Byte___System_Int32_System_Int32_">WriteAsync(Byte[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_WriteAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">WriteAsync(Byte[],Int32,Int32,CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously writes a sequence of bytes to the current stream, advances the current position within this stream by the number of bytes written, and monitors cancellation requests.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Stream_WriteByte_System_Byte_">WriteByte(Byte)</a></div>
+          </td>
+            <td>
+            <p>Writes a byte to the current position in the stream and advances the position within the stream by one byte.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream__ctor">
+    
+            <a id="System_IO_Stream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Stream()</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.Stream"> class.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected Stream ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.stream">Stream</a> is the abstract base class of all streams.  </p>
+<p> Some of the more commonly used streams that inherit from <a class="xref" href="system.io.stream">Stream</a> are <a class="xref" href="system.io.filestream">FileStream</a>, and <a class="xref" href="system.io.memorystream">MemoryStream</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="fields">
+        <h2>Fields
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_Null">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Null</div>        
+          </div>
+    
+            <p>A <code>Stream</code> with no backing store.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly System.IO.Stream Null;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use <code>Null</code> to redirect output to a stream that will not consume any operating system resources. When the methods of <code>Stream</code> that provide writing are invoked on <code>Null</code>, the call simply returns, and no data is written. <code>Null</code> also implements a <code>Read</code> method that returns zero without reading data.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_CanRead">
+    
+            <a id="System_IO_Stream_CanRead_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanRead</div>        
+          </div>
+    
+            <p>When overridden in a derived class, gets a value indicating whether the current stream supports reading.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract bool CanRead { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the stream supports reading; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If a class derived from <a class="xref" href="system.io.stream">Stream</a> does not support reading, calls to the <a class="xref" href="system.io.stream#System_IO_Stream_Read_">Read</a>, <a class="xref" href="system.io.stream#System_IO_Stream_ReadByte_">ReadByte</a>, and <a class="xref" href="system.io.stream#System_IO_Stream_BeginRead_">BeginRead</a> methods throw a <a class="xref" href="../system/system.notsupportedexception">NotSupportedException</a>.  </p>
+<p> If the stream is closed, this property returns <code>false</code>.</p>
+
+    
+            <h4>Example</h4>
+            The following is an example of using the `CanRead` property.  
+  
+ [!CODE [Classic FileStream.CanRead Example#1](../CodeSnippet/VS_Snippets_CLR_Classic/classic FileStream.CanRead Example#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_CanSeek">
+    
+            <a id="System_IO_Stream_CanSeek_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanSeek</div>        
+          </div>
+    
+            <p>When overridden in a derived class, gets a value indicating whether the current stream supports seeking.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract bool CanSeek { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the stream supports seeking; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If a class derived from <a class="xref" href="system.io.stream">Stream</a> does not support seeking, calls to <a class="xref" href="system.io.stream#System_IO_Stream_Length_">Length</a>, <a class="xref" href="system.io.stream#System_IO_Stream_SetLength_">SetLength</a>, <a class="xref" href="system.io.stream#System_IO_Stream_Position_">Position</a>, and <a class="xref" href="system.io.stream#System_IO_Stream_Seek_">Seek</a> throw a <a class="xref" href="../system/system.notsupportedexception">NotSupportedException</a>.  </p>
+<p> If the stream is closed, this property returns <code>false</code>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_CanTimeout">
+    
+            <a id="System_IO_Stream_CanTimeout_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanTimeout</div>        
+          </div>
+    
+            <p>Gets a value that determines whether the current stream can time out.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool CanTimeout { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>A value that determines whether the current stream can time out.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The CanTimeout property always returns <code>false</code>. Some stream implementations require different behavior, such as <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.net.sockets.networkstream(v=vs.110).aspx">NetworkStream</a>, which times out if network connectivity is interrupted or lost. If you are implementing a stream that must be able to time out, this property should be overridden to return <code>true</code>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_CanWrite">
+    
+            <a id="System_IO_Stream_CanWrite_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanWrite</div>        
+          </div>
+    
+            <p>When overridden in a derived class, gets a value indicating whether the current stream supports writing.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract bool CanWrite { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the stream supports writing; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If a class derived from <a class="xref" href="system.io.stream">Stream</a> does not support writing, a call to <a class="xref" href="system.io.stream#System_IO_Stream_Write_">Write</a>, <a class="xref" href="system.io.stream#System_IO_Stream_BeginWrite_">BeginWrite</a>, or <a class="xref" href="system.io.stream#System_IO_Stream_WriteByte_">WriteByte</a> throws a <a class="xref" href="../system/system.notsupportedexception">NotSupportedException</a>.  </p>
+<p> If the stream is closed, this property returns <code>false</code>.</p>
+
+    
+            <h4>Example</h4>
+            The following is an example of using the `CanWrite` property.  
+  
+ [!CODE [Classic Stream.CanWrite Example#1](../CodeSnippet/VS_Snippets_CLR_Classic/classic Stream.CanWrite Example#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_Length">
+    
+            <a id="System_IO_Stream_Length_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Length</div>        
+          </div>
+    
+            <p>When overridden in a derived class, gets the length in bytes of the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract long Length { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>A long value representing the length of the stream in bytes.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_Position">
+    
+            <a id="System_IO_Stream_Position_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Position</div>        
+          </div>
+    
+            <p>When overridden in a derived class, gets or sets the position within the current stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract long Position { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>The current position within the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The stream must support seeking to get or set the position. Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanSeek_">CanSeek</a> property to determine whether the stream supports seeking.  </p>
+<p> Seeking to any location beyond the length of the stream is supported.  </p>
+<p> The <code>Position</code> property does not keep track of the number of bytes from the stream that have been consumed, skipped, or both.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_ReadTimeout">
+    
+            <a id="System_IO_Stream_ReadTimeout_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadTimeout</div>        
+          </div>
+    
+            <p>Gets or sets a value, in miliseconds, that determines how long the stream will attempt to read before timing out.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int ReadTimeout { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>A value, in miliseconds, that determines how long the stream will attempt to read before timing out.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_WriteTimeout">
+    
+            <a id="System_IO_Stream_WriteTimeout_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteTimeout</div>        
+          </div>
+    
+            <p>Gets or sets a value, in miliseconds, that determines how long the stream will attempt to write before timing out.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int WriteTimeout { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>A value, in miliseconds, that determines how long the stream will attempt to write before timing out.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_BeginRead_System_Byte___System_Int32_System_Int32_System_AsyncCallback_System_Object_">
+    
+            <a id="System_IO_Stream_BeginRead_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BeginRead(Byte[],Int32,Int32,AsyncCallback,Object)</div>        
+          </div>
+    
+            <p>Begins an asynchronous read operation. (Consider using <a class="xref" href="system.io.stream#System_IO_Stream_ReadAsync_">ReadAsync</a> instead; see the Remarks section.)</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IAsyncResult BeginRead (byte[] buffer, int offset, int count, AsyncCallback callback, object state);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to read the data into.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The byte offset in  at which to begin writing data read from the stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>callback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.asynccallback">AsyncCallback</a></div>
+                  </dd>
+                  </dl>
+                  <p>An optional asynchronous callback, to be called when the read is complete.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>A user-provided object that distinguishes this particular asynchronous read request from other requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </div>
+                  <p>An <a class="xref" href="../system/system.iasyncresult">IAsyncResult</a> that represents the asynchronous read, which could still be pending.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>In the .NET Framework 4 and earlier versions, you have to use methods such as BeginRead and <a class="xref" href="system.io.stream#System_IO_Stream_EndRead_">EndRead</a> to implement asynchronous I/O operations. These methods are still available in the <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/net-v45-md.md&quot; -->.NET Framework 4.5<!--END INCLUDE --> to support legacy code; however, the new async methods, such as <a class="xref" href="system.io.stream#System_IO_Stream_ReadAsync_">ReadAsync</a>, <a class="xref" href="system.io.stream#System_IO_Stream_WriteAsync_">WriteAsync</a>, <a class="xref" href="system.io.stream#System_IO_Stream_CopyToAsync_">CopyToAsync</a>, and <a class="xref" href="system.io.stream#System_IO_Stream_FlushAsync_">FlushAsync</a>, help you implement asynchronous I/O operations more easily.  </p>
+<p> The default implementation of <code>BeginRead</code> on a stream calls the <a class="xref" href="system.io.stream#System_IO_Stream_Read_">Read</a> method synchronously, which means that <code>Read</code> might block on some streams. However, instances of classes such as <code>FileStream</code> and <code>NetworkStream</code> fully support asynchronous operations if the instances have been opened asynchronously. Therefore, calls to <code>BeginRead</code> will not block on those streams. You can override <code>BeginRead</code> (by using async delegates, for example) to provide asynchronous behavior.  </p>
+<p> Pass the <code>IAsyncResult</code> return value to the <a class="xref" href="system.io.stream#System_IO_Stream_EndRead_">EndRead</a> method of the stream to determine how many bytes were read and to release operating system resources used for reading. <a class="xref" href="system.io.stream#System_IO_Stream_EndRead_">EndRead</a> must be called once for every call to BeginRead. You can do this either by using the same code that called <code>BeginRead</code> or in a callback passed to <code>BeginRead</code>.  </p>
+<p> The current position in the stream is updated when the asynchronous read or write is issued, not when the I/O operation completes.  </p>
+<p> Multiple simultaneous asynchronous requests render the request completion order uncertain.  </p>
+<p> Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanRead_">CanRead</a> property to determine whether the current instance supports reading.  </p>
+<p> If a stream is closed or you pass an invalid argument, exceptions are thrown immediately from <code>BeginRead</code>. Errors that occur during an asynchronous read request, such as a disk failure during the I/O request, occur on the thread pool thread and throw exceptions when calling <code>EndRead</code>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_BeginWrite_System_Byte___System_Int32_System_Int32_System_AsyncCallback_System_Object_">
+    
+            <a id="System_IO_Stream_BeginWrite_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BeginWrite(Byte[],Int32,Int32,AsyncCallback,Object)</div>        
+          </div>
+    
+            <p>Begins an asynchronous write operation. (Consider using <a class="xref" href="system.io.stream#System_IO_Stream_WriteAsync_">WriteAsync</a> instead; see the Remarks section.)</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IAsyncResult BeginWrite (byte[] buffer, int offset, int count, AsyncCallback callback, object state);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to write data from.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The byte offset in  from which to begin writing.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to write.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>callback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.asynccallback">AsyncCallback</a></div>
+                  </dd>
+                  </dl>
+                  <p>An optional asynchronous callback, to be called when the write is complete.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>A user-provided object that distinguishes this particular asynchronous write request from other requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </div>
+                  <p>An <code>IAsyncResult</code> that represents the asynchronous write, which could still be pending.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>In the .NET Framework 4 and earlier versions, you have to use methods such as BeginWrite and <a class="xref" href="system.io.stream#System_IO_Stream_EndWrite_">EndWrite</a> to implement asynchronous I/O operations. These methods are still available in the <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/net-v45-md.md&quot; -->.NET Framework 4.5<!--END INCLUDE --> to support legacy code; however, the new async methods, such as <a class="xref" href="system.io.stream#System_IO_Stream_ReadAsync_">ReadAsync</a>, <a class="xref" href="system.io.stream#System_IO_Stream_WriteAsync_">WriteAsync</a>, <a class="xref" href="system.io.stream#System_IO_Stream_CopyToAsync_">CopyToAsync</a>, and <a class="xref" href="system.io.stream#System_IO_Stream_FlushAsync_">FlushAsync</a>, help you implement asynchronous I/O operations more easily.  </p>
+<p> The default implementation of <code>BeginWrite</code> on a stream calls the <a class="xref" href="system.io.stream#System_IO_Stream_Write_">Write</a> method synchronously, which means that <code>Write</code> might block on some streams. However, instances of classes such as <code>FileStream</code> and <code>NetworkStream</code> fully support asynchronous operations if the instances have been opened asynchronously. Therefore, calls to <code>BeginWrite</code> will not block on those streams. You can override <code>BeginWrite</code> (by using async delegates, for example) to provide asynchronous behavior.  </p>
+<p> Pass the <code>IAsyncResult</code> returned by the current method to <a class="xref" href="system.io.stream#System_IO_Stream_EndWrite_">EndWrite</a> to ensure that the write completes and frees resources appropriately. <a class="xref" href="system.io.stream#System_IO_Stream_EndWrite_">EndWrite</a> must be called once for every call to BeginWrite. You can do this either by using the same code that called <code>BeginWrite</code> or in a callback passed to <code>BeginWrite</code>. If an error occurs during an asynchronous write, an exception will not be thrown until <code>EndWrite</code> is called with the <code>IAsyncResult</code> returned by this method.  </p>
+<p> If a stream is writable, writing at the end of the stream expands the stream.  </p>
+<p> The current position in the stream is updated when you issue the asynchronous read or write, not when the I/O operation completes. Multiple simultaneous asynchronous requests render the request completion order uncertain.  </p>
+<p> Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanWrite_">CanWrite</a> property to determine whether the current instance supports writing.  </p>
+<p> If a stream is closed or you pass an invalid argument, exceptions are thrown immediately from <code>BeginWrite</code>. Errors that occur during an asynchronous write request, such as a disk failure during the I/O request, occur on the thread pool thread and throw exceptions when calling <code>EndWrite</code>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_Close">
+    
+            <a id="System_IO_Stream_Close_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Close()</div>        
+          </div>
+    
+            <p>Closes the current stream and releases any resources (such as sockets and file handles) associated with the current stream. Instead of calling this method, ensure that the stream is properly disposed.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Close ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method calls <a class="xref" href="system.io.stream#System_IO_Stream_Dispose_">Dispose</a>, specifying <code>true</code> to release all resources. You do not have to specifically call the Close method. Instead, ensure that every <a class="xref" href="system.io.stream">Stream</a> object is properly disposed. You can declare <a class="xref" href="system.io.stream">Stream</a> objects within a <code>using</code> block (or <code>Using</code> block in Visual Basic) to ensure that the stream and all of its resources are disposed, or you can explicitly call the <a class="xref" href="system.io.stream#System_IO_Stream_Dispose_">Dispose</a> method.  </p>
+<p> Flushing the stream will not flush its underlying encoder unless you explicitly call an implementation of <a class="xref" href="system.io.stream#System_IO_Stream_Flush_">Flush</a> or <code>Close</code>. Setting <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> to <code>true</code> means that data will be flushed from the buffer to the stream, but the encoder state will not be flushed. This allows the encoder to keep its state (partial characters) so that it can encode the next block of characters correctly. This scenario affects UTF8 and UTF7 where certain characters can be encoded only after the encoder receives the adjacent character or characters.  </p>
+<p> Attempts to manipulate the stream after the stream has been closed might throw an <a class="xref" href="../system/system.objectdisposedexception">ObjectDisposedException</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_CopyTo_System_IO_Stream_">
+    
+            <a id="System_IO_Stream_CopyTo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyTo(Stream)</div>        
+          </div>
+    
+            <p>Reads the bytes from the current stream and writes them to another stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void CopyTo (System.IO.Stream destination);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>destination</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to which the contents of the current stream will be copied.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Copying begins at the current position in the current stream, and does not reset the position of the destination stream after the copy operation is complete.</p>
+
+    
+            <h4>Example</h4>
+            The following example copies the contents of a <xref:system.io.filestream> to a <xref:system.io.memorystream>.  
+  
+ [!CODE [System.IO.Stream.CopyTo#1](../CodeSnippet/VS_Snippets_CLR_System/system.io.stream.copyto#1)]
+    
+    
+        </xref:system.io.memorystream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_CopyTo_System_IO_Stream_System_Int32_">
+    
+            <a id="System_IO_Stream_CopyTo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyTo(Stream,Int32)</div>        
+          </div>
+    
+            <p>Reads the bytes from the current stream and writes them to another stream, using a specified buffer size.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void CopyTo (System.IO.Stream destination, int bufferSize);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>destination</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to which the contents of the current stream will be copied.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>bufferSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The size of the buffer. This value must be greater than zero. The default size is 81920.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Copying begins at the current position in the current stream, and does not reset the position of the destination stream after the copy operation is complete.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_CopyToAsync_System_IO_Stream_">
+    
+            <a id="System_IO_Stream_CopyToAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyToAsync(Stream)</div>        
+          </div>
+    
+            <p>Asynchronously reads the bytes from the current stream and writes them to another stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task CopyToAsync (System.IO.Stream destination);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>destination</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to which the contents of the current stream will be copied.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous copy operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The CopyToAsync method enables you to perform resource-intensive I/O operations without blocking the main thread. This performance consideration is particularly important in a <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/win8-appname-long-md.md&quot; -->Windows 8.x Store<!--END INCLUDE --> app or <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]:Couldn&#39;t find file Token/desktop_appname_md.md. -->[!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]<!--END ERROR INCLUDE --> app where a time-consuming stream operation can block the UI thread and make your app appear as if it is not working. The async methods are used in conjunction with the <code>async</code> and <code>await</code> keywords in Visual Basic and C#.  </p>
+<p> Copying begins at the current position in the current stream.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another. The <xref:system.io.filestream> class derives from the <xref:system.io.stream> class.  Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.stream></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_CopyToAsync_System_IO_Stream_System_Int32_">
+    
+            <a id="System_IO_Stream_CopyToAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyToAsync(Stream,Int32)</div>        
+          </div>
+    
+            <p>Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task CopyToAsync (System.IO.Stream destination, int bufferSize);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>destination</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to which the contents of the current stream will be copied.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>bufferSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous copy operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The CopyToAsync method enables you to perform resource-intensive I/O operations without blocking the main thread. This performance consideration is particularly important in a <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/win8-appname-long-md.md&quot; -->Windows 8.x Store<!--END INCLUDE --> app or <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]:Couldn&#39;t find file Token/desktop_appname_md.md. -->[!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]<!--END ERROR INCLUDE --> app where a time-consuming stream operation can block the UI thread and make your app appear as if it is not working. The async methods are used in conjunction with the <code>async</code> and <code>await</code> keywords in Visual Basic and C#.  </p>
+<p> Copying begins at the current position in the current stream.  </p>
+<p> For an example of copying between two streams, see the <a class="xref" href="system.io.stream#System_IO_Stream_CopyToAsync_System_IO_Stream_">CopyToAsync(Stream)</a> overload.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_CopyToAsync_System_IO_Stream_System_Int32_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_Stream_CopyToAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyToAsync(Stream,Int32,CancellationToken)</div>        
+          </div>
+    
+            <p>Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size and cancellation token.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Threading.Tasks.Task CopyToAsync (System.IO.Stream destination, int bufferSize, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>destination</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to which the contents of the current stream will be copied.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>bufferSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests. The default value is <a class="xref" href="../system.threading/system.threading.cancellationtoken#System_Threading_CancellationToken_None_">None</a>.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous copy operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The CopyToAsync method enables you to perform resource-intensive I/O operations without blocking the main thread. This performance consideration is particularly important in a <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/win8-appname-long-md.md&quot; -->Windows 8.x Store<!--END INCLUDE --> app or <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]:Couldn&#39;t find file Token/desktop_appname_md.md. -->[!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]<!--END ERROR INCLUDE --> app where a time-consuming stream operation can block the UI thread and make your app appear as if it is not working. The async methods are used in conjunction with the <code>async</code> and <code>await</code> keywords in Visual Basic and C#.  </p>
+<p> If the operation is canceled before it completes, the returned task contains the <a class="xref" href="../system.threading.tasks/system.threading.tasks.taskstatus">TaskStatus</a> value for the <a class="xref" href="../system.threading.tasks/system.threading.tasks.task#System_Threading_Tasks_Task_Status_">Status</a> property.  </p>
+<p> Copying begins at the current position in the current stream.  </p>
+<p> For an example of copying between two streams, see the <a class="xref" href="system.io.stream#System_IO_Stream_CopyToAsync_System_IO_Stream_">CopyToAsync(Stream)</a> overload.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_CreateWaitHandle">
+    
+            <a id="System_IO_Stream_CreateWaitHandle_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreateWaitHandle()</div>        
+          </div>
+    
+            <p>Allocates a <a class="xref" href="../system.threading/system.threading.waithandle">WaitHandle</a> object.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Threading.WaitHandle CreateWaitHandle ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.waithandle">WaitHandle</a></div>
+                  </div>
+                  <p>A reference to the allocated <code>WaitHandle</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>When called for the first time, the current method creates a <code>WaitHandle</code> object and returns it. On subsequent calls, <code>CreateWaitHandle</code> returns a reference to a new wait handle.  </p>
+<p> Use this method if you implement the asynchronous methods and require a way of blocking in <a class="xref" href="system.io.stream#System_IO_Stream_EndRead_">EndRead</a> or <a class="xref" href="system.io.stream#System_IO_Stream_EndWrite_">EndWrite</a> until the asynchronous operation is complete.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_Dispose">
+    
+            <a id="System_IO_Stream_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose()</div>        
+          </div>
+    
+            <p>Releases all resources used by the <see cref="T:System.IO.Stream">.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Dispose ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method disposes the stream, by writing any changes to the backing store and closing the stream to release resources.  </p>
+<p> Calling <code>Dispose</code> allows the resources used by the <a class="xref" href="system.io.stream">Stream</a> to be reallocated for other purposes. For more information about <code>Dispose</code>, see <a href="../topic/cleaning%20up%20unmanaged%20resources">Cleaning Up Unmanaged Resources</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_Dispose_System_Boolean_">
+    
+            <a id="System_IO_Stream_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.Stream"> and optionally releases the managed resources.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only unmanaged resources.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>You should release all resources by specifying <code>true</code> for . When  is <code>true</code>, the stream can also ensure data is flushed to the underlying buffer, and access other finalizable objects.  This may not be possible when called from a finalizer due a lack of ordering among finalizers.  </p>
+<p> If your stream is using an operating system handle to communicate with its source, consider using a subclass of <a class="xref" href="../system.runtime.interopservices/system.runtime.interopservices.safehandle">SafeHandle</a> for this purpose.  </p>
+<p> This method is called by the public <a class="xref" href="https://msdn.microsoft.com/en-us/library/s247t0kx(v=vs.110).aspx">Dispose</a> method and the <a class="xref" href="../system/system.object#System_Object_Finalize_">Finalize</a> method. <a class="xref" href="https://msdn.microsoft.com/en-us/library/s247t0kx(v=vs.110).aspx">Dispose</a> invokes the protected Dispose method with the  parameter set to <code>true</code>. <a class="xref" href="../system/system.object#System_Object_Finalize_">Finalize</a> invokes Dispose with  set to <code>false</code>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_EndRead_System_IAsyncResult_">
+    
+            <a id="System_IO_Stream_EndRead_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EndRead(IAsyncResult)</div>        
+          </div>
+    
+            <p>Waits for the pending asynchronous read to complete. (Consider using <a class="xref" href="system.io.stream#System_IO_Stream_ReadAsync_">ReadAsync</a> instead; see the Remarks section.)</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int EndRead (IAsyncResult asyncResult);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>asyncResult</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </dd>
+                  </dl>
+                  <p>The reference to the pending asynchronous request to finish.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The number of bytes read from the stream, between zero (0) and the number of bytes you requested. Streams return zero (0) only at the end of the stream, otherwise, they should block until at least one byte is available.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>In the .NET Framework 4 and earlier versions, you have to use methods such as <a class="xref" href="system.io.stream#System_IO_Stream_BeginRead_">BeginRead</a> and EndRead to implement asynchronous I/O operations. These methods are still available in the <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/net-v45-md.md&quot; -->.NET Framework 4.5<!--END INCLUDE --> to support legacy code; however, the new async methods, such as <a class="xref" href="system.io.stream#System_IO_Stream_ReadAsync_">ReadAsync</a>, <a class="xref" href="system.io.stream#System_IO_Stream_WriteAsync_">WriteAsync</a>, <a class="xref" href="system.io.stream#System_IO_Stream_CopyToAsync_">CopyToAsync</a>, and <a class="xref" href="system.io.stream#System_IO_Stream_FlushAsync_">FlushAsync</a>, help you implement asynchronous I/O operations more easily.  </p>
+<p> Call <code>EndRead</code> to determine how many bytes were read from the stream.  </p>
+<p> <code>EndRead</code> can be called once on every <a class="xref" href="../system/system.iasyncresult">IAsyncResult</a> from <a class="xref" href="system.io.stream#System_IO_Stream_BeginRead_">BeginRead</a>.  </p>
+<p> This method blocks until the I/O operation has completed.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_EndWrite_System_IAsyncResult_">
+    
+            <a id="System_IO_Stream_EndWrite_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EndWrite(IAsyncResult)</div>        
+          </div>
+    
+            <p>Ends an asynchronous write operation. (Consider using <a class="xref" href="system.io.stream#System_IO_Stream_WriteAsync_">WriteAsync</a> instead; see the Remarks section.)</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void EndWrite (IAsyncResult asyncResult);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>asyncResult</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </dd>
+                  </dl>
+                  <p>A reference to the outstanding asynchronous I/O request.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>In the .NET Framework 4 and earlier versions, you have to use methods such as <a class="xref" href="system.io.stream#System_IO_Stream_BeginWrite_">BeginWrite</a> and EndWrite to implement asynchronous I/O operations. These methods are still available in the <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/net-v45-md.md&quot; -->.NET Framework 4.5<!--END INCLUDE --> to support legacy code; however, the new async methods, such as <a class="xref" href="system.io.stream#System_IO_Stream_ReadAsync_">ReadAsync</a>, <a class="xref" href="system.io.stream#System_IO_Stream_WriteAsync_">WriteAsync</a>, <a class="xref" href="system.io.stream#System_IO_Stream_CopyToAsync_">CopyToAsync</a>, and <a class="xref" href="system.io.stream#System_IO_Stream_FlushAsync_">FlushAsync</a>, help you implement asynchronous I/O operations more easily.  </p>
+<p> <code>EndWrite</code> must be called exactly once on every <a class="xref" href="../system/system.iasyncresult">IAsyncResult</a> from <a class="xref" href="system.io.stream#System_IO_Stream_BeginWrite_">BeginWrite</a>.  </p>
+<p> This method blocks until the I/O operation has completed. Errors that occur during an asynchronous write request, such as a disk failure during the I/O request, occur on the thread pool thread and become visible upon a call to <code>EndWrite</code>. Exceptions thrown by the thread pool thread will not be visible when calling <code>EndWrite</code>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_Flush">
+    
+            <a id="System_IO_Stream_Flush_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Flush()</div>        
+          </div>
+    
+            <p>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract void Flush ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Override <code>Flush</code> on streams that implement a buffer. Use this method to move any information from an underlying buffer to its destination, clear the buffer, or both. Depending upon the state of the object, you might have to modify the current position within the stream (for example, if the underlying stream supports seeking). For additional information see <a class="xref" href="system.io.stream#System_IO_Stream_CanSeek_">CanSeek</a>.  </p>
+<p> When using the <a class="xref" href="system.io.streamwriter">StreamWriter</a> or <a class="xref" href="system.io.binarywriter">BinaryWriter</a> class, do not flush the base <a class="xref" href="system.io.stream">Stream</a> object. Instead, use the class&#39;s Flush or <a class="xref" href="system.io.stream#System_IO_Stream_Close_">Close</a> method, which makes sure that the data is flushed to the underlying stream first and then written to the file.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_FlushAsync">
+    
+            <a id="System_IO_Stream_FlushAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FlushAsync()</div>        
+          </div>
+    
+            <p>Asynchronously clears all buffers for this stream and causes any buffered data to be written to the underlying device.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task FlushAsync ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous flush operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If a derived class, such as <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.compression.deflatestream(v=vs.110).aspx">DeflateStream</a> or <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.compression.gzipstream(v=vs.110).aspx">GZipStream</a>, does not flush the buffer in its implementation of the <a class="xref" href="system.io.stream#System_IO_Stream_Flush_">Flush</a> method, the FlushAsync method will not flush the buffer.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_FlushAsync_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_Stream_FlushAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FlushAsync(CancellationToken)</div>        
+          </div>
+    
+            <p>Asynchronously clears all buffers for this stream, causes any buffered data to be written to the underlying device, and monitors cancellation requests.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Threading.Tasks.Task FlushAsync (System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests. The default value is <a class="xref" href="../system.threading/system.threading.cancellationtoken#System_Threading_CancellationToken_None_">None</a>.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous flush operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If the operation is canceled before it completes, the returned task contains the <a class="xref" href="../system.threading.tasks/system.threading.tasks.taskstatus">TaskStatus</a> value for the <a class="xref" href="../system.threading.tasks/system.threading.tasks.task#System_Threading_Tasks_Task_Status_">Status</a> property.  </p>
+<p> If a derived class, such as <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.compression.deflatestream(v=vs.110).aspx">DeflateStream</a> or <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.io.compression.gzipstream(v=vs.110).aspx">GZipStream</a>, does not flush the buffer in its implementation of the <a class="xref" href="system.io.stream#System_IO_Stream_Flush_">Flush</a> method, the FlushAsync method will not flush the buffer.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_ObjectInvariant">
+    
+            <a id="System_IO_Stream_ObjectInvariant_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ObjectInvariant()</div>        
+          </div>
+    
+            <p>Provides support for a <a class="xref" href="../system.diagnostics.contracts/system.diagnostics.contracts.contract">Contract</a>.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void ObjectInvariant ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_Read_System_Byte___System_Int32_System_Int32_">
+    
+            <a id="System_IO_Stream_Read_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Read(Byte[],Int32,Int32)</div>        
+          </div>
+    
+            <p>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract int Read (byte[] buffer, int offset, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>An array of bytes. When this method returns, the buffer contains the specified byte array with the values between  and ( +  - 1) replaced by the bytes read from the current source.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The zero-based byte offset in  at which to begin storing the data read from the current stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to be read from the current stream.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanRead_">CanRead</a> property to determine whether the current instance supports reading. Use the <a class="xref" href="system.io.stream#System_IO_Stream_ReadAsync_">ReadAsync</a> method to read asynchronously from the current stream.  </p>
+<p> Implementations of this method read a maximum of  bytes from the current stream and store them in  beginning at . The current position within the stream is advanced by the number of bytes read; however, if an exception occurs, the current position within the stream remains unchanged. Implementations return the number of bytes read. The implementation will block until at least one byte of data can be read, in the event that no data is available. Readreturns 0 only when there is no more data in the stream and no more is expected (such as a closed socket or end of file). An implementation is free to return fewer bytes than requested even if the end of the stream has not been reached.  </p>
+<p> Use <a class="xref" href="system.io.binaryreader">BinaryReader</a> for reading primitive data types.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to use Read to read a block of data.  
+  
+ [!CODE [Classic Stream.Read Example#1](../CodeSnippet/VS_Snippets_CLR_Classic/classic Stream.Read Example#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_ReadAsync_System_Byte___System_Int32_System_Int32_">
+    
+            <a id="System_IO_Stream_ReadAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadAsync(Byte[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Asynchronously reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task&lt;int&gt; ReadAsync (byte[] buffer, int offset, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to write the data into.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The byte offset in  at which to begin writing data from the stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to read.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </div>
+                  <p>A task that represents the asynchronous read operation. The value of the  parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the stream has been reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The ReadAsync method enables you to perform resource-intensive I/O operations without blocking the main thread. This performance consideration is particularly important in a <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/win8-appname-long-md.md&quot; -->Windows 8.x Store<!--END INCLUDE --> app or <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]:Couldn&#39;t find file Token/desktop_appname_md.md. -->[!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]<!--END ERROR INCLUDE --> app where a time-consuming stream operation can block the UI thread and make your app appear as if it is not working. The async methods are used in conjunction with the <code>async</code> and <code>await</code> keywords in Visual Basic and C#.  </p>
+<p> Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanRead_">CanRead</a> property to determine whether the current instance supports reading.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to read from a file asynchronously. The example uses the <xref:system.io.filestream> class, which derives from the <xref:system.io.stream> class.  
+  
+ [!CODE [Asynchronous_File_IO_async#4](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#4)]
+    
+    
+        </xref:system.io.stream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_ReadAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_Stream_ReadAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadAsync(Byte[],Int32,Int32,CancellationToken)</div>        
+          </div>
+    
+            <p>Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Threading.Tasks.Task&lt;int&gt; ReadAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to write the data into.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The byte offset in  at which to begin writing data from the stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests. The default value is <a class="xref" href="../system.threading/system.threading.cancellationtoken#System_Threading_CancellationToken_None_">None</a>.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </div>
+                  <p>A task that represents the asynchronous read operation. The value of the  parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the stream has been reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The ReadAsync method enables you to perform resource-intensive I/O operations without blocking the main thread. This performance consideration is particularly important in a <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/win8-appname-long-md.md&quot; -->Windows 8.x Store<!--END INCLUDE --> app or <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]:Couldn&#39;t find file Token/desktop_appname_md.md. -->[!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]<!--END ERROR INCLUDE --> app where a time-consuming stream operation can block the UI thread and make your app appear as if it is not working. The async methods are used in conjunction with the <code>async</code> and <code>await</code> keywords in Visual Basic and C#.  </p>
+<p> Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanRead_">CanRead</a> property to determine whether the current instance supports reading.  </p>
+<p> If the operation is canceled before it completes, the returned task contains the <a class="xref" href="../system.threading.tasks/system.threading.tasks.taskstatus">TaskStatus</a> value for the <a class="xref" href="../system.threading.tasks/system.threading.tasks.task#System_Threading_Tasks_Task_Status_">Status</a> property.  </p>
+<p> For an example, see the <a href="assetId:///M:System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32)?qualifyHint=False&amp;autoUpgrade=False">ReadAsync(Byte[],â€‚Int32,â€‚Int32)</a> overload.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_ReadByte">
+    
+            <a id="System_IO_Stream_ReadByte_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadByte()</div>        
+          </div>
+    
+            <p>Reads a byte from the stream and advances the position within the stream by one byte, or returns -1 if at the end of the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int ReadByte ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The unsigned byte cast to an <code>Int32</code>, or -1 if at the end of the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanRead_">CanRead</a> property to determine whether the current instance supports reading.  </p>
+<p> Attempts to manipulate the stream after the stream has been closed could throw an <a class="xref" href="../system/system.objectdisposedexception">ObjectDisposedException</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_Seek_System_Int64_System_IO_SeekOrigin_">
+    
+            <a id="System_IO_Stream_Seek_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Seek(Int64,SeekOrigin)</div>        
+          </div>
+    
+            <p>When overridden in a derived class, sets the position within the current stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract long Seek (long offset, System.IO.SeekOrigin origin);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>A byte offset relative to the  parameter.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>origin</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.seekorigin">SeekOrigin</a></div>
+                  </dd>
+                  </dl>
+                  <p>A value of type <see cref="T:System.IO.SeekOrigin"> indicating the reference point used to obtain the new position.<p>
+</see>
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>The new position within the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanSeek_">CanSeek</a> property to determine whether the current instance supports seeking.  </p>
+<p> If  is negative, the new position is required to precede the position specified by  by the number of bytes specified by . If  is zero (0), the new position is required to be the position specified by . If  is positive, the new position is required to follow the position specified by  by the number of bytes specified by .  </p>
+<p> Classes derived from <code>Stream</code> that support seeking must override this method to provide the functionality described above.  </p>
+<p> Seeking to any location beyond the length of the stream is supported.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_SetLength_System_Int64_">
+    
+            <a id="System_IO_Stream_SetLength_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetLength(Int64)</div>        
+          </div>
+    
+            <p>When overridden in a derived class, sets the length of the current stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract void SetLength (long value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The desired length of the current stream in bytes.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If the specified value is less than the current length of the stream, the stream is truncated. If the specified value is larger than the current length of the stream, the stream is expanded. If the stream is expanded, the contents of the stream between the old and the new length are not defined.  </p>
+<p> A stream must support both writing and seeking for <code>SetLength</code> to work.  </p>
+<p> Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanWrite_">CanWrite</a> property to determine whether the current instance supports writing, and the <a class="xref" href="system.io.stream#System_IO_Stream_CanSeek_">CanSeek</a> property to determine whether seeking is supported.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_Synchronized_System_IO_Stream_">
+    
+            <a id="System_IO_Stream_Synchronized_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Synchronized(Stream)</div>        
+          </div>
+    
+            <p>Creates a thread-safe (synchronized) wrapper around the specified <see cref="T:System.IO.Stream"> object.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.IO.Stream Synchronized (System.IO.Stream stream);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <see cref="T:System.IO.Stream"> object to synchronize.<p>
+</see>
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </div>
+                  <p>A thread-safe <see cref="T:System.IO.Stream"> object.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method returns a class that wraps the specified <a class="xref" href="system.io.stream">Stream</a> object and restricts access to it from multiple threads. All access to the <a class="xref" href="system.io.stream">Stream</a> object will be thread safe.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_Write_System_Byte___System_Int32_System_Int32_">
+    
+            <a id="System_IO_Stream_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Byte[],Int32,Int32)</div>        
+          </div>
+    
+            <p>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract void Write (byte[] buffer, int offset, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>An array of bytes. This method copies  bytes from  to the current stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The zero-based byte offset in  at which to begin copying bytes to the current stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The number of bytes to be written to the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanWrite_">CanWrite</a> property to determine whether the current instance supports writing. Use the <a class="xref" href="system.io.stream#System_IO_Stream_WriteAsync_">WriteAsync</a> method to write asynchronously to the current stream.  </p>
+<p> If the write operation is successful, the position within the stream advances by the number of bytes written. If an exception occurs, the position within the stream remains unchanged.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_WriteAsync_System_Byte___System_Int32_System_Int32_">
+    
+            <a id="System_IO_Stream_WriteAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteAsync(Byte[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Asynchronously writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task WriteAsync (byte[] buffer, int offset, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to write data from.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The zero-based byte offset in  from which to begin copying bytes to the stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to write.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The WriteAsync method enables you to perform resource-intensive I/O operations without blocking the main thread. This performance consideration is particularly important in a <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/win8-appname-long-md.md&quot; -->Windows 8.x Store<!--END INCLUDE --> app or <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]:Couldn&#39;t find file Token/desktop_appname_md.md. -->[!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]<!--END ERROR INCLUDE --> app where a time-consuming stream operation can block the UI thread and make your app appear as if it is not working. The async methods are used in conjunction with the <code>async</code> and <code>await</code> keywords in Visual Basic and C#.  </p>
+<p> Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanWrite_">CanWrite</a> property to determine whether the current instance supports writing.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to write asynchronously to a file. The example uses the <xref:system.io.filestream> class, which derives from the <xref:system.io.stream> class.  
+  
+ [!CODE [Asynchronous_File_IO_async#3](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#3)]
+    
+    
+        </xref:system.io.stream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_WriteAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_Stream_WriteAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteAsync(Byte[],Int32,Int32,CancellationToken)</div>        
+          </div>
+    
+            <p>Asynchronously writes a sequence of bytes to the current stream, advances the current position within this stream by the number of bytes written, and monitors cancellation requests.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Threading.Tasks.Task WriteAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to write data from.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The zero-based byte offset in  from which to begin copying bytes to the stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to write.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests. The default value is <a class="xref" href="../system.threading/system.threading.cancellationtoken#System_Threading_CancellationToken_None_">None</a>.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The WriteAsync method enables you to perform resource-intensive I/O operations without blocking the main thread. This performance consideration is particularly important in a <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/win8-appname-long-md.md&quot; -->Windows 8.x Store<!--END INCLUDE --> app or <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]:Couldn&#39;t find file Token/desktop_appname_md.md. -->[!INCLUDE[desktop_appname](../Token/desktop_appname_md.md)]<!--END ERROR INCLUDE --> app where a time-consuming stream operation can block the UI thread and make your app appear as if it is not working. The async methods are used in conjunction with the <code>async</code> and <code>await</code> keywords in Visual Basic and C#.  </p>
+<p> Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanWrite_">CanWrite</a> property to determine whether the current instance supports writing.  </p>
+<p> If the operation is canceled before it completes, the returned task contains the <a class="xref" href="../system.threading.tasks/system.threading.tasks.taskstatus">TaskStatus</a> value for the <a class="xref" href="../system.threading.tasks/system.threading.tasks.task#System_Threading_Tasks_Task_Status_">Status</a> property.  </p>
+<p> For an example, see the <a href="assetId:///M:System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32)?qualifyHint=False&amp;autoUpgrade=False">WriteAsync(Byte[],â€‚Int32,â€‚Int32)</a> overload.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Stream_WriteByte_System_Byte_">
+    
+            <a id="System_IO_Stream_WriteByte_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteByte(Byte)</div>        
+          </div>
+    
+            <p>Writes a byte to the current position in the stream and advances the position within the stream by one byte.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void WriteByte (byte value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a></div>
+                  </dd>
+                  </dl>
+                  <p>The byte to write to the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use the <a class="xref" href="system.io.stream#System_IO_Stream_CanWrite_">CanWrite</a> property to determine whether the current instance supports writing.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates how to use two <xref:system.io.filestream> objects to asynchronously copy the files from one directory to another directory. The <xref:system.io.filestream> class derives from the Stream class. Notice that the <xref:system.web.ui.webcontrols.button.click> event handler for the <xref:system.windows.controls.button> control is marked with the `async` modifier because it calls an asynchronous method.  
+  
+ [!CODE [Asynchronous_File_IO_async#1](../CodeSnippet/VS_Snippets_CLR/Asynchronous_File_IO_async#1)]
+    
+    
+        </xref:system.windows.controls.button></xref:system.web.ui.webcontrols.button.click></xref:system.io.filestream></xref:system.io.filestream></li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

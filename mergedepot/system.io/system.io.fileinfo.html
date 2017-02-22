@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="FileInfo class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/System.IO/System.IO.FileInfo.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO/System.IO.FileInfo.yml">
+<meta name="APIName" content="System.IO.FileInfo">
+<meta name="APIName" content="System.IO.FileInfo..ctor">
+<meta name="APIName" content="System.IO.FileInfo.AppendText">
+<meta name="APIName" content="System.IO.FileInfo.CopyTo">
+<meta name="APIName" content="System.IO.FileInfo.Create">
+<meta name="APIName" content="System.IO.FileInfo.CreateText">
+<meta name="APIName" content="System.IO.FileInfo.Decrypt">
+<meta name="APIName" content="System.IO.FileInfo.Delete">
+<meta name="APIName" content="System.IO.FileInfo.Directory">
+<meta name="APIName" content="System.IO.FileInfo.DirectoryName">
+<meta name="APIName" content="System.IO.FileInfo.Encrypt">
+<meta name="APIName" content="System.IO.FileInfo.Exists">
+<meta name="APIName" content="System.IO.FileInfo.GetAccessControl">
+<meta name="APIName" content="System.IO.FileInfo.IsReadOnly">
+<meta name="APIName" content="System.IO.FileInfo.Length">
+<meta name="APIName" content="System.IO.FileInfo.MoveTo">
+<meta name="APIName" content="System.IO.FileInfo.Name">
+<meta name="APIName" content="System.IO.FileInfo.Open">
+<meta name="APIName" content="System.IO.FileInfo.OpenRead">
+<meta name="APIName" content="System.IO.FileInfo.OpenText">
+<meta name="APIName" content="System.IO.FileInfo.OpenWrite">
+<meta name="APIName" content="System.IO.FileInfo.Replace">
+<meta name="APIName" content="System.IO.FileInfo.SetAccessControl">
+<meta name="APIName" content="System.IO.FileInfo.ToString">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="f0800752-c96b-e214-841c-1134d9c0cc97">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Provides properties and instance methods for the creation, copying, deletion, moving, and opening of files, and aids in the creation of  objects. This class cannot be inherited.  
+ To browse the .NETâ€¦">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.FileInfo">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.io/system.io.fileinfo" rel="canonical">
+    <title>FileInfo class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_FileInfo">
+      <span class="lang-csharp">FileInfo</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Provides properties and instance methods for the creation, copying, deletion, moving, and opening of files, and aids in the creation of <see cref="T:System.IO.FileStream"> objects. This class cannot be inherited.  <p>
+<p> To browse the .NET Framework source code for this type, see the <a href="http://referencesource.microsoft.com/#mscorlib/system/io/fileinfo.cs#4ee673c1a4ecad41">Reference Source</a>.</p>
+</see>
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public sealed class FileInfo : System.IO.FileSystemInfo</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject">MarshalByRefObject</a>
+          </div>
+        </li>
+        <li class="l2">
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo">System.IO.FileSystemInfo</a>
+          </div>
+        </li>
+      <li class="l3">
+        <div class="xref">
+          <div class="lang-csharp">FileInfo</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Attributes">Attributes</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_CreationTime">CreationTime</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_CreationTimeUtc">CreationTimeUtc</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Extension">Extension</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_FullName">FullName</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_FullPath">FullPath</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">GetObjectData(SerializationInfo,StreamingContext)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_LastAccessTime">LastAccessTime</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_LastAccessTimeUtc">LastAccessTimeUtc</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_LastWriteTime">LastWriteTime</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_LastWriteTimeUtc">LastWriteTimeUtc</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_OriginalPath">OriginalPath</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh">Refresh()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_CreateObjRef_System_Type_">CreateObjRef(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_GetLifetimeService">GetLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_InitializeLifetimeService">InitializeLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_MemberwiseClone_System_Boolean_">MemberwiseClone(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <div class="NOTE"><h5>Note</h5><p> To view the .NET Framework source code for this type, see the <a href="http://referencesource.microsoft.com/#mscorlib/system/io/fileinfo.cs#4ee673c1a4ecad41">Reference Source</a>. You can browse through the source code online, download the reference for offline viewing, and step through the sources (including patches and updates) during debugging; see <a href="http://referencesource.microsoft.com/">instructions</a>.  </p>
+</div>
+<p> Use the FileInfo class for typical operations such as copying, moving, renaming, creating, opening, deleting, and appending to files.  </p>
+<p> If you are performing multiple operations on the same file, it can be more efficient to use FileInfo instance methods instead of the corresponding static methods of the <a class="xref" href="system.io.file">File</a> class, because a security check will not always be necessary.  </p>
+<p> Many of the FileInfo methods return other I/O types when you create or open files. You can use these other types to further manipulate a file. For more information, see specific FileInfo members such as <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Open_">Open</a>, <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_OpenRead_">OpenRead</a>, <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_OpenText_">OpenText</a>, <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_CreateText_">CreateText</a>, or <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Create_">Create</a>.  </p>
+<p> By default, full read/write access to new files is granted to all users.  </p>
+<p> The following table describes the enumerations that are used to customize the behavior of various FileInfo methods.  </p>
+<table>
+<thead>
+<tr>
+<th>Enumeration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="system.io.fileaccess">FileAccess</a></td>
+<td>Specifies read and write access to a file.</td>
+</tr>
+<tr>
+<td><a class="xref" href="system.io.fileshare">FileShare</a></td>
+<td>Specifies the level of access permitted for a file that is already in use.</td>
+</tr>
+<tr>
+<td><a class="xref" href="system.io.filemode">FileMode</a></td>
+<td>Specifies whether the contents of an existing file are preserved or overwritten, and whether requests to create an existing file cause an exception.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Note</h5><p> In members that accept a path as an input string, that path must be well-formed or an exception is raised. For example, if a path is fully qualified but begins with a space, the path is not trimmed in methods of the class. Therefore, the path is malformed and an exception is raised. Similarly, a path or a combination of paths cannot be fully qualified twice. For example, &quot;c:\temp c:\windows&quot; also raises an exception in most cases. Ensure that your paths are well-formed when using methods that accept a path string.  </p>
+</div>
+<p> In members that accept a path, the path can refer to a file or just a directory. The specified path can also refer to a relative path or a Universal Naming Convention (UNC) path for a server and share name. For example, all the following are acceptable paths:  </p>
+<ul>
+<li><p>&quot;c:\\MyDir\\MyFile.txt&quot; in C#, or &quot;c:\MyDir\MyFile.txt&quot; in Visual Basic.  </p>
+</li>
+<li><p>&quot;c:\\MyDir&quot; in C#, or &quot;c:\MyDir&quot; in Visual Basic.  </p>
+</li>
+<li><p>&quot;MyDir\\MySubdir&quot; in C#, or &quot;MyDir\MySubDir&quot; in Visual Basic.  </p>
+</li>
+<li><p>&quot;\\\\MyServer\\MyShare&quot; in C#, or &quot;\\MyServer\MyShare&quot; in Visual Basic.  </p>
+<p>The FileInfo class provides the following properties that enable you to retrieve information about a file. For an example of how to use each property, see the property pages.  </p>
+</li>
+<li><p>The <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Directory_">Directory</a> property retrieves an object that represents the parent directory of a file.  </p>
+</li>
+<li><p>The <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_DirectoryName_">DirectoryName</a> property retrieves the full path of the parent directory of a file.  </p>
+</li>
+<li><p>The <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Exists_">Exists</a> property checks for the presence of a file before operating on it.  </p>
+</li>
+<li><p>The <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_IsReadOnly_">IsReadOnly</a> property retrieves or sets a value that specifies whether a file can be modified.  </p>
+</li>
+<li><p>The <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a> retrieves the size of a file.  </p>
+</li>
+<li><p>The <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Name_">Name</a> retrieves the name of a file.</p>
+</li>
+</ul>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo__ctor_System_String_">FileInfo(String)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.FileInfo"> class, which acts as a wrapper for a file path.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Directory">Directory</a></div>
+          </td>
+            <td>
+            <p>Gets an instance of the parent directory.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_DirectoryName">DirectoryName</a></div>
+          </td>
+            <td>
+            <p>Gets a string representing the directory&#39;s full path.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Exists">Exists</a></div>
+          </td>
+            <td>
+            <p>Gets a value indicating whether a file exists.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_IsReadOnly">IsReadOnly</a></div>
+          </td>
+            <td>
+            <p>Gets or sets a value that determines if the current file is read only.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Length">Length</a></div>
+          </td>
+            <td>
+            <p>Gets the size, in bytes, of the current file.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Name">Name</a></div>
+          </td>
+            <td>
+            <p>Gets the name of the file.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_AppendText">AppendText()</a></div>
+          </td>
+            <td>
+            <p>Creates a <see cref="T:System.IO.StreamWriter"> that appends text to the file represented by this instance of the <a class="xref" href="system.io.fileinfo">FileInfo</a>.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_CopyTo_System_String_">CopyTo(String)</a></div>
+          </td>
+            <td>
+            <p>Copies an existing file to a new file, disallowing the overwriting of an existing file.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_CopyTo_System_String_System_Boolean_">CopyTo(String,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Copies an existing file to a new file, allowing the overwriting of an existing file.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Create">Create()</a></div>
+          </td>
+            <td>
+            <p>Creates a file.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_CreateText">CreateText()</a></div>
+          </td>
+            <td>
+            <p>Creates a <see cref="T:System.IO.StreamWriter"> that writes a new text file.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Decrypt">Decrypt()</a></div>
+          </td>
+            <td>
+            <p>Decrypts a file that was encrypted by the current account using the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Encrypt_">Encrypt</a> method.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Delete">Delete()</a></div>
+          </td>
+            <td>
+            <p>Permanently deletes a file.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Encrypt">Encrypt()</a></div>
+          </td>
+            <td>
+            <p>Encrypts a file so that only the account used to encrypt the file can decrypt it.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_GetAccessControl">GetAccessControl()</a></div>
+          </td>
+            <td>
+            <p>Gets a <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object that encapsulates the access control list (ACL) entries for the file described by the current <a class="xref" href="system.io.fileinfo">FileInfo</a> object.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_GetAccessControl_System_Security_AccessControl_AccessControlSections_">GetAccessControl(AccessControlSections)</a></div>
+          </td>
+            <td>
+            <p>Gets a <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object that encapsulates the specified type of access control list (ACL) entries for the file described by the current <a class="xref" href="system.io.fileinfo">FileInfo</a> object.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_MoveTo_System_String_">MoveTo(String)</a></div>
+          </td>
+            <td>
+            <p>Moves a specified file to a new location, providing the option to specify a new file name.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Open_System_IO_FileMode_">Open(FileMode)</a></div>
+          </td>
+            <td>
+            <p>Opens a file in the specified mode.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Open_System_IO_FileMode_System_IO_FileAccess_">Open(FileMode,FileAccess)</a></div>
+          </td>
+            <td>
+            <p>Opens a file in the specified mode with read, write, or read/write access.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Open_System_IO_FileMode_System_IO_FileAccess_System_IO_FileShare_">Open(FileMode,FileAccess,FileShare)</a></div>
+          </td>
+            <td>
+            <p>Opens a file in the specified mode with read, write, or read/write access and the specified sharing option.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_OpenRead">OpenRead()</a></div>
+          </td>
+            <td>
+            <p>Creates a read-only <see cref="T:System.IO.FileStream">.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_OpenText">OpenText()</a></div>
+          </td>
+            <td>
+            <p>Creates a <see cref="T:System.IO.StreamReader"> with UTF8 encoding that reads from an existing text file.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_OpenWrite">OpenWrite()</a></div>
+          </td>
+            <td>
+            <p>Creates a write-only <see cref="T:System.IO.FileStream">.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Replace_System_String_System_String_">Replace(String,String)</a></div>
+          </td>
+            <td>
+            <p>Replaces the contents of a specified file with the file described by the current <see cref="T:System.IO.FileInfo"> object, deleting the original file, and creating a backup of the replaced file.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_Replace_System_String_System_String_System_Boolean_">Replace(String,String,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Replaces the contents of a specified file with the file described by the current <see cref="T:System.IO.FileInfo"> object, deleting the original file, and creating a backup of the replaced file.  Also specifies whether to ignore merge errors.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_SetAccessControl_System_Security_AccessControl_FileSecurity_">SetAccessControl(FileSecurity)</a></div>
+          </td>
+            <td>
+            <p>Applies access control list (ACL) entries described by a <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object to the file described by the current <a class="xref" href="system.io.fileinfo">FileInfo</a> object.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileInfo_ToString">ToString()</a></div>
+          </td>
+            <td>
+            <p>Returns the path as a string.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo__ctor_System_String_">
+    
+            <a id="System_IO_FileInfo__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FileInfo(String)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.FileInfo"> class, which acts as a wrapper for a file path.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public FileInfo (string fileName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>fileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The fully qualified name of the new file, or the relative file name. Do not end the path with the directory separator character.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>You can specify either the fully qualified or the relative file name, but the security check gets the fully qualified name.</p>
+
+    
+            <h4>Example</h4>
+            The following example uses this constructor to create two files, which are then written to, read from, copied, and deleted.  
+  
+ [!CODE [finfo ctor#1](../CodeSnippet/VS_Snippets_CLR/FInfo Ctor#1)]  
+  
+ The following example opens an existing file or creates a file, appends text to the file, and displays the results.  
+  
+ [!CODE [fileinfomain#1](../CodeSnippet/VS_Snippets_CLR/fileinfomain#1)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Directory">
+    
+            <a id="System_IO_FileInfo_Directory_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Directory</div>        
+          </div>
+    
+            <p>Gets an instance of the parent directory.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.DirectoryInfo Directory { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.directoryinfo">DirectoryInfo</a></div>
+                  </div>
+                  <p>A <see cref="T:System.IO.DirectoryInfo"> object representing the parent directory of this file.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>To get the parent directory as a string, use the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_DirectoryName_">DirectoryName</a> property.</p>
+
+    
+            <h4>Example</h4>
+            The following example opens or creates a file, determines its full path, and determines and displays the full contents of the directory.  
+  
+ [!CODE [fileinfodirectory#1](../CodeSnippet/VS_Snippets_CLR/fileinfodirectory#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_DirectoryName">
+    
+            <a id="System_IO_FileInfo_DirectoryName_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DirectoryName</div>        
+          </div>
+    
+            <p>Gets a string representing the directory&#39;s full path.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string DirectoryName { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>A string representing the directory&#39;s full path.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>To get the parent directory as a <a class="xref" href="system.io.directoryinfo">DirectoryInfo</a> object, use the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Directory_">Directory</a> property.  </p>
+<p> When first called, <a class="xref" href="system.io.fileinfo">FileInfo</a> calls <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> and caches information about the file. On subsequent calls, you must call <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> to get the latest copy of the information.</p>
+
+    
+            <h4>Example</h4>
+            The following example retrieves the full path of the specified file.  
+  
+ [!CODE [System.IO.FileInfo members#3](../CodeSnippet/VS_Snippets_CLR_System/system.IO.FileInfo members#3)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Exists">
+    
+            <a id="System_IO_FileInfo_Exists_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Exists</div>        
+          </div>
+    
+            <p>Gets a value indicating whether a file exists.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool Exists { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the file exists; <code>false</code> if the file does not exist or if the file is a directory.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>When first called, <a class="xref" href="system.io.fileinfo">FileInfo</a> calls <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> and caches information about the file. On subsequent calls, you must call <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> to get the latest copy of the information.  </p>
+<p> The Exists property returns <code>false</code> if any error occurs while trying to determine if the specified file exists. This can occur in situations that raise exceptions such as passing a file name with invalid characters or too many characters, a failing or missing disk, or if the caller does not have permission to read the file.</p>
+
+    
+            <h4>Example</h4>
+            The following code example uses the Exists property ensure a file exists before opening it.  You can use this technique to throw a custom exception when the file is not found.  
+  
+ [!CODE [IO.FileInfo.Exists#1](../CodeSnippet/VS_Snippets_CLR/IO.FileInfo.Exists#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_IsReadOnly">
+    
+            <a id="System_IO_FileInfo_IsReadOnly_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsReadOnly</div>        
+          </div>
+    
+            <p>Gets or sets a value that determines if the current file is read only.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool IsReadOnly { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the current file is read only; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use the IsReadOnly property to quickly determine or change whether the current file is read only.  </p>
+<p> When first called, <a class="xref" href="system.io.fileinfo">FileInfo</a> calls <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> and caches information about the file. On subsequent calls, you must call <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> to get the latest copy of the information.</p>
+
+    
+            <h4>Example</h4>
+            The following example uses the IsReadOnly property to mark a file as read only and then mark it as read-write.  
+  
+ [!CODE [IO.FileInfo.IsReadOnly#1](../CodeSnippet/VS_Snippets_CLR/IO.FileInfo.isReadOnly#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Length">
+    
+            <a id="System_IO_FileInfo_Length_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Length</div>        
+          </div>
+    
+            <p>Gets the size, in bytes, of the current file.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public long Length { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>The size of the current file in bytes.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The value of the Length property is pre-cached if the current instance of the <a class="xref" href="system.io.fileinfo">FileInfo</a> object was returned from any of the following <a class="xref" href="system.io.directoryinfo">DirectoryInfo</a>methods:  </p>
+<ul>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetDirectories_">GetDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFiles_">GetFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFileSystemInfos_">GetFileSystemInfos</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateDirectories_">EnumerateDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFiles_">EnumerateFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFileSystemInfos_">EnumerateFileSystemInfos</a>  
+
+<p>To get the latest value, call the <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> method.</p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following example displays the size of the specified files.  
+  
+ [!CODE [FileLength#1](../CodeSnippet/VS_Snippets_CLR/FileLength#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Name">
+    
+            <a id="System_IO_FileInfo_Name_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Name</div>        
+          </div>
+    
+            <p>Gets the name of the file.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string Name { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The name of the file.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>When first called, <a class="xref" href="system.io.fileinfo">FileInfo</a> calls <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> and caches information about the file. On subsequent calls, you must call <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> to get the latest copy of the information.  </p>
+<p> The name of the file includes the file extension.</p>
+
+    
+            <h4>Example</h4>
+            The following example uses the `Name` property to display the names of files in the current directory.  
+  
+ [!CODE [fileinfoname#1](../CodeSnippet/VS_Snippets_CLR/fileinfoname#1)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_AppendText">
+    
+            <a id="System_IO_FileInfo_AppendText_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AppendText()</div>        
+          </div>
+    
+            <p>Creates a <see cref="T:System.IO.StreamWriter"> that appends text to the file represented by this instance of the <a class="xref" href="system.io.fileinfo">FileInfo</a>.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.StreamWriter AppendText ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.streamwriter">StreamWriter</a></div>
+                  </div>
+                  <p>A new <code>StreamWriter</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example appends text to a file and reads from the file.  
+  
+ [!CODE [finfo appendtext#1](../CodeSnippet/VS_Snippets_CLR/FInfo AppendText#1)]  
+  
+ The following example demonstrates appending text to the end of a file and also displays the result of the append operation to the console. The first time this routine is called, the file is created if it does not exist. After that, the specified text is appended to the file.  
+  
+ [!CODE [fileinfoappendtext#1](../CodeSnippet/VS_Snippets_CLR/fileinfoappendtext#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_CopyTo_System_String_">
+    
+            <a id="System_IO_FileInfo_CopyTo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyTo(String)</div>        
+          </div>
+    
+            <p>Copies an existing file to a new file, disallowing the overwriting of an existing file.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.FileInfo CopyTo (string destFileName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>destFileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The name of the new file to copy to.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.fileinfo">FileInfo</a></div>
+                  </div>
+                  <p>A new file with a fully qualified path.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_CopyTo_">CopyTo</a> method to allow overwriting of an existing file.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> Whenever possible, avoid using short file names (such as XXXXXX~1.XXX) with this method. If two files have equivalent short file names then this method may fail and raise an exception and/or result in undesirable behavior</p>
+</div>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates both overloads of the `CopyTo` method.  
+  
+ [!CODE [finfo copyto2#1](../CodeSnippet/VS_Snippets_CLR/FInfo CopyTo2#1)]  
+  
+ The following example demonstrates copying one file to another file, throwing an exception if the destination file already exists.  
+  
+ [!CODE [FileInfoCopyTo1#1](../CodeSnippet/VS_Snippets_CLR/FileInfoCopyTo1#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_CopyTo_System_String_System_Boolean_">
+    
+            <a id="System_IO_FileInfo_CopyTo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyTo(String,Boolean)</div>        
+          </div>
+    
+            <p>Copies an existing file to a new file, allowing the overwriting of an existing file.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.FileInfo CopyTo (string destFileName, bool overwrite);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>destFileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The name of the new file to copy to.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>overwrite</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to allow an existing file to be overwritten; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.fileinfo">FileInfo</a></div>
+                  </div>
+                  <p>A new file, or an overwrite of an existing file if  is <code>true</code>. If the file exists and  is <code>false</code>, an <see cref="T:System.IO.IOException"> is thrown.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use this method to allow or prevent overwriting of an existing file. Use the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_CopyTo_">CopyTo</a> method to prevent overwriting of an existing file by default.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> Whenever possible, avoid using short file names (such as XXXXXX~1.XXX) with this method. If two files have equivalent short file names then this method may fail and raise an exception and/or result in undesirable behavior</p>
+</div>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates both overloads of the `CopyTo` method.  
+  
+ [!CODE [finfo copyto2#1](../CodeSnippet/VS_Snippets_CLR/FInfo CopyTo2#1)]  
+  
+ The following example demonstrates copying one file to another file, specifying whether to overwrite a file that already exists.  
+  
+ [!CODE [fileinfocopyto#1](../CodeSnippet/VS_Snippets_CLR/fileinfocopyto#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Create">
+    
+            <a id="System_IO_FileInfo_Create_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Create()</div>        
+          </div>
+    
+            <p>Creates a file.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.FileStream Create ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.filestream">FileStream</a></div>
+                  </div>
+                  <p>A new file.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>By default, full read/write access to new files is granted to all users.  </p>
+<p> This method is a wrapper for the functionality provided by <a class="xref" href="system.io.file#System_IO_File_Create_">Create</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example creates a reference to a file, and then creates the file on disk using `FileInfo.Create()`.  
+  
+ [!CODE [fileinfodelete#1](../CodeSnippet/VS_Snippets_CLR/fileinfodelete#1)]  
+  
+ The following example creates a file, adds some text to it, and reads from the file.  
+  
+ [!CODE [finfo create#1](../CodeSnippet/VS_Snippets_CLR/FInfo Create#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_CreateText">
+    
+            <a id="System_IO_FileInfo_CreateText_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreateText()</div>        
+          </div>
+    
+            <p>Creates a <see cref="T:System.IO.StreamWriter"> that writes a new text file.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.StreamWriter CreateText ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.streamwriter">StreamWriter</a></div>
+                  </div>
+                  <p>A new <code>StreamWriter</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>By default, full read/write access to new files is granted to all users.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates the `CreateText` method.  
+  
+ [!CODE [finfo createtext#1](../CodeSnippet/VS_Snippets_CLR/FInfo CreateText#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Decrypt">
+    
+            <a id="System_IO_FileInfo_Decrypt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Decrypt()</div>        
+          </div>
+    
+            <p>Decrypts a file that was encrypted by the current account using the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Encrypt_">Encrypt</a> method.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Decrypt ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The Decrypt method allows you to decrypt a file that was encrypted using the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Encrypt_">Encrypt</a> method.  The Decrypt method can decrypt only files that were encrypted using the current user account.  </p>
+<p> Both the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Encrypt_">Encrypt</a> method and the Decrypt method use the cryptographic service provider (CSP) installed on the computer and the file encryption keys of the process calling the method.  </p>
+<p> The current file system must be formatted as NTFS and the current operating system must be Microsoft Windows NT or later.</p>
+
+    
+            <h4>Example</h4>
+            The following code example uses the <xref:system.io.fileinfo.encrypt%2a> method and the Decrypt method to encrypt and then decrypt a file.  
+  
+ [!CODE [IO.FileInfo.Encrypt-Decrypt#1](../CodeSnippet/VS_Snippets_CLR/IO.FileInfo.Encrypt-Decrypt#1)]
+    
+    
+        </xref:system.io.fileinfo.encrypt%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Delete">
+    
+            <a id="System_IO_FileInfo_Delete_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Delete()</div>        
+          </div>
+    
+            <p>Permanently deletes a file.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Delete ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If the file does not exist, this method does nothing.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates the `Delete` method.  
+  
+ [!CODE [finfo delete#1](../CodeSnippet/VS_Snippets_CLR/FInfo Delete#1)]  
+  
+ The following example creates, closes, and deletes a file.  
+  
+ [!CODE [fileinfodelete#1](../CodeSnippet/VS_Snippets_CLR/fileinfodelete#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Encrypt">
+    
+            <a id="System_IO_FileInfo_Encrypt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Encrypt()</div>        
+          </div>
+    
+            <p>Encrypts a file so that only the account used to encrypt the file can decrypt it.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Encrypt ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The Encrypt method allows you to encrypt a file so that only the account used to call this method can decrypt it.  Use the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Decrypt_">Decrypt</a> method to decrypt a file encrypted by the Encrypt method.  </p>
+<p> Both the Encrypt method and the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Decrypt_">Decrypt</a> method use the cryptographic service provider (CSP) installed on the computer and the file encryption keys of the process calling the method.  </p>
+<p> The current file system must be formatted as NTFS and the current operating system must be Microsoft Windows NT or later.</p>
+
+    
+            <h4>Example</h4>
+            The following code example uses the Encrypt method and the <xref:system.io.fileinfo.decrypt%2a> method to encrypt a file and then decrypt it.  
+  
+ [!CODE [IO.FileInfo.Encrypt-Decrypt#1](../CodeSnippet/VS_Snippets_CLR/IO.FileInfo.Encrypt-Decrypt#1)]
+    
+    
+        </xref:system.io.fileinfo.decrypt%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_GetAccessControl">
+    
+            <a id="System_IO_FileInfo_GetAccessControl_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetAccessControl()</div>        
+          </div>
+    
+            <p>Gets a <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object that encapsulates the access control list (ACL) entries for the file described by the current <a class="xref" href="system.io.fileinfo">FileInfo</a> object.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Security.AccessControl.FileSecurity GetAccessControl ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a></div>
+                  </div>
+                  <p>A <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object that encapsulates the access control rules for the current file.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use the GetAccessControl method to retrieve the access control list (ACL) entries for the current file.  </p>
+<p> An ACL describes individuals and/or groups who have, or do not have, rights to specific actions on the given file. For more information, see <a href="../Topic/How%20to:%20Add%20or%20Remove%20Access%20Control%20List%20Entries.md">How to: Add or Remove Access Control List Entries</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example uses the GetAccessControl method and the <xref:system.io.fileinfo.setaccesscontrol%2a> method to add and then remove an access control list (ACL) entry from a file.  You must supply a valid user or group account to run this example.  
+  
+ [!CODE [IO.FileInfo.GetAccessControl-SetAccessControl#1](../CodeSnippet/VS_Snippets_CLR/IO.FileInfo.GetAccessControl-SetAccessControl#1)]
+    
+    
+        </xref:system.io.fileinfo.setaccesscontrol%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_GetAccessControl_System_Security_AccessControl_AccessControlSections_">
+    
+            <a id="System_IO_FileInfo_GetAccessControl_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetAccessControl(AccessControlSections)</div>        
+          </div>
+    
+            <p>Gets a <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object that encapsulates the specified type of access control list (ACL) entries for the file described by the current <a class="xref" href="system.io.fileinfo">FileInfo</a> object.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Security.AccessControl.FileSecurity GetAccessControl (System.Security.AccessControl.AccessControlSections includeSections);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>includeSections</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.accesscontrolsections">AccessControlSections</a></div>
+                  </dd>
+                  </dl>
+                  <p>One of the <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.accesscontrolsections">AccessControlSections</a> values that specifies which group of access control entries to retrieve.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a></div>
+                  </div>
+                  <p>A <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object that encapsulates the access control rules for the current file.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use the GetAccessControl method to retrieve the access control list (ACL) entries for the current file.  </p>
+<p> An ACL describes individuals and/or groups who have, or do not have, rights to specific actions on the given file. For more information, see <a href="../Topic/How%20to:%20Add%20or%20Remove%20Access%20Control%20List%20Entries.md">How to: Add or Remove Access Control List Entries</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates some of the main members of the `FileInfo` class.  
+  
+ When the properties are first retrieved, FileInfo calls the <xref:system.io.filesysteminfo.refresh%2a> method and caches information about the file. On subsequent calls, you must call <xref:system.io.filesysteminfo.refresh%2a> to get the latest copy of the information.  
+  
+ [!CODE [FInfo Class#1](../CodeSnippet/VS_Snippets_CLR/FInfo Class#1)]  
+  
+ This example produces output similar to the following.  
+  
+```  
+Hello  
+And  
+Welcome  
+C:\Users\userName\AppData\Local\Temp\tmp70AB.tmp was copied to C:\Users\userName\AppData\Local\Temp\tmp70CB.tmp.  
+C:\Users\userName\AppData\Local\Temp\tmp70CB.tmp was successfully deleted.  
+```
+    
+    
+        </xref:system.io.filesysteminfo.refresh%2a></xref:system.io.filesysteminfo.refresh%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_MoveTo_System_String_">
+    
+            <a id="System_IO_FileInfo_MoveTo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MoveTo(String)</div>        
+          </div>
+    
+            <p>Moves a specified file to a new location, providing the option to specify a new file name.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void MoveTo (string destFileName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>destFileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The path to move the file to, which can specify a different file name.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method works across disk volumes. For example, the file c:\MyFile.txt can be moved to d:\public and renamed NewFile.txt.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates moving a file to a different location and renaming the file.  
+  
+ [!CODE [IO.FileInfo.MoveTo#1](../CodeSnippet/VS_Snippets_Misc/IO.FileInfo.MoveTo#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Open_System_IO_FileMode_">
+    
+            <a id="System_IO_FileInfo_Open_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Open(FileMode)</div>        
+          </div>
+    
+            <p>Opens a file in the specified mode.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.FileStream Open (System.IO.FileMode mode);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>mode</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.filemode">FileMode</a></div>
+                  </dd>
+                  </dl>
+                  <p>A <see cref="T:System.IO.FileMode"> constant specifying the mode (for example, <code>Open</code> or <code>Append</code>) in which to open the file.<p>
+</see>
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.filestream">FileStream</a></div>
+                  </div>
+                  <p>A file opened in the specified mode, with read/write access and unshared.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example opens a file, adds some information to the file, and reads the file.  
+  
+ [!CODE [finfo open1#1](../CodeSnippet/VS_Snippets_CLR/FInfo Open1#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Open_System_IO_FileMode_System_IO_FileAccess_">
+    
+            <a id="System_IO_FileInfo_Open_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Open(FileMode,FileAccess)</div>        
+          </div>
+    
+            <p>Opens a file in the specified mode with read, write, or read/write access.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.FileStream Open (System.IO.FileMode mode, System.IO.FileAccess access);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>mode</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.filemode">FileMode</a></div>
+                  </dd>
+                  </dl>
+                  <p>A <see cref="T:System.IO.FileMode"> constant specifying the mode (for example, <code>Open</code> or <code>Append</code>) in which to open the file.<p>
+</see>
+                </li>
+                <li>
+                  <dl>
+                  <dt>access</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.fileaccess">FileAccess</a></div>
+                  </dd>
+                  </dl>
+                  <p>A <see cref="T:System.IO.FileAccess"> constant specifying whether to open the file with <code>Read</code>, <code>Write</code>, or <code>ReadWrite</code> file access.<p>
+</see>
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.filestream">FileStream</a></div>
+                  </div>
+                  <p>A <see cref="T:System.IO.FileStream"> object opened in the specified mode and access, and unshared.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example opens a file as read-only and reads from the file.  
+  
+ [!CODE [finfo open2#1](../CodeSnippet/VS_Snippets_CLR/FInfo Open2#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Open_System_IO_FileMode_System_IO_FileAccess_System_IO_FileShare_">
+    
+            <a id="System_IO_FileInfo_Open_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Open(FileMode,FileAccess,FileShare)</div>        
+          </div>
+    
+            <p>Opens a file in the specified mode with read, write, or read/write access and the specified sharing option.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.FileStream Open (System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>mode</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.filemode">FileMode</a></div>
+                  </dd>
+                  </dl>
+                  <p>A <see cref="T:System.IO.FileMode"> constant specifying the mode (for example, <code>Open</code> or <code>Append</code>) in which to open the file.<p>
+</see>
+                </li>
+                <li>
+                  <dl>
+                  <dt>access</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.fileaccess">FileAccess</a></div>
+                  </dd>
+                  </dl>
+                  <p>A <see cref="T:System.IO.FileAccess"> constant specifying whether to open the file with <code>Read</code>, <code>Write</code>, or <code>ReadWrite</code> file access.<p>
+</see>
+                </li>
+                <li>
+                  <dl>
+                  <dt>share</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.fileshare">FileShare</a></div>
+                  </dd>
+                  </dl>
+                  <p>A <see cref="T:System.IO.FileShare"> constant specifying the type of access other <code>FileStream</code> objects have to this file.<p>
+</see>
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.filestream">FileStream</a></div>
+                  </div>
+                  <p>A <see cref="T:System.IO.FileStream"> object opened with the specified mode, access, and sharing options.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example demonstrates opening a file for reading and writing, but disallowing access to other users or processes.  
+  
+ [!CODE [fileinfoopen#1](../CodeSnippet/VS_Snippets_CLR/fileinfoopen#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_OpenRead">
+    
+            <a id="System_IO_FileInfo_OpenRead_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OpenRead()</div>        
+          </div>
+    
+            <p>Creates a read-only <see cref="T:System.IO.FileStream">.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.FileStream OpenRead ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.filestream">FileStream</a></div>
+                  </div>
+                  <p>A new read-only <see cref="T:System.IO.FileStream"> object.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method returns a read-only <a class="xref" href="system.io.filestream">FileStream</a> object with the <a class="xref" href="system.io.fileshare">FileShare</a> mode set to <a class="xref" href="system.io.fileshare">FileShare</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example opens a file as read-only and reads from it.  
+  
+ [!CODE [finfo openread#1](../CodeSnippet/VS_Snippets_CLR/FInfo OpenRead#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_OpenText">
+    
+            <a id="System_IO_FileInfo_OpenText_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OpenText()</div>        
+          </div>
+    
+            <p>Creates a <see cref="T:System.IO.StreamReader"> with UTF8 encoding that reads from an existing text file.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.StreamReader OpenText ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.streamreader">StreamReader</a></div>
+                  </div>
+                  <p>A new <code>StreamReader</code> with UTF8 encoding.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example reads text from a file.  
+  
+ [!CODE [finfo opentext#1](../CodeSnippet/VS_Snippets_CLR/FInfo OpenText#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_OpenWrite">
+    
+            <a id="System_IO_FileInfo_OpenWrite_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OpenWrite()</div>        
+          </div>
+    
+            <p>Creates a write-only <see cref="T:System.IO.FileStream">.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.FileStream OpenWrite ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.filestream">FileStream</a></div>
+                  </div>
+                  <p>A write-only unshared <see cref="T:System.IO.FileStream"> object for a new or existing file.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The OpenWrite method opens a file if one already exists for the file path, or creates a new file if one does not exist. For an existing file, it does not append the new text to the existing text. Instead, it overwrites the existing characters with the new characters. If you overwrite a longer string (such as &quot;This is a test of the OpenWrite method&quot;) with a shorter string (like &quot;Second run&quot;), the file will contain a mix of the strings (&quot;Second runtest of the OpenWrite method&quot;).</p>
+
+    
+            <h4>Example</h4>
+            The following example opens a file for writing and then reads from the file.  
+  
+ [!CODE [finfo openwrite#1](../CodeSnippet/VS_Snippets_CLR/FInfo OpenWrite#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Replace_System_String_System_String_">
+    
+            <a id="System_IO_FileInfo_Replace_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Replace(String,String)</div>        
+          </div>
+    
+            <p>Replaces the contents of a specified file with the file described by the current <see cref="T:System.IO.FileInfo"> object, deleting the original file, and creating a backup of the replaced file.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.FileInfo Replace (string destinationFileName, string destinationBackupFileName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>destinationFileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The name of a file to replace with the current file.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>destinationBackupFileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The name of a file with which to create a backup of the file described by the  parameter.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.fileinfo">FileInfo</a></div>
+                  </div>
+                  <p>A <see cref="T:System.IO.FileInfo"> object that encapsulates information about the file described by the  parameter.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The Replace method replaces the contents of a specified file with the contents of the file described by the current <a class="xref" href="system.io.fileinfo">FileInfo</a> object.  It also creates a backup of the file that was replaced.  Finally, it returns a new <a class="xref" href="system.io.fileinfo">FileInfo</a> object that describes the overwritten file.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> This method will succeed in Windows 2000 environments if the  is read-only and will not raise an exception. Use the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_IsReadOnly_">IsReadOnly</a> property to check if the destination file is read-only before attempting to replace it.  </p>
+</div>
+<p> Pass <code>null</code> to the  parameter if you do not want to create a backup of the file being replaced.</p>
+
+    
+            <h4>Example</h4>
+            The following example uses the <xref:system.io.file.replace%2a> method to replace a file with another file and create a backup of the replaced file.  
+  
+ [!CODE [IO.FileInfo.Replace#1](../CodeSnippet/VS_Snippets_CLR/IO.FileInfo.Replace#1)]
+    
+    
+        </xref:system.io.file.replace%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_Replace_System_String_System_String_System_Boolean_">
+    
+            <a id="System_IO_FileInfo_Replace_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Replace(String,String,Boolean)</div>        
+          </div>
+    
+            <p>Replaces the contents of a specified file with the file described by the current <see cref="T:System.IO.FileInfo"> object, deleting the original file, and creating a backup of the replaced file.  Also specifies whether to ignore merge errors.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.FileInfo Replace (string destinationFileName, string destinationBackupFileName, bool ignoreMetadataErrors);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>destinationFileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The name of a file to replace with the current file.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>destinationBackupFileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The name of a file with which to create a backup of the file described by the  parameter.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>ignoreMetadataErrors</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to ignore merge errors (such as attributes and ACLs) from the replaced file to the replacement file; otherwise <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.fileinfo">FileInfo</a></div>
+                  </div>
+                  <p>A <see cref="T:System.IO.FileInfo"> object that encapsulates information about the file described by the  parameter.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The Replace method replaces the contents of a specified file with the contents of the file described by the current <a class="xref" href="system.io.fileinfo">FileInfo</a> object.  It also creates a backup of the file that was replaced.  Finally, it returns a new <a class="xref" href="system.io.fileinfo">FileInfo</a> object that describes the overwritten file.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> This method will succeed in Windows 2000 environments if the  is read-only and will not raise an exception. Use the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_IsReadOnly_">IsReadOnly</a> property to check if the destination file is read-only before attempting to replace it.  </p>
+</div>
+<p> Pass <code>null</code> to the  parameter if you do not want to create a backup of the file being replaced.</p>
+
+    
+            <h4>Example</h4>
+            The following example uses the <xref:system.io.file.replace%2a> method to replace a file with another file and create a backup of the replaced file.  
+  
+ [!CODE [IO.FileInfo.Replace#1](../CodeSnippet/VS_Snippets_CLR/IO.FileInfo.Replace#1)]
+    
+    
+        </xref:system.io.file.replace%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_SetAccessControl_System_Security_AccessControl_FileSecurity_">
+    
+            <a id="System_IO_FileInfo_SetAccessControl_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetAccessControl(FileSecurity)</div>        
+          </div>
+    
+            <p>Applies access control list (ACL) entries described by a <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object to the file described by the current <a class="xref" href="system.io.fileinfo">FileInfo</a> object.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetAccessControl (System.Security.AccessControl.FileSecurity fileSecurity);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>fileSecurity</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a></div>
+                  </dd>
+                  </dl>
+                  <p>A <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object that describes an access control list (ACL) entry to apply to the current file.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The SetAccessControl method applies access control list (ACL) entries to the current file that represents the noninherited ACL list.  </p>
+<p> Use the SetAccessControl method whenever you need to add or remove ACL entries from a file.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> The ACL specified for the  parameter replaces the existing ACL for the file. To add permissions for a new user, use the <a class="xref" href="system.io.directory#System_IO_Directory_GetAccessControl_">GetAccessControl</a> method to obtain the existing ACL, modify it, and then use SetAccessControl to apply it back to the file.  </p>
+</div>
+<p> An ACL describes individuals and/or groups who have, or do not have, rights to specific actions on the given file. For more information, see <a href="../Topic/How%20to:%20Add%20or%20Remove%20Access%20Control%20List%20Entries.md">How to: Add or Remove Access Control List Entries</a>.  </p>
+<p> The SetAccessControl method persists only <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> objects that have been modified after object creation.  If a <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object has not been modified, it will not be persisted to a file.  Therefore, it is not possible to retrieve a <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object from one file and reapply the same object to another file.  </p>
+<p> To copy ACL information from one file to another:  </p>
+<ol>
+<li><p>Use the <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_GetAccessControl_">GetAccessControl</a> method to retrieve the <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object from the source file.  </p>
+</li>
+<li><p>Create a new <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object for the destination file.  </p>
+</li>
+<li><p>Use the <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.objectsecurity#System_Security_AccessControl_ObjectSecurity_GetSecurityDescriptorBinaryForm_">GetSecurityDescriptorBinaryForm</a> or <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.objectsecurity#System_Security_AccessControl_ObjectSecurity_GetSecurityDescriptorSddlForm_">GetSecurityDescriptorSddlForm</a> method of the source <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object to retrieve the ACL information.  </p>
+</li>
+<li><p>Use the <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.objectsecurity#System_Security_AccessControl_ObjectSecurity_SetSecurityDescriptorBinaryForm_">SetSecurityDescriptorBinaryForm</a> or <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.objectsecurity#System_Security_AccessControl_ObjectSecurity_SetSecurityDescriptorSddlForm_">SetSecurityDescriptorSddlForm</a> method to copy the information retrieved in step 3 to the destination <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object.  </p>
+</li>
+<li><p>Set the destination <a class="xref" href="../system.security.accesscontrol/system.security.accesscontrol.filesecurity">FileSecurity</a> object to the destination file using the SetAccessControl method.</p>
+</li>
+</ol>
+
+    
+            <h4>Example</h4>
+            The following code example uses the <xref:system.io.fileinfo.getaccesscontrol%2a> method and the SetAccessControl method to add and then remove an ACL entry from a file.  You must supply a valid user or group account to run this example.  
+  
+ [!CODE [IO.FileInfo.GetAccessControl-SetAccessControl#1](../CodeSnippet/VS_Snippets_CLR/IO.FileInfo.GetAccessControl-SetAccessControl#1)]
+    
+    
+        </xref:system.io.fileinfo.getaccesscontrol%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileInfo_ToString">
+    
+            <a id="System_IO_FileInfo_ToString_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ToString()</div>        
+          </div>
+    
+            <p>Returns the path as a string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string ToString ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>A string representing the path.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The string returned by the ToString method represents path that was passed to the constructor.  When you create a <a class="xref" href="system.io.fileinfo">FileInfo</a> object using the constructors, the ToString method returns the fully qualified path.  However, there are cases where the string returned by the ToString method does not represent the fully qualified path.  For example, when you create a <a class="xref" href="system.io.fileinfo">FileInfo</a> object using the <a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFiles_">GetFiles</a> method, the ToString method does not represent the fully qualified path.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates some of the main members of the `FileInfo` class.  
+  
+ When the properties are first retrieved, FileInfo calls the <xref:system.io.filesysteminfo.refresh%2a> method and caches information about the file. On subsequent calls, you must call <xref:system.io.filesysteminfo.refresh%2a> to get the latest copy of the information.  
+  
+ [!CODE [FInfo Class#1](../CodeSnippet/VS_Snippets_CLR/FInfo Class#1)]  
+  
+ This example produces output similar to the following.  
+  
+```  
+Hello  
+And  
+Welcome  
+C:\Users\userName\AppData\Local\Temp\tmp70AB.tmp was copied to C:\Users\userName\AppData\Local\Temp\tmp70CB.tmp.  
+C:\Users\userName\AppData\Local\Temp\tmp70CB.tmp was successfully deleted.  
+```
+    
+    
+        </xref:system.io.filesysteminfo.refresh%2a></xref:system.io.filesysteminfo.refresh%2a></li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

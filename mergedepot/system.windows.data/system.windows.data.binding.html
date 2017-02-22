@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Binding class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Windows.Data/System.Windows.Data.Binding.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Windows.Data/System.Windows.Data.Binding.yml">
+<meta name="APIName" content="System.Windows.Data.Binding">
+<meta name="APIName" content="System.Windows.Data.Binding..ctor">
+<meta name="APIName" content="System.Windows.Data.Binding.AddSourceUpdatedHandler">
+<meta name="APIName" content="System.Windows.Data.Binding.AddTargetUpdatedHandler">
+<meta name="APIName" content="System.Windows.Data.Binding.AsyncState">
+<meta name="APIName" content="System.Windows.Data.Binding.BindsDirectlyToSource">
+<meta name="APIName" content="System.Windows.Data.Binding.Converter">
+<meta name="APIName" content="System.Windows.Data.Binding.ConverterCulture">
+<meta name="APIName" content="System.Windows.Data.Binding.ConverterParameter">
+<meta name="APIName" content="System.Windows.Data.Binding.DoNothing">
+<meta name="APIName" content="System.Windows.Data.Binding.ElementName">
+<meta name="APIName" content="System.Windows.Data.Binding.GetXmlNamespaceManager">
+<meta name="APIName" content="System.Windows.Data.Binding.IndexerName">
+<meta name="APIName" content="System.Windows.Data.Binding.IsAsync">
+<meta name="APIName" content="System.Windows.Data.Binding.Mode">
+<meta name="APIName" content="System.Windows.Data.Binding.NotifyOnSourceUpdated">
+<meta name="APIName" content="System.Windows.Data.Binding.NotifyOnTargetUpdated">
+<meta name="APIName" content="System.Windows.Data.Binding.NotifyOnValidationError">
+<meta name="APIName" content="System.Windows.Data.Binding.Path">
+<meta name="APIName" content="System.Windows.Data.Binding.RelativeSource">
+<meta name="APIName" content="System.Windows.Data.Binding.RemoveSourceUpdatedHandler">
+<meta name="APIName" content="System.Windows.Data.Binding.RemoveTargetUpdatedHandler">
+<meta name="APIName" content="System.Windows.Data.Binding.SetXmlNamespaceManager">
+<meta name="APIName" content="System.Windows.Data.Binding.ShouldSerializePath">
+<meta name="APIName" content="System.Windows.Data.Binding.ShouldSerializeSource">
+<meta name="APIName" content="System.Windows.Data.Binding.ShouldSerializeValidationRules">
+<meta name="APIName" content="System.Windows.Data.Binding.Source">
+<meta name="APIName" content="System.Windows.Data.Binding.SourceUpdatedEvent">
+<meta name="APIName" content="System.Windows.Data.Binding.TargetUpdatedEvent">
+<meta name="APIName" content="System.Windows.Data.Binding.UpdateSourceExceptionFilter">
+<meta name="APIName" content="System.Windows.Data.Binding.UpdateSourceTrigger">
+<meta name="APIName" content="System.Windows.Data.Binding.ValidatesOnDataErrors">
+<meta name="APIName" content="System.Windows.Data.Binding.ValidatesOnExceptions">
+<meta name="APIName" content="System.Windows.Data.Binding.ValidatesOnNotifyDataErrors">
+<meta name="APIName" content="System.Windows.Data.Binding.ValidationRules">
+<meta name="APIName" content="System.Windows.Data.Binding.XmlNamespaceManagerProperty">
+<meta name="APIName" content="System.Windows.Data.Binding.XPath">
+<meta name="APILocation" content="PresentationFramework.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="97b73ae1-6383-1968-a762-679fb630a576">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Windows.Data.Binding">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.windows.data/system.windows.data.binding" rel="canonical">
+    <title>Binding class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Windows_Data_Binding">
+      <span class="lang-csharp">Binding</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public class Binding : System.Windows.Data.BindingBase</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.markup.markupextension(v=vs.110).aspx">MarkupExtension</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="system.windows.data.bindingbase">System.Windows.Data.BindingBase</a>
+          </div>
+        </li>
+      <li class="l2">
+        <div class="xref">
+          <div class="lang-csharp">Binding</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="system.windows.data.bindingbase#System_Windows_Data_BindingBase_BindingGroupName">BindingGroupName</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.windows.data.bindingbase#System_Windows_Data_BindingBase_Delay">Delay</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.windows.data.bindingbase#System_Windows_Data_BindingBase_FallbackValue">FallbackValue</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.windows.data.bindingbase#System_Windows_Data_BindingBase_ProvideValue_System_IServiceProvider_">ProvideValue(IServiceProvider)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.windows.data.bindingbase#System_Windows_Data_BindingBase_ShouldSerializeFallbackValue">ShouldSerializeFallbackValue()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.windows.data.bindingbase#System_Windows_Data_BindingBase_ShouldSerializeTargetNullValue">ShouldSerializeTargetNullValue()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.windows.data.bindingbase#System_Windows_Data_BindingBase_StringFormat">StringFormat</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.windows.data.bindingbase#System_Windows_Data_BindingBase_TargetNullValue">TargetNullValue</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding__ctor">Binding()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding__ctor_System_String_">Binding(String)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Fields
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_DoNothing">DoNothing</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_IndexerName">IndexerName</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_SourceUpdatedEvent">SourceUpdatedEvent</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_TargetUpdatedEvent">TargetUpdatedEvent</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_XmlNamespaceManagerProperty">XmlNamespaceManagerProperty</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_AsyncState">AsyncState</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_BindsDirectlyToSource">BindsDirectlyToSource</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_Converter">Converter</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_ConverterCulture">ConverterCulture</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_ConverterParameter">ConverterParameter</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_ElementName">ElementName</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_IsAsync">IsAsync</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_Mode">Mode</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_NotifyOnSourceUpdated">NotifyOnSourceUpdated</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_NotifyOnTargetUpdated">NotifyOnTargetUpdated</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_NotifyOnValidationError">NotifyOnValidationError</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_Path">Path</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_RelativeSource">RelativeSource</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_Source">Source</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_UpdateSourceExceptionFilter">UpdateSourceExceptionFilter</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_UpdateSourceTrigger">UpdateSourceTrigger</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_ValidatesOnDataErrors">ValidatesOnDataErrors</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_ValidatesOnExceptions">ValidatesOnExceptions</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_ValidatesOnNotifyDataErrors">ValidatesOnNotifyDataErrors</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_ValidationRules">ValidationRules</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_XPath">XPath</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_AddSourceUpdatedHandler_System_Windows_DependencyObject_System_EventHandler_System_Windows_Data_DataTransferEventArgs__">AddSourceUpdatedHandler(DependencyObject,EventHandler&lt;DataTransferEventArgs&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_AddTargetUpdatedHandler_System_Windows_DependencyObject_System_EventHandler_System_Windows_Data_DataTransferEventArgs__">AddTargetUpdatedHandler(DependencyObject,EventHandler&lt;DataTransferEventArgs&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_GetXmlNamespaceManager_System_Windows_DependencyObject_">GetXmlNamespaceManager(DependencyObject)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_RemoveSourceUpdatedHandler_System_Windows_DependencyObject_System_EventHandler_System_Windows_Data_DataTransferEventArgs__">RemoveSourceUpdatedHandler(DependencyObject,EventHandler&lt;DataTransferEventArgs&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_RemoveTargetUpdatedHandler_System_Windows_DependencyObject_System_EventHandler_System_Windows_Data_DataTransferEventArgs__">RemoveTargetUpdatedHandler(DependencyObject,EventHandler&lt;DataTransferEventArgs&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_SetXmlNamespaceManager_System_Windows_DependencyObject_System_Xml_XmlNamespaceManager_">SetXmlNamespaceManager(DependencyObject,XmlNamespaceManager)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_ShouldSerializePath">ShouldSerializePath()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_ShouldSerializeSource">ShouldSerializeSource()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Data_Binding_ShouldSerializeValidationRules">ShouldSerializeValidationRules()</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding__ctor">
+    
+            <a id="System_Windows_Data_Binding__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Binding()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Binding ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding__ctor_System_String_">
+    
+            <a id="System_Windows_Data_Binding__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Binding(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Binding (string path);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="fields">
+        <h2>Fields
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_DoNothing">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DoNothing</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly object DoNothing;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_IndexerName">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IndexerName</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public const string IndexerName;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_SourceUpdatedEvent">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SourceUpdatedEvent</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly System.Windows.RoutedEvent SourceUpdatedEvent;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_TargetUpdatedEvent">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TargetUpdatedEvent</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly System.Windows.RoutedEvent TargetUpdatedEvent;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_XmlNamespaceManagerProperty">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">XmlNamespaceManagerProperty</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly System.Windows.DependencyProperty XmlNamespaceManagerProperty;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_AsyncState">
+    
+            <a id="System_Windows_Data_Binding_AsyncState_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AsyncState</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public object AsyncState { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_BindsDirectlyToSource">
+    
+            <a id="System_Windows_Data_Binding_BindsDirectlyToSource_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BindsDirectlyToSource</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool BindsDirectlyToSource { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_Converter">
+    
+            <a id="System_Windows_Data_Binding_Converter_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Converter</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Data.IValueConverter Converter { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.data.ivalueconverter">IValueConverter</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_ConverterCulture">
+    
+            <a id="System_Windows_Data_Binding_ConverterCulture_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ConverterCulture</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Globalization.CultureInfo ConverterCulture { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.globalization/system.globalization.cultureinfo">CultureInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_ConverterParameter">
+    
+            <a id="System_Windows_Data_Binding_ConverterParameter_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ConverterParameter</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public object ConverterParameter { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_ElementName">
+    
+            <a id="System_Windows_Data_Binding_ElementName_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ElementName</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string ElementName { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_IsAsync">
+    
+            <a id="System_Windows_Data_Binding_IsAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsAsync</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool IsAsync { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_Mode">
+    
+            <a id="System_Windows_Data_Binding_Mode_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Mode</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Data.BindingMode Mode { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.data.bindingmode">BindingMode</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_NotifyOnSourceUpdated">
+    
+            <a id="System_Windows_Data_Binding_NotifyOnSourceUpdated_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NotifyOnSourceUpdated</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool NotifyOnSourceUpdated { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_NotifyOnTargetUpdated">
+    
+            <a id="System_Windows_Data_Binding_NotifyOnTargetUpdated_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NotifyOnTargetUpdated</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool NotifyOnTargetUpdated { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_NotifyOnValidationError">
+    
+            <a id="System_Windows_Data_Binding_NotifyOnValidationError_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NotifyOnValidationError</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool NotifyOnValidationError { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_Path">
+    
+            <a id="System_Windows_Data_Binding_Path_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Path</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.PropertyPath Path { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.propertypath">PropertyPath</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_RelativeSource">
+    
+            <a id="System_Windows_Data_Binding_RelativeSource_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RelativeSource</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Data.RelativeSource RelativeSource { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.data.relativesource">RelativeSource</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_Source">
+    
+            <a id="System_Windows_Data_Binding_Source_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Source</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public object Source { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_UpdateSourceExceptionFilter">
+    
+            <a id="System_Windows_Data_Binding_UpdateSourceExceptionFilter_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UpdateSourceExceptionFilter</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Data.UpdateSourceExceptionFilterCallback UpdateSourceExceptionFilter { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.data.updatesourceexceptionfiltercallback">UpdateSourceExceptionFilterCallback</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_UpdateSourceTrigger">
+    
+            <a id="System_Windows_Data_Binding_UpdateSourceTrigger_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UpdateSourceTrigger</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Data.UpdateSourceTrigger UpdateSourceTrigger { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.data.updatesourcetrigger">UpdateSourceTrigger</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_ValidatesOnDataErrors">
+    
+            <a id="System_Windows_Data_Binding_ValidatesOnDataErrors_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ValidatesOnDataErrors</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ValidatesOnDataErrors { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_ValidatesOnExceptions">
+    
+            <a id="System_Windows_Data_Binding_ValidatesOnExceptions_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ValidatesOnExceptions</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ValidatesOnExceptions { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_ValidatesOnNotifyDataErrors">
+    
+            <a id="System_Windows_Data_Binding_ValidatesOnNotifyDataErrors_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ValidatesOnNotifyDataErrors</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ValidatesOnNotifyDataErrors { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_ValidationRules">
+    
+            <a id="System_Windows_Data_Binding_ValidationRules_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ValidationRules</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.Collection&lt;System.Windows.Controls.ValidationRule&gt; ValidationRules { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.collection-1">Collection</a>&lt;<a class="xref" href="../system.windows.controls/system.windows.controls.validationrule">ValidationRule</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_XPath">
+    
+            <a id="System_Windows_Data_Binding_XPath_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">XPath</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string XPath { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_AddSourceUpdatedHandler_System_Windows_DependencyObject_System_EventHandler_System_Windows_Data_DataTransferEventArgs__">
+    
+            <a id="System_Windows_Data_Binding_AddSourceUpdatedHandler_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddSourceUpdatedHandler(DependencyObject,EventHandler&lt;DataTransferEventArgs&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void AddSourceUpdatedHandler (System.Windows.DependencyObject element, EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt; handler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>handler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="system.windows.data.datatransfereventargs">DataTransferEventArgs</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_AddTargetUpdatedHandler_System_Windows_DependencyObject_System_EventHandler_System_Windows_Data_DataTransferEventArgs__">
+    
+            <a id="System_Windows_Data_Binding_AddTargetUpdatedHandler_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddTargetUpdatedHandler(DependencyObject,EventHandler&lt;DataTransferEventArgs&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void AddTargetUpdatedHandler (System.Windows.DependencyObject element, EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt; handler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>handler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="system.windows.data.datatransfereventargs">DataTransferEventArgs</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_GetXmlNamespaceManager_System_Windows_DependencyObject_">
+    
+            <a id="System_Windows_Data_Binding_GetXmlNamespaceManager_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetXmlNamespaceManager(DependencyObject)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Xml.XmlNamespaceManager GetXmlNamespaceManager (System.Windows.DependencyObject target);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>target</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.xml.xmlnamespacemanager(v=vs.110).aspx">XmlNamespaceManager</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_RemoveSourceUpdatedHandler_System_Windows_DependencyObject_System_EventHandler_System_Windows_Data_DataTransferEventArgs__">
+    
+            <a id="System_Windows_Data_Binding_RemoveSourceUpdatedHandler_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveSourceUpdatedHandler(DependencyObject,EventHandler&lt;DataTransferEventArgs&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void RemoveSourceUpdatedHandler (System.Windows.DependencyObject element, EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt; handler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>handler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="system.windows.data.datatransfereventargs">DataTransferEventArgs</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_RemoveTargetUpdatedHandler_System_Windows_DependencyObject_System_EventHandler_System_Windows_Data_DataTransferEventArgs__">
+    
+            <a id="System_Windows_Data_Binding_RemoveTargetUpdatedHandler_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveTargetUpdatedHandler(DependencyObject,EventHandler&lt;DataTransferEventArgs&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void RemoveTargetUpdatedHandler (System.Windows.DependencyObject element, EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt; handler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>handler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="system.windows.data.datatransfereventargs">DataTransferEventArgs</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_SetXmlNamespaceManager_System_Windows_DependencyObject_System_Xml_XmlNamespaceManager_">
+    
+            <a id="System_Windows_Data_Binding_SetXmlNamespaceManager_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetXmlNamespaceManager(DependencyObject,XmlNamespaceManager)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void SetXmlNamespaceManager (System.Windows.DependencyObject target, System.Xml.XmlNamespaceManager value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>target</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.xml.xmlnamespacemanager(v=vs.110).aspx">XmlNamespaceManager</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_ShouldSerializePath">
+    
+            <a id="System_Windows_Data_Binding_ShouldSerializePath_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ShouldSerializePath()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ShouldSerializePath ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_ShouldSerializeSource">
+    
+            <a id="System_Windows_Data_Binding_ShouldSerializeSource_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ShouldSerializeSource()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ShouldSerializeSource ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Data_Binding_ShouldSerializeValidationRules">
+    
+            <a id="System_Windows_Data_Binding_ShouldSerializeValidationRules_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ShouldSerializeValidationRules()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ShouldSerializeValidationRules ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

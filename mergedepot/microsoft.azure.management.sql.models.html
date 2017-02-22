@@ -1,0 +1,3019 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Microsoft.Azure.Management.Sql.Models namespace">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="sql-database">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/5ae31a3a922410b87a8610c07baa6186a2b83d88/docs-ref-autogen/Sql/Microsoft.Azure.Management.Sql.Models.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Sql/Microsoft.Azure.Management.Sql.Models.yml">
+<meta name="updated_at" content="2017-02-16 12:26 AM">
+<meta name="document_id" content="33ac7801-d59d-9cf7-52f8-298f98a819e4">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Azure.Management.Sql.Models">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/microsoft.azure.management.sql.models" rel="canonical">
+    <title>Microsoft.Azure.Management.Sql.Models namespace | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/1b0378afbf1c5a46614d.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              <!-- NAMESPACE -->
+    <h1 id="Microsoft_Azure_Management_Sql_Models">
+      <span class="lang-csharp">Microsoft.Azure.Management.Sql.Models</span>
+      <span class="lang-vb">Microsoft.Azure.Management.Sql.Models</span>
+        Namespace
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div>
+    <header class="header enable-platform-filter" id="classes">
+      <h2>Classes
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_Azure_Management_Sql_Models_Advisor" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.advisor">Advisor</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.advisor">Advisor</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Server/Database/Elastic Pool Advisor.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_AdvisorGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.advisorgetresponse">AdvisorGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.advisorgetresponse">AdvisorGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a get advisor request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_AdvisorListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.advisorlistresponse">AdvisorListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.advisorlistresponse">AdvisorListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a list sql azure database advisors request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_AdvisorProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.advisorproperties">AdvisorProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.advisorproperties">AdvisorProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Server/Database/Elastic Pool
+Advisor.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_AdvisorUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.advisorupdateparameters">AdvisorUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.advisorupdateparameters">AdvisorUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Update Sql Azure Server/Database/Elastic Pool Advisor auto-execute
+status.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_AdvisorUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.advisorupdateproperties">AdvisorUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.advisorupdateproperties">AdvisorUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Update Azure Sql Server/Database/Elastic Pool Advisor properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_AdvisorUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.advisorupdateresponse">AdvisorUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.advisorupdateresponse">AdvisorUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a update advisor request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BackupLongTermRetentionVault" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.backuplongtermretentionvault">BackupLongTermRetentionVault</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.backuplongtermretentionvault">BackupLongTermRetentionVault</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database backup LongTermRetention vault.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BackupLongTermRetentionVaultCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.backuplongtermretentionvaultcreateorupdateparameters">BackupLongTermRetentionVaultCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.backuplongtermretentionvaultcreateorupdateparameters">BackupLongTermRetentionVaultCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Sql Azure Server backup LongTermRetention vault
+parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BackupLongTermRetentionVaultCreateOrUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.backuplongtermretentionvaultcreateorupdateresponse">BackupLongTermRetentionVaultCreateOrUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.backuplongtermretentionvaultcreateorupdateresponse">BackupLongTermRetentionVaultCreateOrUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BackupLongTermRetentionVaultGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.backuplongtermretentionvaultgetresponse">BackupLongTermRetentionVaultGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.backuplongtermretentionvaultgetresponse">BackupLongTermRetentionVaultGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Server backup
+LongTermRetention vault request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BackupLongTermRetentionVaultListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.backuplongtermretentionvaultlistresponse">BackupLongTermRetentionVaultListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.backuplongtermretentionvaultlistresponse">BackupLongTermRetentionVaultListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Server backup
+LongTermRetention vault request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BackupLongTermRetentionVaultProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.backuplongtermretentionvaultproperties">BackupLongTermRetentionVaultProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.backuplongtermretentionvaultproperties">BackupLongTermRetentionVaultProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Server backup
+LongTermRetention vault.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BaseAuditingPolicyProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.baseauditingpolicyproperties">BaseAuditingPolicyProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.baseauditingpolicyproperties">BaseAuditingPolicyProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL auditing policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BaseSecurityAlertPolicyProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.basesecurityalertpolicyproperties">BaseSecurityAlertPolicyProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.basesecurityalertpolicyproperties">BaseSecurityAlertPolicyProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Security alert policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BlobAuditingCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.blobauditingcreateorupdateparameters">BlobAuditingCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.blobauditingcreateorupdateparameters">BlobAuditingCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update blob auditing parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BlobAuditingGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.blobauditinggetresponse">BlobAuditingGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.blobauditinggetresponse">BlobAuditingGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a get request for Azure SQL server or
+database blob auditing policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BlobAuditingOperationResult" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.blobauditingoperationresult">BlobAuditingOperationResult</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.blobauditingoperationresult">BlobAuditingOperationResult</a></div>
+      </td>
+      <td>
+        <p>Represents the status of a create or update operation of Azure SQL
+Server blob auditing policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BlobAuditingOperationResultProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.blobauditingoperationresultproperties">BlobAuditingOperationResultProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.blobauditingoperationresultproperties">BlobAuditingOperationResultProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of a create or update request for an Azure
+SQL blob auditing policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BlobAuditingPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.blobauditingpolicy">BlobAuditingPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.blobauditingpolicy">BlobAuditingPolicy</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL blob auditing policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_BlobAuditingProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.blobauditingproperties">BlobAuditingProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.blobauditingproperties">BlobAuditingProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL blob auditing policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_CapabilityStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.capabilitystatus">CapabilityStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.capabilitystatus">CapabilityStatus</a></div>
+      </td>
+      <td>
+        <p>Defines the valid units for Azure SQL Database max sizes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_Column" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.column">Column</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.column">Column</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database table column.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ColumnProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.columnproperties">ColumnProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.columnproperties">ColumnProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database table column.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_Database" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.database">Database</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.database">Database</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseAuditingPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databaseauditingpolicy">DatabaseAuditingPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databaseauditingpolicy">DatabaseAuditingPolicy</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database auditing policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseAuditingPolicyCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databaseauditingpolicycreateorupdateparameters">DatabaseAuditingPolicyCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databaseauditingpolicycreateorupdateparameters">DatabaseAuditingPolicyCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update database audting policy parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseAuditingPolicyGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databaseauditingpolicygetresponse">DatabaseAuditingPolicyGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databaseauditingpolicygetresponse">DatabaseAuditingPolicyGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a get database auditing policy request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseAuditingPolicyProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databaseauditingpolicyproperties">DatabaseAuditingPolicyProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databaseauditingpolicyproperties">DatabaseAuditingPolicyProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL auditing policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseBackupLongTermRetentionPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasebackuplongtermretentionpolicy">DatabaseBackupLongTermRetentionPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasebackuplongtermretentionpolicy">DatabaseBackupLongTermRetentionPolicy</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database backup LongTermRetention policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseBackupLongTermRetentionPolicyCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasebackuplongtermretentionpolicycreateorupdateparameters">DatabaseBackupLongTermRetentionPolicyCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasebackuplongtermretentionpolicycreateorupdateparameters">DatabaseBackupLongTermRetentionPolicyCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Sql Azure Database backup LongTermRetention policy
+parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseBackupLongTermRetentionPolicyCreateOrUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasebackuplongtermretentionpolicycreateorupdateresponse">DatabaseBackupLongTermRetentionPolicyCreateOrUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasebackuplongtermretentionpolicycreateorupdateresponse">DatabaseBackupLongTermRetentionPolicyCreateOrUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseBackupLongTermRetentionPolicyGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasebackuplongtermretentionpolicygetresponse">DatabaseBackupLongTermRetentionPolicyGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasebackuplongtermretentionpolicygetresponse">DatabaseBackupLongTermRetentionPolicyGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Database backup
+LongTermRetention policy request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseBackupLongTermRetentionPolicyListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasebackuplongtermretentionpolicylistresponse">DatabaseBackupLongTermRetentionPolicyListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasebackuplongtermretentionpolicylistresponse">DatabaseBackupLongTermRetentionPolicyListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Database backup
+LongTermRetention policy request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseBackupLongTermRetentionPolicyProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasebackuplongtermretentionpolicyproperties">DatabaseBackupLongTermRetentionPolicyProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasebackuplongtermretentionpolicyproperties">DatabaseBackupLongTermRetentionPolicyProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database backup
+LongTermRetention policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseCreateMode" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasecreatemode">DatabaseCreateMode</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasecreatemode">DatabaseCreateMode</a></div>
+      </td>
+      <td>
+        <p>Defines the valid create modes of Azure SQL Databases. See MSDN for
+more information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasecreateorupdateparameters">DatabaseCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasecreateorupdateparameters">DatabaseCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Sql Azure Database parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasecreateorupdateproperties">DatabaseCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasecreateorupdateproperties">DatabaseCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure Sql Database parameters properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseCreateOrUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasecreateorupdateresponse">DatabaseCreateOrUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasecreateorupdateresponse">DatabaseCreateOrUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure Sql Database operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseEditions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databaseeditions">DatabaseEditions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databaseeditions">DatabaseEditions</a></div>
+      </td>
+      <td>
+        <p>Defines the valid editions of Azure SQL Databases. See MSDN for more
+information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasegetresponse">DatabaseGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasegetresponse">DatabaseGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Database request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databaselistresponse">DatabaseListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databaselistresponse">DatabaseListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Database request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseMetric" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasemetric">DatabaseMetric</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasemetric">DatabaseMetric</a></div>
+      </td>
+      <td>
+        <p>Represents Azure SQL Database metrics.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseMetricListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasemetriclistresponse">DatabaseMetricListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasemetriclistresponse">DatabaseMetricListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Database metrics request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databaseproperties">DatabaseProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databaseproperties">DatabaseProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseReadScale" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasereadscale">DatabaseReadScale</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasereadscale">DatabaseReadScale</a></div>
+      </td>
+      <td>
+        <p>Defines the valid read scale options of Azure SQL Databases. See MSDN
+for more information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseSecureConnectionPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasesecureconnectionpolicy">DatabaseSecureConnectionPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasesecureconnectionpolicy">DatabaseSecureConnectionPolicy</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database secure connection policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseSecureConnectionPolicyCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasesecureconnectionpolicycreateorupdateparameters">DatabaseSecureConnectionPolicyCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasesecureconnectionpolicycreateorupdateparameters">DatabaseSecureConnectionPolicyCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update database secure connection policy parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseSecureConnectionPolicyCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasesecureconnectionpolicycreateorupdateproperties">DatabaseSecureConnectionPolicyCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasesecureconnectionpolicycreateorupdateproperties">DatabaseSecureConnectionPolicyCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update database secure connection policy parameters
+properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseSecureConnectionPolicyGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasesecureconnectionpolicygetresponse">DatabaseSecureConnectionPolicyGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasesecureconnectionpolicygetresponse">DatabaseSecureConnectionPolicyGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get database secure connection request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseSecureConnectionPolicyProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasesecureconnectionpolicyproperties">DatabaseSecureConnectionPolicyProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasesecureconnectionpolicyproperties">DatabaseSecureConnectionPolicyProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database secure connection
+policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseSecurityAlertPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasesecurityalertpolicy">DatabaseSecurityAlertPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasesecurityalertpolicy">DatabaseSecurityAlertPolicy</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Security Alert Policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseSecurityAlertPolicyCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasesecurityalertpolicycreateorupdateparameters">DatabaseSecurityAlertPolicyCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasesecurityalertpolicycreateorupdateparameters">DatabaseSecurityAlertPolicyCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update database security alert policy parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseSecurityAlertPolicyGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasesecurityalertpolicygetresponse">DatabaseSecurityAlertPolicyGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasesecurityalertpolicygetresponse">DatabaseSecurityAlertPolicyGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a get database security alert policy request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DatabaseSecurityAlertPolicyProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.databasesecurityalertpolicyproperties">DatabaseSecurityAlertPolicyProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.databasesecurityalertpolicyproperties">DatabaseSecurityAlertPolicyProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Security alert policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DataMaskingPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingpolicy">DataMaskingPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingpolicy">DataMaskingPolicy</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database data masking policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DataMaskingPolicyCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingpolicycreateorupdateparameters">DataMaskingPolicyCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingpolicycreateorupdateparameters">DataMaskingPolicyCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update data masking Rule parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DataMaskingPolicyGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingpolicygetresponse">DataMaskingPolicyGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingpolicygetresponse">DataMaskingPolicyGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a data masking policy get request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DataMaskingPolicyProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingpolicyproperties">DataMaskingPolicyProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingpolicyproperties">DataMaskingPolicyProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database data masking policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DataMaskingRule" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingrule">DataMaskingRule</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingrule">DataMaskingRule</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database data masking rule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DataMaskingRuleCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingrulecreateorupdateparameters">DataMaskingRuleCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingrulecreateorupdateparameters">DataMaskingRuleCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update data masking rule parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DataMaskingRuleListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingrulelistresponse">DataMaskingRuleListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingrulelistresponse">DataMaskingRuleListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List data masking rules request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DataMaskingRuleProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingruleproperties">DataMaskingRuleProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.datamaskingruleproperties">DataMaskingRuleProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database data masking rule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DeletedDatabaseBackup" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.deleteddatabasebackup">DeletedDatabaseBackup</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.deleteddatabasebackup">DeletedDatabaseBackup</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database restorable deleted database.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DeletedDatabaseBackupGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.deleteddatabasebackupgetresponse">DeletedDatabaseBackupGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.deleteddatabasebackupgetresponse">DeletedDatabaseBackupGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Database deleted database
+backup request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DeletedDatabaseBackupListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.deleteddatabasebackuplistresponse">DeletedDatabaseBackupListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.deleteddatabasebackuplistresponse">DeletedDatabaseBackupListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Database deleted database
+backups request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_DeletedDatabaseBackupProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.deleteddatabasebackupproperties">DeletedDatabaseBackupProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.deleteddatabasebackupproperties">DeletedDatabaseBackupProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database restorable deleted
+database.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_EditionCapability" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.editioncapability">EditionCapability</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.editioncapability">EditionCapability</a></div>
+      </td>
+      <td>
+        <p>Represents the Azure SQL Server edition capabilities.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPool" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpool">ElasticPool</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpool">ElasticPool</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Elastic Pool (Elastic Pool).</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPoolActivity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolactivity">ElasticPoolActivity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolactivity">ElasticPoolActivity</a></div>
+      </td>
+      <td>
+        <p>Represents the activity on an Azure SQL Elastic Pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPoolActivityListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolactivitylistresponse">ElasticPoolActivityListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolactivitylistresponse">ElasticPoolActivityListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Elastic Pool Activity
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPoolActivityProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolactivityproperties">ElasticPoolActivityProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolactivityproperties">ElasticPoolActivityProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database Elastic Pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPoolCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolcreateorupdateparameters">ElasticPoolCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolcreateorupdateparameters">ElasticPoolCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Sql Azure Database Elastic Pool parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPoolCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolcreateorupdateproperties">ElasticPoolCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolcreateorupdateproperties">ElasticPoolCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure Sql Database Elastic Pool parameters properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPoolCreateOrUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolcreateorupdateresponse">ElasticPoolCreateOrUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolcreateorupdateresponse">ElasticPoolCreateOrUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure Sql Database Elastic Pool operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPoolDatabaseActivity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpooldatabaseactivity">ElasticPoolDatabaseActivity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpooldatabaseactivity">ElasticPoolDatabaseActivity</a></div>
+      </td>
+      <td>
+        <p>Represents the activity on an Azure SQL Database Elastic Pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPoolDatabaseActivityListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpooldatabaseactivitylistresponse">ElasticPoolDatabaseActivityListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpooldatabaseactivitylistresponse">ElasticPoolDatabaseActivityListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Elastic Pool Database
+Activity request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPoolDatabaseActivityProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpooldatabaseactivityproperties">ElasticPoolDatabaseActivityProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpooldatabaseactivityproperties">ElasticPoolDatabaseActivityProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database Elastic Pool
+Database Activity.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPoolGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolgetresponse">ElasticPoolGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolgetresponse">ElasticPoolGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Elastic Pool request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPoolListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoollistresponse">ElasticPoolListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoollistresponse">ElasticPoolListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Elastic Pool request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ElasticPoolProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolproperties">ElasticPoolProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.elasticpoolproperties">ElasticPoolProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database Elastic Pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_EncryptionProtector" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotector">EncryptionProtector</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotector">EncryptionProtector</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Transparent Data Encryption Encryption
+Protector.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_EncryptionProtectorCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectorcreateorupdateparameters">EncryptionProtectorCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectorcreateorupdateparameters">EncryptionProtectorCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Sql Azure Database Transparent Data Encryption
+parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_EncryptionProtectorCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectorcreateorupdateproperties">EncryptionProtectorCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectorcreateorupdateproperties">EncryptionProtectorCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure Sql Database Transparent Data Encryption
+parameters properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_EncryptionProtectorCreateOrUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectorcreateorupdateresponse">EncryptionProtectorCreateOrUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectorcreateorupdateresponse">EncryptionProtectorCreateOrUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Azure Sql Database Transparent Data
+Encryption Protector create or update request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_EncryptionProtectorGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectorgetresponse">EncryptionProtectorGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectorgetresponse">EncryptionProtectorGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get for a Azure Sql Database Transparent
+Data Encryption EncryptionProtector request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_EncryptionProtectorListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectorlistresponse">EncryptionProtectorListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectorlistresponse">EncryptionProtectorListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to an Azure Sql Database Transparent Data
+Encryption Encryption Protector List request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_EncryptionProtectorProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectorproperties">EncryptionProtectorProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectorproperties">EncryptionProtectorProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties for an Azure Sql Database Transparent Data
+Encryption Encryption Protector.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_EncryptionProtectorType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectortype">EncryptionProtectorType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.encryptionprotectortype">EncryptionProtectorType</a></div>
+      </td>
+      <td>
+        <p>Defines the valid Transparent Data Encryption encryption protector
+types of Azure SQL Databases. See MSDN for more information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ErrorResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.errorresponse">ErrorResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.errorresponse">ErrorResponse</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ExportRequestParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.exportrequestparameters">ExportRequestParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.exportrequestparameters">ExportRequestParameters</a></div>
+      </td>
+      <td>
+        <p>Export Azure SQL Database parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroup" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergroup">FailoverGroup</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergroup">FailoverGroup</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Failover Group (Failover Group).</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupcreateorupdateparameters">FailoverGroupCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupcreateorupdateparameters">FailoverGroupCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Sql Azure Database Failover Group parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupcreateorupdateproperties">FailoverGroupCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupcreateorupdateproperties">FailoverGroupCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure Sql Database parameters properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupCreateOrUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupcreateorupdateresponse">FailoverGroupCreateOrUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupcreateorupdateresponse">FailoverGroupCreateOrUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure Sql Database Failover Group operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupgetresponse">FailoverGroupGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupgetresponse">FailoverGroupGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Failover Group request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouplistresponse">FailoverGroupListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouplistresponse">FailoverGroupListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Failover Group request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupPartnerServer" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouppartnerserver">FailoverGroupPartnerServer</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouppartnerserver">FailoverGroupPartnerServer</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Failover Group Partner Server.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupPartnerServerProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouppartnerserverproperties">FailoverGroupPartnerServerProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouppartnerserverproperties">FailoverGroupPartnerServerProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the failover group partner server proporties</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupPartnerServers" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouppartnerservers">FailoverGroupPartnerServers</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouppartnerservers">FailoverGroupPartnerServers</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Failover Group Partner Server.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupPatchUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouppatchupdateparameters">FailoverGroupPatchUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouppatchupdateparameters">FailoverGroupPatchUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Patch Update Sql Azure Database Failover Group parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupPatchUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouppatchupdateproperties">FailoverGroupPatchUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouppatchupdateproperties">FailoverGroupPatchUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Patch Update Azure Sql Database parameters properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupPatchUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouppatchupdateresponse">FailoverGroupPatchUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergrouppatchupdateresponse">FailoverGroupPatchUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure Sql Database Failover Group operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupproperties">FailoverGroupProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupproperties">FailoverGroupProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database Failover Group.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupReplicationRole" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupreplicationrole">FailoverGroupReplicationRole</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupreplicationrole">FailoverGroupReplicationRole</a></div>
+      </td>
+      <td>
+        <p>Defines the replication role for Azure SQL Database Failover Group. See
+MSDN for more information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FailoverGroupReplicationState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupreplicationstate">FailoverGroupReplicationState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.failovergroupreplicationstate">FailoverGroupReplicationState</a></div>
+      </td>
+      <td>
+        <p>Defines the replication state for ReadWriteEndpoint of Azure SQL
+Database Failover Group. See MSDN for more information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FirewallRule" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.firewallrule">FirewallRule</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.firewallrule">FirewallRule</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Server Firewall Rule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FirewallRuleCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.firewallrulecreateorupdateparameters">FirewallRuleCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.firewallrulecreateorupdateparameters">FirewallRuleCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Firewall Rule parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FirewallRuleCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.firewallrulecreateorupdateproperties">FirewallRuleCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.firewallrulecreateorupdateproperties">FirewallRuleCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update Firewall Rule parameters properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FirewallRuleGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.firewallrulegetresponse">FirewallRuleGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.firewallrulegetresponse">FirewallRuleGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Firewall Rules request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FirewallRuleListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.firewallrulelistresponse">FirewallRuleListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.firewallrulelistresponse">FirewallRuleListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Firewall Rules request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_FirewallRuleProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.firewallruleproperties">FirewallRuleProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.firewallruleproperties">FirewallRuleProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database Server Firewall Rule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_GeoBackup" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.geobackup">GeoBackup</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.geobackup">GeoBackup</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database geo backup.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_GeoBackupGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.geobackupgetresponse">GeoBackupGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.geobackupgetresponse">GeoBackupGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Database geo backup request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_GeoBackupListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.geobackuplistresponse">GeoBackupListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.geobackuplistresponse">GeoBackupListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Database geo backups
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_GeoBackupPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.geobackuppolicy">GeoBackupPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.geobackuppolicy">GeoBackupPolicy</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database geo backup policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_GeoBackupPolicyCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.geobackuppolicycreateorupdateparameters">GeoBackupPolicyCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.geobackuppolicycreateorupdateparameters">GeoBackupPolicyCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Sql Azure Database Geo Backup Policy parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_GeoBackupPolicyCreateOrUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.geobackuppolicycreateorupdateresponse">GeoBackupPolicyCreateOrUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.geobackuppolicycreateorupdateresponse">GeoBackupPolicyCreateOrUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Response for Azure Sql Database Geo Backup Policy operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_GeoBackupPolicyGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.geobackuppolicygetresponse">GeoBackupPolicyGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.geobackuppolicygetresponse">GeoBackupPolicyGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Database geo backup policy
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_GeoBackupPolicyListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.geobackuppolicylistresponse">GeoBackupPolicyListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.geobackuppolicylistresponse">GeoBackupPolicyListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Database geo backup
+policies request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_GeoBackupPolicyProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.geobackuppolicyproperties">GeoBackupPolicyProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.geobackuppolicyproperties">GeoBackupPolicyProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database Geo Backup Policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_GeoBackupProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.geobackupproperties">GeoBackupProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.geobackupproperties">GeoBackupProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database geo backup.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ImportExportOperationStatusResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.importexportoperationstatusresponse">ImportExportOperationStatusResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.importexportoperationstatusresponse">ImportExportOperationStatusResponse</a></div>
+      </td>
+      <td>
+        <p>Response for Azure Sql Import/Export Status operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ImportExportOperationStatusResponseProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.importexportoperationstatusresponseproperties">ImportExportOperationStatusResponseProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.importexportoperationstatusresponseproperties">ImportExportOperationStatusResponseProperties</a></div>
+      </td>
+      <td>
+        <p>Response for Azure Sql Import/Export Status operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ImportExportResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.importexportresponse">ImportExportResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.importexportresponse">ImportExportResponse</a></div>
+      </td>
+      <td>
+        <p>Response Azure Sql Import/Export operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ImportExtensionProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.importextensionproperties">ImportExtensionProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.importextensionproperties">ImportExtensionProperties</a></div>
+      </td>
+      <td>
+        <p>Export Azure SQL Database parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ImportExtensionRequestParameteres" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.importextensionrequestparameteres">ImportExtensionRequestParameteres</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.importextensionrequestparameteres">ImportExtensionRequestParameteres</a></div>
+      </td>
+      <td>
+        <p>Import Azure SQL Database parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ImportRequestParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.importrequestparameters">ImportRequestParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.importrequestparameters">ImportRequestParameters</a></div>
+      </td>
+      <td>
+        <p>Import Azure SQL Database parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_JobAccount" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.jobaccount">JobAccount</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.jobaccount">JobAccount</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Job Account.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_JobAccountCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.jobaccountcreateorupdateparameters">JobAccountCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.jobaccountcreateorupdateparameters">JobAccountCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Sql Azure Job Account parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_JobAccountCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.jobaccountcreateorupdateproperties">JobAccountCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.jobaccountcreateorupdateproperties">JobAccountCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure Sql Job Account parameters properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_JobAccountGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.jobaccountgetresponse">JobAccountGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.jobaccountgetresponse">JobAccountGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Job Account request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_JobAccountListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.jobaccountlistresponse">JobAccountListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.jobaccountlistresponse">JobAccountListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Job Accounts request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_JobAccountOperationResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.jobaccountoperationresponse">JobAccountOperationResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.jobaccountoperationresponse">JobAccountOperationResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure Sql Job Account operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_JobAccountProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.jobaccountproperties">JobAccountProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.jobaccountproperties">JobAccountProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Job Account.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_LocationCapability" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.locationcapability">LocationCapability</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.locationcapability">LocationCapability</a></div>
+      </td>
+      <td>
+        <p>Represents the Azure SQL capabilities for a region.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_MaxSizeCapability" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.maxsizecapability">MaxSizeCapability</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.maxsizecapability">MaxSizeCapability</a></div>
+      </td>
+      <td>
+        <p>Represents the maximum size limits for an Azure SQL Database.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_MaxSizeUnits" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.maxsizeunits">MaxSizeUnits</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.maxsizeunits">MaxSizeUnits</a></div>
+      </td>
+      <td>
+        <p>Defines the valid units for Azure SQL Database max sizes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_OperationImpact" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.operationimpact">OperationImpact</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.operationimpact">OperationImpact</a></div>
+      </td>
+      <td>
+        <p>Represents impact of an operation, both in absolute and relative terms.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ReadOnlyEndpoint" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.readonlyendpoint">ReadOnlyEndpoint</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.readonlyendpoint">ReadOnlyEndpoint</a></div>
+      </td>
+      <td>
+        <p>Represents impact of applying a Recommended Action, either estimated or
+observed</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ReadOnlyFailoverPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.readonlyfailoverpolicy">ReadOnlyFailoverPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.readonlyfailoverpolicy">ReadOnlyFailoverPolicy</a></div>
+      </td>
+      <td>
+        <p>Defines the failover policy for ReadOnlyEndpoint of Azure SQL
+Databases. See MSDN for more information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ReadWriteEndpoint" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.readwriteendpoint">ReadWriteEndpoint</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.readwriteendpoint">ReadWriteEndpoint</a></div>
+      </td>
+      <td>
+        <p>Represents impact of applying a Recommended Action, either estimated or
+observed</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ReadWriteFailoverPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.readwritefailoverpolicy">ReadWriteFailoverPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.readwritefailoverpolicy">ReadWriteFailoverPolicy</a></div>
+      </td>
+      <td>
+        <p>Defines the failover policy for ReadWriteEndpoint of Azure SQL
+Databases. See MSDN for more information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedAction" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedaction">RecommendedAction</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedaction">RecommendedAction</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Advisor Recommended Action.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedActionErrorInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionerrorinfo">RecommendedActionErrorInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionerrorinfo">RecommendedActionErrorInfo</a></div>
+      </td>
+      <td>
+        <p>Represents error info of a Recommended Action that is in Error state</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedActionGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactiongetresponse">RecommendedActionGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactiongetresponse">RecommendedActionGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a get recommended action request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedActionImpactInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionimpactinfo">RecommendedActionImpactInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionimpactinfo">RecommendedActionImpactInfo</a></div>
+      </td>
+      <td>
+        <p>Represents impact of applying a Recommended Action, either estimated or
+observed</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedActionImplementationInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionimplementationinfo">RecommendedActionImplementationInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionimplementationinfo">RecommendedActionImplementationInfo</a></div>
+      </td>
+      <td>
+        <p>Represents implementation info of a Recommended Action if user wants to
+manually apply this Recommended Action</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedActionListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionlistresponse">RecommendedActionListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionlistresponse">RecommendedActionListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a list recommended actions request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedActionMetricInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionmetricinfo">RecommendedActionMetricInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionmetricinfo">RecommendedActionMetricInfo</a></div>
+      </td>
+      <td>
+        <p>Represents time series data of any metrics of this Recommended Action</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedActionProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionproperties">RecommendedActionProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionproperties">RecommendedActionProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Advisor Recommended Ac.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedActionStateInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionstateinfo">RecommendedActionStateInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionstateinfo">RecommendedActionStateInfo</a></div>
+      </td>
+      <td>
+        <p>Represents state info of a Recommended Action</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedActionUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionupdateparameters">RecommendedActionUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionupdateparameters">RecommendedActionUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Update Sql Azure Advisor Recommended Action state.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedActionUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionupdateproperties">RecommendedActionUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionupdateproperties">RecommendedActionUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Update Azure Sql Advisor Recommended Action properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedActionUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionupdateresponse">RecommendedActionUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionupdateresponse">RecommendedActionUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to an update recommended action request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedActionUpdateStateInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionupdatestateinfo">RecommendedActionUpdateStateInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedactionupdatestateinfo">RecommendedActionUpdateStateInfo</a></div>
+      </td>
+      <td>
+        <p>Update Azure Sql Advisor Recommended Action state.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedDatabaseProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendeddatabaseproperties">RecommendedDatabaseProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendeddatabaseproperties">RecommendedDatabaseProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of a recommended Azure SQL Database being
+upgraded.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedElasticPool" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedelasticpool">RecommendedElasticPool</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedelasticpool">RecommendedElasticPool</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Recommended Elastic Pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedElasticPoolGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedelasticpoolgetresponse">RecommendedElasticPoolGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedelasticpoolgetresponse">RecommendedElasticPoolGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Recommended Resource pool
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedElasticPoolListMetricsResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedelasticpoollistmetricsresponse">RecommendedElasticPoolListMetricsResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedelasticpoollistmetricsresponse">RecommendedElasticPoolListMetricsResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Recommended Elastic Pool
+metrics request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedElasticPoolListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedelasticpoollistresponse">RecommendedElasticPoolListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedelasticpoollistresponse">RecommendedElasticPoolListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Recommended Elastic Pool
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedElasticPoolMetric" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedelasticpoolmetric">RecommendedElasticPoolMetric</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedelasticpoolmetric">RecommendedElasticPoolMetric</a></div>
+      </td>
+      <td>
+        <p>Represents Azure SQL recommended elastic pool metric.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedElasticPoolProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedelasticpoolproperties">RecommendedElasticPoolProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedelasticpoolproperties">RecommendedElasticPoolProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Recommended Elastic Pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedIndex" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedindex">RecommendedIndex</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedindex">RecommendedIndex</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database recommended index.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedIndexGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedindexgetresponse">RecommendedIndexGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedindexgetresponse">RecommendedIndexGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a get recommended index request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedIndexProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedindexproperties">RecommendedIndexProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedindexproperties">RecommendedIndexProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database recommended index.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedIndexUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedindexupdateparameters">RecommendedIndexUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedindexupdateparameters">RecommendedIndexUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Update Sql Azure Database recommended index state.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedIndexUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedindexupdateproperties">RecommendedIndexUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedindexupdateproperties">RecommendedIndexUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Update Azure Sql Database recommended index properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RecommendedIndexUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.recommendedindexupdateresponse">RecommendedIndexUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.recommendedindexupdateresponse">RecommendedIndexUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a get recommended index request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ReplicationLink" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.replicationlink">ReplicationLink</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.replicationlink">ReplicationLink</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Replication Link.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ReplicationLinkFailoverResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.replicationlinkfailoverresponse">ReplicationLinkFailoverResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.replicationlinkfailoverresponse">ReplicationLinkFailoverResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure Sql Database replication failover
+operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ReplicationLinkGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.replicationlinkgetresponse">ReplicationLinkGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.replicationlinkgetresponse">ReplicationLinkGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Database Replication Link
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ReplicationLinkListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.replicationlinklistresponse">ReplicationLinkListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.replicationlinklistresponse">ReplicationLinkListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Database Replication Link
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ReplicationLinkProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.replicationlinkproperties">ReplicationLinkProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.replicationlinkproperties">ReplicationLinkProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database Replication Link.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ReplicationRole" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.replicationrole">ReplicationRole</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.replicationrole">ReplicationRole</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Replication Link&#39;s Replication Role.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ReplicationState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.replicationstate">ReplicationState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.replicationstate">ReplicationState</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Replication Link&#39;s Replication State.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RestorePoint" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.restorepoint">RestorePoint</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.restorepoint">RestorePoint</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database restore point.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RestorePointListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.restorepointlistresponse">RestorePointListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.restorepointlistresponse">RestorePointListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Database restore points
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RestorePointProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.restorepointproperties">RestorePointProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.restorepointproperties">RestorePointProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database restore point.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_RestorePointTypes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.restorepointtypes">RestorePointTypes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.restorepointtypes">RestorePointTypes</a></div>
+      </td>
+      <td>
+        <p>Defines the valid restore points of Azure SQL Databases. See MSDN for
+more information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_Schema" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.schema">Schema</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.schema">Schema</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database schema.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_SchemaProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.schemaproperties">SchemaProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.schemaproperties">SchemaProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database schema.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_Server" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.server">Server</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.server">Server</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Server.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerAdministrator" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serveradministrator">ServerAdministrator</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serveradministrator">ServerAdministrator</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Server Active Directory Administrator.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerAdministratorCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratorcreateorupdateparameters">ServerAdministratorCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratorcreateorupdateparameters">ServerAdministratorCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure SQL Server Active Directory Administrator
+parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerAdministratorCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratorcreateorupdateproperties">ServerAdministratorCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratorcreateorupdateproperties">ServerAdministratorCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure Server Active Directory Administrator parameters
+properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerAdministratorCreateOrUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratorcreateorupdateresponse">ServerAdministratorCreateOrUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratorcreateorupdateresponse">ServerAdministratorCreateOrUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure SQL Server Active Directory
+Administrator operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerAdministratorDeleteResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratordeleteresponse">ServerAdministratorDeleteResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratordeleteresponse">ServerAdministratorDeleteResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure SQL Server Active Directory
+administrator delete operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerAdministratorGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratorgetresponse">ServerAdministratorGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratorgetresponse">ServerAdministratorGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure SQL Server Active Directory
+Administrators request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerAdministratorListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratorlistresponse">ServerAdministratorListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratorlistresponse">ServerAdministratorListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure SQL Active Directory
+Administrators request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerAdministratorProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratorproperties">ServerAdministratorProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serveradministratorproperties">ServerAdministratorProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Server Administrator.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerAuditingPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverauditingpolicy">ServerAuditingPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverauditingpolicy">ServerAuditingPolicy</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database server auditing policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerAuditingPolicyCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverauditingpolicycreateorupdateparameters">ServerAuditingPolicyCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverauditingpolicycreateorupdateparameters">ServerAuditingPolicyCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure SQL Database Server audting policy parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerAuditingPolicyGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverauditingpolicygetresponse">ServerAuditingPolicyGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverauditingpolicygetresponse">ServerAuditingPolicyGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a get database auditing policy request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerAuditingPolicyProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverauditingpolicyproperties">ServerAuditingPolicyProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverauditingpolicyproperties">ServerAuditingPolicyProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL auditing policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerBlobAuditingOperationResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverblobauditingoperationresponse">ServerBlobAuditingOperationResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverblobauditingoperationresponse">ServerBlobAuditingOperationResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure Sql server blob auditing create or
+update operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerBlobAuditingResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverblobauditingresponse">ServerBlobAuditingResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverblobauditingresponse">ServerBlobAuditingResponse</a></div>
+      </td>
+      <td>
+        <p>Response Azure Sql Server blob auditing operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerCommunicationLink" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlink">ServerCommunicationLink</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlink">ServerCommunicationLink</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Server communication link.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerCommunicationLinkCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlinkcreateorupdateparameters">ServerCommunicationLinkCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlinkcreateorupdateparameters">ServerCommunicationLinkCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure SQL Server communication link parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerCommunicationLinkCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlinkcreateorupdateproperties">ServerCommunicationLinkCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlinkcreateorupdateproperties">ServerCommunicationLinkCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure Sql Server communication link parameters
+properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerCommunicationLinkCreateOrUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlinkcreateorupdateresponse">ServerCommunicationLinkCreateOrUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlinkcreateorupdateresponse">ServerCommunicationLinkCreateOrUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure Sql server communication link operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerCommunicationLinkGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlinkgetresponse">ServerCommunicationLinkGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlinkgetresponse">ServerCommunicationLinkGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a get server communication link request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerCommunicationLinkListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlinklistresponse">ServerCommunicationLinkListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlinklistresponse">ServerCommunicationLinkListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Server communication link
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerCommunicationLinkProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlinkproperties">ServerCommunicationLinkProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servercommunicationlinkproperties">ServerCommunicationLinkProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Server communication link.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servercreateorupdateparameters">ServerCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servercreateorupdateparameters">ServerCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update server parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servercreateorupdateproperties">ServerCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servercreateorupdateproperties">ServerCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update server parameters properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerDisasterRecoveryConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfiguration">ServerDisasterRecoveryConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfiguration">ServerDisasterRecoveryConfiguration</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Server disaster recovery configuration.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerDisasterRecoveryConfigurationCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfigurationcreateorupdateparameters">ServerDisasterRecoveryConfigurationCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfigurationcreateorupdateparameters">ServerDisasterRecoveryConfigurationCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure SQL Server disaster recovery configuration
+parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerDisasterRecoveryConfigurationCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfigurationcreateorupdateproperties">ServerDisasterRecoveryConfigurationCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfigurationcreateorupdateproperties">ServerDisasterRecoveryConfigurationCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure Sql Server disaster recovery configuration
+parameters properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerDisasterRecoveryConfigurationCreateOrUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfigurationcreateorupdateresponse">ServerDisasterRecoveryConfigurationCreateOrUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfigurationcreateorupdateresponse">ServerDisasterRecoveryConfigurationCreateOrUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure Sql server disaster recovery
+configuration operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerDisasterRecoveryConfigurationGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfigurationgetresponse">ServerDisasterRecoveryConfigurationGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfigurationgetresponse">ServerDisasterRecoveryConfigurationGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a get server disaster recovery configuration
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerDisasterRecoveryConfigurationListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfigurationlistresponse">ServerDisasterRecoveryConfigurationListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfigurationlistresponse">ServerDisasterRecoveryConfigurationListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Server disaster recovery
+configuration request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerDisasterRecoveryConfigurationProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfigurationproperties">ServerDisasterRecoveryConfigurationProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverdisasterrecoveryconfigurationproperties">ServerDisasterRecoveryConfigurationProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Server disaster recovery
+configuration.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servergetresponse">ServerGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servergetresponse">ServerGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Database Server request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerKey" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverkey">ServerKey</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverkey">ServerKey</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Server Key.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerKeyCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverkeycreateorupdateparameters">ServerKeyCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverkeycreateorupdateparameters">ServerKeyCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Sql Azure Server Key parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerKeyCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverkeycreateorupdateproperties">ServerKeyCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverkeycreateorupdateproperties">ServerKeyCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure Sql Server Key parameters properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerKeyCreateOrUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverkeycreateorupdateresponse">ServerKeyCreateOrUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverkeycreateorupdateresponse">ServerKeyCreateOrUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Azure Sql Server Key operation request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerKeyDeleteResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverkeydeleteresponse">ServerKeyDeleteResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverkeydeleteresponse">ServerKeyDeleteResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to an Azure Sql Server Key Delete request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerKeyGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverkeygetresponse">ServerKeyGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverkeygetresponse">ServerKeyGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Server Key request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerKeyListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverkeylistresponse">ServerKeyListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverkeylistresponse">ServerKeyListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Server Key request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerKeyProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverkeyproperties">ServerKeyProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverkeyproperties">ServerKeyProperties</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Server Key.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerKeyType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverkeytype">ServerKeyType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverkeytype">ServerKeyType</a></div>
+      </td>
+      <td>
+        <p>Defines the valid key types of Azure SQL Server Keys. See MSDN for more
+information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverlistresponse">ServerListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverlistresponse">ServerListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Database Server request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerMetric" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servermetric">ServerMetric</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servermetric">ServerMetric</a></div>
+      </td>
+      <td>
+        <p>Represents Azure SQL Database metrics.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerMetricListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servermetriclistresponse">ServerMetricListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servermetriclistresponse">ServerMetricListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Database Server metrics
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverproperties">ServerProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverproperties">ServerProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerSecurityAlertPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicy">ServerSecurityAlertPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicy">ServerSecurityAlertPolicy</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Server Security Alert Policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerSecurityAlertPolicyCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicycreateorupdateparameters">ServerSecurityAlertPolicyCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicycreateorupdateparameters">ServerSecurityAlertPolicyCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update database security alert policy parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerSecurityAlertPolicyCreateOrUpdateResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicycreateorupdateresponse">ServerSecurityAlertPolicyCreateOrUpdateResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicycreateorupdateresponse">ServerSecurityAlertPolicyCreateOrUpdateResponse</a></div>
+      </td>
+      <td>
+        <p>Response to Azure Sql Server security alert policy create or update
+operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerSecurityAlertPolicyGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicygetresponse">ServerSecurityAlertPolicyGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicygetresponse">ServerSecurityAlertPolicyGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a get server security alert policy request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerSecurityAlertPolicyOperationResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicyoperationresponse">ServerSecurityAlertPolicyOperationResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicyoperationresponse">ServerSecurityAlertPolicyOperationResponse</a></div>
+      </td>
+      <td>
+        <p>Response for long running Azure Sql server threat detection create or
+update operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerSecurityAlertPolicyOperationResult" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicyoperationresult">ServerSecurityAlertPolicyOperationResult</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicyoperationresult">ServerSecurityAlertPolicyOperationResult</a></div>
+      </td>
+      <td>
+        <p>Represents the status of a create or update operation of Azure SQL
+Server blob auditing policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerSecurityAlertPolicyOperationResultProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicyoperationresultproperties">ServerSecurityAlertPolicyOperationResultProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicyoperationresultproperties">ServerSecurityAlertPolicyOperationResultProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of a create or update request for an Azure
+SQL server security alert policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerSecurityAlertPolicyProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicyproperties">ServerSecurityAlertPolicyProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serversecurityalertpolicyproperties">ServerSecurityAlertPolicyProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Security alert policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerUpgradeGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverupgradegetresponse">ServerUpgradeGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverupgradegetresponse">ServerUpgradeGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get request for Upgrade status of an Azure
+SQL Database Server.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerUpgradeProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverupgradeproperties">ServerUpgradeProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverupgradeproperties">ServerUpgradeProperties</a></div>
+      </td>
+      <td>
+        <p>Start Azure SQL Database Server Upgrade properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerUpgradeStartParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverupgradestartparameters">ServerUpgradeStartParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverupgradestartparameters">ServerUpgradeStartParameters</a></div>
+      </td>
+      <td>
+        <p>Start Azure SQL Database Server Upgrade parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServerVersionCapability" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serverversioncapability">ServerVersionCapability</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serverversioncapability">ServerVersionCapability</a></div>
+      </td>
+      <td>
+        <p>Represents the Azure SQL Server capabilities.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServiceObjective" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serviceobjective">ServiceObjective</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serviceobjective">ServiceObjective</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Service Objective.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServiceObjectiveCapability" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serviceobjectivecapability">ServiceObjectiveCapability</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serviceobjectivecapability">ServiceObjectiveCapability</a></div>
+      </td>
+      <td>
+        <p>Represents the Service Objectives capabilities.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServiceObjectiveGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serviceobjectivegetresponse">ServiceObjectiveGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serviceobjectivegetresponse">ServiceObjectiveGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Database Service Objective
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServiceObjectiveListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serviceobjectivelistresponse">ServiceObjectiveListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serviceobjectivelistresponse">ServiceObjectiveListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get Azure Sql Database Service Objectives
+request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServiceObjectiveProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.serviceobjectiveproperties">ServiceObjectiveProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.serviceobjectiveproperties">ServiceObjectiveProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database Service Objective.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServiceTierAdvisor" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servicetieradvisor">ServiceTierAdvisor</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servicetieradvisor">ServiceTierAdvisor</a></div>
+      </td>
+      <td>
+        <p>Represents a Service Tier Advisor.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServiceTierAdvisorGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servicetieradvisorgetresponse">ServiceTierAdvisorGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servicetieradvisorgetresponse">ServiceTierAdvisorGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a get service tier advisor request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServiceTierAdvisorListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servicetieradvisorlistresponse">ServiceTierAdvisorListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servicetieradvisorlistresponse">ServiceTierAdvisorListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a list service tier advisor request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_ServiceTierAdvisorProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.servicetieradvisorproperties">ServiceTierAdvisorProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.servicetieradvisorproperties">ServiceTierAdvisorProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of a Service Tier Advisor.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_SloUsageMetric" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.slousagemetric">SloUsageMetric</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.slousagemetric">SloUsageMetric</a></div>
+      </td>
+      <td>
+        <p>Represents a Slo Usage Metric.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_Table" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.table">Table</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.table">Table</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database table.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_TableProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.tableproperties">TableProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.tableproperties">TableProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database table.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_TableType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.tabletype">TableType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.tabletype">TableType</a></div>
+      </td>
+      <td>
+        <p>Defines the valid table types of Azure SQL Database.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_TransparentDataEncryption" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryption">TransparentDataEncryption</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryption">TransparentDataEncryption</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Transparent Data Encryption .</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_TransparentDataEncryptionActivity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptionactivity">TransparentDataEncryptionActivity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptionactivity">TransparentDataEncryptionActivity</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure SQL Database Transparent Data Encryption Scan.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_TransparentDataEncryptionActivityListResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptionactivitylistresponse">TransparentDataEncryptionActivityListResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptionactivitylistresponse">TransparentDataEncryptionActivityListResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a List Azure Sql Database Transparent Data
+Encryption Activity request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_TransparentDataEncryptionActivityProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptionactivityproperties">TransparentDataEncryptionActivityProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptionactivityproperties">TransparentDataEncryptionActivityProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database Transparent Data
+Encryption Scan.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_TransparentDataEncryptionActivityStates" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptionactivitystates">TransparentDataEncryptionActivityStates</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptionactivitystates">TransparentDataEncryptionActivityStates</a></div>
+      </td>
+      <td>
+        <p>Defines the valid Transparent Data Encryption states of Azure SQL
+Databases. See MSDN for more information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_TransparentDataEncryptionCreateOrUpdateParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptioncreateorupdateparameters">TransparentDataEncryptionCreateOrUpdateParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptioncreateorupdateparameters">TransparentDataEncryptionCreateOrUpdateParameters</a></div>
+      </td>
+      <td>
+        <p>Create or update Sql Azure Database Transparent Data Encryption
+parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_TransparentDataEncryptionCreateOrUpdateProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptioncreateorupdateproperties">TransparentDataEncryptionCreateOrUpdateProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptioncreateorupdateproperties">TransparentDataEncryptionCreateOrUpdateProperties</a></div>
+      </td>
+      <td>
+        <p>Create or update Azure Sql Database Transparent Data Encryption
+parameters properties.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_TransparentDataEncryptionGetResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptiongetresponse">TransparentDataEncryptionGetResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptiongetresponse">TransparentDataEncryptionGetResponse</a></div>
+      </td>
+      <td>
+        <p>Represents the response to a Get for a Azure Sql Database Transparent
+Data Encryption request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_TransparentDataEncryptionProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptionproperties">TransparentDataEncryptionProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptionproperties">TransparentDataEncryptionProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of an Azure SQL Database Transparent Data
+Encryption.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_TransparentDataEncryptionStates" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptionstates">TransparentDataEncryptionStates</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.transparentdataencryptionstates">TransparentDataEncryptionStates</a></div>
+      </td>
+      <td>
+        <p>Defines the valid Transparent Data Encryption states of Azure SQL
+Databases. See MSDN for more information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_UpgradeHint" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.upgradehint">UpgradeHint</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.upgradehint">UpgradeHint</a></div>
+      </td>
+      <td>
+        <p>Represents a Upgrade Hint.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Sql_Models_UpgradeRecommendedElasticPoolProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.models.upgraderecommendedelasticpoolproperties">UpgradeRecommendedElasticPoolProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.models.upgraderecommendedelasticpoolproperties">UpgradeRecommendedElasticPoolProperties</a></div>
+      </td>
+      <td>
+        <p>Represents the properties of a Azure SQL Recommended Elastic Pool being
+upgraded.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/1b0378afbf1c5a46614d.reference.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="PrintCapabilities class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Printing/System.Printing.PrintCapabilities.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Printing/System.Printing.PrintCapabilities.yml">
+<meta name="APIName" content="System.Printing.PrintCapabilities">
+<meta name="APIName" content="System.Printing.PrintCapabilities..ctor">
+<meta name="APIName" content="System.Printing.PrintCapabilities.CollationCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.DeviceFontSubstitutionCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.DuplexingCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.InputBinCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.MaxCopyCount">
+<meta name="APIName" content="System.Printing.PrintCapabilities.OrientedPageMediaHeight">
+<meta name="APIName" content="System.Printing.PrintCapabilities.OrientedPageMediaWidth">
+<meta name="APIName" content="System.Printing.PrintCapabilities.OutputColorCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.OutputQualityCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.PageBorderlessCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.PageImageableArea">
+<meta name="APIName" content="System.Printing.PrintCapabilities.PageMediaSizeCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.PageMediaTypeCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.PageOrderCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.PageOrientationCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.PageResolutionCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.PageScalingFactorRange">
+<meta name="APIName" content="System.Printing.PrintCapabilities.PagesPerSheetCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.PagesPerSheetDirectionCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.PhotoPrintingIntentCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.StaplingCapability">
+<meta name="APIName" content="System.Printing.PrintCapabilities.TrueTypeFontModeCapability">
+<meta name="APILocation" content="ReachFramework.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="b1c2b81b-32cf-2fe6-cdd3-4297de008354">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Printing.PrintCapabilities">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.printing/system.printing.printcapabilities" rel="canonical">
+    <title>PrintCapabilities class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Printing_PrintCapabilities">
+      <span class="lang-csharp">PrintCapabilities</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public sealed class PrintCapabilities</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">PrintCapabilities</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities__ctor_System_IO_Stream_">PrintCapabilities(Stream)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_CollationCapability">CollationCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_DeviceFontSubstitutionCapability">DeviceFontSubstitutionCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_DuplexingCapability">DuplexingCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_InputBinCapability">InputBinCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_MaxCopyCount">MaxCopyCount</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_OrientedPageMediaHeight">OrientedPageMediaHeight</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_OrientedPageMediaWidth">OrientedPageMediaWidth</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_OutputColorCapability">OutputColorCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_OutputQualityCapability">OutputQualityCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_PageBorderlessCapability">PageBorderlessCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_PageImageableArea">PageImageableArea</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_PageMediaSizeCapability">PageMediaSizeCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_PageMediaTypeCapability">PageMediaTypeCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_PageOrderCapability">PageOrderCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_PageOrientationCapability">PageOrientationCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_PageResolutionCapability">PageResolutionCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_PageScalingFactorRange">PageScalingFactorRange</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_PagesPerSheetCapability">PagesPerSheetCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_PagesPerSheetDirectionCapability">PagesPerSheetDirectionCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_PhotoPrintingIntentCapability">PhotoPrintingIntentCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_StaplingCapability">StaplingCapability</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Printing_PrintCapabilities_TrueTypeFontModeCapability">TrueTypeFontModeCapability</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities__ctor_System_IO_Stream_">
+    
+            <a id="System_Printing_PrintCapabilities__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PrintCapabilities(Stream)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public PrintCapabilities (System.IO.Stream xmlStream);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>xmlStream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.io/system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_CollationCapability">
+    
+            <a id="System_Printing_PrintCapabilities_CollationCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CollationCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.Collation&gt; CollationCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.collation">Collation</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_DeviceFontSubstitutionCapability">
+    
+            <a id="System_Printing_PrintCapabilities_DeviceFontSubstitutionCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeviceFontSubstitutionCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.DeviceFontSubstitution&gt; DeviceFontSubstitutionCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.devicefontsubstitution">DeviceFontSubstitution</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_DuplexingCapability">
+    
+            <a id="System_Printing_PrintCapabilities_DuplexingCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DuplexingCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.Duplexing&gt; DuplexingCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.duplexing">Duplexing</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_InputBinCapability">
+    
+            <a id="System_Printing_PrintCapabilities_InputBinCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">InputBinCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.InputBin&gt; InputBinCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.inputbin">InputBin</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_MaxCopyCount">
+    
+            <a id="System_Printing_PrintCapabilities_MaxCopyCount_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MaxCopyCount</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Nullable&lt;int&gt; MaxCopyCount { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.nullable-1">Nullable</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_OrientedPageMediaHeight">
+    
+            <a id="System_Printing_PrintCapabilities_OrientedPageMediaHeight_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OrientedPageMediaHeight</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Nullable&lt;double&gt; OrientedPageMediaHeight { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.nullable-1">Nullable</a>&lt;<a class="xref" href="../system/system.double">Double</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_OrientedPageMediaWidth">
+    
+            <a id="System_Printing_PrintCapabilities_OrientedPageMediaWidth_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OrientedPageMediaWidth</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Nullable&lt;double&gt; OrientedPageMediaWidth { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.nullable-1">Nullable</a>&lt;<a class="xref" href="../system/system.double">Double</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_OutputColorCapability">
+    
+            <a id="System_Printing_PrintCapabilities_OutputColorCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OutputColorCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.OutputColor&gt; OutputColorCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.outputcolor">OutputColor</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_OutputQualityCapability">
+    
+            <a id="System_Printing_PrintCapabilities_OutputQualityCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OutputQualityCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.OutputQuality&gt; OutputQualityCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.outputquality">OutputQuality</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_PageBorderlessCapability">
+    
+            <a id="System_Printing_PrintCapabilities_PageBorderlessCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PageBorderlessCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageBorderless&gt; PageBorderlessCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.pageborderless">PageBorderless</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_PageImageableArea">
+    
+            <a id="System_Printing_PrintCapabilities_PageImageableArea_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PageImageableArea</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Printing.PageImageableArea PageImageableArea { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.printing.pageimageablearea">PageImageableArea</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_PageMediaSizeCapability">
+    
+            <a id="System_Printing_PrintCapabilities_PageMediaSizeCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PageMediaSizeCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageMediaSize&gt; PageMediaSizeCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.pagemediasize">PageMediaSize</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_PageMediaTypeCapability">
+    
+            <a id="System_Printing_PrintCapabilities_PageMediaTypeCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PageMediaTypeCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageMediaType&gt; PageMediaTypeCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.pagemediatype">PageMediaType</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_PageOrderCapability">
+    
+            <a id="System_Printing_PrintCapabilities_PageOrderCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PageOrderCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageOrder&gt; PageOrderCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.pageorder">PageOrder</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_PageOrientationCapability">
+    
+            <a id="System_Printing_PrintCapabilities_PageOrientationCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PageOrientationCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageOrientation&gt; PageOrientationCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.pageorientation">PageOrientation</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_PageResolutionCapability">
+    
+            <a id="System_Printing_PrintCapabilities_PageResolutionCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PageResolutionCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PageResolution&gt; PageResolutionCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.pageresolution">PageResolution</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_PageScalingFactorRange">
+    
+            <a id="System_Printing_PrintCapabilities_PageScalingFactorRange_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PageScalingFactorRange</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Printing.PageScalingFactorRange PageScalingFactorRange { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.printing.pagescalingfactorrange">PageScalingFactorRange</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_PagesPerSheetCapability">
+    
+            <a id="System_Printing_PrintCapabilities_PagesPerSheetCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PagesPerSheetCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;int&gt; PagesPerSheetCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_PagesPerSheetDirectionCapability">
+    
+            <a id="System_Printing_PrintCapabilities_PagesPerSheetDirectionCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PagesPerSheetDirectionCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PagesPerSheetDirection&gt; PagesPerSheetDirectionCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.pagespersheetdirection">PagesPerSheetDirection</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_PhotoPrintingIntentCapability">
+    
+            <a id="System_Printing_PrintCapabilities_PhotoPrintingIntentCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PhotoPrintingIntentCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.PhotoPrintingIntent&gt; PhotoPrintingIntentCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.photoprintingintent">PhotoPrintingIntent</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_StaplingCapability">
+    
+            <a id="System_Printing_PrintCapabilities_StaplingCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StaplingCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.Stapling&gt; StaplingCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.stapling">Stapling</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Printing_PrintCapabilities_TrueTypeFontModeCapability">
+    
+            <a id="System_Printing_PrintCapabilities_TrueTypeFontModeCapability_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TrueTypeFontModeCapability</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Printing.TrueTypeFontMode&gt; TrueTypeFontModeCapability { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="system.printing.truetypefontmode">TrueTypeFontMode</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="TargetCollection class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/Microsoft.Build.BuildEngine/Microsoft.Build.BuildEngine.TargetCollection.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/Microsoft.Build.BuildEngine/Microsoft.Build.BuildEngine.TargetCollection.yml">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.TargetCollection">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.TargetCollection.AddNewTarget">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.TargetCollection.CopyTo">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.TargetCollection.Count">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.TargetCollection.Exists">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.TargetCollection.GetEnumerator">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.TargetCollection.IsSynchronized">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.TargetCollection.Item">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.TargetCollection.RemoveTarget">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.TargetCollection.SyncRoot">
+<meta name="APILocation" content="Microsoft.Build.Engine.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="39f2e496-e28c-7dda-1bff-681845ec6868">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Represents a collection of all Target elements in a project.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Build.BuildEngine.TargetCollection">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/microsoft.build.buildengine/microsoft.build.buildengine.targetcollection" rel="canonical">
+    <title>TargetCollection class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Build_BuildEngine_TargetCollection">
+      <span class="lang-csharp">TargetCollection</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Represents a collection of all <a href="../topic/target%20element%20(msbuild)">Target</a> elements in a project.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public class TargetCollection : System.Collections.ICollection</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">TargetCollection</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_TargetCollection_Count">Count</a></div>
+          </td>
+            <td>
+            <p>Gets a value indicating the number of <see cref="T:Microsoft.Build.BuildEngine.Target"> objects in the <a class="xref" href="microsoft.build.buildengine.targetcollection">TargetCollection</a>.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_TargetCollection_IsSynchronized">IsSynchronized</a></div>
+          </td>
+            <td>
+            <p>Gets a value indicating whether access to the <see cref="T:Microsoft.Build.BuildEngine.TargetCollection"> is synchronized (thread safe).<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_TargetCollection_Item_System_String_">Item(String)</a></div>
+          </td>
+            <td>
+            <p>Gets the specified <see cref="T:Microsoft.Build.BuildEngine.Target"> object in the <a class="xref" href="microsoft.build.buildengine.targetcollection">TargetCollection</a>.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_TargetCollection_SyncRoot">SyncRoot</a></div>
+          </td>
+            <td>
+            <p>Gets an object that can be used to synchronize access to the <see cref="T:Microsoft.Build.BuildEngine.TargetCollection">.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_TargetCollection_AddNewTarget_System_String_">AddNewTarget(String)</a></div>
+          </td>
+            <td>
+            <p>Adds a new <a href="../topic/target%20element%20(msbuild)">Target</a> element to the end of the project.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_TargetCollection_CopyTo_System_Array_System_Int32_">CopyTo(Array,Int32)</a></div>
+          </td>
+            <td>
+            <p>Copies the entire <see cref="T:Microsoft.Build.BuildEngine.TargetCollection"> to a compatible one-dimensional <a class="xref" href="../system/system.array">Array</a>, starting at the specified index of the target array.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_TargetCollection_Exists_System_String_">Exists(String)</a></div>
+          </td>
+            <td>
+            <p>Determines whether the specified <see cref="T:Microsoft.Build.BuildEngine.Target"> exists in the <a class="xref" href="microsoft.build.buildengine.targetcollection">TargetCollection</a>.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_TargetCollection_GetEnumerator">GetEnumerator()</a></div>
+          </td>
+            <td>
+            <p>Gets an enumerator that iterates through the <see cref="T:Microsoft.Build.BuildEngine.TargetCollection">.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_TargetCollection_RemoveTarget_Microsoft_Build_BuildEngine_Target_">RemoveTarget(Target)</a></div>
+          </td>
+            <td>
+            <p>Removes the specified <a href="../topic/target%20element%20(msbuild)">Target</a> element from the project.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_TargetCollection_Count">
+    
+            <a id="Microsoft_Build_BuildEngine_TargetCollection_Count_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Count</div>        
+          </div>
+    
+            <p>Gets a value indicating the number of <see cref="T:Microsoft.Build.BuildEngine.Target"> objects in the <a class="xref" href="microsoft.build.buildengine.targetcollection">TargetCollection</a>.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int Count { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>An integer value representing the number of <see cref="T:Microsoft.Build.BuildEngine.Target"> objects in the collection.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Each <a class="xref" href="microsoft.build.buildengine.target">Target</a> object in the collection represents a  element in the project.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_TargetCollection_IsSynchronized">
+    
+            <a id="Microsoft_Build_BuildEngine_TargetCollection_IsSynchronized_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsSynchronized</div>        
+          </div>
+    
+            <p>Gets a value indicating whether access to the <see cref="T:Microsoft.Build.BuildEngine.TargetCollection"> is synchronized (thread safe).<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool IsSynchronized { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if access to the <see cref="T:Microsoft.Build.BuildEngine.TargetCollection"> is synchronized (thread safe); otherwise, <code>false</code>. The default is <code>false</code>.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_TargetCollection_Item_System_String_">
+    
+            <a id="Microsoft_Build_BuildEngine_TargetCollection_Item_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Item(String)</div>        
+          </div>
+    
+            <p>Gets the specified <see cref="T:Microsoft.Build.BuildEngine.Target"> object in the <a class="xref" href="microsoft.build.buildengine.targetcollection">TargetCollection</a>.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.BuildEngine.Target this[string index] { get; }</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <code>Name</code> attribute of the Target element in the collection.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.buildengine.target">Target</a></div>
+                  </div>
+                  <p>The <see cref="T:Microsoft.Build.BuildEngine.Target"> object that contains the <a class="xref" href="microsoft.build.buildengine.target#Microsoft_Build_BuildEngine_Target_Name_">Name</a> property value specified by .<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>A <a class="xref" href="microsoft.build.buildengine.target">Target</a> object represents a <code>Target</code> element in the project.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_TargetCollection_SyncRoot">
+    
+            <a id="Microsoft_Build_BuildEngine_TargetCollection_SyncRoot_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SyncRoot</div>        
+          </div>
+    
+            <p>Gets an object that can be used to synchronize access to the <see cref="T:Microsoft.Build.BuildEngine.TargetCollection">.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public object SyncRoot { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </div>
+                  <p>An object that can be used to synchronize access to the <see cref="T:Microsoft.Build.BuildEngine.TargetCollection">.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_TargetCollection_AddNewTarget_System_String_">
+    
+            <a id="Microsoft_Build_BuildEngine_TargetCollection_AddNewTarget_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddNewTarget(String)</div>        
+          </div>
+    
+            <p>Adds a new <a href="../topic/target%20element%20(msbuild)">Target</a> element to the end of the project.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.BuildEngine.Target AddNewTarget (string targetName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>targetName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <code>Name</code> attribute of the new <code>Target</code> element.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.buildengine.target">Target</a></div>
+                  </div>
+                  <p>A <see cref="T:Microsoft.Build.BuildEngine.Target"> object representing the created <code>Target</code> element.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_TargetCollection_CopyTo_System_Array_System_Int32_">
+    
+            <a id="Microsoft_Build_BuildEngine_TargetCollection_CopyTo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyTo(Array,Int32)</div>        
+          </div>
+    
+            <p>Copies the entire <see cref="T:Microsoft.Build.BuildEngine.TargetCollection"> to a compatible one-dimensional <a class="xref" href="../system/system.array">Array</a>, starting at the specified index of the target array.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void CopyTo (Array array, int index);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>array</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.array">Array</a></div>
+                  </dd>
+                  </dl>
+                  <p>The one-dimensional <a class="xref" href="../system/system.array">Array</a> that is the destination of the elements copied from <a class="xref" href="microsoft.build.buildengine.targetcollection">TargetCollection</a>. The <a class="xref" href="../system/system.array">Array</a> must have zero-based indexing.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The zero-based index in  at which copying begins.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_TargetCollection_Exists_System_String_">
+    
+            <a id="Microsoft_Build_BuildEngine_TargetCollection_Exists_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Exists(String)</div>        
+          </div>
+    
+            <p>Determines whether the specified <see cref="T:Microsoft.Build.BuildEngine.Target"> exists in the <a class="xref" href="microsoft.build.buildengine.targetcollection">TargetCollection</a>.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool Exists (string targetName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>targetName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <code>Name</code> attribute of the Target element to search for.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the <code>Target</code> element exists; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_TargetCollection_GetEnumerator">
+    
+            <a id="Microsoft_Build_BuildEngine_TargetCollection_GetEnumerator_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetEnumerator()</div>        
+          </div>
+    
+            <p>Gets an enumerator that iterates through the <see cref="T:Microsoft.Build.BuildEngine.TargetCollection">.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.IEnumerator GetEnumerator ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections/system.collections.ienumerator">IEnumerator</a></div>
+                  </div>
+                  <p>An <a class="xref" href="../system.collections/system.collections.ienumerator">IEnumerator</a> for the entire <a class="xref" href="microsoft.build.buildengine.targetcollection">TargetCollection</a>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method allows the caller to use the <code>foreach</code> statement of the C# language (<code>for each</code> in <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/vbprvb-md.md&quot; -->Visual Basic<!--END INCLUDE -->) to iterate through the individual <a class="xref" href="microsoft.build.buildengine.target">Target</a> objects in the <a class="xref" href="microsoft.build.buildengine.targetcollection">TargetCollection</a>.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_TargetCollection_RemoveTarget_Microsoft_Build_BuildEngine_Target_">
+    
+            <a id="Microsoft_Build_BuildEngine_TargetCollection_RemoveTarget_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveTarget(Target)</div>        
+          </div>
+    
+            <p>Removes the specified <a href="../topic/target%20element%20(msbuild)">Target</a> element from the project.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void RemoveTarget (Microsoft.Build.BuildEngine.Target targetToRemove);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>targetToRemove</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.build.buildengine.target">Target</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <code>Name</code> attribute of the <code>Target</code> element to remove.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

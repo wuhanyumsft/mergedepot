@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="ProcessorEventSource class">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="event-hubs">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/b67b68724a04b126af158dbabdab40ac1a51fa4c/docs-ref-autogen/Data/EventHub/Microsoft.Azure.EventHubs.ProcessorEventSource.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Data/EventHub/Microsoft.Azure.EventHubs.ProcessorEventSource.yml">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.Log">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.get_Log">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.EventProcessorHostCreated">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.EventProcessorHostCloseStart">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.EventProcessorHostCloseStop">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.EventProcessorHostCloseError">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.EventProcessorHostOpenStart">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.EventProcessorHostOpenStop">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.EventProcessorHostOpenError">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.EventProcessorHostInfo">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.EventProcessorHostWarning">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.EventProcessorHostError">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpCloseStart">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpCloseStop">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpCloseError">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpCheckpointStart">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpCheckpointStop">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpCheckpointError">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpCreateClientsStart">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpCreateClientsStop">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpInvokeProcessorOpenStart">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpInvokeProcessorOpenStop">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpInvokeProcessorCloseStart">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpInvokeProcessorCloseStop">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpInvokeProcessorEventsStart">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpInvokeProcessorEventsStop">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpInvokeProcessorEventsError">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpInfo">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpWarning">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpError">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpStealLeaseStart">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.PartitionPumpStealLeaseStop">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.AzureStorageManagerInfo">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.AzureStorageManagerWarning">
+<meta name="APIName" content="Microsoft.Azure.EventHubs.ProcessorEventSource.AzureStorageManagerError">
+<meta name="APILocation" content="Microsoft.Azure.EventHubs.Processor.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-02 12:16 AM">
+<meta name="document_id" content="e98d5666-5348-1610-2213-03fe33917d75">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="EventSource for Microsoft-Azure-EventHubs-Processor traces.
+When defining Start/Stop tasks, the StopEvent.Id must be exactly StartEvent.Id + 1.
+Do not explicity include the Guid here, since EventSourâ€¦">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="https://github.com/Azure/azure-event-hubs-dotnet/blob/master/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L16">
+<meta name="ms.assetid" content="Microsoft.Azure.EventHubs.ProcessorEventSource">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/microsoft.azure.eventhubs.processoreventsource" rel="canonical">
+    <title>ProcessorEventSource class | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/1b0378afbf1c5a46614d.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="https://github.com/Azure/azure-event-hubs-dotnet/new/master/apiSpec/new?filename=Microsoft_Azure_EventHubs_ProcessorEventSource.md&value=---%0Auid%3A%20Microsoft.Azure.EventHubs.ProcessorEventSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+							<li>
+								<a href="https://github.com/Azure/azure-event-hubs-dotnet/blob/master/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L16" ms.cmpnm="viewsource"><i class="icon icon-code"></i>View Code</a>
+							</li>
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Azure_EventHubs_ProcessorEventSource">
+      <span class="lang-csharp">ProcessorEventSource</span>
+      <span class="lang-vb">ProcessorEventSource</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    		<div class="memberEditButton">
+    			<a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L16" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+    		</div>
+    	<p>EventSource for Microsoft-Azure-EventHubs-Processor traces.</p>
+<p>When defining Start/Stop tasks, the StopEvent.Id must be exactly StartEvent.Id + 1.</p>
+<p>Do not explicity include the Guid here, since EventSource has a mechanism to automatically
+map to an EventSource Guid based on the Name (Microsoft-Azure-EventHubs-Processor).</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public class ProcessorEventSource : EventSource</code><code class="vb lang-vb">Public Class ProcessorEventSource
+    Inherits EventSource</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">ProcessorEventSource</div>
+          <div class="lang-vb">ProcessorEventSource</div>
+        </div>
+      </li>
+    </ul>
+    
+    
+    
+    
+    
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_Log">Log</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_Log">Log</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_AzureStorageManagerError_System_String_System_String_System_String_System_String_">AzureStorageManagerError(String, String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_AzureStorageManagerError_System_String_System_String_System_String_System_String_">AzureStorageManagerError(String, String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_AzureStorageManagerInfo_System_String_System_String_System_String_">AzureStorageManagerInfo(String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_AzureStorageManagerInfo_System_String_System_String_System_String_">AzureStorageManagerInfo(String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_AzureStorageManagerWarning_System_String_System_String_System_String_System_String_">AzureStorageManagerWarning(String, String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_AzureStorageManagerWarning_System_String_System_String_System_String_System_String_">AzureStorageManagerWarning(String, String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCloseError_System_String_System_String_">EventProcessorHostCloseError(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCloseError_System_String_System_String_">EventProcessorHostCloseError(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCloseStart_System_String_">EventProcessorHostCloseStart(String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCloseStart_System_String_">EventProcessorHostCloseStart(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCloseStop_System_String_">EventProcessorHostCloseStop(String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCloseStop_System_String_">EventProcessorHostCloseStop(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCreated_System_String_System_String_">EventProcessorHostCreated(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCreated_System_String_System_String_">EventProcessorHostCreated(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostError_System_String_System_String_System_String_">EventProcessorHostError(String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostError_System_String_System_String_System_String_">EventProcessorHostError(String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostInfo_System_String_System_String_">EventProcessorHostInfo(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostInfo_System_String_System_String_">EventProcessorHostInfo(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostOpenError_System_String_System_String_">EventProcessorHostOpenError(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostOpenError_System_String_System_String_">EventProcessorHostOpenError(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostOpenStart_System_String_System_String_">EventProcessorHostOpenStart(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostOpenStart_System_String_System_String_">EventProcessorHostOpenStart(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostOpenStop_System_String_">EventProcessorHostOpenStop(String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostOpenStop_System_String_">EventProcessorHostOpenStop(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostWarning_System_String_System_String_System_String_">EventProcessorHostWarning(String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostWarning_System_String_System_String_System_String_">EventProcessorHostWarning(String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCheckpointError_System_String_System_String_System_String_">PartitionPumpCheckpointError(String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCheckpointError_System_String_System_String_System_String_">PartitionPumpCheckpointError(String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCheckpointStart_System_String_System_String_System_String_System_Int64_">PartitionPumpCheckpointStart(String, String, String, Int64)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCheckpointStart_System_String_System_String_System_String_System_Int64_">PartitionPumpCheckpointStart(String, String, String, Int64)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCheckpointStop_System_String_System_String_">PartitionPumpCheckpointStop(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCheckpointStop_System_String_System_String_">PartitionPumpCheckpointStop(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCloseError_System_String_System_String_System_String_">PartitionPumpCloseError(String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCloseError_System_String_System_String_System_String_">PartitionPumpCloseError(String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCloseStart_System_String_System_String_System_String_">PartitionPumpCloseStart(String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCloseStart_System_String_System_String_System_String_">PartitionPumpCloseStart(String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCloseStop_System_String_System_String_">PartitionPumpCloseStop(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCloseStop_System_String_System_String_">PartitionPumpCloseStop(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCreateClientsStart_System_String_System_String_System_Int64_System_String_">PartitionPumpCreateClientsStart(String, String, Int64, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCreateClientsStart_System_String_System_String_System_Int64_System_String_">PartitionPumpCreateClientsStart(String, String, Int64, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCreateClientsStop_System_String_System_String_">PartitionPumpCreateClientsStop(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCreateClientsStop_System_String_System_String_">PartitionPumpCreateClientsStop(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpError_System_String_System_String_System_String_System_String_">PartitionPumpError(String, String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpError_System_String_System_String_System_String_System_String_">PartitionPumpError(String, String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInfo_System_String_System_String_System_String_">PartitionPumpInfo(String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInfo_System_String_System_String_System_String_">PartitionPumpInfo(String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorCloseStart_System_String_System_String_System_String_">PartitionPumpInvokeProcessorCloseStart(String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorCloseStart_System_String_System_String_System_String_">PartitionPumpInvokeProcessorCloseStart(String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorCloseStop_System_String_System_String_">PartitionPumpInvokeProcessorCloseStop(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorCloseStop_System_String_System_String_">PartitionPumpInvokeProcessorCloseStop(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorEventsError_System_String_System_String_System_String_">PartitionPumpInvokeProcessorEventsError(String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorEventsError_System_String_System_String_System_String_">PartitionPumpInvokeProcessorEventsError(String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorEventsStart_System_String_System_String_System_Int32_">PartitionPumpInvokeProcessorEventsStart(String, String, Int32)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorEventsStart_System_String_System_String_System_Int32_">PartitionPumpInvokeProcessorEventsStart(String, String, Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorEventsStop_System_String_System_String_">PartitionPumpInvokeProcessorEventsStop(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorEventsStop_System_String_System_String_">PartitionPumpInvokeProcessorEventsStop(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorOpenStart_System_String_System_String_System_String_">PartitionPumpInvokeProcessorOpenStart(String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorOpenStart_System_String_System_String_System_String_">PartitionPumpInvokeProcessorOpenStart(String, String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorOpenStop_System_String_System_String_">PartitionPumpInvokeProcessorOpenStop(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorOpenStop_System_String_System_String_">PartitionPumpInvokeProcessorOpenStop(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpStealLeaseStart_System_String_System_String_">PartitionPumpStealLeaseStart(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpStealLeaseStart_System_String_System_String_">PartitionPumpStealLeaseStart(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpStealLeaseStop_System_String_System_String_">PartitionPumpStealLeaseStop(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpStealLeaseStop_System_String_System_String_">PartitionPumpStealLeaseStop(String, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpWarning_System_String_System_String_System_String_System_String_">PartitionPumpWarning(String, String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpWarning_System_String_System_String_System_String_System_String_">PartitionPumpWarning(String, String, String, String)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_Log">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_Log_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L19" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Log</div>        
+            <div class="lang-vb">Log</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static ProcessorEventSource Log { get; }</code><code class="vb lang-vb">Public Shared ReadOnly Property Log As ProcessorEventSource</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.eventhubs.processoreventsource">ProcessorEventSource</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.eventhubs.processoreventsource">ProcessorEventSource</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_AzureStorageManagerError_System_String_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_AzureStorageManagerError_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L320" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">AzureStorageManagerError(String, String, String, String)</div>        
+            <div class="lang-vb">AzureStorageManagerError(String, String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void AzureStorageManagerError(string hostId, string partitionId, string details, string exception)</code><code class="vb lang-vb">Public Sub AzureStorageManagerError(hostId As String, partitionId As String, details As String, exception As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>details</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>exception</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_AzureStorageManagerInfo_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_AzureStorageManagerInfo_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L302" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">AzureStorageManagerInfo(String, String, String)</div>        
+            <div class="lang-vb">AzureStorageManagerInfo(String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void AzureStorageManagerInfo(string hostId, string partitionId, string details)</code><code class="vb lang-vb">Public Sub AzureStorageManagerInfo(hostId As String, partitionId As String, details As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>details</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_AzureStorageManagerWarning_System_String_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_AzureStorageManagerWarning_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L311" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">AzureStorageManagerWarning(String, String, String, String)</div>        
+            <div class="lang-vb">AzureStorageManagerWarning(String, String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void AzureStorageManagerWarning(string hostId, string partitionId, string details, string exception)</code><code class="vb lang-vb">Public Sub AzureStorageManagerWarning(hostId As String, partitionId As String, details As String, exception As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>details</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>exception</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCloseError_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCloseError_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L53" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventProcessorHostCloseError(String, String)</div>        
+            <div class="lang-vb">EventProcessorHostCloseError(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void EventProcessorHostCloseError(string hostId, string exception)</code><code class="vb lang-vb">Public Sub EventProcessorHostCloseError(hostId As String, exception As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>exception</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCloseStart_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCloseStart_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L35" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventProcessorHostCloseStart(String)</div>        
+            <div class="lang-vb">EventProcessorHostCloseStart(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void EventProcessorHostCloseStart(string hostId)</code><code class="vb lang-vb">Public Sub EventProcessorHostCloseStart(hostId As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCloseStop_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCloseStop_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L44" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventProcessorHostCloseStop(String)</div>        
+            <div class="lang-vb">EventProcessorHostCloseStop(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void EventProcessorHostCloseStop(string hostId)</code><code class="vb lang-vb">Public Sub EventProcessorHostCloseStop(hostId As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCreated_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostCreated_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L26" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventProcessorHostCreated(String, String)</div>        
+            <div class="lang-vb">EventProcessorHostCreated(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void EventProcessorHostCreated(string hostId, string path)</code><code class="vb lang-vb">Public Sub EventProcessorHostCreated(hostId As String, path As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostError_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostError_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L107" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventProcessorHostError(String, String, String)</div>        
+            <div class="lang-vb">EventProcessorHostError(String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void EventProcessorHostError(string hostId, string details, string exception)</code><code class="vb lang-vb">Public Sub EventProcessorHostError(hostId As String, details As String, exception As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>details</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>exception</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostInfo_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostInfo_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L89" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventProcessorHostInfo(String, String)</div>        
+            <div class="lang-vb">EventProcessorHostInfo(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void EventProcessorHostInfo(string hostId, string details)</code><code class="vb lang-vb">Public Sub EventProcessorHostInfo(hostId As String, details As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>details</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostOpenError_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostOpenError_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L80" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventProcessorHostOpenError(String, String)</div>        
+            <div class="lang-vb">EventProcessorHostOpenError(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void EventProcessorHostOpenError(string hostId, string exception)</code><code class="vb lang-vb">Public Sub EventProcessorHostOpenError(hostId As String, exception As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>exception</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostOpenStart_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostOpenStart_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L62" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventProcessorHostOpenStart(String, String)</div>        
+            <div class="lang-vb">EventProcessorHostOpenStart(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void EventProcessorHostOpenStart(string hostId, string factoryType)</code><code class="vb lang-vb">Public Sub EventProcessorHostOpenStart(hostId As String, factoryType As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>factoryType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostOpenStop_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostOpenStop_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L71" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventProcessorHostOpenStop(String)</div>        
+            <div class="lang-vb">EventProcessorHostOpenStop(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void EventProcessorHostOpenStop(string hostId)</code><code class="vb lang-vb">Public Sub EventProcessorHostOpenStop(hostId As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostWarning_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_EventProcessorHostWarning_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L98" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventProcessorHostWarning(String, String, String)</div>        
+            <div class="lang-vb">EventProcessorHostWarning(String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void EventProcessorHostWarning(string hostId, string details, string exception)</code><code class="vb lang-vb">Public Sub EventProcessorHostWarning(hostId As String, details As String, exception As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>details</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>exception</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCheckpointError_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCheckpointError_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L164" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpCheckpointError(String, String, String)</div>        
+            <div class="lang-vb">PartitionPumpCheckpointError(String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpCheckpointError(string hostId, string partitionId, string exception)</code><code class="vb lang-vb">Public Sub PartitionPumpCheckpointError(hostId As String, partitionId As String, exception As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>exception</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCheckpointStart_System_String_System_String_System_String_System_Int64_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCheckpointStart_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L146" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpCheckpointStart(String, String, String, Int64)</div>        
+            <div class="lang-vb">PartitionPumpCheckpointStart(String, String, String, Int64)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpCheckpointStart(string hostId, string partitionId, string offset, long sequenceNumber)</code><code class="vb lang-vb">Public Sub PartitionPumpCheckpointStart(hostId As String, partitionId As String, offset As String, sequenceNumber As Long)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>sequenceNumber</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCheckpointStop_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCheckpointStop_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L155" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpCheckpointStop(String, String)</div>        
+            <div class="lang-vb">PartitionPumpCheckpointStop(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpCheckpointStop(string hostId, string partitionId)</code><code class="vb lang-vb">Public Sub PartitionPumpCheckpointStop(hostId As String, partitionId As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCloseError_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCloseError_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L137" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpCloseError(String, String, String)</div>        
+            <div class="lang-vb">PartitionPumpCloseError(String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpCloseError(string hostId, string partitionId, string exception)</code><code class="vb lang-vb">Public Sub PartitionPumpCloseError(hostId As String, partitionId As String, exception As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>exception</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCloseStart_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCloseStart_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L119" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpCloseStart(String, String, String)</div>        
+            <div class="lang-vb">PartitionPumpCloseStart(String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpCloseStart(string hostId, string partitionId, string reason)</code><code class="vb lang-vb">Public Sub PartitionPumpCloseStart(hostId As String, partitionId As String, reason As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>reason</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCloseStop_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCloseStop_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L128" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpCloseStop(String, String)</div>        
+            <div class="lang-vb">PartitionPumpCloseStop(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpCloseStop(string hostId, string partitionId)</code><code class="vb lang-vb">Public Sub PartitionPumpCloseStop(hostId As String, partitionId As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCreateClientsStart_System_String_System_String_System_Int64_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCreateClientsStart_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L173" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpCreateClientsStart(String, String, Int64, String)</div>        
+            <div class="lang-vb">PartitionPumpCreateClientsStart(String, String, Int64, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpCreateClientsStart(string hostId, string partitionId, long epoch, string startAt)</code><code class="vb lang-vb">Public Sub PartitionPumpCreateClientsStart(hostId As String, partitionId As String, epoch As Long, startAt As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>epoch</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>startAt</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCreateClientsStop_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpCreateClientsStop_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L182" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpCreateClientsStop(String, String)</div>        
+            <div class="lang-vb">PartitionPumpCreateClientsStop(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpCreateClientsStop(string hostId, string partitionId)</code><code class="vb lang-vb">Public Sub PartitionPumpCreateClientsStop(hostId As String, partitionId As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpError_System_String_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpError_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L272" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpError(String, String, String, String)</div>        
+            <div class="lang-vb">PartitionPumpError(String, String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpError(string hostId, string partitionId, string details, string exception = null)</code><code class="vb lang-vb">Public Sub PartitionPumpError(hostId As String, partitionId As String, details As String, exception As String = Nothing)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>details</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>exception</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInfo_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInfo_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L254" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpInfo(String, String, String)</div>        
+            <div class="lang-vb">PartitionPumpInfo(String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpInfo(string hostId, string partitionId, string details)</code><code class="vb lang-vb">Public Sub PartitionPumpInfo(hostId As String, partitionId As String, details As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>details</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorCloseStart_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorCloseStart_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L209" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpInvokeProcessorCloseStart(String, String, String)</div>        
+            <div class="lang-vb">PartitionPumpInvokeProcessorCloseStart(String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpInvokeProcessorCloseStart(string hostId, string partitionId, string reason)</code><code class="vb lang-vb">Public Sub PartitionPumpInvokeProcessorCloseStart(hostId As String, partitionId As String, reason As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>reason</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorCloseStop_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorCloseStop_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L218" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpInvokeProcessorCloseStop(String, String)</div>        
+            <div class="lang-vb">PartitionPumpInvokeProcessorCloseStop(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpInvokeProcessorCloseStop(string hostId, string partitionId)</code><code class="vb lang-vb">Public Sub PartitionPumpInvokeProcessorCloseStop(hostId As String, partitionId As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorEventsError_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorEventsError_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L245" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpInvokeProcessorEventsError(String, String, String)</div>        
+            <div class="lang-vb">PartitionPumpInvokeProcessorEventsError(String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpInvokeProcessorEventsError(string hostId, string partitionId, string exception)</code><code class="vb lang-vb">Public Sub PartitionPumpInvokeProcessorEventsError(hostId As String, partitionId As String, exception As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>exception</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorEventsStart_System_String_System_String_System_Int32_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorEventsStart_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L227" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpInvokeProcessorEventsStart(String, String, Int32)</div>        
+            <div class="lang-vb">PartitionPumpInvokeProcessorEventsStart(String, String, Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpInvokeProcessorEventsStart(string hostId, string partitionId, int eventCount)</code><code class="vb lang-vb">Public Sub PartitionPumpInvokeProcessorEventsStart(hostId As String, partitionId As String, eventCount As Integer)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>eventCount</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorEventsStop_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorEventsStop_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L236" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpInvokeProcessorEventsStop(String, String)</div>        
+            <div class="lang-vb">PartitionPumpInvokeProcessorEventsStop(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpInvokeProcessorEventsStop(string hostId, string partitionId)</code><code class="vb lang-vb">Public Sub PartitionPumpInvokeProcessorEventsStop(hostId As String, partitionId As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorOpenStart_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorOpenStart_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L191" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpInvokeProcessorOpenStart(String, String, String)</div>        
+            <div class="lang-vb">PartitionPumpInvokeProcessorOpenStart(String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpInvokeProcessorOpenStart(string hostId, string partitionId, string processorType)</code><code class="vb lang-vb">Public Sub PartitionPumpInvokeProcessorOpenStart(hostId As String, partitionId As String, processorType As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>processorType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorOpenStop_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpInvokeProcessorOpenStop_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L200" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpInvokeProcessorOpenStop(String, String)</div>        
+            <div class="lang-vb">PartitionPumpInvokeProcessorOpenStop(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpInvokeProcessorOpenStop(string hostId, string partitionId)</code><code class="vb lang-vb">Public Sub PartitionPumpInvokeProcessorOpenStop(hostId As String, partitionId As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpStealLeaseStart_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpStealLeaseStart_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L281" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpStealLeaseStart(String, String)</div>        
+            <div class="lang-vb">PartitionPumpStealLeaseStart(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpStealLeaseStart(string hostId, string partitionId)</code><code class="vb lang-vb">Public Sub PartitionPumpStealLeaseStart(hostId As String, partitionId As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpStealLeaseStop_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpStealLeaseStop_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L290" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpStealLeaseStop(String, String)</div>        
+            <div class="lang-vb">PartitionPumpStealLeaseStop(String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpStealLeaseStop(string hostId, string partitionId)</code><code class="vb lang-vb">Public Sub PartitionPumpStealLeaseStop(hostId As String, partitionId As String)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpWarning_System_String_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_EventHubs_ProcessorEventSource_PartitionPumpWarning_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-event-hubs-dotnetmaster/src/Microsoft.Azure.EventHubs.Processor/ProcessorEventSource.cs/#L263" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">PartitionPumpWarning(String, String, String, String)</div>        
+            <div class="lang-vb">PartitionPumpWarning(String, String, String, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void PartitionPumpWarning(string hostId, string partitionId, string details, string exception = null)</code><code class="vb lang-vb">Public Sub PartitionPumpWarning(hostId As String, partitionId As String, details As String, exception As String = Nothing)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partitionId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>details</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>exception</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+      <h2>Details</h2>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Namespace</h4>    
+          <div>Microsoft.Azure.EventHubs</div>
+        </div>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Assembly</h4>    
+          <div>Microsoft.Azure.EventHubs.Processor.dll</div>
+        </div>
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/1b0378afbf1c5a46614d.reference.js"></script>
+  </body>
+</html>

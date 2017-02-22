@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="CreateManifestResourceName class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/Microsoft.Build.Tasks/Microsoft.Build.Tasks.CreateManifestResourceName.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/Microsoft.Build.Tasks/Microsoft.Build.Tasks.CreateManifestResourceName.yml">
+<meta name="APIName" content="Microsoft.Build.Tasks.CreateManifestResourceName">
+<meta name="APIName" content="Microsoft.Build.Tasks.CreateManifestResourceName..ctor">
+<meta name="APIName" content="Microsoft.Build.Tasks.CreateManifestResourceName.CreateManifestName">
+<meta name="APIName" content="Microsoft.Build.Tasks.CreateManifestResourceName.Execute">
+<meta name="APIName" content="Microsoft.Build.Tasks.CreateManifestResourceName.IsSourceFile">
+<meta name="APIName" content="Microsoft.Build.Tasks.CreateManifestResourceName.itemSpecToTaskitem">
+<meta name="APIName" content="Microsoft.Build.Tasks.CreateManifestResourceName.MakeValidEverettIdentifier">
+<meta name="APIName" content="Microsoft.Build.Tasks.CreateManifestResourceName.ManifestResourceNames">
+<meta name="APIName" content="Microsoft.Build.Tasks.CreateManifestResourceName.PrependCultureAsDirectory">
+<meta name="APIName" content="Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFiles">
+<meta name="APIName" content="Microsoft.Build.Tasks.CreateManifestResourceName.ResourceFilesWithManifestResourceNames">
+<meta name="APIName" content="Microsoft.Build.Tasks.CreateManifestResourceName.RootNamespace">
+<meta name="APILocation" content="Microsoft.Build.Tasks.v4.0.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="2353031c-2e96-76a6-3609-797427913209">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Determines the manifest resource name to assign to a resource.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Build.Tasks.CreateManifestResourceName">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/microsoft.build.tasks/microsoft.build.tasks.createmanifestresourcename" rel="canonical">
+    <title>CreateManifestResourceName class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Build_Tasks_CreateManifestResourceName">
+      <span class="lang-csharp">CreateManifestResourceName</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Determines the manifest resource name to assign to a resource.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract class CreateManifestResourceName : Microsoft.Build.Tasks.TaskExtension</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../microsoft.build.utilities/microsoft.build.utilities.task">Task</a>
+          </div>
+        </li>
+        <li class="l2">
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.tasks.taskextension">Microsoft.Build.Tasks.TaskExtension</a>
+          </div>
+        </li>
+      <li class="l3">
+        <div class="xref">
+          <div class="lang-csharp">CreateManifestResourceName</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.build.tasks.taskextension#Microsoft_Build_Tasks_TaskExtension_Log">Log</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../microsoft.build.utilities/microsoft.build.utilities.task#Microsoft_Build_Utilities_Task_BuildEngine">BuildEngine</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../microsoft.build.utilities/microsoft.build.utilities.task#Microsoft_Build_Utilities_Task_BuildEngine2">BuildEngine2</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../microsoft.build.utilities/microsoft.build.utilities.task#Microsoft_Build_Utilities_Task_BuildEngine3">BuildEngine3</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../microsoft.build.utilities/microsoft.build.utilities.task#Microsoft_Build_Utilities_Task_BuildEngine4">BuildEngine4</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../microsoft.build.utilities/microsoft.build.utilities.task#Microsoft_Build_Utilities_Task_HelpKeywordPrefix">HelpKeywordPrefix</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../microsoft.build.utilities/microsoft.build.utilities.task#Microsoft_Build_Utilities_Task_HostObject">HostObject</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../microsoft.build.utilities/microsoft.build.utilities.task#Microsoft_Build_Utilities_Task_TaskResources">TaskResources</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Tasks_CreateManifestResourceName__ctor">CreateManifestResourceName()</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.CreateManifestResourceName"> class.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Fields
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Tasks_CreateManifestResourceName_itemSpecToTaskitem">itemSpecToTaskitem</a></div>
+          </td>
+            <td>
+            <p>Contains the task item in a dictionary to provide quick access from a derived class.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Tasks_CreateManifestResourceName_ManifestResourceNames">ManifestResourceNames</a></div>
+          </td>
+            <td>
+            <p>Gets the created manifest resource names.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Tasks_CreateManifestResourceName_PrependCultureAsDirectory">PrependCultureAsDirectory</a></div>
+          </td>
+            <td>
+            <p>Gets or sets whether the culture name should be prepended to the manifest resource name as a directory.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Tasks_CreateManifestResourceName_ResourceFiles">ResourceFiles</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the dependent resource files.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Tasks_CreateManifestResourceName_ResourceFilesWithManifestResourceNames">ResourceFilesWithManifestResourceNames</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the initial list of resource names, along with additional metadata for manifest resource names.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Tasks_CreateManifestResourceName_RootNamespace">RootNamespace</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the root namespace to use for naming.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Tasks_CreateManifestResourceName_CreateManifestName_System_String_System_String_System_String_System_String_System_IO_Stream_">CreateManifestName(String,String,String,String,Stream)</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, creates the manifest resource name.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Tasks_CreateManifestResourceName_Execute">Execute()</a></div>
+          </td>
+            <td>
+            <p>Runs the task.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Tasks_CreateManifestResourceName_IsSourceFile_System_String_">IsSourceFile(String)</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, indicates whether the specified file is a valid source file.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Tasks_CreateManifestResourceName_MakeValidEverettIdentifier_System_String_">MakeValidEverettIdentifier(String)</a></div>
+          </td>
+            <td>
+            <p>Creates a valid identifier for use with Visual Studio 2003.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Tasks_CreateManifestResourceName__ctor">
+    
+            <a id="Microsoft_Build_Tasks_CreateManifestResourceName__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreateManifestResourceName()</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:Microsoft.Build.Tasks.CreateManifestResourceName"> class.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected CreateManifestResourceName ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="fields">
+        <h2>Fields
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Tasks_CreateManifestResourceName_itemSpecToTaskitem">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">itemSpecToTaskitem</div>        
+          </div>
+    
+            <p>Contains the task item in a dictionary to provide quick access from a derived class.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected System.Collections.Generic.Dictionary&lt;string,Microsoft.Build.Framework.ITaskItem&gt; itemSpecToTaskitem;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Tasks_CreateManifestResourceName_ManifestResourceNames">
+    
+            <a id="Microsoft_Build_Tasks_CreateManifestResourceName_ManifestResourceNames_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ManifestResourceNames</div>        
+          </div>
+    
+            <p>Gets the created manifest resource names.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Framework.ITaskItem[] ManifestResourceNames { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../microsoft.build.framework/microsoft.build.framework.itaskitem">ITaskItem</a>[]</div>
+                  </div>
+                  <p>The created manifest resource names.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Tasks_CreateManifestResourceName_PrependCultureAsDirectory">
+    
+            <a id="Microsoft_Build_Tasks_CreateManifestResourceName_PrependCultureAsDirectory_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PrependCultureAsDirectory</div>        
+          </div>
+    
+            <p>Gets or sets whether the culture name should be prepended to the manifest resource name as a directory.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool PrependCultureAsDirectory { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the culture name should be prepended, <code>false</code> if otherwise.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This is <code>true</code> by default.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Tasks_CreateManifestResourceName_ResourceFiles">
+    
+            <a id="Microsoft_Build_Tasks_CreateManifestResourceName_ResourceFiles_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ResourceFiles</div>        
+          </div>
+    
+            <p>Gets or sets the dependent resource files.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Framework.ITaskItem[] ResourceFiles { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../microsoft.build.framework/microsoft.build.framework.itaskitem">ITaskItem</a>[]</div>
+                  </div>
+                  <p>The dependent resource files.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Tasks_CreateManifestResourceName_ResourceFilesWithManifestResourceNames">
+    
+            <a id="Microsoft_Build_Tasks_CreateManifestResourceName_ResourceFilesWithManifestResourceNames_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ResourceFilesWithManifestResourceNames</div>        
+          </div>
+    
+            <p>Gets or sets the initial list of resource names, along with additional metadata for manifest resource names.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Framework.ITaskItem[] ResourceFilesWithManifestResourceNames { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../microsoft.build.framework/microsoft.build.framework.itaskitem">ITaskItem</a>[]</div>
+                  </div>
+                  <p>An <see cref="T:Microsoft.Build.Framework.ITaskItem"> object, representing the resource names and metadata.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Tasks_CreateManifestResourceName_RootNamespace">
+    
+            <a id="Microsoft_Build_Tasks_CreateManifestResourceName_RootNamespace_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RootNamespace</div>        
+          </div>
+    
+            <p>Gets or sets the root namespace to use for naming.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string RootNamespace { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The root namespace to use for naming.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Tasks_CreateManifestResourceName_CreateManifestName_System_String_System_String_System_String_System_String_System_IO_Stream_">
+    
+            <a id="Microsoft_Build_Tasks_CreateManifestResourceName_CreateManifestName_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreateManifestName(String,String,String,String,Stream)</div>        
+          </div>
+    
+            <p>When overridden in a derived class, creates the manifest resource name.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract string CreateManifestName (string fileName, string linkFileName, string rootNamespaceName, string dependentUponFileName, System.IO.Stream binaryStream);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>fileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The name of the dependent file.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>linkFileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The name of the file specified by the Link attribute.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>rootNamespaceName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The root namespace. This parameter may be a null reference (<code>Nothing</code> in <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/vbprvb-md.md&quot; -->Visual Basic<!--END INCLUDE -->).</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>dependentUponFileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The file name of the parent of this dependency. This parameter may be a null reference (<code>Nothing</code>).</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>binaryStream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.io/system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The binary stream contents of the file. This parameter may be a null reference (<code>Nothing</code>).</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The manifest resource name.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Tasks_CreateManifestResourceName_Execute">
+    
+            <a id="Microsoft_Build_Tasks_CreateManifestResourceName_Execute_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Execute()</div>        
+          </div>
+    
+            <p>Runs the task.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool Execute ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the method was successful; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Tasks_CreateManifestResourceName_IsSourceFile_System_String_">
+    
+            <a id="Microsoft_Build_Tasks_CreateManifestResourceName_IsSourceFile_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsSourceFile(String)</div>        
+          </div>
+    
+            <p>When overridden in a derived class, indicates whether the specified file is a valid source file.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract bool IsSourceFile (string fileName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>fileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The file name.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the file is a valid source file; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Tasks_CreateManifestResourceName_MakeValidEverettIdentifier_System_String_">
+    
+            <a id="Microsoft_Build_Tasks_CreateManifestResourceName_MakeValidEverettIdentifier_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MakeValidEverettIdentifier(String)</div>        
+          </div>
+    
+            <p>Creates a valid identifier for use with Visual Studio 2003.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string MakeValidEverettIdentifier (string name);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The file name.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The identifier to use with Visual Studio 2003.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

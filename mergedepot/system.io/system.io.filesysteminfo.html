@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="FileSystemInfo class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/System.IO/System.IO.FileSystemInfo.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO/System.IO.FileSystemInfo.yml">
+<meta name="APIName" content="System.IO.FileSystemInfo">
+<meta name="APIName" content="System.IO.FileSystemInfo..ctor">
+<meta name="APIName" content="System.IO.FileSystemInfo.Attributes">
+<meta name="APIName" content="System.IO.FileSystemInfo.CreationTime">
+<meta name="APIName" content="System.IO.FileSystemInfo.CreationTimeUtc">
+<meta name="APIName" content="System.IO.FileSystemInfo.Delete">
+<meta name="APIName" content="System.IO.FileSystemInfo.Exists">
+<meta name="APIName" content="System.IO.FileSystemInfo.Extension">
+<meta name="APIName" content="System.IO.FileSystemInfo.FullName">
+<meta name="APIName" content="System.IO.FileSystemInfo.FullPath">
+<meta name="APIName" content="System.IO.FileSystemInfo.GetObjectData">
+<meta name="APIName" content="System.IO.FileSystemInfo.LastAccessTime">
+<meta name="APIName" content="System.IO.FileSystemInfo.LastAccessTimeUtc">
+<meta name="APIName" content="System.IO.FileSystemInfo.LastWriteTime">
+<meta name="APIName" content="System.IO.FileSystemInfo.LastWriteTimeUtc">
+<meta name="APIName" content="System.IO.FileSystemInfo.Name">
+<meta name="APIName" content="System.IO.FileSystemInfo.OriginalPath">
+<meta name="APIName" content="System.IO.FileSystemInfo.Refresh">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="662af760-f6de-96e1-10e6-6c0ee59c5024">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Provides the base class for both  and  objects.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.FileSystemInfo">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.io/system.io.filesysteminfo" rel="canonical">
+    <title>FileSystemInfo class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_FileSystemInfo">
+      <span class="lang-csharp">FileSystemInfo</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Provides the base class for both <see cref="T:System.IO.FileInfo"> and <a class="xref" href="system.io.directoryinfo">DirectoryInfo</a> objects.<p>
+</see>
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public abstract class FileSystemInfo : MarshalByRefObject, System.Runtime.Serialization.ISerializable</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject">System.MarshalByRefObject</a>
+          </div>
+        </li>
+      <li class="l2">
+        <div class="xref">
+          <div class="lang-csharp">FileSystemInfo</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_CreateObjRef_System_Type_">CreateObjRef(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_GetLifetimeService">GetLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_InitializeLifetimeService">InitializeLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_MemberwiseClone_System_Boolean_">MemberwiseClone(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <p>The FileSystemInfo class contains methods that are common to file and directory manipulation. A FileSystemInfo object can represent either a file or a directory, thus serving as the basis for <a class="xref" href="system.io.fileinfo">FileInfo</a> or <a class="xref" href="system.io.directoryinfo">DirectoryInfo</a> objects. Use this base class when parsing a lot of files and directories.  </p>
+<p> A derived class can inherit from FileSystemInfo only if the derived class has the AllAccess permission from the <a class="xref" href="../system.security.permissions/system.security.permissions.fileiopermissionaccess">FileIOPermissionAccess</a> enumeration.  </p>
+<p> In members that accept a path, the path can refer to a file or just a directory. The specified path can also refer to a relative path or a Universal Naming Convention (UNC) path for a server and share name. For example, all the following are acceptable paths:  </p>
+<ul>
+<li><p>&quot;c:\\MyDir\\MyFile.txt&quot; in C#, or &quot;c:\MyDir\MyFile.txt&quot; in Visual Basic.  </p>
+</li>
+<li><p>&quot;c:\\MyDir&quot; in C#, or &quot;c:\MyDir&quot; in Visual Basic.  </p>
+</li>
+<li><p>&quot;MyDir\\MySubdir&quot; in C#, or &quot;MyDir\MySubDir&quot; in Visual Basic.  </p>
+</li>
+<li><p>&quot;\\\\MyServer\\MyShare&quot; in C#, or &quot;\\MyServer\MyShare&quot; in Visual Basic.  </p>
+<p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+</li>
+</ul>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo__ctor">FileSystemInfo()</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.FileSystemInfo"> class.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">FileSystemInfo(SerializationInfo,StreamingContext)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.FileSystemInfo"> class with serialized data.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Fields
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_FullPath">FullPath</a></div>
+          </td>
+            <td>
+            <p>Represents the fully qualified path of the directory or file.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_OriginalPath">OriginalPath</a></div>
+          </td>
+            <td>
+            <p>The path originally specified by the user, whether relative or absolute.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_Attributes">Attributes</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the attributes for the current file or directory.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_CreationTime">CreationTime</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the creation time of the current file or directory.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_CreationTimeUtc">CreationTimeUtc</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the creation time, in coordinated universal time (UTC), of the current file or directory.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_Exists">Exists</a></div>
+          </td>
+            <td>
+            <p>Gets a value indicating whether the file or directory exists.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_Extension">Extension</a></div>
+          </td>
+            <td>
+            <p>Gets the string representing the extension part of the file.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_FullName">FullName</a></div>
+          </td>
+            <td>
+            <p>Gets the full path of the directory or file.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_LastAccessTime">LastAccessTime</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the time the current file or directory was last accessed.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_LastAccessTimeUtc">LastAccessTimeUtc</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the time, in coordinated universal time (UTC), that the current file or directory was last accessed.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_LastWriteTime">LastWriteTime</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the time when the current file or directory was last written to.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_LastWriteTimeUtc">LastWriteTimeUtc</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the time, in coordinated universal time (UTC), when the current file or directory was last written to.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_Name">Name</a></div>
+          </td>
+            <td>
+            <p>For files, gets the name of the file. For directories, gets the name of the last directory in the hierarchy if a hierarchy exists. Otherwise, the <code>Name</code> property gets the name of the directory.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_Delete">Delete()</a></div>
+          </td>
+            <td>
+            <p>Deletes a file or directory.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">GetObjectData(SerializationInfo,StreamingContext)</a></div>
+          </td>
+            <td>
+            <p>Sets the <a class="xref" href="../system.runtime.serialization/system.runtime.serialization.serializationinfo">SerializationInfo</a> object with the file name and additional exception information.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_FileSystemInfo_Refresh">Refresh()</a></div>
+          </td>
+            <td>
+            <p>Refreshes the state of the object.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo__ctor">
+    
+            <a id="System_IO_FileSystemInfo__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FileSystemInfo()</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.FileSystemInfo"> class.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected FileSystemInfo ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">
+    
+            <a id="System_IO_FileSystemInfo__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FileSystemInfo(SerializationInfo,StreamingContext)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.FileSystemInfo"> class with serialized data.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected FileSystemInfo (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>info</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.runtime.serialization/system.runtime.serialization.serializationinfo">SerializationInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <a class="xref" href="../system.runtime.serialization/system.runtime.serialization.serializationinfo">SerializationInfo</a> that holds the serialized object data about the exception being thrown.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>context</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.runtime.serialization/system.runtime.serialization.streamingcontext">StreamingContext</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <a class="xref" href="../system.runtime.serialization/system.runtime.serialization.streamingcontext">StreamingContext</a> that contains contextual information about the source or destination.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="fields">
+        <h2>Fields
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_FullPath">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FullPath</div>        
+          </div>
+    
+            <p>Represents the fully qualified path of the directory or file.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected string FullPath;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_OriginalPath">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OriginalPath</div>        
+          </div>
+    
+            <p>The path originally specified by the user, whether relative or absolute.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected string OriginalPath;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_Attributes">
+    
+            <a id="System_IO_FileSystemInfo_Attributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Attributes</div>        
+          </div>
+    
+            <p>Gets or sets the attributes for the current file or directory.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.FileAttributes Attributes { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.fileattributes">FileAttributes</a></div>
+                  </div>
+                  <p><see cref="T:System.IO.FileAttributes"> of the current <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a>.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The value of the Attributes property is pre-cached if the current instance of the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object was returned from any of the following <a class="xref" href="system.io.directoryinfo">DirectoryInfo</a> methods:  </p>
+<ul>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetDirectories_">GetDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFiles_">GetFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFileSystemInfos_">GetFileSystemInfos</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateDirectories_">EnumerateDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFiles_">EnumerateFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFileSystemInfos_">EnumerateFileSystemInfos</a>  
+
+<p>To get the latest value, call the <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> method.  </p>
+<p>The value of this property is a combination of the archive, compressed, directory, hidden, offline, read-only, system, and temporary file attribute flags.  </p>
+<p>When you set this value, use the bitwise OR operator (<code>|</code> in C# or <code>Or</code> in Visual Basic) to apply more than one value. To retain any existing values in the Attributes property, include the value of the Attributes property in your assignment. For example:  </p>
+<p><code>exampleFile.Attributes = exampleFile.Attributes | FileAttributes.ReadOnly;</code></p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates the Attributes property. This code example is part of a larger example provided for the <xref:system.io.filesysteminfo> class.  
+  
+ [!CODE [FileSystemInfo#2](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#2)]
+    
+    
+        </xref:system.io.filesysteminfo></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_CreationTime">
+    
+            <a id="System_IO_FileSystemInfo_CreationTime_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreationTime</div>        
+          </div>
+    
+            <p>Gets or sets the creation time of the current file or directory.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public DateTime CreationTime { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.datetime">DateTime</a></div>
+                  </div>
+                  <p>The creation date and time of the current <see cref="T:System.IO.FileSystemInfo"> object.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><strong>Note</strong> This method may return an inaccurate value, because it uses native functions whose values may not be continuously updated by the operating system.  </p>
+<p> The value of the CreationTime property is pre-cached if the current instance of the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object was returned from any of the following <a class="xref" href="system.io.directoryinfo">DirectoryInfo</a> methods:  </p>
+<ul>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetDirectories_">GetDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFiles_">GetFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFileSystemInfos_">GetFileSystemInfos</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateDirectories_">EnumerateDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFiles_">EnumerateFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFileSystemInfos_">EnumerateFileSystemInfos</a>  
+
+<p>To get the latest value, call the <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> method.  </p>
+<p>If the file described in the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object does not exist, this property will return 12:00 midnight, January 1, 1601 A.D. (C.E.) Coordinated Universal Time (UTC), adjusted to local time.  </p>
+<p>NTFS-formatted drives may cache file meta-info, such as file creation time, for a short period of time. This process is known as file tunneling. As a result, it may be necessary to explicitly set the creation time of a file if you are overwriting or replacing an existing file.  </p>
+<p>This property value is <code>null</code> if the file system containing the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object does not support this information.</p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates the CreationTime property. This code example is part of a larger example provided for the <xref:system.io.filesysteminfo> class.  
+  
+ [!CODE [FileSystemInfo#2](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#2)]
+    
+    
+        </xref:system.io.filesysteminfo></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_CreationTimeUtc">
+    
+            <a id="System_IO_FileSystemInfo_CreationTimeUtc_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreationTimeUtc</div>        
+          </div>
+    
+            <p>Gets or sets the creation time, in coordinated universal time (UTC), of the current file or directory.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public DateTime CreationTimeUtc { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.datetime">DateTime</a></div>
+                  </div>
+                  <p>The creation date and time in UTC format of the current <see cref="T:System.IO.FileSystemInfo"> object.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><strong>Note</strong> This method may return an inaccurate value, because it uses native functions whose values may not be continuously updated by the operating system.  </p>
+<p> The value of the CreationTimeUtc property is pre-cached if the current instance of the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object was returned from any of the following <a class="xref" href="system.io.directoryinfo">DirectoryInfo</a> methods:  </p>
+<ul>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetDirectories_">GetDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFiles_">GetFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFileSystemInfos_">GetFileSystemInfos</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateDirectories_">EnumerateDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFiles_">EnumerateFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFileSystemInfos_">EnumerateFileSystemInfos</a>  
+
+<p>To get the latest value, call the <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> method.  </p>
+<p>If the file described in the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object does not exist, this property will return 12:00 midnight, January 1, 1601 A.D. (C.E.) Coordinated Universal Time (UTC).  </p>
+<p>NTFS-formatted drives may cache file meta-info, such as file creation time, for a short period of time. This process is known as file tunneling. As a result, it may be necessary to explicitly set the creation time of a file if you are overwriting or replacing an existing file.  </p>
+<p>This property value is <code>null</code> if the file system containing the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object does not support this information.</p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_Exists">
+    
+            <a id="System_IO_FileSystemInfo_Exists_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Exists</div>        
+          </div>
+    
+            <p>Gets a value indicating whether the file or directory exists.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract bool Exists { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the file or directory exists; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_Extension">
+    
+            <a id="System_IO_FileSystemInfo_Extension_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Extension</div>        
+          </div>
+    
+            <p>Gets the string representing the extension part of the file.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Extension { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>A string containing the <see cref="T:System.IO.FileSystemInfo"> extension.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The <code>Extension</code> property returns the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> extension, including the period (.). For example, for a file c:\NewFile.txt, this property returns &quot;.txt&quot;.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Retrieve the fully qualified path of a file.</td>
+<td><a class="xref" href="system.io.path#System_IO_Path_GetFullPath_">GetFullPath</a></td>
+</tr>
+<tr>
+<td>Retrieve only the file name a path.</td>
+<td><a class="xref" href="system.io.path#System_IO_Path_GetFileNameWithoutExtension_">GetFileNameWithoutExtension</a></td>
+</tr>
+<tr>
+<td>Retrieve only the directory name from a path.</td>
+<td><a class="xref" href="system.io.path#System_IO_Path_GetDirectoryName_">GetDirectoryName</a></td>
+</tr>
+<tr>
+<td>Change the extension of a file.</td>
+<td><a class="xref" href="system.io.path#System_IO_Path_ChangeExtension_">ChangeExtension</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_FullName">
+    
+            <a id="System_IO_FileSystemInfo_FullName_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FullName</div>        
+          </div>
+    
+            <p>Gets the full path of the directory or file.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual string FullName { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>A string containing the full path.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For example, for a file c:\NewFile.txt, this property returns &quot;c:\NewFile.txt&quot;.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example demonstrates the FullName property. This code example is part of a larger example provided for the <xref:system.io.filesysteminfo> class.  
+  
+ [!CODE [FileSystemInfo#2](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#2)]
+    
+    
+        </xref:system.io.filesysteminfo></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_LastAccessTime">
+    
+            <a id="System_IO_FileSystemInfo_LastAccessTime_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LastAccessTime</div>        
+          </div>
+    
+            <p>Gets or sets the time the current file or directory was last accessed.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public DateTime LastAccessTime { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.datetime">DateTime</a></div>
+                  </div>
+                  <p>The time that the current file or directory was last accessed.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><strong>Note</strong> This method may return an inaccurate value, because it uses native functions whose values may not be continuously updated by the operating system.  </p>
+<p> If the file described in the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object does not exist, this property will return 12:00 midnight, January 1, 1601 A.D. (C.E.) Coordinated Universal Time (UTC), adjusted to local time.  </p>
+<p> The value of the <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_LastAccessTimeUtc_">LastAccessTimeUtc</a> property is pre-cached if the current instance of the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object was returned from any of the following <a class="xref" href="system.io.directoryinfo">DirectoryInfo</a> methods:  </p>
+<ul>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetDirectories_">GetDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFiles_">GetFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFileSystemInfos_">GetFileSystemInfos</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateDirectories_">EnumerateDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFiles_">EnumerateFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFileSystemInfos_">EnumerateFileSystemInfos</a>  
+
+<p>To get the latest value, call the <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> method.</p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the updating of the LastAccessTime property through a "touch" operation. In this example, the file is "touched", updating the <xref:system.io.filesysteminfo.creationtime%2a>, LastAccessTime and <xref:system.io.filesysteminfo.lastwritetime%2a> properties to the current date and time.  
+  
+ [!CODE [System.IO.FileSystemInfo_touch#00](../CodeSnippet/VS_Snippets_CLR_System/system.IO.FileSystemInfo_touch#00)]
+    
+    
+        </xref:system.io.filesysteminfo.lastwritetime%2a></xref:system.io.filesysteminfo.creationtime%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_LastAccessTimeUtc">
+    
+            <a id="System_IO_FileSystemInfo_LastAccessTimeUtc_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LastAccessTimeUtc</div>        
+          </div>
+    
+            <p>Gets or sets the time, in coordinated universal time (UTC), that the current file or directory was last accessed.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public DateTime LastAccessTimeUtc { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.datetime">DateTime</a></div>
+                  </div>
+                  <p>The UTC time that the current file or directory was last accessed.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><strong>Note</strong> This method may return an inaccurate value, because it uses native functions whose values may not be continuously updated by the operating system.  </p>
+<p> The value of the LastAccessTimeUtc property is pre-cached if the current instance of the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object was returned from any of the following <a class="xref" href="system.io.directoryinfo">DirectoryInfo</a> methods:  </p>
+<ul>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetDirectories_">GetDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFiles_">GetFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFileSystemInfos_">GetFileSystemInfos</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateDirectories_">EnumerateDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFiles_">EnumerateFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFileSystemInfos_">EnumerateFileSystemInfos</a>  
+
+<p>To get the latest value, call the <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> method.  </p>
+<p>If the file described in the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object does not exist, this property will return 12:00 midnight, January 1, 1601 A.D. (C.E.) Coordinated Universal Time (UTC).  </p>
+<p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_LastWriteTime">
+    
+            <a id="System_IO_FileSystemInfo_LastWriteTime_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LastWriteTime</div>        
+          </div>
+    
+            <p>Gets or sets the time when the current file or directory was last written to.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public DateTime LastWriteTime { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.datetime">DateTime</a></div>
+                  </div>
+                  <p>The time the current file was last written.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><strong>Note</strong> This method may return an inaccurate value, because it uses native functions whose values may not be continuously updated by the operating system.  </p>
+<p> The value of the LastWriteTime property is pre-cached if the current instance of the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object was returned from any of the following <a class="xref" href="system.io.directoryinfo">DirectoryInfo</a> methods:  </p>
+<ul>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetDirectories_">GetDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFiles_">GetFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFileSystemInfos_">GetFileSystemInfos</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateDirectories_">EnumerateDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFiles_">EnumerateFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFileSystemInfos_">EnumerateFileSystemInfos</a>  
+
+<p>To get the latest value, call the <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> method.  </p>
+<p>If the file described in the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object does not exist, this property will return 12:00 midnight, January 1, 1601 A.D. (C.E.) Coordinated Universal Time (UTC), adjusted to local time.  </p>
+<p>This property value is <code>null</code> if the file system containing the file does not support this information.</p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the updating of the LastWriteTime property through a "touch" operation. In this example, the file is "touched", updating the <xref:system.io.filesysteminfo.creationtime%2a>, <xref:system.io.filesysteminfo.lastaccesstime%2a> and LastWriteTime properties to the current date and time.  
+  
+ [!CODE [System.IO.FileSystemInfo_touch#00](../CodeSnippet/VS_Snippets_CLR_System/system.IO.FileSystemInfo_touch#00)]
+    
+    
+        </xref:system.io.filesysteminfo.lastaccesstime%2a></xref:system.io.filesysteminfo.creationtime%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_LastWriteTimeUtc">
+    
+            <a id="System_IO_FileSystemInfo_LastWriteTimeUtc_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LastWriteTimeUtc</div>        
+          </div>
+    
+            <p>Gets or sets the time, in coordinated universal time (UTC), when the current file or directory was last written to.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public DateTime LastWriteTimeUtc { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.datetime">DateTime</a></div>
+                  </div>
+                  <p>The UTC time when the current file was last written to.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><strong>Note</strong> This method may return an inaccurate value, because it uses native functions whose values may not be continuously updated by the operating system.  </p>
+<p> The value of the LastWriteTimeUtc property is pre-cached if the current instance of the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object was returned from any of the following <a class="xref" href="system.io.directoryinfo">DirectoryInfo</a> methods:  </p>
+<ul>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetDirectories_">GetDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFiles_">GetFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_GetFileSystemInfos_">GetFileSystemInfos</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateDirectories_">EnumerateDirectories</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFiles_">EnumerateFiles</a>  
+</li>
+<li><a class="xref" href="system.io.directoryinfo#System_IO_DirectoryInfo_EnumerateFileSystemInfos_">EnumerateFileSystemInfos</a>  
+
+<p>To get the latest value, call the <a class="xref" href="system.io.filesysteminfo#System_IO_FileSystemInfo_Refresh_">Refresh</a> method.  </p>
+<p>If the file described in the <a class="xref" href="system.io.filesysteminfo">FileSystemInfo</a> object does not exist, this property will return 12:00 midnight, January 1, 1601 A.D. (C.E.) Coordinated Universal Time (UTC).  </p>
+<p>This property value is <code>null</code> if the file system containing the file does not support this information.</p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_Name">
+    
+            <a id="System_IO_FileSystemInfo_Name_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Name</div>        
+          </div>
+    
+            <p>For files, gets the name of the file. For directories, gets the name of the last directory in the hierarchy if a hierarchy exists. Otherwise, the <code>Name</code> property gets the name of the directory.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract string Name { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>A string that is the name of the parent directory, the name of the last directory in the hierarchy, or the name of a file, including the file name extension.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a directory, <code>Name</code> returns only the name of the parent directory, such as Dir, not c:\Dir. For a subdirectory, <code>Name</code> returns only the name of the subdirectory, such as Sub1, not c:\Dir\Sub1.  </p>
+<p> For a file, <code>Name</code> returns only the file name and file name extension, such as MyFile.txt, not c:\Dir\Myfile.txt.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_Delete">
+    
+            <a id="System_IO_FileSystemInfo_Delete_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Delete()</div>        
+          </div>
+    
+            <p>Deletes a file or directory.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract void Delete ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">
+    
+            <a id="System_IO_FileSystemInfo_GetObjectData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetObjectData(SerializationInfo,StreamingContext)</div>        
+          </div>
+    
+            <p>Sets the <a class="xref" href="../system.runtime.serialization/system.runtime.serialization.serializationinfo">SerializationInfo</a> object with the file name and additional exception information.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>info</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.runtime.serialization/system.runtime.serialization.serializationinfo">SerializationInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <a class="xref" href="../system.runtime.serialization/system.runtime.serialization.serializationinfo">SerializationInfo</a> that holds the serialized object data about the exception being thrown.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>context</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.runtime.serialization/system.runtime.serialization.streamingcontext">StreamingContext</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <a class="xref" href="../system.runtime.serialization/system.runtime.serialization.streamingcontext">StreamingContext</a> that contains contextual information about the source or destination.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_FileSystemInfo_Refresh">
+    
+            <a id="System_IO_FileSystemInfo_Refresh_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Refresh()</div>        
+          </div>
+    
+            <p>Refreshes the state of the object.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Refresh ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><code>FileSystemInfo.Refresh</code> takes a snapshot of the file from the current file system. <code>Refresh</code> cannot correct the underlying file system even if the file system returns incorrect or outdated information. This can happen on platforms such as Windows 98.  </p>
+<p> Calls must be made to <code>Refresh</code> before attempting to get the attribute information, or the information will be outdated.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to loop through all the files and directories, querying some information about each entry.  
+  
+ [!CODE [FileSystemInfo#1](../CodeSnippet/VS_Snippets_CLR/FileSystemInfo#1)]
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

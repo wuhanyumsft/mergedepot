@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="ItemContainerGenerator class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Windows.Controls/System.Windows.Controls.ItemContainerGenerator.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Windows.Controls/System.Windows.Controls.ItemContainerGenerator.yml">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.ContainerFromIndex">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.ContainerFromItem">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.GenerateBatches">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.IndexFromContainer">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.ItemFromContainer">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.Items">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.ItemsChanged">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.add_ItemsChanged">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.remove_ItemsChanged">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.Status">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.StatusChanged">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.add_StatusChanged">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.remove_StatusChanged">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.System.Windows.Controls.Primitives.IItemContainerGenerator.GeneratorPositionFromIndex">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.System.Windows.Controls.Primitives.IItemContainerGenerator.GetItemContainerGeneratorForPanel">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.System.Windows.Controls.Primitives.IItemContainerGenerator.IndexFromGeneratorPosition">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.System.Windows.Controls.Primitives.IItemContainerGenerator.PrepareItemContainer">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.System.Windows.Controls.Primitives.IItemContainerGenerator.Remove">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.System.Windows.Controls.Primitives.IItemContainerGenerator.RemoveAll">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator.Recycle">
+<meta name="APIName" content="System.Windows.Controls.ItemContainerGenerator.System.Windows.IWeakEventListener.ReceiveWeakEvent">
+<meta name="APILocation" content="PresentationFramework.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="2aea9be0-ffc3-f2a0-5de2-d128922b385b">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Windows.Controls.ItemContainerGenerator">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.windows.controls/system.windows.controls.itemcontainergenerator" rel="canonical">
+    <title>ItemContainerGenerator class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Windows_Controls_ItemContainerGenerator">
+      <span class="lang-csharp">ItemContainerGenerator</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public sealed class ItemContainerGenerator : System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator, System.Windows.IWeakEventListener</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">ItemContainerGenerator</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_Items">Items</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_Status">Status</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_ContainerFromIndex_System_Int32_">ContainerFromIndex(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_ContainerFromItem_System_Object_">ContainerFromItem(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_GenerateBatches">GenerateBatches()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_IndexFromContainer_System_Windows_DependencyObject_">IndexFromContainer(DependencyObject)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_IndexFromContainer_System_Windows_DependencyObject_System_Boolean_">IndexFromContainer(DependencyObject,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_ItemFromContainer_System_Windows_DependencyObject_">ItemFromContainer(DependencyObject)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Events
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_ItemsChanged">ItemsChanged</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_StatusChanged">StatusChanged</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Explicit Interface Implementations
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_GenerateNext">System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_GenerateNext_System_Boolean__">System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_GeneratorPositionFromIndex_System_Int32_">System.Windows.Controls.Primitives.IItemContainerGenerator.GeneratorPositionFromIndex(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_GetItemContainerGeneratorForPanel_System_Windows_Controls_Panel_">System.Windows.Controls.Primitives.IItemContainerGenerator.GetItemContainerGeneratorForPanel(Panel)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_IndexFromGeneratorPosition_System_Windows_Controls_Primitives_GeneratorPosition_">System.Windows.Controls.Primitives.IItemContainerGenerator.IndexFromGeneratorPosition(GeneratorPosition)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_PrepareItemContainer_System_Windows_DependencyObject_">System.Windows.Controls.Primitives.IItemContainerGenerator.PrepareItemContainer(DependencyObject)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_Remove_System_Windows_Controls_Primitives_GeneratorPosition_System_Int32_">System.Windows.Controls.Primitives.IItemContainerGenerator.Remove(GeneratorPosition,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_RemoveAll">System.Windows.Controls.Primitives.IItemContainerGenerator.RemoveAll()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_StartAt_System_Windows_Controls_Primitives_GeneratorPosition_System_Windows_Controls_Primitives_GeneratorDirection_">System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt(GeneratorPosition,GeneratorDirection)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_StartAt_System_Windows_Controls_Primitives_GeneratorPosition_System_Windows_Controls_Primitives_GeneratorDirection_System_Boolean_">System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt(GeneratorPosition,GeneratorDirection,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IRecyclingItemContainerGenerator_Recycle_System_Windows_Controls_Primitives_GeneratorPosition_System_Int32_">System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator.Recycle(GeneratorPosition,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemContainerGenerator_System_Windows_IWeakEventListener_ReceiveWeakEvent_System_Type_System_Object_System_EventArgs_">System.Windows.IWeakEventListener.ReceiveWeakEvent(Type,Object,EventArgs)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_Items">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_Items_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Items</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ReadOnlyCollection&lt;object&gt; Items { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="../system/system.object">Object</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_Status">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_Status_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Status</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Controls.Primitives.GeneratorStatus Status { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.windows.controls.primitives/system.windows.controls.primitives.generatorstatus">GeneratorStatus</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_ContainerFromIndex_System_Int32_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_ContainerFromIndex_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContainerFromIndex(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.DependencyObject ContainerFromIndex (int index);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_ContainerFromItem_System_Object_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_ContainerFromItem_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContainerFromItem(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.DependencyObject ContainerFromItem (object item);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>item</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_GenerateBatches">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_GenerateBatches_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GenerateBatches()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public IDisposable GenerateBatches ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.idisposable">IDisposable</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_IndexFromContainer_System_Windows_DependencyObject_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_IndexFromContainer_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IndexFromContainer(DependencyObject)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int IndexFromContainer (System.Windows.DependencyObject container);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>container</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_IndexFromContainer_System_Windows_DependencyObject_System_Boolean_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_IndexFromContainer_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IndexFromContainer(DependencyObject,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int IndexFromContainer (System.Windows.DependencyObject container, bool returnLocalIndex);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>container</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>returnLocalIndex</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_ItemFromContainer_System_Windows_DependencyObject_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_ItemFromContainer_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ItemFromContainer(DependencyObject)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public object ItemFromContainer (System.Windows.DependencyObject container);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>container</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="events">
+        <h2>Events
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_ItemsChanged">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ItemsChanged</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event System.Windows.Controls.Primitives.ItemsChangedEventHandler ItemsChanged;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_StatusChanged">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StatusChanged</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event EventHandler StatusChanged;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="eii">
+        <h2>Explicit Interface Implementations
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_GenerateNext">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_GenerateNext_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">System.Windows.DependencyObject IItemContainerGenerator.GenerateNext ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_GenerateNext_System_Boolean__">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_GenerateNext_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.Controls.Primitives.IItemContainerGenerator.GenerateNext(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">System.Windows.DependencyObject IItemContainerGenerator.GenerateNext (out bool isNewlyRealized);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>isNewlyRealized</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_GeneratorPositionFromIndex_System_Int32_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_GeneratorPositionFromIndex_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.Controls.Primitives.IItemContainerGenerator.GeneratorPositionFromIndex(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">System.Windows.Controls.Primitives.GeneratorPosition IItemContainerGenerator.GeneratorPositionFromIndex (int itemIndex);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>itemIndex</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.windows.controls.primitives/system.windows.controls.primitives.generatorposition">GeneratorPosition</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_GetItemContainerGeneratorForPanel_System_Windows_Controls_Panel_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_GetItemContainerGeneratorForPanel_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.Controls.Primitives.IItemContainerGenerator.GetItemContainerGeneratorForPanel(Panel)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">System.Windows.Controls.ItemContainerGenerator IItemContainerGenerator.GetItemContainerGeneratorForPanel (System.Windows.Controls.Panel panel);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>panel</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.controls.panel">Panel</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.controls.itemcontainergenerator">ItemContainerGenerator</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_IndexFromGeneratorPosition_System_Windows_Controls_Primitives_GeneratorPosition_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_IndexFromGeneratorPosition_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.Controls.Primitives.IItemContainerGenerator.IndexFromGeneratorPosition(GeneratorPosition)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">int IItemContainerGenerator.IndexFromGeneratorPosition (System.Windows.Controls.Primitives.GeneratorPosition position);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>position</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows.controls.primitives/system.windows.controls.primitives.generatorposition">GeneratorPosition</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_PrepareItemContainer_System_Windows_DependencyObject_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_PrepareItemContainer_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.Controls.Primitives.IItemContainerGenerator.PrepareItemContainer(DependencyObject)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IItemContainerGenerator.PrepareItemContainer (System.Windows.DependencyObject container);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>container</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_Remove_System_Windows_Controls_Primitives_GeneratorPosition_System_Int32_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_Remove_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.Controls.Primitives.IItemContainerGenerator.Remove(GeneratorPosition,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IItemContainerGenerator.Remove (System.Windows.Controls.Primitives.GeneratorPosition position, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>position</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows.controls.primitives/system.windows.controls.primitives.generatorposition">GeneratorPosition</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_RemoveAll">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_RemoveAll_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.Controls.Primitives.IItemContainerGenerator.RemoveAll()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IItemContainerGenerator.RemoveAll ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_StartAt_System_Windows_Controls_Primitives_GeneratorPosition_System_Windows_Controls_Primitives_GeneratorDirection_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_StartAt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt(GeneratorPosition,GeneratorDirection)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">IDisposable IItemContainerGenerator.StartAt (System.Windows.Controls.Primitives.GeneratorPosition position, System.Windows.Controls.Primitives.GeneratorDirection direction);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>position</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows.controls.primitives/system.windows.controls.primitives.generatorposition">GeneratorPosition</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>direction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows.controls.primitives/system.windows.controls.primitives.generatordirection">GeneratorDirection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.idisposable">IDisposable</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_StartAt_System_Windows_Controls_Primitives_GeneratorPosition_System_Windows_Controls_Primitives_GeneratorDirection_System_Boolean_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IItemContainerGenerator_StartAt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.Controls.Primitives.IItemContainerGenerator.StartAt(GeneratorPosition,GeneratorDirection,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">IDisposable IItemContainerGenerator.StartAt (System.Windows.Controls.Primitives.GeneratorPosition position, System.Windows.Controls.Primitives.GeneratorDirection direction, bool allowStartAtRealizedItem);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>position</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows.controls.primitives/system.windows.controls.primitives.generatorposition">GeneratorPosition</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>direction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows.controls.primitives/system.windows.controls.primitives.generatordirection">GeneratorDirection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>allowStartAtRealizedItem</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.idisposable">IDisposable</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IRecyclingItemContainerGenerator_Recycle_System_Windows_Controls_Primitives_GeneratorPosition_System_Int32_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_System_Windows_Controls_Primitives_IRecyclingItemContainerGenerator_Recycle_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator.Recycle(GeneratorPosition,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IRecyclingItemContainerGenerator.Recycle (System.Windows.Controls.Primitives.GeneratorPosition position, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>position</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows.controls.primitives/system.windows.controls.primitives.generatorposition">GeneratorPosition</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemContainerGenerator_System_Windows_IWeakEventListener_ReceiveWeakEvent_System_Type_System_Object_System_EventArgs_">
+    
+            <a id="System_Windows_Controls_ItemContainerGenerator_System_Windows_IWeakEventListener_ReceiveWeakEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.IWeakEventListener.ReceiveWeakEvent(Type,Object,EventArgs)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool IWeakEventListener.ReceiveWeakEvent (Type managerType, object sender, EventArgs e);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>managerType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>sender</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>e</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.eventargs">EventArgs</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

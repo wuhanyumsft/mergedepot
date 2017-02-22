@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="_EventInfo interface">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Runtime.InteropServices/System.Runtime.InteropServices._EventInfo.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Runtime.InteropServices/System.Runtime.InteropServices._EventInfo.yml">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.AddEventHandler">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.Attributes">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.DeclaringType">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.Equals">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.EventHandlerType">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.GetAddMethod">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.GetCustomAttributes">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.GetHashCode">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.GetIDsOfNames">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.GetRaiseMethod">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.GetRemoveMethod">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.GetType">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.GetTypeInfo">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.GetTypeInfoCount">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.Invoke">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.IsDefined">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.IsMulticast">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.IsSpecialName">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.MemberType">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.Name">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.ReflectedType">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.RemoveEventHandler">
+<meta name="APIName" content="System.Runtime.InteropServices._EventInfo.ToString">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="48e514af-d25c-4477-f8f5-dd1bc7da8321">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Runtime.InteropServices._EventInfo">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.runtime.interopservices/system.runtime.interopservices._eventinfo" rel="canonical">
+    <title>_EventInfo interface | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Runtime_InteropServices__EventInfo">
+      <span class="lang-csharp">_EventInfo</span>
+        Interface
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.CLSCompliant(false)]
+[System.Runtime.InteropServices.ComVisible(true)]
+[System.Runtime.InteropServices.Guid(&quot;9DE59C64-D889-35A1-B897-587D74469E5B&quot;)]
+[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)]
+[System.Runtime.InteropServices.TypeLibImportClass(typeof(System.Reflection.EventInfo))]
+public interface _EventInfo</code></pre>
+    
+    
+    
+    
+    
+    
+    
+    
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_Attributes">Attributes</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_DeclaringType">DeclaringType</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_EventHandlerType">EventHandlerType</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_IsMulticast">IsMulticast</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_IsSpecialName">IsSpecialName</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_MemberType">MemberType</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_Name">Name</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_ReflectedType">ReflectedType</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_AddEventHandler_System_Object_System_Delegate_">AddEventHandler(Object,Delegate)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_Equals_System_Object_">Equals(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetAddMethod">GetAddMethod()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetAddMethod_System_Boolean_">GetAddMethod(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetCustomAttributes_System_Boolean_">GetCustomAttributes(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetCustomAttributes_System_Type_System_Boolean_">GetCustomAttributes(Type,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetHashCode">GetHashCode()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetIDsOfNames_System_Guid__System_IntPtr_System_UInt32_System_UInt32_System_IntPtr_">GetIDsOfNames(Guid,IntPtr,UInt32,UInt32,IntPtr)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetRaiseMethod">GetRaiseMethod()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetRaiseMethod_System_Boolean_">GetRaiseMethod(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetRemoveMethod">GetRemoveMethod()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetRemoveMethod_System_Boolean_">GetRemoveMethod(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetType">GetType()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetTypeInfo_System_UInt32_System_UInt32_System_IntPtr_">GetTypeInfo(UInt32,UInt32,IntPtr)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_GetTypeInfoCount_System_UInt32__">GetTypeInfoCount(UInt32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_Invoke_System_UInt32_System_Guid__System_UInt32_System_Int16_System_IntPtr_System_IntPtr_System_IntPtr_System_IntPtr_">Invoke(UInt32,Guid,UInt32,Int16,IntPtr,IntPtr,IntPtr,IntPtr)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_IsDefined_System_Type_System_Boolean_">IsDefined(Type,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_RemoveEventHandler_System_Object_System_Delegate_">RemoveEventHandler(Object,Delegate)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Runtime_InteropServices__EventInfo_ToString">ToString()</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_Attributes">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_Attributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Attributes</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Reflection.EventAttributes Attributes { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.reflection/system.reflection.eventattributes">EventAttributes</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_DeclaringType">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_DeclaringType_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeclaringType</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Type DeclaringType { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_EventHandlerType">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_EventHandlerType_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventHandlerType</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Type EventHandlerType { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_IsMulticast">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_IsMulticast_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsMulticast</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool IsMulticast { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_IsSpecialName">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_IsSpecialName_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsSpecialName</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool IsSpecialName { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_MemberType">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_MemberType_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MemberType</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Reflection.MemberTypes MemberType { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.reflection/system.reflection.membertypes">MemberTypes</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_Name">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_Name_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Name</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Name { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_ReflectedType">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_ReflectedType_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReflectedType</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Type ReflectedType { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_AddEventHandler_System_Object_System_Delegate_">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_AddEventHandler_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddEventHandler(Object,Delegate)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void AddEventHandler (object target, Delegate handler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>target</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>handler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.delegate">Delegate</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_Equals_System_Object_">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_Equals_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Equals(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool Equals (object other);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>other</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetAddMethod">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetAddMethod_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetAddMethod()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Reflection.MethodInfo GetAddMethod ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.reflection/system.reflection.methodinfo">MethodInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetAddMethod_System_Boolean_">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetAddMethod_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetAddMethod(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Reflection.MethodInfo GetAddMethod (bool nonPublic);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>nonPublic</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.reflection/system.reflection.methodinfo">MethodInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetCustomAttributes_System_Boolean_">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public object[] GetCustomAttributes (bool inherit);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetCustomAttributes_System_Type_System_Boolean_">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(Type,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public object[] GetCustomAttributes (Type attributeType, bool inherit);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetHashCode">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetHashCode_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetHashCode()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int GetHashCode ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetIDsOfNames_System_Guid__System_IntPtr_System_UInt32_System_UInt32_System_IntPtr_">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetIDsOfNames_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetIDsOfNames(Guid,IntPtr,UInt32,UInt32,IntPtr)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>riid</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>rgszNames</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cNames</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.uint32">UInt32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>lcid</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.uint32">UInt32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>rgDispId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetRaiseMethod">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetRaiseMethod_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetRaiseMethod()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Reflection.MethodInfo GetRaiseMethod ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.reflection/system.reflection.methodinfo">MethodInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetRaiseMethod_System_Boolean_">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetRaiseMethod_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetRaiseMethod(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Reflection.MethodInfo GetRaiseMethod (bool nonPublic);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>nonPublic</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.reflection/system.reflection.methodinfo">MethodInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetRemoveMethod">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetRemoveMethod_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetRemoveMethod()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Reflection.MethodInfo GetRemoveMethod ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.reflection/system.reflection.methodinfo">MethodInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetRemoveMethod_System_Boolean_">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetRemoveMethod_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetRemoveMethod(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Reflection.MethodInfo GetRemoveMethod (bool nonPublic);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>nonPublic</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.reflection/system.reflection.methodinfo">MethodInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetType">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetType_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetType()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Type GetType ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetTypeInfo_System_UInt32_System_UInt32_System_IntPtr_">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetTypeInfo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetTypeInfo(UInt32,UInt32,IntPtr)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>iTInfo</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.uint32">UInt32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>lcid</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.uint32">UInt32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>ppTInfo</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_GetTypeInfoCount_System_UInt32__">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_GetTypeInfoCount_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetTypeInfoCount(UInt32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void GetTypeInfoCount (out uint pcTInfo);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pcTInfo</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.uint32">UInt32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_Invoke_System_UInt32_System_Guid__System_UInt32_System_Int16_System_IntPtr_System_IntPtr_System_IntPtr_System_IntPtr_">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_Invoke_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Invoke(UInt32,Guid,UInt32,Int16,IntPtr,IntPtr,IntPtr,IntPtr)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dispIdMember</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.uint32">UInt32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>riid</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>lcid</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.uint32">UInt32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>wFlags</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int16">Int16</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pDispParams</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pVarResult</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pExcepInfo</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>puArgErr</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_IsDefined_System_Type_System_Boolean_">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_IsDefined_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsDefined(Type,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool IsDefined (Type attributeType, bool inherit);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_RemoveEventHandler_System_Object_System_Delegate_">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_RemoveEventHandler_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveEventHandler(Object,Delegate)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void RemoveEventHandler (object target, Delegate handler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>target</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>handler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.delegate">Delegate</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Runtime_InteropServices__EventInfo_ToString">
+    
+            <a id="System_Runtime_InteropServices__EventInfo_ToString_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ToString()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string ToString ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

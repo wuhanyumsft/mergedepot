@@ -1,0 +1,3504 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="DefaultExpressionVisitor class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Data.Common.CommandTrees/System.Data.Common.CommandTrees.DefaultExpressionVisitor.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Data.Common.CommandTrees/System.Data.Common.CommandTrees.DefaultExpressionVisitor.yml">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor..ctor">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.OnEnterScope">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.OnExitScope">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.OnExpressionReplaced">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.OnVariableRebound">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.Visit">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitAggregate">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitEntitySet">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitExpression">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitExpressionBinding">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitExpressionBindingList">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitExpressionList">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitFunction">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitFunctionAggregate">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitGroupAggregate">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitGroupExpressionBinding">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitLambda">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitSortClause">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitSortOrder">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitType">
+<meta name="APIName" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor.VisitTypeUsage">
+<meta name="APILocation" content="System.Data.Entity.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="57239d13-6e1a-cf9d-5654-bdced27a23b8">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Data.Common.CommandTrees.DefaultExpressionVisitor">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.data.common.commandtrees/system.data.common.commandtrees.defaultexpressionvisitor" rel="canonical">
+    <title>DefaultExpressionVisitor class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Data_Common_CommandTrees_DefaultExpressionVisitor">
+      <span class="lang-csharp">DefaultExpressionVisitor</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public class DefaultExpressionVisitor : System.Data.Common.CommandTrees.DbExpressionVisitor&lt;System.Data.Common.CommandTrees.DbExpression&gt;</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="system.data.common.commandtrees.dbexpressionvisitor-1">System.Data.Common.CommandTrees.DbExpressionVisitor<system.data.common.commandtrees.dbexpression></system.data.common.commandtrees.dbexpression></a>
+          </div>
+        </li>
+      <li class="l2">
+        <div class="xref">
+          <div class="lang-csharp">DefaultExpressionVisitor</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor__ctor">DefaultExpressionVisitor()</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_OnEnterScope_System_Collections_Generic_IEnumerable_System_Data_Common_CommandTrees_DbVariableReferenceExpression__">OnEnterScope(IEnumerable&lt;DbVariableReferenceExpression&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_OnExitScope">OnExitScope()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_OnExpressionReplaced_System_Data_Common_CommandTrees_DbExpression_System_Data_Common_CommandTrees_DbExpression_">OnExpressionReplaced(DbExpression,DbExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_OnVariableRebound_System_Data_Common_CommandTrees_DbVariableReferenceExpression_System_Data_Common_CommandTrees_DbVariableReferenceExpression_">OnVariableRebound(DbVariableReferenceExpression,DbVariableReferenceExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbAndExpression_">Visit(DbAndExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbApplyExpression_">Visit(DbApplyExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbArithmeticExpression_">Visit(DbArithmeticExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbCaseExpression_">Visit(DbCaseExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbCastExpression_">Visit(DbCastExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbComparisonExpression_">Visit(DbComparisonExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbConstantExpression_">Visit(DbConstantExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbCrossJoinExpression_">Visit(DbCrossJoinExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbDerefExpression_">Visit(DbDerefExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbDistinctExpression_">Visit(DbDistinctExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbElementExpression_">Visit(DbElementExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbEntityRefExpression_">Visit(DbEntityRefExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbExceptExpression_">Visit(DbExceptExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbExpression_">Visit(DbExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbFilterExpression_">Visit(DbFilterExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbFunctionExpression_">Visit(DbFunctionExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbGroupByExpression_">Visit(DbGroupByExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbIntersectExpression_">Visit(DbIntersectExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbIsEmptyExpression_">Visit(DbIsEmptyExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbIsNullExpression_">Visit(DbIsNullExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbIsOfExpression_">Visit(DbIsOfExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbJoinExpression_">Visit(DbJoinExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbLambdaExpression_">Visit(DbLambdaExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbLikeExpression_">Visit(DbLikeExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbLimitExpression_">Visit(DbLimitExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbNewInstanceExpression_">Visit(DbNewInstanceExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbNotExpression_">Visit(DbNotExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbNullExpression_">Visit(DbNullExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbOfTypeExpression_">Visit(DbOfTypeExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbOrExpression_">Visit(DbOrExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbParameterReferenceExpression_">Visit(DbParameterReferenceExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbProjectExpression_">Visit(DbProjectExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbPropertyExpression_">Visit(DbPropertyExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbQuantifierExpression_">Visit(DbQuantifierExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbRefExpression_">Visit(DbRefExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbRefKeyExpression_">Visit(DbRefKeyExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbRelationshipNavigationExpression_">Visit(DbRelationshipNavigationExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbScanExpression_">Visit(DbScanExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbSkipExpression_">Visit(DbSkipExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbSortExpression_">Visit(DbSortExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbTreatExpression_">Visit(DbTreatExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbUnionAllExpression_">Visit(DbUnionAllExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbVariableReferenceExpression_">Visit(DbVariableReferenceExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitAggregate_System_Data_Common_CommandTrees_DbAggregate_">VisitAggregate(DbAggregate)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitEntitySet_System_Data_Metadata_Edm_EntitySetBase_">VisitEntitySet(EntitySetBase)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitExpression_System_Data_Common_CommandTrees_DbExpression_">VisitExpression(DbExpression)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitExpressionBinding_System_Data_Common_CommandTrees_DbExpressionBinding_">VisitExpressionBinding(DbExpressionBinding)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitExpressionBindingList_System_Collections_Generic_IList_System_Data_Common_CommandTrees_DbExpressionBinding__">VisitExpressionBindingList(IList&lt;DbExpressionBinding&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitExpressionList_System_Collections_Generic_IList_System_Data_Common_CommandTrees_DbExpression__">VisitExpressionList(IList&lt;DbExpression&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitFunction_System_Data_Metadata_Edm_EdmFunction_">VisitFunction(EdmFunction)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitFunctionAggregate_System_Data_Common_CommandTrees_DbFunctionAggregate_">VisitFunctionAggregate(DbFunctionAggregate)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitGroupAggregate_System_Data_Common_CommandTrees_DbGroupAggregate_">VisitGroupAggregate(DbGroupAggregate)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitGroupExpressionBinding_System_Data_Common_CommandTrees_DbGroupExpressionBinding_">VisitGroupExpressionBinding(DbGroupExpressionBinding)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitLambda_System_Data_Common_CommandTrees_DbLambda_">VisitLambda(DbLambda)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitSortClause_System_Data_Common_CommandTrees_DbSortClause_">VisitSortClause(DbSortClause)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitSortOrder_System_Collections_Generic_IList_System_Data_Common_CommandTrees_DbSortClause__">VisitSortOrder(IList&lt;DbSortClause&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitType_System_Data_Metadata_Edm_EdmType_">VisitType(EdmType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitTypeUsage_System_Data_Metadata_Edm_TypeUsage_">VisitTypeUsage(TypeUsage)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor__ctor">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DefaultExpressionVisitor()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected DefaultExpressionVisitor ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_OnEnterScope_System_Collections_Generic_IEnumerable_System_Data_Common_CommandTrees_DbVariableReferenceExpression__">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_OnEnterScope_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnEnterScope(IEnumerable&lt;DbVariableReferenceExpression&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void OnEnterScope (System.Collections.Generic.IEnumerable&lt;System.Data.Common.CommandTrees.DbVariableReferenceExpression&gt; scopeVariables);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>scopeVariables</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="system.data.common.commandtrees.dbvariablereferenceexpression">DbVariableReferenceExpression</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_OnExitScope">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_OnExitScope_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnExitScope()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void OnExitScope ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_OnExpressionReplaced_System_Data_Common_CommandTrees_DbExpression_System_Data_Common_CommandTrees_DbExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_OnExpressionReplaced_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnExpressionReplaced(DbExpression,DbExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void OnExpressionReplaced (System.Data.Common.CommandTrees.DbExpression oldExpression, System.Data.Common.CommandTrees.DbExpression newExpression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>oldExpression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>newExpression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_OnVariableRebound_System_Data_Common_CommandTrees_DbVariableReferenceExpression_System_Data_Common_CommandTrees_DbVariableReferenceExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_OnVariableRebound_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnVariableRebound(DbVariableReferenceExpression,DbVariableReferenceExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void OnVariableRebound (System.Data.Common.CommandTrees.DbVariableReferenceExpression fromVarRef, System.Data.Common.CommandTrees.DbVariableReferenceExpression toVarRef);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>fromVarRef</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbvariablereferenceexpression">DbVariableReferenceExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>toVarRef</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbvariablereferenceexpression">DbVariableReferenceExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbAndExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbAndExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbAndExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbandexpression">DbAndExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbApplyExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbApplyExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbApplyExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbapplyexpression">DbApplyExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbArithmeticExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbArithmeticExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbArithmeticExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbarithmeticexpression">DbArithmeticExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbCaseExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbCaseExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbCaseExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbcaseexpression">DbCaseExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbCastExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbCastExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbCastExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbcastexpression">DbCastExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbComparisonExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbComparisonExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbComparisonExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbcomparisonexpression">DbComparisonExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbConstantExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbConstantExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbConstantExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbconstantexpression">DbConstantExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbCrossJoinExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbCrossJoinExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbCrossJoinExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbcrossjoinexpression">DbCrossJoinExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbDerefExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbDerefExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbDerefExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbderefexpression">DbDerefExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbDistinctExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbDistinctExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbDistinctExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbdistinctexpression">DbDistinctExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbElementExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbElementExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbElementExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbelementexpression">DbElementExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbEntityRefExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbEntityRefExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbEntityRefExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbentityrefexpression">DbEntityRefExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbExceptExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbExceptExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbExceptExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexceptexpression">DbExceptExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbFilterExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbFilterExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbFilterExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbfilterexpression">DbFilterExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbFunctionExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbFunctionExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbFunctionExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbfunctionexpression">DbFunctionExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbGroupByExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbGroupByExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbGroupByExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbgroupbyexpression">DbGroupByExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbIntersectExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbIntersectExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbIntersectExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbintersectexpression">DbIntersectExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbIsEmptyExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbIsEmptyExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbIsEmptyExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbisemptyexpression">DbIsEmptyExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbIsNullExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbIsNullExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbIsNullExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbisnullexpression">DbIsNullExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbIsOfExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbIsOfExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbIsOfExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbisofexpression">DbIsOfExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbJoinExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbJoinExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbJoinExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbjoinexpression">DbJoinExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbLambdaExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbLambdaExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbLambdaExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dblambdaexpression">DbLambdaExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbLikeExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbLikeExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbLikeExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dblikeexpression">DbLikeExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbLimitExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbLimitExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbLimitExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dblimitexpression">DbLimitExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbNewInstanceExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbNewInstanceExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbNewInstanceExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbnewinstanceexpression">DbNewInstanceExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbNotExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbNotExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbNotExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbnotexpression">DbNotExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbNullExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbNullExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbNullExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbnullexpression">DbNullExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbOfTypeExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbOfTypeExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbOfTypeExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dboftypeexpression">DbOfTypeExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbOrExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbOrExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbOrExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dborexpression">DbOrExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbParameterReferenceExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbParameterReferenceExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbParameterReferenceExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbparameterreferenceexpression">DbParameterReferenceExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbProjectExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbProjectExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbProjectExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbprojectexpression">DbProjectExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbPropertyExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbPropertyExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbPropertyExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbpropertyexpression">DbPropertyExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbQuantifierExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbQuantifierExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbQuantifierExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbquantifierexpression">DbQuantifierExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbRefExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbRefExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbRefExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbrefexpression">DbRefExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbRefKeyExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbRefKeyExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbRefKeyExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbrefkeyexpression">DbRefKeyExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbRelationshipNavigationExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbRelationshipNavigationExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbRelationshipNavigationExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbrelationshipnavigationexpression">DbRelationshipNavigationExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbScanExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbScanExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbScanExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbscanexpression">DbScanExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbSkipExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbSkipExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbSkipExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbskipexpression">DbSkipExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbSortExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbSortExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbSortExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbsortexpression">DbSortExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbTreatExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbTreatExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbTreatExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbtreatexpression">DbTreatExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbUnionAllExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbUnionAllExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbUnionAllExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbunionallexpression">DbUnionAllExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_System_Data_Common_CommandTrees_DbVariableReferenceExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_Visit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Visit(DbVariableReferenceExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Data.Common.CommandTrees.DbExpression Visit (System.Data.Common.CommandTrees.DbVariableReferenceExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbvariablereferenceexpression">DbVariableReferenceExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitAggregate_System_Data_Common_CommandTrees_DbAggregate_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitAggregate_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitAggregate(DbAggregate)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Common.CommandTrees.DbAggregate VisitAggregate (System.Data.Common.CommandTrees.DbAggregate aggregate);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>aggregate</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbaggregate">DbAggregate</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbaggregate">DbAggregate</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitEntitySet_System_Data_Metadata_Edm_EntitySetBase_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitEntitySet_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitEntitySet(EntitySetBase)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Metadata.Edm.EntitySetBase VisitEntitySet (System.Data.Metadata.Edm.EntitySetBase entitySet);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>entitySet</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.entitysetbase">EntitySetBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.entitysetbase">EntitySetBase</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitExpression_System_Data_Common_CommandTrees_DbExpression_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitExpression_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitExpression(DbExpression)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Common.CommandTrees.DbExpression VisitExpression (System.Data.Common.CommandTrees.DbExpression expression);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>expression</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitExpressionBinding_System_Data_Common_CommandTrees_DbExpressionBinding_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitExpressionBinding_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitExpressionBinding(DbExpressionBinding)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Common.CommandTrees.DbExpressionBinding VisitExpressionBinding (System.Data.Common.CommandTrees.DbExpressionBinding binding);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>binding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpressionbinding">DbExpressionBinding</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbexpressionbinding">DbExpressionBinding</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitExpressionBindingList_System_Collections_Generic_IList_System_Data_Common_CommandTrees_DbExpressionBinding__">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitExpressionBindingList_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitExpressionBindingList(IList&lt;DbExpressionBinding&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Collections.Generic.IList&lt;System.Data.Common.CommandTrees.DbExpressionBinding&gt; VisitExpressionBindingList (System.Collections.Generic.IList&lt;System.Data.Common.CommandTrees.DbExpressionBinding&gt; list);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>list</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="system.data.common.commandtrees.dbexpressionbinding">DbExpressionBinding</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="system.data.common.commandtrees.dbexpressionbinding">DbExpressionBinding</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitExpressionList_System_Collections_Generic_IList_System_Data_Common_CommandTrees_DbExpression__">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitExpressionList_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitExpressionList(IList&lt;DbExpression&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Collections.Generic.IList&lt;System.Data.Common.CommandTrees.DbExpression&gt; VisitExpressionList (System.Collections.Generic.IList&lt;System.Data.Common.CommandTrees.DbExpression&gt; list);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>list</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="system.data.common.commandtrees.dbexpression">DbExpression</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitFunction_System_Data_Metadata_Edm_EdmFunction_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitFunction_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitFunction(EdmFunction)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Metadata.Edm.EdmFunction VisitFunction (System.Data.Metadata.Edm.EdmFunction functionMetadata);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>functionMetadata</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.edmfunction">EdmFunction</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.edmfunction">EdmFunction</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitFunctionAggregate_System_Data_Common_CommandTrees_DbFunctionAggregate_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitFunctionAggregate_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitFunctionAggregate(DbFunctionAggregate)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Common.CommandTrees.DbFunctionAggregate VisitFunctionAggregate (System.Data.Common.CommandTrees.DbFunctionAggregate aggregate);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>aggregate</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbfunctionaggregate">DbFunctionAggregate</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbfunctionaggregate">DbFunctionAggregate</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitGroupAggregate_System_Data_Common_CommandTrees_DbGroupAggregate_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitGroupAggregate_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitGroupAggregate(DbGroupAggregate)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Common.CommandTrees.DbGroupAggregate VisitGroupAggregate (System.Data.Common.CommandTrees.DbGroupAggregate aggregate);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>aggregate</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbgroupaggregate">DbGroupAggregate</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbgroupaggregate">DbGroupAggregate</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitGroupExpressionBinding_System_Data_Common_CommandTrees_DbGroupExpressionBinding_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitGroupExpressionBinding_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitGroupExpressionBinding(DbGroupExpressionBinding)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Common.CommandTrees.DbGroupExpressionBinding VisitGroupExpressionBinding (System.Data.Common.CommandTrees.DbGroupExpressionBinding binding);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>binding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbgroupexpressionbinding">DbGroupExpressionBinding</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbgroupexpressionbinding">DbGroupExpressionBinding</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitLambda_System_Data_Common_CommandTrees_DbLambda_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitLambda_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitLambda(DbLambda)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Common.CommandTrees.DbLambda VisitLambda (System.Data.Common.CommandTrees.DbLambda lambda);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>lambda</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dblambda">DbLambda</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dblambda">DbLambda</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitSortClause_System_Data_Common_CommandTrees_DbSortClause_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitSortClause_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitSortClause(DbSortClause)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Common.CommandTrees.DbSortClause VisitSortClause (System.Data.Common.CommandTrees.DbSortClause clause);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>clause</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbsortclause">DbSortClause</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.commandtrees.dbsortclause">DbSortClause</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitSortOrder_System_Collections_Generic_IList_System_Data_Common_CommandTrees_DbSortClause__">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitSortOrder_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitSortOrder(IList&lt;DbSortClause&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Collections.Generic.IList&lt;System.Data.Common.CommandTrees.DbSortClause&gt; VisitSortOrder (System.Collections.Generic.IList&lt;System.Data.Common.CommandTrees.DbSortClause&gt; sortOrder);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>sortOrder</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="system.data.common.commandtrees.dbsortclause">DbSortClause</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="system.data.common.commandtrees.dbsortclause">DbSortClause</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitType_System_Data_Metadata_Edm_EdmType_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitType_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitType(EdmType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Metadata.Edm.EdmType VisitType (System.Data.Metadata.Edm.EdmType type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.edmtype">EdmType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.edmtype">EdmType</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitTypeUsage_System_Data_Metadata_Edm_TypeUsage_">
+    
+            <a id="System_Data_Common_CommandTrees_DefaultExpressionVisitor_VisitTypeUsage_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VisitTypeUsage(TypeUsage)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Metadata.Edm.TypeUsage VisitTypeUsage (System.Data.Metadata.Edm.TypeUsage type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.typeusage">TypeUsage</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.typeusage">TypeUsage</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3224 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="ItemCollection class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Windows.Controls/System.Windows.Controls.ItemCollection.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Windows.Controls/System.Windows.Controls.ItemCollection.yml">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.Add">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.CanChangeLiveFiltering">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.CanChangeLiveGrouping">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.CanChangeLiveSorting">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.CanFilter">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.CanGroup">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.CanSort">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.Clear">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.Contains">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.CopyTo">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.Count">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.CurrentItem">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.CurrentPosition">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.DeferRefresh">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.Filter">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.GetEnumerator">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.GetItemAt">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.GroupDescriptions">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.Groups">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.IndexOf">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.Insert">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.IsCurrentAfterLast">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.IsCurrentBeforeFirst">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.IsEmpty">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.IsLiveFiltering">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.IsLiveGrouping">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.IsLiveSorting">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.Item">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.LiveFilteringProperties">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.LiveGroupingProperties">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.LiveSortingProperties">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.MoveCurrentTo">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.MoveCurrentToFirst">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.MoveCurrentToLast">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.MoveCurrentToNext">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.MoveCurrentToPosition">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.MoveCurrentToPrevious">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.NeedsRefresh">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.PassesFilter">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.RefreshOverride">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.Remove">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.RemoveAt">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.SortDescriptions">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.SourceCollection">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.Collections.ICollection.IsSynchronized">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.Collections.ICollection.SyncRoot">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.Collections.IList.IsFixedSize">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.Collections.IList.IsReadOnly">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.AddNew">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.CanAddNew">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.CanCancelEdit">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.CancelEdit">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.CancelNew">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.CanRemove">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.CommitEdit">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.CommitNew">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.CurrentAddItem">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.CurrentEditItem">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.EditItem">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.IsAddingNew">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.IsEditingItem">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.NewItemPlaceholderPosition">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.Remove">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionView.RemoveAt">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionViewAddNewItem.AddNewItem">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IEditableCollectionViewAddNewItem.CanAddNewItem">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.ComponentModel.IItemProperties.ItemProperties">
+<meta name="APIName" content="System.Windows.Controls.ItemCollection.System.Windows.IWeakEventListener.ReceiveWeakEvent">
+<meta name="APILocation" content="PresentationFramework.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="fdd11652-4f70-da21-58bd-8a5ad1d12f3b">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Windows.Controls.ItemCollection">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.windows.controls/system.windows.controls.itemcollection" rel="canonical">
+    <title>ItemCollection class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Windows_Controls_ItemCollection">
+      <span class="lang-csharp">ItemCollection</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Windows.Localizability(System.Windows.LocalizationCategory.Ignore)]
+public sealed class ItemCollection : System.Windows.Data.CollectionView, System.Collections.IList, System.ComponentModel.ICollectionViewLiveShaping, System.ComponentModel.IEditableCollectionViewAddNewItem, System.ComponentModel.IItemProperties, System.Windows.IWeakEventListener</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.threading.dispatcherobject(v=vs.110).aspx">DispatcherObject</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview">System.Windows.Data.CollectionView</a>
+          </div>
+        </li>
+      <li class="l2">
+        <div class="xref">
+          <div class="lang-csharp">ItemCollection</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_AllowsCrossThreadChanges">AllowsCrossThreadChanges</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_ClearChangeLog">ClearChangeLog()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_ClearPendingChanges">ClearPendingChanges()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_CollectionChanged">CollectionChanged</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_Comparer">Comparer</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_Culture">Culture</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_CurrentChanged">CurrentChanged</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_CurrentChanging">CurrentChanging</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_DetachFromSourceCollection">DetachFromSourceCollection()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_IsCurrentInSync">IsCurrentInSync</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_IsDynamic">IsDynamic</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_IsInUse">IsInUse</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_IsRefreshDeferred">IsRefreshDeferred</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_NewItemPlaceholder">NewItemPlaceholder</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_OKToChangeCurrent">OKToChangeCurrent()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_OnAllowsCrossThreadChangesChanged">OnAllowsCrossThreadChangesChanged()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_OnBeginChangeLogging_System_Collections_Specialized_NotifyCollectionChangedEventArgs_">OnBeginChangeLogging(NotifyCollectionChangedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_OnCollectionChanged_System_Collections_Specialized_NotifyCollectionChangedEventArgs_">OnCollectionChanged(NotifyCollectionChangedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_OnCollectionChanged_System_Object_System_Collections_Specialized_NotifyCollectionChangedEventArgs_">OnCollectionChanged(Object,NotifyCollectionChangedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_OnCurrentChanged">OnCurrentChanged()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_OnCurrentChanging">OnCurrentChanging()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_OnCurrentChanging_System_ComponentModel_CurrentChangingEventArgs_">OnCurrentChanging(CurrentChangingEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_OnPropertyChanged_System_ComponentModel_PropertyChangedEventArgs_">OnPropertyChanged(PropertyChangedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_ProcessCollectionChanged_System_Collections_Specialized_NotifyCollectionChangedEventArgs_">ProcessCollectionChanged(NotifyCollectionChangedEventArgs)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_ProcessPendingChanges">ProcessPendingChanges()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_PropertyChanged">PropertyChanged</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_Refresh">Refresh()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_RefreshOrDefer">RefreshOrDefer()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_SetCurrent_System_Object_System_Int32_">SetCurrent(Object,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_SetCurrent_System_Object_System_Int32_System_Int32_">SetCurrent(Object,Int32,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_System_Collections_IEnumerable_GetEnumerator">System.Collections.IEnumerable.GetEnumerator()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.data/system.windows.data.collectionview#System_Windows_Data_CollectionView_UpdatedOutsideDispatcher">UpdatedOutsideDispatcher</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_CanChangeLiveFiltering">CanChangeLiveFiltering</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_CanChangeLiveGrouping">CanChangeLiveGrouping</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_CanChangeLiveSorting">CanChangeLiveSorting</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_CanFilter">CanFilter</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_CanGroup">CanGroup</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_CanSort">CanSort</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_Count">Count</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_CurrentItem">CurrentItem</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_CurrentPosition">CurrentPosition</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_Filter">Filter</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_GroupDescriptions">GroupDescriptions</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_Groups">Groups</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_IsCurrentAfterLast">IsCurrentAfterLast</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_IsCurrentBeforeFirst">IsCurrentBeforeFirst</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_IsEmpty">IsEmpty</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_IsLiveFiltering">IsLiveFiltering</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_IsLiveGrouping">IsLiveGrouping</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_IsLiveSorting">IsLiveSorting</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_Item_System_Int32_">Item(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_LiveFilteringProperties">LiveFilteringProperties</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_LiveGroupingProperties">LiveGroupingProperties</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_LiveSortingProperties">LiveSortingProperties</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_NeedsRefresh">NeedsRefresh</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_SortDescriptions">SortDescriptions</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_SourceCollection">SourceCollection</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_Add_System_Object_">Add(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_Clear">Clear()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_Contains_System_Object_">Contains(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_CopyTo_System_Array_System_Int32_">CopyTo(Array,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_DeferRefresh">DeferRefresh()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_GetEnumerator">GetEnumerator()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_GetItemAt_System_Int32_">GetItemAt(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_IndexOf_System_Object_">IndexOf(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_Insert_System_Int32_System_Object_">Insert(Int32,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_MoveCurrentTo_System_Object_">MoveCurrentTo(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_MoveCurrentToFirst">MoveCurrentToFirst()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_MoveCurrentToLast">MoveCurrentToLast()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_MoveCurrentToNext">MoveCurrentToNext()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_MoveCurrentToPosition_System_Int32_">MoveCurrentToPosition(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_MoveCurrentToPrevious">MoveCurrentToPrevious()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_PassesFilter_System_Object_">PassesFilter(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_RefreshOverride">RefreshOverride()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_Remove_System_Object_">Remove(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_RemoveAt_System_Int32_">RemoveAt(Int32)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Explicit Interface Implementations
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_Collections_ICollection_IsSynchronized">System.Collections.ICollection.IsSynchronized</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_Collections_ICollection_SyncRoot">System.Collections.ICollection.SyncRoot</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_Collections_IList_IsFixedSize">System.Collections.IList.IsFixedSize</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_Collections_IList_IsReadOnly">System.Collections.IList.IsReadOnly</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_AddNew">System.ComponentModel.IEditableCollectionView.AddNew()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CanAddNew">System.ComponentModel.IEditableCollectionView.CanAddNew</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CanCancelEdit">System.ComponentModel.IEditableCollectionView.CanCancelEdit</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CancelEdit">System.ComponentModel.IEditableCollectionView.CancelEdit()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CancelNew">System.ComponentModel.IEditableCollectionView.CancelNew()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CanRemove">System.ComponentModel.IEditableCollectionView.CanRemove</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CommitEdit">System.ComponentModel.IEditableCollectionView.CommitEdit()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CommitNew">System.ComponentModel.IEditableCollectionView.CommitNew()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CurrentAddItem">System.ComponentModel.IEditableCollectionView.CurrentAddItem</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CurrentEditItem">System.ComponentModel.IEditableCollectionView.CurrentEditItem</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_EditItem_System_Object_">System.ComponentModel.IEditableCollectionView.EditItem(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_IsAddingNew">System.ComponentModel.IEditableCollectionView.IsAddingNew</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_IsEditingItem">System.ComponentModel.IEditableCollectionView.IsEditingItem</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_NewItemPlaceholderPosition">System.ComponentModel.IEditableCollectionView.NewItemPlaceholderPosition</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_Remove_System_Object_">System.ComponentModel.IEditableCollectionView.Remove(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_RemoveAt_System_Int32_">System.ComponentModel.IEditableCollectionView.RemoveAt(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionViewAddNewItem_AddNewItem_System_Object_">System.ComponentModel.IEditableCollectionViewAddNewItem.AddNewItem(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionViewAddNewItem_CanAddNewItem">System.ComponentModel.IEditableCollectionViewAddNewItem.CanAddNewItem</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_ComponentModel_IItemProperties_ItemProperties">System.ComponentModel.IItemProperties.ItemProperties</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Controls_ItemCollection_System_Windows_IWeakEventListener_ReceiveWeakEvent_System_Type_System_Object_System_EventArgs_">System.Windows.IWeakEventListener.ReceiveWeakEvent(Type,Object,EventArgs)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_CanChangeLiveFiltering">
+    
+            <a id="System_Windows_Controls_ItemCollection_CanChangeLiveFiltering_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanChangeLiveFiltering</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool CanChangeLiveFiltering { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_CanChangeLiveGrouping">
+    
+            <a id="System_Windows_Controls_ItemCollection_CanChangeLiveGrouping_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanChangeLiveGrouping</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool CanChangeLiveGrouping { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_CanChangeLiveSorting">
+    
+            <a id="System_Windows_Controls_ItemCollection_CanChangeLiveSorting_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanChangeLiveSorting</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool CanChangeLiveSorting { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_CanFilter">
+    
+            <a id="System_Windows_Controls_ItemCollection_CanFilter_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanFilter</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool CanFilter { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_CanGroup">
+    
+            <a id="System_Windows_Controls_ItemCollection_CanGroup_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanGroup</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool CanGroup { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_CanSort">
+    
+            <a id="System_Windows_Controls_ItemCollection_CanSort_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanSort</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool CanSort { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_Count">
+    
+            <a id="System_Windows_Controls_ItemCollection_Count_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Count</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int Count { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_CurrentItem">
+    
+            <a id="System_Windows_Controls_ItemCollection_CurrentItem_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CurrentItem</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override object CurrentItem { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_CurrentPosition">
+    
+            <a id="System_Windows_Controls_ItemCollection_CurrentPosition_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CurrentPosition</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int CurrentPosition { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_Filter">
+    
+            <a id="System_Windows_Controls_ItemCollection_Filter_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Filter</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override Predicate&lt;object&gt; Filter { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.predicate-1">Predicate</a>&lt;<a class="xref" href="../system/system.object">Object</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_GroupDescriptions">
+    
+            <a id="System_Windows_Controls_ItemCollection_GroupDescriptions_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GroupDescriptions</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Collections.ObjectModel.ObservableCollection&lt;System.ComponentModel.GroupDescription&gt; GroupDescriptions { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/ms668604(v=vs.110).aspx">ObservableCollection</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.componentmodel.groupdescription(v=vs.110).aspx">GroupDescription</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_Groups">
+    
+            <a id="System_Windows_Controls_ItemCollection_Groups_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Groups</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Collections.ObjectModel.ReadOnlyObservableCollection&lt;object&gt; Groups { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">ReadOnlyObservableCollection<system.object></system.object></span>&lt;<a class="xref" href="../system/system.object">Object</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_IsCurrentAfterLast">
+    
+            <a id="System_Windows_Controls_ItemCollection_IsCurrentAfterLast_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsCurrentAfterLast</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool IsCurrentAfterLast { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_IsCurrentBeforeFirst">
+    
+            <a id="System_Windows_Controls_ItemCollection_IsCurrentBeforeFirst_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsCurrentBeforeFirst</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool IsCurrentBeforeFirst { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_IsEmpty">
+    
+            <a id="System_Windows_Controls_ItemCollection_IsEmpty_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsEmpty</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool IsEmpty { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_IsLiveFiltering">
+    
+            <a id="System_Windows_Controls_ItemCollection_IsLiveFiltering_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsLiveFiltering</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Nullable&lt;bool&gt; IsLiveFiltering { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.nullable-1">Nullable</a>&lt;<a class="xref" href="../system/system.boolean">Boolean</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_IsLiveGrouping">
+    
+            <a id="System_Windows_Controls_ItemCollection_IsLiveGrouping_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsLiveGrouping</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Nullable&lt;bool&gt; IsLiveGrouping { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.nullable-1">Nullable</a>&lt;<a class="xref" href="../system/system.boolean">Boolean</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_IsLiveSorting">
+    
+            <a id="System_Windows_Controls_ItemCollection_IsLiveSorting_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsLiveSorting</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Nullable&lt;bool&gt; IsLiveSorting { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.nullable-1">Nullable</a>&lt;<a class="xref" href="../system/system.boolean">Boolean</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_Item_System_Int32_">
+    
+            <a id="System_Windows_Controls_ItemCollection_Item_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Item(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public object this[int index] { get; set; }</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_LiveFilteringProperties">
+    
+            <a id="System_Windows_Controls_ItemCollection_LiveFilteringProperties_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LiveFilteringProperties</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveFilteringProperties { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/ms668604(v=vs.110).aspx">ObservableCollection</a>&lt;<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_LiveGroupingProperties">
+    
+            <a id="System_Windows_Controls_ItemCollection_LiveGroupingProperties_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LiveGroupingProperties</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveGroupingProperties { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/ms668604(v=vs.110).aspx">ObservableCollection</a>&lt;<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_LiveSortingProperties">
+    
+            <a id="System_Windows_Controls_ItemCollection_LiveSortingProperties_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LiveSortingProperties</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveSortingProperties { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/ms668604(v=vs.110).aspx">ObservableCollection</a>&lt;<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_NeedsRefresh">
+    
+            <a id="System_Windows_Controls_ItemCollection_NeedsRefresh_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NeedsRefresh</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool NeedsRefresh { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_SortDescriptions">
+    
+            <a id="System_Windows_Controls_ItemCollection_SortDescriptions_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SortDescriptions</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.ComponentModel.SortDescriptionCollection SortDescriptions { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.componentmodel.sortdescriptioncollection(v=vs.110).aspx">SortDescriptionCollection</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_SourceCollection">
+    
+            <a id="System_Windows_Controls_ItemCollection_SourceCollection_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SourceCollection</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Collections.IEnumerable SourceCollection { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections/system.collections.ienumerable">IEnumerable</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_Add_System_Object_">
+    
+            <a id="System_Windows_Controls_ItemCollection_Add_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Add(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int Add (object newItem);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>newItem</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_Clear">
+    
+            <a id="System_Windows_Controls_ItemCollection_Clear_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Clear()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Clear ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_Contains_System_Object_">
+    
+            <a id="System_Windows_Controls_ItemCollection_Contains_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Contains(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool Contains (object containItem);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>containItem</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_CopyTo_System_Array_System_Int32_">
+    
+            <a id="System_Windows_Controls_ItemCollection_CopyTo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyTo(Array,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void CopyTo (Array array, int index);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>array</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.array">Array</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_DeferRefresh">
+    
+            <a id="System_Windows_Controls_ItemCollection_DeferRefresh_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeferRefresh()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override IDisposable DeferRefresh ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.idisposable">IDisposable</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_GetEnumerator">
+    
+            <a id="System_Windows_Controls_ItemCollection_GetEnumerator_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetEnumerator()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override System.Collections.IEnumerator GetEnumerator ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections/system.collections.ienumerator">IEnumerator</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_GetItemAt_System_Int32_">
+    
+            <a id="System_Windows_Controls_ItemCollection_GetItemAt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetItemAt(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override object GetItemAt (int index);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_IndexOf_System_Object_">
+    
+            <a id="System_Windows_Controls_ItemCollection_IndexOf_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IndexOf(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int IndexOf (object item);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>item</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_Insert_System_Int32_System_Object_">
+    
+            <a id="System_Windows_Controls_ItemCollection_Insert_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Insert(Int32,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Insert (int insertIndex, object insertItem);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>insertIndex</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>insertItem</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_MoveCurrentTo_System_Object_">
+    
+            <a id="System_Windows_Controls_ItemCollection_MoveCurrentTo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MoveCurrentTo(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool MoveCurrentTo (object item);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>item</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_MoveCurrentToFirst">
+    
+            <a id="System_Windows_Controls_ItemCollection_MoveCurrentToFirst_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MoveCurrentToFirst()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool MoveCurrentToFirst ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_MoveCurrentToLast">
+    
+            <a id="System_Windows_Controls_ItemCollection_MoveCurrentToLast_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MoveCurrentToLast()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool MoveCurrentToLast ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_MoveCurrentToNext">
+    
+            <a id="System_Windows_Controls_ItemCollection_MoveCurrentToNext_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MoveCurrentToNext()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool MoveCurrentToNext ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_MoveCurrentToPosition_System_Int32_">
+    
+            <a id="System_Windows_Controls_ItemCollection_MoveCurrentToPosition_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MoveCurrentToPosition(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool MoveCurrentToPosition (int position);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>position</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_MoveCurrentToPrevious">
+    
+            <a id="System_Windows_Controls_ItemCollection_MoveCurrentToPrevious_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MoveCurrentToPrevious()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool MoveCurrentToPrevious ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_PassesFilter_System_Object_">
+    
+            <a id="System_Windows_Controls_ItemCollection_PassesFilter_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PassesFilter(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool PassesFilter (object item);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>item</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_RefreshOverride">
+    
+            <a id="System_Windows_Controls_ItemCollection_RefreshOverride_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RefreshOverride()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void RefreshOverride ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_Remove_System_Object_">
+    
+            <a id="System_Windows_Controls_ItemCollection_Remove_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Remove(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Remove (object removeItem);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>removeItem</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_RemoveAt_System_Int32_">
+    
+            <a id="System_Windows_Controls_ItemCollection_RemoveAt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveAt(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void RemoveAt (int removeIndex);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>removeIndex</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="eii">
+        <h2>Explicit Interface Implementations
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_Collections_ICollection_IsSynchronized">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_Collections_ICollection_IsSynchronized_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Collections.ICollection.IsSynchronized</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool System.Collections.ICollection.IsSynchronized { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_Collections_ICollection_SyncRoot">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_Collections_ICollection_SyncRoot_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Collections.ICollection.SyncRoot</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">object System.Collections.ICollection.SyncRoot { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_Collections_IList_IsFixedSize">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_Collections_IList_IsFixedSize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Collections.IList.IsFixedSize</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool System.Collections.IList.IsFixedSize { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_Collections_IList_IsReadOnly">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_Collections_IList_IsReadOnly_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Collections.IList.IsReadOnly</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool System.Collections.IList.IsReadOnly { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_AddNew">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_AddNew_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.AddNew()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">object IEditableCollectionView.AddNew ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CanAddNew">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CanAddNew_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.CanAddNew</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool System.ComponentModel.IEditableCollectionView.CanAddNew { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CanCancelEdit">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CanCancelEdit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.CanCancelEdit</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool System.ComponentModel.IEditableCollectionView.CanCancelEdit { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CancelEdit">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CancelEdit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.CancelEdit()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IEditableCollectionView.CancelEdit ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CancelNew">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CancelNew_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.CancelNew()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IEditableCollectionView.CancelNew ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CanRemove">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CanRemove_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.CanRemove</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool System.ComponentModel.IEditableCollectionView.CanRemove { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CommitEdit">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CommitEdit_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.CommitEdit()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IEditableCollectionView.CommitEdit ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CommitNew">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CommitNew_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.CommitNew()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IEditableCollectionView.CommitNew ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CurrentAddItem">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CurrentAddItem_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.CurrentAddItem</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">object System.ComponentModel.IEditableCollectionView.CurrentAddItem { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CurrentEditItem">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_CurrentEditItem_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.CurrentEditItem</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">object System.ComponentModel.IEditableCollectionView.CurrentEditItem { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_EditItem_System_Object_">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_EditItem_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.EditItem(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IEditableCollectionView.EditItem (object item);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>item</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_IsAddingNew">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_IsAddingNew_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.IsAddingNew</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool System.ComponentModel.IEditableCollectionView.IsAddingNew { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_IsEditingItem">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_IsEditingItem_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.IsEditingItem</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool System.ComponentModel.IEditableCollectionView.IsEditingItem { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_NewItemPlaceholderPosition">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_NewItemPlaceholderPosition_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.NewItemPlaceholderPosition</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">System.ComponentModel.NewItemPlaceholderPosition System.ComponentModel.IEditableCollectionView.NewItemPlaceholderPosition { get; set; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.componentmodel.newitemplaceholderposition(v=vs.110).aspx">NewItemPlaceholderPosition</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_Remove_System_Object_">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_Remove_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.Remove(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IEditableCollectionView.Remove (object item);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>item</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_RemoveAt_System_Int32_">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionView_RemoveAt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionView.RemoveAt(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IEditableCollectionView.RemoveAt (int index);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionViewAddNewItem_AddNewItem_System_Object_">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionViewAddNewItem_AddNewItem_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionViewAddNewItem.AddNewItem(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">object IEditableCollectionViewAddNewItem.AddNewItem (object newItem);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>newItem</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionViewAddNewItem_CanAddNewItem">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IEditableCollectionViewAddNewItem_CanAddNewItem_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IEditableCollectionViewAddNewItem.CanAddNewItem</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool System.ComponentModel.IEditableCollectionViewAddNewItem.CanAddNewItem { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_ComponentModel_IItemProperties_ItemProperties">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_ComponentModel_IItemProperties_ItemProperties_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.ComponentModel.IItemProperties.ItemProperties</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ComponentModel.ItemPropertyInfo&gt; System.ComponentModel.IItemProperties.ItemProperties { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.objectmodel/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<span class="xref">ItemPropertyInfo</span>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Controls_ItemCollection_System_Windows_IWeakEventListener_ReceiveWeakEvent_System_Type_System_Object_System_EventArgs_">
+    
+            <a id="System_Windows_Controls_ItemCollection_System_Windows_IWeakEventListener_ReceiveWeakEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Windows.IWeakEventListener.ReceiveWeakEvent(Type,Object,EventArgs)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool IWeakEventListener.ReceiveWeakEvent (Type managerType, object sender, EventArgs e);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>managerType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>sender</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>e</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.eventargs">EventArgs</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

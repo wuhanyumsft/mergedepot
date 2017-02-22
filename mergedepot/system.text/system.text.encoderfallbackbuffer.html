@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="EncoderFallbackBuffer class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/System.Text/System.Text.EncoderFallbackBuffer.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Text/System.Text.EncoderFallbackBuffer.yml">
+<meta name="APIName" content="System.Text.EncoderFallbackBuffer">
+<meta name="APIName" content="System.Text.EncoderFallbackBuffer..ctor">
+<meta name="APIName" content="System.Text.EncoderFallbackBuffer.Fallback">
+<meta name="APIName" content="System.Text.EncoderFallbackBuffer.GetNextChar">
+<meta name="APIName" content="System.Text.EncoderFallbackBuffer.MovePrevious">
+<meta name="APIName" content="System.Text.EncoderFallbackBuffer.Remaining">
+<meta name="APIName" content="System.Text.EncoderFallbackBuffer.Reset">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="d9305b7d-2aa8-98ab-79dd-41e144abb5c4">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Provides a buffer that allows a fallback handler to return an alternate string to an encoder when it cannot encode an input character.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Text.EncoderFallbackBuffer">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.text/system.text.encoderfallbackbuffer" rel="canonical">
+    <title>EncoderFallbackBuffer class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Text_EncoderFallbackBuffer">
+      <span class="lang-csharp">EncoderFallbackBuffer</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Provides a buffer that allows a fallback handler to return an alternate string to an encoder when it cannot encode an input character.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract class EncoderFallbackBuffer</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">EncoderFallbackBuffer</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <p>An encoding defines a mapping between a Unicode character and an encoded sequence of bytes. An encoding operation, which converts an input character to an output byte sequence, fails if no mapping is defined for a particular character.  </p>
+<p> The .NET Framework provides a failure handling mechanism, called a fallback, if a conversion cannot be performed. All encoder fallback handlers must implement the following:  </p>
+<ul>
+<li><p>An encoder fallback, which is represented by a class derived from the <a class="xref" href="system.text.encoderfallback">EncoderFallback</a> class.  </p>
+</li>
+<li><p>An encoder fallback buffer, which is represented by a type derived from the EncoderFallbackBuffer class that can return a string to the conversion operation.  </p>
+<p>Fallbacks can use three strategies to handle conversion failures:  </p>
+</li>
+<li><p>Best-fit mapping. The encoder fallback buffer can return a string that represents a close approximation to the input character. The .NET Framework does not provide a public best-fit EncoderFallbackBuffer implementation.  </p>
+</li>
+<li><p>Replacement. The encoder fallback buffer can return a string, such as a question mark (&quot;?&quot;), that indicates that a character could not be encoded. In the .NET Framework, the <a class="xref" href="system.text.encoderreplacementfallback">EncoderReplacementFallback</a> and <a class="xref" href="system.text.encoderreplacementfallbackbuffer">EncoderReplacementFallbackBuffer</a> classes provide a public replacement fallback buffer implementation. The constructor of the <a class="xref" href="system.text.encoderreplacementfallback">EncoderReplacementFallback</a> class enables you to define the replacement string.  </p>
+</li>
+<li><p>Exception. The EncoderFallbackBuffer implementation throws an exception, which indicates that a character cannot be encoded, and terminates the encoding operation. In this case, the fallback handler must provide an EncoderFallbackBuffer implementation, although it does not return a string to the encoder. In the .NET Framework, the <a class="xref" href="system.text.encoderexceptionfallback">EncoderExceptionFallback</a> and <a class="xref" href="system.text.encoderexceptionfallbackbuffer">EncoderExceptionFallbackBuffer</a> classes provide a public exception fallback implementation that throws an <a class="xref" href="system.text.encoderfallbackexception">EncoderFallbackException</a> when a character cannot be encoded.  </p>
+<p>The buffer in an EncoderFallbackBuffer implementation represents the entire string to be returned to the encoder in response to an encoder fallback. Generally, implementations also include state information, such as the index of the next character to return to the encoder and the number of remaining characters to be returned. Because EncoderFallbackBuffer is an abstract class, it requires derived classes to implement the following members at a minimum:  </p>
+</li>
+<li><p>The overloaded <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_Fallback_">Fallback</a> method, which is called by the encoder when it cannot encode a character. The encoder passes two pieces of information to the fallback buffer implementation: the character or surrogate pair that could not be encoded and the index of the character in the input. In an encoder fallback exception handler, the exception is thrown in this method. Otherwise, the method returns <code>true</code> if it provides a fallback, or <code>false</code> if it does not.  </p>
+</li>
+<li><p>The <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_GetNextChar_">GetNextChar</a> method, which is called repeatedly by the encoder if the <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_Fallback_">Fallback</a> method returns <code>true</code>. In successive calls, the handler should return each character in its buffer. When it has returned all characters, it should return U+0000. An exception handler always returns U+0000.  </p>
+</li>
+<li><p>The <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_MovePrevious_">MovePrevious</a> method, which tries to move the pointer to the previous position in the buffer and indicates whether the move was successful. An exception handler always returns <code>false</code>.  </p>
+</li>
+<li><p>The <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_Remaining_">Remaining</a> property, which indicates the number of remaining characters to be returned to the encoder. An exception fallback handler always returns zero.</p>
+</li>
+</ul>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_Text_EncoderFallbackBuffer__ctor">EncoderFallbackBuffer()</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.Text.EncoderFallbackBuffer"> class.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_Text_EncoderFallbackBuffer_Remaining">Remaining</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, gets the number of characters in the current <see cref="T:System.Text.EncoderFallbackBuffer"> object that remain to be processed.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_Text_EncoderFallbackBuffer_Fallback_System_Char_System_Int32_">Fallback(Char,Int32)</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, prepares the fallback buffer to handle the specified input character.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_Text_EncoderFallbackBuffer_Fallback_System_Char_System_Char_System_Int32_">Fallback(Char,Char,Int32)</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, prepares the fallback buffer to handle the specified surrogate pair.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_Text_EncoderFallbackBuffer_GetNextChar">GetNextChar()</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, retrieves the next character in the fallback buffer.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_Text_EncoderFallbackBuffer_MovePrevious">MovePrevious()</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, causes the next call to the <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_GetNextChar_">GetNextChar</a> method to access the data buffer character position that is prior to the current character position.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_Text_EncoderFallbackBuffer_Reset">Reset()</a></div>
+          </td>
+            <td>
+            <p>Initializes all data and state information pertaining to this fallback buffer.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Text_EncoderFallbackBuffer__ctor">
+    
+            <a id="System_Text_EncoderFallbackBuffer__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EncoderFallbackBuffer()</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.Text.EncoderFallbackBuffer"> class.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected EncoderFallbackBuffer ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Text_EncoderFallbackBuffer_Remaining">
+    
+            <a id="System_Text_EncoderFallbackBuffer_Remaining_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Remaining</div>        
+          </div>
+    
+            <p>When overridden in a derived class, gets the number of characters in the current <see cref="T:System.Text.EncoderFallbackBuffer"> object that remain to be processed.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract int Remaining { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The number of characters in the current fallback buffer that have not yet been processed.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_Fallback_">Fallback</a> method returns <code>true</code> if Remaining is a nonzero value.  </p>
+<p> For an exception fallback handler, the <a class="xref" href="system.text.decoderfallbackbuffer#System_Text_DecoderFallbackBuffer_Remaining_">Remaining</a> method should return zero.</p>
+
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Text_EncoderFallbackBuffer_Fallback_System_Char_System_Int32_">
+    
+            <a id="System_Text_EncoderFallbackBuffer_Fallback_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Fallback(Char,Int32)</div>        
+          </div>
+    
+            <p>When overridden in a derived class, prepares the fallback buffer to handle the specified input character.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract bool Fallback (char charUnknown, int index);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>charUnknown</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a></div>
+                  </dd>
+                  </dl>
+                  <p>An input character.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The index position of the character in the input buffer.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the fallback buffer can process ; <code>false</code> if the fallback buffer ignores .</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The <a class="xref" href="system.text.encoding#System_Text_Encoding_GetBytes_">GetBytes</a> and <a class="xref" href="system.text.encoder#System_Text_Encoder_Convert_">Convert</a> methods call <a href="assetId:///M:System.Text.DecoderFallbackBuffer.Fallback(System.Byte[],System.Int32)?qualifyHint=False&amp;autoUpgrade=False">Fallback(Byte[],â€‚Int32)</a> if they encounter an unknown input character that cannot be encoded. A return value of <code>true</code> indicates that the fallback buffer can process the input character, which causes the calling method to call the <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_GetNextChar_">GetNextChar</a> method to obtain each character of the fallback buffer. Because it does not process individual characters, the Fallback method in an exception fallback handler throws an exception.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Text_EncoderFallbackBuffer_Fallback_System_Char_System_Char_System_Int32_">
+    
+            <a id="System_Text_EncoderFallbackBuffer_Fallback_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Fallback(Char,Char,Int32)</div>        
+          </div>
+    
+            <p>When overridden in a derived class, prepares the fallback buffer to handle the specified surrogate pair.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract bool Fallback (char charUnknownHigh, char charUnknownLow, int index);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>charUnknownHigh</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a></div>
+                  </dd>
+                  </dl>
+                  <p>The high surrogate of the input pair.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>charUnknownLow</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a></div>
+                  </dd>
+                  </dl>
+                  <p>The low surrogate of the input pair.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The index position of the surrogate pair in the input buffer.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the fallback buffer can process  and ; <code>false</code> if the fallback buffer ignores the surrogate pair.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The <a class="xref" href="system.text.encoding#System_Text_Encoding_GetBytes_">GetBytes</a> and <a class="xref" href="system.text.encoder#System_Text_Encoder_Convert_">Convert</a> methods call Fallback if they encounter a surrogate pair in their input. A return value of <code>true</code> indicates that the fallback buffer can process the surrogate pair, which causes the calling method to call the <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_GetNextChar_">GetNextChar</a> method to obtain each character of the fallback buffer.  Because it does not process individual characters, the <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_Fallback_">Fallback</a> method in an exception fallback handler throws an exception.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Text_EncoderFallbackBuffer_GetNextChar">
+    
+            <a id="System_Text_EncoderFallbackBuffer_GetNextChar_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetNextChar()</div>        
+          </div>
+    
+            <p>When overridden in a derived class, retrieves the next character in the fallback buffer.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract char GetNextChar ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a></div>
+                  </div>
+                  <p>The next character in the fallback buffer.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>An encoding operation calls the <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_Fallback_">Fallback</a> method if the operation encounters an unknown character or surrogate pair in the input. For example, in the case of a replacement fallback, if the <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_Fallback_">Fallback</a> method returns <code>true</code>, a substitute string exists that can be encoded instead of the unknown input. The encoding operation calls the GetNextChar method repeatedly and obtains the substitute string one character at a time. When all characters in the fallback buffer have been returned to the encoder, the GetNextChar method should return U+0000.  </p>
+<p> For an exception fallback handler, the GetNextChar method should return U+0000.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Text_EncoderFallbackBuffer_MovePrevious">
+    
+            <a id="System_Text_EncoderFallbackBuffer_MovePrevious_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MovePrevious()</div>        
+          </div>
+    
+            <p>When overridden in a derived class, causes the next call to the <a class="xref" href="system.text.encoderfallbackbuffer#System_Text_EncoderFallbackBuffer_GetNextChar_">GetNextChar</a> method to access the data buffer character position that is prior to the current character position.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract bool MovePrevious ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the MovePrevious operation was successful; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>An exception fallback handler should return <code>false</code>.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Text_EncoderFallbackBuffer_Reset">
+    
+            <a id="System_Text_EncoderFallbackBuffer_Reset_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Reset()</div>        
+          </div>
+    
+            <p>Initializes all data and state information pertaining to this fallback buffer.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Reset ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

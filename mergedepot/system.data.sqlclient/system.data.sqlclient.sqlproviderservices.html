@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="SqlProviderServices class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Data.SqlClient/System.Data.SqlClient.SqlProviderServices.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Data.SqlClient/System.Data.SqlClient.SqlProviderServices.yml">
+<meta name="APIName" content="System.Data.SqlClient.SqlProviderServices">
+<meta name="APIName" content="System.Data.SqlClient.SqlProviderServices.CreateDbCommandDefinition">
+<meta name="APIName" content="System.Data.SqlClient.SqlProviderServices.DbCreateDatabase">
+<meta name="APIName" content="System.Data.SqlClient.SqlProviderServices.DbCreateDatabaseScript">
+<meta name="APIName" content="System.Data.SqlClient.SqlProviderServices.DbDatabaseExists">
+<meta name="APIName" content="System.Data.SqlClient.SqlProviderServices.DbDeleteDatabase">
+<meta name="APIName" content="System.Data.SqlClient.SqlProviderServices.DbGetSpatialServices">
+<meta name="APIName" content="System.Data.SqlClient.SqlProviderServices.GetDbProviderManifest">
+<meta name="APIName" content="System.Data.SqlClient.SqlProviderServices.GetDbProviderManifestToken">
+<meta name="APIName" content="System.Data.SqlClient.SqlProviderServices.GetDbSpatialDataReader">
+<meta name="APIName" content="System.Data.SqlClient.SqlProviderServices.SetDbParameterValue">
+<meta name="APIName" content="System.Data.SqlClient.SqlProviderServices.SingletonInstance">
+<meta name="APILocation" content="System.Data.Entity.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="7605e26b-0942-d146-76b7-f1b0a24b7f62">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Data.SqlClient.SqlProviderServices">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.data.sqlclient/system.data.sqlclient.sqlproviderservices" rel="canonical">
+    <title>SqlProviderServices class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Data_SqlClient_SqlProviderServices">
+      <span class="lang-csharp">SqlProviderServices</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.CLSCompliant(false)]
+public sealed class SqlProviderServices : System.Data.Common.DbProviderServices</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices">System.Data.Common.DbProviderServices</a>
+          </div>
+        </li>
+      <li class="l2">
+        <div class="xref">
+          <div class="lang-csharp">SqlProviderServices</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_CreateCommandDefinition_System_Data_Common_CommandTrees_DbCommandTree_">CreateCommandDefinition(DbCommandTree)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_CreateCommandDefinition_System_Data_Common_DbCommand_">CreateCommandDefinition(DbCommand)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_CreateCommandDefinition_System_Data_Common_DbProviderManifest_System_Data_Common_CommandTrees_DbCommandTree_">CreateCommandDefinition(DbProviderManifest,DbCommandTree)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_CreateDatabase_System_Data_Common_DbConnection_System_Nullable_System_Int32__System_Data_Metadata_Edm_StoreItemCollection_">CreateDatabase(DbConnection,Nullable&lt;Int32&gt;,StoreItemCollection)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_CreateDatabaseScript_System_String_System_Data_Metadata_Edm_StoreItemCollection_">CreateDatabaseScript(String,StoreItemCollection)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_DatabaseExists_System_Data_Common_DbConnection_System_Nullable_System_Int32__System_Data_Metadata_Edm_StoreItemCollection_">DatabaseExists(DbConnection,Nullable&lt;Int32&gt;,StoreItemCollection)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_DeleteDatabase_System_Data_Common_DbConnection_System_Nullable_System_Int32__System_Data_Metadata_Edm_StoreItemCollection_">DeleteDatabase(DbConnection,Nullable&lt;Int32&gt;,StoreItemCollection)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_GetProviderFactory_System_Data_Common_DbConnection_">GetProviderFactory(DbConnection)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_GetProviderManifest_System_String_">GetProviderManifest(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_GetProviderManifestToken_System_Data_Common_DbConnection_">GetProviderManifestToken(DbConnection)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_GetProviderServices_System_Data_Common_DbConnection_">GetProviderServices(DbConnection)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_GetSpatialDataReader_System_Data_Common_DbDataReader_System_String_">GetSpatialDataReader(DbDataReader,String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.data.common/system.data.common.dbproviderservices#System_Data_Common_DbProviderServices_GetSpatialServices_System_String_">GetSpatialServices(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_SqlClient_SqlProviderServices_SingletonInstance">SingletonInstance</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_SqlClient_SqlProviderServices_CreateDbCommandDefinition_System_Data_Common_DbProviderManifest_System_Data_Common_CommandTrees_DbCommandTree_">CreateDbCommandDefinition(DbProviderManifest,DbCommandTree)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_SqlClient_SqlProviderServices_DbCreateDatabase_System_Data_Common_DbConnection_System_Nullable_System_Int32__System_Data_Metadata_Edm_StoreItemCollection_">DbCreateDatabase(DbConnection,Nullable&lt;Int32&gt;,StoreItemCollection)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_SqlClient_SqlProviderServices_DbCreateDatabaseScript_System_String_System_Data_Metadata_Edm_StoreItemCollection_">DbCreateDatabaseScript(String,StoreItemCollection)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_SqlClient_SqlProviderServices_DbDatabaseExists_System_Data_Common_DbConnection_System_Nullable_System_Int32__System_Data_Metadata_Edm_StoreItemCollection_">DbDatabaseExists(DbConnection,Nullable&lt;Int32&gt;,StoreItemCollection)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_SqlClient_SqlProviderServices_DbDeleteDatabase_System_Data_Common_DbConnection_System_Nullable_System_Int32__System_Data_Metadata_Edm_StoreItemCollection_">DbDeleteDatabase(DbConnection,Nullable&lt;Int32&gt;,StoreItemCollection)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_SqlClient_SqlProviderServices_DbGetSpatialServices_System_String_">DbGetSpatialServices(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_SqlClient_SqlProviderServices_GetDbProviderManifest_System_String_">GetDbProviderManifest(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_SqlClient_SqlProviderServices_GetDbProviderManifestToken_System_Data_Common_DbConnection_">GetDbProviderManifestToken(DbConnection)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_SqlClient_SqlProviderServices_GetDbSpatialDataReader_System_Data_Common_DbDataReader_System_String_">GetDbSpatialDataReader(DbDataReader,String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_SqlClient_SqlProviderServices_SetDbParameterValue_System_Data_Common_DbParameter_System_Data_Metadata_Edm_TypeUsage_System_Object_">SetDbParameterValue(DbParameter,TypeUsage,Object)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_SqlClient_SqlProviderServices_SingletonInstance">
+    
+            <a id="System_Data_SqlClient_SqlProviderServices_SingletonInstance_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SingletonInstance</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Data.SqlClient.SqlProviderServices SingletonInstance { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.sqlclient.sqlproviderservices">SqlProviderServices</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_SqlClient_SqlProviderServices_CreateDbCommandDefinition_System_Data_Common_DbProviderManifest_System_Data_Common_CommandTrees_DbCommandTree_">
+    
+            <a id="System_Data_SqlClient_SqlProviderServices_CreateDbCommandDefinition_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreateDbCommandDefinition(DbProviderManifest,DbCommandTree)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override System.Data.Common.DbCommandDefinition CreateDbCommandDefinition (System.Data.Common.DbProviderManifest providerManifest, System.Data.Common.CommandTrees.DbCommandTree commandTree);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>providerManifest</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.common/system.data.common.dbprovidermanifest">DbProviderManifest</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>commandTree</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.common.commandtrees/system.data.common.commandtrees.dbcommandtree">DbCommandTree</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data.common/system.data.common.dbcommanddefinition">DbCommandDefinition</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_SqlClient_SqlProviderServices_DbCreateDatabase_System_Data_Common_DbConnection_System_Nullable_System_Int32__System_Data_Metadata_Edm_StoreItemCollection_">
+    
+            <a id="System_Data_SqlClient_SqlProviderServices_DbCreateDatabase_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DbCreateDatabase(DbConnection,Nullable&lt;Int32&gt;,StoreItemCollection)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void DbCreateDatabase (System.Data.Common.DbConnection connection, Nullable&lt;int&gt; commandTimeout, System.Data.Metadata.Edm.StoreItemCollection storeItemCollection);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>connection</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.common/system.data.common.dbconnection">DbConnection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>commandTimeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.nullable-1">Nullable</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>storeItemCollection</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.storeitemcollection">StoreItemCollection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_SqlClient_SqlProviderServices_DbCreateDatabaseScript_System_String_System_Data_Metadata_Edm_StoreItemCollection_">
+    
+            <a id="System_Data_SqlClient_SqlProviderServices_DbCreateDatabaseScript_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DbCreateDatabaseScript(String,StoreItemCollection)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override string DbCreateDatabaseScript (string providerManifestToken, System.Data.Metadata.Edm.StoreItemCollection storeItemCollection);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>providerManifestToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>storeItemCollection</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.storeitemcollection">StoreItemCollection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_SqlClient_SqlProviderServices_DbDatabaseExists_System_Data_Common_DbConnection_System_Nullable_System_Int32__System_Data_Metadata_Edm_StoreItemCollection_">
+    
+            <a id="System_Data_SqlClient_SqlProviderServices_DbDatabaseExists_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DbDatabaseExists(DbConnection,Nullable&lt;Int32&gt;,StoreItemCollection)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override bool DbDatabaseExists (System.Data.Common.DbConnection connection, Nullable&lt;int&gt; commandTimeout, System.Data.Metadata.Edm.StoreItemCollection storeItemCollection);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>connection</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.common/system.data.common.dbconnection">DbConnection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>commandTimeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.nullable-1">Nullable</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>storeItemCollection</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.storeitemcollection">StoreItemCollection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_SqlClient_SqlProviderServices_DbDeleteDatabase_System_Data_Common_DbConnection_System_Nullable_System_Int32__System_Data_Metadata_Edm_StoreItemCollection_">
+    
+            <a id="System_Data_SqlClient_SqlProviderServices_DbDeleteDatabase_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DbDeleteDatabase(DbConnection,Nullable&lt;Int32&gt;,StoreItemCollection)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void DbDeleteDatabase (System.Data.Common.DbConnection connection, Nullable&lt;int&gt; commandTimeout, System.Data.Metadata.Edm.StoreItemCollection storeItemCollection);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>connection</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.common/system.data.common.dbconnection">DbConnection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>commandTimeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.nullable-1">Nullable</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>storeItemCollection</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.storeitemcollection">StoreItemCollection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_SqlClient_SqlProviderServices_DbGetSpatialServices_System_String_">
+    
+            <a id="System_Data_SqlClient_SqlProviderServices_DbGetSpatialServices_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DbGetSpatialServices(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override System.Data.Spatial.DbSpatialServices DbGetSpatialServices (string versionHint);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>versionHint</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data.spatial/system.data.spatial.dbspatialservices">DbSpatialServices</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_SqlClient_SqlProviderServices_GetDbProviderManifest_System_String_">
+    
+            <a id="System_Data_SqlClient_SqlProviderServices_GetDbProviderManifest_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDbProviderManifest(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override System.Data.Common.DbProviderManifest GetDbProviderManifest (string versionHint);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>versionHint</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data.common/system.data.common.dbprovidermanifest">DbProviderManifest</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_SqlClient_SqlProviderServices_GetDbProviderManifestToken_System_Data_Common_DbConnection_">
+    
+            <a id="System_Data_SqlClient_SqlProviderServices_GetDbProviderManifestToken_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDbProviderManifestToken(DbConnection)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override string GetDbProviderManifestToken (System.Data.Common.DbConnection connection);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>connection</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.common/system.data.common.dbconnection">DbConnection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_SqlClient_SqlProviderServices_GetDbSpatialDataReader_System_Data_Common_DbDataReader_System_String_">
+    
+            <a id="System_Data_SqlClient_SqlProviderServices_GetDbSpatialDataReader_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDbSpatialDataReader(DbDataReader,String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override System.Data.Spatial.DbSpatialDataReader GetDbSpatialDataReader (System.Data.Common.DbDataReader fromReader, string versionHint);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>fromReader</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.common/system.data.common.dbdatareader">DbDataReader</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>versionHint</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data.spatial/system.data.spatial.dbspatialdatareader">DbSpatialDataReader</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_SqlClient_SqlProviderServices_SetDbParameterValue_System_Data_Common_DbParameter_System_Data_Metadata_Edm_TypeUsage_System_Object_">
+    
+            <a id="System_Data_SqlClient_SqlProviderServices_SetDbParameterValue_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetDbParameterValue(DbParameter,TypeUsage,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void SetDbParameterValue (System.Data.Common.DbParameter parameter, System.Data.Metadata.Edm.TypeUsage parameterType, object value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>parameter</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.common/system.data.common.dbparameter">DbParameter</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>parameterType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data.metadata.edm/system.data.metadata.edm.typeusage">TypeUsage</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

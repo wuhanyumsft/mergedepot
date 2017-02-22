@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UnmanagedMemoryStream class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/System.IO/System.IO.UnmanagedMemoryStream.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO/System.IO.UnmanagedMemoryStream.yml">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream..ctor">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.CanRead">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.CanSeek">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.CanWrite">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.Capacity">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.Dispose">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.Flush">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.FlushAsync">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.Initialize">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.Length">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.Position">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.PositionPointer">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.Read">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.ReadAsync">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.ReadByte">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.Seek">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.SetLength">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.Write">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.WriteAsync">
+<meta name="APIName" content="System.IO.UnmanagedMemoryStream.WriteByte">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="0e63ff03-c5b5-524c-e621-d2388fae07bb">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Provides access to unmanaged blocks of memory from managed code.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.UnmanagedMemoryStream">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.io/system.io.unmanagedmemorystream" rel="canonical">
+    <title>UnmanagedMemoryStream class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_UnmanagedMemoryStream">
+      <span class="lang-csharp">UnmanagedMemoryStream</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Provides access to unmanaged blocks of memory from managed code.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public class UnmanagedMemoryStream : System.IO.Stream</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject">MarshalByRefObject</a>
+          </div>
+        </li>
+        <li class="l2">
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream">System.IO.Stream</a>
+          </div>
+        </li>
+      <li class="l3">
+        <div class="xref">
+          <div class="lang-csharp">UnmanagedMemoryStream</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_BeginRead_System_Byte___System_Int32_System_Int32_System_AsyncCallback_System_Object_">BeginRead(Byte[],Int32,Int32,AsyncCallback,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_BeginWrite_System_Byte___System_Int32_System_Int32_System_AsyncCallback_System_Object_">BeginWrite(Byte[],Int32,Int32,AsyncCallback,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CanTimeout">CanTimeout</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_Close">Close()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CopyTo_System_IO_Stream_">CopyTo(Stream)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CopyTo_System_IO_Stream_System_Int32_">CopyTo(Stream,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CopyToAsync_System_IO_Stream_">CopyToAsync(Stream)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CopyToAsync_System_IO_Stream_System_Int32_">CopyToAsync(Stream,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CopyToAsync_System_IO_Stream_System_Int32_System_Threading_CancellationToken_">CopyToAsync(Stream,Int32,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CreateWaitHandle">CreateWaitHandle()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_Dispose">Dispose()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_EndRead_System_IAsyncResult_">EndRead(IAsyncResult)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_EndWrite_System_IAsyncResult_">EndWrite(IAsyncResult)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_FlushAsync">FlushAsync()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_Null">Null</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_ObjectInvariant">ObjectInvariant()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_ReadAsync_System_Byte___System_Int32_System_Int32_">ReadAsync(Byte[],Int32,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_ReadTimeout">ReadTimeout</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_Synchronized_System_IO_Stream_">Synchronized(Stream)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_WriteAsync_System_Byte___System_Int32_System_Int32_">WriteAsync(Byte[],Int32,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_WriteTimeout">WriteTimeout</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_CreateObjRef_System_Type_">CreateObjRef(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_GetLifetimeService">GetLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_InitializeLifetimeService">InitializeLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_MemberwiseClone_System_Boolean_">MemberwiseClone(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <p>This class supports access to unmanaged memory using the existing stream-based model and does not require that the contents in the unmanaged memory be copied to the heap.  </p>
+<div class="IMPORTANT"><h5>Important</h5><p> This type implements the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <a class="xref" href="../system/system.idisposable#System_IDisposable_Dispose_">Dispose</a> method in a <code>try</code>/<code>catch</code> block. To dispose of it indirectly, use a language construct such as <code>using</code> (in C#) or <code>Using</code> (in Visual Basic). For more information, see the â€œUsing an Object that Implements IDisposableâ€ section in the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface topic.</p>
+</div>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream__ctor">UnmanagedMemoryStream()</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream__ctor_System_Byte__System_Int64_">UnmanagedMemoryStream(Byte*,Int64)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class using the specified location and memory length.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream__ctor_System_Runtime_InteropServices_SafeBuffer_System_Int64_System_Int64_">UnmanagedMemoryStream(SafeBuffer,Int64,Int64)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class in a safe buffer with a specified offset and length.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream__ctor_System_Byte__System_Int64_System_Int64_System_IO_FileAccess_">UnmanagedMemoryStream(Byte*,Int64,Int64,FileAccess)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class using the specified location, memory length, total amount of memory, and file access values.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream__ctor_System_Runtime_InteropServices_SafeBuffer_System_Int64_System_Int64_System_IO_FileAccess_">UnmanagedMemoryStream(SafeBuffer,Int64,Int64,FileAccess)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class in a safe buffer with a specified offset, length, and file access.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_CanRead">CanRead</a></div>
+          </td>
+            <td>
+            <p>Gets a value indicating whether a stream supports reading.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_CanSeek">CanSeek</a></div>
+          </td>
+            <td>
+            <p>Gets a value indicating whether a stream supports seeking.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_CanWrite">CanWrite</a></div>
+          </td>
+            <td>
+            <p>Gets a value indicating whether a stream supports writing.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_Capacity">Capacity</a></div>
+          </td>
+            <td>
+            <p>Gets the stream length (size) or the total amount of memory assigned to a stream (capacity).</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_Length">Length</a></div>
+          </td>
+            <td>
+            <p>Gets the length of the data in a stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_Position">Position</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the current position in a stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_PositionPointer">PositionPointer</a></div>
+          </td>
+            <td>
+            <p>Gets or sets a byte pointer to a stream based on the current position in the stream.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.UnmanagedMemoryStream"> and optionally releases the managed resources.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_Flush">Flush()</a></div>
+          </td>
+            <td>
+            <p>Overrides the <a class="xref" href="system.io.stream#System_IO_Stream_Flush_">Flush</a> method so that no action is performed.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_FlushAsync_System_Threading_CancellationToken_">FlushAsync(CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Overrides the <a class="xref" href="system.io.stream#System_IO_Stream_FlushAsync_">FlushAsync</a> method so that the operation is cancelled if specified, but no other action is performed.  </p>
+<p> Available starting in <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[net_2015](../Token/net_2015_md.md)]:Couldn&#39;t find file Token/net_2015_md.md. -->[!INCLUDE[net_2015](../Token/net_2015_md.md)]<!--END ERROR INCLUDE --></p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_Initialize_System_Byte__System_Int64_System_Int64_System_IO_FileAccess_">Initialize(Byte*,Int64,Int64,FileAccess)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class by using a pointer to an unmanaged memory location.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_Initialize_System_Runtime_InteropServices_SafeBuffer_System_Int64_System_Int64_System_IO_FileAccess_">Initialize(SafeBuffer,Int64,Int64,FileAccess)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class in a safe buffer with a specified offset, length, and file access.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_Read_System_Byte___System_Int32_System_Int32_">Read(Byte[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads the specified number of bytes into the specified array.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_ReadAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">ReadAsync(Byte[],Int32,Int32,CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously reads the specified number of bytes into the specified array.  </p>
+<p> Available starting in <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[net_2015](../Token/net_2015_md.md)]:Couldn&#39;t find file Token/net_2015_md.md. -->[!INCLUDE[net_2015](../Token/net_2015_md.md)]<!--END ERROR INCLUDE --></p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_ReadByte">ReadByte()</a></div>
+          </td>
+            <td>
+            <p>Reads a byte from a stream and advances the position within the stream by one byte, or returns -1 if at the end of the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_Seek_System_Int64_System_IO_SeekOrigin_">Seek(Int64,SeekOrigin)</a></div>
+          </td>
+            <td>
+            <p>Sets the current position of the current stream to the given value.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_SetLength_System_Int64_">SetLength(Int64)</a></div>
+          </td>
+            <td>
+            <p>Sets the length of a stream to a specified value.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_Write_System_Byte___System_Int32_System_Int32_">Write(Byte[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Writes a block of bytes to the current stream using data from a buffer.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_WriteAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">WriteAsync(Byte[],Int32,Int32,CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously writes a sequence of bytes to the current stream, advances the current position within this stream by the number of bytes written, and monitors cancellation requests.  </p>
+<p> Available starting in <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[net_2015](../Token/net_2015_md.md)]:Couldn&#39;t find file Token/net_2015_md.md. -->[!INCLUDE[net_2015](../Token/net_2015_md.md)]<!--END ERROR INCLUDE --></p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_UnmanagedMemoryStream_WriteByte_System_Byte_">WriteByte(Byte)</a></div>
+          </td>
+            <td>
+            <p>Writes a byte to the current position in the file stream.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream__ctor">
+    
+            <a id="System_IO_UnmanagedMemoryStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UnmanagedMemoryStream()</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected UnmanagedMemoryStream ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream__ctor_System_Byte__System_Int64_">
+    
+            <a id="System_IO_UnmanagedMemoryStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UnmanagedMemoryStream(Byte*,Int64)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class using the specified location and memory length.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public UnmanagedMemoryStream (byte* pointer, long length);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pointer</dt>
+                  <dd>
+                  </dd>
+                  </dl>
+                  <p>A pointer to an unmanaged memory location.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>length</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The length of the memory to use.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor creates a new instance of the <a class="xref" href="system.io.unmanagedmemorystream">UnmanagedMemoryStream</a> class, and by default sets the <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream_CanWrite_">CanWrite</a> property to <code>false</code> and the <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream_CanRead_">CanRead</a> property to <code>true</code>. The <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream_Length_">Length</a> property is set to the value of the  parameter and cannot be changed.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the <xref:system.io.unmanagedmemorystream> class. A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream_Example#00](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream_Example#00)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></xref:system.io.unmanagedmemorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream__ctor_System_Runtime_InteropServices_SafeBuffer_System_Int64_System_Int64_">
+    
+            <a id="System_IO_UnmanagedMemoryStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UnmanagedMemoryStream(SafeBuffer,Int64,Int64)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class in a safe buffer with a specified offset and length.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public UnmanagedMemoryStream (System.Runtime.InteropServices.SafeBuffer buffer, long offset, long length);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.runtime.interopservices/system.runtime.interopservices.safebuffer">SafeBuffer</a></div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to contain the unmanaged memory stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The byte position in the buffer at which to start the unmanaged memory stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>length</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The length of the unmanaged memory stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream__ctor_System_Byte__System_Int64_System_Int64_System_IO_FileAccess_">
+    
+            <a id="System_IO_UnmanagedMemoryStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UnmanagedMemoryStream(Byte*,Int64,Int64,FileAccess)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class using the specified location, memory length, total amount of memory, and file access values.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public UnmanagedMemoryStream (byte* pointer, long length, long capacity, System.IO.FileAccess access);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pointer</dt>
+                  <dd>
+                  </dd>
+                  </dl>
+                  <p>A pointer to an unmanaged memory location.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>length</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The length of the memory to use.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>capacity</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The total amount of memory assigned to the stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>access</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.fileaccess">FileAccess</a></div>
+                  </dd>
+                  </dl>
+                  <p>One of the <see cref="T:System.IO.FileAccess"> values.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The  parameter defines the current amount of memory in use. If reading or appending data to the stream, the  value should be equal to the amount of valid data in the stream to be read from or preserved. If writing to the stream, this value should be zero.  </p>
+<p> The  parameter indicates the amount of total memory available. This value can describe a region that is longer than the length specified, or indicate a region that can be appended to. Any attempt to write beyond this value will fail.  </p>
+<p> The  parameter sets the <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream_CanRead_">CanRead</a>, and <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream_CanWrite_">CanWrite</a> properties. Note that specifying <a class="xref" href="system.io.fileaccess">FileAccess</a> does not guarantee that the stream will be writable. The access parameters allow the implementer to create an object whose implementation can match the actual stream that is exposed.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the <xref:system.io.unmanagedmemorystream> class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></xref:system.io.unmanagedmemorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream__ctor_System_Runtime_InteropServices_SafeBuffer_System_Int64_System_Int64_System_IO_FileAccess_">
+    
+            <a id="System_IO_UnmanagedMemoryStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UnmanagedMemoryStream(SafeBuffer,Int64,Int64,FileAccess)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class in a safe buffer with a specified offset, length, and file access.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public UnmanagedMemoryStream (System.Runtime.InteropServices.SafeBuffer buffer, long offset, long length, System.IO.FileAccess access);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.runtime.interopservices/system.runtime.interopservices.safebuffer">SafeBuffer</a></div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to contain the unmanaged memory stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The byte position in the buffer at which to start the unmanaged memory stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>length</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The length of the unmanaged memory stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>access</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.fileaccess">FileAccess</a></div>
+                  </dd>
+                  </dl>
+                  <p>The mode of file access to the unmanaged memory stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_CanRead">
+    
+            <a id="System_IO_UnmanagedMemoryStream_CanRead_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanRead</div>        
+          </div>
+    
+            <p>Gets a value indicating whether a stream supports reading.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool CanRead { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>false</code> if the object was created by a constructor with an  parameter that did not include reading the stream and if the stream is closed; otherwise, <code>true</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This property indicates whether the current stream object supports reading.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the <xref:system.io.unmanagedmemorystream> class. A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class. In this example, an <xref:system.io.unmanagedmemorystream> object is passed to a method which checks the CanRead property before attempting to display the contents to the console.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream_Example#00](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream_Example#00)]
+    
+    
+        </xref:system.io.unmanagedmemorystream></xref:system.runtime.interopservices.marshal></xref:system.io.unmanagedmemorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_CanSeek">
+    
+            <a id="System_IO_UnmanagedMemoryStream_CanSeek_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanSeek</div>        
+          </div>
+    
+            <p>Gets a value indicating whether a stream supports seeking.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool CanSeek { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>false</code> if the stream is closed; otherwise, <code>true</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This property indicates whether the current stream object supports seeking.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_CanWrite">
+    
+            <a id="System_IO_UnmanagedMemoryStream_CanWrite_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanWrite</div>        
+          </div>
+    
+            <p>Gets a value indicating whether a stream supports writing.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool CanWrite { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>false</code> if the object was created by a constructor with an  parameter value that supports writing or was created by a constructor that had no parameters, or if the stream is closed; otherwise, <code>true</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This property indicates whether the current stream object supports writing.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the <xref:system.io.unmanagedmemorystream> class. A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class. In this example, an <xref:system.io.unmanagedmemorystream> object is passed to a method which checks the CanWrite property before attempting to write the data to the stream.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream_Example#00](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream_Example#00)]
+    
+    
+        </xref:system.io.unmanagedmemorystream></xref:system.runtime.interopservices.marshal></xref:system.io.unmanagedmemorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_Capacity">
+    
+            <a id="System_IO_UnmanagedMemoryStream_Capacity_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Capacity</div>        
+          </div>
+    
+            <p>Gets the stream length (size) or the total amount of memory assigned to a stream (capacity).</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public long Capacity { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>The size or capacity of the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This property returns the  value provided to the constructor. If no  value was specified when the stream was initialized, this property returns the stream length.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_Length">
+    
+            <a id="System_IO_UnmanagedMemoryStream_Length_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Length</div>        
+          </div>
+    
+            <p>Gets the length of the data in a stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override long Length { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>The length of the data in the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If unchanged since the stream was initialized, this property returns the length value provided to the constructor. If changes to the stream have occurred, this property reflects any changes to the length of the data.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the <xref:system.io.unmanagedmemorystream> class. A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream_Example#00](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream_Example#00)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></xref:system.io.unmanagedmemorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_Position">
+    
+            <a id="System_IO_UnmanagedMemoryStream_Position_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Position</div>        
+          </div>
+    
+            <p>Gets or sets the current position in a stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override long Position { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>The current position in the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>When a stream is initialized, this property is set to zero.  </p>
+<p> Although you can set the position of the stream beyond the stream&#39;s capacity, you will not be able to access that area using the <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream_Read_">Read</a> and <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream_Write_">Write</a> methods. <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream_Read_">Read</a> will return 0 and <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream_Write_">Write</a> will throw a <a class="xref" href="../system/system.notsupportedexception">NotSupportedException</a>. This support is primarily for design and code compatibility with basic stream operations.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_PositionPointer">
+    
+            <a id="System_IO_UnmanagedMemoryStream_PositionPointer_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PositionPointer</div>        
+          </div>
+    
+            <p>Gets or sets a byte pointer to a stream based on the current position in the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public byte* PositionPointer { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                  </div>
+                  <p>A byte pointer.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>To return a pointer to the entire stream, set the <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream_Position_">Position</a> property to zero, and then call this property.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_Dispose_System_Boolean_">
+    
+            <a id="System_IO_UnmanagedMemoryStream_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.UnmanagedMemoryStream"> and optionally releases the managed resources.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only unmanaged resources.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method is called by the public <a class="xref" href="https://msdn.microsoft.com/en-us/library/s247t0kx(v=vs.110).aspx">Dispose</a> method and the <a class="xref" href="../system/system.object#System_Object_Finalize_">Finalize</a> method. <a class="xref" href="https://msdn.microsoft.com/en-us/library/s247t0kx(v=vs.110).aspx">Dispose</a> invokes the protected Dispose method with the  parameter set to <code>true</code>. <a class="xref" href="../system/system.object#System_Object_Finalize_">Finalize</a> invokes Dispose with  set to <code>false</code>.  </p>
+<p> When the  parameter is <code>true</code>, this method releases all resources held by any managed objects that this <a class="xref" href="system.io.unmanagedmemorystream">UnmanagedMemoryStream</a> references. This method invokes the <a class="xref" href="https://msdn.microsoft.com/en-us/library/s247t0kx(v=vs.110).aspx">Dispose</a> method of each referenced object.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_Flush">
+    
+            <a id="System_IO_UnmanagedMemoryStream_Flush_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Flush()</div>        
+          </div>
+    
+            <p>Overrides the <a class="xref" href="system.io.stream#System_IO_Stream_Flush_">Flush</a> method so that no action is performed.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Flush ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method performs no action for this class but is included as part of the <a class="xref" href="system.io.stream">Stream</a> base class. Since any data is written to RAM, this method is redundant.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_FlushAsync_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_UnmanagedMemoryStream_FlushAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FlushAsync(CancellationToken)</div>        
+          </div>
+    
+            <p>Overrides the <a class="xref" href="system.io.stream#System_IO_Stream_FlushAsync_">FlushAsync</a> method so that the operation is cancelled if specified, but no other action is performed.  </p>
+<p> Available starting in <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[net_2015](../Token/net_2015_md.md)]:Couldn&#39;t find file Token/net_2015_md.md. -->[!INCLUDE[net_2015](../Token/net_2015_md.md)]<!--END ERROR INCLUDE --></p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task FlushAsync (System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests. The default value is <a class="xref" href="../system.threading/system.threading.cancellationtoken#System_Threading_CancellationToken_None_">None</a>.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous flush operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If the operation isnâ€™t cancelled, the <a class="xref" href="system.io.unmanagedmemorystream">UnmanagedMemoryStream</a> calls the <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream_Flush_">Flush</a> method, which means that no action performed.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_Initialize_System_Byte__System_Int64_System_Int64_System_IO_FileAccess_">
+    
+            <a id="System_IO_UnmanagedMemoryStream_Initialize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Initialize(Byte*,Int64,Int64,FileAccess)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class by using a pointer to an unmanaged memory location.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void Initialize (byte* pointer, long length, long capacity, System.IO.FileAccess access);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pointer</dt>
+                  <dd>
+                  </dd>
+                  </dl>
+                  <p>A pointer to an unmanaged memory location.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>length</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The length of the memory to use.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>capacity</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The total amount of memory assigned to the stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>access</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.fileaccess">FileAccess</a></div>
+                  </dd>
+                  </dl>
+                  <p>One of the <see cref="T:System.IO.FileAccess"> values.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method is equivalent to the <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream__ctor_">UnmanagedMemoryStream</a> constructor. It supports methods that need to initialize the pointer before setting stream variables and, therefore, cannot call the parameterized constructor. Such methods should use the default constructor, <a class="xref" href="system.io.unmanagedmemorystream#System_IO_UnmanagedMemoryStream__ctor">UnmanagedMemoryStream()</a>, initialize the pointer, and then invoke the Initialize method.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_Initialize_System_Runtime_InteropServices_SafeBuffer_System_Int64_System_Int64_System_IO_FileAccess_">
+    
+            <a id="System_IO_UnmanagedMemoryStream_Initialize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Initialize(SafeBuffer,Int64,Int64,FileAccess)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.UnmanagedMemoryStream"> class in a safe buffer with a specified offset, length, and file access.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void Initialize (System.Runtime.InteropServices.SafeBuffer buffer, long offset, long length, System.IO.FileAccess access);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.runtime.interopservices/system.runtime.interopservices.safebuffer">SafeBuffer</a></div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to contain the unmanaged memory stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The byte position in the buffer at which to start the unmanaged memory stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>length</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The length of the unmanaged memory stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>access</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.fileaccess">FileAccess</a></div>
+                  </dd>
+                  </dl>
+                  <p>The mode of file access to the unmanaged memory stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_Read_System_Byte___System_Int32_System_Int32_">
+    
+            <a id="System_IO_UnmanagedMemoryStream_Read_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Read(Byte[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Reads the specified number of bytes into the specified array.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int Read (byte[] buffer, int offset, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>When this method returns, contains the specified byte array with the values between  and ( +  - 1) replaced by the bytes read from the current source. This parameter is passed uninitialized.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The zero-based byte offset in  at which to begin storing the data read from the current stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to read from the current stream.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The  parameter gives the offset of the byte in the  parameter (the buffer index) at which to begin reading, and the  parameter gives the maximum number of bytes to be read from this stream. The returned value is the actual number of bytes read, or zero if the end of the stream is reached. If the read operation is successful, the current position of the stream is advanced by the number of bytes read. If an exception occurs, the current position of the stream is unchanged.  </p>
+<p> The Read method returns zero only after reaching the end of the stream. Otherwise, Read always reads at least one byte from the stream before returning. If no data is available from the stream upon a call to Read, the method will block until at least one byte of data can be returned. An implementation is free to return fewer bytes than requested even if the end of the stream has not been reached.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the <xref:system.io.unmanagedmemorystream> class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></xref:system.io.unmanagedmemorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_ReadAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_UnmanagedMemoryStream_ReadAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadAsync(Byte[],Int32,Int32,CancellationToken)</div>        
+          </div>
+    
+            <p>Asynchronously reads the specified number of bytes into the specified array.  </p>
+<p> Available starting in <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[net_2015](../Token/net_2015_md.md)]:Couldn&#39;t find file Token/net_2015_md.md. -->[!INCLUDE[net_2015](../Token/net_2015_md.md)]<!--END ERROR INCLUDE --></p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task&lt;int&gt; ReadAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to write the data into.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The byte offset in  at which to begin writing data from the stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests. The default value is <a class="xref" href="../system.threading/system.threading.cancellationtoken#System_Threading_CancellationToken_None_">None</a>.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </div>
+                  <p>A task that represents the asynchronous read operation. The value of the  parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the stream has been reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If an exception occurs during the read operation, it will be set as the <a class="xref" href="../system.threading.tasks/system.threading.tasks.task#System_Threading_Tasks_Task_Exception_">Exception</a> of the property of the returned task.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_ReadByte">
+    
+            <a id="System_IO_UnmanagedMemoryStream_ReadByte_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadByte()</div>        
+          </div>
+    
+            <p>Reads a byte from a stream and advances the position within the stream by one byte, or returns -1 if at the end of the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int ReadByte ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The unsigned byte cast to an <a class="xref" href="../system/system.int32">Int32</a> object, or -1 if at the end of the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use this method to return integer values from the stream.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the <xref:system.io.unmanagedmemorystream> class. A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class. In this example, an <xref:system.io.unmanagedmemorystream> object is passed to a method which checks the <xref:system.io.unmanagedmemorystream.canread%2a> property before attempting to read and display the contents to the console.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream_Example#00](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream_Example#00)]
+    
+    
+        </xref:system.io.unmanagedmemorystream.canread%2a></xref:system.io.unmanagedmemorystream></xref:system.runtime.interopservices.marshal></xref:system.io.unmanagedmemorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_Seek_System_Int64_System_IO_SeekOrigin_">
+    
+            <a id="System_IO_UnmanagedMemoryStream_Seek_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Seek(Int64,SeekOrigin)</div>        
+          </div>
+    
+            <p>Sets the current position of the current stream to the given value.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override long Seek (long offset, System.IO.SeekOrigin loc);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The point relative to  to begin seeking from.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>loc</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.seekorigin">SeekOrigin</a></div>
+                  </dd>
+                  </dl>
+                  <p>Specifies the beginning, the end, or the current position as a reference point for , using a value of type <see cref="T:System.IO.SeekOrigin">.<p>
+</see>
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>The new position in the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For more information about seeking, see <a class="xref" href="system.io.filestream#System_IO_FileStream_Seek_">Seek</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_SetLength_System_Int64_">
+    
+            <a id="System_IO_UnmanagedMemoryStream_SetLength_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetLength(Int64)</div>        
+          </div>
+    
+            <p>Sets the length of a stream to a specified value.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void SetLength (long value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The length of the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If the given value is less than the current length of the stream, the stream is truncated. If the given value is larger than the current length of the stream, the stream is expanded. If the stream is expanded, the contents of the stream between the old and the new lengths are undefined.  </p>
+<p> A stream must support both writing and seeking for SetLength to work.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_Write_System_Byte___System_Int32_System_Int32_">
+    
+            <a id="System_IO_UnmanagedMemoryStream_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Byte[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Writes a block of bytes to the current stream using data from a buffer.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Write (byte[] buffer, int offset, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The byte array from which to copy bytes to the current stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The offset in the buffer at which to begin copying bytes to the current stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The number of bytes to write to the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Writing occurs at the current position in the stream.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the <xref:system.io.unmanagedmemorystream> class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></xref:system.io.unmanagedmemorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_WriteAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_UnmanagedMemoryStream_WriteAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteAsync(Byte[],Int32,Int32,CancellationToken)</div>        
+          </div>
+    
+            <p>Asynchronously writes a sequence of bytes to the current stream, advances the current position within this stream by the number of bytes written, and monitors cancellation requests.  </p>
+<p> Available starting in <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[net_2015](../Token/net_2015_md.md)]:Couldn&#39;t find file Token/net_2015_md.md. -->[!INCLUDE[net_2015](../Token/net_2015_md.md)]<!--END ERROR INCLUDE --></p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to write data from.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The zero-based byte offset in  from which to begin copying bytes to the stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to write.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests. The default value is <a class="xref" href="../system.threading/system.threading.cancellationtoken#System_Threading_CancellationToken_None_">None</a>.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If an exception occurs during the write operation, it will be set as the <a class="xref" href="../system.threading.tasks/system.threading.tasks.task#System_Threading_Tasks_Task_Exception_">Exception</a> of the property of the returned task.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the UnmanagedMemoryStream class.  A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream#1)]
+    
+    
+        </xref:system.runtime.interopservices.marshal></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_UnmanagedMemoryStream_WriteByte_System_Byte_">
+    
+            <a id="System_IO_UnmanagedMemoryStream_WriteByte_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteByte(Byte)</div>        
+          </div>
+    
+            <p>Writes a byte to the current position in the file stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void WriteByte (byte value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a></div>
+                  </dd>
+                  </dl>
+                  <p>A byte value written to the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to read from and write to unmanaged memory using the <xref:system.io.unmanagedmemorystream> class. A block of unmanaged memory is allocated and de-allocated using the <xref:system.runtime.interopservices.marshal> class. In this example, an <xref:system.io.unmanagedmemorystream> object is passed to a method which checks the <xref:system.io.unmanagedmemorystream.canwrite%2a> property before attempting to write the data to the stream.  
+  
+ [!CODE [System.IO.UnmanagedMemoryStream_Example#00](../CodeSnippet/VS_Snippets_CLR_System/system.IO.UnmanagedMemoryStream_Example#00)]
+    
+    
+        </xref:system.io.unmanagedmemorystream.canwrite%2a></xref:system.io.unmanagedmemorystream></xref:system.runtime.interopservices.marshal></xref:system.io.unmanagedmemorystream></li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

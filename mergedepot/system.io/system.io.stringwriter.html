@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="StringWriter class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/System.IO/System.IO.StringWriter.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO/System.IO.StringWriter.yml">
+<meta name="APIName" content="System.IO.StringWriter">
+<meta name="APIName" content="System.IO.StringWriter..ctor">
+<meta name="APIName" content="System.IO.StringWriter.Close">
+<meta name="APIName" content="System.IO.StringWriter.Dispose">
+<meta name="APIName" content="System.IO.StringWriter.Encoding">
+<meta name="APIName" content="System.IO.StringWriter.FlushAsync">
+<meta name="APIName" content="System.IO.StringWriter.GetStringBuilder">
+<meta name="APIName" content="System.IO.StringWriter.ToString">
+<meta name="APIName" content="System.IO.StringWriter.Write">
+<meta name="APIName" content="System.IO.StringWriter.WriteAsync">
+<meta name="APIName" content="System.IO.StringWriter.WriteLineAsync">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="d8935a90-b6f4-bcd6-e590-2854f714e020">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Implements a  for writing information to a string. The information is stored in an underlying .
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.StringWriter">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.io/system.io.stringwriter" rel="canonical">
+    <title>StringWriter class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_StringWriter">
+      <span class="lang-csharp">StringWriter</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Implements a <see cref="T:System.IO.TextWriter"> for writing information to a string. The information is stored in an underlying <a class="xref" href="../system.text/system.text.stringbuilder">StringBuilder</a>.<p>
+</see>
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public class StringWriter : System.IO.TextWriter</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject">MarshalByRefObject</a>
+          </div>
+        </li>
+        <li class="l2">
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter">System.IO.TextWriter</a>
+          </div>
+        </li>
+      <li class="l3">
+        <div class="xref">
+          <div class="lang-csharp">StringWriter</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_CoreNewLine">CoreNewLine</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Dispose">Dispose()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Flush">Flush()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_FormatProvider">FormatProvider</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_NewLine">NewLine</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Null">Null</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Synchronized_System_IO_TextWriter_">Synchronized(TextWriter)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Boolean_">Write(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Char___">Write(Char[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Decimal_">Write(Decimal)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Double_">Write(Double)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Int32_">Write(Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Int64_">Write(Int64)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Object_">Write(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_Single_">Write(Single)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_String_System_Object_">Write(String,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_String_System_Object_System_Object_">Write(String,Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_String_System_Object_System_Object_System_Object_">Write(String,Object,Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_String_System_Object___">Write(String,Object[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_UInt32_">Write(UInt32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_System_UInt64_">Write(UInt64)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteAsync_System_Char___">WriteAsync(Char[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine">WriteLine()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Boolean_">WriteLine(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Char_">WriteLine(Char)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Char___">WriteLine(Char[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Char___System_Int32_System_Int32_">WriteLine(Char[],Int32,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Decimal_">WriteLine(Decimal)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Double_">WriteLine(Double)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Int32_">WriteLine(Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Int64_">WriteLine(Int64)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Object_">WriteLine(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_Single_">WriteLine(Single)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_String_">WriteLine(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_String_System_Object_">WriteLine(String,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_String_System_Object_System_Object_">WriteLine(String,Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_String_System_Object_System_Object_System_Object_">WriteLine(String,Object,Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_String_System_Object___">WriteLine(String,Object[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_UInt32_">WriteLine(UInt32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLine_System_UInt64_">WriteLine(UInt64)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLineAsync">WriteLineAsync()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textwriter#System_IO_TextWriter_WriteLineAsync_System_Char___">WriteLineAsync(Char[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_CreateObjRef_System_Type_">CreateObjRef(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_GetLifetimeService">GetLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_InitializeLifetimeService">InitializeLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_MemberwiseClone_System_Boolean_">MemberwiseClone(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <p>StringWriter enables you to write to a string synchronously or asynchronously. You can write a character at a time with the <a class="xref" href="system.io.stringwriter#System_IO_StringWriter_Write_System_Char_">Write(Char)</a> or the <a class="xref" href="system.io.stringwriter#System_IO_StringWriter_WriteAsync_System_Char_">WriteAsync(Char)</a> method, a string at a time using the <a class="xref" href="system.io.stringwriter#System_IO_StringWriter_Write_System_String_">Write(String)</a> or the <a class="xref" href="system.io.stringwriter#System_IO_StringWriter_WriteAsync_System_String_">WriteAsync(String)</a> method. In addition, you can write a character, an array of characters or a string followed by the line terminator asynchronously with one of the <a class="xref" href="system.io.stringwriter#System_IO_StringWriter_WriteLineAsync_">WriteLineAsync</a> methods.  </p>
+<div class="IMPORTANT"><h5>Important</h5><p> This type implements the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <a class="xref" href="../system/system.idisposable#System_IDisposable_Dispose_">Dispose</a> method in a <code>try</code> /<code>catch</code> block. To dispose of it indirectly, use a language construct such as <code>using</code> (in C#) or <code>Using</code> (in Visual Basic). For more information, see the â€œUsing an Object that Implements IDisposableâ€ section in the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface topic.  </p>
+</div>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter__ctor">StringWriter()</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StringWriter"> class.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter__ctor_System_IFormatProvider_">StringWriter(IFormatProvider)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StringWriter"> class with the specified format control.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter__ctor_System_Text_StringBuilder_">StringWriter(StringBuilder)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StringWriter"> class that writes to the specified <a class="xref" href="../system.text/system.text.stringbuilder">StringBuilder</a>.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter__ctor_System_Text_StringBuilder_System_IFormatProvider_">StringWriter(StringBuilder,IFormatProvider)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StringWriter"> class that writes to the specified <a class="xref" href="../system.text/system.text.stringbuilder">StringBuilder</a> and has the specified format provider.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_Encoding">Encoding</a></div>
+          </td>
+            <td>
+            <p>Gets the <see cref="T:System.Text.Encoding"> in which the output is written.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_Close">Close()</a></div>
+          </td>
+            <td>
+            <p>Closes the current <see cref="T:System.IO.StringWriter"> and the underlying stream.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.StringWriter"> and optionally releases the managed resources.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_FlushAsync">FlushAsync()</a></div>
+          </td>
+            <td>
+            <p>Asynchronously clears all buffers for the current writer and causes any buffered data to be written to the underlying device.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_GetStringBuilder">GetStringBuilder()</a></div>
+          </td>
+            <td>
+            <p>Returns the underlying <see cref="T:System.Text.StringBuilder">.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_ToString">ToString()</a></div>
+          </td>
+            <td>
+            <p>Returns a string containing the characters written to the current <code>StringWriter</code> so far.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_Write_System_Char_">Write(Char)</a></div>
+          </td>
+            <td>
+            <p>Writes a character to the string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_Write_System_String_">Write(String)</a></div>
+          </td>
+            <td>
+            <p>Writes a string to the current string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_Write_System_Char___System_Int32_System_Int32_">Write(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Writes a subarray of characters to the string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_WriteAsync_System_Char_">WriteAsync(Char)</a></div>
+          </td>
+            <td>
+            <p>Writes a character to the string asynchronously.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_WriteAsync_System_String_">WriteAsync(String)</a></div>
+          </td>
+            <td>
+            <p>Writes a string to the current string asynchronously.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_WriteAsync_System_Char___System_Int32_System_Int32_">WriteAsync(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Writes a subarray of characters to the string asynchronously.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_WriteLineAsync_System_Char_">WriteLineAsync(Char)</a></div>
+          </td>
+            <td>
+            <p>Writes a character followed by a line terminator asynchronously to the string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_WriteLineAsync_System_String_">WriteLineAsync(String)</a></div>
+          </td>
+            <td>
+            <p>Writes a string followed by a line terminator asynchronously to the current string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringWriter_WriteLineAsync_System_Char___System_Int32_System_Int32_">WriteLineAsync(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Writes a subarray of characters followed by a line terminator asynchronously to the string.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter__ctor">
+    
+            <a id="System_IO_StringWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StringWriter()</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StringWriter"> class.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StringWriter ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>A new <a class="xref" href="../system.text/system.text.stringbuilder">StringBuilder</a> object is automatically created and associated with the new instance of the <a class="xref" href="system.io.stringwriter">StringWriter</a> class. Since a format control is not specified for this constructor, the new instance will be initialized with <a class="xref" href="../system.globalization/system.globalization.cultureinfo#System_Globalization_CultureInfo_CurrentCulture_">CurrentCulture</a>.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to construct a string using the `StringWriter` class.  
+  
+ [!CODE [System.IO.StringWriter1#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringWriter1#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter__ctor_System_IFormatProvider_">
+    
+            <a id="System_IO_StringWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StringWriter(IFormatProvider)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StringWriter"> class with the specified format control.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StringWriter (IFormatProvider formatProvider);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>formatProvider</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.iformatprovider">IFormatProvider</a></div>
+                  </dd>
+                  </dl>
+                  <p>An <a class="xref" href="../system/system.iformatprovider">IFormatProvider</a> object that controls formatting.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>A new <a class="xref" href="../system.text/system.text.stringbuilder">StringBuilder</a> object is automatically created and associated with the new instance of the <a class="xref" href="system.io.stringwriter">StringWriter</a> class.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to construct a string in a specific culture.  
+  
+ [!CODE [System.IO.StringWriter2#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringWriter2#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter__ctor_System_Text_StringBuilder_">
+    
+            <a id="System_IO_StringWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StringWriter(StringBuilder)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StringWriter"> class that writes to the specified <a class="xref" href="../system.text/system.text.stringbuilder">StringBuilder</a>.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StringWriter (System.Text.StringBuilder sb);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>sb</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.stringbuilder">StringBuilder</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <see cref="T:System.Text.StringBuilder"> object to write to.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Since a format control is not specified for this constructor, the new instance will be initialized with <a class="xref" href="../system.globalization/system.globalization.cultureinfo#System_Globalization_CultureInfo_CurrentCulture_">CurrentCulture</a>.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates using the <xref:system.text.stringbuilder> class to modify the underlying string in a closed `StringWriter`.  
+  
+ [!CODE [System.IO.StringWriter3#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringWriter3#1)]
+    
+    
+        </xref:system.text.stringbuilder></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter__ctor_System_Text_StringBuilder_System_IFormatProvider_">
+    
+            <a id="System_IO_StringWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StringWriter(StringBuilder,IFormatProvider)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StringWriter"> class that writes to the specified <a class="xref" href="../system.text/system.text.stringbuilder">StringBuilder</a> and has the specified format provider.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StringWriter (System.Text.StringBuilder sb, IFormatProvider formatProvider);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>sb</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.stringbuilder">StringBuilder</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <see cref="T:System.Text.StringBuilder"> object to write to.<p>
+</see>
+                </li>
+                <li>
+                  <dl>
+                  <dt>formatProvider</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.iformatprovider">IFormatProvider</a></div>
+                  </dd>
+                  </dl>
+                  <p>An <a class="xref" href="../system/system.iformatprovider">IFormatProvider</a> object that controls formatting.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the creation of a continuous paragraph from a group of double-spaced sentences, and then the conversion of the paragraph back to the original text.  
+  
+ [!CODE [System.IO.StringReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringReaderWriter#1)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_Encoding">
+    
+            <a id="System_IO_StringWriter_Encoding_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Encoding</div>        
+          </div>
+    
+            <p>Gets the <see cref="T:System.Text.Encoding"> in which the output is written.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Text.Encoding Encoding { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </div>
+                  <p>The <code>Encoding</code> in which the output is written.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This property is necessary for some XML scenarios where a header must be written containing the encoding used by the <code>StringWriter</code>. This allows the XML code to consume an arbitrary <code>StringWriter</code> and generate the correct XML header.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.stringwriter.%23ctor> constructor.  
+  
+ [!CODE [System.IO.StringWriter1#4](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringWriter1#4)]
+    
+    
+        </xref:system.io.stringwriter.%23ctor></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_Close">
+    
+            <a id="System_IO_StringWriter_Close_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Close()</div>        
+          </div>
+    
+            <p>Closes the current <see cref="T:System.IO.StringWriter"> and the underlying stream.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Close ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For an example of creating a file and writing text to a file, see <a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a>. For an example of reading text from a file, see <a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a>. For an example of reading from and writing to a binary file, see <a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a>.  </p>
+<p> This method overrides <a class="xref" href="system.io.stream#System_IO_Stream_Close_">Close</a>.  </p>
+<p> This implementation of <code>Close</code> calls the <a class="xref" href="system.io.stringwriter#System_IO_StringWriter_Dispose_">Dispose</a> method passing a <code>true</code> value.  </p>
+<p> Flushing the stream will not flush its underlying encoder unless you explicitly call <code>Close</code>. Setting <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> to <code>true</code> means that data will be flushed from the buffer to the stream, but the encoder state will not be flushed. This allows the encoder to keep its state (partial characters) so that it can encode the next block of characters correctly. This scenario affects UTF8 and UTF7 where certain characters can only be encoded after the encoder receives the adjacent character or characters.</p>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.stringwriter.%23ctor%28system.text.stringbuilder%29> constructor.  
+  
+ [!CODE [System.IO.StringWriter3#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringWriter3#2)]
+    
+    
+        </xref:system.io.stringwriter.%23ctor%28system.text.stringbuilder%29></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_Dispose_System_Boolean_">
+    
+            <a id="System_IO_StringWriter_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.StringWriter"> and optionally releases the managed resources.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only unmanaged resources.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>When the  parameter is <code>true</code>, this method releases all resources held by any managed objects that this <a class="xref" href="system.io.stringwriter">StringWriter</a> references. This method invokes the <code>Dispose</code> method of each referenced object.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the creation of a continuous paragraph from a group of double-spaced sentences, and then the conversion of the paragraph back to the original text.  
+  
+ [!CODE [System.IO.StringReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_FlushAsync">
+    
+            <a id="System_IO_StringWriter_FlushAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FlushAsync()</div>        
+          </div>
+    
+            <p>Asynchronously clears all buffers for the current writer and causes any buffered data to be written to the underlying device.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task FlushAsync ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous flush operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following code example demonstrates the creation of a continuous paragraph from a group of double-spaced sentences, and then the conversion of the paragraph back to the original text.  
+  
+ [!CODE [System.IO.StringReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_GetStringBuilder">
+    
+            <a id="System_IO_StringWriter_GetStringBuilder_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetStringBuilder()</div>        
+          </div>
+    
+            <p>Returns the underlying <see cref="T:System.Text.StringBuilder">.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Text.StringBuilder GetStringBuilder ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.text/system.text.stringbuilder">StringBuilder</a></div>
+                  </div>
+                  <p>The underlying <code>StringBuilder</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This is either the <code>StringBuilder</code> that was passed to the constructor, or the <code>StringBuilder</code> that was automatically created.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.stringwriter.%23ctor> constructor.  
+  
+ [!CODE [System.IO.StringWriter1#3](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringWriter1#3)]
+    
+    
+        </xref:system.io.stringwriter.%23ctor></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_ToString">
+    
+            <a id="System_IO_StringWriter_ToString_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ToString()</div>        
+          </div>
+    
+            <p>Returns a string containing the characters written to the current <code>StringWriter</code> so far.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string ToString ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The string containing the characters written to the current <code>StringWriter</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.stringwriter.%23ctor%28system.iformatprovider%29> constructor.  
+  
+ [!CODE [System.IO.StringWriter2#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringWriter2#2)]
+    
+    
+        </xref:system.io.stringwriter.%23ctor%28system.iformatprovider%29></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_Write_System_Char_">
+    
+            <a id="System_IO_StringWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Char)</div>        
+          </div>
+    
+            <p>Writes a character to the string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Write (char value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_">Write</a>.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.stringwriter.%23ctor> constructor.  
+  
+ [!CODE [System.IO.StringWriter1#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringWriter1#2)]
+    
+    
+        </xref:system.io.stringwriter.%23ctor></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_Write_System_String_">
+    
+            <a id="System_IO_StringWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(String)</div>        
+          </div>
+    
+            <p>Writes a string to the current string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Write (string value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The string to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_">Write</a>.  </p>
+<p> If the specified string is <code>null</code>, nothing is written.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.stringwriter> class.  
+  
+ [!CODE [System.IO.StringReaderWriter#3](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringReaderWriter#3)]
+    
+    
+        </xref:system.io.stringwriter></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_Write_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StringWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Writes a subarray of characters to the string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Write (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The character array to write data from.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The position in the buffer at which to start reading data.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of characters to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Write_">Write</a>.  </p>
+<p> This method writes  characters of data to this <code>StringWriter</code> from , starting at position .  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.stringwriter.%23ctor> constructor.  
+  
+ [!CODE [System.IO.StringWriter1#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringWriter1#2)]
+    
+    
+        </xref:system.io.stringwriter.%23ctor></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_WriteAsync_System_Char_">
+    
+            <a id="System_IO_StringWriter_WriteAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteAsync(Char)</div>        
+          </div>
+    
+            <p>Writes a character to the string asynchronously.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteAsync (char value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character to write to the string.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write characters by using the WriteAsync method.  
+  
+ [!CODE [System.IO.StringWriter#5](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringwriter#5)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_WriteAsync_System_String_">
+    
+            <a id="System_IO_StringWriter_WriteAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteAsync(String)</div>        
+          </div>
+    
+            <p>Writes a string to the current string asynchronously.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteAsync (string value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The string to write. If  is <code>null</code>, nothing is written to the text stream.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a string by using the WriteAsync method.  
+  
+ [!CODE [System.IO.StringWriter#4](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringwriter#4)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_WriteAsync_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StringWriter_WriteAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteAsync(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Writes a subarray of characters to the string asynchronously.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteAsync (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The character array to write data from.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The position in the buffer at which to start reading data.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of characters to write.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write characters by using the WriteAsync method.  
+  
+ [!CODE [System.IO.StringWriter#6](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringwriter#6)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_WriteLineAsync_System_Char_">
+    
+            <a id="System_IO_StringWriter_WriteLineAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteLineAsync(Char)</div>        
+          </div>
+    
+            <p>Writes a character followed by a line terminator asynchronously to the string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteLineAsync (char value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character to write to the string.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The line terminator is defined by the <a class="xref" href="system.io.textwriter#System_IO_TextWriter_NewLine_">NewLine</a> property.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to write characters by using the WriteLineAsync method.  
+  
+ [!CODE [System.IO.StringWriter#2](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringwriter#2)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_WriteLineAsync_System_String_">
+    
+            <a id="System_IO_StringWriter_WriteLineAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteLineAsync(String)</div>        
+          </div>
+    
+            <p>Writes a string followed by a line terminator asynchronously to the current string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteLineAsync (string value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The string to write. If the value is <code>null</code>, only a line terminator is written.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The line terminator is defined by the <a class="xref" href="system.io.textwriter#System_IO_TextWriter_NewLine_">NewLine</a> property.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to write a string by using the WriteLineAsync method.  
+  
+ [!CODE [System.IO.StringWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringwriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringWriter_WriteLineAsync_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StringWriter_WriteLineAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteLineAsync(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Writes a subarray of characters followed by a line terminator asynchronously to the string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteLineAsync (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The character array to write data from.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The position in the buffer at which to start reading data.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of characters to write.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The line terminator is defined by the <a class="xref" href="system.io.textwriter#System_IO_TextWriter_NewLine_">NewLine</a> property.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to write characters by using the WriteLineAsync method.  
+  
+ [!CODE [System.IO.StringWriter#3](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringwriter#3)]
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

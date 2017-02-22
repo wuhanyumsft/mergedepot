@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="BuildItem class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/Microsoft.Build.BuildEngine/Microsoft.Build.BuildEngine.BuildItem.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/Microsoft.Build.BuildEngine/Microsoft.Build.BuildEngine.BuildItem.yml">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem..ctor">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.Clone">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.Condition">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.CopyCustomMetadataTo">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.CustomMetadataCount">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.CustomMetadataNames">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.Exclude">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.FinalItemSpec">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.GetEvaluatedMetadata">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.GetMetadata">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.HasMetadata">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.Include">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.IsImported">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.MetadataCount">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.MetadataNames">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.Name">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.RemoveMetadata">
+<meta name="APIName" content="Microsoft.Build.BuildEngine.BuildItem.SetMetadata">
+<meta name="APILocation" content="Microsoft.Build.Engine.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="c49b8760-c17c-589c-ee72-8dddd55f2d50">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Represents a single item in an MSBuild project.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Build.BuildEngine.BuildItem">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/microsoft.build.buildengine/microsoft.build.buildengine.builditem" rel="canonical">
+    <title>BuildItem class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Build_BuildEngine_BuildItem">
+      <span class="lang-csharp">BuildItem</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Represents a single item in an <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/vstecmsbuild-md.md&quot; -->MSBuild<!--END INCLUDE --> project.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Diagnostics.DebuggerDisplay(&quot;BuildItem (Name = { Name }, Include = { Include }, FinalItemSpec = { FinalItemSpec }, Condition = { Condition } )&quot;)]
+public class BuildItem</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">BuildItem</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <p>An  element in a project can represent multiple items through the use of wildcards. Therefore, each BuildItem object does not necessarily represent an <code>Item</code> element in the project.</p>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem__ctor_System_String_Microsoft_Build_Framework_ITaskItem_">BuildItem(String,ITaskItem)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.BuildItem"> class based on an <a class="xref" href="../microsoft.build.framework/microsoft.build.framework.itaskitem">ITaskItem</a> object.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem__ctor_System_String_System_String_">BuildItem(String,String)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.BuildItem"> class with the specified <a class="xref" href="microsoft.build.buildengine.builditem#Microsoft_Build_BuildEngine_BuildItem_Name_">Name</a> and <a class="xref" href="microsoft.build.buildengine.builditem#Microsoft_Build_BuildEngine_BuildItem_Include_">Include</a> property values.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_Condition">Condition</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the <code>Condition</code> attribute value of the item.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_CustomMetadataCount">CustomMetadataCount</a></div>
+          </td>
+            <td>
+            <p>Gets the number of custom attributes that are set on this item.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_CustomMetadataNames">CustomMetadataNames</a></div>
+          </td>
+            <td>
+            <p>Gets all user-defined or custom attribute names.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_Exclude">Exclude</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the <code>Exclude</code> attribute value of the item.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_FinalItemSpec">FinalItemSpec</a></div>
+          </td>
+            <td>
+            <p>Gets the final specification of the item after all wildcards and properties have been evaluated.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_Include">Include</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the <code>Include</code> attribute that created the <see cref="T:Microsoft.Build.BuildEngine.BuildItem">.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_IsImported">IsImported</a></div>
+          </td>
+            <td>
+            <p>Gets a value indicating whether the item was imported into the project.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_MetadataCount">MetadataCount</a></div>
+          </td>
+            <td>
+            <p>Gets the number of metadata set on the item</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_MetadataNames">MetadataNames</a></div>
+          </td>
+            <td>
+            <p>Gets the names of metadata on the item, including pre-defined or reserved item-spec modifiers.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_Name">Name</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the name of the item collection to which the item belongs.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_Clone">Clone()</a></div>
+          </td>
+            <td>
+            <p>Creates a shallow copy of the <see cref="T:Microsoft.Build.BuildEngine.BuildItem">.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_CopyCustomMetadataTo_Microsoft_Build_BuildEngine_BuildItem_">CopyCustomMetadataTo(BuildItem)</a></div>
+          </td>
+            <td>
+            <p>Copies all item metadata on this <see cref="T:Microsoft.Build.BuildEngine.BuildItem"> to the specified <see cref="T:Microsoft.Build.BuildEngine.BuildItem">.<p>
+</see></see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_GetEvaluatedMetadata_System_String_">GetEvaluatedMetadata(String)</a></div>
+          </td>
+            <td>
+            <p>Returns the value of the specified item metadata after after all item and property references have been evaluated.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_GetMetadata_System_String_">GetMetadata(String)</a></div>
+          </td>
+            <td>
+            <p>Returns the value of the specified item metadata.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_HasMetadata_System_String_">HasMetadata(String)</a></div>
+          </td>
+            <td>
+            <p>Indicates whether the item has the specified item metadata.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_RemoveMetadata_System_String_">RemoveMetadata(String)</a></div>
+          </td>
+            <td>
+            <p>Removes the specified item metadata.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_SetMetadata_System_String_System_String_">SetMetadata(String,String)</a></div>
+          </td>
+            <td>
+            <p>Assigns the specified value to the specified item metadata.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_BuildEngine_BuildItem_SetMetadata_System_String_System_String_System_Boolean_">SetMetadata(String,String,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Assigns the specified value to the specified item metadata, and optionally treats the metadata as a literal value.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem__ctor_System_String_Microsoft_Build_Framework_ITaskItem_">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BuildItem(String,ITaskItem)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.BuildItem"> class based on an <a class="xref" href="../microsoft.build.framework/microsoft.build.framework.itaskitem">ITaskItem</a> object.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public BuildItem (string itemName, Microsoft.Build.Framework.ITaskItem taskItem);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>itemName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <a class="xref" href="microsoft.build.buildengine.builditem#Microsoft_Build_BuildEngine_BuildItem_Name_">Name</a> property of the <a class="xref" href="microsoft.build.buildengine.builditem">BuildItem</a>.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>taskItem</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../microsoft.build.framework/microsoft.build.framework.itaskitem">ITaskItem</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <see cref="T:Microsoft.Build.Framework.ITaskItem"> from which to create the <a class="xref" href="microsoft.build.buildengine.builditem#Microsoft_Build_BuildEngine_BuildItem_Include_">Include</a> property of the <a class="xref" href="microsoft.build.buildengine.builditem">BuildItem</a>.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem__ctor_System_String_System_String_">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BuildItem(String,String)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:Microsoft.Build.BuildEngine.BuildItem"> class with the specified <a class="xref" href="microsoft.build.buildengine.builditem#Microsoft_Build_BuildEngine_BuildItem_Name_">Name</a> and <a class="xref" href="microsoft.build.buildengine.builditem#Microsoft_Build_BuildEngine_BuildItem_Include_">Include</a> property values.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public BuildItem (string itemName, string itemInclude);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>itemName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <a class="xref" href="microsoft.build.buildengine.builditem#Microsoft_Build_BuildEngine_BuildItem_Name_">Name</a> property of the <a class="xref" href="microsoft.build.buildengine.builditem">BuildItem</a>.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>itemInclude</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <a class="xref" href="microsoft.build.buildengine.builditem#Microsoft_Build_BuildEngine_BuildItem_Include_">Include</a> property of the <a class="xref" href="microsoft.build.buildengine.builditem">BuildItem</a>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_Condition">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_Condition_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Condition</div>        
+          </div>
+    
+            <p>Gets or sets the <code>Condition</code> attribute value of the item.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Condition { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The <code>Condition</code> attribute value of the item.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_CustomMetadataCount">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_CustomMetadataCount_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CustomMetadataCount</div>        
+          </div>
+    
+            <p>Gets the number of custom attributes that are set on this item.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int CustomMetadataCount { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>An integer indicating how many custom attributes are set on this item.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The value returned by CustomMetadataCount does include pre-defined or reserved item-spec modifiers, because they are not custom attributes.</p>
+
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_CustomMetadataNames">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_CustomMetadataNames_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CustomMetadataNames</div>        
+          </div>
+    
+            <p>Gets all user-defined or custom attribute names.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ICollection CustomMetadataNames { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections/system.collections.icollection">ICollection</a></div>
+                  </div>
+                  <p>An <a class="xref" href="../system.collections/system.collections.icollection">ICollection</a> containing string names for all of the user-defined or custom attributes.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>CustomMetadataNames does not include the names of non-user-defined or non-custom attributes.</p>
+
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_Exclude">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_Exclude_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Exclude</div>        
+          </div>
+    
+            <p>Gets or sets the <code>Exclude</code> attribute value of the item.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Exclude { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Gets or sets the <code>Exclude</code> attribute value of the item.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_FinalItemSpec">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_FinalItemSpec_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FinalItemSpec</div>        
+          </div>
+    
+            <p>Gets the final specification of the item after all wildcards and properties have been evaluated.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string FinalItemSpec { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The final specification of the item after all wildcards and properties have been evaluated.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_Include">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_Include_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Include</div>        
+          </div>
+    
+            <p>Gets or sets the <code>Include</code> attribute that created the <see cref="T:Microsoft.Build.BuildEngine.BuildItem">.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Include { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The <code>Include</code> attribute that created the <see cref="T:Microsoft.Build.BuildEngine.BuildItem">.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The <xref:microsoft.build.buildengine.builditem>, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.builditem></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_IsImported">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_IsImported_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsImported</div>        
+          </div>
+    
+            <p>Gets a value indicating whether the item was imported into the project.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool IsImported { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the item was imported into the project; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_MetadataCount">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_MetadataCount_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MetadataCount</div>        
+          </div>
+    
+            <p>Gets the number of metadata set on the item</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int MetadataCount { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>An integer representing the number of metadata items.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The value returned by MetadataCount includes pre-defined or reserved item-spec modifiers as well as other metadata.</p>
+
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_MetadataNames">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_MetadataNames_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MetadataNames</div>        
+          </div>
+    
+            <p>Gets the names of metadata on the item, including pre-defined or reserved item-spec modifiers.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.ICollection MetadataNames { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections/system.collections.icollection">ICollection</a></div>
+                  </div>
+                  <p>An <a class="xref" href="../system.collections/system.collections.icollection">ICollection</a> containing name strings of all metadata on the item.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The value returned by MetadataNames includes the names of all metadata, including user-defined and custom attributes.</p>
+
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_Name">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_Name_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Name</div>        
+          </div>
+    
+            <p>Gets or sets the name of the item collection to which the item belongs.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Name { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The name of the item collection to which the item belongs.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The <xref:microsoft.build.buildengine.builditem>, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.builditem></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_Clone">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_Clone_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Clone()</div>        
+          </div>
+    
+            <p>Creates a shallow copy of the <see cref="T:Microsoft.Build.BuildEngine.BuildItem">.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.BuildEngine.BuildItem Clone ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.buildengine.builditem">BuildItem</a></div>
+                  </div>
+                  <p>A copy of the <see cref="T:Microsoft.Build.BuildEngine.BuildItem">.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_CopyCustomMetadataTo_Microsoft_Build_BuildEngine_BuildItem_">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_CopyCustomMetadataTo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyCustomMetadataTo(BuildItem)</div>        
+          </div>
+    
+            <p>Copies all item metadata on this <see cref="T:Microsoft.Build.BuildEngine.BuildItem"> to the specified <see cref="T:Microsoft.Build.BuildEngine.BuildItem">.<p>
+</see></see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void CopyCustomMetadataTo (Microsoft.Build.BuildEngine.BuildItem destinationItem);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>destinationItem</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.build.buildengine.builditem">BuildItem</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <see cref="T:Microsoft.Build.BuildEngine.BuildItem"> to which to copy the item metadata.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_GetEvaluatedMetadata_System_String_">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_GetEvaluatedMetadata_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetEvaluatedMetadata(String)</div>        
+          </div>
+    
+            <p>Returns the value of the specified item metadata after after all item and property references have been evaluated.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string GetEvaluatedMetadata (string metadataName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>metadataName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The item metadata name.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The value of the specified item metadata after after all item and property references have been evaluated.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_GetMetadata_System_String_">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_GetMetadata_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetMetadata(String)</div>        
+          </div>
+    
+            <p>Returns the value of the specified item metadata.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string GetMetadata (string metadataName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>metadataName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The item metadata name.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The value of the specified item metadata.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The <xref:microsoft.build.buildengine.builditem>, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.builditem></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_HasMetadata_System_String_">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_HasMetadata_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">HasMetadata(String)</div>        
+          </div>
+    
+            <p>Indicates whether the item has the specified item metadata.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool HasMetadata (string metadataName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>metadataName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The item metadata name.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the item has the specified item metadata; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_RemoveMetadata_System_String_">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_RemoveMetadata_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveMetadata(String)</div>        
+          </div>
+    
+            <p>Removes the specified item metadata.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void RemoveMetadata (string metadataName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>metadataName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The item metadata name.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_SetMetadata_System_String_System_String_">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_SetMetadata_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetMetadata(String,String)</div>        
+          </div>
+    
+            <p>Assigns the specified value to the specified item metadata.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetMetadata (string metadataName, string metadataValue);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>metadataName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The item metadata name.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>metadataValue</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The item metadata value.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The <xref:microsoft.build.buildengine.builditem>, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.builditem></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_BuildEngine_BuildItem_SetMetadata_System_String_System_String_System_Boolean_">
+    
+            <a id="Microsoft_Build_BuildEngine_BuildItem_SetMetadata_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetMetadata(String,String,Boolean)</div>        
+          </div>
+    
+            <p>Assigns the specified value to the specified item metadata, and optionally treats the metadata as a literal value.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetMetadata (string metadataName, string metadataValue, bool treatMetadataValueAsLiteral);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>metadataName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The item metadata name.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>metadataValue</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The item metadata value.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>treatMetadataValueAsLiteral</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to treat the metadata as a literal value by escaping all <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/vstecmsbuild-md.md&quot; -->MSBuild<!--END INCLUDE --> special characters; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example creates a <xref:microsoft.build.buildengine.project> object and uses the <xref:microsoft.build.buildengine.project.loadxml%2a> method to add content to the project. The BuildItem, <xref:microsoft.build.buildengine.builditemgroup>, and <xref:microsoft.build.buildengine.builditemgroupcollection> classes are used to add, remove, and change items in the project.  
+  
+ [!code-vb[msbuild_AddNewItem#1](../../add/codesnippet/VisualBasic/AddNewItem/Module1.vb#1)]
+ [!code-cs[msbuild_AddNewItem#1](../../add/codesnippet/CSharp/AddNewItem/Program.cs#1)]
+    
+    
+        </xref:microsoft.build.buildengine.builditemgroupcollection></xref:microsoft.build.buildengine.builditemgroup></xref:microsoft.build.buildengine.project.loadxml%2a></xref:microsoft.build.buildengine.project></li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

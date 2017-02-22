@@ -1,0 +1,3328 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="EventSource class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Diagnostics.Tracing/System.Diagnostics.Tracing.EventSource.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Diagnostics.Tracing/System.Diagnostics.Tracing.EventSource.yml">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource..ctor">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.ConstructionException">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.CurrentThreadActivityId">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.Dispose">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.EventCommandExecuted">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.add_EventCommandExecuted">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.remove_EventCommandExecuted">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.Finalize">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.GenerateManifest">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.GetGuid">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.GetName">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.GetSources">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.GetTrait">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.Guid">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.IsEnabled">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.Name">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.OnEventCommand">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.SendCommand">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.SetCurrentThreadActivityId">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.Settings">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.ToString">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.Write">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.WriteEvent">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.WriteEventCore">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId">
+<meta name="APIName" content="System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="4576df7e-086f-8cf6-bfda-29cc1e1c4d36">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Diagnostics.Tracing.EventSource">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.diagnostics.tracing/system.diagnostics.tracing.eventsource" rel="canonical">
+    <title>EventSource class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Diagnostics_Tracing_EventSource">
+      <span class="lang-csharp">EventSource</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public class EventSource : IDisposable</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">EventSource</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource__ctor">EventSource()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource__ctor_System_Boolean_">EventSource(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource__ctor_System_Diagnostics_Tracing_EventSourceSettings_">EventSource(EventSourceSettings)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource__ctor_System_String_">EventSource(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource__ctor_System_Diagnostics_Tracing_EventSourceSettings_System_String___">EventSource(EventSourceSettings,String[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource__ctor_System_String_System_Diagnostics_Tracing_EventSourceSettings_">EventSource(String,EventSourceSettings)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource__ctor_System_String_System_Diagnostics_Tracing_EventSourceSettings_System_String___">EventSource(String,EventSourceSettings,String[])</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_ConstructionException">ConstructionException</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_CurrentThreadActivityId">CurrentThreadActivityId</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_Guid">Guid</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_Name">Name</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_Settings">Settings</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_Dispose">Dispose()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_Finalize">Finalize()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_GenerateManifest_System_Type_System_String_">GenerateManifest(Type,String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_GenerateManifest_System_Type_System_String_System_Diagnostics_Tracing_EventManifestOptions_">GenerateManifest(Type,String,EventManifestOptions)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_GetGuid_System_Type_">GetGuid(Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_GetName_System_Type_">GetName(Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_GetSources">GetSources()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_GetTrait_System_String_">GetTrait(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_IsEnabled">IsEnabled()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_IsEnabled_System_Diagnostics_Tracing_EventLevel_System_Diagnostics_Tracing_EventKeywords_">IsEnabled(EventLevel,EventKeywords)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_IsEnabled_System_Diagnostics_Tracing_EventLevel_System_Diagnostics_Tracing_EventKeywords_System_Diagnostics_Tracing_EventChannel_">IsEnabled(EventLevel,EventKeywords,EventChannel)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_OnEventCommand_System_Diagnostics_Tracing_EventCommandEventArgs_">OnEventCommand(EventCommandEventArgs)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_SendCommand_System_Diagnostics_Tracing_EventSource_System_Diagnostics_Tracing_EventCommand_System_Collections_Generic_IDictionary_System_String_System_String__">SendCommand(EventSource,EventCommand,IDictionary&lt;String,String&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_SetCurrentThreadActivityId_System_Guid_">SetCurrentThreadActivityId(Guid)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_SetCurrentThreadActivityId_System_Guid_System_Guid__">SetCurrentThreadActivityId(Guid,Guid)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_ToString">ToString()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_Write_System_String_">Write(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_Write_System_String_System_Diagnostics_Tracing_EventSourceOptions_">Write(String,EventSourceOptions)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_Write__1_System_String___0_">Write(String,T)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_Write__1_System_String_System_Diagnostics___0racing_EventSourceOptions___0_">Write(String,EventSourceOptions,T)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_Write__1_System_String_System_Diagnostics___0racing_EventSourceOptions____0__">Write(String,EventSourceOptions,T)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_Write__1_System_String_System_Diagnostics___0racing_EventSourceOptions__System_Guid__System_Guid____0__">Write(String,EventSourceOptions,Guid,Guid,T)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_">WriteEvent(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Byte___">WriteEvent(Int32,Byte[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int32_">WriteEvent(Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int64_">WriteEvent(Int32,Int64)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Object___">WriteEvent(Int32,Object[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_String_">WriteEvent(Int32,String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int32_System_Int32_">WriteEvent(Int32,Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int32_System_String_">WriteEvent(Int32,Int32,String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int64_System_Byte___">WriteEvent(Int32,Int64,Byte[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int64_System_Int64_">WriteEvent(Int32,Int64,Int64)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int64_System_String_">WriteEvent(Int32,Int64,String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_String_System_Int32_">WriteEvent(Int32,String,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_String_System_Int64_">WriteEvent(Int32,String,Int64)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_String_System_String_">WriteEvent(Int32,String,String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int32_System_Int32_System_Int32_">WriteEvent(Int32,Int32,Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int64_System_Int64_System_Int64_">WriteEvent(Int32,Int64,Int64,Int64)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_String_System_Int32_System_Int32_">WriteEvent(Int32,String,Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_String_System_String_System_String_">WriteEvent(Int32,String,String,String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEventCore_System_Int32_System_Int32_System_Diagnostics_Tracing_EventSource_EventData__">WriteEventCore(Int32,Int32,EventSource+EventData*)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEventWithRelatedActivityId_System_Int32_System_Guid_System_Object___">WriteEventWithRelatedActivityId(Int32,Guid,Object[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_WriteEventWithRelatedActivityIdCore_System_Int32_System_Guid__System_Int32_System_Diagnostics_Tracing_EventSource_EventData__">WriteEventWithRelatedActivityIdCore(Int32,Guid*,Int32,EventSource+EventData*)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Events
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_Tracing_EventSource_EventCommandExecuted">EventCommandExecuted</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource__ctor">
+    
+            <a id="System_Diagnostics_Tracing_EventSource__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventSource()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected EventSource ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource__ctor_System_Boolean_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventSource(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected EventSource (bool throwOnEventWriteErrors);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>throwOnEventWriteErrors</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource__ctor_System_Diagnostics_Tracing_EventSourceSettings_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventSource(EventSourceSettings)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected EventSource (System.Diagnostics.Tracing.EventSourceSettings settings);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>settings</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventsourcesettings">EventSourceSettings</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource__ctor_System_String_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventSource(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public EventSource (string eventSourceName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventSourceName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource__ctor_System_Diagnostics_Tracing_EventSourceSettings_System_String___">
+    
+            <a id="System_Diagnostics_Tracing_EventSource__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventSource(EventSourceSettings,String[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected EventSource (System.Diagnostics.Tracing.EventSourceSettings settings, string[] traits);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>settings</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventsourcesettings">EventSourceSettings</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>traits</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource__ctor_System_String_System_Diagnostics_Tracing_EventSourceSettings_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventSource(String,EventSourceSettings)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public EventSource (string eventSourceName, System.Diagnostics.Tracing.EventSourceSettings config);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventSourceName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>config</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventsourcesettings">EventSourceSettings</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource__ctor_System_String_System_Diagnostics_Tracing_EventSourceSettings_System_String___">
+    
+            <a id="System_Diagnostics_Tracing_EventSource__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventSource(String,EventSourceSettings,String[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public EventSource (string eventSourceName, System.Diagnostics.Tracing.EventSourceSettings config, string[] traits);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventSourceName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>config</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventsourcesettings">EventSourceSettings</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>traits</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_ConstructionException">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_ConstructionException_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ConstructionException</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Exception ConstructionException { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.exception">Exception</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_CurrentThreadActivityId">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_CurrentThreadActivityId_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CurrentThreadActivityId</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Guid CurrentThreadActivityId { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_Guid">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_Guid_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Guid</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Guid Guid { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_Name">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_Name_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Name</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Name { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_Settings">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_Settings_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Settings</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Diagnostics.Tracing.EventSourceSettings Settings { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventsourcesettings">EventSourceSettings</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_Dispose">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Dispose ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_Dispose_System_Boolean_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_Finalize">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_Finalize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Finalize()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">~EventSource ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_GenerateManifest_System_Type_System_String_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_GenerateManifest_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GenerateManifest(Type,String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string GenerateManifest (Type eventSourceType, string assemblyPathToIncludeInManifest);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventSourceType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>assemblyPathToIncludeInManifest</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_GenerateManifest_System_Type_System_String_System_Diagnostics_Tracing_EventManifestOptions_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_GenerateManifest_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GenerateManifest(Type,String,EventManifestOptions)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string GenerateManifest (Type eventSourceType, string assemblyPathToIncludeInManifest, System.Diagnostics.Tracing.EventManifestOptions flags);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventSourceType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>assemblyPathToIncludeInManifest</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>flags</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventmanifestoptions">EventManifestOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_GetGuid_System_Type_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_GetGuid_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetGuid(Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Guid GetGuid (Type eventSourceType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventSourceType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_GetName_System_Type_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_GetName_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetName(Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string GetName (Type eventSourceType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventSourceType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_GetSources">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_GetSources_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetSources()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;System.Diagnostics.Tracing.EventSource&gt; GetSources ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="system.diagnostics.tracing.eventsource">EventSource</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_GetTrait_System_String_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_GetTrait_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetTrait(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string GetTrait (string key);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>key</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_IsEnabled">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_IsEnabled_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsEnabled()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool IsEnabled ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_IsEnabled_System_Diagnostics_Tracing_EventLevel_System_Diagnostics_Tracing_EventKeywords_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_IsEnabled_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsEnabled(EventLevel,EventKeywords)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool IsEnabled (System.Diagnostics.Tracing.EventLevel level, System.Diagnostics.Tracing.EventKeywords keywords);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>level</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventlevel">EventLevel</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>keywords</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventkeywords">EventKeywords</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_IsEnabled_System_Diagnostics_Tracing_EventLevel_System_Diagnostics_Tracing_EventKeywords_System_Diagnostics_Tracing_EventChannel_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_IsEnabled_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsEnabled(EventLevel,EventKeywords,EventChannel)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool IsEnabled (System.Diagnostics.Tracing.EventLevel level, System.Diagnostics.Tracing.EventKeywords keywords, System.Diagnostics.Tracing.EventChannel channel);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>level</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventlevel">EventLevel</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>keywords</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventkeywords">EventKeywords</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>channel</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventchannel">EventChannel</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_OnEventCommand_System_Diagnostics_Tracing_EventCommandEventArgs_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_OnEventCommand_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnEventCommand(EventCommandEventArgs)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void OnEventCommand (System.Diagnostics.Tracing.EventCommandEventArgs command);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>command</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventcommandeventargs">EventCommandEventArgs</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_SendCommand_System_Diagnostics_Tracing_EventSource_System_Diagnostics_Tracing_EventCommand_System_Collections_Generic_IDictionary_System_String_System_String__">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_SendCommand_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SendCommand(EventSource,EventCommand,IDictionary&lt;String,String&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void SendCommand (System.Diagnostics.Tracing.EventSource eventSource, System.Diagnostics.Tracing.EventCommand command, System.Collections.Generic.IDictionary&lt;string,string&gt; commandArguments);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventSource</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventsource">EventSource</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>command</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventcommand">EventCommand</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>commandArguments</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="../system/system.string">String</a>,<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_SetCurrentThreadActivityId_System_Guid_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_SetCurrentThreadActivityId_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetCurrentThreadActivityId(Guid)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void SetCurrentThreadActivityId (Guid activityId);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>activityId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_SetCurrentThreadActivityId_System_Guid_System_Guid__">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_SetCurrentThreadActivityId_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetCurrentThreadActivityId(Guid,Guid)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void SetCurrentThreadActivityId (Guid activityId, out Guid oldActivityThatWillContinue);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>activityId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>oldActivityThatWillContinue</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_ToString">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_ToString_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ToString()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string ToString ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_Write_System_String_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Write (string eventName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_Write_System_String_System_Diagnostics_Tracing_EventSourceOptions_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(String,EventSourceOptions)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Write (string eventName, System.Diagnostics.Tracing.EventSourceOptions options);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>options</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventsourceoptions">EventSourceOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_Write__1_System_String___0_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_Write_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(String,T)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Write&lt;T&gt; (string eventName, T data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">T</span></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_Write__1_System_String_System_Diagnostics___0racing_EventSourceOptions___0_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_Write_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(String,EventSourceOptions,T)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Write&lt;T&gt; (string eventName, System.Diagnostics.Tracing.EventSourceOptions options, T data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>options</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventsourceoptions">EventSourceOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">T</span></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_Write__1_System_String_System_Diagnostics___0racing_EventSourceOptions____0__">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_Write_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(String,EventSourceOptions,T)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Write&lt;T&gt; (string eventName, ref System.Diagnostics.Tracing.EventSourceOptions options, ref T data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>options</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventsourceoptions">EventSourceOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">T</span></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_Write__1_System_String_System_Diagnostics___0racing_EventSourceOptions__System_Guid__System_Guid____0__">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_Write_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(String,EventSourceOptions,Guid,Guid,T)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Write&lt;T&gt; (string eventName, ref System.Diagnostics.Tracing.EventSourceOptions options, ref Guid activityId, ref Guid relatedActivityId, ref T data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>options</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.tracing.eventsourceoptions">EventSourceOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>activityId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>relatedActivityId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">T</span></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Byte___">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,Byte[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, byte[] arg1);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int32_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, int arg1);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int64_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,Int64)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, long arg1);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Object___">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,Object[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, object[] args);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>args</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_String_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, string arg1);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int32_System_Int32_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, int arg1, int arg2);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int32_System_String_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,Int32,String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, int arg1, string arg2);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int64_System_Byte___">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,Int64,Byte[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, long arg1, byte[] arg2);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int64_System_Int64_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,Int64,Int64)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, long arg1, long arg2);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int64_System_String_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,Int64,String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, long arg1, string arg2);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_String_System_Int32_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,String,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, string arg1, int arg2);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_String_System_Int64_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,String,Int64)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, string arg1, long arg2);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_String_System_String_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,String,String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, string arg1, string arg2);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int32_System_Int32_System_Int32_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,Int32,Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, int arg1, int arg2, int arg3);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg3</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_Int64_System_Int64_System_Int64_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,Int64,Int64,Int64)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, long arg1, long arg2, long arg3);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg3</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_String_System_Int32_System_Int32_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,String,Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, string arg1, int arg2, int arg3);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg3</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEvent_System_Int32_System_String_System_String_System_String_">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEvent(Int32,String,String,String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEvent (int eventId, string arg1, string arg2, string arg3);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arg3</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEventCore_System_Int32_System_Int32_System_Diagnostics_Tracing_EventSource_EventData__">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEventCore_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEventCore(Int32,Int32,EventSource+EventData*)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEventCore (int eventId, int eventDataCount, System.Diagnostics.Tracing.EventSource.EventData* data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>eventDataCount</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEventWithRelatedActivityId_System_Int32_System_Guid_System_Object___">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEventWithRelatedActivityId_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEventWithRelatedActivityId(Int32,Guid,Object[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEventWithRelatedActivityId (int eventId, Guid relatedActivityId, object[] args);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>relatedActivityId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>args</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_WriteEventWithRelatedActivityIdCore_System_Int32_System_Guid__System_Int32_System_Diagnostics_Tracing_EventSource_EventData__">
+    
+            <a id="System_Diagnostics_Tracing_EventSource_WriteEventWithRelatedActivityIdCore_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteEventWithRelatedActivityIdCore(Int32,Guid*,Int32,EventSource+EventData*)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void WriteEventWithRelatedActivityIdCore (int eventId, Guid* relatedActivityId, int eventDataCount, System.Diagnostics.Tracing.EventSource.EventData* data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>relatedActivityId</dt>
+                  <dd>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>eventDataCount</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="events">
+        <h2>Events
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_Tracing_EventSource_EventCommandExecuted">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EventCommandExecuted</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event EventHandler&lt;System.Diagnostics.Tracing.EventCommandEventArgs&gt; EventCommandExecuted;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Hashtable class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Collections/System.Collections.Hashtable.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Collections/System.Collections.Hashtable.yml">
+<meta name="APIName" content="System.Collections.Hashtable">
+<meta name="APIName" content="System.Collections.Hashtable..ctor">
+<meta name="APIName" content="System.Collections.Hashtable.Add">
+<meta name="APIName" content="System.Collections.Hashtable.Clear">
+<meta name="APIName" content="System.Collections.Hashtable.Clone">
+<meta name="APIName" content="System.Collections.Hashtable.comparer">
+<meta name="APIName" content="System.Collections.Hashtable.Contains">
+<meta name="APIName" content="System.Collections.Hashtable.ContainsKey">
+<meta name="APIName" content="System.Collections.Hashtable.ContainsValue">
+<meta name="APIName" content="System.Collections.Hashtable.CopyTo">
+<meta name="APIName" content="System.Collections.Hashtable.Count">
+<meta name="APIName" content="System.Collections.Hashtable.EqualityComparer">
+<meta name="APIName" content="System.Collections.Hashtable.GetEnumerator">
+<meta name="APIName" content="System.Collections.Hashtable.GetHash">
+<meta name="APIName" content="System.Collections.Hashtable.GetObjectData">
+<meta name="APIName" content="System.Collections.Hashtable.hcp">
+<meta name="APIName" content="System.Collections.Hashtable.IsFixedSize">
+<meta name="APIName" content="System.Collections.Hashtable.IsReadOnly">
+<meta name="APIName" content="System.Collections.Hashtable.IsSynchronized">
+<meta name="APIName" content="System.Collections.Hashtable.Item">
+<meta name="APIName" content="System.Collections.Hashtable.KeyEquals">
+<meta name="APIName" content="System.Collections.Hashtable.Keys">
+<meta name="APIName" content="System.Collections.Hashtable.OnDeserialization">
+<meta name="APIName" content="System.Collections.Hashtable.Remove">
+<meta name="APIName" content="System.Collections.Hashtable.Synchronized">
+<meta name="APIName" content="System.Collections.Hashtable.SyncRoot">
+<meta name="APIName" content="System.Collections.Hashtable.System.Collections.IEnumerable.GetEnumerator">
+<meta name="APIName" content="System.Collections.Hashtable.Values">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="4a8b6967-7cdd-4b5b-c21a-89ea2a0c1cc7">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Collections.Hashtable">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.collections/system.collections.hashtable" rel="canonical">
+    <title>Hashtable class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Collections_Hashtable">
+      <span class="lang-csharp">Hashtable</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Diagnostics.DebuggerDisplay(&quot;Count = {Count}&quot;)]
+[System.Diagnostics.DebuggerTypeProxy(typeof(System.Collections.Hashtable/HashtableDebugView))]
+[System.Runtime.InteropServices.ComVisible(true)]
+public class Hashtable : ICloneable, System.Collections.IDictionary, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">Hashtable</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor">Hashtable()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Collections_IDictionary_">Hashtable(IDictionary)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Collections_IEqualityComparer_">Hashtable(IEqualityComparer)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Int32_">Hashtable(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Collections_IDictionary_System_Collections_IEqualityComparer_">Hashtable(IDictionary,IEqualityComparer)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Collections_IDictionary_System_Single_">Hashtable(IDictionary,Single)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Collections_IHashCodeProvider_System_Collections_IComparer_">Hashtable(IHashCodeProvider,IComparer)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Int32_System_Collections_IEqualityComparer_">Hashtable(Int32,IEqualityComparer)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Int32_System_Single_">Hashtable(Int32,Single)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">Hashtable(SerializationInfo,StreamingContext)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Collections_IDictionary_System_Collections_IHashCodeProvider_System_Collections_IComparer_">Hashtable(IDictionary,IHashCodeProvider,IComparer)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Collections_IDictionary_System_Single_System_Collections_IEqualityComparer_">Hashtable(IDictionary,Single,IEqualityComparer)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Int32_System_Collections_IHashCodeProvider_System_Collections_IComparer_">Hashtable(Int32,IHashCodeProvider,IComparer)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Int32_System_Single_System_Collections_IEqualityComparer_">Hashtable(Int32,Single,IEqualityComparer)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Collections_IDictionary_System_Single_System_Collections_IHashCodeProvider_System_Collections_IComparer_">Hashtable(IDictionary,Single,IHashCodeProvider,IComparer)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable__ctor_System_Int32_System_Single_System_Collections_IHashCodeProvider_System_Collections_IComparer_">Hashtable(Int32,Single,IHashCodeProvider,IComparer)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_comparer">comparer</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_Count">Count</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_EqualityComparer">EqualityComparer</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_hcp">hcp</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_IsFixedSize">IsFixedSize</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_IsReadOnly">IsReadOnly</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_IsSynchronized">IsSynchronized</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_Item_System_Object_">Item(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_Keys">Keys</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_SyncRoot">SyncRoot</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_Values">Values</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_Add_System_Object_System_Object_">Add(Object,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_Clear">Clear()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_Clone">Clone()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_Contains_System_Object_">Contains(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_ContainsKey_System_Object_">ContainsKey(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_ContainsValue_System_Object_">ContainsValue(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_CopyTo_System_Array_System_Int32_">CopyTo(Array,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_GetEnumerator">GetEnumerator()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_GetHash_System_Object_">GetHash(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">GetObjectData(SerializationInfo,StreamingContext)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_KeyEquals_System_Object_System_Object_">KeyEquals(Object,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_OnDeserialization_System_Object_">OnDeserialization(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_Remove_System_Object_">Remove(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_Synchronized_System_Collections_Hashtable_">Synchronized(Hashtable)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Explicit Interface Implementations
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Collections_Hashtable_System_Collections_IEnumerable_GetEnumerator">System.Collections.IEnumerable.GetEnumerator()</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Collections_IDictionary_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(IDictionary)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (System.Collections.IDictionary d);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>d</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.idictionary">IDictionary</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Collections_IEqualityComparer_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(IEqualityComparer)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (System.Collections.IEqualityComparer equalityComparer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>equalityComparer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.iequalitycomparer">IEqualityComparer</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Int32_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (int capacity);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>capacity</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Collections_IDictionary_System_Collections_IEqualityComparer_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(IDictionary,IEqualityComparer)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (System.Collections.IDictionary d, System.Collections.IEqualityComparer equalityComparer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>d</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.idictionary">IDictionary</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>equalityComparer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.iequalitycomparer">IEqualityComparer</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Collections_IDictionary_System_Single_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(IDictionary,Single)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (System.Collections.IDictionary d, float loadFactor);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>d</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.idictionary">IDictionary</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>loadFactor</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.single">Single</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Collections_IHashCodeProvider_System_Collections_IComparer_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(IHashCodeProvider,IComparer)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (System.Collections.IHashCodeProvider hcp, System.Collections.IComparer comparer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hcp</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.ihashcodeprovider">IHashCodeProvider</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>comparer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.icomparer">IComparer</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Int32_System_Collections_IEqualityComparer_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(Int32,IEqualityComparer)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (int capacity, System.Collections.IEqualityComparer equalityComparer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>capacity</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>equalityComparer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.iequalitycomparer">IEqualityComparer</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Int32_System_Single_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(Int32,Single)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (int capacity, float loadFactor);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>capacity</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>loadFactor</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.single">Single</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(SerializationInfo,StreamingContext)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected Hashtable (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>info</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.runtime.serialization/system.runtime.serialization.serializationinfo">SerializationInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>context</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.runtime.serialization/system.runtime.serialization.streamingcontext">StreamingContext</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Collections_IDictionary_System_Collections_IHashCodeProvider_System_Collections_IComparer_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(IDictionary,IHashCodeProvider,IComparer)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (System.Collections.IDictionary d, System.Collections.IHashCodeProvider hcp, System.Collections.IComparer comparer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>d</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.idictionary">IDictionary</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>hcp</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.ihashcodeprovider">IHashCodeProvider</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>comparer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.icomparer">IComparer</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Collections_IDictionary_System_Single_System_Collections_IEqualityComparer_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(IDictionary,Single,IEqualityComparer)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (System.Collections.IDictionary d, float loadFactor, System.Collections.IEqualityComparer equalityComparer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>d</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.idictionary">IDictionary</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>loadFactor</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.single">Single</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>equalityComparer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.iequalitycomparer">IEqualityComparer</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Int32_System_Collections_IHashCodeProvider_System_Collections_IComparer_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(Int32,IHashCodeProvider,IComparer)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (int capacity, System.Collections.IHashCodeProvider hcp, System.Collections.IComparer comparer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>capacity</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>hcp</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.ihashcodeprovider">IHashCodeProvider</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>comparer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.icomparer">IComparer</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Int32_System_Single_System_Collections_IEqualityComparer_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(Int32,Single,IEqualityComparer)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (int capacity, float loadFactor, System.Collections.IEqualityComparer equalityComparer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>capacity</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>loadFactor</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.single">Single</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>equalityComparer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.iequalitycomparer">IEqualityComparer</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Collections_IDictionary_System_Single_System_Collections_IHashCodeProvider_System_Collections_IComparer_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(IDictionary,Single,IHashCodeProvider,IComparer)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (System.Collections.IDictionary d, float loadFactor, System.Collections.IHashCodeProvider hcp, System.Collections.IComparer comparer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>d</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.idictionary">IDictionary</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>loadFactor</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.single">Single</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>hcp</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.ihashcodeprovider">IHashCodeProvider</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>comparer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.icomparer">IComparer</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable__ctor_System_Int32_System_Single_System_Collections_IHashCodeProvider_System_Collections_IComparer_">
+    
+            <a id="System_Collections_Hashtable__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Hashtable(Int32,Single,IHashCodeProvider,IComparer)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Hashtable (int capacity, float loadFactor, System.Collections.IHashCodeProvider hcp, System.Collections.IComparer comparer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>capacity</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>loadFactor</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.single">Single</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>hcp</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.ihashcodeprovider">IHashCodeProvider</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>comparer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.icomparer">IComparer</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_comparer">
+    
+            <a id="System_Collections_Hashtable_comparer_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">comparer</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected System.Collections.IComparer comparer { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.collections.icomparer">IComparer</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_Count">
+    
+            <a id="System_Collections_Hashtable_Count_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Count</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int Count { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_EqualityComparer">
+    
+            <a id="System_Collections_Hashtable_EqualityComparer_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EqualityComparer</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected System.Collections.IEqualityComparer EqualityComparer { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.collections.iequalitycomparer">IEqualityComparer</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_hcp">
+    
+            <a id="System_Collections_Hashtable_hcp_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">hcp</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected System.Collections.IHashCodeProvider hcp { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.collections.ihashcodeprovider">IHashCodeProvider</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_IsFixedSize">
+    
+            <a id="System_Collections_Hashtable_IsFixedSize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsFixedSize</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool IsFixedSize { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_IsReadOnly">
+    
+            <a id="System_Collections_Hashtable_IsReadOnly_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsReadOnly</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool IsReadOnly { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_IsSynchronized">
+    
+            <a id="System_Collections_Hashtable_IsSynchronized_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsSynchronized</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool IsSynchronized { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_Item_System_Object_">
+    
+            <a id="System_Collections_Hashtable_Item_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Item(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual object this[object key] { get; set; }</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>key</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_Keys">
+    
+            <a id="System_Collections_Hashtable_Keys_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Keys</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Collections.ICollection Keys { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.collections.icollection">ICollection</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_SyncRoot">
+    
+            <a id="System_Collections_Hashtable_SyncRoot_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SyncRoot</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual object SyncRoot { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_Values">
+    
+            <a id="System_Collections_Hashtable_Values_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Values</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Collections.ICollection Values { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.collections.icollection">ICollection</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_Add_System_Object_System_Object_">
+    
+            <a id="System_Collections_Hashtable_Add_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Add(Object,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Add (object key, object value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>key</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_Clear">
+    
+            <a id="System_Collections_Hashtable_Clear_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Clear()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Clear ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_Clone">
+    
+            <a id="System_Collections_Hashtable_Clone_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Clone()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual object Clone ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_Contains_System_Object_">
+    
+            <a id="System_Collections_Hashtable_Contains_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Contains(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool Contains (object key);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>key</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_ContainsKey_System_Object_">
+    
+            <a id="System_Collections_Hashtable_ContainsKey_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContainsKey(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool ContainsKey (object key);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>key</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_ContainsValue_System_Object_">
+    
+            <a id="System_Collections_Hashtable_ContainsValue_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContainsValue(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool ContainsValue (object value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_CopyTo_System_Array_System_Int32_">
+    
+            <a id="System_Collections_Hashtable_CopyTo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyTo(Array,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void CopyTo (Array array, int arrayIndex);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>array</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.array">Array</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>arrayIndex</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_GetEnumerator">
+    
+            <a id="System_Collections_Hashtable_GetEnumerator_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetEnumerator()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Collections.IDictionaryEnumerator GetEnumerator ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.collections.idictionaryenumerator">IDictionaryEnumerator</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_GetHash_System_Object_">
+    
+            <a id="System_Collections_Hashtable_GetHash_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetHash(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual int GetHash (object key);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>key</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">
+    
+            <a id="System_Collections_Hashtable_GetObjectData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetObjectData(SerializationInfo,StreamingContext)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>info</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.runtime.serialization/system.runtime.serialization.serializationinfo">SerializationInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>context</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.runtime.serialization/system.runtime.serialization.streamingcontext">StreamingContext</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_KeyEquals_System_Object_System_Object_">
+    
+            <a id="System_Collections_Hashtable_KeyEquals_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">KeyEquals(Object,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual bool KeyEquals (object item, object key);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>item</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>key</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_OnDeserialization_System_Object_">
+    
+            <a id="System_Collections_Hashtable_OnDeserialization_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnDeserialization(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void OnDeserialization (object sender);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>sender</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_Remove_System_Object_">
+    
+            <a id="System_Collections_Hashtable_Remove_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Remove(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Remove (object key);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>key</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_Synchronized_System_Collections_Hashtable_">
+    
+            <a id="System_Collections_Hashtable_Synchronized_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Synchronized(Hashtable)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Hashtable Synchronized (System.Collections.Hashtable table);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>table</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.collections.hashtable">Hashtable</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.collections.hashtable">Hashtable</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="eii">
+        <h2>Explicit Interface Implementations
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Collections_Hashtable_System_Collections_IEnumerable_GetEnumerator">
+    
+            <a id="System_Collections_Hashtable_System_Collections_IEnumerable_GetEnumerator_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Collections.IEnumerable.GetEnumerator()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">System.Collections.IEnumerator IEnumerable.GetEnumerator ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.collections.ienumerator">IEnumerator</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

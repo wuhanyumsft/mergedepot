@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Manipulation class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Windows.Input/System.Windows.Input.Manipulation.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Windows.Input/System.Windows.Input.Manipulation.yml">
+<meta name="APIName" content="System.Windows.Input.Manipulation">
+<meta name="APIName" content="System.Windows.Input.Manipulation.AddManipulator">
+<meta name="APIName" content="System.Windows.Input.Manipulation.CompleteManipulation">
+<meta name="APIName" content="System.Windows.Input.Manipulation.GetManipulationContainer">
+<meta name="APIName" content="System.Windows.Input.Manipulation.GetManipulationMode">
+<meta name="APIName" content="System.Windows.Input.Manipulation.GetManipulationPivot">
+<meta name="APIName" content="System.Windows.Input.Manipulation.IsManipulationActive">
+<meta name="APIName" content="System.Windows.Input.Manipulation.RemoveManipulator">
+<meta name="APIName" content="System.Windows.Input.Manipulation.SetManipulationContainer">
+<meta name="APIName" content="System.Windows.Input.Manipulation.SetManipulationMode">
+<meta name="APIName" content="System.Windows.Input.Manipulation.SetManipulationParameter">
+<meta name="APIName" content="System.Windows.Input.Manipulation.SetManipulationPivot">
+<meta name="APIName" content="System.Windows.Input.Manipulation.StartInertia">
+<meta name="APILocation" content="PresentationCore.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="aa6bd8d1-f222-c219-e5b9-2775765cae00">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Windows.Input.Manipulation">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.windows.input/system.windows.input.manipulation" rel="canonical">
+    <title>Manipulation class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Windows_Input_Manipulation">
+      <span class="lang-csharp">Manipulation</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public static class Manipulation</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">Manipulation</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Input_Manipulation_AddManipulator_System_Windows_UIElement_System_Windows_Input_IManipulator_">AddManipulator(UIElement,IManipulator)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Input_Manipulation_CompleteManipulation_System_Windows_UIElement_">CompleteManipulation(UIElement)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Input_Manipulation_GetManipulationContainer_System_Windows_UIElement_">GetManipulationContainer(UIElement)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Input_Manipulation_GetManipulationMode_System_Windows_UIElement_">GetManipulationMode(UIElement)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Input_Manipulation_GetManipulationPivot_System_Windows_UIElement_">GetManipulationPivot(UIElement)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Input_Manipulation_IsManipulationActive_System_Windows_UIElement_">IsManipulationActive(UIElement)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Input_Manipulation_RemoveManipulator_System_Windows_UIElement_System_Windows_Input_IManipulator_">RemoveManipulator(UIElement,IManipulator)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Input_Manipulation_SetManipulationContainer_System_Windows_UIElement_System_Windows_IInputElement_">SetManipulationContainer(UIElement,IInputElement)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Input_Manipulation_SetManipulationMode_System_Windows_UIElement_System_Windows_Input_ManipulationModes_">SetManipulationMode(UIElement,ManipulationModes)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Input_Manipulation_SetManipulationParameter_System_Windows_UIElement_System_Windows_Input_Manipulations_ManipulationParameters2D_">SetManipulationParameter(UIElement,ManipulationParameters2D)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Input_Manipulation_SetManipulationPivot_System_Windows_UIElement_System_Windows_Input_ManipulationPivot_">SetManipulationPivot(UIElement,ManipulationPivot)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Input_Manipulation_StartInertia_System_Windows_UIElement_">StartInertia(UIElement)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Input_Manipulation_AddManipulator_System_Windows_UIElement_System_Windows_Input_IManipulator_">
+    
+            <a id="System_Windows_Input_Manipulation_AddManipulator_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddManipulator(UIElement,IManipulator)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void AddManipulator (System.Windows.UIElement element, System.Windows.Input.IManipulator manipulator);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.uielement">UIElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>manipulator</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.input.imanipulator">IManipulator</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Input_Manipulation_CompleteManipulation_System_Windows_UIElement_">
+    
+            <a id="System_Windows_Input_Manipulation_CompleteManipulation_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CompleteManipulation(UIElement)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void CompleteManipulation (System.Windows.UIElement element);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.uielement">UIElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Input_Manipulation_GetManipulationContainer_System_Windows_UIElement_">
+    
+            <a id="System_Windows_Input_Manipulation_GetManipulationContainer_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetManipulationContainer(UIElement)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.IInputElement GetManipulationContainer (System.Windows.UIElement element);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.uielement">UIElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.iinputelement">IInputElement</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Input_Manipulation_GetManipulationMode_System_Windows_UIElement_">
+    
+            <a id="System_Windows_Input_Manipulation_GetManipulationMode_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetManipulationMode(UIElement)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Input.ManipulationModes GetManipulationMode (System.Windows.UIElement element);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.uielement">UIElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.input.manipulationmodes">ManipulationModes</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Input_Manipulation_GetManipulationPivot_System_Windows_UIElement_">
+    
+            <a id="System_Windows_Input_Manipulation_GetManipulationPivot_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetManipulationPivot(UIElement)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Input.ManipulationPivot GetManipulationPivot (System.Windows.UIElement element);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.uielement">UIElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.input.manipulationpivot">ManipulationPivot</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Input_Manipulation_IsManipulationActive_System_Windows_UIElement_">
+    
+            <a id="System_Windows_Input_Manipulation_IsManipulationActive_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsManipulationActive(UIElement)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool IsManipulationActive (System.Windows.UIElement element);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.uielement">UIElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Input_Manipulation_RemoveManipulator_System_Windows_UIElement_System_Windows_Input_IManipulator_">
+    
+            <a id="System_Windows_Input_Manipulation_RemoveManipulator_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveManipulator(UIElement,IManipulator)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void RemoveManipulator (System.Windows.UIElement element, System.Windows.Input.IManipulator manipulator);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.uielement">UIElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>manipulator</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.input.imanipulator">IManipulator</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Input_Manipulation_SetManipulationContainer_System_Windows_UIElement_System_Windows_IInputElement_">
+    
+            <a id="System_Windows_Input_Manipulation_SetManipulationContainer_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetManipulationContainer(UIElement,IInputElement)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void SetManipulationContainer (System.Windows.UIElement element, System.Windows.IInputElement container);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.uielement">UIElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>container</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.iinputelement">IInputElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Input_Manipulation_SetManipulationMode_System_Windows_UIElement_System_Windows_Input_ManipulationModes_">
+    
+            <a id="System_Windows_Input_Manipulation_SetManipulationMode_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetManipulationMode(UIElement,ManipulationModes)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void SetManipulationMode (System.Windows.UIElement element, System.Windows.Input.ManipulationModes mode);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.uielement">UIElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>mode</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.input.manipulationmodes">ManipulationModes</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Input_Manipulation_SetManipulationParameter_System_Windows_UIElement_System_Windows_Input_Manipulations_ManipulationParameters2D_">
+    
+            <a id="System_Windows_Input_Manipulation_SetManipulationParameter_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetManipulationParameter(UIElement,ManipulationParameters2D)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void SetManipulationParameter (System.Windows.UIElement element, System.Windows.Input.Manipulations.ManipulationParameters2D parameter);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.uielement">UIElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>parameter</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.input.manipulations.manipulationparameters2d(v=vs.110).aspx">ManipulationParameters2D</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Input_Manipulation_SetManipulationPivot_System_Windows_UIElement_System_Windows_Input_ManipulationPivot_">
+    
+            <a id="System_Windows_Input_Manipulation_SetManipulationPivot_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetManipulationPivot(UIElement,ManipulationPivot)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void SetManipulationPivot (System.Windows.UIElement element, System.Windows.Input.ManipulationPivot pivot);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.uielement">UIElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pivot</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.input.manipulationpivot">ManipulationPivot</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Input_Manipulation_StartInertia_System_Windows_UIElement_">
+    
+            <a id="System_Windows_Input_Manipulation_StartInertia_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StartInertia(UIElement)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void StartInertia (System.Windows.UIElement element);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.uielement">UIElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

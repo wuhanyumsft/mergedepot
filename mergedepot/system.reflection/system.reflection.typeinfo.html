@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="TypeInfo class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Reflection/System.Reflection.TypeInfo.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Reflection/System.Reflection.TypeInfo.yml">
+<meta name="APIName" content="System.Reflection.TypeInfo">
+<meta name="APIName" content="System.Reflection.TypeInfo.AsType">
+<meta name="APIName" content="System.Reflection.TypeInfo.DeclaredConstructors">
+<meta name="APIName" content="System.Reflection.TypeInfo.DeclaredEvents">
+<meta name="APIName" content="System.Reflection.TypeInfo.DeclaredFields">
+<meta name="APIName" content="System.Reflection.TypeInfo.DeclaredMembers">
+<meta name="APIName" content="System.Reflection.TypeInfo.DeclaredMethods">
+<meta name="APIName" content="System.Reflection.TypeInfo.DeclaredNestedTypes">
+<meta name="APIName" content="System.Reflection.TypeInfo.DeclaredProperties">
+<meta name="APIName" content="System.Reflection.TypeInfo.GenericTypeParameters">
+<meta name="APIName" content="System.Reflection.TypeInfo.GetDeclaredEvent">
+<meta name="APIName" content="System.Reflection.TypeInfo.GetDeclaredField">
+<meta name="APIName" content="System.Reflection.TypeInfo.GetDeclaredMethod">
+<meta name="APIName" content="System.Reflection.TypeInfo.GetDeclaredMethods">
+<meta name="APIName" content="System.Reflection.TypeInfo.GetDeclaredNestedType">
+<meta name="APIName" content="System.Reflection.TypeInfo.GetDeclaredProperty">
+<meta name="APIName" content="System.Reflection.TypeInfo.ImplementedInterfaces">
+<meta name="APIName" content="System.Reflection.TypeInfo.IsAssignableFrom">
+<meta name="APIName" content="System.Reflection.TypeInfo.System.Reflection.IReflectableType.GetTypeInfo">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="e72f9f94-87b0-0ada-667e-460571f28573">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Reflection.TypeInfo">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.reflection/system.reflection.typeinfo" rel="canonical">
+    <title>TypeInfo class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Reflection_TypeInfo">
+      <span class="lang-csharp">TypeInfo</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public abstract class TypeInfo : Type, System.Reflection.IReflectableType</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo">MemberInfo</a>
+          </div>
+        </li>
+        <li class="l2">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type">System.Type</a>
+          </div>
+        </li>
+      <li class="l3">
+        <div class="xref">
+          <div class="lang-csharp">TypeInfo</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_CustomAttributes">CustomAttributes</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_GetCustomAttributes_System_Boolean_">GetCustomAttributes(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_GetCustomAttributes_System_Type_System_Boolean_">GetCustomAttributes(Type,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_GetCustomAttributesData">GetCustomAttributesData()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_IsDefined_System_Type_System_Boolean_">IsDefined(Type,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_MetadataToken">MetadataToken</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_Name">Name</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_op_Equality_System_Reflection_MemberInfo_System_Reflection_MemberInfo_">op_Equality(MemberInfo,MemberInfo)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_op_Inequality_System_Reflection_MemberInfo_System_Reflection_MemberInfo_">op_Inequality(MemberInfo,MemberInfo)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_System_Runtime_InteropServices__MemberInfo_GetIDsOfNames_System_Guid__System_IntPtr_System_UInt32_System_UInt32_System_IntPtr_">System.Runtime.InteropServices._MemberInfo.GetIDsOfNames(Guid,IntPtr,UInt32,UInt32,IntPtr)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_System_Runtime_InteropServices__MemberInfo_GetType">System.Runtime.InteropServices._MemberInfo.GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_System_Runtime_InteropServices__MemberInfo_GetTypeInfo_System_UInt32_System_UInt32_System_IntPtr_">System.Runtime.InteropServices._MemberInfo.GetTypeInfo(UInt32,UInt32,IntPtr)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_System_Runtime_InteropServices__MemberInfo_GetTypeInfoCount_System_UInt32__">System.Runtime.InteropServices._MemberInfo.GetTypeInfoCount(UInt32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.reflection.memberinfo#System_Reflection_MemberInfo_System_Runtime_InteropServices__MemberInfo_Invoke_System_UInt32_System_Guid__System_UInt32_System_Int16_System_IntPtr_System_IntPtr_System_IntPtr_System_IntPtr_">System.Runtime.InteropServices._MemberInfo.Invoke(UInt32,Guid,UInt32,Int16,IntPtr,IntPtr,IntPtr,IntPtr)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_Assembly">Assembly</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_AssemblyQualifiedName">AssemblyQualifiedName</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_Attributes">Attributes</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_BaseType">BaseType</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_ContainsGenericParameters">ContainsGenericParameters</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_DeclaringMethod">DeclaringMethod</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_DeclaringType">DeclaringType</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_DefaultBinder">DefaultBinder</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_Delimiter">Delimiter</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_EmptyTypes">EmptyTypes</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_Equals_System_Type_">Equals(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_FilterAttribute">FilterAttribute</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_FilterName">FilterName</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_FilterNameIgnoreCase">FilterNameIgnoreCase</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_FindInterfaces_System_Reflection_TypeFilter_System_Object_">FindInterfaces(TypeFilter,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_FindMembers_System_Reflection_MemberTypes_System_Reflection_BindingFlags_System_Reflection_MemberFilter_System_Object_">FindMembers(MemberTypes,BindingFlags,MemberFilter,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_FullName">FullName</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GenericParameterAttributes">GenericParameterAttributes</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GenericParameterPosition">GenericParameterPosition</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GenericTypeArguments">GenericTypeArguments</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetArrayRank">GetArrayRank()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetAttributeFlagsImpl">GetAttributeFlagsImpl()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetConstructor_System_Reflection_BindingFlags_System_Reflection_Binder_System_Reflection_CallingConventions_System_Type___System_Reflection_ParameterModifier___">GetConstructor(BindingFlags,Binder,CallingConventions,Type[],ParameterModifier[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetConstructor_System_Reflection_BindingFlags_System_Reflection_Binder_System_Type___System_Reflection_ParameterModifier___">GetConstructor(BindingFlags,Binder,Type[],ParameterModifier[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetConstructor_System_Type___">GetConstructor(Type[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetConstructorImpl_System_Reflection_BindingFlags_System_Reflection_Binder_System_Reflection_CallingConventions_System_Type___System_Reflection_ParameterModifier___">GetConstructorImpl(BindingFlags,Binder,CallingConventions,Type[],ParameterModifier[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetConstructors">GetConstructors()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetConstructors_System_Reflection_BindingFlags_">GetConstructors(BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetDefaultMembers">GetDefaultMembers()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetElementType">GetElementType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetEnumName_System_Object_">GetEnumName(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetEnumNames">GetEnumNames()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetEnumUnderlyingType">GetEnumUnderlyingType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetEnumValues">GetEnumValues()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetEvent_System_String_">GetEvent(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetEvent_System_String_System_Reflection_BindingFlags_">GetEvent(String,BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetEvents">GetEvents()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetEvents_System_Reflection_BindingFlags_">GetEvents(BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetField_System_String_">GetField(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetField_System_String_System_Reflection_BindingFlags_">GetField(String,BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetFields">GetFields()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetFields_System_Reflection_BindingFlags_">GetFields(BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetGenericArguments">GetGenericArguments()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetGenericParameterConstraints">GetGenericParameterConstraints()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetGenericTypeDefinition">GetGenericTypeDefinition()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetInterface_System_String_">GetInterface(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetInterface_System_String_System_Boolean_">GetInterface(String,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetInterfaceMap_System_Type_">GetInterfaceMap(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetInterfaces">GetInterfaces()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMember_System_String_">GetMember(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMember_System_String_System_Reflection_BindingFlags_">GetMember(String,BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMember_System_String_System_Reflection_MemberTypes_System_Reflection_BindingFlags_">GetMember(String,MemberTypes,BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMembers">GetMembers()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMembers_System_Reflection_BindingFlags_">GetMembers(BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMethod_System_String_">GetMethod(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMethod_System_String_System_Reflection_BindingFlags_">GetMethod(String,BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMethod_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Reflection_CallingConventions_System_Type___System_Reflection_ParameterModifier___">GetMethod(String,BindingFlags,Binder,CallingConventions,Type[],ParameterModifier[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMethod_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Type___System_Reflection_ParameterModifier___">GetMethod(String,BindingFlags,Binder,Type[],ParameterModifier[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMethod_System_String_System_Type___">GetMethod(String,Type[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMethod_System_String_System_Type___System_Reflection_ParameterModifier___">GetMethod(String,Type[],ParameterModifier[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMethodImpl_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Reflection_CallingConventions_System_Type___System_Reflection_ParameterModifier___">GetMethodImpl(String,BindingFlags,Binder,CallingConventions,Type[],ParameterModifier[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMethods">GetMethods()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetMethods_System_Reflection_BindingFlags_">GetMethods(BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetNestedType_System_String_">GetNestedType(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetNestedType_System_String_System_Reflection_BindingFlags_">GetNestedType(String,BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetNestedTypes">GetNestedTypes()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetNestedTypes_System_Reflection_BindingFlags_">GetNestedTypes(BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetProperties">GetProperties()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetProperties_System_Reflection_BindingFlags_">GetProperties(BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetProperty_System_String_">GetProperty(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetProperty_System_String_System_Reflection_BindingFlags_">GetProperty(String,BindingFlags)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetProperty_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Type_System_Type___System_Reflection_ParameterModifier___">GetProperty(String,BindingFlags,Binder,Type,Type[],ParameterModifier[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetProperty_System_String_System_Type_">GetProperty(String,Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetProperty_System_String_System_Type_System_Type___">GetProperty(String,Type,Type[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetProperty_System_String_System_Type_System_Type___System_Reflection_ParameterModifier___">GetProperty(String,Type,Type[],ParameterModifier[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetProperty_System_String_System_Type___">GetProperty(String,Type[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetPropertyImpl_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Type_System_Type___System_Reflection_ParameterModifier___">GetPropertyImpl(String,BindingFlags,Binder,Type,Type[],ParameterModifier[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetType_System_String_">GetType(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetType_System_String_System_Boolean_">GetType(String,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetType_System_String_System_Boolean_System_Boolean_">GetType(String,Boolean,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetType_System_String_System_Func_System_Reflection_AssemblyName_System_Reflection_Assembly__System_Func_System_Reflection_Assembly_System_String_System_Boolean_System_Type__">GetType(String,Func&lt;AssemblyName,Assembly&gt;,Func&lt;Assembly,String,Boolean,Type&gt;)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetType_System_String_System_Func_System_Reflection_AssemblyName_System_Reflection_Assembly__System_Func_System_Reflection_Assembly_System_String_System_Boolean_System_Type__System_Boolean_">GetType(String,Func&lt;AssemblyName,Assembly&gt;,Func&lt;Assembly,String,Boolean,Type&gt;,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetType_System_String_System_Func_System_Reflection_AssemblyName_System_Reflection_Assembly__System_Func_System_Reflection_Assembly_System_String_System_Boolean_System_Type__System_Boolean_System_Boolean_">GetType(String,Func&lt;AssemblyName,Assembly&gt;,Func&lt;Assembly,String,Boolean,Type&gt;,Boolean,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeArray_System_Object___">GetTypeArray(Object[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeCode_System_Type_">GetTypeCode(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeCodeImpl">GetTypeCodeImpl()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeFromCLSID_System_Guid_">GetTypeFromCLSID(Guid)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeFromCLSID_System_Guid_System_Boolean_">GetTypeFromCLSID(Guid,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeFromCLSID_System_Guid_System_String_">GetTypeFromCLSID(Guid,String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeFromCLSID_System_Guid_System_String_System_Boolean_">GetTypeFromCLSID(Guid,String,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeFromHandle_System_RuntimeTypeHandle_">GetTypeFromHandle(RuntimeTypeHandle)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeFromProgID_System_String_">GetTypeFromProgID(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeFromProgID_System_String_System_Boolean_">GetTypeFromProgID(String,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeFromProgID_System_String_System_String_">GetTypeFromProgID(String,String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeFromProgID_System_String_System_String_System_Boolean_">GetTypeFromProgID(String,String,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GetTypeHandle_System_Object_">GetTypeHandle(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_GUID">GUID</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_HasElementType">HasElementType</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_HasElementTypeImpl">HasElementTypeImpl()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_InvokeMember_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Object_System_Object___">InvokeMember(String,BindingFlags,Binder,Object,Object[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_InvokeMember_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Object_System_Object___System_Globalization_CultureInfo_">InvokeMember(String,BindingFlags,Binder,Object,Object[],CultureInfo)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_InvokeMember_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Object_System_Object___System_Reflection_ParameterModifier___System_Globalization_CultureInfo_System_String___">InvokeMember(String,BindingFlags,Binder,Object,Object[],ParameterModifier[],CultureInfo,String[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsAbstract">IsAbstract</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsAnsiClass">IsAnsiClass</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsArray">IsArray</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsArrayImpl">IsArrayImpl()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsAssignableFrom_System_Type_">IsAssignableFrom(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsAutoClass">IsAutoClass</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsAutoLayout">IsAutoLayout</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsByRef">IsByRef</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsByRefImpl">IsByRefImpl()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsClass">IsClass</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsCOMObject">IsCOMObject</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsCOMObjectImpl">IsCOMObjectImpl()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsConstructedGenericType">IsConstructedGenericType</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsContextful">IsContextful</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsContextfulImpl">IsContextfulImpl()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsEnum">IsEnum</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsEnumDefined_System_Object_">IsEnumDefined(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsEquivalentTo_System_Type_">IsEquivalentTo(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsExplicitLayout">IsExplicitLayout</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsGenericParameter">IsGenericParameter</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsGenericType">IsGenericType</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsGenericTypeDefinition">IsGenericTypeDefinition</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsImport">IsImport</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsInstanceOfType_System_Object_">IsInstanceOfType(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsInterface">IsInterface</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsLayoutSequential">IsLayoutSequential</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsMarshalByRef">IsMarshalByRef</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsMarshalByRefImpl">IsMarshalByRefImpl()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsNested">IsNested</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsNestedAssembly">IsNestedAssembly</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsNestedFamANDAssem">IsNestedFamANDAssem</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsNestedFamily">IsNestedFamily</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsNestedFamORAssem">IsNestedFamORAssem</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsNestedPrivate">IsNestedPrivate</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsNestedPublic">IsNestedPublic</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsNotPublic">IsNotPublic</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsPointer">IsPointer</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsPointerImpl">IsPointerImpl()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsPrimitive">IsPrimitive</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsPrimitiveImpl">IsPrimitiveImpl()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsPublic">IsPublic</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsSealed">IsSealed</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsSecurityCritical">IsSecurityCritical</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsSecuritySafeCritical">IsSecuritySafeCritical</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsSecurityTransparent">IsSecurityTransparent</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsSerializable">IsSerializable</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsSpecialName">IsSpecialName</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsSubclassOf_System_Type_">IsSubclassOf(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsUnicodeClass">IsUnicodeClass</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsValueType">IsValueType</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsValueTypeImpl">IsValueTypeImpl()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_IsVisible">IsVisible</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_MakeArrayType">MakeArrayType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_MakeArrayType_System_Int32_">MakeArrayType(Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_MakeByRefType">MakeByRefType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_MakeGenericType_System_Type___">MakeGenericType(Type[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_MakePointerType">MakePointerType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_MemberType">MemberType</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_Missing">Missing</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_Module">Module</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_Namespace">Namespace</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_op_Equality_System_Type_System_Type_">op_Equality(Type,Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_op_Inequality_System_Type_System_Type_">op_Inequality(Type,Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_ReflectedType">ReflectedType</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_ReflectionOnlyGetType_System_String_System_Boolean_System_Boolean_">ReflectionOnlyGetType(String,Boolean,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_StructLayoutAttribute">StructLayoutAttribute</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_System_Runtime_InteropServices__Type_GetIDsOfNames_System_Guid__System_IntPtr_System_UInt32_System_UInt32_System_IntPtr_">System.Runtime.InteropServices._Type.GetIDsOfNames(Guid,IntPtr,UInt32,UInt32,IntPtr)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_System_Runtime_InteropServices__Type_GetTypeInfo_System_UInt32_System_UInt32_System_IntPtr_">System.Runtime.InteropServices._Type.GetTypeInfo(UInt32,UInt32,IntPtr)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_System_Runtime_InteropServices__Type_GetTypeInfoCount_System_UInt32__">System.Runtime.InteropServices._Type.GetTypeInfoCount(UInt32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_System_Runtime_InteropServices__Type_Invoke_System_UInt32_System_Guid__System_UInt32_System_Int16_System_IntPtr_System_IntPtr_System_IntPtr_System_IntPtr_">System.Runtime.InteropServices._Type.Invoke(UInt32,Guid,UInt32,Int16,IntPtr,IntPtr,IntPtr,IntPtr)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_ToString">ToString()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_TypeHandle">TypeHandle</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_TypeInitializer">TypeInitializer</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.type#System_Type_UnderlyingSystemType">UnderlyingSystemType</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_DeclaredConstructors">DeclaredConstructors</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_DeclaredEvents">DeclaredEvents</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_DeclaredFields">DeclaredFields</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_DeclaredMembers">DeclaredMembers</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_DeclaredMethods">DeclaredMethods</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_DeclaredNestedTypes">DeclaredNestedTypes</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_DeclaredProperties">DeclaredProperties</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_GenericTypeParameters">GenericTypeParameters</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_ImplementedInterfaces">ImplementedInterfaces</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_AsType">AsType()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_GetDeclaredEvent_System_String_">GetDeclaredEvent(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_GetDeclaredField_System_String_">GetDeclaredField(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_GetDeclaredMethod_System_String_">GetDeclaredMethod(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_GetDeclaredMethods_System_String_">GetDeclaredMethods(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_GetDeclaredNestedType_System_String_">GetDeclaredNestedType(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_GetDeclaredProperty_System_String_">GetDeclaredProperty(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_IsAssignableFrom_System_Reflection_TypeInfo_">IsAssignableFrom(TypeInfo)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Explicit Interface Implementations
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_TypeInfo_System_Reflection_IReflectableType_GetTypeInfo">System.Reflection.IReflectableType.GetTypeInfo()</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_DeclaredConstructors">
+    
+            <a id="System_Reflection_TypeInfo_DeclaredConstructors_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeclaredConstructors</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Collections.Generic.IEnumerable&lt;System.Reflection.ConstructorInfo&gt; DeclaredConstructors { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="system.reflection.constructorinfo">ConstructorInfo</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_DeclaredEvents">
+    
+            <a id="System_Reflection_TypeInfo_DeclaredEvents_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeclaredEvents</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Collections.Generic.IEnumerable&lt;System.Reflection.EventInfo&gt; DeclaredEvents { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="system.reflection.eventinfo">EventInfo</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_DeclaredFields">
+    
+            <a id="System_Reflection_TypeInfo_DeclaredFields_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeclaredFields</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Collections.Generic.IEnumerable&lt;System.Reflection.FieldInfo&gt; DeclaredFields { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="system.reflection.fieldinfo">FieldInfo</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_DeclaredMembers">
+    
+            <a id="System_Reflection_TypeInfo_DeclaredMembers_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeclaredMembers</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Collections.Generic.IEnumerable&lt;System.Reflection.MemberInfo&gt; DeclaredMembers { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="system.reflection.memberinfo">MemberInfo</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_DeclaredMethods">
+    
+            <a id="System_Reflection_TypeInfo_DeclaredMethods_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeclaredMethods</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Collections.Generic.IEnumerable&lt;System.Reflection.MethodInfo&gt; DeclaredMethods { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="system.reflection.methodinfo">MethodInfo</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_DeclaredNestedTypes">
+    
+            <a id="System_Reflection_TypeInfo_DeclaredNestedTypes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeclaredNestedTypes</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Collections.Generic.IEnumerable&lt;System.Reflection.TypeInfo&gt; DeclaredNestedTypes { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="system.reflection.typeinfo">TypeInfo</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_DeclaredProperties">
+    
+            <a id="System_Reflection_TypeInfo_DeclaredProperties_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeclaredProperties</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Collections.Generic.IEnumerable&lt;System.Reflection.PropertyInfo&gt; DeclaredProperties { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="system.reflection.propertyinfo">PropertyInfo</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_GenericTypeParameters">
+    
+            <a id="System_Reflection_TypeInfo_GenericTypeParameters_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GenericTypeParameters</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual Type[] GenericTypeParameters { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_ImplementedInterfaces">
+    
+            <a id="System_Reflection_TypeInfo_ImplementedInterfaces_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ImplementedInterfaces</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Collections.Generic.IEnumerable&lt;Type&gt; ImplementedInterfaces { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.type">Type</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_AsType">
+    
+            <a id="System_Reflection_TypeInfo_AsType_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AsType()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual Type AsType ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.type">System.Type</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_GetDeclaredEvent_System_String_">
+    
+            <a id="System_Reflection_TypeInfo_GetDeclaredEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDeclaredEvent(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Reflection.EventInfo GetDeclaredEvent (string name);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.reflection.eventinfo">EventInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_GetDeclaredField_System_String_">
+    
+            <a id="System_Reflection_TypeInfo_GetDeclaredField_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDeclaredField(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Reflection.FieldInfo GetDeclaredField (string name);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.reflection.fieldinfo">FieldInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_GetDeclaredMethod_System_String_">
+    
+            <a id="System_Reflection_TypeInfo_GetDeclaredMethod_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDeclaredMethod(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Reflection.MethodInfo GetDeclaredMethod (string name);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.reflection.methodinfo">MethodInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_GetDeclaredMethods_System_String_">
+    
+            <a id="System_Reflection_TypeInfo_GetDeclaredMethods_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDeclaredMethods(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Collections.Generic.IEnumerable&lt;System.Reflection.MethodInfo&gt; GetDeclaredMethods (string name);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="system.reflection.methodinfo">MethodInfo</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_GetDeclaredNestedType_System_String_">
+    
+            <a id="System_Reflection_TypeInfo_GetDeclaredNestedType_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDeclaredNestedType(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Reflection.TypeInfo GetDeclaredNestedType (string name);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.reflection.typeinfo">TypeInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_GetDeclaredProperty_System_String_">
+    
+            <a id="System_Reflection_TypeInfo_GetDeclaredProperty_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDeclaredProperty(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Reflection.PropertyInfo GetDeclaredProperty (string name);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.reflection.propertyinfo">PropertyInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_IsAssignableFrom_System_Reflection_TypeInfo_">
+    
+            <a id="System_Reflection_TypeInfo_IsAssignableFrom_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsAssignableFrom(TypeInfo)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool IsAssignableFrom (System.Reflection.TypeInfo typeInfo);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>typeInfo</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.typeinfo">TypeInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="eii">
+        <h2>Explicit Interface Implementations
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_TypeInfo_System_Reflection_IReflectableType_GetTypeInfo">
+    
+            <a id="System_Reflection_TypeInfo_System_Reflection_IReflectableType_GetTypeInfo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Reflection.IReflectableType.GetTypeInfo()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">System.Reflection.TypeInfo IReflectableType.GetTypeInfo ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.reflection.typeinfo">TypeInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

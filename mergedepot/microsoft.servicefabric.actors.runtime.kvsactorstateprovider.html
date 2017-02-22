@@ -1,0 +1,2513 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="KvsActorStateProvider class">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="service-fabric">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/8ece26063f2f27414f0bad873159ee6212f3448d/docs-ref-manual/Data/ServiceFabric/Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-manual/Data/ServiceFabric/Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.yml">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider..ctor">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.OnDataLossAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.set_OnDataLossAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.Initialize">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.ActorActivatedAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.ReminderCallbackCompletedAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.LoadStateAsync&lt;T&gt;">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.SaveStateAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.ContainsStateAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.RemoveActorAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.EnumerateStateNamesAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.GetActorsAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.SaveReminderAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.DeleteReminderAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.LoadRemindersAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Data.IStateProviderReplica.Initialize">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Data.IStateProviderReplica.OpenAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Data.IStateProviderReplica.ChangeRoleAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Data.IStateProviderReplica.CloseAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Data.IStateProviderReplica.Abort">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Data.IStateProviderReplica.BackupAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider.Microsoft.ServiceFabric.Data.IStateProviderReplica.RestoreAsync">
+<meta name="APILocation" content="Microsoft.ServiceFabric.Actors.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2016-12-19 07:26 AM">
+<meta name="document_id" content="afcf7773-ab55-d68e-0169-5b890f518289">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Provides an implementation of  which 
+uses  to store and persist the actor state.
+">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=29">
+<meta name="ms.assetid" content="Microsoft.ServiceFabric.Actors.Runtime.KvsActorStateProvider">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/microsoft.servicefabric.actors.runtime.kvsactorstateprovider" rel="canonical">
+    <title>KvsActorStateProvider class | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/1b0378afbf1c5a46614d.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+							<li>
+								<a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&version=GBdevelop&line=29" ms.cmpnm="viewsource"><i class="icon icon-code"></i>View Code</a>
+							</li>
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider">
+      <span class="lang-csharp">KvsActorStateProvider</span>
+      <span class="lang-vb">KvsActorStateProvider</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    		<div class="memberEditButton">
+    			<a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=28" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+    		</div>
+    	<p>Provides an implementation of <a class="xref" href="microsoft.servicefabric.actors.runtime.iactorstateprovider">IActorStateProvider</a> which 
+uses <a class="xref" href="system.fabric.keyvaluestorereplica">KeyValueStoreReplica</a> to store and persist the actor state.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public sealed class KvsActorStateProvider : IActorStateProvider, IStateProviderReplica, VolatileLogicalTimeManager.ISnapshotHandler, IActorStateProviderInternal</code><code class="vb lang-vb">Public NotInheritable Class KvsActorStateProvider
+    Implements IActorStateProvider, IStateProviderReplica, VolatileLogicalTimeManager.ISnapshotHandler, IActorStateProviderInternal</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">KvsActorStateProvider</div>
+          <div class="lang-vb">KvsActorStateProvider</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4>System.Object</h4>
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">ToString</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">ToString</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">ReferenceEquals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">ReferenceEquals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">GetHashCode</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">GetHashCode</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">GetType</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">GetType</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">MemberwiseClone</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">MemberwiseClone</a>()
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor">KvsActorStateProvider()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor">KvsActorStateProvider()</a></div>
+          </td>
+            <td>
+            <p>Creates an instance of <a class="xref" href="microsoft.servicefabric.actors.runtime.kvsactorstateprovider">KvsActorStateProvider</a> with default settings.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_System_Boolean_">KvsActorStateProvider(Boolean)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_System_Boolean_">KvsActorStateProvider(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Creates an instance of <a class="xref" href="microsoft.servicefabric.actors.runtime.kvsactorstateprovider">KvsActorStateProvider</a> with specified settings.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_System_Boolean_System_Int32_">KvsActorStateProvider(Boolean, Int32)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_System_Boolean_System_Int32_">KvsActorStateProvider(Boolean, Int32)</a></div>
+          </td>
+            <td>
+            <p>Creates an instance of <a class="xref" href="microsoft.servicefabric.actors.runtime.kvsactorstateprovider">KvsActorStateProvider</a> with specified settings.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_System_Fabric_ReplicatorSettings_System_Fabric_LocalStoreSettings_">KvsActorStateProvider(ReplicatorSettings, LocalStoreSettings)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_System_Fabric_ReplicatorSettings_System_Fabric_LocalStoreSettings_">KvsActorStateProvider(ReplicatorSettings, LocalStoreSettings)</a></div>
+          </td>
+            <td>
+            <p>Creates an instance of <a class="xref" href="microsoft.servicefabric.actors.runtime.kvsactorstateprovider">KvsActorStateProvider</a> with specified
+replicator and local key-value store settings.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_OnDataLossAsync">OnDataLossAsync</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_OnDataLossAsync">OnDataLossAsync</a></div>
+          </td>
+            <td>
+            <p>Function called during suspected data-loss.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Explicit Interface Implementations
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_ActorActivatedAsync_Microsoft_ServiceFabric_Actors_ActorId_System_Threading_CancellationToken_">IActorStateProvider.ActorActivatedAsync(ActorId, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_ActorActivatedAsync_Microsoft_ServiceFabric_Actors_ActorId_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.ActorActivatedAsync(ActorId, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>This method is invoked as part of the activation process of the actor with the specified Id. </p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_ContainsStateAsync_Microsoft_ServiceFabric_Actors_ActorId_System_String_System_Threading_CancellationToken_">IActorStateProvider.ContainsStateAsync(ActorId, String, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_ContainsStateAsync_Microsoft_ServiceFabric_Actors_ActorId_System_String_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.ContainsStateAsync(ActorId, String, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Checks whether actor state provider contains an actor state with 
+specified state name.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_DeleteReminderAsync_Microsoft_ServiceFabric_Actors_ActorId_System_String_System_Threading_CancellationToken_">IActorStateProvider.DeleteReminderAsync(ActorId, String, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_DeleteReminderAsync_Microsoft_ServiceFabric_Actors_ActorId_System_String_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.DeleteReminderAsync(ActorId, String, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Deletes the specified actor reminder if it exists.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_EnumerateStateNamesAsync_Microsoft_ServiceFabric_Actors_ActorId_System_Threading_CancellationToken_">IActorStateProvider.EnumerateStateNamesAsync(ActorId, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_EnumerateStateNamesAsync_Microsoft_ServiceFabric_Actors_ActorId_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.EnumerateStateNamesAsync(ActorId, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Creates an enumerable of all the state names associated with specified actor.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_GetActorsAsync_System_Int32_Microsoft_ServiceFabric_Actors_Query_ContinuationToken_System_Threading_CancellationToken_">IActorStateProvider.GetActorsAsync(Int32, ContinuationToken, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_GetActorsAsync_System_Int32_Microsoft_ServiceFabric_Actors_Query_ContinuationToken_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.GetActorsAsync(Int32, ContinuationToken, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Gets ActorIds from the State Provider.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_Initialize_Microsoft_ServiceFabric_Actors_Runtime_ActorTypeInformation_">IActorStateProvider.Initialize(ActorTypeInformation)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_Initialize_Microsoft_ServiceFabric_Actors_Runtime_ActorTypeInformation_">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.Initialize(ActorTypeInformation)</a></div>
+          </td>
+            <td>
+            <p>Initializes the actor state provider with type information
+of the actor type associated with it.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_LoadRemindersAsync_System_Threading_CancellationToken_">IActorStateProvider.LoadRemindersAsync(CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_LoadRemindersAsync_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.LoadRemindersAsync(CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Loads all the reminders contained in the actor state provider.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_LoadStateAsync__1_Microsoft_ServiceFabric_Actors_ActorId_System_String_System_Threading_CancellationToken_">IActorStateProvider.LoadStateAsync&lt;T&gt;(ActorId, String, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_LoadStateAsync__1_Microsoft_ServiceFabric_Actors_ActorId_System_String_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.LoadStateAsync(Of T)(ActorId, String, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Loads the actor state associated with the specified state name.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_ReminderCallbackCompletedAsync_Microsoft_ServiceFabric_Actors_ActorId_Microsoft_ServiceFabric_Actors_Runtime_IActorReminder_System_Threading_CancellationToken_">IActorStateProvider.ReminderCallbackCompletedAsync(ActorId, IActorReminder, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_ReminderCallbackCompletedAsync_Microsoft_ServiceFabric_Actors_ActorId_Microsoft_ServiceFabric_Actors_Runtime_IActorReminder_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.ReminderCallbackCompletedAsync(ActorId, IActorReminder, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>This method is invoked when a reminder fires and finishes executing its callback 
+<a class="xref" href="microsoft.servicefabric.actors.runtime.iremindable#Microsoft_ServiceFabric_Actors_Runtime_IRemindable_ReceiveReminderAsync_System_String_System_Byte___System_TimeSpan_System_TimeSpan_">ReceiveReminderAsync(String, Byte[], TimeSpan, TimeSpan)</a> successfully.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_RemoveActorAsync_Microsoft_ServiceFabric_Actors_ActorId_System_Threading_CancellationToken_">IActorStateProvider.RemoveActorAsync(ActorId, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_RemoveActorAsync_Microsoft_ServiceFabric_Actors_ActorId_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.RemoveActorAsync(ActorId, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Removes all the existing states and reminders associated with specified actor atomically.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_SaveReminderAsync_Microsoft_ServiceFabric_Actors_ActorId_Microsoft_ServiceFabric_Actors_Runtime_IActorReminder_System_Threading_CancellationToken_">IActorStateProvider.SaveReminderAsync(ActorId, IActorReminder, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_SaveReminderAsync_Microsoft_ServiceFabric_Actors_ActorId_Microsoft_ServiceFabric_Actors_Runtime_IActorReminder_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.SaveReminderAsync(ActorId, IActorReminder, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Saves the specified actor reminder. If an actor reminder with
+given name does not exist, it adds the actor reminder otherwise
+existing actor reminder with same name is updated. </p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_SaveStateAsync_Microsoft_ServiceFabric_Actors_ActorId_System_Collections_Generic_IReadOnlyCollection_Microsoft_ServiceFabric_Actors_Runtime_ActorStateChange__System_Threading_CancellationToken_">IActorStateProvider.SaveStateAsync(ActorId, IReadOnlyCollection&lt;ActorStateChange&gt;, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_SaveStateAsync_Microsoft_ServiceFabric_Actors_ActorId_System_Collections_Generic_IReadOnlyCollection_Microsoft_ServiceFabric_Actors_Runtime_ActorStateChange__System_Threading_CancellationToken_">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.SaveStateAsync(ActorId, IReadOnlyCollection(Of ActorStateChange), CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Saves the specified set of actor state changes atomically.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_Abort">IStateProviderReplica.Abort()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_Abort">Microsoft.ServiceFabric.Data.IStateProviderReplica.Abort()</a></div>
+          </td>
+            <td>
+            <p>Forcefully abort the state provider replica.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">IStateProviderReplica.BackupAsync(BackupOption, TimeSpan, CancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">Microsoft.ServiceFabric.Data.IStateProviderReplica.BackupAsync(BackupOption, TimeSpan, CancellationToken, Func(Of BackupInfo, CancellationToken, Task(Of Boolean)))</a></div>
+          </td>
+            <td>
+            <p>Performs backup of reliable state managed by this actor sate provider.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">IStateProviderReplica.BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">Microsoft.ServiceFabric.Data.IStateProviderReplica.BackupAsync(Func(Of BackupInfo, CancellationToken, Task(Of Boolean)))</a></div>
+          </td>
+            <td>
+            <p>Performs a full backup of all reliable state managed by this actor sate provider.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_ChangeRoleAsync_System_Fabric_ReplicaRole_System_Threading_CancellationToken_">IStateProviderReplica.ChangeRoleAsync(ReplicaRole, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_ChangeRoleAsync_System_Fabric_ReplicaRole_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Data.IStateProviderReplica.ChangeRoleAsync(ReplicaRole, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Notify the state provider replica that its role is changing, for example to Primary or Secondary.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_CloseAsync_System_Threading_CancellationToken_">IStateProviderReplica.CloseAsync(CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_CloseAsync_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Data.IStateProviderReplica.CloseAsync(CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Gracefully close the state provider replica.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_Initialize_System_Fabric_StatefulServiceInitializationParameters_">IStateProviderReplica.Initialize(StatefulServiceInitializationParameters)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_Initialize_System_Fabric_StatefulServiceInitializationParameters_">Microsoft.ServiceFabric.Data.IStateProviderReplica.Initialize(StatefulServiceInitializationParameters)</a></div>
+          </td>
+            <td>
+            <p>Initialize the state provider replica using the service initialization information.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_OpenAsync_System_Fabric_ReplicaOpenMode_System_Fabric_IStatefulServicePartition_System_Threading_CancellationToken_">IStateProviderReplica.OpenAsync(ReplicaOpenMode, IStatefulServicePartition, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_OpenAsync_System_Fabric_ReplicaOpenMode_System_Fabric_IStatefulServicePartition_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Data.IStateProviderReplica.OpenAsync(ReplicaOpenMode, IStatefulServicePartition, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Open the state provider replica for use.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_RestoreAsync_System_String_">IStateProviderReplica.RestoreAsync(String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_RestoreAsync_System_String_">Microsoft.ServiceFabric.Data.IStateProviderReplica.RestoreAsync(String)</a></div>
+          </td>
+            <td>
+            <p>Restore a backup taken by <a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a> or 
+<a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(BackupOption, TimeSpan, CancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a>.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_RestoreAsync_System_String_Microsoft_ServiceFabric_Data_RestorePolicy_System_Threading_CancellationToken_">IStateProviderReplica.RestoreAsync(String, RestorePolicy, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_RestoreAsync_System_String_Microsoft_ServiceFabric_Data_RestorePolicy_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Data.IStateProviderReplica.RestoreAsync(String, RestorePolicy, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Restore a backup taken by <a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a> or 
+<a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(BackupOption, TimeSpan, CancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a>.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=88" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">KvsActorStateProvider()</div>        
+            <div class="lang-vb">KvsActorStateProvider()</div>        
+          </div>
+    
+            <p>Creates an instance of <a class="xref" href="microsoft.servicefabric.actors.runtime.kvsactorstateprovider">KvsActorStateProvider</a> with default settings.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public KvsActorStateProvider()</code><code class="vb lang-vb">Public Sub New</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_System_Boolean_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=115" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">KvsActorStateProvider(Boolean)</div>        
+            <div class="lang-vb">KvsActorStateProvider(Boolean)</div>        
+          </div>
+    
+            <p>Creates an instance of <a class="xref" href="microsoft.servicefabric.actors.runtime.kvsactorstateprovider">KvsActorStateProvider</a> with specified settings.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public KvsActorStateProvider(bool enableIncrementalBackup)</code><code class="vb lang-vb">Public Sub New(enableIncrementalBackup As Boolean)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>enableIncrementalBackup</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>Indicates whether to enable incremental backup feature.
+This sets the <a class="xref" href="system.fabric.localesestoresettings#System_Fabric_LocalEseStoreSettings_EnableIncrementalBackup">EnableIncrementalBackup</a> setting.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_System_Boolean_System_Int32_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=137" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">KvsActorStateProvider(Boolean, Int32)</div>        
+            <div class="lang-vb">KvsActorStateProvider(Boolean, Int32)</div>        
+          </div>
+    
+            <p>Creates an instance of <a class="xref" href="microsoft.servicefabric.actors.runtime.kvsactorstateprovider">KvsActorStateProvider</a> with specified settings.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public KvsActorStateProvider(bool enableIncrementalBackup, int logTruncationIntervalInMinutes)</code><code class="vb lang-vb">Public Sub New(enableIncrementalBackup As Boolean, logTruncationIntervalInMinutes As Integer)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>enableIncrementalBackup</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>Indicates whether to enable incremental backup feature.
+This sets the <a class="xref" href="system.fabric.localesestoresettings#System_Fabric_LocalEseStoreSettings_EnableIncrementalBackup">EnableIncrementalBackup</a> setting.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>logTruncationIntervalInMinutes</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>Indicates the interval after which <a class="xref" href="system.fabric.keyvaluestorereplica">KeyValueStoreReplica</a> tries to truncate local store logs.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>When incremental backup is enabled for <a class="xref" href="system.fabric.keyvaluestorereplica">KeyValueStoreReplica</a>, it does not use circular buffer
+to manage its transaction logs and periodically truncates the logs both on primary and secondary replica(s).
+The process of taking backup(s) automatically truncates logs. On the primary replica, if no user backup
+is initiated for <em>logTruncationIntervalInMinutes</em>, <a class="xref" href="system.fabric.keyvaluestorereplica">KeyValueStoreReplica</a>
+automatically truncates the logs.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_System_Fabric_ReplicatorSettings_System_Fabric_LocalStoreSettings_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider__ctor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=103" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">KvsActorStateProvider(ReplicatorSettings, LocalStoreSettings)</div>        
+            <div class="lang-vb">KvsActorStateProvider(ReplicatorSettings, LocalStoreSettings)</div>        
+          </div>
+    
+            <p>Creates an instance of <a class="xref" href="microsoft.servicefabric.actors.runtime.kvsactorstateprovider">KvsActorStateProvider</a> with specified
+replicator and local key-value store settings.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public KvsActorStateProvider(ReplicatorSettings replicatorSettings = null, LocalStoreSettings localStoreSettings = null)</code><code class="vb lang-vb">Public Sub New(replicatorSettings As ReplicatorSettings = Nothing, localStoreSettings As LocalStoreSettings = Nothing)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>replicatorSettings</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.replicatorsettings">ReplicatorSettings</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.replicatorsettings">ReplicatorSettings</a></div>
+                  </dd>
+                  </dl>
+                  <p>A <a class="xref" href="system.fabric.replicatorsettings">ReplicatorSettings</a> that describes replicator settings.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>localStoreSettings</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.localstoresettings">LocalStoreSettings</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.localstoresettings">LocalStoreSettings</a></div>
+                  </dd>
+                  </dl>
+                  <p>A <a class="xref" href="system.fabric.localstoresettings">LocalStoreSettings</a> that describes local key value store settings.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_OnDataLossAsync">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_OnDataLossAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=184" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnDataLossAsync</div>        
+            <div class="lang-vb">OnDataLossAsync</div>        
+          </div>
+    
+            <p>Function called during suspected data-loss.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Func&lt;CancellationToken, Task&lt;bool&gt;&gt; OnDataLossAsync { set; }</code><code class="vb lang-vb">Public WriteOnly Property OnDataLossAsync As Func(Of CancellationToken, Task(Of Boolean))</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx">Func</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx">Func</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>))</div>
+                  </div>
+                  <p>A function representing data-loss callback function.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="eii">
+        <h2>Explicit Interface Implementations
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_ActorActivatedAsync_Microsoft_ServiceFabric_Actors_ActorId_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_ActorActivatedAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=215" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IActorStateProvider.ActorActivatedAsync(ActorId, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.ActorActivatedAsync(ActorId, CancellationToken)</div>        
+          </div>
+    
+            <p>This method is invoked as part of the activation process of the actor with the specified Id. </p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IActorStateProvider.ActorActivatedAsync(ActorId actorId, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.ActorActivatedAsync(actorId As ActorId, cancellationToken As CancellationToken) As Task Implements IActorStateProvider.ActorActivatedAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>actorId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                  </dd>
+                  </dl>
+                  <p>ID of the actor that is activated.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous Actor activation notification processing.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                  </div>
+                  <p>The operation was canceled.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_ContainsStateAsync_Microsoft_ServiceFabric_Actors_ActorId_System_String_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_ContainsStateAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=335" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IActorStateProvider.ContainsStateAsync(ActorId, String, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.ContainsStateAsync(ActorId, String, CancellationToken)</div>        
+          </div>
+    
+            <p>Checks whether actor state provider contains an actor state with 
+specified state name.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;bool&gt; IActorStateProvider.ContainsStateAsync(ActorId actorId, string stateName, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.ContainsStateAsync(actorId As ActorId, stateName As String, cancellationToken As CancellationToken) As Task(Of Boolean) Implements IActorStateProvider.ContainsStateAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>actorId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                  </dd>
+                  </dl>
+                  <p>ID of the actor for which to check state existence.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>stateName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>Name of the actor state to check for existence.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>)</div>
+                  </div>
+                  <p>A task that represents the asynchronous check operation. The value of TResult
+parameter is <code>true</code> if state with specified name exists otherwise <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                  </div>
+                  <p>The operation was canceled.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_DeleteReminderAsync_Microsoft_ServiceFabric_Actors_ActorId_System_String_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_DeleteReminderAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=452" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IActorStateProvider.DeleteReminderAsync(ActorId, String, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.DeleteReminderAsync(ActorId, String, CancellationToken)</div>        
+          </div>
+    
+            <p>Deletes the specified actor reminder if it exists.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IActorStateProvider.DeleteReminderAsync(ActorId actorId, string reminderName, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.DeleteReminderAsync(actorId As ActorId, reminderName As String, cancellationToken As CancellationToken) As Task Implements IActorStateProvider.DeleteReminderAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>actorId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                  </dd>
+                  </dl>
+                  <p>ID of the actor for which to delete the reminder.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>reminderName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>Name of the reminder to delete.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous delete operation.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                  </div>
+                  <p>The operation was canceled.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_EnumerateStateNamesAsync_Microsoft_ServiceFabric_Actors_ActorId_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_EnumerateStateNamesAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=382" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IActorStateProvider.EnumerateStateNamesAsync(ActorId, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.EnumerateStateNamesAsync(ActorId, CancellationToken)</div>        
+          </div>
+    
+            <p>Creates an enumerable of all the state names associated with specified actor.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;IEnumerable&lt;string&gt;&gt; IActorStateProvider.EnumerateStateNamesAsync(ActorId actorId, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.EnumerateStateNamesAsync(actorId As ActorId, cancellationToken As CancellationToken) As Task(Of IEnumerable(Of String)) Implements IActorStateProvider.EnumerateStateNamesAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>actorId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                  </dd>
+                  </dl>
+                  <p>ID of the actor for which to create enumerable.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>))</div>
+                  </div>
+                  <p>A task that represents the asynchronous enumeration operation. The value of TResult
+parameter is an enumerable of all state names associated with specified actor.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                  </div>
+                  <p>The operation was canceled.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The enumerator returned from actor state provider is safe to use concurrently
+with reads and writes to the state provider. It represents a snapshot consistent
+view of the state provider.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_GetActorsAsync_System_Int32_Microsoft_ServiceFabric_Actors_Query_ContinuationToken_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_GetActorsAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=407" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IActorStateProvider.GetActorsAsync(Int32, ContinuationToken, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.GetActorsAsync(Int32, ContinuationToken, CancellationToken)</div>        
+          </div>
+    
+            <p>Gets ActorIds from the State Provider.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;PagedResult&lt;ActorId&gt;&gt; IActorStateProvider.GetActorsAsync(int numItemsToReturn, ContinuationToken continuationToken, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.GetActorsAsync(numItemsToReturn As Integer, continuationToken As ContinuationToken, cancellationToken As CancellationToken) As Task(Of PagedResult(Of ActorId)) Implements IActorStateProvider.GetActorsAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>numItemsToReturn</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>Number of items requested to be returned.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>continuationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.query.continuationtoken">ContinuationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.query.continuationtoken">ContinuationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>A continuation token to start querying the results from.
+A null value of continuation token means start returning values form the beginning.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="microsoft.servicefabric.actors.query.pagedresult-1">PagedResult</a>&lt;<a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a>&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="microsoft.servicefabric.actors.query.pagedresult-1">PagedResult</a>(Of <a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a>))</div>
+                  </div>
+                  <p>A task that represents the asynchronous operation of call to server.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                  </div>
+                  <p>The operation was canceled.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The <em>continuationToken</em> is relative to the state of actor state provider
+at the time of invocation of this API. If the state of actor state provider changes (i.e.
+new actors are activated or existing actors are deleted) in between calls to this API and
+the continuation token from previous call (before the state was modified) is supplied, the 
+result may contain entries that were already fetched in previous calls.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_Initialize_Microsoft_ServiceFabric_Actors_Runtime_ActorTypeInformation_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_Initialize_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=203" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IActorStateProvider.Initialize(ActorTypeInformation)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.Initialize(ActorTypeInformation)</div>        
+          </div>
+    
+            <p>Initializes the actor state provider with type information
+of the actor type associated with it.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IActorStateProvider.Initialize(ActorTypeInformation actorTypeInformation)</code><code class="vb lang-vb">Sub Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.Initialize(actorTypeInformation As ActorTypeInformation) Implements IActorStateProvider.Initialize</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>actorTypeInformation</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.runtime.actortypeinformation">ActorTypeInformation</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.runtime.actortypeinformation">ActorTypeInformation</a></div>
+                  </dd>
+                  </dl>
+                  <p>Type information of the actor class</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_LoadRemindersAsync_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_LoadRemindersAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=475" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IActorStateProvider.LoadRemindersAsync(CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.LoadRemindersAsync(CancellationToken)</div>        
+          </div>
+    
+            <p>Loads all the reminders contained in the actor state provider.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;IActorReminderCollection&gt; IActorStateProvider.LoadRemindersAsync(CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.LoadRemindersAsync(cancellationToken As CancellationToken) As Task(Of IActorReminderCollection) Implements IActorStateProvider.LoadRemindersAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>Cancellation token for asynchronous load operation.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="microsoft.servicefabric.actors.runtime.iactorremindercollection">IActorReminderCollection</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="microsoft.servicefabric.actors.runtime.iactorremindercollection">IActorReminderCollection</a>)</div>
+                  </div>
+                  <p>A task that represents the asynchronous load operation. The value of TResult
+parameter is a collection of all actor reminders contained in the actor state provider.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                  </div>
+                  <p>The operation was canceled.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_LoadStateAsync__1_Microsoft_ServiceFabric_Actors_ActorId_System_String_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_LoadStateAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=274" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IActorStateProvider.LoadStateAsync&lt;T&gt;(ActorId, String, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.LoadStateAsync(Of T)(ActorId, String, CancellationToken)</div>        
+          </div>
+    
+            <p>Loads the actor state associated with the specified state name.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;T&gt; IActorStateProvider.LoadStateAsync&lt;T&gt;(ActorId actorId, string stateName, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.LoadStateAsync(Of T)(actorId As ActorId, stateName As String, cancellationToken As CancellationToken) As Task(Of T) Implements IActorStateProvider.LoadStateAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>actorId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                  </dd>
+                  </dl>
+                  <p>ID of the actor for which to load the state.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>stateName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>Name of the actor state to load.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of T)</div>
+                  </div>
+                  <p>A task that represents the asynchronous load operation. The value of TResult
+parameter contains value of actor state associated with given state name.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.collections.generic.keynotfoundexception(v=vs.110).aspx">KeyNotFoundException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.collections.generic.keynotfoundexception(v=vs.110).aspx">KeyNotFoundException</a></div>
+                  </div>
+                  <p>Actor state associated with specified state name does not exist.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                  </div>
+                  <p>The operation was canceled.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_ReminderCallbackCompletedAsync_Microsoft_ServiceFabric_Actors_ActorId_Microsoft_ServiceFabric_Actors_Runtime_IActorReminder_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_ReminderCallbackCompletedAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=246" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IActorStateProvider.ReminderCallbackCompletedAsync(ActorId, IActorReminder, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.ReminderCallbackCompletedAsync(ActorId, IActorReminder, CancellationToken)</div>        
+          </div>
+    
+            <p>This method is invoked when a reminder fires and finishes executing its callback 
+<a class="xref" href="microsoft.servicefabric.actors.runtime.iremindable#Microsoft_ServiceFabric_Actors_Runtime_IRemindable_ReceiveReminderAsync_System_String_System_Byte___System_TimeSpan_System_TimeSpan_">ReceiveReminderAsync(String, Byte[], TimeSpan, TimeSpan)</a> successfully.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IActorStateProvider.ReminderCallbackCompletedAsync(ActorId actorId, IActorReminder reminder, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.ReminderCallbackCompletedAsync(actorId As ActorId, reminder As IActorReminder, cancellationToken As CancellationToken) As Task Implements IActorStateProvider.ReminderCallbackCompletedAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>actorId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                  </dd>
+                  </dl>
+                  <p>ID of the actor which own reminder</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>reminder</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.runtime.iactorreminder">IActorReminder</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.runtime.iactorreminder">IActorReminder</a></div>
+                  </dd>
+                  </dl>
+                  <p>Actor reminder that completed successfully.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous reminder callback completed notification processing.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_RemoveActorAsync_Microsoft_ServiceFabric_Actors_ActorId_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_RemoveActorAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=360" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IActorStateProvider.RemoveActorAsync(ActorId, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.RemoveActorAsync(ActorId, CancellationToken)</div>        
+          </div>
+    
+            <p>Removes all the existing states and reminders associated with specified actor atomically.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IActorStateProvider.RemoveActorAsync(ActorId actorId, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.RemoveActorAsync(actorId As ActorId, cancellationToken As CancellationToken) As Task Implements IActorStateProvider.RemoveActorAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>actorId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                  </dd>
+                  </dl>
+                  <p>ID of the actor for which to remove state.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous remove operation.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                  </div>
+                  <p>The operation was canceled.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_SaveReminderAsync_Microsoft_ServiceFabric_Actors_ActorId_Microsoft_ServiceFabric_Actors_Runtime_IActorReminder_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_SaveReminderAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=427" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IActorStateProvider.SaveReminderAsync(ActorId, IActorReminder, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.SaveReminderAsync(ActorId, IActorReminder, CancellationToken)</div>        
+          </div>
+    
+            <p>Saves the specified actor reminder. If an actor reminder with
+given name does not exist, it adds the actor reminder otherwise
+existing actor reminder with same name is updated. </p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IActorStateProvider.SaveReminderAsync(ActorId actorId, IActorReminder reminder, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.SaveReminderAsync(actorId As ActorId, reminder As IActorReminder, cancellationToken As CancellationToken) As Task Implements IActorStateProvider.SaveReminderAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>actorId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                  </dd>
+                  </dl>
+                  <p>ID of the actor for which to save the reminder.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>reminder</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.runtime.iactorreminder">IActorReminder</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.runtime.iactorreminder">IActorReminder</a></div>
+                  </dd>
+                  </dl>
+                  <p>Actor reminder to save.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous save operation.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                  </div>
+                  <p>The operation was canceled.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_SaveStateAsync_Microsoft_ServiceFabric_Actors_ActorId_System_Collections_Generic_IReadOnlyCollection_Microsoft_ServiceFabric_Actors_Runtime_ActorStateChange__System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Actors_Runtime_IActorStateProvider_SaveStateAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=316" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IActorStateProvider.SaveStateAsync(ActorId, IReadOnlyCollection&lt;ActorStateChange&gt;, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.SaveStateAsync(ActorId, IReadOnlyCollection(Of ActorStateChange), CancellationToken)</div>        
+          </div>
+    
+            <p>Saves the specified set of actor state changes atomically.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IActorStateProvider.SaveStateAsync(ActorId actorId, IReadOnlyCollection&lt;ActorStateChange&gt; stateChanges, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Actors.Runtime.IActorStateProvider.SaveStateAsync(actorId As ActorId, stateChanges As IReadOnlyCollection(Of ActorStateChange), cancellationToken As CancellationToken) As Task Implements IActorStateProvider.SaveStateAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>actorId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.actors.actorid">ActorId</a></div>
+                  </dd>
+                  </dl>
+                  <p>ID of the actor for which to save the state changes.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>stateChanges</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/hh881542(v=vs.110).aspx">IReadOnlyCollection</a>&lt;<a class="xref" href="microsoft.servicefabric.actors.runtime.actorstatechange">ActorStateChange</a>&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/hh881542(v=vs.110).aspx">IReadOnlyCollection</a>(Of <a class="xref" href="microsoft.servicefabric.actors.runtime.actorstatechange">ActorStateChange</a>)</div>
+                  </dd>
+                  </dl>
+                  <p>Collection of state changes to save.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous save operation.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.invalidoperationexception(v=vs.110).aspx">InvalidOperationException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.invalidoperationexception(v=vs.110).aspx">InvalidOperationException</a></div>
+                  </div>
+                  <p>When <a class="xref" href="microsoft.servicefabric.actors.runtime.statechangekind">StateChangeKind</a> is <a class="xref" href="microsoft.servicefabric.actors.runtime.statechangekind#Microsoft_ServiceFabric_Actors_Runtime_StateChangeKind_None">None</a></p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                  </div>
+                  <p>The operation was canceled.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The collection of state changes should contain only one item for a given state name.
+The save operation will fail on trying to add an actor state which already exists 
+or update/remove an actor state which does not exist.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_Abort">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_Abort_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=581" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.Abort()</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.Abort()</div>        
+          </div>
+    
+            <p>Forcefully abort the state provider replica.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IStateProviderReplica.Abort()</code><code class="vb lang-vb">Sub Microsoft.ServiceFabric.Data.IStateProviderReplica.Abort Implements IStateProviderReplica.Abort</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This generally occurs when a permanent fault is detected on the node, or when
+Service Fabric cannot reliably manage the replica&#39;s life-cycle due to internal failures.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=617" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.BackupAsync(BackupOption, TimeSpan, CancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.BackupAsync(BackupOption, TimeSpan, CancellationToken, Func(Of BackupInfo, CancellationToken, Task(Of Boolean)))</div>        
+          </div>
+    
+            <p>Performs backup of reliable state managed by this actor sate provider.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IStateProviderReplica.BackupAsync(BackupOption option, TimeSpan timeout, CancellationToken cancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;bool&gt;&gt; backupCallback)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IStateProviderReplica.BackupAsync(option As BackupOption, timeout As TimeSpan, cancellationToken As CancellationToken, backupCallback As Func(Of BackupInfo, CancellationToken, Task(Of Boolean))) As Task Implements IStateProviderReplica.BackupAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>option</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.backupoption">BackupOption</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.backupoption">BackupOption</a></div>
+                  </dd>
+                  </dl>
+                  <p>Option for the backup.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  <p>Timeout for the backup.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>Cancellation token for the backup.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>backupCallback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb534647(v=vs.110).aspx">Func</a>&lt;<a class="xref" href="microsoft.servicefabric.data.backupinfo">BackupInfo</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb534647(v=vs.110).aspx">Func</a>(Of <a class="xref" href="microsoft.servicefabric.data.backupinfo">BackupInfo</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>))</div>
+                  </dd>
+                  </dl>
+                  <p>Callback to be called once the backup folder is ready.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>Task that represents the asynchronous operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>KVSActorStateProvider Backup only support Full backup. KVS BackupInfo does not contain backup version.
+The Backup version is set to invalid.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=600" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.BackupAsync(Func(Of BackupInfo, CancellationToken, Task(Of Boolean)))</div>        
+          </div>
+    
+            <p>Performs a full backup of all reliable state managed by this actor sate provider.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IStateProviderReplica.BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;bool&gt;&gt; backupCallback)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IStateProviderReplica.BackupAsync(backupCallback As Func(Of BackupInfo, CancellationToken, Task(Of Boolean))) As Task Implements IStateProviderReplica.BackupAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>backupCallback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb534647(v=vs.110).aspx">Func</a>&lt;<a class="xref" href="microsoft.servicefabric.data.backupinfo">BackupInfo</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb534647(v=vs.110).aspx">Func</a>(Of <a class="xref" href="microsoft.servicefabric.data.backupinfo">BackupInfo</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>))</div>
+                  </dd>
+                  </dl>
+                  <p>Callback to be called when the backup folder has been created locally and is ready to be moved out of the node.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>Task that represents the asynchronous backup operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>A FULL backup will be performed with a one-hour timeout.
+Boolean returned by the backupCallback indicate whether the service was able to successfully move the backup folder to an external location.
+If false is returned, BackupAsync throws InvalidOperationException with the relevant message indicating backupCallback returned false.
+Also, backup will be marked as unsuccessful.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_ChangeRoleAsync_System_Fabric_ReplicaRole_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_ChangeRoleAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=536" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.ChangeRoleAsync(ReplicaRole, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.ChangeRoleAsync(ReplicaRole, CancellationToken)</div>        
+          </div>
+    
+            <p>Notify the state provider replica that its role is changing, for example to Primary or Secondary.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IStateProviderReplica.ChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IStateProviderReplica.ChangeRoleAsync(newRole As ReplicaRole, cancellationToken As CancellationToken) As Task Implements IStateProviderReplica.ChangeRoleAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>newRole</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.replicarole">ReplicaRole</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.replicarole">ReplicaRole</a></div>
+                  </dd>
+                  </dl>
+                  <p>The new replica role, such as primary or secondary.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>Task that represents the asynchronous change role operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_CloseAsync_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_CloseAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=563" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.CloseAsync(CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.CloseAsync(CancellationToken)</div>        
+          </div>
+    
+            <p>Gracefully close the state provider replica.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IStateProviderReplica.CloseAsync(CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IStateProviderReplica.CloseAsync(cancellationToken As CancellationToken) As Task Implements IStateProviderReplica.CloseAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>Task that represents the asynchronous close operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This generally occurs when the replica&#39;s code is being upgrade, the replica is being moved
+due to load balancing, or a transient fault is detected.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_Initialize_System_Fabric_StatefulServiceInitializationParameters_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_Initialize_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=495" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.Initialize(StatefulServiceInitializationParameters)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.Initialize(StatefulServiceInitializationParameters)</div>        
+          </div>
+    
+            <p>Initialize the state provider replica using the service initialization information.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IStateProviderReplica.Initialize(StatefulServiceInitializationParameters initializationParameters)</code><code class="vb lang-vb">Sub Microsoft.ServiceFabric.Data.IStateProviderReplica.Initialize(initializationParameters As StatefulServiceInitializationParameters) Implements IStateProviderReplica.Initialize</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>initializationParameters</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.statefulserviceinitializationparameters">StatefulServiceInitializationParameters</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.statefulserviceinitializationparameters">StatefulServiceInitializationParameters</a></div>
+                  </dd>
+                  </dl>
+                  <p>Service initialization information such as service name, partition id, replica id, and code package information.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>No complex processing should be done during Initialize. Expensive or long-running initialization should be done in OpenAsync.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_OpenAsync_System_Fabric_ReplicaOpenMode_System_Fabric_IStatefulServicePartition_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_OpenAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=516" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.OpenAsync(ReplicaOpenMode, IStatefulServicePartition, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.OpenAsync(ReplicaOpenMode, IStatefulServicePartition, CancellationToken)</div>        
+          </div>
+    
+            <p>Open the state provider replica for use.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;IReplicator&gt; IStateProviderReplica.OpenAsync(ReplicaOpenMode openMode, IStatefulServicePartition partition, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IStateProviderReplica.OpenAsync(openMode As ReplicaOpenMode, partition As IStatefulServicePartition, cancellationToken As CancellationToken) As Task(Of IReplicator) Implements IStateProviderReplica.OpenAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>openMode</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.replicaopenmode">ReplicaOpenMode</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.replicaopenmode">ReplicaOpenMode</a></div>
+                  </dd>
+                  </dl>
+                  <p>Indicates whether this is a new or existing replica.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>partition</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.istatefulservicepartition">IStatefulServicePartition</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.istatefulservicepartition">IStatefulServicePartition</a></div>
+                  </dd>
+                  </dl>
+                  <p>The partition this replica belongs to.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="system.fabric.ireplicator">IReplicator</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="system.fabric.ireplicator">IReplicator</a>)</div>
+                  </div>
+                  <p>Task that represents the asynchronous open operation. The result contains the replicator
+responsible for replicating state between other state provider replicas in the partition.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Extended state provider initialization tasks can be started at this time.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_RestoreAsync_System_String_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_RestoreAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=652" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.RestoreAsync(String)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.RestoreAsync(String)</div>        
+          </div>
+    
+            <p>Restore a backup taken by <a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a> or 
+<a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(BackupOption, TimeSpan, CancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a>.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IStateProviderReplica.RestoreAsync(string backupFolderPath)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IStateProviderReplica.RestoreAsync(backupFolderPath As String) As Task Implements IStateProviderReplica.RestoreAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>backupFolderPath</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The directory where the replica is to be restored from.
+This parameter cannot be null, empty or contain just whitespace. 
+UNC paths may also be provided.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>Task that represents the asynchronous restore operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_RestoreAsync_System_String_Microsoft_ServiceFabric_Data_RestorePolicy_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Actors_Runtime_KvsActorStateProvider_Microsoft_ServiceFabric_Data_IStateProviderReplica_RestoreAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Actors/Runtime/KvsActorStateProvider.cs&amp;version=GBdevelop&amp;line=669" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.RestoreAsync(String, RestorePolicy, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.RestoreAsync(String, RestorePolicy, CancellationToken)</div>        
+          </div>
+    
+            <p>Restore a backup taken by <a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a> or 
+<a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(BackupOption, TimeSpan, CancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a>.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IStateProviderReplica.RestoreAsync(string backupFolderPath, RestorePolicy restorePolicy, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IStateProviderReplica.RestoreAsync(backupFolderPath As String, restorePolicy As RestorePolicy, cancellationToken As CancellationToken) As Task Implements IStateProviderReplica.RestoreAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>backupFolderPath</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The directory where the replica is to be restored from.
+This parameter cannot be null, empty or contain just whitespace. 
+UNC paths may also be provided.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>restorePolicy</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.restorepolicy">RestorePolicy</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.restorepolicy">RestorePolicy</a></div>
+                  </dd>
+                  </dl>
+                  <p>The restore policy.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>Task that represents the asynchronous restore operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+      <h2>Details</h2>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Namespace</h4>    
+          <div>Microsoft.ServiceFabric.Actors.Runtime</div>
+        </div>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Assembly</h4>    
+          <div>Microsoft.ServiceFabric.Actors.dll</div>
+        </div>
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/1b0378afbf1c5a46614d.reference.js"></script>
+  </body>
+</html>

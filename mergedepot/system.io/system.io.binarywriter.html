@@ -1,0 +1,2225 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="BinaryWriter class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/System.IO/System.IO.BinaryWriter.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO/System.IO.BinaryWriter.yml">
+<meta name="APIName" content="System.IO.BinaryWriter">
+<meta name="APIName" content="System.IO.BinaryWriter..ctor">
+<meta name="APIName" content="System.IO.BinaryWriter.BaseStream">
+<meta name="APIName" content="System.IO.BinaryWriter.Close">
+<meta name="APIName" content="System.IO.BinaryWriter.Dispose">
+<meta name="APIName" content="System.IO.BinaryWriter.Flush">
+<meta name="APIName" content="System.IO.BinaryWriter.Null">
+<meta name="APIName" content="System.IO.BinaryWriter.OutStream">
+<meta name="APIName" content="System.IO.BinaryWriter.Seek">
+<meta name="APIName" content="System.IO.BinaryWriter.Write">
+<meta name="APIName" content="System.IO.BinaryWriter.Write7BitEncodedInt">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="7cf90c51-f9ef-7c9c-17e0-a9748bf64a9e">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Writes primitive types in binary to a stream and supports writing strings in a specific encoding.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.BinaryWriter">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.io/system.io.binarywriter" rel="canonical">
+    <title>BinaryWriter class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_BinaryWriter">
+      <span class="lang-csharp">BinaryWriter</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Writes primitive types in binary to a stream and supports writing strings in a specific encoding.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public class BinaryWriter : IDisposable</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">BinaryWriter</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <p>The BinaryWriter class provides methods that simplify writing primitive data types to a stream. For example, you can use the <a class="xref" href="system.io.binarywriter#System_IO_BinaryWriter_Write_">Write</a> method to write a Boolean value to the stream as a one-byte value. The class includes write methods that support different data types.  </p>
+<p> When you create a new instance of the BinaryWriter class, you provide the stream to write to, and optionally specify the type of encoding and whether to leave the stream open after disposing the BinaryWriter object. If you do not specify an encoding type, UTF-8 is used.  </p>
+<div class="IMPORTANT"><h5>Important</h5><p> This type implements the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <a class="xref" href="../system/system.idisposable#System_IDisposable_Dispose_">Dispose</a> method in a <code>try</code>/<code>catch</code> block. To dispose of it indirectly, use a language construct such as <code>using</code> (in C#) or <code>Using</code> (in Visual Basic). For more information, see the â€œUsing an Object that Implements IDisposableâ€ section in the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface topic.  </p>
+</div>
+<p> A derived class can override the methods of this class to give unique character encodings.</p>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter__ctor">BinaryWriter()</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryWriter"> class that writes to a stream.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter__ctor_System_IO_Stream_">BinaryWriter(Stream)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryWriter"> class based on the specified stream and using UTF-8 encoding.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter__ctor_System_IO_Stream_System_Text_Encoding_">BinaryWriter(Stream,Encoding)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryWriter"> class based on the specified stream and character encoding.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter__ctor_System_IO_Stream_System_Text_Encoding_System_Boolean_">BinaryWriter(Stream,Encoding,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryWriter"> class based on the specified stream and character encoding, and optionally leaves the stream open.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Fields
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Null">Null</a></div>
+          </td>
+            <td>
+            <p>Specifies a <see cref="T:System.IO.BinaryWriter"> with no backing store.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_OutStream">OutStream</a></div>
+          </td>
+            <td>
+            <p>Holds the underlying stream.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_BaseStream">BaseStream</a></div>
+          </td>
+            <td>
+            <p>Gets the underlying stream of the <see cref="T:System.IO.BinaryWriter">.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Close">Close()</a></div>
+          </td>
+            <td>
+            <p>Closes the current <see cref="T:System.IO.BinaryWriter"> and the underlying stream.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Dispose">Dispose()</a></div>
+          </td>
+            <td>
+            <p>Releases all resources used by the current instance of the <see cref="T:System.IO.BinaryWriter"> class.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.BinaryWriter"> and optionally releases the managed resources.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Flush">Flush()</a></div>
+          </td>
+            <td>
+            <p>Clears all buffers for the current writer and causes any buffered data to be written to the underlying device.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Seek_System_Int32_System_IO_SeekOrigin_">Seek(Int32,SeekOrigin)</a></div>
+          </td>
+            <td>
+            <p>Sets the position within the current stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Boolean_">Write(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Writes a one-byte <code>Boolean</code> value to the current stream, with 0 representing <code>false</code> and 1 representing <code>true</code>.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Byte_">Write(Byte)</a></div>
+          </td>
+            <td>
+            <p>Writes an unsigned byte to the current stream and advances the stream position by one byte.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Byte___">Write(Byte[])</a></div>
+          </td>
+            <td>
+            <p>Writes a byte array to the underlying stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Char_">Write(Char)</a></div>
+          </td>
+            <td>
+            <p>Writes a Unicode character to the current stream and advances the current position of the stream in accordance with the <code>Encoding</code> used and the specific characters being written to the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Char___">Write(Char[])</a></div>
+          </td>
+            <td>
+            <p>Writes a character array to the current stream and advances the current position of the stream in accordance with the <code>Encoding</code> used and the specific characters being written to the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Decimal_">Write(Decimal)</a></div>
+          </td>
+            <td>
+            <p>Writes a decimal value to the current stream and advances the stream position by sixteen bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Double_">Write(Double)</a></div>
+          </td>
+            <td>
+            <p>Writes an eight-byte floating-point value to the current stream and advances the stream position by eight bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Int16_">Write(Int16)</a></div>
+          </td>
+            <td>
+            <p>Writes a two-byte signed integer to the current stream and advances the stream position by two bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Int32_">Write(Int32)</a></div>
+          </td>
+            <td>
+            <p>Writes a four-byte signed integer to the current stream and advances the stream position by four bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Int64_">Write(Int64)</a></div>
+          </td>
+            <td>
+            <p>Writes an eight-byte signed integer to the current stream and advances the stream position by eight bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_SByte_">Write(SByte)</a></div>
+          </td>
+            <td>
+            <p>Writes a signed byte to the current stream and advances the stream position by one byte.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Single_">Write(Single)</a></div>
+          </td>
+            <td>
+            <p>Writes a four-byte floating-point value to the current stream and advances the stream position by four bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_String_">Write(String)</a></div>
+          </td>
+            <td>
+            <p>Writes a length-prefixed string to this stream in the current encoding of the <see cref="T:System.IO.BinaryWriter">, and advances the current position of the stream in accordance with the encoding used and the specific characters being written to the stream.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_UInt16_">Write(UInt16)</a></div>
+          </td>
+            <td>
+            <p>Writes a two-byte unsigned integer to the current stream and advances the stream position by two bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_UInt32_">Write(UInt32)</a></div>
+          </td>
+            <td>
+            <p>Writes a four-byte unsigned integer to the current stream and advances the stream position by four bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_UInt64_">Write(UInt64)</a></div>
+          </td>
+            <td>
+            <p>Writes an eight-byte unsigned integer to the current stream and advances the stream position by eight bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Byte___System_Int32_System_Int32_">Write(Byte[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Writes a region of a byte array to the current stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write_System_Char___System_Int32_System_Int32_">Write(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Writes a section of a character array to the current stream, and advances the current position of the stream in accordance with the <code>Encoding</code> used and perhaps the specific characters being written to the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryWriter_Write7BitEncodedInt_System_Int32_">Write7BitEncodedInt(Int32)</a></div>
+          </td>
+            <td>
+            <p>Writes a 32-bit integer in a compressed format.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter__ctor">
+    
+            <a id="System_IO_BinaryWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BinaryWriter()</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryWriter"> class that writes to a stream.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected BinaryWriter ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter__ctor_System_IO_Stream_">
+    
+            <a id="System_IO_BinaryWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BinaryWriter(Stream)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryWriter"> class based on the specified stream and using UTF-8 encoding.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public BinaryWriter (System.IO.Stream output);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>output</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The output stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter__ctor_System_IO_Stream_System_Text_Encoding_">
+    
+            <a id="System_IO_BinaryWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BinaryWriter(Stream,Encoding)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryWriter"> class based on the specified stream and character encoding.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public BinaryWriter (System.IO.Stream output, System.Text.Encoding encoding);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>output</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The output stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter__ctor_System_IO_Stream_System_Text_Encoding_System_Boolean_">
+    
+            <a id="System_IO_BinaryWriter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BinaryWriter(Stream,Encoding,Boolean)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryWriter"> class based on the specified stream and character encoding, and optionally leaves the stream open.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public BinaryWriter (System.IO.Stream output, System.Text.Encoding encoding, bool leaveOpen);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>output</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The output stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>leaveOpen</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to leave the stream open after the <see cref="T:System.IO.BinaryWriter"> object is disposed; otherwise, <code>false</code>.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="fields">
+        <h2>Fields
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Null">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Null</div>        
+          </div>
+    
+            <p>Specifies a <see cref="T:System.IO.BinaryWriter"> with no backing store.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly System.IO.BinaryWriter Null;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_OutStream">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OutStream</div>        
+          </div>
+    
+            <p>Holds the underlying stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected System.IO.Stream OutStream;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_BaseStream">
+    
+            <a id="System_IO_BinaryWriter_BaseStream_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BaseStream</div>        
+          </div>
+    
+            <p>Gets the underlying stream of the <see cref="T:System.IO.BinaryWriter">.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.IO.Stream BaseStream { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </div>
+                  <p>The underlying stream associated with the <code>BinaryWriter</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write `Double` data to memory by using the <xref:system.io.binaryreader> and `BinaryWriter` classes on top of the <xref:system.io.memorystream> class. `MemoryStream` only reads and writes `Byte` data.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWDouble#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </xref:system.io.memorystream></xref:system.io.binaryreader></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Close">
+    
+            <a id="System_IO_BinaryWriter_Close_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Close()</div>        
+          </div>
+    
+            <p>Closes the current <see cref="T:System.IO.BinaryWriter"> and the underlying stream.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Close ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This implementation of <code>Close</code> calls the <a class="xref" href="system.io.binarywriter#System_IO_BinaryWriter_Dispose_">Dispose</a> method passing a <code>true</code> value.  </p>
+<p> Flushing the stream will not flush its underlying encoder unless you explicitly call <a class="xref" href="system.io.binarywriter#System_IO_BinaryWriter_Flush_">Flush</a> or <code>Close</code>. Setting <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> to <code>true</code> means that data will be flushed from the buffer to the stream, but the encoder state will not be flushed. This allows the encoder to keep its state (partial characters) so that it can encode the next block of characters correctly. This scenario affects UTF8 and UTF7 where certain characters can only be encoded after the encoder receives the adjacent character or characters.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Dispose">
+    
+            <a id="System_IO_BinaryWriter_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose()</div>        
+          </div>
+    
+            <p>Releases all resources used by the current instance of the <see cref="T:System.IO.BinaryWriter"> class.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Dispose ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Dispose_System_Boolean_">
+    
+            <a id="System_IO_BinaryWriter_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.BinaryWriter"> and optionally releases the managed resources.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only unmanaged resources.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Flush">
+    
+            <a id="System_IO_BinaryWriter_Flush_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Flush()</div>        
+          </div>
+    
+            <p>Clears all buffers for the current writer and causes any buffered data to be written to the underlying device.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Flush ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>All derived classes should override <code>Flush</code> to ensure that all buffered data is sent to the stream.  </p>
+<p> Flushing the stream will not flush its underlying encoder unless you explicitly call <code>Flush</code> or <a class="xref" href="system.io.binarywriter#System_IO_BinaryWriter_Close_">Close</a>. Setting <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> to <code>true</code> means that data will be flushed from the buffer to the stream, but the encoder state will not be flushed. This allows the encoder to keep its state (partial characters) so that it can encode the next block of characters correctly. This scenario affects UTF8 and UTF7 where certain characters can only be encoded after the encoder receives the adjacent character or characters.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Seek_System_Int32_System_IO_SeekOrigin_">
+    
+            <a id="System_IO_BinaryWriter_Seek_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Seek(Int32,SeekOrigin)</div>        
+          </div>
+    
+            <p>Sets the position within the current stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual long Seek (int offset, System.IO.SeekOrigin origin);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>A byte offset relative to .</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>origin</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.seekorigin">SeekOrigin</a></div>
+                  </dd>
+                  </dl>
+                  <p>A field of <see cref="T:System.IO.SeekOrigin"> indicating the reference point from which the new position is to be obtained.<p>
+</see>
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>The position with the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example writes a series of byte values to a file. The example uses Seek to move to various locations in the file, and then writes marker bytes by using the <xref:system.io.binarywriter.write%2a> method.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#5](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#5)]
+    
+    
+        </xref:system.io.binarywriter.write%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Boolean_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Boolean)</div>        
+          </div>
+    
+            <p>Writes a one-byte <code>Boolean</code> value to the current stream, with 0 representing <code>false</code> and 1 representing <code>true</code>.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (bool value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <code>Boolean</code> value to write (0 or 1).</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Byte_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Byte)</div>        
+          </div>
+    
+            <p>Writes an unsigned byte to the current stream and advances the stream position by one byte.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (byte value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a></div>
+                  </dd>
+                  </dl>
+                  <p>The unsigned byte to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Because of data formatting conflicts, using this method with the following encodings is not recommended:  </p>
+<ul>
+<li><p>UTF-7  </p>
+</li>
+<li><p>ISO-2022-JP  </p>
+</li>
+<li><p>ISCII  </p>
+<p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to write binary data using memory as a backing store, and then verify that the data was written correctly.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWByte#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Byte___">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Byte[])</div>        
+          </div>
+    
+            <p>Writes a byte array to the underlying stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (byte[] buffer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>A byte array containing the data to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to write binary data using memory as a backing store, and then verify that the data was written correctly.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWBytes1#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Char_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Char)</div>        
+          </div>
+    
+            <p>Writes a Unicode character to the current stream and advances the current position of the stream in accordance with the <code>Encoding</code> used and the specific characters being written to the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (char ch);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>ch</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a></div>
+                  </dd>
+                  </dl>
+                  <p>The non-surrogate, Unicode character to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Because of data formatting conflicts, using this method with the following encodings is not recommended:  </p>
+<ul>
+<li><p>UTF-7  </p>
+</li>
+<li><p>ISO-2022-JP  </p>
+</li>
+<li><p>ISCII  </p>
+<p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.  </p>
+<p>Unicode surrogate characters must be written out as pairs together in the same call, not individually. If you require support for surrogate pairs in your application, consider using a character array and the <a class="xref" href="system.io.binarywriter#System_IO_BinaryWriter_Write_">Write</a> method overload.</p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWChar1#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Char___">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Char[])</div>        
+          </div>
+    
+            <p>Writes a character array to the current stream and advances the current position of the stream in accordance with the <code>Encoding</code> used and the specific characters being written to the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (char[] chars);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>chars</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>A character array containing the data to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWChars1#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Decimal_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Decimal)</div>        
+          </div>
+    
+            <p>Writes a decimal value to the current stream and advances the stream position by sixteen bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (decimal value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.decimal">Decimal</a></div>
+                  </dd>
+                  </dl>
+                  <p>The decimal value to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Double_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Double)</div>        
+          </div>
+    
+            <p>Writes an eight-byte floating-point value to the current stream and advances the stream position by eight bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (double value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </dd>
+                  </dl>
+                  <p>The eight-byte floating-point value to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write `Double` data to memory by using the <xref:system.io.binaryreader> and `BinaryWriter` classes on top of the <xref:system.io.memorystream> class. `MemoryStream` only reads and writes `Byte` data.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWDouble#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </xref:system.io.memorystream></xref:system.io.binaryreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Int16_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Int16)</div>        
+          </div>
+    
+            <p>Writes a two-byte signed integer to the current stream and advances the stream position by two bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (short value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int16">Int16</a></div>
+                  </dd>
+                  </dl>
+                  <p>The two-byte signed integer to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><code>BinaryWriter</code> stores this data type in little endian format.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Int32_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Int32)</div>        
+          </div>
+    
+            <p>Writes a four-byte signed integer to the current stream and advances the stream position by four bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (int value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The four-byte signed integer to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><code>BinaryWriter</code> stores this data type in little endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Int64_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Int64)</div>        
+          </div>
+    
+            <p>Writes an eight-byte signed integer to the current stream and advances the stream position by eight bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (long value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The eight-byte signed integer to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><code>BinaryWriter</code> stores this data type in little endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_SByte_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(SByte)</div>        
+          </div>
+    
+            <p>Writes a signed byte to the current stream and advances the stream position by one byte.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (sbyte value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.sbyte">SByte</a></div>
+                  </dd>
+                  </dl>
+                  <p>The signed byte to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Single_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Single)</div>        
+          </div>
+    
+            <p>Writes a four-byte floating-point value to the current stream and advances the stream position by four bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (float value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.single">Single</a></div>
+                  </dd>
+                  </dl>
+                  <p>The four-byte floating-point value to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><code>BinaryWriter</code> stores this data type in little endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_String_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(String)</div>        
+          </div>
+    
+            <p>Writes a length-prefixed string to this stream in the current encoding of the <see cref="T:System.IO.BinaryWriter">, and advances the current position of the stream in accordance with the encoding used and the specific characters being written to the stream.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (string value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The value to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Length-prefixed means that this method first writes the length of the string, in bytes, when encoded with the <a class="xref" href="system.io.binarywriter">BinaryWriter</a> instance&#39;s current encoding to the stream. This value is written as an unsigned integer. This method then writes that many bytes to the stream.  </p>
+<p> For example, the string â€œAâ€ has a length of 1, but when encoded with UTF-16; the length is 2 bytes, so the value written in the prefix is 2, and 3 bytes are written to the stream, including the prefix.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_UInt16_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(UInt16)</div>        
+          </div>
+    
+            <p>Writes a two-byte unsigned integer to the current stream and advances the stream position by two bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (ushort value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.uint16">UInt16</a></div>
+                  </dd>
+                  </dl>
+                  <p>The two-byte unsigned integer to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><code>BinaryWriter</code> stores this data type in little endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_UInt32_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(UInt32)</div>        
+          </div>
+    
+            <p>Writes a four-byte unsigned integer to the current stream and advances the stream position by four bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (uint value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.uint32">UInt32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The four-byte unsigned integer to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><code>BinaryWriter</code> stores this data type in little endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_UInt64_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(UInt64)</div>        
+          </div>
+    
+            <p>Writes an eight-byte unsigned integer to the current stream and advances the stream position by eight bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (ulong value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.uint64">UInt64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The eight-byte unsigned integer to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><code>BinaryWriter</code> stores this data type in little endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Byte___System_Int32_System_Int32_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Byte[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Writes a region of a byte array to the current stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (byte[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>A byte array containing the data to write.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The starting point in  at which to begin writing.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The number of bytes to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to write binary data using memory as a backing store, and then verify that the data was written correctly.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWBytes2#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_BinaryWriter_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Writes a section of a character array to the current stream, and advances the current position of the stream in accordance with the <code>Encoding</code> used and perhaps the specific characters being written to the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Write (char[] chars, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>chars</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>A character array containing the data to write.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The starting point in  from which to begin writing.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The number of characters to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWChars2#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryWriter_Write7BitEncodedInt_System_Int32_">
+    
+            <a id="System_IO_BinaryWriter_Write7BitEncodedInt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write7BitEncodedInt(Int32)</div>        
+          </div>
+    
+            <p>Writes a 32-bit integer in a compressed format.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void Write7BitEncodedInt (int value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The 32-bit integer to be written.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The integer of the  parameter is written out seven bits at a time, starting with the seven least-significant bits. The high bit of a byte indicates whether there are more bytes to be written after this one.  </p>
+<p> If  will fit in seven bits, it takes only one byte of space. If  will not fit in seven bits, the high bit is set on the first byte and written out.  is then shifted by seven bits and the next byte is written. This process is repeated until the entire integer has been written.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

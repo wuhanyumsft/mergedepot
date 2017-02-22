@@ -1,0 +1,2325 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="MemoryStream class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/System.IO/System.IO.MemoryStream.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO/System.IO.MemoryStream.yml">
+<meta name="APIName" content="System.IO.MemoryStream">
+<meta name="APIName" content="System.IO.MemoryStream..ctor">
+<meta name="APIName" content="System.IO.MemoryStream.CanRead">
+<meta name="APIName" content="System.IO.MemoryStream.CanSeek">
+<meta name="APIName" content="System.IO.MemoryStream.CanWrite">
+<meta name="APIName" content="System.IO.MemoryStream.Capacity">
+<meta name="APIName" content="System.IO.MemoryStream.CopyToAsync">
+<meta name="APIName" content="System.IO.MemoryStream.Dispose">
+<meta name="APIName" content="System.IO.MemoryStream.Flush">
+<meta name="APIName" content="System.IO.MemoryStream.FlushAsync">
+<meta name="APIName" content="System.IO.MemoryStream.GetBuffer">
+<meta name="APIName" content="System.IO.MemoryStream.Length">
+<meta name="APIName" content="System.IO.MemoryStream.Position">
+<meta name="APIName" content="System.IO.MemoryStream.Read">
+<meta name="APIName" content="System.IO.MemoryStream.ReadAsync">
+<meta name="APIName" content="System.IO.MemoryStream.ReadByte">
+<meta name="APIName" content="System.IO.MemoryStream.Seek">
+<meta name="APIName" content="System.IO.MemoryStream.SetLength">
+<meta name="APIName" content="System.IO.MemoryStream.ToArray">
+<meta name="APIName" content="System.IO.MemoryStream.TryGetBuffer">
+<meta name="APIName" content="System.IO.MemoryStream.Write">
+<meta name="APIName" content="System.IO.MemoryStream.WriteAsync">
+<meta name="APIName" content="System.IO.MemoryStream.WriteByte">
+<meta name="APIName" content="System.IO.MemoryStream.WriteTo">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="95240473-3994-43ce-da5a-b4226dfad39d">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Creates a stream whose backing store is memory.  
+ To browse the .NET Framework source code for this type, see the Reference Source.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.MemoryStream">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/newBase/system.io/system.io.memorystream" rel="canonical">
+    <title>MemoryStream class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_MemoryStream">
+      <span class="lang-csharp">MemoryStream</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Creates a stream whose backing store is memory.  </p>
+<p> To browse the .NET Framework source code for this type, see the <a href="http://referencesource.microsoft.com/#mscorlib/system/io/memorystream.cs#1a4dcb744a23ba6f">Reference Source</a>.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public class MemoryStream : System.IO.Stream</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject">MarshalByRefObject</a>
+          </div>
+        </li>
+        <li class="l2">
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream">System.IO.Stream</a>
+          </div>
+        </li>
+      <li class="l3">
+        <div class="xref">
+          <div class="lang-csharp">MemoryStream</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_BeginRead_System_Byte___System_Int32_System_Int32_System_AsyncCallback_System_Object_">BeginRead(Byte[],Int32,Int32,AsyncCallback,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_BeginWrite_System_Byte___System_Int32_System_Int32_System_AsyncCallback_System_Object_">BeginWrite(Byte[],Int32,Int32,AsyncCallback,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CanTimeout">CanTimeout</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_Close">Close()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CopyTo_System_IO_Stream_">CopyTo(Stream)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CopyTo_System_IO_Stream_System_Int32_">CopyTo(Stream,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CopyToAsync_System_IO_Stream_">CopyToAsync(Stream)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CopyToAsync_System_IO_Stream_System_Int32_">CopyToAsync(Stream,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_CreateWaitHandle">CreateWaitHandle()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_Dispose">Dispose()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_EndRead_System_IAsyncResult_">EndRead(IAsyncResult)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_EndWrite_System_IAsyncResult_">EndWrite(IAsyncResult)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_FlushAsync">FlushAsync()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_Null">Null</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_ObjectInvariant">ObjectInvariant()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_ReadAsync_System_Byte___System_Int32_System_Int32_">ReadAsync(Byte[],Int32,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_ReadTimeout">ReadTimeout</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_Synchronized_System_IO_Stream_">Synchronized(Stream)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_WriteAsync_System_Byte___System_Int32_System_Int32_">WriteAsync(Byte[],Int32,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.stream#System_IO_Stream_WriteTimeout">WriteTimeout</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_CreateObjRef_System_Type_">CreateObjRef(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_GetLifetimeService">GetLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_InitializeLifetimeService">InitializeLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_MemberwiseClone_System_Boolean_">MemberwiseClone(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <div class="NOTE"><h5>Note</h5><p> To view the .NET Framework source code for this type, see the <a href="http://referencesource.microsoft.com/#mscorlib/system/io/memorystream.cs#1a4dcb744a23ba6f">Reference Source</a>. You can browse through the source code online, download the reference for offline viewing, and step through the sources (including patches and updates) during debugging; see <a href="http://referencesource.microsoft.com/">instructions</a>.  </p>
+</div>
+<p> The current position of a stream is the position at which the next read or write operation could take place. The current position can be retrieved or set through the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Seek_">Seek</a> method. When a new instance of MemoryStream is created, the current position is set to zero.  </p>
+<div class="IMPORTANT"><h5>Important</h5><p> This type implements the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <a class="xref" href="../system/system.idisposable#System_IDisposable_Dispose_">Dispose</a> method in a <code>try</code>/<code>catch</code> block. To dispose of it indirectly, use a language construct such as <code>using</code> (in C#) or <code>Using</code> (in Visual Basic). For more information, see the â€œUsing an Object that Implements IDisposableâ€ section in the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface topic.  </p>
+</div>
+<p> Memory streams created with an unsigned byte array provide a non-resizable stream of the data. When using a byte array, you can neither append to nor shrink the stream, although you might be able to modify the existing contents depending on the parameters passed into the constructor. Empty memory streams are resizable, and can be written to and read from.  </p>
+<p> If a MemoryStream object is added to a ResX file or a .resources file, call the <a class="xref" href="../system.resources/system.resources.resourcemanager#System_Resources_ResourceManager_GetStream_">GetStream</a> method at runtime to retrieve it.  </p>
+<p> If a MemoryStream object is serialized to a resource file it will actually be serialized as an <a class="xref" href="system.io.unmanagedmemorystream">UnmanagedMemoryStream</a>. This behavior provides better performance, as well as the ability to get a pointer to the data directly, without having to go through <a class="xref" href="system.io.stream">Stream</a> methods.</p>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream__ctor">MemoryStream()</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.MemoryStream"> class with an expandable capacity initialized to zero.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream__ctor_System_Byte___">MemoryStream(Byte[])</a></div>
+          </td>
+            <td>
+            <p>Initializes a new non-resizable instance of the <see cref="T:System.IO.MemoryStream"> class based on the specified byte array.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream__ctor_System_Int32_">MemoryStream(Int32)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.MemoryStream"> class with an expandable capacity initialized as specified.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream__ctor_System_Byte___System_Boolean_">MemoryStream(Byte[],Boolean)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new non-resizable instance of the <see cref="T:System.IO.MemoryStream"> class based on the specified byte array with the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> property set as specified.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream__ctor_System_Byte___System_Int32_System_Int32_">MemoryStream(Byte[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new non-resizable instance of the <see cref="T:System.IO.MemoryStream"> class based on the specified region (index) of a byte array.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream__ctor_System_Byte___System_Int32_System_Int32_System_Boolean_">MemoryStream(Byte[],Int32,Int32,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new non-resizable instance of the <see cref="T:System.IO.MemoryStream"> class based on the specified region of a byte array, with the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> property set as specified.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream__ctor_System_Byte___System_Int32_System_Int32_System_Boolean_System_Boolean_">MemoryStream(Byte[],Int32,Int32,Boolean,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.MemoryStream"> class based on the specified region of a byte array, with the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> property set as specified, and the ability to call <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_GetBuffer_">GetBuffer</a> set as specified.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_CanRead">CanRead</a></div>
+          </td>
+            <td>
+            <p>Gets a value indicating whether the current stream supports reading.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_CanSeek">CanSeek</a></div>
+          </td>
+            <td>
+            <p>Gets a value indicating whether the current stream supports seeking.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_CanWrite">CanWrite</a></div>
+          </td>
+            <td>
+            <p>Gets a value indicating whether the current stream supports writing.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_Capacity">Capacity</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the number of bytes allocated for this stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_Length">Length</a></div>
+          </td>
+            <td>
+            <p>Gets the length of the stream in bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_Position">Position</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the current position within the stream.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_CopyToAsync_System_IO_Stream_System_Int32_System_Threading_CancellationToken_">CopyToAsync(Stream,Int32,CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously reads all the bytes from the current stream and writes them to another stream, using a specified buffer size and cancellation token.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.MemoryStream"> class and optionally releases the managed resources.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_Flush">Flush()</a></div>
+          </td>
+            <td>
+            <p>Overrides the <a class="xref" href="system.io.stream#System_IO_Stream_Flush_">Flush</a> method so that no action is performed.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_FlushAsync_System_Threading_CancellationToken_">FlushAsync(CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously clears all buffers for this stream, and monitors cancellation requests.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_GetBuffer">GetBuffer()</a></div>
+          </td>
+            <td>
+            <p>Returns the array of unsigned bytes from which this stream was created.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_Read_System_Byte___System_Int32_System_Int32_">Read(Byte[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads a block of bytes from the current stream and writes the data to a buffer.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_ReadAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">ReadAsync(Byte[],Int32,Int32,CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_ReadByte">ReadByte()</a></div>
+          </td>
+            <td>
+            <p>Reads a byte from the current stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_Seek_System_Int64_System_IO_SeekOrigin_">Seek(Int64,SeekOrigin)</a></div>
+          </td>
+            <td>
+            <p>Sets the position within the current stream to the specified value.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_SetLength_System_Int64_">SetLength(Int64)</a></div>
+          </td>
+            <td>
+            <p>Sets the length of the current stream to the specified value.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_ToArray">ToArray()</a></div>
+          </td>
+            <td>
+            <p>Writes the stream contents to a byte array, regardless of the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Position_">Position</a> property.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_TryGetBuffer_System_ArraySegment_System_Byte___">TryGetBuffer(ArraySegment&lt;Byte&gt;)</a></div>
+          </td>
+            <td>
+            <p>Returns the array of unsigned bytes from which this stream was created. The return value indicates whether the conversion succeeded.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_Write_System_Byte___System_Int32_System_Int32_">Write(Byte[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Writes a block of bytes to the current stream using data read from a buffer.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_WriteAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">WriteAsync(Byte[],Int32,Int32,CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Asynchronously writes a sequence of bytes to the current stream, advances the current position within this stream by the number of bytes written, and monitors cancellation requests.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_WriteByte_System_Byte_">WriteByte(Byte)</a></div>
+          </td>
+            <td>
+            <p>Writes a byte to the current stream at the current position.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_MemoryStream_WriteTo_System_IO_Stream_">WriteTo(Stream)</a></div>
+          </td>
+            <td>
+            <p>Writes the entire contents of this memory stream to another stream.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream__ctor">
+    
+            <a id="System_IO_MemoryStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MemoryStream()</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.MemoryStream"> class with an expandable capacity initialized to zero.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public MemoryStream ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanRead_">CanRead</a>, <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanSeek_">CanSeek</a>, and <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> properties are all set to <code>true</code>.  </p>
+<p> The capacity of the current stream automatically increases when you use the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_SetLength_">SetLength</a> method to set the length to a value larger than the capacity of the current stream.  </p>
+<p> This constructor exposes the underlying stream, which <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_GetBuffer_">GetBuffer</a> returns.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream__ctor_System_Byte___">
+    
+            <a id="System_IO_MemoryStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MemoryStream(Byte[])</div>        
+          </div>
+    
+            <p>Initializes a new non-resizable instance of the <see cref="T:System.IO.MemoryStream"> class based on the specified byte array.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public MemoryStream (byte[] buffer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The array of unsigned bytes from which to create the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanRead_">CanRead</a>, <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanSeek_">CanSeek</a>, and <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> properties are all set to <code>true</code>. <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Capacity_">Capacity</a> is set to the length of the specified byte array. The new stream can be written to, but is not resizable.  </p>
+<p> The length of the stream cannot be set to a value greater than the initial length of the specified byte array; however, the stream can be truncated (see <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_SetLength_">SetLength</a>).  </p>
+<p> This constructor does not expose the underlying stream. <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_GetBuffer_">GetBuffer</a> throws <a class="xref" href="../system/system.unauthorizedaccessexception">UnauthorizedAccessException</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream__ctor_System_Int32_">
+    
+            <a id="System_IO_MemoryStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MemoryStream(Int32)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.MemoryStream"> class with an expandable capacity initialized as specified.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public MemoryStream (int capacity);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>capacity</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The initial size of the internal array in bytes.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanRead_">CanRead</a>, <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanSeek_">CanSeek</a>, and <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> properties are all set to <code>true</code>.  </p>
+<p> The capacity automatically increases when you use the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_SetLength_">SetLength</a> method to set the length to a value larger than the capacity of the current stream. Except for a <code>MemoryStream</code> constructed with a byte[] parameter, write operations at the end of a <code>MemoryStream</code> expand the <code>MemoryStream</code>.  </p>
+<p> This constructor exposes the underlying stream that <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_GetBuffer_">GetBuffer</a> returns.</p>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.memorystream> class.  
+  
+ [!CODE [System.IO.MemoryStream#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#2)]
+    
+    
+        </xref:system.io.memorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream__ctor_System_Byte___System_Boolean_">
+    
+            <a id="System_IO_MemoryStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MemoryStream(Byte[],Boolean)</div>        
+          </div>
+    
+            <p>Initializes a new non-resizable instance of the <see cref="T:System.IO.MemoryStream"> class based on the specified byte array with the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> property set as specified.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public MemoryStream (byte[] buffer, bool writable);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The array of unsigned bytes from which to create this stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>writable</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>The setting of the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> property, which determines whether the stream supports writing.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanRead_">CanRead</a> and <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanSeek_">CanSeek</a> properties are both set to <code>true</code>. <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Capacity_">Capacity</a> is set to the length of the specified byte array.  </p>
+<p> The length of the stream cannot be set to a value greater than the initial length of the specified byte array; however, the stream can be truncated (see <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_SetLength_">SetLength</a>).  </p>
+<p> This constructor does not expose the underlying stream. <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_GetBuffer_">GetBuffer</a> throws <a class="xref" href="../system/system.unauthorizedaccessexception">UnauthorizedAccessException</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream__ctor_System_Byte___System_Int32_System_Int32_">
+    
+            <a id="System_IO_MemoryStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MemoryStream(Byte[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Initializes a new non-resizable instance of the <see cref="T:System.IO.MemoryStream"> class based on the specified region (index) of a byte array.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public MemoryStream (byte[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The array of unsigned bytes from which to create this stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The index into  at which the stream begins.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The length of the stream in bytes.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanRead_">CanRead</a>, <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanSeek_">CanSeek</a>, and <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> properties are all set to <code>true</code>, but the capacity cannot be changed. <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Capacity_">Capacity</a> is set to .  </p>
+<p> The length of the stream cannot be set to a value greater than the initial length of the specified byte array; however, the stream can be truncated (see <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_SetLength_">SetLength</a>).  </p>
+<p> This constructor does not expose the underlying stream. <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_GetBuffer_">GetBuffer</a> throws <a class="xref" href="../system/system.unauthorizedaccessexception">UnauthorizedAccessException</a>. However, you can write to the stream.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream__ctor_System_Byte___System_Int32_System_Int32_System_Boolean_">
+    
+            <a id="System_IO_MemoryStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MemoryStream(Byte[],Int32,Int32,Boolean)</div>        
+          </div>
+    
+            <p>Initializes a new non-resizable instance of the <see cref="T:System.IO.MemoryStream"> class based on the specified region of a byte array, with the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> property set as specified.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public MemoryStream (byte[] buffer, int index, int count, bool writable);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The array of unsigned bytes from which to create this stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The index in  at which the stream begins.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The length of the stream in bytes.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>writable</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>The setting of the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> property, which determines whether the stream supports writing.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanRead_">CanRead</a> and <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanSeek_">CanSeek</a> properties are both set to <code>true</code>. <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Capacity_">Capacity</a> is set to .  </p>
+<p> The length of the stream cannot be set to a value greater than the initial length of the specified byte array; however, the stream can be truncated (see <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_SetLength_">SetLength</a>).  </p>
+<p> This constructor does not expose the underlying stream. <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_GetBuffer_">GetBuffer</a> throws <a class="xref" href="../system/system.unauthorizedaccessexception">UnauthorizedAccessException</a>. However, you can write to the stream if  is <code>true</code>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream__ctor_System_Byte___System_Int32_System_Int32_System_Boolean_System_Boolean_">
+    
+            <a id="System_IO_MemoryStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MemoryStream(Byte[],Int32,Int32,Boolean,Boolean)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.MemoryStream"> class based on the specified region of a byte array, with the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> property set as specified, and the ability to call <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_GetBuffer_">GetBuffer</a> set as specified.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public MemoryStream (byte[] buffer, int index, int count, bool writable, bool publiclyVisible);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The array of unsigned bytes from which to create this stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The index into  at which the stream begins.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The length of the stream in bytes.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>writable</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>The setting of the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> property, which determines whether the stream supports writing.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>publiclyVisible</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to enable <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_GetBuffer_">GetBuffer</a>, which returns the unsigned byte array from which the stream was created; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanRead_">CanRead</a> and <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanSeek_">CanSeek</a> properties are both set to <code>true</code>. <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Capacity_">Capacity</a> is set to .  </p>
+<p> The new stream instance can be written to, but the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Capacity_">Capacity</a> of the underlying byte array cannot be changed. The length of the stream cannot be set to a value greater than the initial length of the specified byte array; however, the stream can be truncated (see <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_SetLength_">SetLength</a>).</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_CanRead">
+    
+            <a id="System_IO_MemoryStream_CanRead_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanRead</div>        
+          </div>
+    
+            <p>Gets a value indicating whether the current stream supports reading.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool CanRead { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the stream is open.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If a class derived from <a class="xref" href="system.io.stream">Stream</a> does not support reading, calls to the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Read_">Read</a> and <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_ReadByte_">ReadByte</a> methods throw a <a class="xref" href="../system/system.notsupportedexception">NotSupportedException</a>.  </p>
+<p> If the stream is closed, this property returns <code>false</code>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_CanSeek">
+    
+            <a id="System_IO_MemoryStream_CanSeek_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanSeek</div>        
+          </div>
+    
+            <p>Gets a value indicating whether the current stream supports seeking.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool CanSeek { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the stream is open.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If a class derived from <a class="xref" href="system.io.stream">Stream</a> does not support seeking, calls to <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Length_">Length</a>, <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_SetLength_">SetLength</a>, <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Position_">Position</a>, and <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Seek_">Seek</a> throw a <a class="xref" href="../system/system.notsupportedexception">NotSupportedException</a>.  </p>
+<p> If the stream is closed, this property returns <code>false</code>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_CanWrite">
+    
+            <a id="System_IO_MemoryStream_CanWrite_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CanWrite</div>        
+          </div>
+    
+            <p>Gets a value indicating whether the current stream supports writing.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool CanWrite { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the stream supports writing; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If a class derived from <a class="xref" href="system.io.stream">Stream</a> does not support writing, a call to <a class="xref" href="system.io.stream#System_IO_Stream_SetLength_">SetLength</a>, <a class="xref" href="system.io.stream#System_IO_Stream_Write_">Write</a>, or <a class="xref" href="system.io.stream#System_IO_Stream_WriteByte_">WriteByte</a> throws a <a class="xref" href="../system/system.notsupportedexception">NotSupportedException</a>.  </p>
+<p> If the stream is closed, this property returns <code>false</code>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_Capacity">
+    
+            <a id="System_IO_MemoryStream_Capacity_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Capacity</div>        
+          </div>
+    
+            <p>Gets or sets the number of bytes allocated for this stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int Capacity { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The length of the usable portion of the buffer for the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><code>Capacity</code> is the buffer length for system-provided byte arrays. <code>Capacity</code> cannot be set to a value less than the current length of the stream.</p>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.memorystream> class.  
+  
+ [!CODE [System.IO.MemoryStream#5](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#5)]
+    
+    
+        </xref:system.io.memorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_Length">
+    
+            <a id="System_IO_MemoryStream_Length_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Length</div>        
+          </div>
+    
+            <p>Gets the length of the stream in bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override long Length { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>The length of the stream in bytes.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.memorystream> class.  
+  
+ [!CODE [System.IO.MemoryStream#5](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#5)]
+    
+    
+        </xref:system.io.memorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_Position">
+    
+            <a id="System_IO_MemoryStream_Position_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Position</div>        
+          </div>
+    
+            <p>Gets or sets the current position within the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override long Position { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>The current position within the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.memorystream> class.  
+  
+ [!CODE [System.IO.MemoryStream#5](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#5)]
+    
+    
+        </xref:system.io.memorystream></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_CopyToAsync_System_IO_Stream_System_Int32_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_MemoryStream_CopyToAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyToAsync(Stream,Int32,CancellationToken)</div>        
+          </div>
+    
+            <p>Asynchronously reads all the bytes from the current stream and writes them to another stream, using a specified buffer size and cancellation token.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task CopyToAsync (System.IO.Stream destination, int bufferSize, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>destination</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">System.IO.Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to which the contents of the current stream will be copied.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>bufferSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The size, in bytes, of the buffer. This value must be greater than zero.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous copy operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_Dispose_System_Boolean_">
+    
+            <a id="System_IO_MemoryStream_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.MemoryStream"> class and optionally releases the managed resources.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only unmanaged resources.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method is called by the public <a class="xref" href="https://msdn.microsoft.com/en-us/library/s247t0kx(v=vs.110).aspx">Dispose</a> method and the <a class="xref" href="../system/system.object#System_Object_Finalize_">Finalize</a> method. <a class="xref" href="https://msdn.microsoft.com/en-us/library/s247t0kx(v=vs.110).aspx">Dispose</a> invokes the protected Dispose method with the  parameter set to <code>true</code>. <a class="xref" href="../system/system.object#System_Object_Finalize_">Finalize</a> invokes Dispose with  set to <code>false</code>.  </p>
+<p> When the  parameter is <code>true</code>, this method releases all resources held by any managed objects that this <a class="xref" href="system.io.memorystream">MemoryStream</a> references. This method invokes the <a class="xref" href="https://msdn.microsoft.com/en-us/library/s247t0kx(v=vs.110).aspx">Dispose</a> method of each referenced object.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_Flush">
+    
+            <a id="System_IO_MemoryStream_Flush_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Flush()</div>        
+          </div>
+    
+            <p>Overrides the <a class="xref" href="system.io.stream#System_IO_Stream_Flush_">Flush</a> method so that no action is performed.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Flush ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides the <a class="xref" href="system.io.stream#System_IO_Stream_Flush_">Flush</a> method.  </p>
+<p> Because any data written to a <a class="xref" href="system.io.memorystream">MemoryStream</a> object is written into RAM, this method is redundant.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_FlushAsync_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_MemoryStream_FlushAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FlushAsync(CancellationToken)</div>        
+          </div>
+    
+            <p>Asynchronously clears all buffers for this stream, and monitors cancellation requests.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task FlushAsync (System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous flush operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Because any data written to a <a class="xref" href="system.io.memorystream">MemoryStream</a> object is written into RAM, this method is redundant.  </p>
+<p> If the operation is canceled before it completes, the returned task contains the <a class="xref" href="../system.threading.tasks/system.threading.tasks.taskstatus">TaskStatus</a> value for the <a class="xref" href="../system.threading.tasks/system.threading.tasks.task#System_Threading_Tasks_Task_Status_">Status</a> property.  </p>
+<p> You can create a cancellation token by creating an instance of the <a class="xref" href="../system.threading/system.threading.cancellationtokensource">CancellationTokenSource</a> class and passing the <a class="xref" href="../system.threading/system.threading.cancellationtokensource#System_Threading_CancellationTokenSource_Token_">Token</a> property as the  parameter.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_GetBuffer">
+    
+            <a id="System_IO_MemoryStream_GetBuffer_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetBuffer()</div>        
+          </div>
+    
+            <p>Returns the array of unsigned bytes from which this stream was created.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual byte[] GetBuffer ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>The byte array from which this stream was created, or the underlying array if a byte array was not provided to the <see cref="T:System.IO.MemoryStream"> constructor during construction of the current instance.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Note that the buffer contains allocated bytes which might be unused. For example, if the string &quot;test&quot; is written into the <a class="xref" href="system.io.memorystream">MemoryStream</a> object, the length of the buffer returned from GetBuffer is 256, not 4, with 252 bytes unused. To obtain only the data in the buffer, use the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_ToArray_">ToArray</a> method; however, <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_ToArray_">ToArray</a> creates a copy of the data in memory.  </p>
+<p> The buffer can also be <code>null</code>.  </p>
+<p> To create a <code>MemoryStream</code> instance with a publicly visible buffer, use <a class="xref" href="system.io.memorystream#System_IO_MemoryStream__ctor_">MemoryStream</a>, <a href="assetId:///M:System.IO.MemoryStream.#ctor(System.Byte[],System.Int32,System.Int32,System.Boolean,System.Boolean)?qualifyHint=False&amp;autoUpgrade=False">MemoryStream(Byte[],â€‚Int32,â€‚Int32,â€‚Boolean,â€‚Boolean)</a>, or <a class="xref" href="system.io.memorystream#System_IO_MemoryStream__ctor_System_Int32_">MemoryStream(Int32)</a>. If the current stream is resizable, two calls to this method do not return the same array if the underlying byte array is resized between calls. For additional information, see <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Capacity_">Capacity</a>.  </p>
+<div class="NOTE"><h5>Note</h5><p> This method works when the memory stream is closed.</p>
+</div>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_Read_System_Byte___System_Int32_System_Int32_">
+    
+            <a id="System_IO_MemoryStream_Read_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Read(Byte[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Reads a block of bytes from the current stream and writes the data to a buffer.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int Read (byte[] buffer, int offset, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>When this method returns, contains the specified byte array with the values between  and ( +  - 1) replaced by the characters read from the current stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The zero-based byte offset in  at which to begin storing data from the current stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to read.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The total number of bytes written into the buffer. This can be less than the number of bytes requested if that number of bytes are not currently available, or zero if the end of the stream is reached before any bytes are read.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.stream#System_IO_Stream_Read_">Read</a>.  </p>
+<p> The  parameter gives the offset of the first byte in  to which data from the current stream is written. The  parameter gives the maximum number of bytes to read from the current stream. The returned value is the actual number of bytes read, or zero if the end of the stream is reached.  </p>
+<p> If the read operation is successful, the current position within the stream advances by the number of bytes read. If an exception occurs, the current position within the stream remains unchanged.  </p>
+<p> The <code>Read</code> method will return zero only if the end of the stream is reached. In all other cases, <code>Read</code> always reads at least one byte from the stream before returning. By definition, if no data is available from the stream upon a call to <code>Read</code>, the <code>Read</code> method returns zero (the end of the stream is reached automatically). An implementation is free to return fewer bytes than requested even if the end of the stream has not been reached.  </p>
+<p> Use <a class="xref" href="system.io.binaryreader">BinaryReader</a> for reading primitive data types.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> If the byte array specified in the  parameter is the underlying buffer returned by the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_GetBuffer_">GetBuffer</a> method, the array contents are overwritten, and no exception is thrown.</p>
+</div>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.memorystream> class.  
+  
+ [!CODE [System.IO.MemoryStream#7](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#7)]
+    
+    
+        </xref:system.io.memorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_ReadAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_MemoryStream_ReadAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadAsync(Byte[],Int32,Int32,CancellationToken)</div>        
+          </div>
+    
+            <p>Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task&lt;int&gt; ReadAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to write the data into.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The byte offset in  at which to begin writing data from the stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests. The default value is <a class="xref" href="../system.threading/system.threading.cancellationtoken#System_Threading_CancellationToken_None_">None</a>.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </div>
+                  <p>A task that represents the asynchronous read operation. The value of the  parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the stream has been reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If the operation is canceled before it completes, the returned task contains the <a class="xref" href="../system.threading.tasks/system.threading.tasks.taskstatus">TaskStatus</a> value for the <a class="xref" href="../system.threading.tasks/system.threading.tasks.task#System_Threading_Tasks_Task_Status_">Status</a> property.  </p>
+<p> You can create a cancellation token by creating an instance of the <a class="xref" href="../system.threading/system.threading.cancellationtokensource">CancellationTokenSource</a> class and passing the <a class="xref" href="../system.threading/system.threading.cancellationtokensource#System_Threading_CancellationTokenSource_Token_">Token</a> property as the  parameter.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_ReadByte">
+    
+            <a id="System_IO_MemoryStream_ReadByte_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadByte()</div>        
+          </div>
+    
+            <p>Reads a byte from the current stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int ReadByte ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The byte cast to a <a class="xref" href="../system/system.int32">Int32</a>, or -1 if the end of the stream has been reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.stream#System_IO_Stream_ReadByte_">ReadByte</a>.  </p>
+<p> If the read operation is successful, the current position within the stream is advanced by one byte. If an exception occurs, the current position within the stream is unchanged.</p>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.memorystream> class.  
+  
+ [!CODE [System.IO.MemoryStream#8](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#8)]
+    
+    
+        </xref:system.io.memorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_Seek_System_Int64_System_IO_SeekOrigin_">
+    
+            <a id="System_IO_MemoryStream_Seek_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Seek(Int64,SeekOrigin)</div>        
+          </div>
+    
+            <p>Sets the position within the current stream to the specified value.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override long Seek (long offset, System.IO.SeekOrigin loc);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The new position within the stream. This is relative to the  parameter, and can be positive or negative.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>loc</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.seekorigin">SeekOrigin</a></div>
+                  </dd>
+                  </dl>
+                  <p>A value of type <see cref="T:System.IO.SeekOrigin">, which acts as the seek reference point.<p>
+</see>
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>The new position within the stream, calculated by combining the initial reference point and the offset.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.stream#System_IO_Stream_Seek_">Seek</a>.  </p>
+<p> Seeking to any location beyond the length of the stream is supported.  </p>
+<p> Do not use the Seek method to determine the new position in the stream if the <a class="xref" href="system.io.memorystream">MemoryStream</a> was initialized with a non-zero offset. If you do, Seek will return an inaccurate value. Instead, use the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Position_">Position</a> property to get the new position of the stream.</p>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.memorystream> class.  
+  
+ [!CODE [System.IO.MemoryStream#6](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#6)]
+    
+    
+        </xref:system.io.memorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_SetLength_System_Int64_">
+    
+            <a id="System_IO_MemoryStream_SetLength_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetLength(Int64)</div>        
+          </div>
+    
+            <p>Sets the length of the current stream to the specified value.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void SetLength (long value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The value at which to set the length.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.stream#System_IO_Stream_SetLength_">SetLength</a>.  </p>
+<p> If the specified value is less than the current length of the stream, the stream is truncated. If after the truncation the current position within the stream is past the end of the stream, the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_ReadByte_">ReadByte</a> method returns -1, the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Read_">Read</a> method reads zero bytes into the provided byte array, and <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Write_">Write</a> and <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_WriteByte_">WriteByte</a> methods append specified bytes at the end of the stream, increasing its length. If the specified value is larger than the current capacity and the stream is resizable, the capacity is increased, and the current position within the stream is unchanged. If the length is increased, the contents of the stream between the old and the new length are initialized to zeros.  </p>
+<div class="NOTE"><h5>Note</h5><p> A <a class="xref" href="system.io.memorystream">MemoryStream</a> instance must support writing for this method to work. Use the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_CanWrite_">CanWrite</a> property to determine whether the current instance supports writing. For additional information, see <a class="xref" href="system.io.stream#System_IO_Stream_CanWrite_">CanWrite</a>.</p>
+</div>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_ToArray">
+    
+            <a id="System_IO_MemoryStream_ToArray_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ToArray()</div>        
+          </div>
+    
+            <p>Writes the stream contents to a byte array, regardless of the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_Position_">Position</a> property.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual byte[] ToArray ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>A new byte array.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method omits unused bytes in <a class="xref" href="system.io.memorystream">MemoryStream</a> from the array. To get the entire buffer, use the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream_GetBuffer_">GetBuffer</a> method.  </p>
+<p> This method returns a copy of the contents of the <a class="xref" href="system.io.memorystream">MemoryStream</a> as a byte array. If the current instance was constructed on a provided byte array, a copy of the section of the array to which this instance has access is returned. See the <a class="xref" href="system.io.memorystream#System_IO_MemoryStream__ctor_">MemoryStream</a> constructor for details.  </p>
+<div class="NOTE"><h5>Note</h5><p> This method works when the <a class="xref" href="system.io.memorystream">MemoryStream</a> is closed.</p>
+</div>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_TryGetBuffer_System_ArraySegment_System_Byte___">
+    
+            <a id="System_IO_MemoryStream_TryGetBuffer_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TryGetBuffer(ArraySegment&lt;Byte&gt;)</div>        
+          </div>
+    
+            <p>Returns the array of unsigned bytes from which this stream was created. The return value indicates whether the conversion succeeded.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool TryGetBuffer (out ArraySegment&lt;byte&gt; buffer);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.arraysegment-1">ArraySegment</a>&lt;<a class="xref" href="../system/system.byte">Byte</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>The byte array segment from which this stream was created.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the conversion was successful; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_Write_System_Byte___System_Int32_System_Int32_">
+    
+            <a id="System_IO_MemoryStream_Write_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Write(Byte[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Writes a block of bytes to the current stream using data read from a buffer.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Write (byte[] buffer, int offset, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to write data from.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The zero-based byte offset in  at which to begin copying bytes to the current stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.stream#System_IO_Stream_Write_">Write</a>.  </p>
+<p> The  parameter gives the offset of the first byte in  to write from, and the  parameter gives the number of bytes to write. If the write operation is successful, the current position within the stream is advanced by the number of bytes written. If an exception occurs, the current position within the stream is unchanged.  </p>
+<p> Except for a <code>MemoryStream</code> constructed with a byte[] parameter, write operations at the end of a <code>MemoryStream</code> expand the <code>MemoryStream</code>.</p>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.memorystream> class.  
+  
+ [!CODE [System.IO.MemoryStream#3](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#3)]
+    
+    
+        </xref:system.io.memorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_WriteAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_MemoryStream_WriteAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteAsync(Byte[],Int32,Int32,CancellationToken)</div>        
+          </div>
+    
+            <p>Asynchronously writes a sequence of bytes to the current stream, advances the current position within this stream by the number of bytes written, and monitors cancellation requests.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task WriteAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to write data from.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The zero-based byte offset in  from which to begin copying bytes to the stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of bytes to write.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests. The default value is <a class="xref" href="../system.threading/system.threading.cancellationtoken#System_Threading_CancellationToken_None_">None</a>.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>A task that represents the asynchronous write operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If the operation is canceled before it completes, the returned task contains the <a class="xref" href="../system.threading.tasks/system.threading.tasks.taskstatus">TaskStatus</a> value for the <a class="xref" href="../system.threading.tasks/system.threading.tasks.task#System_Threading_Tasks_Task_Status_">Status</a> property.  </p>
+<p> You can create a cancellation token by creating an instance of the <a class="xref" href="../system.threading/system.threading.cancellationtokensource">CancellationTokenSource</a> class and passing the <a class="xref" href="../system.threading/system.threading.cancellationtokensource#System_Threading_CancellationTokenSource_Token_">Token</a> property as the  parameter.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_WriteByte_System_Byte_">
+    
+            <a id="System_IO_MemoryStream_WriteByte_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteByte(Byte)</div>        
+          </div>
+    
+            <p>Writes a byte to the current stream at the current position.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void WriteByte (byte value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a></div>
+                  </dd>
+                  </dl>
+                  <p>The byte to write.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.stream#System_IO_Stream_WriteByte_">WriteByte</a>.  </p>
+<p> Except for a <code>MemoryStream</code> constructed with a byte[] parameter, write operations at the end of a <code>MemoryStream</code> expand the <code>MemoryStream</code>.</p>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.memorystream> class.  
+  
+ [!CODE [System.IO.MemoryStream#4](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#4)]
+    
+    
+        </xref:system.io.memorystream></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_MemoryStream_WriteTo_System_IO_Stream_">
+    
+            <a id="System_IO_MemoryStream_WriteTo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WriteTo(Stream)</div>        
+          </div>
+    
+            <p>Writes the entire contents of this memory stream to another stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void WriteTo (System.IO.Stream stream);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">System.IO.Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to write this memory stream to.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>When the current stream is open, this method is equivalent to calling <a class="xref" href="system.io.stream#System_IO_Stream_Write_">Write</a> on the underlying buffer of this stream.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.MemoryStream#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.MemoryStream#1)]
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>
