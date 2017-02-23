@@ -37,14 +37,11 @@ echo "Start to call merge depot tool"
 echo "Finish calling merge depot tool"
 
 echo "Start to push to git repository"
+git config --global core.safecrlf false
+git status
 git add *
+git status
 git commit -m "update"
+git status
 git push origin master
 echo "Finish pushing to git repository"
-
-if ($LASTEXITCODE -ne 0)
-{
-  exit WriteErrorAndExit("Merge Depot failed and won't do build and publish for merge depot") ($LASTEXITCODE)
-}
-
-exit $LASTEXITCODE
