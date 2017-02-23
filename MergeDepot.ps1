@@ -1,4 +1,4 @@
-echo "Hello World." | timestamp
+echo "Hello World."
 
 # Add specific step for azure
 # Download Azure Transform tool
@@ -15,9 +15,9 @@ $MergeDepotToolSource = "$mergeDepotToolContainerUrl/MergeDepotTool.zip"
 $MergeDepotToolDestination = "$currentFolder\.optemp\MergeDepotTool.zip"
 
 Get-ChildItem
-echo 'Start Download!' | timestamp
+echo 'Start Download!'
 Invoke-WebRequest -Uri $MergeDepotToolSource -OutFile $MergeDepotToolDestination
-echo 'Download Success!' | timestamp
+echo 'Download Success!'
 Get-ChildItem
 
 $MergeDepotToolUnzipFolder = "$currentFolder\.optemp\MergeDepotTool"
@@ -27,7 +27,7 @@ if((Test-Path "$MergeDepotToolUnzipFolder"))
 }
 
 [System.IO.Compression.ZipFile]::ExtractToDirectory($MergeDepotToolDestination, $MergeDepotToolUnzipFolder)
-echo 'Extract Success!' | timestamp
+echo 'Extract Success!' 
 Get-ChildItem
 $MergeDepotTool = "$MergeDepotToolUnzipFolder\MergeDepot.exe"
 
@@ -39,7 +39,7 @@ echo "Start to call merge depot tool"
 &"$MergeDepotTool" "$currentFolder\mergedepot"
 echo "Finish calling merge depot tool"
 
-echo "Start to push to git repository" | timestamp
+echo "Start to push to git repository"
 git config --global core.safecrlf false
 git status
 git add *
@@ -47,4 +47,4 @@ git status
 git commit -m "update"
 git status
 git push origin master 2>&1 | Write-Host
-echo "Finish pushing to git repository" | timestamp
+echo "Finish pushing to git repository"
