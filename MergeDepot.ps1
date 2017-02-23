@@ -35,7 +35,7 @@ Try
 {
     git checkout master
 }
-Catch
+Catch [System.Management.Automation.RemoteException]
 {
     # swallow the exception
 }
