@@ -31,8 +31,15 @@ echo 'Extract Success!'
 Get-ChildItem
 $MergeDepotTool = "$MergeDepotToolUnzipFolder\MergeDepot.exe"
 
-git status
-git checkout master
+Try
+{
+    git checkout master
+}
+Catch
+{
+    # swallow the exception
+}
+
 git status
 # Call azure transform for every docset
 echo "Start to call merge depot tool"
