@@ -30,7 +30,7 @@
 <meta name="site_name" content="Docs">
 <meta name="search.ms_product" content="Azure">
 <meta name="depot_name" content="Azure.azuredotnet">
-<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/e94ef2bde5332ae6306299662a592890e0d555d2/docs-ref-autogen/Data/KeyVault/Microsoft.Azure.KeyVault.IKeyVaultClient.yml">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/eb543dd0ffc361b148acb372d32cb0b707e2ec28/docs-ref-autogen/Data/KeyVault/Microsoft.Azure.KeyVault.IKeyVaultClient.yml">
 <meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Data/KeyVault/Microsoft.Azure.KeyVault.IKeyVaultClient.yml">
 <meta name="APIName" content="Microsoft.Azure.KeyVault.IKeyVaultClient">
 <meta name="APIName" content="Microsoft.Azure.KeyVault.IKeyVaultClient.GetPendingCertificateSigningRequestWithHttpMessagesAsync">
@@ -103,7 +103,7 @@
 <meta name="APILocation" content="Microsoft.Azure.KeyVault.dll">
 <meta name="TopicType" content="apiref">
 <meta name="APIType" content="Assembly">
-<meta name="updated_at" content="2017-02-13 06:19 AM">
+<meta name="updated_at" content="2017-02-22 06:29 PM">
 <meta name="document_id" content="fb1f1fd7-058f-dec3-c6eb-9e8ce8155e27">
 <meta name="pagetype" content="Reference">
 <meta name="description" content="Client class to perform cryptographic key operations and vault
@@ -395,7 +395,7 @@ operations against the Key Vault service.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_ApiVersion">ApiVersion</a></div>
           </td>
             <td>
-            <p>Client Api Version.</p>
+            <p>Client API version.</p>
 
             </td>
         </tr>
@@ -425,8 +425,8 @@ operations against the Key Vault service.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GenerateClientRequestId">GenerateClientRequestId</a></div>
           </td>
             <td>
-            <p>When set to true a unique x-ms-client-request-id value is
-generated and included in each request. Default is true.</p>
+            <p>When set to true a unique x-ms-client-request-id value is generated
+and included in each request. Default is true.</p>
 
             </td>
         </tr>
@@ -473,8 +473,8 @@ client.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_CreateCertificateWithHttpMessagesAsync_System_String_System_String_Microsoft_Azure_KeyVault_Models_CertificatePolicy_Microsoft_Azure_KeyVault_Models_CertificateAttributes_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">CreateCertificateWithHttpMessagesAsync(String, String, CertificatePolicy, CertificateAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Creates a new certificate version. If this is the first version,
-the certificate resource is created.</p>
+            <p>Creates a new certificate. If this is the first version, the
+certificate resource is created.</p>
 
             </td>
         </tr>
@@ -484,7 +484,11 @@ the certificate resource is created.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_CreateKeyWithHttpMessagesAsync_System_String_System_String_System_String_System_Nullable_System_Int32__System_Collections_Generic_IList_System_String__Microsoft_Azure_KeyVault_Models_KeyAttributes_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">CreateKeyWithHttpMessagesAsync(String, String, String, Nullable(Of Int32), IList(Of String), KeyAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Creates a new, named, key in the specified vault.</p>
+            <p>Creates a new key, stores it, then returns key parameters and
+attributes to the client. The create key operation can be used to
+create any key type in Azure Key Vault. If the named key already
+exists, Azure Key Vault creates a new version of the key.
+Authorization: Requires the keys/create permission.</p>
 
             </td>
         </tr>
@@ -494,7 +498,7 @@ the certificate resource is created.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_DecryptWithHttpMessagesAsync_System_String_System_String_System_String_System_String_System_Byte___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">DecryptWithHttpMessagesAsync(String, String, String, String, Byte(), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Decrypts a single block of encrypted data</p>
+            <p>Decrypts a single block of encrypted data.</p>
 
             </td>
         </tr>
@@ -504,7 +508,7 @@ the certificate resource is created.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_DeleteCertificateContactsWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">DeleteCertificateContactsWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Deletes the certificate contacts for the specified vault.</p>
+            <p>Deletes the certificate contacts for a specified key vault.</p>
 
             </td>
         </tr>
@@ -524,7 +528,7 @@ the certificate resource is created.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_DeleteCertificateOperationWithHttpMessagesAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">DeleteCertificateOperationWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Deletes the certificate operation.</p>
+            <p>Deletes the operation for a specified certificate.</p>
 
             </td>
         </tr>
@@ -534,7 +538,7 @@ the certificate resource is created.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_DeleteCertificateWithHttpMessagesAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">DeleteCertificateWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Deletes a certificate from the specified vault.</p>
+            <p>Deletes a certificate from a specified key vault.</p>
 
             </td>
         </tr>
@@ -544,7 +548,12 @@ the certificate resource is created.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_DeleteKeyWithHttpMessagesAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">DeleteKeyWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Deletes the specified key</p>
+            <p>Deletes a key of any type from storage in Azure Key Vault. The
+delete key operation cannot be used to remove individual versions
+of a key. This operation removes the cryptographic material
+associated with the key, which means the key is not usable for
+Sign/Verify, Wrap/Unwrap or Encrypt/Decrypt operations.
+Authorization: Requires the keys/delete permission.</p>
 
             </td>
         </tr>
@@ -554,7 +563,7 @@ the certificate resource is created.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_DeleteSecretWithHttpMessagesAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">DeleteSecretWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Deletes a secret from the specified vault.</p>
+            <p>Deletes a secret from a specified key vault.</p>
 
             </td>
         </tr>
@@ -565,7 +574,7 @@ the certificate resource is created.</p>
           </td>
             <td>
             <p>Encrypts an arbitrary sequence of bytes using an encryption key
-that is stored in Azure Key Vault.</p>
+that is stored in a key vault.</p>
 
             </td>
         </tr>
@@ -575,7 +584,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateContactsWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetCertificateContactsWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Gets the certificate contacts for the specified vault.</p>
+            <p>Lists the certificate contacts for a specified key vault.</p>
 
             </td>
         </tr>
@@ -585,7 +594,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateIssuersNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetCertificateIssuersNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>List certificate issuers for the specified vault.</p>
+            <p>List certificate issuers for a specified key vault.</p>
 
             </td>
         </tr>
@@ -595,7 +604,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateIssuersWithHttpMessagesAsync_System_String_System_Nullable_System_Int32__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetCertificateIssuersWithHttpMessagesAsync(String, Nullable(Of Int32), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>List certificate issuers for the specified vault.</p>
+            <p>List certificate issuers for a specified key vault.</p>
 
             </td>
         </tr>
@@ -605,7 +614,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateIssuerWithHttpMessagesAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetCertificateIssuerWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Gets the specified certificate issuer.</p>
+            <p>Lists the specified certificate issuer.</p>
 
             </td>
         </tr>
@@ -615,7 +624,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateOperationWithHttpMessagesAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetCertificateOperationWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Gets the certificate operation response.</p>
+            <p>Gets the operation associated with a specified certificate.</p>
 
             </td>
         </tr>
@@ -625,7 +634,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificatePolicyWithHttpMessagesAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetCertificatePolicyWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Gets the policy for a certificate.</p>
+            <p>Lists the policy for a certificate.</p>
 
             </td>
         </tr>
@@ -635,7 +644,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificatesNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetCertificatesNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>List certificates in the specified vault</p>
+            <p>List certificates in a specified key vault</p>
 
             </td>
         </tr>
@@ -645,7 +654,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificatesWithHttpMessagesAsync_System_String_System_Nullable_System_Int32__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetCertificatesWithHttpMessagesAsync(String, Nullable(Of Int32), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>List certificates in the specified vault</p>
+            <p>List certificates in a specified key vault</p>
 
             </td>
         </tr>
@@ -675,7 +684,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateWithHttpMessagesAsync_System_String_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetCertificateWithHttpMessagesAsync(String, String, String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Gets a Certificate.</p>
+            <p>Gets information about a specified certificate.</p>
 
             </td>
         </tr>
@@ -685,7 +694,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetKeysNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetKeysNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>List keys in the specified vault</p>
+            <p>List keys in the specified vault.</p>
 
             </td>
         </tr>
@@ -695,7 +704,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetKeysWithHttpMessagesAsync_System_String_System_Nullable_System_Int32__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetKeysWithHttpMessagesAsync(String, Nullable(Of Int32), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>List keys in the specified vault</p>
+            <p>List keys in the specified vault.</p>
 
             </td>
         </tr>
@@ -705,7 +714,9 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetKeyVersionsNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetKeyVersionsNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>List the versions of the specified key</p>
+            <p>Retrieves a list of individual key versions with the same key name.
+The full key identifier, attributes, and tags are provided in the
+response. Authorization: Requires the keys/list permission.</p>
 
             </td>
         </tr>
@@ -715,7 +726,9 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetKeyVersionsWithHttpMessagesAsync_System_String_System_String_System_Nullable_System_Int32__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetKeyVersionsWithHttpMessagesAsync(String, String, Nullable(Of Int32), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>List the versions of the specified key</p>
+            <p>Retrieves a list of individual key versions with the same key name.
+The full key identifier, attributes, and tags are provided in the
+response. Authorization: Requires the keys/list permission.</p>
 
             </td>
         </tr>
@@ -725,7 +738,10 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetKeyWithHttpMessagesAsync_System_String_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetKeyWithHttpMessagesAsync(String, String, String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Retrieves the public portion of a key plus its attributes</p>
+            <p>Gets the public part of a stored key. The get key operation is
+applicable to all key types. If the requested key is symmetric,
+then no key material is released in the response. Authorization:
+Requires the keys/get permission.</p>
 
             </td>
         </tr>
@@ -745,7 +761,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetSecretsNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetSecretsNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>List secrets in the specified vault</p>
+            <p>List secrets in a specified key vault</p>
 
             </td>
         </tr>
@@ -755,7 +771,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetSecretsWithHttpMessagesAsync_System_String_System_Nullable_System_Int32__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetSecretsWithHttpMessagesAsync(String, Nullable(Of Int32), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>List secrets in the specified vault</p>
+            <p>List secrets in a specified key vault</p>
 
             </td>
         </tr>
@@ -765,7 +781,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetSecretVersionsNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetSecretVersionsNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>List the versions of the specified secret</p>
+            <p>List the versions of the specified secret.</p>
 
             </td>
         </tr>
@@ -775,7 +791,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetSecretVersionsWithHttpMessagesAsync_System_String_System_String_System_Nullable_System_Int32__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetSecretVersionsWithHttpMessagesAsync(String, String, Nullable(Of Int32), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>List the versions of the specified secret</p>
+            <p>List the versions of the specified secret.</p>
 
             </td>
         </tr>
@@ -785,7 +801,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_GetSecretWithHttpMessagesAsync_System_String_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetSecretWithHttpMessagesAsync(String, String, String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Gets a secret.</p>
+            <p>Get a specified secret from a given key vault.</p>
 
             </td>
         </tr>
@@ -795,7 +811,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_ImportCertificateWithHttpMessagesAsync_System_String_System_String_System_String_System_String_Microsoft_Azure_KeyVault_Models_CertificatePolicy_Microsoft_Azure_KeyVault_Models_CertificateAttributes_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ImportCertificateWithHttpMessagesAsync(String, String, String, String, CertificatePolicy, CertificateAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Imports a certificate into the specified vault</p>
+            <p>Imports a certificate into a specified key vault.</p>
 
             </td>
         </tr>
@@ -805,7 +821,11 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_ImportKeyWithHttpMessagesAsync_System_String_System_String_Microsoft_Azure_KeyVault_WebKey_JsonWebKey_System_Nullable_System_Boolean__Microsoft_Azure_KeyVault_Models_KeyAttributes_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ImportKeyWithHttpMessagesAsync(String, String, JsonWebKey, Nullable(Of Boolean), KeyAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Imports a key into the specified vault</p>
+            <p>Imports an externally created key, stores it, and returns key
+parameters and attributes to the client. The import key operation
+may be used to import any key type into an Azure Key Vault. If the
+named key already exists, Azure Key Vault creates a new version of
+the key. Authorization: requires the keys/import permission.</p>
 
             </td>
         </tr>
@@ -826,7 +846,7 @@ existing on the server.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_RestoreKeyWithHttpMessagesAsync_System_String_System_Byte___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">RestoreKeyWithHttpMessagesAsync(String, Byte(), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Restores the backup key in to a vault</p>
+            <p>Restores a backed up key to a vault.</p>
 
             </td>
         </tr>
@@ -836,7 +856,7 @@ existing on the server.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_SetCertificateContactsWithHttpMessagesAsync_System_String_Microsoft_Azure_KeyVault_Models_Contacts_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">SetCertificateContactsWithHttpMessagesAsync(String, Contacts, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Sets the certificate contacts for the specified vault.</p>
+            <p>Sets the certificate contacts for the specified key vault.</p>
 
             </td>
         </tr>
@@ -856,7 +876,7 @@ existing on the server.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_SetSecretWithHttpMessagesAsync_System_String_System_String_System_String_System_Collections_Generic_IDictionary_System_String_System_String__System_String_Microsoft_Azure_KeyVault_Models_SecretAttributes_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">SetSecretWithHttpMessagesAsync(String, String, String, IDictionary(Of String, String), String, SecretAttributes, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Sets a secret in the specified vault.</p>
+            <p>Sets a secret in a specified key vault.</p>
 
             </td>
         </tr>
@@ -866,8 +886,7 @@ existing on the server.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_SignWithHttpMessagesAsync_System_String_System_String_System_String_System_String_System_Byte___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">SignWithHttpMessagesAsync(String, String, String, String, Byte(), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Creates a signature from a digest using the specified key in the
-vault</p>
+            <p>Creates a signature from a digest using the specified key.</p>
 
             </td>
         </tr>
@@ -877,8 +896,8 @@ vault</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_UnwrapKeyWithHttpMessagesAsync_System_String_System_String_System_String_System_String_System_Byte___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">UnwrapKeyWithHttpMessagesAsync(String, String, String, String, Byte(), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Unwraps a symmetric key using the specified key in the vault that
-has initially been used for wrapping the key.</p>
+            <p>Unwraps a symmetric key using the specified key that was initially
+used for wrapping that key.</p>
 
             </td>
         </tr>
@@ -908,8 +927,8 @@ has initially been used for wrapping the key.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_UpdateCertificatePolicyWithHttpMessagesAsync_System_String_System_String_Microsoft_Azure_KeyVault_Models_CertificatePolicy_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">UpdateCertificatePolicyWithHttpMessagesAsync(String, String, CertificatePolicy, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Updates the policy for a certificate. Set appropriate members in
-the certificatePolicy that must be updated. Leave others as null.</p>
+            <p>Updates the policy for a certificate. Set specified members in the
+certificate policy. Leave others as null.</p>
 
             </td>
         </tr>
@@ -919,7 +938,8 @@ the certificatePolicy that must be updated. Leave others as null.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_UpdateCertificateWithHttpMessagesAsync_System_String_System_String_System_String_Microsoft_Azure_KeyVault_Models_CertificatePolicy_Microsoft_Azure_KeyVault_Models_CertificateAttributes_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">UpdateCertificateWithHttpMessagesAsync(String, String, String, CertificatePolicy, CertificateAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Updates the attributes associated with the specified certificate</p>
+            <p>Updates the specified attributes associated with the given
+certificate.</p>
 
             </td>
         </tr>
@@ -929,7 +949,12 @@ the certificatePolicy that must be updated. Leave others as null.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_UpdateKeyWithHttpMessagesAsync_System_String_System_String_System_String_System_Collections_Generic_IList_System_String__Microsoft_Azure_KeyVault_Models_KeyAttributes_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">UpdateKeyWithHttpMessagesAsync(String, String, String, IList(Of String), KeyAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Updates the Key Attributes associated with the specified key</p>
+            <p>The update key operation changes specified attributes of a stored
+key and can be applied to any key type and key version stored in
+Azure Key Vault. The cryptographic material of a key itself cannot
+be changed. In order to perform this operation, the key must
+already exist in the Key Vault. Authorization: requires the
+keys/update permission.</p>
 
             </td>
         </tr>
@@ -939,7 +964,8 @@ the certificatePolicy that must be updated. Leave others as null.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_UpdateSecretWithHttpMessagesAsync_System_String_System_String_System_String_System_String_Microsoft_Azure_KeyVault_Models_SecretAttributes_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">UpdateSecretWithHttpMessagesAsync(String, String, String, String, SecretAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Updates the attributes associated with the specified secret</p>
+            <p>Updates the attributes associated with a specified secret in a
+given key vault.</p>
 
             </td>
         </tr>
@@ -949,7 +975,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_VerifyWithHttpMessagesAsync_System_String_System_String_System_String_System_String_System_Byte___System_Byte___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">VerifyWithHttpMessagesAsync(String, String, String, String, Byte(), Byte(), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Verifies a signature using the specified key</p>
+            <p>Verifies a signature using a specified key.</p>
 
             </td>
         </tr>
@@ -959,7 +985,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
             <div class="lang-vb"><a href="#Microsoft_Azure_KeyVault_IKeyVaultClient_WrapKeyWithHttpMessagesAsync_System_String_System_String_System_String_System_String_System_Byte___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">WrapKeyWithHttpMessagesAsync(String, String, String, String, Byte(), Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
             <td>
-            <p>Wraps a symmetric key using the specified key</p>
+            <p>Wraps a symmetric key using a specified key.</p>
 
             </td>
         </tr>
@@ -1024,7 +1050,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
             <div class="lang-vb">ApiVersion</div>        
           </div>
     
-            <p>Client Api Version.</p>
+            <p>Client API version.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">string ApiVersion { get; }</code><code class="vb lang-vb">ReadOnly Property ApiVersion As String</code></pre>
@@ -1141,8 +1167,8 @@ the certificatePolicy that must be updated. Leave others as null.</p>
             <div class="lang-vb">GenerateClientRequestId</div>        
           </div>
     
-            <p>When set to true a unique x-ms-client-request-id value is
-generated and included in each request. Default is true.</p>
+            <p>When set to true a unique x-ms-client-request-id value is generated
+and included in each request. Default is true.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">bool ? GenerateClientRequestId { get; set; }</code><code class="vb lang-vb">Property GenerateClientRequestId As Boolean?</code></pre>
@@ -1261,7 +1287,7 @@ Operations. Default value is 30.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_BackupKeyWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L252" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L276" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -1286,7 +1312,7 @@ client.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -1297,7 +1323,7 @@ client.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>The name of the key.</p>
 
                 </li>
                 <li>
@@ -1348,7 +1374,7 @@ client.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_CreateCertificateWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L782" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L805" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -1356,8 +1382,8 @@ client.</p>
             <div class="lang-vb">CreateCertificateWithHttpMessagesAsync(String, String, CertificatePolicy, CertificateAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Creates a new certificate version. If this is the first version,
-the certificate resource is created.</p>
+            <p>Creates a new certificate. If this is the first version, the
+certificate resource is created.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;CertificateOperation&gt;&gt; CreateCertificateWithHttpMessagesAsync(string vaultBaseUrl, string certificateName, CertificatePolicy certificatePolicy = null, CertificateAttributes certificateAttributes = null, IDictionary&lt;string, string&gt; tags = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function CreateCertificateWithHttpMessagesAsync(vaultBaseUrl As String, certificateName As String, certificatePolicy As CertificatePolicy = Nothing, certificateAttributes As CertificateAttributes = Nothing, tags As IDictionary(Of String, String) = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of CertificateOperation))</code></pre>
@@ -1373,7 +1399,7 @@ the certificate resource is created.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -1384,7 +1410,7 @@ the certificate resource is created.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the certificate</p>
+                  <p>The name of the certificate.</p>
 
                 </li>
                 <li>
@@ -1395,7 +1421,7 @@ the certificate resource is created.</p>
                     <div class="lang-vb"><a class="xref" href="microsoft.azure.keyvault.models.certificatepolicy">CertificatePolicy</a></div>
                   </dd>
                   </dl>
-                  <p>The management policy for the certificate</p>
+                  <p>The management policy for the certificate.</p>
 
                 </li>
                 <li>
@@ -1406,7 +1432,7 @@ the certificate resource is created.</p>
                     <div class="lang-vb"><a class="xref" href="microsoft.azure.keyvault.models.certificateattributes">CertificateAttributes</a></div>
                   </dd>
                   </dl>
-                  <p>The attributes of the certificate (optional)</p>
+                  <p>The attributes of the certificate (optional).</p>
 
                 </li>
                 <li>
@@ -1417,7 +1443,7 @@ the certificate resource is created.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/s4ys34ea(v=vs.110).aspx">IDictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>)</div>
                   </dd>
                   </dl>
-                  <p>Application-specific metadata in the form of key-value pairs</p>
+                  <p>Application specific metadata in the form of key-value pairs.</p>
 
                 </li>
                 <li>
@@ -1468,7 +1494,7 @@ the certificate resource is created.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_CreateKeyWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L100" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L105" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -1476,7 +1502,11 @@ the certificate resource is created.</p>
             <div class="lang-vb">CreateKeyWithHttpMessagesAsync(String, String, String, Nullable(Of Int32), IList(Of String), KeyAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Creates a new, named, key in the specified vault.</p>
+            <p>Creates a new key, stores it, then returns key parameters and
+attributes to the client. The create key operation can be used to
+create any key type in Azure Key Vault. If the named key already
+exists, Azure Key Vault creates a new version of the key.
+Authorization: Requires the keys/create permission.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;KeyBundle&gt;&gt; CreateKeyWithHttpMessagesAsync(string vaultBaseUrl, string keyName, string kty, int ? keySize = null, IList&lt;string&gt; keyOps = null, KeyAttributes keyAttributes = null, IDictionary&lt;string, string&gt; tags = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function CreateKeyWithHttpMessagesAsync(vaultBaseUrl As String, keyName As String, kty As String, keySize As Integer? = Nothing, keyOps As IList(Of String) = Nothing, keyAttributes As KeyAttributes = Nothing, tags As IDictionary(Of String, String) = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of KeyBundle))</code></pre>
@@ -1492,7 +1522,7 @@ the certificate resource is created.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -1503,7 +1533,8 @@ the certificate resource is created.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>The name for the new key. The system will generate the version name
+for the new key.</p>
 
                 </li>
                 <li>
@@ -1514,9 +1545,9 @@ the certificate resource is created.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The type of key to create. Valid key types, see JsonWebKeyType.
-Supported JsonWebKey key types (kty) for Elliptic Curve, RSA,
-HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#39;, &#39;oct&#39;</p>
+                  <p>The type of key to create. For valid key types, see JsonWebKeyType.
+Supported JsonWebKey key types (kty) for Elliptic Curve, RSA, HSM,
+Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#39;, &#39;oct&#39;</p>
 
                 </li>
                 <li>
@@ -1527,7 +1558,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>)</div>
                   </dd>
                   </dl>
-                  <p>The key size in bytes. e.g. 1024 or 2048.</p>
+                  <p>The key size in bytes. For example, 1024 or 2048.</p>
 
                 </li>
                 <li>
@@ -1558,7 +1589,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/s4ys34ea(v=vs.110).aspx">IDictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>)</div>
                   </dd>
                   </dl>
-                  <p>Application-specific metadata in the form of key-value pairs</p>
+                  <p>Application specific metadata in the form of key-value pairs.</p>
 
                 </li>
                 <li>
@@ -1609,7 +1640,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_DecryptWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L320" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L344" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -1617,7 +1648,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <div class="lang-vb">DecryptWithHttpMessagesAsync(String, String, String, String, Byte(), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Decrypts a single block of encrypted data</p>
+            <p>Decrypts a single block of encrypted data.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;KeyOperationResult&gt;&gt; DecryptWithHttpMessagesAsync(string vaultBaseUrl, string keyName, string keyVersion, string algorithm, byte[] value, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function DecryptWithHttpMessagesAsync(vaultBaseUrl As String, keyName As String, keyVersion As String, algorithm As String, value As Byte(), customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of KeyOperationResult))</code></pre>
@@ -1633,7 +1664,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -1644,7 +1675,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>The name of the key.</p>
 
                 </li>
                 <li>
@@ -1655,7 +1686,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The version of the key</p>
+                  <p>The version of the key.</p>
 
                 </li>
                 <li>
@@ -1727,7 +1758,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_DeleteCertificateContactsWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L645" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L668" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -1735,7 +1766,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <div class="lang-vb">DeleteCertificateContactsWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Deletes the certificate contacts for the specified vault.</p>
+            <p>Deletes the certificate contacts for a specified key vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;Contacts&gt;&gt; DeleteCertificateContactsWithHttpMessagesAsync(string vaultBaseUrl, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function DeleteCertificateContactsWithHttpMessagesAsync(vaultBaseUrl As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of Contacts))</code></pre>
@@ -1751,7 +1782,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -1802,7 +1833,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_DeleteCertificateIssuerWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L755" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L778" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -1826,7 +1857,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -1888,7 +1919,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_DeleteCertificateOperationWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L979" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1003" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -1896,7 +1927,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <div class="lang-vb">DeleteCertificateOperationWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Deletes the certificate operation.</p>
+            <p>Deletes the operation for a specified certificate.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;CertificateOperation&gt;&gt; DeleteCertificateOperationWithHttpMessagesAsync(string vaultBaseUrl, string certificateName, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function DeleteCertificateOperationWithHttpMessagesAsync(vaultBaseUrl As String, certificateName As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of CertificateOperation))</code></pre>
@@ -1912,7 +1943,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -1923,7 +1954,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the certificate</p>
+                  <p>The name of the certificate.</p>
 
                 </li>
                 <li>
@@ -1974,7 +2005,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_DeleteCertificateWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L600" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L623" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -1982,7 +2013,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <div class="lang-vb">DeleteCertificateWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Deletes a certificate from the specified vault.</p>
+            <p>Deletes a certificate from a specified key vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;CertificateBundle&gt;&gt; DeleteCertificateWithHttpMessagesAsync(string vaultBaseUrl, string certificateName, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function DeleteCertificateWithHttpMessagesAsync(vaultBaseUrl As String, certificateName As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of CertificateBundle))</code></pre>
@@ -1998,7 +2029,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -2009,7 +2040,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the certificate in the given vault</p>
+                  <p>The name of the certificate.</p>
 
                 </li>
                 <li>
@@ -2060,7 +2091,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_DeleteKeyWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L146" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L160" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -2068,7 +2099,12 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <div class="lang-vb">DeleteKeyWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Deletes the specified key</p>
+            <p>Deletes a key of any type from storage in Azure Key Vault. The
+delete key operation cannot be used to remove individual versions
+of a key. This operation removes the cryptographic material
+associated with the key, which means the key is not usable for
+Sign/Verify, Wrap/Unwrap or Encrypt/Decrypt operations.
+Authorization: Requires the keys/delete permission.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;KeyBundle&gt;&gt; DeleteKeyWithHttpMessagesAsync(string vaultBaseUrl, string keyName, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function DeleteKeyWithHttpMessagesAsync(vaultBaseUrl As String, keyName As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of KeyBundle))</code></pre>
@@ -2084,7 +2120,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -2095,7 +2131,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>The name of the key to delete.</p>
 
                 </li>
                 <li>
@@ -2146,7 +2182,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_DeleteSecretWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L477" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L499" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -2154,7 +2190,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <div class="lang-vb">DeleteSecretWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Deletes a secret from the specified vault.</p>
+            <p>Deletes a secret from a specified key vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;SecretBundle&gt;&gt; DeleteSecretWithHttpMessagesAsync(string vaultBaseUrl, string secretName, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function DeleteSecretWithHttpMessagesAsync(vaultBaseUrl As String, secretName As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of SecretBundle))</code></pre>
@@ -2170,7 +2206,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -2181,7 +2217,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the secret in the given vault</p>
+                  <p>The name of the secret.</p>
 
                 </li>
                 <li>
@@ -2232,7 +2268,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_EncryptWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L295" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L319" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -2241,7 +2277,7 @@ HSM, Octet. Possible values include: &#39;EC&#39;, &#39;RSA&#39;, &#39;RSA-HSM&#
           </div>
     
             <p>Encrypts an arbitrary sequence of bytes using an encryption key
-that is stored in Azure Key Vault.</p>
+that is stored in a key vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;KeyOperationResult&gt;&gt; EncryptWithHttpMessagesAsync(string vaultBaseUrl, string keyName, string keyVersion, string algorithm, byte[] value, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function EncryptWithHttpMessagesAsync(vaultBaseUrl As String, keyName As String, keyVersion As String, algorithm As String, value As Byte(), customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of KeyOperationResult))</code></pre>
@@ -2257,7 +2293,7 @@ that is stored in Azure Key Vault.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -2268,7 +2304,7 @@ that is stored in Azure Key Vault.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>The name of the key.</p>
 
                 </li>
                 <li>
@@ -2279,7 +2315,7 @@ that is stored in Azure Key Vault.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The version of the key</p>
+                  <p>The version of the key.</p>
 
                 </li>
                 <li>
@@ -2351,7 +2387,7 @@ that is stored in Azure Key Vault.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateContactsWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L631" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L654" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -2359,7 +2395,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb">GetCertificateContactsWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Gets the certificate contacts for the specified vault.</p>
+            <p>Lists the certificate contacts for a specified key vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;Contacts&gt;&gt; GetCertificateContactsWithHttpMessagesAsync(string vaultBaseUrl, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetCertificateContactsWithHttpMessagesAsync(vaultBaseUrl As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of Contacts))</code></pre>
@@ -2375,7 +2411,7 @@ that is stored in Azure Key Vault.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -2426,7 +2462,7 @@ that is stored in Azure Key Vault.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateIssuersNextWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1090" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1116" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -2434,7 +2470,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb">GetCertificateIssuersNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>List certificate issuers for the specified vault.</p>
+            <p>List certificate issuers for a specified key vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;CertificateIssuerItem&gt;&gt;&gt; GetCertificateIssuersNextWithHttpMessagesAsync(string nextPageLink, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetCertificateIssuersNextWithHttpMessagesAsync(nextPageLink As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of CertificateIssuerItem)))</code></pre>
@@ -2501,7 +2537,7 @@ that is stored in Azure Key Vault.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateIssuersWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L663" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L686" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -2509,7 +2545,7 @@ that is stored in Azure Key Vault.</p>
             <div class="lang-vb">GetCertificateIssuersWithHttpMessagesAsync(String, Nullable(Of Int32), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>List certificate issuers for the specified vault.</p>
+            <p>List certificate issuers for a specified key vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;CertificateIssuerItem&gt;&gt;&gt; GetCertificateIssuersWithHttpMessagesAsync(string vaultBaseUrl, int ? maxresults = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetCertificateIssuersWithHttpMessagesAsync(vaultBaseUrl As String, maxresults As Integer? = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of CertificateIssuerItem)))</code></pre>
@@ -2525,7 +2561,7 @@ that is stored in Azure Key Vault.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -2536,8 +2572,8 @@ that is stored in Azure Key Vault.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>)</div>
                   </dd>
                   </dl>
-                  <p>Maximum number of results to return in a page. If not specified
-the service will return up to 25 results.</p>
+                  <p>Maximum number of results to return in a page. If not specified the
+service will return up to 25 results.</p>
 
                 </li>
                 <li>
@@ -2588,7 +2624,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateIssuerWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L738" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L761" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -2596,7 +2632,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetCertificateIssuerWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Gets the specified certificate issuer.</p>
+            <p>Lists the specified certificate issuer.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IssuerBundle&gt;&gt; GetCertificateIssuerWithHttpMessagesAsync(string vaultBaseUrl, string issuerName, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetCertificateIssuerWithHttpMessagesAsync(vaultBaseUrl As String, issuerName As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IssuerBundle))</code></pre>
@@ -2612,7 +2648,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -2674,7 +2710,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateOperationWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L962" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L986" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -2682,7 +2718,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetCertificateOperationWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Gets the certificate operation response.</p>
+            <p>Gets the operation associated with a specified certificate.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;CertificateOperation&gt;&gt; GetCertificateOperationWithHttpMessagesAsync(string vaultBaseUrl, string certificateName, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetCertificateOperationWithHttpMessagesAsync(vaultBaseUrl As String, certificateName As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of CertificateOperation))</code></pre>
@@ -2698,7 +2734,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -2709,7 +2745,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the certificate</p>
+                  <p>The name of the certificate.</p>
 
                 </li>
                 <li>
@@ -2760,7 +2796,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificatePolicyWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L854" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L877" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -2768,7 +2804,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetCertificatePolicyWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Gets the policy for a certificate.</p>
+            <p>Lists the policy for a certificate.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;CertificatePolicy&gt;&gt; GetCertificatePolicyWithHttpMessagesAsync(string vaultBaseUrl, string certificateName, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetCertificatePolicyWithHttpMessagesAsync(vaultBaseUrl As String, certificateName As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of CertificatePolicy))</code></pre>
@@ -2784,7 +2820,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -2795,7 +2831,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the certificate in the given vault.</p>
+                  <p>The name of the certificate in a given key vault.</p>
 
                 </li>
                 <li>
@@ -2846,7 +2882,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificatesNextWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1076" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1102" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -2854,7 +2890,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetCertificatesNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>List certificates in the specified vault</p>
+            <p>List certificates in a specified key vault</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;CertificateItem&gt;&gt;&gt; GetCertificatesNextWithHttpMessagesAsync(string nextPageLink, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetCertificatesNextWithHttpMessagesAsync(nextPageLink As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of CertificateItem)))</code></pre>
@@ -2921,7 +2957,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificatesWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L583" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L606" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -2929,7 +2965,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetCertificatesWithHttpMessagesAsync(String, Nullable(Of Int32), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>List certificates in the specified vault</p>
+            <p>List certificates in a specified key vault</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;CertificateItem&gt;&gt;&gt; GetCertificatesWithHttpMessagesAsync(string vaultBaseUrl, int ? maxresults = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetCertificatesWithHttpMessagesAsync(vaultBaseUrl As String, maxresults As Integer? = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of CertificateItem)))</code></pre>
@@ -2945,7 +2981,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -2956,8 +2992,8 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>)</div>
                   </dd>
                   </dl>
-                  <p>Maximum number of results to return in a page. If not specified
-the service will return up to 25 results.</p>
+                  <p>Maximum number of results to return in a page. If not specified the
+service will return up to 25 results.</p>
 
                 </li>
                 <li>
@@ -3008,7 +3044,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateVersionsNextWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1104" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1130" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -3083,7 +3119,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateVersionsWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L837" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L860" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -3107,7 +3143,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -3118,7 +3154,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the certificate</p>
+                  <p>The name of the certificate.</p>
 
                 </li>
                 <li>
@@ -3129,8 +3165,8 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>)</div>
                   </dd>
                   </dl>
-                  <p>Maximum number of results to return in a page. If not specified
-the service will return up to 25 results.</p>
+                  <p>Maximum number of results to return in a page. If not specified the
+service will return up to 25 results.</p>
 
                 </li>
                 <li>
@@ -3181,7 +3217,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetCertificateWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L924" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L948" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -3189,7 +3225,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetCertificateWithHttpMessagesAsync(String, String, String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Gets a Certificate.</p>
+            <p>Gets information about a specified certificate.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;CertificateBundle&gt;&gt; GetCertificateWithHttpMessagesAsync(string vaultBaseUrl, string certificateName, string certificateVersion, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetCertificateWithHttpMessagesAsync(vaultBaseUrl As String, certificateName As String, certificateVersion As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of CertificateBundle))</code></pre>
@@ -3205,7 +3241,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -3216,7 +3252,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the certificate in the given vault</p>
+                  <p>The name of the certificate in the given vault.</p>
 
                 </li>
                 <li>
@@ -3227,7 +3263,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The version of the certificate</p>
+                  <p>The version of the certificate.</p>
 
                 </li>
                 <li>
@@ -3278,7 +3314,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetKeysNextWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1034" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1060" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -3286,7 +3322,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetKeysNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>List keys in the specified vault</p>
+            <p>List keys in the specified vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;KeyItem&gt;&gt;&gt; GetKeysNextWithHttpMessagesAsync(string nextPageLink, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetKeysNextWithHttpMessagesAsync(nextPageLink As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of KeyItem)))</code></pre>
@@ -3353,7 +3389,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetKeysWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L234" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L258" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -3361,7 +3397,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetKeysWithHttpMessagesAsync(String, Nullable(Of Int32), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>List keys in the specified vault</p>
+            <p>List keys in the specified vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;KeyItem&gt;&gt;&gt; GetKeysWithHttpMessagesAsync(string vaultBaseUrl, int ? maxresults = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetKeysWithHttpMessagesAsync(vaultBaseUrl As String, maxresults As Integer? = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of KeyItem)))</code></pre>
@@ -3377,7 +3413,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -3388,8 +3424,8 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>)</div>
                   </dd>
                   </dl>
-                  <p>Maximum number of results to return in a page. If not specified
-the service will return up to 25 results.</p>
+                  <p>Maximum number of results to return in a page. If not specified the
+service will return up to 25 results.</p>
 
                 </li>
                 <li>
@@ -3440,7 +3476,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetKeyVersionsNextWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1020" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1046" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -3448,7 +3484,9 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetKeyVersionsNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>List the versions of the specified key</p>
+            <p>Retrieves a list of individual key versions with the same key name.
+The full key identifier, attributes, and tags are provided in the
+response. Authorization: Requires the keys/list permission.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;KeyItem&gt;&gt;&gt; GetKeyVersionsNextWithHttpMessagesAsync(string nextPageLink, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetKeyVersionsNextWithHttpMessagesAsync(nextPageLink As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of KeyItem)))</code></pre>
@@ -3515,7 +3553,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetKeyVersionsWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L216" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L240" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -3523,7 +3561,9 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetKeyVersionsWithHttpMessagesAsync(String, String, Nullable(Of Int32), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>List the versions of the specified key</p>
+            <p>Retrieves a list of individual key versions with the same key name.
+The full key identifier, attributes, and tags are provided in the
+response. Authorization: Requires the keys/list permission.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;KeyItem&gt;&gt;&gt; GetKeyVersionsWithHttpMessagesAsync(string vaultBaseUrl, string keyName, int ? maxresults = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetKeyVersionsWithHttpMessagesAsync(vaultBaseUrl As String, keyName As String, maxresults As Integer? = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of KeyItem)))</code></pre>
@@ -3539,7 +3579,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -3550,7 +3590,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>The name of the key.</p>
 
                 </li>
                 <li>
@@ -3561,8 +3601,8 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>)</div>
                   </dd>
                   </dl>
-                  <p>Maximum number of results to return in a page. If not specified
-the service will return up to 25 results.</p>
+                  <p>Maximum number of results to return in a page. If not specified the
+service will return up to 25 results.</p>
 
                 </li>
                 <li>
@@ -3613,7 +3653,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetKeyWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L195" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L217" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -3621,7 +3661,10 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetKeyWithHttpMessagesAsync(String, String, String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Retrieves the public portion of a key plus its attributes</p>
+            <p>Gets the public part of a stored key. The get key operation is
+applicable to all key types. If the requested key is symmetric,
+then no key material is released in the response. Authorization:
+Requires the keys/get permission.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;KeyBundle&gt;&gt; GetKeyWithHttpMessagesAsync(string vaultBaseUrl, string keyName, string keyVersion, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetKeyWithHttpMessagesAsync(vaultBaseUrl As String, keyName As String, keyVersion As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of KeyBundle))</code></pre>
@@ -3637,7 +3680,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -3648,7 +3691,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>The name of the key to get.</p>
 
                 </li>
                 <li>
@@ -3659,7 +3702,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The version of the key</p>
+                  <p>Adding the version parameter retrieves a specific version of a key.</p>
 
                 </li>
                 <li>
@@ -3796,7 +3839,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetSecretsNextWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1048" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1074" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -3804,7 +3847,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetSecretsNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>List secrets in the specified vault</p>
+            <p>List secrets in a specified key vault</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;SecretItem&gt;&gt;&gt; GetSecretsNextWithHttpMessagesAsync(string nextPageLink, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetSecretsNextWithHttpMessagesAsync(nextPageLink As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of SecretItem)))</code></pre>
@@ -3871,7 +3914,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetSecretsWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L544" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L567" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -3879,7 +3922,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetSecretsWithHttpMessagesAsync(String, Nullable(Of Int32), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>List secrets in the specified vault</p>
+            <p>List secrets in a specified key vault</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;SecretItem&gt;&gt;&gt; GetSecretsWithHttpMessagesAsync(string vaultBaseUrl, int ? maxresults = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetSecretsWithHttpMessagesAsync(vaultBaseUrl As String, maxresults As Integer? = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of SecretItem)))</code></pre>
@@ -3895,7 +3938,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -3906,8 +3949,8 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>)</div>
                   </dd>
                   </dl>
-                  <p>Maximum number of results to return in a page. If not specified
-the service will return up to 25 results.</p>
+                  <p>Maximum number of results to return in a page. If not specified the
+service will return up to 25 results.</p>
 
                 </li>
                 <li>
@@ -3958,7 +4001,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetSecretVersionsNextWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1062" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1088" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -3966,7 +4009,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetSecretVersionsNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>List the versions of the specified secret</p>
+            <p>List the versions of the specified secret.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;SecretItem&gt;&gt;&gt; GetSecretVersionsNextWithHttpMessagesAsync(string nextPageLink, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetSecretVersionsNextWithHttpMessagesAsync(nextPageLink As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of SecretItem)))</code></pre>
@@ -4033,7 +4076,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetSecretVersionsWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L565" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L588" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -4041,7 +4084,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetSecretVersionsWithHttpMessagesAsync(String, String, Nullable(Of Int32), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>List the versions of the specified secret</p>
+            <p>List the versions of the specified secret.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;SecretItem&gt;&gt;&gt; GetSecretVersionsWithHttpMessagesAsync(string vaultBaseUrl, string secretName, int ? maxresults = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetSecretVersionsWithHttpMessagesAsync(vaultBaseUrl As String, secretName As String, maxresults As Integer? = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of SecretItem)))</code></pre>
@@ -4057,7 +4100,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -4068,7 +4111,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the secret in the given vault</p>
+                  <p>The name of the secret.</p>
 
                 </li>
                 <li>
@@ -4079,8 +4122,8 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>)</div>
                   </dd>
                   </dl>
-                  <p>Maximum number of results to return in a page. If not specified
-the service will return up to 25 results.</p>
+                  <p>Maximum number of results to return in a page. If not specified the
+service will return up to 25 results.</p>
 
                 </li>
                 <li>
@@ -4131,7 +4174,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_GetSecretWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L526" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L549" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -4139,7 +4182,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">GetSecretWithHttpMessagesAsync(String, String, String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Gets a secret.</p>
+            <p>Get a specified secret from a given key vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;SecretBundle&gt;&gt; GetSecretWithHttpMessagesAsync(string vaultBaseUrl, string secretName, string secretVersion, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function GetSecretWithHttpMessagesAsync(vaultBaseUrl As String, secretName As String, secretVersion As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of SecretBundle))</code></pre>
@@ -4155,7 +4198,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -4166,7 +4209,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the secret in the given vault</p>
+                  <p>The name of the secret.</p>
 
                 </li>
                 <li>
@@ -4177,7 +4220,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The version of the secret</p>
+                  <p>The version of the secret.</p>
 
                 </li>
                 <li>
@@ -4228,7 +4271,7 @@ the service will return up to 25 results.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_ImportCertificateWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L816" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L839" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -4236,7 +4279,7 @@ the service will return up to 25 results.</p>
             <div class="lang-vb">ImportCertificateWithHttpMessagesAsync(String, String, String, String, CertificatePolicy, CertificateAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Imports a certificate into the specified vault</p>
+            <p>Imports a certificate into a specified key vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;CertificateBundle&gt;&gt; ImportCertificateWithHttpMessagesAsync(string vaultBaseUrl, string certificateName, string base64EncodedCertificate, string password = null, CertificatePolicy certificatePolicy = null, CertificateAttributes certificateAttributes = null, IDictionary&lt;string, string&gt; tags = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function ImportCertificateWithHttpMessagesAsync(vaultBaseUrl As String, certificateName As String, base64EncodedCertificate As String, password As String = Nothing, certificatePolicy As CertificatePolicy = Nothing, certificateAttributes As CertificateAttributes = Nothing, tags As IDictionary(Of String, String) = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of CertificateBundle))</code></pre>
@@ -4252,7 +4295,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -4263,7 +4306,7 @@ the service will return up to 25 results.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the certificate</p>
+                  <p>The name of the certificate.</p>
 
                 </li>
                 <li>
@@ -4287,7 +4330,7 @@ This certificate needs to contain the private key.</p>
                   </dd>
                   </dl>
                   <p>If the private key in base64EncodedCertificate is encrypted, the
-password used for encryption</p>
+password used for encryption.</p>
 
                 </li>
                 <li>
@@ -4298,7 +4341,7 @@ password used for encryption</p>
                     <div class="lang-vb"><a class="xref" href="microsoft.azure.keyvault.models.certificatepolicy">CertificatePolicy</a></div>
                   </dd>
                   </dl>
-                  <p>The management policy for the certificate</p>
+                  <p>The management policy for the certificate.</p>
 
                 </li>
                 <li>
@@ -4309,7 +4352,7 @@ password used for encryption</p>
                     <div class="lang-vb"><a class="xref" href="microsoft.azure.keyvault.models.certificateattributes">CertificateAttributes</a></div>
                   </dd>
                   </dl>
-                  <p>The attributes of the certificate (optional)</p>
+                  <p>The attributes of the certificate (optional).</p>
 
                 </li>
                 <li>
@@ -4320,7 +4363,7 @@ password used for encryption</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/s4ys34ea(v=vs.110).aspx">IDictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>)</div>
                   </dd>
                   </dl>
-                  <p>Application-specific metadata in the form of key-value pairs</p>
+                  <p>Application specific metadata in the form of key-value pairs.</p>
 
                 </li>
                 <li>
@@ -4371,7 +4414,7 @@ password used for encryption</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_ImportKeyWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L129" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L138" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -4379,7 +4422,11 @@ password used for encryption</p>
             <div class="lang-vb">ImportKeyWithHttpMessagesAsync(String, String, JsonWebKey, Nullable(Of Boolean), KeyAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Imports a key into the specified vault</p>
+            <p>Imports an externally created key, stores it, and returns key
+parameters and attributes to the client. The import key operation
+may be used to import any key type into an Azure Key Vault. If the
+named key already exists, Azure Key Vault creates a new version of
+the key. Authorization: requires the keys/import permission.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;KeyBundle&gt;&gt; ImportKeyWithHttpMessagesAsync(string vaultBaseUrl, string keyName, JsonWebKey key, bool ? hsm = null, KeyAttributes keyAttributes = null, IDictionary&lt;string, string&gt; tags = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function ImportKeyWithHttpMessagesAsync(vaultBaseUrl As String, keyName As String, key As JsonWebKey, hsm As Boolean? = Nothing, keyAttributes As KeyAttributes = Nothing, tags As IDictionary(Of String, String) = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of KeyBundle))</code></pre>
@@ -4395,7 +4442,7 @@ password used for encryption</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -4406,7 +4453,7 @@ password used for encryption</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>Name for the imported key.</p>
 
                 </li>
                 <li>
@@ -4428,7 +4475,7 @@ password used for encryption</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>)</div>
                   </dd>
                   </dl>
-                  <p>Whether to import as a hardware key (HSM) or software key</p>
+                  <p>Whether to import as a hardware key (HSM) or software key.</p>
 
                 </li>
                 <li>
@@ -4439,7 +4486,7 @@ password used for encryption</p>
                     <div class="lang-vb"><a class="xref" href="microsoft.azure.keyvault.models.keyattributes">KeyAttributes</a></div>
                   </dd>
                   </dl>
-                  <p>The key management attributes</p>
+                  <p>The key management attributes.</p>
 
                 </li>
                 <li>
@@ -4450,7 +4497,7 @@ password used for encryption</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/s4ys34ea(v=vs.110).aspx">IDictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>)</div>
                   </dd>
                   </dl>
-                  <p>Application-specific metadata in the form of key-value pairs</p>
+                  <p>Application specific metadata in the form of key-value pairs.</p>
 
                 </li>
                 <li>
@@ -4501,7 +4548,7 @@ password used for encryption</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_MergeCertificateWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1006" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L1030" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -4526,7 +4573,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -4537,7 +4584,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the certificate</p>
+                  <p>The name of the certificate.</p>
 
                 </li>
                 <li>
@@ -4548,7 +4595,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/5y536ey6(v=vs.110).aspx">IList</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>())</div>
                   </dd>
                   </dl>
-                  <p>The certificate or the certificate chain to merge</p>
+                  <p>The certificate or the certificate chain to merge.</p>
 
                 </li>
                 <li>
@@ -4559,7 +4606,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="microsoft.azure.keyvault.models.certificateattributes">CertificateAttributes</a></div>
                   </dd>
                   </dl>
-                  <p>The attributes of the certificate (optional)</p>
+                  <p>The attributes of the certificate (optional).</p>
 
                 </li>
                 <li>
@@ -4570,7 +4617,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/s4ys34ea(v=vs.110).aspx">IDictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>)</div>
                   </dd>
                   </dl>
-                  <p>Application-specific metadata in the form of key-value pairs</p>
+                  <p>Application specific metadata in the form of key-value pairs.</p>
 
                 </li>
                 <li>
@@ -4621,7 +4668,7 @@ existing on the server.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_RestoreKeyWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L269" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L293" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -4629,7 +4676,7 @@ existing on the server.</p>
             <div class="lang-vb">RestoreKeyWithHttpMessagesAsync(String, Byte(), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Restores the backup key in to a vault</p>
+            <p>Restores a backed up key to a vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;KeyBundle&gt;&gt; RestoreKeyWithHttpMessagesAsync(string vaultBaseUrl, byte[] keyBundleBackup, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function RestoreKeyWithHttpMessagesAsync(vaultBaseUrl As String, keyBundleBackup As Byte(), customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of KeyBundle))</code></pre>
@@ -4645,7 +4692,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -4656,7 +4703,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>()</div>
                   </dd>
                   </dl>
-                  <p>the backup blob associated with a key bundle</p>
+                  <p>The backup blob associated with a key bundle.</p>
 
                 </li>
                 <li>
@@ -4707,7 +4754,7 @@ existing on the server.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_SetCertificateContactsWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L617" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L640" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -4715,7 +4762,7 @@ existing on the server.</p>
             <div class="lang-vb">SetCertificateContactsWithHttpMessagesAsync(String, Contacts, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Sets the certificate contacts for the specified vault.</p>
+            <p>Sets the certificate contacts for the specified key vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;Contacts&gt;&gt; SetCertificateContactsWithHttpMessagesAsync(string vaultBaseUrl, Contacts contacts, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function SetCertificateContactsWithHttpMessagesAsync(vaultBaseUrl As String, contacts As Contacts, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of Contacts))</code></pre>
@@ -4731,7 +4778,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -4742,7 +4789,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="microsoft.azure.keyvault.models.contacts">Contacts</a></div>
                   </dd>
                   </dl>
-                  <p>The contacts for the vault certificates.</p>
+                  <p>The contacts for the key vault certificate.</p>
 
                 </li>
                 <li>
@@ -4793,7 +4840,7 @@ existing on the server.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_SetCertificateIssuerWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L692" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L715" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -4817,7 +4864,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -4923,7 +4970,7 @@ existing on the server.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_SetSecretWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L460" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L482" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -4931,7 +4978,7 @@ existing on the server.</p>
             <div class="lang-vb">SetSecretWithHttpMessagesAsync(String, String, String, IDictionary(Of String, String), String, SecretAttributes, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Sets a secret in the specified vault.</p>
+            <p>Sets a secret in a specified key vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;SecretBundle&gt;&gt; SetSecretWithHttpMessagesAsync(string vaultBaseUrl, string secretName, string value, IDictionary&lt;string, string&gt; tags = null, string contentType = null, SecretAttributes secretAttributes = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function SetSecretWithHttpMessagesAsync(vaultBaseUrl As String, secretName As String, value As String, tags As IDictionary(Of String, String) = Nothing, contentType As String = Nothing, secretAttributes As SecretAttributes = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of SecretBundle))</code></pre>
@@ -4947,7 +4994,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -4958,7 +5005,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the secret in the given vault</p>
+                  <p>The name of the secret.</p>
 
                 </li>
                 <li>
@@ -4969,7 +5016,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The value of the secret</p>
+                  <p>The value of the secret.</p>
 
                 </li>
                 <li>
@@ -4980,7 +5027,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/s4ys34ea(v=vs.110).aspx">IDictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>)</div>
                   </dd>
                   </dl>
-                  <p>Application-specific metadata in the form of key-value pairs</p>
+                  <p>Application specific metadata in the form of key-value pairs.</p>
 
                 </li>
                 <li>
@@ -4991,7 +5038,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>Type of the secret value such as a password</p>
+                  <p>Type of the secret value such as a password.</p>
 
                 </li>
                 <li>
@@ -5002,7 +5049,7 @@ existing on the server.</p>
                     <div class="lang-vb"><a class="xref" href="microsoft.azure.keyvault.models.secretattributes">SecretAttributes</a></div>
                   </dd>
                   </dl>
-                  <p>The secret management attributes</p>
+                  <p>The secret management attributes.</p>
 
                 </li>
                 <li>
@@ -5053,7 +5100,7 @@ existing on the server.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_SignWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L349" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L371" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -5061,8 +5108,7 @@ existing on the server.</p>
             <div class="lang-vb">SignWithHttpMessagesAsync(String, String, String, String, Byte(), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Creates a signature from a digest using the specified key in the
-vault</p>
+            <p>Creates a signature from a digest using the specified key.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;KeyOperationResult&gt;&gt; SignWithHttpMessagesAsync(string vaultBaseUrl, string keyName, string keyVersion, string algorithm, byte[] value, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function SignWithHttpMessagesAsync(vaultBaseUrl As String, keyName As String, keyVersion As String, algorithm As String, value As Byte(), customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of KeyOperationResult))</code></pre>
@@ -5078,7 +5124,7 @@ vault</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -5089,7 +5135,7 @@ vault</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>The name of the key.</p>
 
                 </li>
                 <li>
@@ -5100,7 +5146,7 @@ vault</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The version of the key</p>
+                  <p>The version of the key.</p>
 
                 </li>
                 <li>
@@ -5111,10 +5157,9 @@ vault</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The signing/verification algorithm identifier. For more
-information on possible algorithm types, see
-JsonWebKeySignatureAlgorithm. Possible values include: &#39;RS256&#39;,
-&#39;RS384&#39;, &#39;RS512&#39;, &#39;RSNULL&#39;</p>
+                  <p>The signing/verification algorithm identifier. For more information
+on possible algorithm types, see JsonWebKeySignatureAlgorithm.
+Possible values include: &#39;RS256&#39;, &#39;RS384&#39;, &#39;RS512&#39;, &#39;RSNULL&#39;</p>
 
                 </li>
                 <li>
@@ -5175,7 +5220,7 @@ JsonWebKeySignatureAlgorithm. Possible values include: &#39;RS256&#39;,
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_UnwrapKeyWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L431" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L453" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -5183,8 +5228,8 @@ JsonWebKeySignatureAlgorithm. Possible values include: &#39;RS256&#39;,
             <div class="lang-vb">UnwrapKeyWithHttpMessagesAsync(String, String, String, String, Byte(), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Unwraps a symmetric key using the specified key in the vault that
-has initially been used for wrapping the key.</p>
+            <p>Unwraps a symmetric key using the specified key that was initially
+used for wrapping that key.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;KeyOperationResult&gt;&gt; UnwrapKeyWithHttpMessagesAsync(string vaultBaseUrl, string keyName, string keyVersion, string algorithm, byte[] value, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function UnwrapKeyWithHttpMessagesAsync(vaultBaseUrl As String, keyName As String, keyVersion As String, algorithm As String, value As Byte(), customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of KeyOperationResult))</code></pre>
@@ -5200,7 +5245,7 @@ has initially been used for wrapping the key.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -5211,7 +5256,7 @@ has initially been used for wrapping the key.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>The name of the key.</p>
 
                 </li>
                 <li>
@@ -5222,7 +5267,7 @@ has initially been used for wrapping the key.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The version of the key</p>
+                  <p>The version of the key.</p>
 
                 </li>
                 <li>
@@ -5294,7 +5339,7 @@ has initially been used for wrapping the key.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_UpdateCertificateIssuerWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L721" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L744" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -5318,7 +5363,7 @@ has initially been used for wrapping the key.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -5424,7 +5469,7 @@ has initially been used for wrapping the key.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_UpdateCertificateOperationWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L945" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L969" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -5448,7 +5493,7 @@ has initially been used for wrapping the key.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -5459,7 +5504,7 @@ has initially been used for wrapping the key.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the certificate</p>
+                  <p>The name of the certificate.</p>
 
                 </li>
                 <li>
@@ -5522,7 +5567,7 @@ operation.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_UpdateCertificatePolicyWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L875" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L898" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -5530,8 +5575,8 @@ operation.</p>
             <div class="lang-vb">UpdateCertificatePolicyWithHttpMessagesAsync(String, String, CertificatePolicy, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Updates the policy for a certificate. Set appropriate members in
-the certificatePolicy that must be updated. Leave others as null.</p>
+            <p>Updates the policy for a certificate. Set specified members in the
+certificate policy. Leave others as null.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;CertificatePolicy&gt;&gt; UpdateCertificatePolicyWithHttpMessagesAsync(string vaultBaseUrl, string certificateName, CertificatePolicy certificatePolicy, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function UpdateCertificatePolicyWithHttpMessagesAsync(vaultBaseUrl As String, certificateName As String, certificatePolicy As CertificatePolicy, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of CertificatePolicy))</code></pre>
@@ -5547,7 +5592,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -5620,7 +5665,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_UpdateCertificateWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L904" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L928" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -5628,7 +5673,8 @@ the certificatePolicy that must be updated. Leave others as null.</p>
             <div class="lang-vb">UpdateCertificateWithHttpMessagesAsync(String, String, String, CertificatePolicy, CertificateAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Updates the attributes associated with the specified certificate</p>
+            <p>Updates the specified attributes associated with the given
+certificate.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;CertificateBundle&gt;&gt; UpdateCertificateWithHttpMessagesAsync(string vaultBaseUrl, string certificateName, string certificateVersion, CertificatePolicy certificatePolicy = null, CertificateAttributes certificateAttributes = null, IDictionary&lt;string, string&gt; tags = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function UpdateCertificateWithHttpMessagesAsync(vaultBaseUrl As String, certificateName As String, certificateVersion As String, certificatePolicy As CertificatePolicy = Nothing, certificateAttributes As CertificateAttributes = Nothing, tags As IDictionary(Of String, String) = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of CertificateBundle))</code></pre>
@@ -5644,7 +5690,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -5655,7 +5701,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the certificate in the given vault</p>
+                  <p>The name of the certificate in the given key vault.</p>
 
                 </li>
                 <li>
@@ -5666,7 +5712,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The version of the certificate</p>
+                  <p>The version of the certificate.</p>
 
                 </li>
                 <li>
@@ -5677,7 +5723,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
                     <div class="lang-vb"><a class="xref" href="microsoft.azure.keyvault.models.certificatepolicy">CertificatePolicy</a></div>
                   </dd>
                   </dl>
-                  <p>The management policy for the certificate</p>
+                  <p>The management policy for the certificate.</p>
 
                 </li>
                 <li>
@@ -5688,7 +5734,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
                     <div class="lang-vb"><a class="xref" href="microsoft.azure.keyvault.models.certificateattributes">CertificateAttributes</a></div>
                   </dd>
                   </dl>
-                  <p>The attributes of the certificate (optional)</p>
+                  <p>The attributes of the certificate (optional).</p>
 
                 </li>
                 <li>
@@ -5699,7 +5745,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/s4ys34ea(v=vs.110).aspx">IDictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>)</div>
                   </dd>
                   </dl>
-                  <p>Application-specific metadata in the form of key-value pairs</p>
+                  <p>Application specific metadata in the form of key-value pairs.</p>
 
                 </li>
                 <li>
@@ -5750,7 +5796,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_UpdateKeyWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L175" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L194" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -5758,7 +5804,12 @@ the certificatePolicy that must be updated. Leave others as null.</p>
             <div class="lang-vb">UpdateKeyWithHttpMessagesAsync(String, String, String, IList(Of String), KeyAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Updates the Key Attributes associated with the specified key</p>
+            <p>The update key operation changes specified attributes of a stored
+key and can be applied to any key type and key version stored in
+Azure Key Vault. The cryptographic material of a key itself cannot
+be changed. In order to perform this operation, the key must
+already exist in the Key Vault. Authorization: requires the
+keys/update permission.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;KeyBundle&gt;&gt; UpdateKeyWithHttpMessagesAsync(string vaultBaseUrl, string keyName, string keyVersion, IList&lt;string&gt; keyOps = null, KeyAttributes keyAttributes = null, IDictionary&lt;string, string&gt; tags = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function UpdateKeyWithHttpMessagesAsync(vaultBaseUrl As String, keyName As String, keyVersion As String, keyOps As IList(Of String) = Nothing, keyAttributes As KeyAttributes = Nothing, tags As IDictionary(Of String, String) = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of KeyBundle))</code></pre>
@@ -5774,7 +5825,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -5785,7 +5836,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>The name of key to update.</p>
 
                 </li>
                 <li>
@@ -5796,7 +5847,7 @@ the certificatePolicy that must be updated. Leave others as null.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The version of the key</p>
+                  <p>The version of the key to update.</p>
 
                 </li>
                 <li>
@@ -5829,7 +5880,7 @@ operations, see JsonWebKeyOperation.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/s4ys34ea(v=vs.110).aspx">IDictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>)</div>
                   </dd>
                   </dl>
-                  <p>Application-specific metadata in the form of key-value pairs</p>
+                  <p>Application specific metadata in the form of key-value pairs.</p>
 
                 </li>
                 <li>
@@ -5880,7 +5931,7 @@ operations, see JsonWebKeyOperation.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_UpdateSecretWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L506" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L529" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -5888,7 +5939,8 @@ operations, see JsonWebKeyOperation.</p>
             <div class="lang-vb">UpdateSecretWithHttpMessagesAsync(String, String, String, String, SecretAttributes, IDictionary(Of String, String), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Updates the attributes associated with the specified secret</p>
+            <p>Updates the attributes associated with a specified secret in a
+given key vault.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;SecretBundle&gt;&gt; UpdateSecretWithHttpMessagesAsync(string vaultBaseUrl, string secretName, string secretVersion, string contentType = null, SecretAttributes secretAttributes = null, IDictionary&lt;string, string&gt; tags = null, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function UpdateSecretWithHttpMessagesAsync(vaultBaseUrl As String, secretName As String, secretVersion As String, contentType As String = Nothing, secretAttributes As SecretAttributes = Nothing, tags As IDictionary(Of String, String) = Nothing, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of SecretBundle))</code></pre>
@@ -5904,7 +5956,7 @@ operations, see JsonWebKeyOperation.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -5915,7 +5967,7 @@ operations, see JsonWebKeyOperation.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the secret in the given vault</p>
+                  <p>The name of the secret.</p>
 
                 </li>
                 <li>
@@ -5926,7 +5978,7 @@ operations, see JsonWebKeyOperation.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The version of the secret</p>
+                  <p>The version of the secret.</p>
 
                 </li>
                 <li>
@@ -5937,7 +5989,7 @@ operations, see JsonWebKeyOperation.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>Type of the secret value such as a password</p>
+                  <p>Type of the secret value such as a password.</p>
 
                 </li>
                 <li>
@@ -5948,7 +6000,7 @@ operations, see JsonWebKeyOperation.</p>
                     <div class="lang-vb"><a class="xref" href="microsoft.azure.keyvault.models.secretattributes">SecretAttributes</a></div>
                   </dd>
                   </dl>
-                  <p>The secret management attributes</p>
+                  <p>The secret management attributes.</p>
 
                 </li>
                 <li>
@@ -5959,7 +6011,7 @@ operations, see JsonWebKeyOperation.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/s4ys34ea(v=vs.110).aspx">IDictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>)</div>
                   </dd>
                   </dl>
-                  <p>Application-specific metadata in the form of key-value pairs</p>
+                  <p>Application specific metadata in the form of key-value pairs.</p>
 
                 </li>
                 <li>
@@ -6010,7 +6062,7 @@ operations, see JsonWebKeyOperation.</p>
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_VerifyWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L380" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L402" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -6018,7 +6070,7 @@ operations, see JsonWebKeyOperation.</p>
             <div class="lang-vb">VerifyWithHttpMessagesAsync(String, String, String, String, Byte(), Byte(), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Verifies a signature using the specified key</p>
+            <p>Verifies a signature using a specified key.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;KeyVerifyResult&gt;&gt; VerifyWithHttpMessagesAsync(string vaultBaseUrl, string keyName, string keyVersion, string algorithm, byte[] digest, byte[] signature, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function VerifyWithHttpMessagesAsync(vaultBaseUrl As String, keyName As String, keyVersion As String, algorithm As String, digest As Byte(), signature As Byte(), customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of KeyVerifyResult))</code></pre>
@@ -6034,7 +6086,7 @@ operations, see JsonWebKeyOperation.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -6045,7 +6097,7 @@ operations, see JsonWebKeyOperation.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>The name of the key.</p>
 
                 </li>
                 <li>
@@ -6056,7 +6108,7 @@ operations, see JsonWebKeyOperation.</p>
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The version of the key</p>
+                  <p>The version of the key.</p>
 
                 </li>
                 <li>
@@ -6080,7 +6132,7 @@ Possible values include: &#39;RS256&#39;, &#39;RS384&#39;, &#39;RS512&#39;, &#39
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>()</div>
                   </dd>
                   </dl>
-                  <p>The digest used for signing</p>
+                  <p>The digest used for signing.</p>
 
                 </li>
                 <li>
@@ -6091,7 +6143,7 @@ Possible values include: &#39;RS256&#39;, &#39;RS384&#39;, &#39;RS512&#39;, &#39
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.byte(v=vs.110).aspx">Byte</a>()</div>
                   </dd>
                   </dl>
-                  <p>The signature to be verified</p>
+                  <p>The signature to be verified.</p>
 
                 </li>
                 <li>
@@ -6142,7 +6194,7 @@ Possible values include: &#39;RS256&#39;, &#39;RS384&#39;, &#39;RS512&#39;, &#39
             <a id="Microsoft_Azure_KeyVault_IKeyVaultClient_WrapKeyWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L405" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/KeyVault/Microsoft.Azure.KeyVault/Generated/IKeyVaultClient.cs/#L427" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -6150,7 +6202,7 @@ Possible values include: &#39;RS256&#39;, &#39;RS384&#39;, &#39;RS512&#39;, &#39
             <div class="lang-vb">WrapKeyWithHttpMessagesAsync(String, String, String, String, Byte(), Dictionary(Of String, List(Of String)), CancellationToken)</div>        
           </div>
     
-            <p>Wraps a symmetric key using the specified key</p>
+            <p>Wraps a symmetric key using a specified key.</p>
 
     
             <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;KeyOperationResult&gt;&gt; WrapKeyWithHttpMessagesAsync(string vaultBaseUrl, string keyName, string keyVersion, string algorithm, byte[] value, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function WrapKeyWithHttpMessagesAsync(vaultBaseUrl As String, keyName As String, keyVersion As String, algorithm As String, value As Byte(), customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of KeyOperationResult))</code></pre>
@@ -6166,7 +6218,7 @@ Possible values include: &#39;RS256&#39;, &#39;RS384&#39;, &#39;RS512&#39;, &#39
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The vault name, e.g. <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p>
+                  <p>The vault name, for example <a href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a>.</p>
 
                 </li>
                 <li>
@@ -6177,7 +6229,7 @@ Possible values include: &#39;RS256&#39;, &#39;RS384&#39;, &#39;RS512&#39;, &#39
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The name of the key</p>
+                  <p>The name of the key.</p>
 
                 </li>
                 <li>
@@ -6188,7 +6240,7 @@ Possible values include: &#39;RS256&#39;, &#39;RS384&#39;, &#39;RS512&#39;, &#39
                     <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                   </dd>
                   </dl>
-                  <p>The version of the key</p>
+                  <p>The version of the key.</p>
 
                 </li>
                 <li>
