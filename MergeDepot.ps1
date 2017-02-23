@@ -31,15 +31,8 @@ echo 'Extract Success!'
 Get-ChildItem
 $MergeDepotTool = "$MergeDepotToolUnzipFolder\MergeDepot.exe"
 
-Try
-{
-    git checkout master
-	git status
-}
-Catch [System.Management.Automation.RemoteException]
-{
-    # swallow the exception
-}
+git checkout master
+git status
 
 # Call azure transform for every docset
 echo "Start to call merge depot tool"
@@ -55,3 +48,5 @@ git commit -m "update"
 git status
 git push origin master 2>&1 | Write-Host
 echo "Finish pushing to git repository"
+
+exit 0
