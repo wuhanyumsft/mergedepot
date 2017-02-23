@@ -34,13 +34,13 @@ $MergeDepotTool = "$MergeDepotToolUnzipFolder\MergeDepot.exe"
 Try
 {
     git checkout master
+	git status
 }
 Catch [System.Management.Automation.RemoteException]
 {
     # swallow the exception
 }
 
-git status
 # Call azure transform for every docset
 echo "Start to call merge depot tool"
 &"$MergeDepotTool" "$currentFolder\mergedepot"
