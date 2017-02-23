@@ -31,7 +31,7 @@ echo 'Extract Success!'
 Get-ChildItem
 $MergeDepotTool = "$MergeDepotToolUnzipFolder\MergeDepot.exe"
 
-git checkout master
+git checkout master 2>&1 | Write-Host
 git status
 
 # Call azure transform for every docset
@@ -48,5 +48,3 @@ git commit -m "update"
 git status
 git push origin master 2>&1 | Write-Host
 echo "Finish pushing to git repository"
-
-exit 0
