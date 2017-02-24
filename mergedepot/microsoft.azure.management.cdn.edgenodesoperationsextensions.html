@@ -30,15 +30,17 @@
 <meta name="site_name" content="Docs">
 <meta name="search.ms_product" content="Azure">
 <meta name="depot_name" content="Azure.azuredotnet">
-<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/e94ef2bde5332ae6306299662a592890e0d555d2/docs-ref-autogen/Cdn/Microsoft.Azure.Management.Cdn.EdgeNodesOperationsExtensions.yml">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/a216401c7bd6476de586fb873cc3af3051787f03/docs-ref-autogen/Cdn/Microsoft.Azure.Management.Cdn.EdgeNodesOperationsExtensions.yml">
 <meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Cdn/Microsoft.Azure.Management.Cdn.EdgeNodesOperationsExtensions.yml">
 <meta name="APIName" content="Microsoft.Azure.Management.Cdn.EdgeNodesOperationsExtensions">
 <meta name="APIName" content="Microsoft.Azure.Management.Cdn.EdgeNodesOperationsExtensions.List">
 <meta name="APIName" content="Microsoft.Azure.Management.Cdn.EdgeNodesOperationsExtensions.ListAsync">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.EdgeNodesOperationsExtensions.ListNext">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.EdgeNodesOperationsExtensions.ListNextAsync">
 <meta name="APILocation" content="Microsoft.Azure.Management.Cdn.dll">
 <meta name="TopicType" content="apiref">
 <meta name="APIType" content="Assembly">
-<meta name="updated_at" content="2017-02-13 06:19 AM">
+<meta name="updated_at" content="2017-02-24 12:22 AM">
 <meta name="document_id" content="c1c6d757-ba6d-075d-a330-8a80ae860c22">
 <meta name="pagetype" content="Reference">
 <meta name="description" content="Extension methods for EdgeNodesOperations.
@@ -390,6 +392,26 @@
 
             </td>
         </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_EdgeNodesOperationsExtensions_ListNext_Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_System_String_">ListNext(IEdgeNodesOperations, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_EdgeNodesOperationsExtensions_ListNext_Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_System_String_">ListNext(IEdgeNodesOperations, String)</a></div>
+          </td>
+            <td>
+            <p>Lists all the edge nodes of a CDN service.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_EdgeNodesOperationsExtensions_ListNextAsync_Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_System_String_System_Threading_CancellationToken_">ListNextAsync(IEdgeNodesOperations, String, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_EdgeNodesOperationsExtensions_ListNextAsync_Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_System_String_System_Threading_CancellationToken_">ListNextAsync(IEdgeNodesOperations, String, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Lists all the edge nodes of a CDN service.</p>
+
+            </td>
+        </tr>
     </table>
     <section class="memberGroup">
       <header class="header enable-platform-filter" id="methods">
@@ -415,8 +437,8 @@
             <p>Lists all the edge nodes of a CDN service.</p>
 
     
-            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static EdgenodeResult List(this IEdgeNodesOperations operations)</code><code class="vb lang-vb">&lt;ExtensionAttribute&gt;
-Public Shared Function List(operations As IEdgeNodesOperations) As EdgenodeResult</code></pre>
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static IPage&lt;EdgeNode&gt; List(this IEdgeNodesOperations operations)</code><code class="vb lang-vb">&lt;ExtensionAttribute&gt;
+Public Shared Function List(operations As IEdgeNodesOperations) As IPage(Of EdgeNode)</code></pre>
     
     
               <h4>Parameters</h4>
@@ -438,8 +460,8 @@ Public Shared Function List(operations As IEdgeNodesOperations) As EdgenodeResul
               <ul class="memberDetails">
                 <li>
                   <div class="single">                
-                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.cdn.models.edgenoderesult">EdgenodeResult</a></div>
-                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.cdn.models.edgenoderesult">EdgenodeResult</a></div>
+                      <div class="lang-csharp"><span class="xref">Microsoft.Rest.Azure.IPage</span>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.edgenode">EdgeNode</a>&gt;</div>
+                      <div class="lang-vb"><span class="xref">Microsoft.Rest.Azure.IPage</span>(Of <a class="xref" href="microsoft.azure.management.cdn.models.edgenode">EdgeNode</a>)</div>
                   </div>
                   
                 </li>
@@ -469,8 +491,8 @@ Public Shared Function List(operations As IEdgeNodesOperations) As EdgenodeResul
             <p>Lists all the edge nodes of a CDN service.</p>
 
     
-            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Task&lt;EdgenodeResult&gt; ListAsync(this IEdgeNodesOperations operations, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">&lt;ExtensionAttribute&gt;
-Public Shared Function ListAsync(operations As IEdgeNodesOperations, cancellationToken As CancellationToken = Nothing) As Task(Of EdgenodeResult)</code></pre>
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Task&lt;IPage&lt;EdgeNode&gt;&gt; ListAsync(this IEdgeNodesOperations operations, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">&lt;ExtensionAttribute&gt;
+Public Shared Function ListAsync(operations As IEdgeNodesOperations, cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of EdgeNode))</code></pre>
     
     
               <h4>Parameters</h4>
@@ -503,8 +525,149 @@ Public Shared Function ListAsync(operations As IEdgeNodesOperations, cancellatio
               <ul class="memberDetails">
                 <li>
                   <div class="single">                
-                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.edgenoderesult">EdgenodeResult</a>&gt;</div>
-                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="microsoft.azure.management.cdn.models.edgenoderesult">EdgenodeResult</a>)</div>
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<span class="xref">Microsoft.Rest.Azure.IPage</span>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.edgenode">EdgeNode</a>&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <span class="xref">Microsoft.Rest.Azure.IPage</span>(Of <a class="xref" href="microsoft.azure.management.cdn.models.edgenode">EdgeNode</a>))</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_EdgeNodesOperationsExtensions_ListNext_Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_System_String_">
+    
+            <a id="Microsoft_Azure_Management_Cdn_EdgeNodesOperationsExtensions_ListNext_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/EdgeNodesOperationsExtensions.cs/#L61" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ListNext(IEdgeNodesOperations, String)</div>        
+            <div class="lang-vb">ListNext(IEdgeNodesOperations, String)</div>        
+          </div>
+    
+            <p>Lists all the edge nodes of a CDN service.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static IPage&lt;EdgeNode&gt; ListNext(this IEdgeNodesOperations operations, string nextPageLink)</code><code class="vb lang-vb">&lt;ExtensionAttribute&gt;
+Public Shared Function ListNext(operations As IEdgeNodesOperations, nextPageLink As String) As IPage(Of EdgeNode)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>operations</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.cdn.iedgenodesoperations">IEdgeNodesOperations</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.management.cdn.iedgenodesoperations">IEdgeNodesOperations</a></div>
+                  </dd>
+                  </dl>
+                  <p>The operations group for this extension method.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>nextPageLink</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The NextLink from the previous successful call to List operation.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">Microsoft.Rest.Azure.IPage</span>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.edgenode">EdgeNode</a>&gt;</div>
+                      <div class="lang-vb"><span class="xref">Microsoft.Rest.Azure.IPage</span>(Of <a class="xref" href="microsoft.azure.management.cdn.models.edgenode">EdgeNode</a>)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_EdgeNodesOperationsExtensions_ListNextAsync_Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_System_String_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_Azure_Management_Cdn_EdgeNodesOperationsExtensions_ListNextAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/EdgeNodesOperationsExtensions.cs/#L78" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ListNextAsync(IEdgeNodesOperations, String, CancellationToken)</div>        
+            <div class="lang-vb">ListNextAsync(IEdgeNodesOperations, String, CancellationToken)</div>        
+          </div>
+    
+            <p>Lists all the edge nodes of a CDN service.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Task&lt;IPage&lt;EdgeNode&gt;&gt; ListNextAsync(this IEdgeNodesOperations operations, string nextPageLink, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">&lt;ExtensionAttribute&gt;
+Public Shared Function ListNextAsync(operations As IEdgeNodesOperations, nextPageLink As String, cancellationToken As CancellationToken = Nothing) As Task(Of IPage(Of EdgeNode))</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>operations</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.cdn.iedgenodesoperations">IEdgeNodesOperations</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.management.cdn.iedgenodesoperations">IEdgeNodesOperations</a></div>
+                  </dd>
+                  </dl>
+                  <p>The operations group for this extension method.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>nextPageLink</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The NextLink from the previous successful call to List operation.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The cancellation token.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<span class="xref">Microsoft.Rest.Azure.IPage</span>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.edgenode">EdgeNode</a>&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <span class="xref">Microsoft.Rest.Azure.IPage</span>(Of <a class="xref" href="microsoft.azure.management.cdn.models.edgenode">EdgeNode</a>))</div>
                   </div>
                   
                 </li>

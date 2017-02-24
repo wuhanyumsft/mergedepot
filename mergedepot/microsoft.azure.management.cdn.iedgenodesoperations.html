@@ -30,14 +30,15 @@
 <meta name="site_name" content="Docs">
 <meta name="search.ms_product" content="Azure">
 <meta name="depot_name" content="Azure.azuredotnet">
-<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/e94ef2bde5332ae6306299662a592890e0d555d2/docs-ref-autogen/Cdn/Microsoft.Azure.Management.Cdn.IEdgeNodesOperations.yml">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/a216401c7bd6476de586fb873cc3af3051787f03/docs-ref-autogen/Cdn/Microsoft.Azure.Management.Cdn.IEdgeNodesOperations.yml">
 <meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Cdn/Microsoft.Azure.Management.Cdn.IEdgeNodesOperations.yml">
 <meta name="APIName" content="Microsoft.Azure.Management.Cdn.IEdgeNodesOperations">
 <meta name="APIName" content="Microsoft.Azure.Management.Cdn.IEdgeNodesOperations.ListWithHttpMessagesAsync">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.IEdgeNodesOperations.ListNextWithHttpMessagesAsync">
 <meta name="APILocation" content="Microsoft.Azure.Management.Cdn.dll">
 <meta name="TopicType" content="apiref">
 <meta name="APIType" content="Assembly">
-<meta name="updated_at" content="2017-02-13 06:19 AM">
+<meta name="updated_at" content="2017-02-24 12:22 AM">
 <meta name="document_id" content="19b84050-e8c4-2d3f-e889-4a2b6da221ba">
 <meta name="pagetype" content="Reference">
 <meta name="description" content="EdgeNodesOperations operations.
@@ -301,6 +302,16 @@
     <table class="nameValue">
         <tr class=" enable-platform-filter">
           <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_ListNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ListNextWithHttpMessagesAsync(String, Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_ListNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ListNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Lists all the edge nodes of a CDN service.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
             <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_ListWithHttpMessagesAsync_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ListWithHttpMessagesAsync(Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</a></div>
             <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_ListWithHttpMessagesAsync_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ListWithHttpMessagesAsync(Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
@@ -318,6 +329,108 @@
     
       <ul class="list-clean enable-platform-filter">
     
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_ListNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_ListNextWithHttpMessagesAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/IEdgeNodesOperations.cs/#L66" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ListNextWithHttpMessagesAsync(String, Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</div>        
+            <div class="lang-vb">ListNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
+          </div>
+    
+            <p>Lists all the edge nodes of a CDN service.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;EdgeNode&gt;&gt;&gt; ListNextWithHttpMessagesAsync(string nextPageLink, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function ListNextWithHttpMessagesAsync(nextPageLink As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of EdgeNode)))</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>nextPageLink</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The NextLink from the previous successful call to List operation.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>customHeaders</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>))</div>
+                  </dd>
+                  </dl>
+                  <p>The headers that will be added to request.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The cancellation token.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>&lt;<span class="xref">Microsoft.Rest.Azure.IPage</span>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.edgenode">EdgeNode</a>&gt;&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>(Of <span class="xref">Microsoft.Rest.Azure.IPage</span>(Of <a class="xref" href="microsoft.azure.management.cdn.models.edgenode">EdgeNode</a>)))</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.cdn.models.errorresponseexception">ErrorResponseException</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.cdn.models.errorresponseexception">ErrorResponseException</a></div>
+                  </div>
+                  <p>Thrown when the operation returned an invalid status code</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">Microsoft.Rest.SerializationException</span></div>
+                      <div class="lang-vb"><span class="xref">Microsoft.Rest.SerializationException</span></div>
+                  </div>
+                  <p>Thrown when unable to deserialize the response</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">Microsoft.Rest.ValidationException</span></div>
+                      <div class="lang-vb"><span class="xref">Microsoft.Rest.ValidationException</span></div>
+                  </div>
+                  <p>Thrown when a required parameter is null</p>
+
+                </li>
+              </ul>
+    
+          
+    
+    
+    
+    
+        </li>
         <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_ListWithHttpMessagesAsync_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">
     
             <a id="Microsoft_Azure_Management_Cdn_IEdgeNodesOperations_ListWithHttpMessagesAsync_"></a>
@@ -334,7 +447,7 @@
             <p>Lists all the edge nodes of a CDN service.</p>
 
     
-            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;EdgenodeResult&gt;&gt; ListWithHttpMessagesAsync(Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function ListWithHttpMessagesAsync(customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of EdgenodeResult))</code></pre>
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;EdgeNode&gt;&gt;&gt; ListWithHttpMessagesAsync(Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function ListWithHttpMessagesAsync(customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of EdgeNode)))</code></pre>
     
     
               <h4>Parameters</h4>
@@ -367,8 +480,8 @@
               <ul class="memberDetails">
                 <li>
                   <div class="single">                
-                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.edgenoderesult">EdgenodeResult</a>&gt;&gt;</div>
-                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>(Of <a class="xref" href="microsoft.azure.management.cdn.models.edgenoderesult">EdgenodeResult</a>))</div>
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>&lt;<span class="xref">Microsoft.Rest.Azure.IPage</span>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.edgenode">EdgeNode</a>&gt;&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>(Of <span class="xref">Microsoft.Rest.Azure.IPage</span>(Of <a class="xref" href="microsoft.azure.management.cdn.models.edgenode">EdgeNode</a>)))</div>
                   </div>
                   
                 </li>
