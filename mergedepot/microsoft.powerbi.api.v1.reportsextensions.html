@@ -30,19 +30,21 @@
 <meta name="site_name" content="Docs">
 <meta name="search.ms_product" content="Azure">
 <meta name="depot_name" content="Azure.azuredotnet">
-<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/71d95605ec4e312dd60a299f8c38c8e69baec41f/docs-ref-autogen/Data/PowerBI/Microsoft.PowerBI.Api.V1.ReportsExtensions.yml">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/1a8f31218839bbed8400953508eab1556a969f21/docs-ref-autogen/Data/PowerBI/Microsoft.PowerBI.Api.V1.ReportsExtensions.yml">
 <meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Data/PowerBI/Microsoft.PowerBI.Api.V1.ReportsExtensions.yml">
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.ReportsExtensions">
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.ReportsExtensions.GetReports">
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.ReportsExtensions.GetReportsAsync">
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.ReportsExtensions.CloneReport">
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.ReportsExtensions.CloneReportAsync">
+<meta name="APIName" content="Microsoft.PowerBI.Api.V1.ReportsExtensions.DeleteReport">
+<meta name="APIName" content="Microsoft.PowerBI.Api.V1.ReportsExtensions.DeleteReportAsync">
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.ReportsExtensions.RebindReport">
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.ReportsExtensions.RebindReportAsync">
 <meta name="APILocation" content="Microsoft.PowerBI.Api.dll">
 <meta name="TopicType" content="apiref">
 <meta name="APIType" content="Assembly">
-<meta name="updated_at" content="2017-02-13 06:24 PM">
+<meta name="updated_at" content="2017-02-28 12:47 AM">
 <meta name="document_id" content="03d7cfa3-7952-5612-2e37-85a6051da233">
 <meta name="pagetype" content="Reference">
 <meta name="description" content="Extension methods for Reports.
@@ -396,6 +398,26 @@
         </tr>
         <tr class=" enable-platform-filter">
           <td>
+            <div class="lang-csharp"><a href="#Microsoft_PowerBI_Api_V1_ReportsExtensions_DeleteReport_Microsoft_PowerBI_Api_V1_IReports_System_String_System_String_System_String_">DeleteReport(IReports, String, String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_PowerBI_Api_V1_ReportsExtensions_DeleteReport_Microsoft_PowerBI_Api_V1_IReports_System_String_System_String_System_String_">DeleteReport(IReports, String, String, String)</a></div>
+          </td>
+            <td>
+            <p>Deletes the specified report</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_PowerBI_Api_V1_ReportsExtensions_DeleteReportAsync_Microsoft_PowerBI_Api_V1_IReports_System_String_System_String_System_String_System_Threading_CancellationToken_">DeleteReportAsync(IReports, String, String, String, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_PowerBI_Api_V1_ReportsExtensions_DeleteReportAsync_Microsoft_PowerBI_Api_V1_IReports_System_String_System_String_System_String_System_Threading_CancellationToken_">DeleteReportAsync(IReports, String, String, String, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Deletes the specified report</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
             <div class="lang-csharp"><a href="#Microsoft_PowerBI_Api_V1_ReportsExtensions_GetReports_Microsoft_PowerBI_Api_V1_IReports_System_String_System_String_">GetReports(IReports, String, String)</a></div>
             <div class="lang-vb"><a href="#Microsoft_PowerBI_Api_V1_ReportsExtensions_GetReports_Microsoft_PowerBI_Api_V1_IReports_System_String_System_String_">GetReports(IReports, String, String)</a></div>
           </td>
@@ -650,6 +672,191 @@ Public Shared Function CloneReportAsync(operations As IReports, collectionName A
     
     
         </li>
+        <li class=" enable-platform-filter" id="Microsoft_PowerBI_Api_V1_ReportsExtensions_DeleteReport_Microsoft_PowerBI_Api_V1_IReports_System_String_System_String_System_String_">
+    
+            <a id="Microsoft_PowerBI_Api_V1_ReportsExtensions_DeleteReport_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Microsoft/PowerBI-CSharpmaster/sdk/PowerBI.Api/Source/ReportsExtensions.cs/#L127" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeleteReport(IReports, String, String, String)</div>        
+            <div class="lang-vb">DeleteReport(IReports, String, String, String)</div>        
+          </div>
+    
+            <p>Deletes the specified report</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static object DeleteReport(this IReports operations, string collectionName, string workspaceId, string reportKey)</code><code class="vb lang-vb">&lt;ExtensionAttribute&gt;
+Public Shared Function DeleteReport(operations As IReports, collectionName As String, workspaceId As String, reportKey As String) As Object</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>operations</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.powerbi.api.v1.ireports">IReports</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.powerbi.api.v1.ireports">IReports</a></div>
+                  </dd>
+                  </dl>
+                  <p>The operations group for this extension method.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>collectionName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The workspace collection name</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>workspaceId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The workspace id</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>reportKey</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The report id</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_PowerBI_Api_V1_ReportsExtensions_DeleteReportAsync_Microsoft_PowerBI_Api_V1_IReports_System_String_System_String_System_String_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_PowerBI_Api_V1_ReportsExtensions_DeleteReportAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Microsoft/PowerBI-CSharpmaster/sdk/PowerBI.Api/Source/ReportsExtensions.cs/#L150" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeleteReportAsync(IReports, String, String, String, CancellationToken)</div>        
+            <div class="lang-vb">DeleteReportAsync(IReports, String, String, String, CancellationToken)</div>        
+          </div>
+    
+            <p>Deletes the specified report</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Task&lt;object&gt; DeleteReportAsync(this IReports operations, string collectionName, string workspaceId, string reportKey, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">&lt;ExtensionAttribute&gt;
+Public Shared Function DeleteReportAsync(operations As IReports, collectionName As String, workspaceId As String, reportKey As String, cancellationToken As CancellationToken = Nothing) As Task(Of Object)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>operations</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.powerbi.api.v1.ireports">IReports</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.powerbi.api.v1.ireports">IReports</a></div>
+                  </dd>
+                  </dl>
+                  <p>The operations group for this extension method.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>collectionName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The workspace collection name</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>workspaceId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The workspace id</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>reportKey</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The report id</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The cancellation token.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
         <li class=" enable-platform-filter" id="Microsoft_PowerBI_Api_V1_ReportsExtensions_GetReports_Microsoft_PowerBI_Api_V1_IReports_System_String_System_String_">
     
             <a id="Microsoft_PowerBI_Api_V1_ReportsExtensions_GetReports_"></a>
@@ -818,7 +1025,7 @@ Public Shared Function GetReportsAsync(operations As IReports, collectionName As
             <a id="Microsoft_PowerBI_Api_V1_ReportsExtensions_RebindReport_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Microsoft/PowerBI-CSharpmaster/sdk/PowerBI.Api/Source/ReportsExtensions.cs/#L130" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Microsoft/PowerBI-CSharpmaster/sdk/PowerBI.Api/Source/ReportsExtensions.cs/#L176" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
@@ -916,7 +1123,7 @@ Public Shared Function RebindReport(operations As IReports, collectionName As St
             <a id="Microsoft_PowerBI_Api_V1_ReportsExtensions_RebindReportAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Microsoft/PowerBI-CSharpmaster/sdk/PowerBI.Api/Source/ReportsExtensions.cs/#L156" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Microsoft/PowerBI-CSharpmaster/sdk/PowerBI.Api/Source/ReportsExtensions.cs/#L202" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">

@@ -30,7 +30,7 @@
 <meta name="site_name" content="Docs">
 <meta name="search.ms_product" content="Azure">
 <meta name="depot_name" content="Azure.azuredotnet">
-<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/71d95605ec4e312dd60a299f8c38c8e69baec41f/docs-ref-autogen/Data/PowerBI/Microsoft.PowerBI.Api.V1.Reports.yml">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/1a8f31218839bbed8400953508eab1556a969f21/docs-ref-autogen/Data/PowerBI/Microsoft.PowerBI.Api.V1.Reports.yml">
 <meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Data/PowerBI/Microsoft.PowerBI.Api.V1.Reports.yml">
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.Reports">
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.Reports..ctor">
@@ -38,11 +38,12 @@
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.Reports.get_Client">
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.Reports.GetReportsWithHttpMessagesAsync">
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.Reports.CloneReportWithHttpMessagesAsync">
+<meta name="APIName" content="Microsoft.PowerBI.Api.V1.Reports.DeleteReportWithHttpMessagesAsync">
 <meta name="APIName" content="Microsoft.PowerBI.Api.V1.Reports.RebindReportWithHttpMessagesAsync">
 <meta name="APILocation" content="Microsoft.PowerBI.Api.dll">
 <meta name="TopicType" content="apiref">
 <meta name="APIType" content="Assembly">
-<meta name="updated_at" content="2017-02-13 06:24 PM">
+<meta name="updated_at" content="2017-02-28 12:47 AM">
 <meta name="document_id" content="f4fb2a4a-8286-9a19-4df9-4bdedf17a3b5">
 <meta name="pagetype" content="Reference">
 <meta name="description" content="Reports operations.
@@ -417,6 +418,16 @@
         </tr>
         <tr class=" enable-platform-filter">
           <td>
+            <div class="lang-csharp"><a href="#Microsoft_PowerBI_Api_V1_Reports_DeleteReportWithHttpMessagesAsync_System_String_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">DeleteReportWithHttpMessagesAsync(String, String, String, Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_PowerBI_Api_V1_Reports_DeleteReportWithHttpMessagesAsync_System_String_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">DeleteReportWithHttpMessagesAsync(String, String, String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Deletes the specified report</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
             <div class="lang-csharp"><a href="#Microsoft_PowerBI_Api_V1_Reports_GetReportsWithHttpMessagesAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetReportsWithHttpMessagesAsync(String, String, Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</a></div>
             <div class="lang-vb"><a href="#Microsoft_PowerBI_Api_V1_Reports_GetReportsWithHttpMessagesAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">GetReportsWithHttpMessagesAsync(String, String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
           </td>
@@ -652,6 +663,103 @@
     
     
         </li>
+        <li class=" enable-platform-filter" id="Microsoft_PowerBI_Api_V1_Reports_DeleteReportWithHttpMessagesAsync_System_String_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_PowerBI_Api_V1_Reports_DeleteReportWithHttpMessagesAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Microsoft/PowerBI-CSharpmaster/sdk/PowerBI.Api/Source/Reports.cs/#L353" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeleteReportWithHttpMessagesAsync(String, String, String, Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</div>        
+            <div class="lang-vb">DeleteReportWithHttpMessagesAsync(String, String, String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
+          </div>
+    
+            <p>Deletes the specified report</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task&lt;HttpOperationResponse&lt;object&gt;&gt; DeleteReportWithHttpMessagesAsync(string collectionName, string workspaceId, string reportKey, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Public Function DeleteReportWithHttpMessagesAsync(collectionName As String, workspaceId As String, reportKey As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of HttpOperationResponse(Of Object))</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>collectionName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The workspace collection name</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>workspaceId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The workspace id</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>reportKey</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The report id</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>customHeaders</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>))</div>
+                  </dd>
+                  </dl>
+                  <p>Headers that will be added to request.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The cancellation token.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<span class="xref">Microsoft.Rest.HttpOperationResponse</span>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <span class="xref">Microsoft.Rest.HttpOperationResponse</span>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>))</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
         <li class=" enable-platform-filter" id="Microsoft_PowerBI_Api_V1_Reports_GetReportsWithHttpMessagesAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">
     
             <a id="Microsoft_PowerBI_Api_V1_Reports_GetReportsWithHttpMessagesAsync_"></a>
@@ -743,7 +851,7 @@
             <a id="Microsoft_PowerBI_Api_V1_Reports_RebindReportWithHttpMessagesAsync_"></a>
     
             <div class="memberEditButton">
-              <a href="https://github.com/Microsoft/PowerBI-CSharpmaster/sdk/PowerBI.Api/Source/Reports.cs/#L356" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+              <a href="https://github.com/Microsoft/PowerBI-CSharpmaster/sdk/PowerBI.Api/Source/Reports.cs/#L496" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
             </div>
     
           <div class="memberName">
