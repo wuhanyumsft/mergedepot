@@ -29,22 +29,23 @@
 <meta name="site_name" content="Docs">
 <meta name="search.ms_product" content="Azure">
 <meta name="depot_name" content="Azure.azuredotnet">
-<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/4e881259ec8ca1e21ca308adaf402005dab149b9/docs-ref-autogen/StorageDataMovement/Microsoft.WindowsAzure.Storage.DataMovement.TransferException.yml">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/60f0d26fed4068fc7fb451d2be029c106b39011e/docs-ref-autogen/StorageDataMovement/Microsoft.WindowsAzure.Storage.DataMovement.TransferException.yml">
 <meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/StorageDataMovement/Microsoft.WindowsAzure.Storage.DataMovement.TransferException.yml">
 <meta name="APIName" content="Microsoft.WindowsAzure.Storage.DataMovement.TransferException">
 <meta name="APIName" content="Microsoft.WindowsAzure.Storage.DataMovement.TransferException..ctor">
 <meta name="APIName" content="Microsoft.WindowsAzure.Storage.DataMovement.TransferException.ErrorCode">
 <meta name="APIName" content="Microsoft.WindowsAzure.Storage.DataMovement.TransferException.get_ErrorCode">
+<meta name="APIName" content="Microsoft.WindowsAzure.Storage.DataMovement.TransferException.GetObjectData">
 <meta name="APILocation" content="Microsoft.WindowsAzure.Storage.DataMovement.dll">
 <meta name="TopicType" content="apiref">
 <meta name="APIType" content="Assembly">
-<meta name="updated_at" content="2017-02-08 02:43 AM">
+<meta name="updated_at" content="2017-02-28 03:25 AM">
 <meta name="document_id" content="555c57c2-858d-8448-d631-3b847ee40a47">
 <meta name="pagetype" content="Reference">
 <meta name="description" content="Base exception class for exceptions thrown by Blob/FileTransferJobs.
 ">
 <meta name="toc_rel" content="toc2.json">
-<meta name="source_url" content="https://github.com/Azure/azure-storage-net-data-movement/blob/master/lib/Exceptions/TransferException.cs/#L18">
+<meta name="source_url" content="https://github.com/Azure/azure-storage-net-data-movement/blob/master/lib/Exceptions/TransferException.cs/#L16">
 <meta name="ms.assetid" content="Microsoft.WindowsAzure.Storage.DataMovement.TransferException">
 
     
@@ -195,7 +196,7 @@
 					
 						
 							<li>
-								<a href="https://github.com/Azure/azure-storage-net-data-movement/blob/master/lib/Exceptions/TransferException.cs/#L18" ms.cmpnm="viewsource"><i class="icon icon-code"></i>View Code</a>
+								<a href="https://github.com/Azure/azure-storage-net-data-movement/blob/master/lib/Exceptions/TransferException.cs/#L16" ms.cmpnm="viewsource"><i class="icon icon-code"></i>View Code</a>
 							</li>
 						
 					
@@ -280,15 +281,18 @@
       <h3>In this Article</h3>
     </nav><div class="summary">
     		<div class="memberEditButton">
-    			<a href="https://github.com/Azure/azure-storage-net-data-movementmaster/lib/Exceptions/TransferException.cs/#L18" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+    			<a href="https://github.com/Azure/azure-storage-net-data-movementmaster/lib/Exceptions/TransferException.cs/#L16" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
     		</div>
     	<p>Base exception class for exceptions thrown by Blob/FileTransferJobs.</p>
 
     </div><h2>Syntax</h2>
     
     	<h3>Declaration</h3>
-    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public class TransferException : Exception</code><code class="vb lang-vb">Public Class TransferException
-    Inherits Exception</code></pre>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[Serializable]
+public class TransferException : Exception, ISerializable, _Exception</code><code class="vb lang-vb">&lt;Serializable&gt;
+Public Class TransferException
+    Inherits Exception
+    Implements ISerializable, _Exception</code></pre>
     
     
     
@@ -302,13 +306,21 @@
             <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
           </div>
         </li>
-      <li class="l1">
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.exception(v=vs.110).aspx">Exception</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.exception(v=vs.110).aspx">Exception</a>
+          </div>
+        </li>
+      <li class="l2">
         <div class="xref">
           <div class="lang-csharp">TransferException</div>
           <div class="lang-vb">TransferException</div>
         </div>
       </li>
-        <li class="l2">
+        <li class="l3">
           <div class="lang-csharp">
             <a class="xref" href="microsoft.windowsazure.storage.datamovement.transferskippedexception">TransferSkippedException</a>
           </div>
@@ -318,6 +330,130 @@
         </li>
     </ul>
     
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4>System.Exception</h4>
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/49kcee3b(v=vs.110).aspx">GetBaseException</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/49kcee3b(v=vs.110).aspx">GetBaseException</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/es4y6f7e(v=vs.110).aspx">ToString</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/es4y6f7e(v=vs.110).aspx">ToString</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/44zb316t(v=vs.110).aspx">GetType</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/44zb316t(v=vs.110).aspx">GetType</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/9btwf6wk(v=vs.110).aspx">Message</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/9btwf6wk(v=vs.110).aspx">Message</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/2wyfbc48(v=vs.110).aspx">Data</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/2wyfbc48(v=vs.110).aspx">Data</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/902sca80(v=vs.110).aspx">InnerException</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/902sca80(v=vs.110).aspx">InnerException</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/2wchw354(v=vs.110).aspx">TargetSite</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/2wchw354(v=vs.110).aspx">TargetSite</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/dxzhy005(v=vs.110).aspx">StackTrace</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/dxzhy005(v=vs.110).aspx">StackTrace</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/71tawy4s(v=vs.110).aspx">HelpLink</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/71tawy4s(v=vs.110).aspx">HelpLink</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/85weac5w(v=vs.110).aspx">Source</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/85weac5w(v=vs.110).aspx">Source</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/sh5cw61c(v=vs.110).aspx">HResult</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/sh5cw61c(v=vs.110).aspx">HResult</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/ee332915(v=vs.110).aspx">SerializeObjectState</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/ee332915(v=vs.110).aspx">SerializeObjectState</a>
+          </div>
+          
+        <h4>System.Object</h4>
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">ReferenceEquals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">ReferenceEquals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">GetHashCode</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">GetHashCode</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">MemberwiseClone</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">MemberwiseClone</a>()
+          </div>
+          
+      </div>
     
     
     
@@ -358,8 +494,18 @@
         </tr>
         <tr class=" enable-platform-filter">
           <td>
-            <div class="lang-csharp"><a href="#Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_Microsoft_WindowsAzure_Storage_DataMovement_TransferErrorCode_System_String_Exception_">TransferException(TransferErrorCode, String, Exception)</a></div>
-            <div class="lang-vb"><a href="#Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_Microsoft_WindowsAzure_Storage_DataMovement_TransferErrorCode_System_String_Exception_">TransferException(TransferErrorCode, String, Exception)</a></div>
+            <div class="lang-csharp"><a href="#Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_Microsoft_WindowsAzure_Storage_DataMovement_TransferErrorCode_System_String_System_Exception_">TransferException(TransferErrorCode, String, Exception)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_Microsoft_WindowsAzure_Storage_DataMovement_TransferErrorCode_System_String_System_Exception_">TransferException(TransferErrorCode, String, Exception)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <a class="xref" href="microsoft.windowsazure.storage.datamovement.transferexception">TransferException</a> class.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">TransferException(SerializationInfo, StreamingContext)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">TransferException(SerializationInfo, StreamingContext)</a></div>
           </td>
             <td>
             <p>Initializes a new instance of the <a class="xref" href="microsoft.windowsazure.storage.datamovement.transferexception">TransferException</a> class.</p>
@@ -378,8 +524,8 @@
         </tr>
         <tr class=" enable-platform-filter">
           <td>
-            <div class="lang-csharp"><a href="#Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_System_String_Exception_">TransferException(String, Exception)</a></div>
-            <div class="lang-vb"><a href="#Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_System_String_Exception_">TransferException(String, Exception)</a></div>
+            <div class="lang-csharp"><a href="#Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_System_String_System_Exception_">TransferException(String, Exception)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_System_String_System_Exception_">TransferException(String, Exception)</a></div>
           </td>
             <td>
             <p>Initializes a new instance of the <a class="xref" href="microsoft.windowsazure.storage.datamovement.transferexception">TransferException</a> class.</p>
@@ -398,6 +544,21 @@
           </td>
             <td>
             <p>Gets the detailed error code.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_WindowsAzure_Storage_DataMovement_TransferException_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">GetObjectData(SerializationInfo, StreamingContext)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_WindowsAzure_Storage_DataMovement_TransferException_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">GetObjectData(SerializationInfo, StreamingContext)</a></div>
+          </td>
+            <td>
+            <p>Serializes the exception.</p>
 
             </td>
         </tr>
@@ -536,7 +697,7 @@
     
     
         </li>
-        <li class=" enable-platform-filter" id="Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_Microsoft_WindowsAzure_Storage_DataMovement_TransferErrorCode_System_String_Exception_">
+        <li class=" enable-platform-filter" id="Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_Microsoft_WindowsAzure_Storage_DataMovement_TransferErrorCode_System_String_System_Exception_">
     
             <a id="Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_"></a>
     
@@ -583,11 +744,65 @@
                   <dl>
                   <dt>innerException</dt>
                   <dd>
-                    <div class="lang-csharp"><span class="xref">Exception</span></div>
-                    <div class="lang-vb"><span class="xref">Exception</span></div>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.exception(v=vs.110).aspx">Exception</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.exception(v=vs.110).aspx">Exception</a></div>
                   </dd>
                   </dl>
                   <p>Inner exception.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">
+    
+            <a id="Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-storage-net-data-movementmaster/lib/Exceptions/TransferException.cs/#L115" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">TransferException(SerializationInfo, StreamingContext)</div>        
+            <div class="lang-vb">TransferException(SerializationInfo, StreamingContext)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <a class="xref" href="microsoft.windowsazure.storage.datamovement.transferexception">TransferException</a> class.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected TransferException(SerializationInfo info, StreamingContext context)</code><code class="vb lang-vb">Protected Sub New(info As SerializationInfo, context As StreamingContext)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>info</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.serialization.serializationinfo(v=vs.110).aspx">SerializationInfo</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.serialization.serializationinfo(v=vs.110).aspx">SerializationInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>Serialization information.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>context</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.serialization.streamingcontext(v=vs.110).aspx">StreamingContext</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.serialization.streamingcontext(v=vs.110).aspx">StreamingContext</a></div>
+                  </dd>
+                  </dl>
+                  <p>Streaming context.</p>
 
                 </li>
               </ul>
@@ -644,7 +859,7 @@
     
     
         </li>
-        <li class=" enable-platform-filter" id="Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_System_String_Exception_">
+        <li class=" enable-platform-filter" id="Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_System_String_System_Exception_">
     
             <a id="Microsoft_WindowsAzure_Storage_DataMovement_TransferException__ctor_"></a>
     
@@ -680,8 +895,8 @@
                   <dl>
                   <dt>ex</dt>
                   <dd>
-                    <div class="lang-csharp"><span class="xref">Exception</span></div>
-                    <div class="lang-vb"><span class="xref">Exception</span></div>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.exception(v=vs.110).aspx">Exception</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.exception(v=vs.110).aspx">Exception</a></div>
                   </dd>
                   </dl>
                   <p>The exception that is the cause of the current exception, or a null reference
@@ -749,6 +964,76 @@ if no inner exception is specified.</p>
     
         </li>
       </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_WindowsAzure_Storage_DataMovement_TransferException_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">
+    
+            <a id="Microsoft_WindowsAzure_Storage_DataMovement_TransferException_GetObjectData_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-storage-net-data-movementmaster/lib/Exceptions/TransferException.cs/#L147" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetObjectData(SerializationInfo, StreamingContext)</div>        
+            <div class="lang-vb">GetObjectData(SerializationInfo, StreamingContext)</div>        
+          </div>
+    
+            <p>Serializes the exception.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void GetObjectData(SerializationInfo info, StreamingContext context)</code><code class="vb lang-vb">Public Overrides Sub GetObjectData(info As SerializationInfo, context As StreamingContext)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>info</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.serialization.serializationinfo(v=vs.110).aspx">SerializationInfo</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.serialization.serializationinfo(v=vs.110).aspx">SerializationInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>Serialization info object.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>context</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.serialization.streamingcontext(v=vs.110).aspx">StreamingContext</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.serialization.streamingcontext(v=vs.110).aspx">StreamingContext</a></div>
+                  </dd>
+                  </dl>
+                  <p>Streaming context.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+          <h4>Overrides</h4>
+            <div class="lang-csharp">
+              <a class="xref" href="https://msdn.microsoft.com/en-us/library/fwb1489e(v=vs.110).aspx">Exception.GetObjectData(SerializationInfo, StreamingContext)</a>
+            </div>
+            <div class="lang-vb">
+              <a class="xref" href="https://msdn.microsoft.com/en-us/library/fwb1489e(v=vs.110).aspx">Exception.GetObjectData(SerializationInfo, StreamingContext)</a>
+            </div>
+    
+    
+    
+    
+        </li>
+      </ul>
     </section>
     
     
@@ -757,6 +1042,8 @@ if no inner exception is specified.</p>
     
     
     
+      <h2>Attributes</h2>
+          <div><span class="xref">System.SerializableAttribute</span></div>
     
       <h2>Details</h2>
         <div class="lang-csharp lang-vb enable-lang-filter detailTile">
