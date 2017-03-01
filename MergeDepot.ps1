@@ -1,5 +1,3 @@
-echo "Hello World."
-
 # Add specific step for azure
 # Download Azure Transform tool
 Add-type -AssemblyName "System.IO.Compression.FileSystem"
@@ -33,7 +31,11 @@ git status
 
 # Call merge depot
 echo "Clean merge depot"
+Copy-Item ".\mergedepot\.manifest.json" -Destination ".\.optemp\.manifest.json"
 remove-item -path ".\mergedepot" -Force -Recurse
+New-Item "mergedepot" -ItemType Directory
+Copy-Item ".\.optemp\.manifest.json" -Destination ".\mergedepot\.manifest.json"
+
 echo "Start to call merge depot tool"
 &"$MergeDepotTool" "$currentFolder\mergedepot"
 echo "Finish calling merge depot tool"
@@ -44,4 +46,3 @@ git add * -A | Write-Host
 git commit -m "update" | Write-Host
 git push origin master 2>&1 | Write-Host
 echo "Finish pushing to git repository"
-
