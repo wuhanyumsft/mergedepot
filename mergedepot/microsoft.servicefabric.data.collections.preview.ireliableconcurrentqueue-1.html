@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="IReliableConcurrentQueue<T> interface">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="service-fabric">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/8ece26063f2f27414f0bad873159ee6212f3448d/docs-ref-manual/Data/ServiceFabric/Microsoft.ServiceFabric.Data.Collections.Preview.IReliableConcurrentQueue-1.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-manual/Data/ServiceFabric/Microsoft.ServiceFabric.Data.Collections.Preview.IReliableConcurrentQueue-1.yml">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.Collections.Preview.IReliableConcurrentQueue&lt;T&gt;">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.Collections.Preview.IReliableConcurrentQueue&lt;T&gt;.EnqueueAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.Collections.Preview.IReliableConcurrentQueue&lt;T&gt;.DequeueAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.Collections.Preview.IReliableConcurrentQueue&lt;T&gt;.Count">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.Collections.Preview.IReliableConcurrentQueue&lt;T&gt;.get_Count">
+<meta name="APILocation" content="Microsoft.ServiceFabric.Data.Interfaces.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2016-12-19 07:26 AM">
+<meta name="document_id" content="95031da0-8aa2-30e6-a8a3-09d2d3ce1d64">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="
+Preview feature. Not for production use. See the documentation for details.
+
+
+Represents a reliable collection of persisted, replicated values with best-effort first-in first-out ordering.
+
+">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Interfaces/Collections/Preview/IReliableConcurrentQueue.cs&amp;version=GBdevelop&amp;line=66">
+<meta name="ms.assetid" content="Microsoft.ServiceFabric.Data.Collections.Preview.IReliableConcurrentQueue`1">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1" rel="canonical">
+    <title>IReliableConcurrentQueue<t> interface | Microsoft Docs</t></title>
+    <link rel="stylesheet" href="_themes/css/d1d5acab8c02cc720733.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+							<li>
+								<a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Interfaces/Collections/Preview/IReliableConcurrentQueue.cs&version=GBdevelop&line=66" ms.cmpnm="viewsource"><i class="icon icon-code"></i>View Code</a>
+							</li>
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1">
+      <span class="lang-csharp">IReliableConcurrentQueue&lt;T&gt;</span>
+      <span class="lang-vb">IReliableConcurrentQueue(Of T)</span>
+        Interface
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    		<div class="memberEditButton">
+    			<a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Interfaces/Collections/Preview/IReliableConcurrentQueue.cs&amp;version=GBdevelop&amp;line=65" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+    		</div>
+    	<p>
+Preview feature. Not for production use. See the <a href="https://aka.ms/reliableconcurrentqueuepreview">documentation</a> for details.
+</p>
+<p>
+Represents a reliable collection of persisted, replicated values with best-effort first-in first-out ordering.
+</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public interface IReliableConcurrentQueue&lt;T&gt; : IReliableState</code><code class="vb lang-vb">Public Interface IReliableConcurrentQueue(Of T)
+    Inherits IReliableState</code></pre>
+    
+    
+    	<h2>Type Parameters</h2>
+    
+    	<table class="nameValue">
+    		<tr>
+    		<td>
+    		T
+    		</td>
+    		<td>
+    		<p>The type of the values contained in the reliable queue slim.</p>
+
+    		</td>
+    		</tr>
+    	</table>
+    
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4>Microsoft.ServiceFabric.Data.IReliableState</h4>
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.servicefabric.data.ireliablestate#Microsoft_ServiceFabric_Data_IReliableState_Name">Name</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="microsoft.servicefabric.data.ireliablestate#Microsoft_ServiceFabric_Data_IReliableState_Name">Name</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <p>
+Intended as an alternative to <a class="xref" href="microsoft.servicefabric.data.collections.ireliablequeue-1">IReliableQueue&lt;T&gt;</a> for workloads where strict ordering is not required, as by relaxing
+the ordering constraint, concurrency can be greatly improved.  <a class="xref" href="microsoft.servicefabric.data.collections.ireliablequeue-1">IReliableQueue&lt;T&gt;</a> restricts concurrent consumers
+and producers to a maximum of one each, while <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1">IReliableConcurrentQueue&lt;T&gt;</a> imposes no such restriction.
+</p>
+<p>
+<a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1">IReliableConcurrentQueue&lt;T&gt;</a> does not offer the same transaction isolation semantics as the other reliable data structures.  See the 
+individual operations and properties (<a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_EnqueueAsync_Microsoft_ServiceFabric_Data_ITransaction__0_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">EnqueueAsync(ITransaction, T, CancellationToken, Nullable&lt;TimeSpan&gt;)</a>, <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">DequeueAsync(ITransaction, CancellationToken, Nullable&lt;TimeSpan&gt;)</a>, and <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_Count">Count</a>) for details on what isolation, 
+if any, they provide.
+</p>
+<p>
+It is expected that values will be relatively short-lived in the queue; in other words, that the egress (<a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">DequeueAsync(ITransaction, CancellationToken, Nullable&lt;TimeSpan&gt;)</a>) rate is 
+equal to or greater than the ingress (<a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_EnqueueAsync_Microsoft_ServiceFabric_Data_ITransaction__0_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">EnqueueAsync(ITransaction, T, CancellationToken, Nullable&lt;TimeSpan&gt;)</a>) rate.  Violating this expectation 
+may worsen system performance.  A planned queue capacity constraint which will throttle incoming Enqueues once the capacity is reached
+will help in maintaining this property.
+property.
+</p>
+<p>
+As the ordering of elements is not strictly guaranteed, assumptions about the ordering of any two values in the queue MUST NOT
+be made.  The best-effort first-in first-out ordering is provided for fairness; the time that an value spends in the queue should
+be related to the failure rate (failures may alter the queue&#39;s ordering) and the dequeue rate, but not the enqueue rate.
+</p>
+<p>
+<a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1">IReliableConcurrentQueue&lt;T&gt;</a> does not offer a Peek operation, however by combining <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">DequeueAsync(ITransaction, CancellationToken, Nullable&lt;TimeSpan&gt;)</a> and <a class="xref" href="microsoft.servicefabric.data.itransaction#Microsoft_ServiceFabric_Data_ITransaction_Abort">Abort()</a>
+the same semantic can be achieved.  See <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">DequeueAsync(ITransaction, CancellationToken, Nullable&lt;TimeSpan&gt;)</a> for additional details and an example.
+</p>
+<p>
+Values stored in this queue MUST NOT be mutated outside the context of an operation on the queue. It is
+highly recommended to make <em>T</em> immutable in order to avoid accidental data corruption.
+</p>
+<p>
+Transaction is the unit of concurrency: Users can have multiple transactions in-flight at any given point of time but for a given transaction each API must be called one at a time.
+So all Reliable Collection APIs that take in a transaction and return a Task, must be awaited one at a time.
+<a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a>
+</p>
+
+    
+    
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_Count">Count</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_Count">Count</a></div>
+          </td>
+            <td>
+            <p>
+Preview feature. Not for production use. See the <a href="https://aka.ms/reliableconcurrentqueuepreview">documentation</a> for details.
+</p>
+<p>
+Gets the number of values in the <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1">IReliableConcurrentQueue&lt;T&gt;</a>.
+</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">DequeueAsync(ITransaction, CancellationToken, Nullable&lt;TimeSpan&gt;)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">DequeueAsync(ITransaction, CancellationToken, Nullable(Of TimeSpan))</a></div>
+          </td>
+            <td>
+            <p>
+Preview feature. Not for production use. See the <a href="https://aka.ms/reliableconcurrentqueuepreview">documentation</a> for details.
+</p>
+<p>
+Tentatively dequeue a value from the queue.
+</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_EnqueueAsync_Microsoft_ServiceFabric_Data_ITransaction__0_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">EnqueueAsync(ITransaction, T, CancellationToken, Nullable&lt;TimeSpan&gt;)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_EnqueueAsync_Microsoft_ServiceFabric_Data_ITransaction__0_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">EnqueueAsync(ITransaction, T, CancellationToken, Nullable(Of TimeSpan))</a></div>
+          </td>
+            <td>
+            <p>
+Preview feature. Not for production use. See the <a href="https://aka.ms/reliableconcurrentqueuepreview">documentation</a> for details.
+</p>
+<p>
+Stage the enqueue of a value into the queue.
+</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_Count">
+    
+            <a id="Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_Count_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Interfaces/Collections/Preview/IReliableConcurrentQueue.cs&amp;version=GBdevelop&amp;line=323" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Count</div>        
+            <div class="lang-vb">Count</div>        
+          </div>
+    
+            <p>
+Preview feature. Not for production use. See the <a href="https://aka.ms/reliableconcurrentqueuepreview">documentation</a> for details.
+</p>
+<p>
+Gets the number of values in the <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1">IReliableConcurrentQueue&lt;T&gt;</a>.
+</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">long Count { get; }</code><code class="vb lang-vb">ReadOnly Property Count As Long</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                  </div>
+                  <p>The number of values in  the <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1">IReliableConcurrentQueue&lt;T&gt;</a>.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.fabric.fabricnotreadableexception">FabricNotReadableException</a></div>
+                      <div class="lang-vb"><a class="xref" href="system.fabric.fabricnotreadableexception">FabricNotReadableException</a></div>
+                  </div>
+                  <p>The replica is currently not readable.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.fabric.fabricobjectclosedexception">FabricObjectClosedException</a></div>
+                      <div class="lang-vb"><a class="xref" href="system.fabric.fabricobjectclosedexception">FabricObjectClosedException</a></div>
+                  </div>
+                  <p>The <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1">IReliableConcurrentQueue&lt;T&gt;</a> was closed by the runtime.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>
+This count represents the number of values currently visible to <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">DequeueAsync(ITransaction, CancellationToken, Nullable&lt;TimeSpan&gt;)</a>.  Uncommitted Enqueues will not
+increase the count, however uncommitted Dequeues will decrease the count.
+</p>
+<p>
+Note that this API does not take a transaction parameter.  Since the effects of <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">DequeueAsync(ITransaction, CancellationToken, Nullable&lt;TimeSpan&gt;)</a> are not isolated
+from other transactions, the count also cannot be isolated from other transactions.<br></p>
+
+    
+            <h4>Example</h4>
+            
+This example shows how to monitor the queue's count infinitely, until the cancellation token is canceled.
+<pre><code>protected override async Task RunAsync(CancellationToken cancellationToken)
+{
+    var concurrentQueue = await this.StateManager.GetOrAddAsync&lt;IReliableConcurrentQueue&lt;long&gt;&gt;(new Uri("fabric:/concurrentQueue"));
+
+    // Assumption: values are being enqueued/dequeued in another place (e.g. the communication listener).
+    var observer = Task.Run(
+        async () =&gt;
+            {
+                while (true)
+                {
+                    cancellationToken.ThrowIfCancellationRequested();
+
+                    try
+                    {
+                        Console.WriteLine("Count: " + concurrentQueue.Count);
+                    }
+                    catch (FabricNotReadableException e)
+                    {
+                        // Retry until the queue is readable or a different exception is thrown.
+                        Console.WriteLine("Queue is not readable, retrying the observation: " + e);
+                    }
+                    catch (FabricObjectClosedException e)
+                    {
+                        // Gracefully exit as this is happening due to replica close.
+                        Console.WriteLine("Replica is closing, stopping observer: " + e);
+                        return;
+                    }
+
+                    await Task.Delay(TimeSpan.FromMilliseconds(100), cancellationToken);
+                }
+            },
+        cancellationToken);
+}</code></pre>
+
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">
+    
+            <a id="Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Interfaces/Collections/Preview/IReliableConcurrentQueue.cs&amp;version=GBdevelop&amp;line=258" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">DequeueAsync(ITransaction, CancellationToken, Nullable&lt;TimeSpan&gt;)</div>        
+            <div class="lang-vb">DequeueAsync(ITransaction, CancellationToken, Nullable(Of TimeSpan))</div>        
+          </div>
+    
+            <p>
+Preview feature. Not for production use. See the <a href="https://aka.ms/reliableconcurrentqueuepreview">documentation</a> for details.
+</p>
+<p>
+Tentatively dequeue a value from the queue.
+</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;T&gt; DequeueAsync(ITransaction tx, CancellationToken cancellationToken = null, TimeSpan? timeout = null)</code><code class="vb lang-vb">Function DequeueAsync(tx As ITransaction, cancellationToken As CancellationToken = Nothing, timeout As TimeSpan? = Nothing) As Task(Of T)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tx</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                  </dd>
+                  </dl>
+                  <p>Transaction to associate this operation with.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests. The default is <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd780763(v=vs.110).aspx">None</a>.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a>&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a>)</div>
+                  </dd>
+                  </dl>
+                  <p>The amount of time to wait for the operation to complete before throwing a TimeoutException. The default is null.  If null is passed, a default timeout will be used.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of T)</div>
+                  </div>
+                  <p>A task that represents the asynchronous dequeue operation.  The task result is the value dequeued.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.fabric.fabricnotprimaryexception">FabricNotPrimaryException</a></div>
+                      <div class="lang-vb"><a class="xref" href="system.fabric.fabricnotprimaryexception">FabricNotPrimaryException</a></div>
+                  </div>
+                  <p>The replica is no longer in <cref name="ReplicaRole.Primary"></cref>.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.fabric.fabricnotreadableexception">FabricNotReadableException</a></div>
+                      <div class="lang-vb"><a class="xref" href="system.fabric.fabricnotreadableexception">FabricNotReadableException</a></div>
+                  </div>
+                  <p>The replica is currently not readable.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.fabric.fabricobjectclosedexception">FabricObjectClosedException</a></div>
+                      <div class="lang-vb"><a class="xref" href="system.fabric.fabricobjectclosedexception">FabricObjectClosedException</a></div>
+                  </div>
+                  <p>The <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1">IReliableConcurrentQueue&lt;T&gt;</a> was closed by the runtime.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.collections.preview.queueemptyexception">QueueEmptyException</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.collections.preview.queueemptyexception">QueueEmptyException</a></div>
+                  </div>
+                  <p>The queue is currently empty.  Retriable; when encountering this exception, the caller should wait some time for additional enqueue operations
+before issuing another dequeue.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timeoutexception(v=vs.110).aspx">TimeoutException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timeoutexception(v=vs.110).aspx">TimeoutException</a></div>
+                  </div>
+                  <p>The operation was unable to be completed within the given timeout.  The transaction should be aborted and
+a new transaction should be created to retry.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.argumentnullexception(v=vs.110).aspx">ArgumentNullException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.argumentnullexception(v=vs.110).aspx">ArgumentNullException</a></div>
+                  </div>
+                  <p><em>tx</em> is null.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                  </div>
+                  <p>The operation was canceled via <em>cancellationToken</em>.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.invalidoperationexception(v=vs.110).aspx">InvalidOperationException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.invalidoperationexception(v=vs.110).aspx">InvalidOperationException</a></div>
+                  </div>
+                  <p>Thrown when a method call is invalid for the object&#39;s current state.
+Example, transaction used is already terminated: committed or aborted.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>
+While <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">DequeueAsync(ITransaction, CancellationToken, Nullable&lt;TimeSpan&gt;)</a> can only return values for which the corresponding <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_EnqueueAsync_Microsoft_ServiceFabric_Data_ITransaction__0_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">EnqueueAsync(ITransaction, T, CancellationToken, Nullable&lt;TimeSpan&gt;)</a> was committed, Dequeue operations are not isolated
+from one another.  Once a transaction has dequeued a value, other transactions cannot dequeue it, but are not blocked from dequeuing other values.
+</p>
+<p>
+When a transaction or transactions including one or more <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">DequeueAsync(ITransaction, CancellationToken, Nullable&lt;TimeSpan&gt;)</a> operations aborts, the dequeued values will be added back at
+the head of the queue in an arbitrary order.  This will ensure that these values will be dequeued again soon, improving the fairness of the
+data structure, but without enforcing strict ordering (which would require reducing the allowed concurrency, as in <a class="xref" href="microsoft.servicefabric.data.collections.ireliablequeue-1">IReliableQueue&lt;T&gt;</a>).
+</p>
+
+    
+            <h4>Example</h4>
+            
+This example shows how to dequeue and log infinitely with retry, until the cancellation token is canceled.  
+<pre><code>protected override async Task RunAsync(CancellationToken cancellationToken)
+{
+    var concurrentQueue = await this.StateManager.GetOrAddAsync&lt;IReliableConcurrentQueue&lt;long&gt;&gt;(new Uri("fabric:/concurrentQueue"));
+
+    // Assumption: values are being enqueued by another source (e.g. the communication listener).
+    while (true)
+    {
+        cancellationToken.ThrowIfCancellationRequested();
+
+        try
+        {
+            using (var tx = this.StateManager.CreateTransaction())
+            {
+                var dequeueOutput = await concurrentQueue.DequeueAsync(tx, cancellationToken);
+                await tx.CommitAsync();
+                Console.WriteLine("Dequeue #" + dequeueOutput);
+            }
+        }
+        catch (FabricNotPrimaryException e)
+        {
+            // Gracefully exit RunAsync as the new primary should have RunAsync invoked on it and continue work.
+            // If instead dequeue was being executed as part of a client request, the client would be signaled to re-resolve.
+            Console.WriteLine("Replica is not primary, exiting RunAsync: " + e);
+            return;
+        }
+        catch (FabricNotReadableException e)
+        {
+            // Retry until the queue is readable or a different exception is thrown.
+            Console.WriteLine("Queue is not readable, retrying the transaction: " + e);
+        }
+        catch (FabricObjectClosedException e)
+        {
+            // Gracefully exit RunAsync as this is happening due to replica close.
+            // If instead dequeue was being executed as part of a client request, the client would be signaled to re-resolve.
+            Console.WriteLine("Replica is closing, exiting RunAsync: " + e);
+            return;
+        }
+        catch (QueueEmptyException e)
+        {
+            Console.WriteLine("Queue was empty for DequeueAsync, retrying the transaction: " + e);
+        }
+        catch (TimeoutException e)
+        {
+            Console.WriteLine("Encountered TimeoutException during DequeueAsync, retrying the transaction: " + e);
+        }
+
+        // Delay and retry.
+        await Task.Delay(TimeSpan.FromMilliseconds(100), cancellationToken);
+    }
+}</code></pre>
+
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_EnqueueAsync_Microsoft_ServiceFabric_Data_ITransaction__0_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">
+    
+            <a id="Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_EnqueueAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Interfaces/Collections/Preview/IReliableConcurrentQueue.cs&amp;version=GBdevelop&amp;line=156" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">EnqueueAsync(ITransaction, T, CancellationToken, Nullable&lt;TimeSpan&gt;)</div>        
+            <div class="lang-vb">EnqueueAsync(ITransaction, T, CancellationToken, Nullable(Of TimeSpan))</div>        
+          </div>
+    
+            <p>
+Preview feature. Not for production use. See the <a href="https://aka.ms/reliableconcurrentqueuepreview">documentation</a> for details.
+</p>
+<p>
+Stage the enqueue of a value into the queue.
+</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task EnqueueAsync(ITransaction tx, T value, CancellationToken cancellationToken = null, TimeSpan? timeout = null)</code><code class="vb lang-vb">Function EnqueueAsync(tx As ITransaction, value As T, cancellationToken As CancellationToken = Nothing, timeout As TimeSpan? = Nothing) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tx</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                  </dd>
+                  </dl>
+                  <p>Transaction to associate this operation with.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">T</span></div>
+                    <div class="lang-vb"><span class="xref">T</span></div>
+                  </dd>
+                  </dl>
+                  <p>The value to add to the end of the queue. The value can be null for reference types.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests. The default is <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd780763(v=vs.110).aspx">None</a>.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a>&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a>)</div>
+                  </dd>
+                  </dl>
+                  <p>The amount of time to wait for the operation to complete before throwing a TimeoutException. The default is null.  If null is passed, a default timeout will be used.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>Task that represents the asynchronous enqueue operation.</p>
+
+                </li>
+              </ul>
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.fabric.fabricnotprimaryexception">FabricNotPrimaryException</a></div>
+                      <div class="lang-vb"><a class="xref" href="system.fabric.fabricnotprimaryexception">FabricNotPrimaryException</a></div>
+                  </div>
+                  <p>The replica is no longer in <cref name="ReplicaRole.Primary"></cref>.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.fabric.fabricnotreadableexception">FabricNotReadableException</a></div>
+                      <div class="lang-vb"><a class="xref" href="system.fabric.fabricnotreadableexception">FabricNotReadableException</a></div>
+                  </div>
+                  <p>The replica is currently not readable.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.fabric.fabricobjectclosedexception">FabricObjectClosedException</a></div>
+                      <div class="lang-vb"><a class="xref" href="system.fabric.fabricobjectclosedexception">FabricObjectClosedException</a></div>
+                  </div>
+                  <p>The <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1">IReliableConcurrentQueue&lt;T&gt;</a> was closed by the runtime.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timeoutexception(v=vs.110).aspx">TimeoutException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timeoutexception(v=vs.110).aspx">TimeoutException</a></div>
+                  </div>
+                  <p>The operation was unable to be completed within the given timeout.  The transaction should be aborted and
+a new transaction should be created to retry.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.argumentnullexception(v=vs.110).aspx">ArgumentNullException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.argumentnullexception(v=vs.110).aspx">ArgumentNullException</a></div>
+                  </div>
+                  <p><em>tx</em> is null.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.operationcanceledexception(v=vs.110).aspx">OperationCanceledException</a></div>
+                  </div>
+                  <p>The operation was canceled via <em>cancellationToken</em>.</p>
+
+                </li>
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.invalidoperationexception(v=vs.110).aspx">InvalidOperationException</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.invalidoperationexception(v=vs.110).aspx">InvalidOperationException</a></div>
+                  </div>
+                  <p>Thrown when a method call is invalid for the object&#39;s current state.
+Example, transaction used is already terminated: committed or aborted.</p>
+
+                </li>
+              </ul>
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>A <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_DequeueAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">DequeueAsync(ITransaction, CancellationToken, Nullable&lt;TimeSpan&gt;)</a> operation cannot return any value for which its <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_EnqueueAsync_Microsoft_ServiceFabric_Data_ITransaction__0_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">EnqueueAsync(ITransaction, T, CancellationToken, Nullable&lt;TimeSpan&gt;)</a> has not yet been committed.
+This includes the transaction in which the value was enqueued; as a consequence, <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1">IReliableConcurrentQueue&lt;T&gt;</a> does not support Read-Your-Writes.</p>
+
+    
+            <h4>Example</h4>
+            
+This example shows how to use <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_EnqueueAsync_Microsoft_ServiceFabric_Data_ITransaction__0_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">EnqueueAsync(ITransaction, T, CancellationToken, Nullable&lt;TimeSpan&gt;)</a> to enqueue a value with retry.
+<pre><code>protected override async Task RunAsync(CancellationToken cancellationToken)
+{
+    var concurrentQueue = await this.StateManager.GetOrAddAsync&lt;IReliableConcurrentQueue&lt;long&gt;&gt;(new Uri("fabric:/concurrentQueue"));
+
+    while (true)
+    {
+        cancellationToken.ThrowIfCancellationRequested();
+
+        try
+        {
+            using (var tx = this.StateManager.CreateTransaction())
+            {
+                await concurrentQueue.EnqueueAsync(tx, 12L, cancellationToken);
+                await tx.CommitAsync();
+
+                return;
+            }
+        }
+        catch (FabricNotPrimaryException e)
+        {
+            // Gracefully exit RunAsync as the new primary should have RunAsync invoked on it and continue work.
+            // If instead enqueue was being executed as part of a client request, the client would be signaled to re-resolve.
+            Console.WriteLine("Replica is not primary, exiting RunAsync: " + e);
+            return;
+        }
+        catch (FabricNotReadableException e)
+        {
+            // Retry until the queue is readable or a different exception is thrown.
+            Console.WriteLine("Queue is not readable, retrying the transaction: " + e);
+        }
+        catch (FabricObjectClosedException e)
+        {
+            // Gracefully exit RunAsync as this is happening due to replica close.
+            // If instead enqueue was being executed as part of a client request, the client would be signaled to re-resolve.
+            Console.WriteLine("Replica is closing, exiting RunAsync: " + e);
+            return;
+        }
+        catch (TimeoutException e)
+        {
+            Console.WriteLine("Encountered TimeoutException during EnqueueAsync, retrying the transaction: " + e);
+        }
+
+        // Delay and retry.
+        await Task.Delay(TimeSpan.FromMilliseconds(100), cancellationToken);
+    }
+}</code></pre>
+
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+      <h2>Details</h2>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Namespace</h4>    
+          <div>Microsoft.ServiceFabric.Data.Collections.Preview</div>
+        </div>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Assembly</h4>    
+          <div>Microsoft.ServiceFabric.Data.Interfaces.dll</div>
+        </div>
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/d1d5acab8c02cc720733.reference.js"></script>
+  </body>
+</html>

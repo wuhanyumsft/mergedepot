@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="GC class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System/System.GC.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System/System.GC.yml">
+<meta name="APIName" content="System.GC">
+<meta name="APIName" content="System.GC.AddMemoryPressure">
+<meta name="APIName" content="System.GC.CancelFullGCNotification">
+<meta name="APIName" content="System.GC.Collect">
+<meta name="APIName" content="System.GC.CollectionCount">
+<meta name="APIName" content="System.GC.EndNoGCRegion">
+<meta name="APIName" content="System.GC.GetGeneration">
+<meta name="APIName" content="System.GC.GetTotalMemory">
+<meta name="APIName" content="System.GC.KeepAlive">
+<meta name="APIName" content="System.GC.MaxGeneration">
+<meta name="APIName" content="System.GC.RegisterForFullGCNotification">
+<meta name="APIName" content="System.GC.RemoveMemoryPressure">
+<meta name="APIName" content="System.GC.ReRegisterForFinalize">
+<meta name="APIName" content="System.GC.SuppressFinalize">
+<meta name="APIName" content="System.GC.TryStartNoGCRegion">
+<meta name="APIName" content="System.GC.WaitForFullGCApproach">
+<meta name="APIName" content="System.GC.WaitForFullGCComplete">
+<meta name="APIName" content="System.GC.WaitForPendingFinalizers">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="532c639c-6471-cfe0-7e0c-ba98db7d1b12">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.GC">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system/system.gc" rel="canonical">
+    <title>GC class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_GC">
+      <span class="lang-csharp">GC</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public static class GC</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">GC</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_MaxGeneration">MaxGeneration</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_AddMemoryPressure_System_Int64_">AddMemoryPressure(Int64)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_CancelFullGCNotification">CancelFullGCNotification()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_Collect">Collect()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_Collect_System_Int32_">Collect(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_Collect_System_Int32_System_GCCollectionMode_">Collect(Int32,GCCollectionMode)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_Collect_System_Int32_System_GCCollectionMode_System_Boolean_">Collect(Int32,GCCollectionMode,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_Collect_System_Int32_System_GCCollectionMode_System_Boolean_System_Boolean_">Collect(Int32,GCCollectionMode,Boolean,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_CollectionCount_System_Int32_">CollectionCount(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_EndNoGCRegion">EndNoGCRegion()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_GetGeneration_System_Object_">GetGeneration(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_GetGeneration_System_WeakReference_">GetGeneration(WeakReference)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_GetTotalMemory_System_Boolean_">GetTotalMemory(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_KeepAlive_System_Object_">KeepAlive(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_RegisterForFullGCNotification_System_Int32_System_Int32_">RegisterForFullGCNotification(Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_RemoveMemoryPressure_System_Int64_">RemoveMemoryPressure(Int64)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_ReRegisterForFinalize_System_Object_">ReRegisterForFinalize(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_SuppressFinalize_System_Object_">SuppressFinalize(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_TryStartNoGCRegion_System_Int64_">TryStartNoGCRegion(Int64)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_TryStartNoGCRegion_System_Int64_System_Boolean_">TryStartNoGCRegion(Int64,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_TryStartNoGCRegion_System_Int64_System_Int64_">TryStartNoGCRegion(Int64,Int64)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_TryStartNoGCRegion_System_Int64_System_Int64_System_Boolean_">TryStartNoGCRegion(Int64,Int64,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_WaitForFullGCApproach">WaitForFullGCApproach()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_WaitForFullGCApproach_System_Int32_">WaitForFullGCApproach(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_WaitForFullGCComplete">WaitForFullGCComplete()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_WaitForFullGCComplete_System_Int32_">WaitForFullGCComplete(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_GC_WaitForPendingFinalizers">WaitForPendingFinalizers()</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_MaxGeneration">
+    
+            <a id="System_GC_MaxGeneration_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MaxGeneration</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static int MaxGeneration { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_AddMemoryPressure_System_Int64_">
+    
+            <a id="System_GC_AddMemoryPressure_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddMemoryPressure(Int64)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void AddMemoryPressure (long bytesAllocated);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>bytesAllocated</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_CancelFullGCNotification">
+    
+            <a id="System_GC_CancelFullGCNotification_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CancelFullGCNotification()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void CancelFullGCNotification ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_Collect">
+    
+            <a id="System_GC_Collect_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Collect()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void Collect ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_Collect_System_Int32_">
+    
+            <a id="System_GC_Collect_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Collect(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void Collect (int generation);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>generation</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_Collect_System_Int32_System_GCCollectionMode_">
+    
+            <a id="System_GC_Collect_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Collect(Int32,GCCollectionMode)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void Collect (int generation, GCCollectionMode mode);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>generation</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>mode</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.gccollectionmode">GCCollectionMode</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_Collect_System_Int32_System_GCCollectionMode_System_Boolean_">
+    
+            <a id="System_GC_Collect_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Collect(Int32,GCCollectionMode,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void Collect (int generation, GCCollectionMode mode, bool blocking);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>generation</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>mode</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.gccollectionmode">GCCollectionMode</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>blocking</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_Collect_System_Int32_System_GCCollectionMode_System_Boolean_System_Boolean_">
+    
+            <a id="System_GC_Collect_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Collect(Int32,GCCollectionMode,Boolean,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void Collect (int generation, GCCollectionMode mode, bool blocking, bool compacting);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>generation</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>mode</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.gccollectionmode">GCCollectionMode</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>blocking</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>compacting</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_CollectionCount_System_Int32_">
+    
+            <a id="System_GC_CollectionCount_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CollectionCount(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static int CollectionCount (int generation);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>generation</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_EndNoGCRegion">
+    
+            <a id="System_GC_EndNoGCRegion_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EndNoGCRegion()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void EndNoGCRegion ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_GetGeneration_System_Object_">
+    
+            <a id="System_GC_GetGeneration_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetGeneration(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static int GetGeneration (object obj);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>obj</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_GetGeneration_System_WeakReference_">
+    
+            <a id="System_GC_GetGeneration_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetGeneration(WeakReference)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static int GetGeneration (WeakReference wo);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>wo</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.weakreference">WeakReference</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_GetTotalMemory_System_Boolean_">
+    
+            <a id="System_GC_GetTotalMemory_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetTotalMemory(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static long GetTotalMemory (bool forceFullCollection);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>forceFullCollection</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.int64">Int64</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_KeepAlive_System_Object_">
+    
+            <a id="System_GC_KeepAlive_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">KeepAlive(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void KeepAlive (object obj);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>obj</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_RegisterForFullGCNotification_System_Int32_System_Int32_">
+    
+            <a id="System_GC_RegisterForFullGCNotification_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RegisterForFullGCNotification(Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void RegisterForFullGCNotification (int maxGenerationThreshold, int largeObjectHeapThreshold);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>maxGenerationThreshold</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>largeObjectHeapThreshold</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_RemoveMemoryPressure_System_Int64_">
+    
+            <a id="System_GC_RemoveMemoryPressure_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveMemoryPressure(Int64)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void RemoveMemoryPressure (long bytesAllocated);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>bytesAllocated</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_ReRegisterForFinalize_System_Object_">
+    
+            <a id="System_GC_ReRegisterForFinalize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReRegisterForFinalize(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void ReRegisterForFinalize (object obj);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>obj</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_SuppressFinalize_System_Object_">
+    
+            <a id="System_GC_SuppressFinalize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SuppressFinalize(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void SuppressFinalize (object obj);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>obj</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_TryStartNoGCRegion_System_Int64_">
+    
+            <a id="System_GC_TryStartNoGCRegion_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TryStartNoGCRegion(Int64)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool TryStartNoGCRegion (long totalSize);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>totalSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_TryStartNoGCRegion_System_Int64_System_Boolean_">
+    
+            <a id="System_GC_TryStartNoGCRegion_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TryStartNoGCRegion(Int64,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool TryStartNoGCRegion (long totalSize, bool disallowFullBlockingGC);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>totalSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>disallowFullBlockingGC</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_TryStartNoGCRegion_System_Int64_System_Int64_">
+    
+            <a id="System_GC_TryStartNoGCRegion_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TryStartNoGCRegion(Int64,Int64)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool TryStartNoGCRegion (long totalSize, long lohSize);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>totalSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>lohSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_TryStartNoGCRegion_System_Int64_System_Int64_System_Boolean_">
+    
+            <a id="System_GC_TryStartNoGCRegion_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TryStartNoGCRegion(Int64,Int64,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool TryStartNoGCRegion (long totalSize, long lohSize, bool disallowFullBlockingGC);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>totalSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>lohSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int64">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>disallowFullBlockingGC</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_WaitForFullGCApproach">
+    
+            <a id="System_GC_WaitForFullGCApproach_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WaitForFullGCApproach()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static GCNotificationStatus WaitForFullGCApproach ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.gcnotificationstatus">GCNotificationStatus</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_WaitForFullGCApproach_System_Int32_">
+    
+            <a id="System_GC_WaitForFullGCApproach_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WaitForFullGCApproach(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static GCNotificationStatus WaitForFullGCApproach (int millisecondsTimeout);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>millisecondsTimeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.gcnotificationstatus">GCNotificationStatus</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_WaitForFullGCComplete">
+    
+            <a id="System_GC_WaitForFullGCComplete_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WaitForFullGCComplete()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static GCNotificationStatus WaitForFullGCComplete ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.gcnotificationstatus">GCNotificationStatus</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_WaitForFullGCComplete_System_Int32_">
+    
+            <a id="System_GC_WaitForFullGCComplete_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WaitForFullGCComplete(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static GCNotificationStatus WaitForFullGCComplete (int millisecondsTimeout);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>millisecondsTimeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.gcnotificationstatus">GCNotificationStatus</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_GC_WaitForPendingFinalizers">
+    
+            <a id="System_GC_WaitForPendingFinalizers_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WaitForPendingFinalizers()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void WaitForPendingFinalizers ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

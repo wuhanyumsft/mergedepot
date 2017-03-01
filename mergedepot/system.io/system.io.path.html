@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Path class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/d432243688396e79347ab17831acbc0dd6d93fed/halfdotnet/System.IO/System.IO.Path.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO/System.IO.Path.yml">
+<meta name="APIName" content="System.IO.Path">
+<meta name="APIName" content="System.IO.Path.AltDirectorySeparatorChar">
+<meta name="APIName" content="System.IO.Path.ChangeExtension">
+<meta name="APIName" content="System.IO.Path.Combine">
+<meta name="APIName" content="System.IO.Path.DirectorySeparatorChar">
+<meta name="APIName" content="System.IO.Path.GetDirectoryName">
+<meta name="APIName" content="System.IO.Path.GetExtension">
+<meta name="APIName" content="System.IO.Path.GetFileName">
+<meta name="APIName" content="System.IO.Path.GetFileNameWithoutExtension">
+<meta name="APIName" content="System.IO.Path.GetFullPath">
+<meta name="APIName" content="System.IO.Path.GetInvalidFileNameChars">
+<meta name="APIName" content="System.IO.Path.GetInvalidPathChars">
+<meta name="APIName" content="System.IO.Path.GetPathRoot">
+<meta name="APIName" content="System.IO.Path.GetRandomFileName">
+<meta name="APIName" content="System.IO.Path.GetTempFileName">
+<meta name="APIName" content="System.IO.Path.GetTempPath">
+<meta name="APIName" content="System.IO.Path.HasExtension">
+<meta name="APIName" content="System.IO.Path.InvalidPathChars">
+<meta name="APIName" content="System.IO.Path.IsPathRooted">
+<meta name="APIName" content="System.IO.Path.PathSeparator">
+<meta name="APIName" content="System.IO.Path.VolumeSeparatorChar">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-15 07:39 AM">
+<meta name="document_id" content="1649b916-d6e2-7d82-b584-29bd20fd46aa">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Performs operations on  instances that contain file or directory path information. These operations are performed in a cross-platform manner.  
+ To browse the .NET Framework source code for this typeâ€¦">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.Path">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.io/system.io.path" rel="canonical">
+    <title>Path class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_Path">
+      <span class="lang-csharp">Path</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Performs operations on <a class="xref" href="../system/system.string">String</a> instances that contain file or directory path information. These operations are performed in a cross-platform manner.  </p>
+<p> To browse the .NET Framework source code for this type, see the <a href="http://referencesource.microsoft.com/#mscorlib/system/io/path.cs#090eca8621a248ee">Reference Source</a>.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public static class Path</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">Path</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <div class="NOTE"><h5>Note</h5><p> To view the .NET Framework source code for this type, see the <a href="http://referencesource.microsoft.com/#mscorlib/system/io/path.cs#090eca8621a248ee">Reference Source</a>. You can browse through the source code online, download the reference for offline viewing, and step through the sources (including patches and updates) during debugging; see <a href="http://referencesource.microsoft.com/">instructions</a>.  </p>
+</div>
+<p> The .NET Framework does not support direct access to physical disks through paths that are device names, such as &quot;\\.\PHYSICALDRIVE0 &quot;.  </p>
+<p> A path is a string that provides the location of a file or directory. A path does not necessarily point to a location on disk; for example, a path might map to a location in memory or on a device. The exact format of a path is determined by the current platform. For example, on some systems, a path can start with a drive or volume letter, while this element is not present in other systems. On some systems, file paths can contain extensions, which indicate the type of information stored in the file. The format of a file name extension is platform-dependent; for example, some systems limit extensions to three characters, and others do not. The current platform also determines the set of characters used to separate the elements of a path, and the set of characters that cannot be used when specifying paths. Because of these differences, the fields of the <code>Path</code> class as well as the exact behavior of some members of the <code>Path</code> class are platform-dependent.  </p>
+<p> A path can contain absolute or relative location information. Absolute paths fully specify a location: the file or directory can be uniquely identified regardless of the current location. Relative paths specify a partial location: the current location is used as the starting point when locating a file specified with a relative path. To determine the current directory, call <a class="xref" href="system.io.directory#System_IO_Directory_GetCurrentDirectory_">GetCurrentDirectory</a>.  </p>
+<p> Most members of the <code>Path</code> class do not interact with the file system and do not verify the existence of the file specified by a path string. <code>Path</code> class members that modify a path string, such as <a class="xref" href="system.io.path#System_IO_Path_ChangeExtension_">ChangeExtension</a>, have no effect on names of files in the file system. <code>Path</code> members do, however, validate the contents of a specified path string, and throw an <a class="xref" href="../system/system.argumentexception">ArgumentException</a> exception if the string contains characters that are not valid in path strings, as defined in the characters returned from the <a class="xref" href="system.io.path#System_IO_Path_GetInvalidPathChars_">GetInvalidPathChars</a> method. For example, on Windows-based desktop platforms, invalid path characters might include quote (&quot;), less than (&lt;), greater than (&gt;), pipe (&#124;), backspace (\b), null (\0), and Unicode characters 16 through 18 and 20 through 25.  </p>
+<p> The members of the <code>Path</code> class enable you to quickly and easily perform common operations such as determining whether a file name extension is part of a path, and combining two strings into one path name.  </p>
+<p> All members of the <code>Path</code> class are static and can therefore be called without having an instance of a path.  </p>
+<div class="NOTE"><h5>Note</h5><p> In members that accept a path as an input string, that path must be well-formed or an exception is raised. For example, if a path is fully qualified but begins with a space, the path is not trimmed in methods of the class. Therefore, the path is malformed and an exception is raised. Similarly, a path or a combination of paths cannot be fully qualified twice. For example, &quot;c:\temp c:\windows&quot; also raises an exception in most cases. Ensure that your paths are well-formed when using methods that accept a path string.  </p>
+</div>
+<p> In members that accept a path, the path can refer to a file or just a directory. The specified path can also refer to a relative path or a Universal Naming Convention (UNC) path for a server and share name. For example, all the following are acceptable paths:  </p>
+<ul>
+<li><p>&quot;c:\\MyDir\\MyFile.txt&quot; in C#, or &quot;c:\MyDir\MyFile.txt&quot; in Visual Basic.  </p>
+</li>
+<li><p>&quot;c:\\MyDir&quot; in C#, or &quot;c:\MyDir&quot; in Visual Basic.  </p>
+</li>
+<li><p>&quot;MyDir\\MySubdir&quot; in C#, or &quot;MyDir\MySubDir&quot; in Visual Basic.  </p>
+</li>
+<li><p>&quot;\\\\MyServer\\MyShare&quot; in C#, or &quot;\\MyServer\MyShare&quot; in Visual Basic.  </p>
+<p>Because all these operations are performed on strings, it is impossible to verify that the results are valid in all scenarios. For example, the <a class="xref" href="system.io.path#System_IO_Path_GetExtension_">GetExtension</a> method parses a string that you pass to it and returns the extension from that string. However, this does not mean that a file with that extension exists on the disk.  </p>
+<p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+</li>
+</ul>
+
+    
+    
+    <h2>Fields
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_AltDirectorySeparatorChar">AltDirectorySeparatorChar</a></div>
+          </td>
+            <td>
+            <p>Provides a platform-specific alternate character used to separate directory levels in a path string that reflects a hierarchical file system organization.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a></div>
+          </td>
+            <td>
+            <p>Provides a platform-specific character used to separate directory levels in a path string that reflects a hierarchical file system organization.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_InvalidPathChars">InvalidPathChars</a></div>
+          </td>
+            <td>
+            <p>Provides a platform-specific array of characters that cannot be specified in path string arguments passed to members of the <see cref="T:System.IO.Path"> class.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_PathSeparator">PathSeparator</a></div>
+          </td>
+            <td>
+            <p>A platform-specific separator character used to separate path strings in environment variables.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_VolumeSeparatorChar">VolumeSeparatorChar</a></div>
+          </td>
+            <td>
+            <p>Provides a platform-specific volume separator character.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_ChangeExtension_System_String_System_String_">ChangeExtension(String,String)</a></div>
+          </td>
+            <td>
+            <p>Changes the extension of a path string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_Combine_System_String___">Combine(String[])</a></div>
+          </td>
+            <td>
+            <p>Combines an array of strings into a path.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_Combine_System_String_System_String_">Combine(String,String)</a></div>
+          </td>
+            <td>
+            <p>Combines two strings into a path.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_Combine_System_String_System_String_System_String_">Combine(String,String,String)</a></div>
+          </td>
+            <td>
+            <p>Combines three strings into a path.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_Combine_System_String_System_String_System_String_System_String_">Combine(String,String,String,String)</a></div>
+          </td>
+            <td>
+            <p>Combines four strings into a path.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_GetDirectoryName_System_String_">GetDirectoryName(String)</a></div>
+          </td>
+            <td>
+            <p>Returns the directory information for the specified path string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_GetExtension_System_String_">GetExtension(String)</a></div>
+          </td>
+            <td>
+            <p>Returns the extension of the specified path string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_GetFileName_System_String_">GetFileName(String)</a></div>
+          </td>
+            <td>
+            <p>Returns the file name and extension of the specified path string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_GetFileNameWithoutExtension_System_String_">GetFileNameWithoutExtension(String)</a></div>
+          </td>
+            <td>
+            <p>Returns the file name of the specified path string without the extension.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_GetFullPath_System_String_">GetFullPath(String)</a></div>
+          </td>
+            <td>
+            <p>Returns the absolute path for the specified path string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_GetInvalidFileNameChars">GetInvalidFileNameChars()</a></div>
+          </td>
+            <td>
+            <p>Gets an array containing the characters that are not allowed in file names.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_GetInvalidPathChars">GetInvalidPathChars()</a></div>
+          </td>
+            <td>
+            <p>Gets an array containing the characters that are not allowed in path names.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_GetPathRoot_System_String_">GetPathRoot(String)</a></div>
+          </td>
+            <td>
+            <p>Gets the root directory information of the specified path.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_GetRandomFileName">GetRandomFileName()</a></div>
+          </td>
+            <td>
+            <p>Returns a random folder name or file name.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_GetTempFileName">GetTempFileName()</a></div>
+          </td>
+            <td>
+            <p>Creates a uniquely named, zero-byte temporary file on disk and returns the full path of that file.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_GetTempPath">GetTempPath()</a></div>
+          </td>
+            <td>
+            <p>Returns the path of the current user&#39;s temporary folder.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_HasExtension_System_String_">HasExtension(String)</a></div>
+          </td>
+            <td>
+            <p>Determines whether a path includes a file name extension.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_Path_IsPathRooted_System_String_">IsPathRooted(String)</a></div>
+          </td>
+            <td>
+            <p>Gets a value indicating whether the specified path string contains a root.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="fields">
+        <h2>Fields
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_AltDirectorySeparatorChar">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AltDirectorySeparatorChar</div>        
+          </div>
+    
+            <p>Provides a platform-specific alternate character used to separate directory levels in a path string that reflects a hierarchical file system organization.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly char AltDirectorySeparatorChar;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The character stored in this field cannot be in <a class="xref" href="system.io.path#System_IO_Path_InvalidPathChars">InvalidPathChars</a>. This field can be set to the same value as <a class="xref" href="system.io.path#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a>. <code>AltDirectorySeparatorChar</code> and <code>DirectorySeparatorChar</code> are both valid for separating directory levels in a path string.  </p>
+<p> The value of this field is a backslash (&#39;\&#39;) on UNIX, and a slash (&#39;/&#39;) on Windows and Macintosh operating systems.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates a use of the `AltDirectorySeparatorChar` field.  
+  
+ [!CODE [System.IO.Path Members#13](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#13)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_DirectorySeparatorChar">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DirectorySeparatorChar</div>        
+          </div>
+    
+            <p>Provides a platform-specific character used to separate directory levels in a path string that reflects a hierarchical file system organization.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly char DirectorySeparatorChar;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The character stored in this field cannot be in <a class="xref" href="system.io.path#System_IO_Path_InvalidPathChars">InvalidPathChars</a>. <a class="xref" href="system.io.path#System_IO_Path_AltDirectorySeparatorChar">AltDirectorySeparatorChar</a> and <code>DirectorySeparatorChar</code> are both valid for separating directory levels in a path string.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the use of the `DirectorySeparatorChar` field.  
+  
+ [!CODE [System.IO.Path Members#13](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#13)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_InvalidPathChars">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">InvalidPathChars</div>        
+          </div>
+    
+            <p>Provides a platform-specific array of characters that cannot be specified in path string arguments passed to members of the <see cref="T:System.IO.Path"> class.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly char[] InvalidPathChars;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The array returned from this method is not guaranteed to contain the complete set of characters that are invalid in file and directory names. The full set of invalid characters can vary by file system. For example, on Windows-based desktop platforms, invalid path characters might include ASCII/Unicode characters 1 through 31, as well as quote (&quot;), less than (&lt;), greater than (&gt;), pipe (&#124;), backspace (\b), null (\0) and tab (\t).  </p>
+<div class="CAUTION"><h5>Caution</h5><p> Do not useInvalidPathChars if you think your code might execute in the same application domain as untrusted code. InvalidPathChars is an array, so its elements can be overwritten. If untrusted code overwrites elements of InvalidPathChars, it might cause your code to malfunction in ways that could be exploited.</p>
+</div>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the use of the `InvalidPathChars` property.  
+  
+ [!CODE [System.IO.Path Members#13](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#13)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_PathSeparator">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PathSeparator</div>        
+          </div>
+    
+            <p>A platform-specific separator character used to separate path strings in environment variables.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly char PathSeparator;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>On Windows-based desktop platforms, the value of this field is the semicolon (;) by default, but might vary on other platforms.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the use of the `PathSeparator` field.  
+  
+ [!CODE [System.IO.Path Members#13](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#13)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_VolumeSeparatorChar">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VolumeSeparatorChar</div>        
+          </div>
+    
+            <p>Provides a platform-specific volume separator character.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly char VolumeSeparatorChar;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The value of this field is a colon (:) on Windows and Macintosh, and a slash (/) on UNIX operating systems. This is most useful for parsing paths such as &quot;c:\windows&quot; or &quot;MacVolume:System Folder&quot;.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the use of the `VolumeSeparatorChar` field.  
+  
+ [!CODE [System.IO.Path Members#13](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#13)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_ChangeExtension_System_String_System_String_">
+    
+            <a id="System_IO_Path_ChangeExtension_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ChangeExtension(String,String)</div>        
+          </div>
+    
+            <p>Changes the extension of a path string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string ChangeExtension (string path, string extension);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The path information to modify. The path cannot contain any of the characters defined in <a class="xref" href="system.io.path#System_IO_Path_GetInvalidPathChars_">GetInvalidPathChars</a>.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>extension</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The new extension (with or without a leading period). Specify <code>null</code> to remove an existing extension from .</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The modified path information.  </p>
+<p> On Windows-based desktop platforms, if  is <code>null</code> or an empty string (&quot;&quot;), the path information is returned unmodified. If  is <code>null</code>, the returned string contains the specified path with its extension removed. If  has no extension, and  is not <code>null</code>, the returned path string contains  appended to the end of .</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If neither  nor  contains a period (.), <code>ChangeExtension</code> adds the period.  </p>
+<p> The  parameter can contain multiple periods and any valid path characters, and can be any length. If  is <code>null</code>, the returned string contains the contents of  with the last period and all characters following it removed.  </p>
+<p> If  is an empty string, the returned path string contains the contents of  with any characters following the last period removed.  </p>
+<p> If  does not have an extension and  is not <code>null</code>, the returned string contains  followed by .  </p>
+<p> If  is not <code>null</code> and does not contain a leading period, the period is added.  </p>
+<p> If  contains a multiple extension separated by multiple periods, the returned string contains the contents of  with the last period and all characters following it replaced by . For example, if  is &quot;\Dir1\examples\pathtests.csx.txt&quot; and  is &quot;cs&quot;, the modified path is &quot;\Dir1\examples\pathtests.csx.cs&quot;.  </p>
+<p> It is not possible to verify that the returned results are valid in all scenarios. For example, if  is empty,  is appended.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates a use of the `ChangeExtension` method.  
+  
+ [!CODE [System.IO.Path Members#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_Combine_System_String___">
+    
+            <a id="System_IO_Path_Combine_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Combine(String[])</div>        
+          </div>
+    
+            <p>Combines an array of strings into a path.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string Combine (string[] paths);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>paths</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>An array of parts of the path.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The combined paths.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>should be an array of the parts of the path to combine. If the one of the subsequent paths is an absolute path, then the combine operation resets starting with that absolute path, discarding all previous combined paths.  </p>
+<p> Zero-length strings are omitted from the combined path.  </p>
+<p> The parameters are not parsed if they have white space.  </p>
+<p> Not all invalid characters for directory and file names are interpreted as unacceptable by the <code>Combine</code> method, because you can use these characters for search wildcard characters. For example, while <code>Path.Combine(&quot;c:\\&quot;, &quot;*.txt&quot;)</code> might be invalid if you were to create a file from it, it is valid as a search string. It is therefore successfully interpreted by the <code>Combine</code> method.</p>
+
+    
+            <h4>Example</h4>
+            The following example combines an array of strings into a path.  
+  
+ [!CODE [System.IO.Path.Combine#3](../CodeSnippet/VS_Snippets_CLR_System/system.io.path.combine#3)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_Combine_System_String_System_String_">
+    
+            <a id="System_IO_Path_Combine_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Combine(String,String)</div>        
+          </div>
+    
+            <p>Combines two strings into a path.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string Combine (string path1, string path2);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The first path to combine.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>path2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The second path to combine.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The combined paths. If one of the specified paths is a zero-length string, this method returns the other path. If  contains an absolute path, this method returns .</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If  is not a drive reference (that is, &quot;C:&quot; or &quot;D:&quot;) and does not end with a valid separator character as defined in <a class="xref" href="system.io.path#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a>, <a class="xref" href="system.io.path#System_IO_Path_AltDirectorySeparatorChar">AltDirectorySeparatorChar</a>, or <a class="xref" href="system.io.path#System_IO_Path_VolumeSeparatorChar">VolumeSeparatorChar</a>, <a class="xref" href="system.io.path#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a> is appended to  before concatenation.  </p>
+<p> If  does not include a root (for example, if  does not start with a separator character or a drive specification), the result is a concatenation of the two paths, with an intervening separator character. If  includes a root,  is returned.  </p>
+<p> The parameters are not parsed if they have white space. Therefore, if  includes white space (for example, &quot; \file.txt &quot;), the Combine method appends  to  instead of returning only .  </p>
+<p> Not all invalid characters for directory and file names are interpreted as unacceptable by the <code>Combine</code> method, because you can use these characters for search wildcard characters. For example, while <code>Path.Combine(&quot;c:\\&quot;, &quot;*.txt&quot;)</code> might be invalid if you were to create a file from it, it is valid as a search string. It is therefore successfully interpreted by the <code>Combine</code> method.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates using the `Combine` method on a Windows-based desktop platform.  
+  
+ [!CODE [pathcombine#1](../CodeSnippet/VS_Snippets_CLR/pathcombine#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_Combine_System_String_System_String_System_String_">
+    
+            <a id="System_IO_Path_Combine_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Combine(String,String,String)</div>        
+          </div>
+    
+            <p>Combines three strings into a path.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string Combine (string path1, string path2, string path3);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The first path to combine.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>path2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The second path to combine.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>path3</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The third path to combine.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The combined paths.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>should be an absolute path (for example, &quot;d:\archives&quot; or &quot;\\archives\public&quot;). If  or  is also an absolute path, the combine operation discards all previously combined paths and resets to that absolute path.  </p>
+<p> Zero-length strings are omitted from the combined path.  </p>
+<p> If  is not a drive reference (that is, &quot;C:&quot; or &quot;D:&quot;) and does not end with a valid separator character as defined in <a class="xref" href="system.io.path#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a>, <a class="xref" href="system.io.path#System_IO_Path_AltDirectorySeparatorChar">AltDirectorySeparatorChar</a>, or <a class="xref" href="system.io.path#System_IO_Path_VolumeSeparatorChar">VolumeSeparatorChar</a>, <a class="xref" href="system.io.path#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a> is appended to  before concatenation.  </p>
+<p> If  does not include a root (for example, if  does not start with a separator character or a drive specification), the result is a concatenation of the two paths, with an intervening separator character. If  includes a root,  is returned.  </p>
+<p> The parameters are not parsed if they have white space. Therefore, if  includes white space (for example, &quot; \file.txt &quot;), the <a class="xref" href="system.io.path#System_IO_Path_Combine_">Combine</a> method appends  to .  </p>
+<p> Not all invalid characters for directory and file names are interpreted as unacceptable by the <code>Combine</code> method, because you can use these characters for search wildcard characters. For example, while <code>Path.Combine(&quot;c:\\&quot;, &quot;*.txt&quot;)</code> might be invalid if you were to create a file from it, it is valid as a search string. It is therefore successfully interpreted by the <code>Combine</code> method.</p>
+
+    
+            <h4>Example</h4>
+            The following example combines three paths.  
+  
+ [!CODE [System.IO.Path.Combine#1](../CodeSnippet/VS_Snippets_CLR_System/system.io.path.combine#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_Combine_System_String_System_String_System_String_System_String_">
+    
+            <a id="System_IO_Path_Combine_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Combine(String,String,String,String)</div>        
+          </div>
+    
+            <p>Combines four strings into a path.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string Combine (string path1, string path2, string path3, string path4);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The first path to combine.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>path2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The second path to combine.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>path3</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The third path to combine.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>path4</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The fourth path to combine.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The combined paths.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>should be an absolute path (for example, &quot;d:\archives&quot; or &quot;\\archives\public&quot;).If one of the subsequent paths is also an absolute path, the combine operation discards all previously combined paths and resets to that absolute path.  </p>
+<p> Zero-length strings are omitted from the combined path.  </p>
+<p> If  is not a drive reference (that is, &quot;C:&quot; or &quot;D:&quot;) and does not end with a valid separator character as defined in <a class="xref" href="system.io.path#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a>, <a class="xref" href="system.io.path#System_IO_Path_AltDirectorySeparatorChar">AltDirectorySeparatorChar</a>, or <a class="xref" href="system.io.path#System_IO_Path_VolumeSeparatorChar">VolumeSeparatorChar</a>, <a class="xref" href="system.io.path#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a> is appended to  before concatenation.  </p>
+<p> If  does not include a root (for example, if  does not start with a separator character or a drive specification), the result is a concatenation of the two paths, with an intervening separator character. If  includes a root,  is returned.  </p>
+<p> The parameters are not parsed if they have white space. Therefore, if  includes white space (for example, &quot; \file.txt &quot;), the <a class="xref" href="system.io.path#System_IO_Path_Combine_">Combine</a> method appends  to .  </p>
+<p> Not all invalid characters for directory and file names are interpreted as unacceptable by the <code>Combine</code> method, because you can use these characters for search wildcard characters. For example, while <code>Path.Combine(&quot;c:\\&quot;, &quot;*.txt&quot;)</code> might be invalid if you were to create a file from it, it is valid as a search string. It is therefore successfully interpreted by the <code>Combine</code> method.</p>
+
+    
+            <h4>Example</h4>
+            The following example combines four paths.  
+  
+ [!CODE [System.IO.Path.Combine#2](../CodeSnippet/VS_Snippets_CLR_System/system.io.path.combine#2)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_GetDirectoryName_System_String_">
+    
+            <a id="System_IO_Path_GetDirectoryName_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDirectoryName(String)</div>        
+          </div>
+    
+            <p>Returns the directory information for the specified path string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string GetDirectoryName (string path);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The path of a file or directory.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Directory information for , or <code>null</code> if  denotes a root directory or is null. Returns <a class="xref" href="../system/system.string">System.String</a> if  does not contain directory information.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>In most cases, the string returned by this method consists of all characters in the path up to but not including the last <a class="xref" href="system.io.path#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a> or <a class="xref" href="system.io.path#System_IO_Path_AltDirectorySeparatorChar">AltDirectorySeparatorChar</a>. If the path consists of a root directory, such as &quot;c:\&quot;, null is returned. Note that this method does not support paths using &quot;file:&quot;. Because the returned path does not include the <a class="xref" href="system.io.path#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a> or <a class="xref" href="system.io.path#System_IO_Path_AltDirectorySeparatorChar">AltDirectorySeparatorChar</a>, passing the returned path back into the GetDirectoryName method will result in the truncation of one folder level per subsequent call on the result string. For example, passing the path &quot;C:\Directory\SubDirectory\test.txt&quot; into the GetDirectoryName method will return &quot;C:\Directory\SubDirectory&quot;. Passing that string, &quot;C:\Directory\SubDirectory&quot;, into GetDirectoryName will result in &quot;C:\Directory&quot;.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates using the `GetDirectoryName` method on a Windows-based desktop platform.  
+  
+ [!CODE [System.IO.Path Members#3](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#3)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_GetExtension_System_String_">
+    
+            <a id="System_IO_Path_GetExtension_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetExtension(String)</div>        
+          </div>
+    
+            <p>Returns the extension of the specified path string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string GetExtension (string path);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The path string from which to get the extension.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The extension of the specified path (including the period &quot;.&quot;), or <code>null</code>, or <a class="xref" href="../system/system.string">System.String</a>. If  is <code>null</code>, GetExtension returns <code>null</code>. If  does not have extension information, GetExtension returns <a class="xref" href="../system/system.string">System.String</a>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The extension of  is obtained by searching  for a period (.), starting with the last character in path and continuing toward the start of path. If a period is found before a <a class="xref" href="system.io.path#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a> or <a class="xref" href="system.io.path#System_IO_Path_AltDirectorySeparatorChar">AltDirectorySeparatorChar</a> character, the returned string contains the period and the characters after it; otherwise, <a class="xref" href="../system/system.string#System_String_Empty">Empty</a> is returned.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates using the `GetExtension` method on a Windows-based desktop platform.  
+  
+ [!CODE [System.IO.Path Members#4](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#4)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_GetFileName_System_String_">
+    
+            <a id="System_IO_Path_GetFileName_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetFileName(String)</div>        
+          </div>
+    
+            <p>Returns the file name and extension of the specified path string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string GetFileName (string path);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The path string from which to obtain the file name and extension.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The characters after the last directory character in . If the last character of  is a directory or volume separator character, this method returns <a class="xref" href="../system/system.string">System.String</a>. If  is <code>null</code>, this method returns <code>null</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The returned value is <code>null</code> if the file path is <code>null</code>.  </p>
+<p> The separator characters used to determine the start of the file name are <a class="xref" href="system.io.path#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a> and <a class="xref" href="system.io.path#System_IO_Path_AltDirectorySeparatorChar">AltDirectorySeparatorChar</a>.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the behavior of the `GetFileName` method on a Windows-based desktop platform.  
+  
+ [!CODE [System.IO.Path Members#5](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#5)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_GetFileNameWithoutExtension_System_String_">
+    
+            <a id="System_IO_Path_GetFileNameWithoutExtension_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetFileNameWithoutExtension(String)</div>        
+          </div>
+    
+            <p>Returns the file name of the specified path string without the extension.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string GetFileNameWithoutExtension (string path);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The path of the file.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The string returned by <a class="xref" href="system.io.path#System_IO_Path_GetFileName_">GetFileName</a>, minus the last period (.) and all characters following it.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method does not verify that the path or file name exists.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates a use of the `GetFileNameWithoutExtension` method.  
+  
+ [!CODE [System.IO.Path Members#6](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#6)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_GetFullPath_System_String_">
+    
+            <a id="System_IO_Path_GetFullPath_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetFullPath(String)</div>        
+          </div>
+    
+            <p>Returns the absolute path for the specified path string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string GetFullPath (string path);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The file or directory for which to obtain absolute path information.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The fully qualified location of , such as &quot;C:\MyFile.txt&quot;.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The .NET Framework does not support direct access to physical disks through paths that are device names, such as &quot;\\.\PHYSICALDRIVE0 &quot;.  </p>
+<p> The absolute path includes all information required to locate a file or directory on a system.  </p>
+<p> The file or directory specified by  is not required to exist. For example, if c:\temp\newdir is the current directory, calling <code>GetFullPath</code> on a file name such as test.txt returns c:\temp\newdir\test.txt. The file need not exist.  </p>
+<p> However, if  does exist, the caller must have permission to obtain path information for . Note that unlike most members of the <a class="xref" href="system.io.path">Path</a> class, this method accesses the file system.  </p>
+<p> This method uses current directory and current volume information to fully qualify . If you specify a file name only in , <code>GetFullPath</code> returns the fully qualified path of the current directory.  </p>
+<p> If you pass in a short file name, it is expanded to a long file name.  </p>
+<p> If a path contains no significant characters it is invalid unless it contains one or more &quot;.&quot; characters followed by any number of spaces, then it will be parsed as either &quot;.&quot; or &quot;..&quot;.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the `GetFullPath` method on a Windows-based desktop platform.  
+  
+ [!CODE [System.IO.Path Members#7](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#7)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_GetInvalidFileNameChars">
+    
+            <a id="System_IO_Path_GetInvalidFileNameChars_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetInvalidFileNameChars()</div>        
+          </div>
+    
+            <p>Gets an array containing the characters that are not allowed in file names.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static char[] GetInvalidFileNameChars ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </div>
+                  <p>An array containing the characters that are not allowed in file names.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The array returned from this method is not guaranteed to contain the complete set of characters that are invalid in file and directory names. The full set of invalid characters can vary by file system. For example, on Windows-based desktop platforms, invalid path characters might include ASCII/Unicode characters 1 through 31, as well as quote (&quot;), less than (&lt;), greater than (&gt;), pipe (&#124;), backspace (\b), null (\0) and tab (\t).</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the GetInvalidFileNameChars method and the <xref:system.io.path.getinvalidpathchars%2a> method to retrieve invalid characters.  
+  
+ [!CODE [IO.Path.GetInvalidFile-PathChars#1](../CodeSnippet/VS_Snippets_CLR/IO.Path.GetInvalidFile-PathChars#1)]
+    
+    
+        </xref:system.io.path.getinvalidpathchars%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_GetInvalidPathChars">
+    
+            <a id="System_IO_Path_GetInvalidPathChars_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetInvalidPathChars()</div>        
+          </div>
+    
+            <p>Gets an array containing the characters that are not allowed in path names.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static char[] GetInvalidPathChars ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </div>
+                  <p>An array containing the characters that are not allowed in path names.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The array returned from this method is not guaranteed to contain the complete set of characters that are invalid in file and directory names. The full set of invalid characters can vary by file system. For example, on Windows-based desktop platforms, invalid path characters might include ASCII/Unicode characters 1 through 31, as well as quote (&quot;), less than (&lt;), greater than (&gt;), pipe (&#124;), backspace (\b), null (\0) and tab (\t).</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the <xref:system.io.path.getinvalidfilenamechars%2a> method and the GetInvalidPathChars method to retrieve invalid characters.  
+  
+ [!CODE [IO.Path.GetInvalidFile-PathChars#1](../CodeSnippet/VS_Snippets_CLR/IO.Path.GetInvalidFile-PathChars#1)]
+    
+    
+        </xref:system.io.path.getinvalidfilenamechars%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_GetPathRoot_System_String_">
+    
+            <a id="System_IO_Path_GetPathRoot_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetPathRoot(String)</div>        
+          </div>
+    
+            <p>Gets the root directory information of the specified path.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string GetPathRoot (string path);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The path from which to obtain root directory information.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The root directory of , such as &quot;C:\&quot;, or <code>null</code> if  is <code>null</code>, or an empty string if  does not contain root directory information.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method does not verify that the path or file name exists.  </p>
+<p> Possible patterns for the string returned by this method are as follows:  </p>
+<ul>
+<li><p>An empty string ( specified a relative path on the current drive or volume).  </p>
+</li>
+<li><p>&quot;/&quot; ( specified an absolute path on the current drive).  </p>
+</li>
+<li><p>&quot;X:&quot; ( specified a relative path on a drive, where X represents a drive or volume letter).  </p>
+</li>
+<li><p>&quot;X:/&quot; ( specified an absolute path on a given drive).  </p>
+</li>
+<li><p>&quot;\\ComputerName\SharedFolder&quot; (a UNC path).  </p>
+<p>The .NET Framework does not support direct access to physical disks through paths that are device names, such as &quot;\\.\PHYSICALDRIVE0 &quot;.  </p>
+<p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates a use of the `GetPathRoot` method.  
+  
+ [!CODE [System.IO.Path Members#8](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#8)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_GetRandomFileName">
+    
+            <a id="System_IO_Path_GetRandomFileName_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetRandomFileName()</div>        
+          </div>
+    
+            <p>Returns a random folder name or file name.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string GetRandomFileName ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>A random folder name or file name.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The GetRandomFileName method returns a cryptographically strong, random string that can be used as either a folder name or a file name. Unlike <a class="xref" href="system.io.path#System_IO_Path_GetTempFileName_">GetTempFileName</a>, GetRandomFileName does not create a file. When the security of your file system is paramount, this method should be used instead of <a class="xref" href="system.io.path#System_IO_Path_GetTempFileName_">GetTempFileName</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example show output from the GetRandomFileName method.  
+  
+ [!CODE [System.IO.Path Members#20](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#20)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_GetTempFileName">
+    
+            <a id="System_IO_Path_GetTempFileName_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetTempFileName()</div>        
+          </div>
+    
+            <p>Creates a uniquely named, zero-byte temporary file on disk and returns the full path of that file.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string GetTempFileName ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The full path of the temporary file.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method creates a temporary file with a .TMP file extension. The temporary file is created within the userâ€™s temporary folder, which is the path returned by the <a class="xref" href="system.io.path#System_IO_Path_GetTempPath_">GetTempPath</a> method.  </p>
+<p> The GetTempFileName method will raise an <a class="xref" href="system.io.ioexception">IOException</a> if it is used to create more than 65535 files without deleting previous temporary files.  </p>
+<p> The GetTempFileName method will raise an <a class="xref" href="system.io.ioexception">IOException</a> if no unique temporary file name is available. To resolve this error, delete all unneeded temporary files.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates some of the main members of the `Path` class.  
+  
+ [!CODE [path class#1](../CodeSnippet/VS_Snippets_CLR/Path Class#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_GetTempPath">
+    
+            <a id="System_IO_Path_GetTempPath_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetTempPath()</div>        
+          </div>
+    
+            <p>Returns the path of the current user&#39;s temporary folder.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string GetTempPath ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The path to the temporary folder, ending with a backslash.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method checks for the existence of environment variables in the following order and uses the first path found:  </p>
+<ol>
+<li><p>The path specified by the TMP environment variable.  </p>
+</li>
+<li><p>The path specified by the TEMP environment variable.  </p>
+</li>
+<li><p>The path specified by the USERPROFILE environment variable.  </p>
+</li>
+<li><p>The Windows directory.</p>
+</li>
+</ol>
+
+    
+            <h4>Example</h4>
+            The following code shows how to call the GetTempPath method.  
+  
+```vb  
+result As String = Path.GetTempPath()  
+Console.WriteLine(result)  
+```  
+  
+```c#  
+string result = Path.GetTempPath();  
+Console.WriteLine(result);  
+```  
+  
+ This example produces output similar to the following.  
+  
+```  
+C:\Users\UserName\AppData\Local&nbsp;&nbsp;&nbsp;&nbsp;emp\  
+```
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_HasExtension_System_String_">
+    
+            <a id="System_IO_Path_HasExtension_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">HasExtension(String)</div>        
+          </div>
+    
+            <p>Determines whether a path includes a file name extension.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool HasExtension (string path);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The path to search for an extension.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the characters that follow the last directory separator (\\ or /) or volume separator (:) in the path include a period (.) followed by one or more characters; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Starting from the end of , this method searches for a period (.) followed by at least one character. If this pattern is found before a <a class="xref" href="system.io.path#System_IO_Path_DirectorySeparatorChar">DirectorySeparatorChar</a>, <a class="xref" href="system.io.path#System_IO_Path_AltDirectorySeparatorChar">AltDirectorySeparatorChar</a>, or <a class="xref" href="system.io.path#System_IO_Path_VolumeSeparatorChar">VolumeSeparatorChar</a> character is encountered, this method returns <code>true</code>.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates the use of the `HasExtension` method.  
+  
+ [!CODE [System.IO.Path Members#11](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#11)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Path_IsPathRooted_System_String_">
+    
+            <a id="System_IO_Path_IsPathRooted_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsPathRooted(String)</div>        
+          </div>
+    
+            <p>Gets a value indicating whether the specified path string contains a root.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool IsPathRooted (string path);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The path to test.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if  contains a root; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The IsPathRooted method returns <code>true</code> if the first character is a directory separator character such as &quot;\&quot;, or if the path starts with a drive letter and colon (:). For example, it returns <code>true</code> for  strings such as &quot;\\MyDir\\MyFile.txt&quot;, &quot;C:\\MyDir&quot;, or &quot;C:MyDir&quot;. It returns <code>false</code> for  strings such as &quot;MyDir&quot;.  </p>
+<p> This method does not verify that the path or file name exists.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how the `IsPathRooted` method can be used to test three strings.  
+  
+ [!CODE [System.IO.Path Members#12](../CodeSnippet/VS_Snippets_CLR_System/system.IO.Path Members#12)]
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

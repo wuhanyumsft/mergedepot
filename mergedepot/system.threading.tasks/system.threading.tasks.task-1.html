@@ -1,0 +1,2650 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Task<TResult> class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Threading.Tasks/System.Threading.Tasks.Task-1.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Threading.Tasks/System.Threading.Tasks.Task-1.yml">
+<meta name="APIName" content="System.Threading.Tasks.Task&lt;TResult&gt;">
+<meta name="APIName" content="System.Threading.Tasks.Task&lt;TResult&gt;..ctor">
+<meta name="APIName" content="System.Threading.Tasks.Task&lt;TResult&gt;.ConfigureAwait">
+<meta name="APIName" content="System.Threading.Tasks.Task&lt;TResult&gt;.ContinueWith">
+<meta name="APIName" content="System.Threading.Tasks.Task&lt;TResult&gt;.Factory">
+<meta name="APIName" content="System.Threading.Tasks.Task&lt;TResult&gt;.GetAwaiter">
+<meta name="APIName" content="System.Threading.Tasks.Task&lt;TResult&gt;.Result">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="c8ea535a-1847-952f-cb25-ebc001849d0d">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Threading.Tasks.Task`1">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.threading.tasks/system.threading.tasks.task-1" rel="canonical">
+    <title>Task<tresult> class | Microsoft Docs</tresult></title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Threading_Tasks_Task_1">
+      <span class="lang-csharp">Task&lt;TResult&gt;</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Diagnostics.DebuggerDisplay(&quot;Id = {Id}, Status = {Status}, Method = {DebuggerDisplayMethodDescription}, Result = {DebuggerDisplayResultDescription}&quot;)]
+[System.Diagnostics.DebuggerTypeProxy(typeof(System.Threading.Tasks.SystemThreadingTasks_FutureDebugView`1))]
+public class Task&lt;TResult&gt; : System.Threading.Tasks.Task</code></pre>
+    
+    
+    	<h2>Type Parameters</h2>
+    
+    	<table class="nameValue">
+    		<tr>
+    		<td>
+    		TResult
+    		</td>
+    		<td>
+    		<p>To be added.</p>
+
+    		</td>
+    		</tr>
+    	</table>
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task">System.Threading.Tasks.Task</a>
+          </div>
+        </li>
+      <li class="l2">
+        <div class="xref">
+          <div class="lang-csharp">Task&lt;TResult&gt;</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_AsyncState">AsyncState</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_CompletedTask">CompletedTask</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith_System_Action_System_Threading_Tasks_Task_System_Object__System_Object_">ContinueWith(Action&lt;Task,Object&gt;,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith_System_Action_System_Threading_Tasks_Task_System_Object__System_Object_System_Threading_CancellationToken_">ContinueWith(Action&lt;Task,Object&gt;,Object,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith_System_Action_System_Threading_Tasks_Task_System_Object__System_Object_System_Threading_CancellationToken_System_Threading_Tasks_TaskContinuationOptions_System_Threading_Tasks_TaskScheduler_">ContinueWith(Action&lt;Task,Object&gt;,Object,CancellationToken,TaskContinuationOptions,TaskScheduler)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith_System_Action_System_Threading_Tasks_Task_System_Object__System_Object_System_Threading_Tasks_TaskContinuationOptions_">ContinueWith(Action&lt;Task,Object&gt;,Object,TaskContinuationOptions)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith_System_Action_System_Threading_Tasks_Task_System_Object__System_Object_System_Threading_Tasks_TaskScheduler_">ContinueWith(Action&lt;Task,Object&gt;,Object,TaskScheduler)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith_System_Action_System_Threading_Tasks_Task__">ContinueWith(Action&lt;Task&gt;)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith_System_Action_System_Threading_Tasks_Task__System_Threading_CancellationToken_">ContinueWith(Action&lt;Task&gt;,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith_System_Action_System_Threading_Tasks_Task__System_Threading_CancellationToken_System_Threading_Tasks_TaskContinuationOptions_System_Threading_Tasks_TaskScheduler_">ContinueWith(Action&lt;Task&gt;,CancellationToken,TaskContinuationOptions,TaskScheduler)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith_System_Action_System_Threading_Tasks_Task__System_Threading_Tasks_TaskContinuationOptions_">ContinueWith(Action&lt;Task&gt;,TaskContinuationOptions)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith_System_Action_System_Threading_Tasks_Task__System_Threading_Tasks_TaskScheduler_">ContinueWith(Action&lt;Task&gt;,TaskScheduler)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith__1_System_Func_System_Threading_Tasks_Task___0__">ContinueWith(Func&lt;Task,TResult&gt;)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith__1_System_Func_System_Threading_Tasks_Task___0__System_Threading_CancellationToken_">ContinueWith(Func&lt;Task,TResult&gt;,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith__1_System_Func_System_Threading_Tasks_Task___0__System_Threading_CancellationToken_System_Threading_Tasks_TaskContinuationOptions_System_Threading_Tasks_TaskScheduler_">ContinueWith(Func&lt;Task,TResult&gt;,CancellationToken,TaskContinuationOptions,TaskScheduler)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith__1_System_Func_System_Threading_Tasks_Task___0__System_Threading_Tasks_TaskContinuationOptions_">ContinueWith(Func&lt;Task,TResult&gt;,TaskContinuationOptions)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith__1_System_Func_System_Threading_Tasks_Task___0__System_Threading_Tasks_TaskScheduler_">ContinueWith(Func&lt;Task,TResult&gt;,TaskScheduler)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith__1_System_Func_System_Threading_Tasks_Task_System_Object___0__System_Object_">ContinueWith(Func&lt;Task,Object,TResult&gt;,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith__1_System_Func_System_Threading_Tasks_Task_System_Object___0__System_Object_System_Threading_CancellationToken_">ContinueWith(Func&lt;Task,Object,TResult&gt;,Object,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith__1_System_Func_System_Threading_Tasks_Task_System_Object___0__System_Object_System_Threading_CancellationToken_System_Threading_Tasks_TaskContinuationOptions_System_Threading_Tasks_TaskScheduler_">ContinueWith(Func&lt;Task,Object,TResult&gt;,Object,CancellationToken,TaskContinuationOptions,TaskScheduler)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith__1_System_Func_System_Threading_Tasks_Task_System_Object___0__System_Object_System_Threading_Tasks_TaskContinuationOptions_">ContinueWith(Func&lt;Task,Object,TResult&gt;,Object,TaskContinuationOptions)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_ContinueWith__1_System_Func_System_Threading_Tasks_Task_System_Object___0__System_Object_System_Threading_Tasks_TaskScheduler_">ContinueWith(Func&lt;Task,Object,TResult&gt;,Object,TaskScheduler)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_CreationOptions">CreationOptions</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_CurrentId">CurrentId</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Delay_System_Int32_">Delay(Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Delay_System_Int32_System_Threading_CancellationToken_">Delay(Int32,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Delay_System_TimeSpan_">Delay(TimeSpan)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Delay_System_TimeSpan_System_Threading_CancellationToken_">Delay(TimeSpan,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Dispose">Dispose()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Dispose_System_Boolean_">Dispose(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Exception">Exception</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_FromCanceled_System_Threading_CancellationToken_">FromCanceled(CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_FromCanceled__1_System_Threading_CancellationToken_">FromCanceled(CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_FromException_System_Exception_">FromException(Exception)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_FromException__1_System_Exception_">FromException(Exception)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_FromResult__1___0_">FromResult(TResult)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Id">Id</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_IsCanceled">IsCanceled</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_IsCompleted">IsCompleted</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_IsFaulted">IsFaulted</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Run_System_Action_">Run(Action)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Run_System_Action_System_Threading_CancellationToken_">Run(Action,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Run_System_Func_System_Threading_Tasks_Task__">Run(Func&lt;Task&gt;)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Run_System_Func_System_Threading_Tasks_Task__System_Threading_CancellationToken_">Run(Func&lt;Task&gt;,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Run__1_System_Func___0__">Run(Func&lt;TResult&gt;)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Run__1_System_Func___0__System_Threading_CancellationToken_">Run(Func&lt;TResult&gt;,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Run__1_System_Func_System_Threading_Tasks_Task___0___">Run(Func&lt;Task&lt;TResult&gt;&gt;)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Run__1_System_Func_System_Threading_Tasks_Task___0___System_Threading_CancellationToken_">Run(Func&lt;Task&lt;TResult&gt;&gt;,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_RunSynchronously">RunSynchronously()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_RunSynchronously_System_Threading_Tasks_TaskScheduler_">RunSynchronously(TaskScheduler)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Start">Start()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Start_System_Threading_Tasks_TaskScheduler_">Start(TaskScheduler)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Status">Status</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_System_IAsyncResult_AsyncWaitHandle">System.IAsyncResult.AsyncWaitHandle</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_System_IAsyncResult_CompletedSynchronously">System.IAsyncResult.CompletedSynchronously</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Wait">Wait()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Wait_System_Int32_">Wait(Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Wait_System_Int32_System_Threading_CancellationToken_">Wait(Int32,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Wait_System_Threading_CancellationToken_">Wait(CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Wait_System_TimeSpan_">Wait(TimeSpan)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___">WaitAll(Task[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___System_Int32_">WaitAll(Task[],Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___System_Int32_System_Threading_CancellationToken_">WaitAll(Task[],Int32,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___System_Threading_CancellationToken_">WaitAll(Task[],CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___System_TimeSpan_">WaitAll(Task[],TimeSpan)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WaitAny_System_Threading_Tasks_Task___">WaitAny(Task[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WaitAny_System_Threading_Tasks_Task___System_Int32_">WaitAny(Task[],Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WaitAny_System_Threading_Tasks_Task___System_Int32_System_Threading_CancellationToken_">WaitAny(Task[],Int32,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WaitAny_System_Threading_Tasks_Task___System_Threading_CancellationToken_">WaitAny(Task[],CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WaitAny_System_Threading_Tasks_Task___System_TimeSpan_">WaitAny(Task[],TimeSpan)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WhenAll_System_Collections_Generic_IEnumerable_System_Threading_Tasks_Task__">WhenAll(IEnumerable&lt;Task&gt;)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WhenAll_System_Threading_Tasks_Task___">WhenAll(Task[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WhenAll__1_System_Collections_Generic_IEnumerable_System_Threading_Tasks_Task___0___">WhenAll(IEnumerable&lt;Task&lt;TResult&gt;&gt;)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WhenAll__1_System_Threading_Tasks_Task___0____">WhenAll(Task&lt;TResult&gt;)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WhenAny_System_Collections_Generic_IEnumerable_System_Threading_Tasks_Task__">WhenAny(IEnumerable&lt;Task&gt;)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WhenAny_System_Threading_Tasks_Task___">WhenAny(Task[])</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WhenAny__1_System_Collections_Generic_IEnumerable_System_Threading_Tasks_Task___0___">WhenAny(IEnumerable&lt;Task&lt;TResult&gt;&gt;)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_WhenAny__1_System_Threading_Tasks_Task___0____">WhenAny(Task&lt;TResult&gt;)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.threading.tasks.task#System_Threading_Tasks_Task_Yield">Yield()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1__ctor_System_Func__0__">Task(Func&lt;TResult&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1__ctor_System_Func_System_Object__0__System_Object_">Task(Func&lt;Object,TResult&gt;,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1__ctor_System_Func__0__System_Threading_CancellationToken_">Task(Func&lt;TResult&gt;,CancellationToken)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1__ctor_System_Func__0__System_Threading_Tasks_TaskCreationOptions_">Task(Func&lt;TResult&gt;,TaskCreationOptions)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1__ctor_System_Func_System_Object__0__System_Object_System_Threading_CancellationToken_">Task(Func&lt;Object,TResult&gt;,Object,CancellationToken)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1__ctor_System_Func_System_Object__0__System_Object_System_Threading_Tasks_TaskCreationOptions_">Task(Func&lt;Object,TResult&gt;,Object,TaskCreationOptions)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1__ctor_System_Func__0__System_Threading_CancellationToken_System_Threading_Tasks_TaskCreationOptions_">Task(Func&lt;TResult&gt;,CancellationToken,TaskCreationOptions)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1__ctor_System_Func_System_Object__0__System_Object_System_Threading_CancellationToken_System_Threading_Tasks_TaskCreationOptions_">Task(Func&lt;Object,TResult&gt;,Object,CancellationToken,TaskCreationOptions)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_Factory">Factory</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_Result">Result</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ConfigureAwait_System_Boolean_">ConfigureAwait(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0___">ContinueWith(Action&lt;Task&lt;TResult&gt;&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0__System_Object__System_Object_">ContinueWith(Action&lt;Task&lt;TResult&gt;,Object&gt;,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0___System_Threading_CancellationToken_">ContinueWith(Action&lt;Task&lt;TResult&gt;&gt;,CancellationToken)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0___System_Threading_Tasks_TaskContinuationOptions_">ContinueWith(Action&lt;Task&lt;TResult&gt;&gt;,TaskContinuationOptions)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0___System_Threading_Tasks_TaskScheduler_">ContinueWith(Action&lt;Task&lt;TResult&gt;&gt;,TaskScheduler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0__System_Object__System_Object_System_Threading_CancellationToken_">ContinueWith(Action&lt;Task&lt;TResult&gt;,Object&gt;,Object,CancellationToken)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0__System_Object__System_Object_System_Threading_Tasks_TaskContinuationOptions_">ContinueWith(Action&lt;Task&lt;TResult&gt;,Object&gt;,Object,TaskContinuationOptions)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0__System_Object__System_Object_System_Threading_Tasks_TaskScheduler_">ContinueWith(Action&lt;Task&lt;TResult&gt;,Object&gt;,Object,TaskScheduler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0___System_Threading_CancellationToken_System_Threading_Tasks_TaskContinuationOptions_System_Threading_Tasks_TaskScheduler_">ContinueWith(Action&lt;Task&lt;TResult&gt;&gt;,CancellationToken,TaskContinuationOptions,TaskScheduler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0__System_Object__System_Object_System_Threading_CancellationToken_System_Threading_Tasks_TaskContinuationOptions_System_Threading_Tasks_TaskScheduler_">ContinueWith(Action&lt;Task&lt;TResult&gt;,Object&gt;,Object,CancellationToken,TaskContinuationOptions,TaskScheduler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0____0__">ContinueWith(Func&lt;Task&lt;TResult&gt;,TNewResult&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0__System_Object___0__System_Object_">ContinueWith(Func&lt;Task&lt;TResult&gt;,Object,TNewResult&gt;,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0____0__System_Threading_CancellationToken_">ContinueWith(Func&lt;Task&lt;TResult&gt;,TNewResult&gt;,CancellationToken)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0____0__System_Threading_Tasks_TaskContinuationOptions_">ContinueWith(Func&lt;Task&lt;TResult&gt;,TNewResult&gt;,TaskContinuationOptions)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0____0__System_Threading_Tasks_TaskScheduler_">ContinueWith(Func&lt;Task&lt;TResult&gt;,TNewResult&gt;,TaskScheduler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0__System_Object___0__System_Object_System_Threading_CancellationToken_">ContinueWith(Func&lt;Task&lt;TResult&gt;,Object,TNewResult&gt;,Object,CancellationToken)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0__System_Object___0__System_Object_System_Threading_Tasks_TaskContinuationOptions_">ContinueWith(Func&lt;Task&lt;TResult&gt;,Object,TNewResult&gt;,Object,TaskContinuationOptions)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0__System_Object___0__System_Object_System_Threading_Tasks_TaskScheduler_">ContinueWith(Func&lt;Task&lt;TResult&gt;,Object,TNewResult&gt;,Object,TaskScheduler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0____0__System_Threading_CancellationToken_System_Threading_Tasks_TaskContinuationOptions_System_Threading_Tasks_TaskScheduler_">ContinueWith(Func&lt;Task&lt;TResult&gt;,TNewResult&gt;,CancellationToken,TaskContinuationOptions,TaskScheduler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0__System_Object___0__System_Object_System_Threading_CancellationToken_System_Threading_Tasks_TaskContinuationOptions_System_Threading_Tasks_TaskScheduler_">ContinueWith(Func&lt;Task&lt;TResult&gt;,Object,TNewResult&gt;,Object,CancellationToken,TaskContinuationOptions,TaskScheduler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Threading_Tasks_Task_1_GetAwaiter">GetAwaiter()</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1__ctor_System_Func__0__">
+    
+            <a id="System_Threading_Tasks_Task_1__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Task(Func&lt;TResult&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task (Func&lt;TResult&gt; function);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>function</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<tresult></tresult></span>&lt;<span class="xref">TResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1__ctor_System_Func_System_Object__0__System_Object_">
+    
+            <a id="System_Threading_Tasks_Task_1__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Task(Func&lt;Object,TResult&gt;,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task (Func&lt;object,TResult&gt; function, object state);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>function</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<system.object,tresult></system.object,tresult></span>&lt;<a class="xref" href="../system/system.object">Object</a>,<span class="xref">TResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1__ctor_System_Func__0__System_Threading_CancellationToken_">
+    
+            <a id="System_Threading_Tasks_Task_1__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Task(Func&lt;TResult&gt;,CancellationToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task (Func&lt;TResult&gt; function, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>function</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<tresult></tresult></span>&lt;<span class="xref">TResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1__ctor_System_Func__0__System_Threading_Tasks_TaskCreationOptions_">
+    
+            <a id="System_Threading_Tasks_Task_1__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Task(Func&lt;TResult&gt;,TaskCreationOptions)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task (Func&lt;TResult&gt; function, System.Threading.Tasks.TaskCreationOptions creationOptions);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>function</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<tresult></tresult></span>&lt;<span class="xref">TResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>creationOptions</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskcreationoptions">TaskCreationOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1__ctor_System_Func_System_Object__0__System_Object_System_Threading_CancellationToken_">
+    
+            <a id="System_Threading_Tasks_Task_1__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Task(Func&lt;Object,TResult&gt;,Object,CancellationToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task (Func&lt;object,TResult&gt; function, object state, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>function</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<system.object,tresult></system.object,tresult></span>&lt;<a class="xref" href="../system/system.object">Object</a>,<span class="xref">TResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1__ctor_System_Func_System_Object__0__System_Object_System_Threading_Tasks_TaskCreationOptions_">
+    
+            <a id="System_Threading_Tasks_Task_1__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Task(Func&lt;Object,TResult&gt;,Object,TaskCreationOptions)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task (Func&lt;object,TResult&gt; function, object state, System.Threading.Tasks.TaskCreationOptions creationOptions);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>function</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<system.object,tresult></system.object,tresult></span>&lt;<a class="xref" href="../system/system.object">Object</a>,<span class="xref">TResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>creationOptions</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskcreationoptions">TaskCreationOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1__ctor_System_Func__0__System_Threading_CancellationToken_System_Threading_Tasks_TaskCreationOptions_">
+    
+            <a id="System_Threading_Tasks_Task_1__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Task(Func&lt;TResult&gt;,CancellationToken,TaskCreationOptions)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task (Func&lt;TResult&gt; function, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskCreationOptions creationOptions);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>function</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<tresult></tresult></span>&lt;<span class="xref">TResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>creationOptions</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskcreationoptions">TaskCreationOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1__ctor_System_Func_System_Object__0__System_Object_System_Threading_CancellationToken_System_Threading_Tasks_TaskCreationOptions_">
+    
+            <a id="System_Threading_Tasks_Task_1__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Task(Func&lt;Object,TResult&gt;,Object,CancellationToken,TaskCreationOptions)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task (Func&lt;object,TResult&gt; function, object state, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskCreationOptions creationOptions);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>function</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<system.object,tresult></system.object,tresult></span>&lt;<a class="xref" href="../system/system.object">Object</a>,<span class="xref">TResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>creationOptions</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskcreationoptions">TaskCreationOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_Factory">
+    
+            <a id="System_Threading_Tasks_Task_1_Factory_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Factory</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Threading.Tasks.TaskFactory&lt;TResult&gt; Factory { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskfactory-1">TaskFactory<tresult></tresult></a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_Result">
+    
+            <a id="System_Threading_Tasks_Task_1_Result_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Result</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public TResult Result { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">TResult</span></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ConfigureAwait_System_Boolean_">
+    
+            <a id="System_Threading_Tasks_Task_1_ConfigureAwait_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ConfigureAwait(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Runtime.CompilerServices.ConfiguredTaskAwaitable&lt;TResult&gt; ConfigureAwait (bool continueOnCapturedContext);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continueOnCapturedContext</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.runtime.compilerservices/system.runtime.compilerservices.configuredtaskawaitable-1">ConfiguredTaskAwaitable<tresult></tresult></a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0___">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Action&lt;Task&lt;TResult&gt;&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ContinueWith (Action&lt;System.Threading.Tasks.Task&lt;TResult&gt;&gt; continuationAction);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationAction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.action-1">Action</a>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task">System.Threading.Tasks.Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0__System_Object__System_Object_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Action&lt;Task&lt;TResult&gt;,Object&gt;,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ContinueWith (Action&lt;System.Threading.Tasks.Task&lt;TResult&gt;,object&gt; continuationAction, object state);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationAction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Action<><tresult>,System.Object></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<a class="xref" href="../system/system.object">Object</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task">System.Threading.Tasks.Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0___System_Threading_CancellationToken_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Action&lt;Task&lt;TResult&gt;&gt;,CancellationToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ContinueWith (Action&lt;System.Threading.Tasks.Task&lt;TResult&gt;&gt; continuationAction, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationAction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.action-1">Action</a>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task">System.Threading.Tasks.Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0___System_Threading_Tasks_TaskContinuationOptions_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Action&lt;Task&lt;TResult&gt;&gt;,TaskContinuationOptions)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ContinueWith (Action&lt;System.Threading.Tasks.Task&lt;TResult&gt;&gt; continuationAction, System.Threading.Tasks.TaskContinuationOptions continuationOptions);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationAction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.action-1">Action</a>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>continuationOptions</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskcontinuationoptions">TaskContinuationOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task">System.Threading.Tasks.Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0___System_Threading_Tasks_TaskScheduler_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Action&lt;Task&lt;TResult&gt;&gt;,TaskScheduler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ContinueWith (Action&lt;System.Threading.Tasks.Task&lt;TResult&gt;&gt; continuationAction, System.Threading.Tasks.TaskScheduler scheduler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationAction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.action-1">Action</a>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>scheduler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskscheduler">TaskScheduler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task">System.Threading.Tasks.Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0__System_Object__System_Object_System_Threading_CancellationToken_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Action&lt;Task&lt;TResult&gt;,Object&gt;,Object,CancellationToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ContinueWith (Action&lt;System.Threading.Tasks.Task&lt;TResult&gt;,object&gt; continuationAction, object state, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationAction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Action<><tresult>,System.Object></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<a class="xref" href="../system/system.object">Object</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task">System.Threading.Tasks.Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0__System_Object__System_Object_System_Threading_Tasks_TaskContinuationOptions_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Action&lt;Task&lt;TResult&gt;,Object&gt;,Object,TaskContinuationOptions)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ContinueWith (Action&lt;System.Threading.Tasks.Task&lt;TResult&gt;,object&gt; continuationAction, object state, System.Threading.Tasks.TaskContinuationOptions continuationOptions);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationAction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Action<><tresult>,System.Object></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<a class="xref" href="../system/system.object">Object</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>continuationOptions</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskcontinuationoptions">TaskContinuationOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task">System.Threading.Tasks.Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0__System_Object__System_Object_System_Threading_Tasks_TaskScheduler_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Action&lt;Task&lt;TResult&gt;,Object&gt;,Object,TaskScheduler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ContinueWith (Action&lt;System.Threading.Tasks.Task&lt;TResult&gt;,object&gt; continuationAction, object state, System.Threading.Tasks.TaskScheduler scheduler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationAction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Action<><tresult>,System.Object></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<a class="xref" href="../system/system.object">Object</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>scheduler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskscheduler">TaskScheduler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task">System.Threading.Tasks.Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0___System_Threading_CancellationToken_System_Threading_Tasks_TaskContinuationOptions_System_Threading_Tasks_TaskScheduler_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Action&lt;Task&lt;TResult&gt;&gt;,CancellationToken,TaskContinuationOptions,TaskScheduler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ContinueWith (Action&lt;System.Threading.Tasks.Task&lt;TResult&gt;&gt; continuationAction, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskContinuationOptions continuationOptions, System.Threading.Tasks.TaskScheduler scheduler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationAction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.action-1">Action</a>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>continuationOptions</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskcontinuationoptions">TaskContinuationOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>scheduler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskscheduler">TaskScheduler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task">System.Threading.Tasks.Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith_System_Action_System_Threading_Tasks_Task__0__System_Object__System_Object_System_Threading_CancellationToken_System_Threading_Tasks_TaskContinuationOptions_System_Threading_Tasks_TaskScheduler_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Action&lt;Task&lt;TResult&gt;,Object&gt;,Object,CancellationToken,TaskContinuationOptions,TaskScheduler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ContinueWith (Action&lt;System.Threading.Tasks.Task&lt;TResult&gt;,object&gt; continuationAction, object state, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskContinuationOptions continuationOptions, System.Threading.Tasks.TaskScheduler scheduler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationAction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Action<><tresult>,System.Object></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<a class="xref" href="../system/system.object">Object</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>continuationOptions</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskcontinuationoptions">TaskContinuationOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>scheduler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskscheduler">TaskScheduler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task">System.Threading.Tasks.Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0____0__">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_TNewResult__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Func&lt;Task&lt;TResult&gt;,TNewResult&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task&lt;TNewResult&gt; ContinueWith&lt;TNewResult&gt; (Func&lt;System.Threading.Tasks.Task&lt;TResult&gt;,TNewResult&gt; continuationFunction);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationFunction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<><tresult>,TNewResult></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<span class="xref">TNewResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TNewResult</span>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0__System_Object___0__System_Object_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_TNewResult__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Func&lt;Task&lt;TResult&gt;,Object,TNewResult&gt;,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task&lt;TNewResult&gt; ContinueWith&lt;TNewResult&gt; (Func&lt;System.Threading.Tasks.Task&lt;TResult&gt;,object,TNewResult&gt; continuationFunction, object state);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationFunction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<><tresult>,System.Object,TNewResult></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<a class="xref" href="../system/system.object">Object</a>,<span class="xref">TNewResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TNewResult</span>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0____0__System_Threading_CancellationToken_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_TNewResult__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Func&lt;Task&lt;TResult&gt;,TNewResult&gt;,CancellationToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task&lt;TNewResult&gt; ContinueWith&lt;TNewResult&gt; (Func&lt;System.Threading.Tasks.Task&lt;TResult&gt;,TNewResult&gt; continuationFunction, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationFunction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<><tresult>,TNewResult></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<span class="xref">TNewResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TNewResult</span>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0____0__System_Threading_Tasks_TaskContinuationOptions_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_TNewResult__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Func&lt;Task&lt;TResult&gt;,TNewResult&gt;,TaskContinuationOptions)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task&lt;TNewResult&gt; ContinueWith&lt;TNewResult&gt; (Func&lt;System.Threading.Tasks.Task&lt;TResult&gt;,TNewResult&gt; continuationFunction, System.Threading.Tasks.TaskContinuationOptions continuationOptions);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationFunction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<><tresult>,TNewResult></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<span class="xref">TNewResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>continuationOptions</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskcontinuationoptions">TaskContinuationOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TNewResult</span>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0____0__System_Threading_Tasks_TaskScheduler_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_TNewResult__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Func&lt;Task&lt;TResult&gt;,TNewResult&gt;,TaskScheduler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task&lt;TNewResult&gt; ContinueWith&lt;TNewResult&gt; (Func&lt;System.Threading.Tasks.Task&lt;TResult&gt;,TNewResult&gt; continuationFunction, System.Threading.Tasks.TaskScheduler scheduler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationFunction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<><tresult>,TNewResult></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<span class="xref">TNewResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>scheduler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskscheduler">TaskScheduler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TNewResult</span>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0__System_Object___0__System_Object_System_Threading_CancellationToken_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_TNewResult__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Func&lt;Task&lt;TResult&gt;,Object,TNewResult&gt;,Object,CancellationToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task&lt;TNewResult&gt; ContinueWith&lt;TNewResult&gt; (Func&lt;System.Threading.Tasks.Task&lt;TResult&gt;,object,TNewResult&gt; continuationFunction, object state, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationFunction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<><tresult>,System.Object,TNewResult></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<a class="xref" href="../system/system.object">Object</a>,<span class="xref">TNewResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TNewResult</span>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0__System_Object___0__System_Object_System_Threading_Tasks_TaskContinuationOptions_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_TNewResult__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Func&lt;Task&lt;TResult&gt;,Object,TNewResult&gt;,Object,TaskContinuationOptions)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task&lt;TNewResult&gt; ContinueWith&lt;TNewResult&gt; (Func&lt;System.Threading.Tasks.Task&lt;TResult&gt;,object,TNewResult&gt; continuationFunction, object state, System.Threading.Tasks.TaskContinuationOptions continuationOptions);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationFunction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<><tresult>,System.Object,TNewResult></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<a class="xref" href="../system/system.object">Object</a>,<span class="xref">TNewResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>continuationOptions</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskcontinuationoptions">TaskContinuationOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TNewResult</span>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0__System_Object___0__System_Object_System_Threading_Tasks_TaskScheduler_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_TNewResult__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Func&lt;Task&lt;TResult&gt;,Object,TNewResult&gt;,Object,TaskScheduler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task&lt;TNewResult&gt; ContinueWith&lt;TNewResult&gt; (Func&lt;System.Threading.Tasks.Task&lt;TResult&gt;,object,TNewResult&gt; continuationFunction, object state, System.Threading.Tasks.TaskScheduler scheduler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationFunction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<><tresult>,System.Object,TNewResult></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<a class="xref" href="../system/system.object">Object</a>,<span class="xref">TNewResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>scheduler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskscheduler">TaskScheduler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TNewResult</span>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0____0__System_Threading_CancellationToken_System_Threading_Tasks_TaskContinuationOptions_System_Threading_Tasks_TaskScheduler_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_TNewResult__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Func&lt;Task&lt;TResult&gt;,TNewResult&gt;,CancellationToken,TaskContinuationOptions,TaskScheduler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task&lt;TNewResult&gt; ContinueWith&lt;TNewResult&gt; (Func&lt;System.Threading.Tasks.Task&lt;TResult&gt;,TNewResult&gt; continuationFunction, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskContinuationOptions continuationOptions, System.Threading.Tasks.TaskScheduler scheduler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationFunction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<><tresult>,TNewResult></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<span class="xref">TNewResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>continuationOptions</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskcontinuationoptions">TaskContinuationOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>scheduler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskscheduler">TaskScheduler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TNewResult</span>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_ContinueWith__1_System_Func_System_Threading_Tasks_Task__0__System_Object___0__System_Object_System_Threading_CancellationToken_System_Threading_Tasks_TaskContinuationOptions_System_Threading_Tasks_TaskScheduler_">
+    
+            <a id="System_Threading_Tasks_Task_1_ContinueWith_TNewResult__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueWith(Func&lt;Task&lt;TResult&gt;,Object,TNewResult&gt;,Object,CancellationToken,TaskContinuationOptions,TaskScheduler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task&lt;TNewResult&gt; ContinueWith&lt;TNewResult&gt; (Func&lt;System.Threading.Tasks.Task&lt;TResult&gt;,object,TNewResult&gt; continuationFunction, object state, System.Threading.CancellationToken cancellationToken, System.Threading.Tasks.TaskContinuationOptions continuationOptions, System.Threading.Tasks.TaskScheduler scheduler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>continuationFunction</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Func<><tresult>,System.Object,TNewResult></tresult></span>&lt;<a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TResult</span>&gt;,<a class="xref" href="../system/system.object">Object</a>,<span class="xref">TNewResult</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>continuationOptions</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskcontinuationoptions">TaskContinuationOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>scheduler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.threading.tasks.taskscheduler">TaskScheduler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.threading.tasks.task-1">Task</a>&lt;<span class="xref">TNewResult</span>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Threading_Tasks_Task_1_GetAwaiter">
+    
+            <a id="System_Threading_Tasks_Task_1_GetAwaiter_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetAwaiter()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Runtime.CompilerServices.TaskAwaiter&lt;TResult&gt; GetAwaiter ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.runtime.compilerservices/system.runtime.compilerservices.taskawaiter-1">TaskAwaiter<tresult></tresult></a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

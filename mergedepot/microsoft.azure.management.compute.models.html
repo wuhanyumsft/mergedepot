@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Microsoft.Azure.Management.Compute.Models namespace">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="cloud-services">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/e94ef2bde5332ae6306299662a592890e0d555d2/docs-ref-autogen/Compute/Microsoft.Azure.Management.Compute.Models.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Compute/Microsoft.Azure.Management.Compute.Models.yml">
+<meta name="updated_at" content="2017-02-13 06:19 AM">
+<meta name="document_id" content="90fbc7e2-4d36-65c9-1964-6b5efadd6b0b">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Azure.Management.Compute.Models">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.azure.management.compute.models" rel="canonical">
+    <title>Microsoft.Azure.Management.Compute.Models namespace | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/d1d5acab8c02cc720733.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              <!-- NAMESPACE -->
+    <h1 id="Microsoft_Azure_Management_Compute_Models">
+      <span class="lang-csharp">Microsoft.Azure.Management.Compute.Models</span>
+      <span class="lang-vb">Microsoft.Azure.Management.Compute.Models</span>
+        Namespace
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div>
+    <header class="header enable-platform-filter" id="classes">
+      <h2>Classes
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_Azure_Management_Compute_Models_AccessUri" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.accessuri">AccessUri</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.accessuri">AccessUri</a></div>
+      </td>
+      <td>
+        <p>A disk access SAS uri.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_AdditionalUnattendContent" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.additionalunattendcontent">AdditionalUnattendContent</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.additionalunattendcontent">AdditionalUnattendContent</a></div>
+      </td>
+      <td>
+        <p>Additional XML formatted information that can be included in the
+Unattend.xml file, which is used by Windows Setup. Contents are defined
+by setting name, component name, and the pass in which the content is a
+applied.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ApiEntityReference" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.apientityreference">ApiEntityReference</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.apientityreference">ApiEntityReference</a></div>
+      </td>
+      <td>
+        <p>The API entity reference.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ApiError" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.apierror">ApiError</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.apierror">ApiError</a></div>
+      </td>
+      <td>
+        <p>Api error.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ApiErrorBase" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.apierrorbase">ApiErrorBase</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.apierrorbase">ApiErrorBase</a></div>
+      </td>
+      <td>
+        <p>Api error base.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_AvailabilitySet" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.availabilityset">AvailabilitySet</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.availabilityset">AvailabilitySet</a></div>
+      </td>
+      <td>
+        <p>Create or update availability set parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_BootDiagnostics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.bootdiagnostics">BootDiagnostics</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.bootdiagnostics">BootDiagnostics</a></div>
+      </td>
+      <td>
+        <p>Describes Boot Diagnostics.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_BootDiagnosticsInstanceView" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.bootdiagnosticsinstanceview">BootDiagnosticsInstanceView</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.bootdiagnosticsinstanceview">BootDiagnosticsInstanceView</a></div>
+      </td>
+      <td>
+        <p>The instance view of a virtual machine boot diagnostics.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ComputeLongRunningOperationProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.computelongrunningoperationproperties">ComputeLongRunningOperationProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.computelongrunningoperationproperties">ComputeLongRunningOperationProperties</a></div>
+      </td>
+      <td>
+        <p>Compute-specific operation properties, including output</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerService" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerservice">ContainerService</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerservice">ContainerService</a></div>
+      </td>
+      <td>
+        <p>Container service.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceAgentPoolProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerserviceagentpoolprofile">ContainerServiceAgentPoolProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerserviceagentpoolprofile">ContainerServiceAgentPoolProfile</a></div>
+      </td>
+      <td>
+        <p>Profile for the container service agent pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceCustomProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerservicecustomprofile">ContainerServiceCustomProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerservicecustomprofile">ContainerServiceCustomProfile</a></div>
+      </td>
+      <td>
+        <p>Properties to configure a custom container service cluster.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceDiagnosticsProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerservicediagnosticsprofile">ContainerServiceDiagnosticsProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerservicediagnosticsprofile">ContainerServiceDiagnosticsProfile</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceLinuxProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerservicelinuxprofile">ContainerServiceLinuxProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerservicelinuxprofile">ContainerServiceLinuxProfile</a></div>
+      </td>
+      <td>
+        <p>Profile for Linux VMs in the container service cluster.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceMasterProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerservicemasterprofile">ContainerServiceMasterProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerservicemasterprofile">ContainerServiceMasterProfile</a></div>
+      </td>
+      <td>
+        <p>Profile for the container service master.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceOrchestratorProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerserviceorchestratorprofile">ContainerServiceOrchestratorProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerserviceorchestratorprofile">ContainerServiceOrchestratorProfile</a></div>
+      </td>
+      <td>
+        <p>Profile for the container service orchestrator.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceServicePrincipalProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerserviceserviceprincipalprofile">ContainerServiceServicePrincipalProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerserviceserviceprincipalprofile">ContainerServiceServicePrincipalProfile</a></div>
+      </td>
+      <td>
+        <p>Information about a service principal identity for the cluster to use
+for manipulating Azure APIs.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceSshConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerservicesshconfiguration">ContainerServiceSshConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerservicesshconfiguration">ContainerServiceSshConfiguration</a></div>
+      </td>
+      <td>
+        <p>SSH configuration for Linux-based VMs running on Azure.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceSshPublicKey" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerservicesshpublickey">ContainerServiceSshPublicKey</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerservicesshpublickey">ContainerServiceSshPublicKey</a></div>
+      </td>
+      <td>
+        <p>Contains information about SSH certificate public key data.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceVMDiagnostics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerservicevmdiagnostics">ContainerServiceVMDiagnostics</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerservicevmdiagnostics">ContainerServiceVMDiagnostics</a></div>
+      </td>
+      <td>
+        <p>Profile for diagnostics on the container service VMs.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceVMSizeTypes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerservicevmsizetypes">ContainerServiceVMSizeTypes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerservicevmsizetypes">ContainerServiceVMSizeTypes</a></div>
+      </td>
+      <td>
+        <p>Defines values for ContainerServiceVMSizeTypes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceWindowsProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerservicewindowsprofile">ContainerServiceWindowsProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerservicewindowsprofile">ContainerServiceWindowsProfile</a></div>
+      </td>
+      <td>
+        <p>Profile for Windows VMs in the container service cluster.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_CreationData" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.creationdata">CreationData</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.creationdata">CreationData</a></div>
+      </td>
+      <td>
+        <p>Data used when creating a disk.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_DataDisk" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.datadisk">DataDisk</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.datadisk">DataDisk</a></div>
+      </td>
+      <td>
+        <p>Describes a data disk.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_DataDiskImage" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.datadiskimage">DataDiskImage</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.datadiskimage">DataDiskImage</a></div>
+      </td>
+      <td>
+        <p>Contains the data disk images information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_DiagnosticsProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.diagnosticsprofile">DiagnosticsProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.diagnosticsprofile">DiagnosticsProfile</a></div>
+      </td>
+      <td>
+        <p>Describes a diagnostics profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_Disk" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.disk">Disk</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.disk">Disk</a></div>
+      </td>
+      <td>
+        <p>Disk resource.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_DiskEncryptionSettings" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.diskencryptionsettings">DiskEncryptionSettings</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.diskencryptionsettings">DiskEncryptionSettings</a></div>
+      </td>
+      <td>
+        <p>Describes a Encryption Settings for a Disk</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_DiskInstanceView" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.diskinstanceview">DiskInstanceView</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.diskinstanceview">DiskInstanceView</a></div>
+      </td>
+      <td>
+        <p>The instance view of the disk.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_DiskUpdate" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.diskupdate">DiskUpdate</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.diskupdate">DiskUpdate</a></div>
+      </td>
+      <td>
+        <p>Disk update resource.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_EncryptionSettings" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.encryptionsettings">EncryptionSettings</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.encryptionsettings">EncryptionSettings</a></div>
+      </td>
+      <td>
+        <p>Encryption settings for disk or snapshot</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_GrantAccessData" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.grantaccessdata">GrantAccessData</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.grantaccessdata">GrantAccessData</a></div>
+      </td>
+      <td>
+        <p>Data used for requesting a SAS.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_HardwareProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.hardwareprofile">HardwareProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.hardwareprofile">HardwareProfile</a></div>
+      </td>
+      <td>
+        <p>Describes a hardware profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_Image" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.image">Image</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.image">Image</a></div>
+      </td>
+      <td>
+        <p>Describes an Image.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ImageDataDisk" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.imagedatadisk">ImageDataDisk</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.imagedatadisk">ImageDataDisk</a></div>
+      </td>
+      <td>
+        <p>Describes a data disk.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ImageDiskReference" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.imagediskreference">ImageDiskReference</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.imagediskreference">ImageDiskReference</a></div>
+      </td>
+      <td>
+        <p>The source image used for creating the disk.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ImageOSDisk" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.imageosdisk">ImageOSDisk</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.imageosdisk">ImageOSDisk</a></div>
+      </td>
+      <td>
+        <p>Describes an Operating System disk.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ImageReference" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.imagereference">ImageReference</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.imagereference">ImageReference</a></div>
+      </td>
+      <td>
+        <p>The image reference.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ImageStorageProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.imagestorageprofile">ImageStorageProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.imagestorageprofile">ImageStorageProfile</a></div>
+      </td>
+      <td>
+        <p>Describes a storage profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_InnerError" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.innererror">InnerError</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.innererror">InnerError</a></div>
+      </td>
+      <td>
+        <p>Inner error details.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_InstanceViewStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.instanceviewstatus">InstanceViewStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.instanceviewstatus">InstanceViewStatus</a></div>
+      </td>
+      <td>
+        <p>Instance view status.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_KeyVaultAndKeyReference" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.keyvaultandkeyreference">KeyVaultAndKeyReference</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.keyvaultandkeyreference">KeyVaultAndKeyReference</a></div>
+      </td>
+      <td>
+        <p>Key Vault Key Url and vault id of KeK, KeK is optional and when
+provided is used to unwrap the encryptionKey</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_KeyVaultAndSecretReference" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.keyvaultandsecretreference">KeyVaultAndSecretReference</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.keyvaultandsecretreference">KeyVaultAndSecretReference</a></div>
+      </td>
+      <td>
+        <p>Key Vault Secret Url and vault id of the encryption key</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_KeyVaultKeyReference" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.keyvaultkeyreference">KeyVaultKeyReference</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.keyvaultkeyreference">KeyVaultKeyReference</a></div>
+      </td>
+      <td>
+        <p>Describes a reference to Key Vault Key</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_KeyVaultSecretReference" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.keyvaultsecretreference">KeyVaultSecretReference</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.keyvaultsecretreference">KeyVaultSecretReference</a></div>
+      </td>
+      <td>
+        <p>Describes a reference to Key Vault Secret</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_LinuxConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.linuxconfiguration">LinuxConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.linuxconfiguration">LinuxConfiguration</a></div>
+      </td>
+      <td>
+        <p>Describes Windows configuration of the OS Profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ManagedDiskParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.manageddiskparameters">ManagedDiskParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.manageddiskparameters">ManagedDiskParameters</a></div>
+      </td>
+      <td>
+        <p>The parameters of a managed disk.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_NetworkInterfaceReference" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.networkinterfacereference">NetworkInterfaceReference</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.networkinterfacereference">NetworkInterfaceReference</a></div>
+      </td>
+      <td>
+        <p>Describes a network interface reference.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_NetworkProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.networkprofile">NetworkProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.networkprofile">NetworkProfile</a></div>
+      </td>
+      <td>
+        <p>Describes a network profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_OperationStatusResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.operationstatusresponse">OperationStatusResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.operationstatusresponse">OperationStatusResponse</a></div>
+      </td>
+      <td>
+        <p>Operation status response</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_OSDisk" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.osdisk">OSDisk</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.osdisk">OSDisk</a></div>
+      </td>
+      <td>
+        <p>Describes an Operating System disk.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_OSDiskImage" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.osdiskimage">OSDiskImage</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.osdiskimage">OSDiskImage</a></div>
+      </td>
+      <td>
+        <p>Contains the os disk image information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_OSProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.osprofile">OSProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.osprofile">OSProfile</a></div>
+      </td>
+      <td>
+        <p>Describes an OS profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_Page_1" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.page-1">Page</a>&lt;T&gt;</div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.page-1">Page</a>(Of T)</div>
+      </td>
+      <td>
+        <p>Defines a page in Azure responses.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_Page1_1" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.page1-1">Page1</a>&lt;T&gt;</div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.page1-1">Page1</a>(Of T)</div>
+      </td>
+      <td>
+        <p>Defines a page in Azure responses.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_Plan" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.plan">Plan</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.plan">Plan</a></div>
+      </td>
+      <td>
+        <p>Plan for the resource.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_PurchasePlan" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.purchaseplan">PurchasePlan</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.purchaseplan">PurchasePlan</a></div>
+      </td>
+      <td>
+        <p>Used for establishing the purchase context of any 3rd Party artifact
+through MarketPlace.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_Resource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.resource">Resource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.resource">Resource</a></div>
+      </td>
+      <td>
+        <p>The Resource model definition.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ResourceUpdate" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.resourceupdate">ResourceUpdate</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.resourceupdate">ResourceUpdate</a></div>
+      </td>
+      <td>
+        <p>The Resource model definition.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_Sku" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.sku">Sku</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.sku">Sku</a></div>
+      </td>
+      <td>
+        <p>Describes a virtual machine scale set sku.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_Snapshot" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.snapshot">Snapshot</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.snapshot">Snapshot</a></div>
+      </td>
+      <td>
+        <p>Snapshot resource.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_SnapshotUpdate" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.snapshotupdate">SnapshotUpdate</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.snapshotupdate">SnapshotUpdate</a></div>
+      </td>
+      <td>
+        <p>Snapshot update resource.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_SourceVault" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.sourcevault">SourceVault</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.sourcevault">SourceVault</a></div>
+      </td>
+      <td>
+        <p>The vault id is an Azure Resource Manager Resoure id in the form
+/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_SshConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.sshconfiguration">SshConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.sshconfiguration">SshConfiguration</a></div>
+      </td>
+      <td>
+        <p>SSH configuration for Linux based VMs running on Azure</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_SshPublicKey" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.sshpublickey">SshPublicKey</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.sshpublickey">SshPublicKey</a></div>
+      </td>
+      <td>
+        <p>Contains information about SSH certificate public key and the path on
+the Linux VM where the public key is placed.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_StorageProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.storageprofile">StorageProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.storageprofile">StorageProfile</a></div>
+      </td>
+      <td>
+        <p>Describes a storage profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_SubResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.subresource">SubResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.subresource">SubResource</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_SubResourceReadOnly" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.subresourcereadonly">SubResourceReadOnly</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.subresourcereadonly">SubResourceReadOnly</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_UpgradePolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.upgradepolicy">UpgradePolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.upgradepolicy">UpgradePolicy</a></div>
+      </td>
+      <td>
+        <p>Describes an upgrade policy - automatic or manual.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_Usage" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.usage">Usage</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.usage">Usage</a></div>
+      </td>
+      <td>
+        <p>Describes Compute Resource Usage.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_UsageName" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.usagename">UsageName</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.usagename">UsageName</a></div>
+      </td>
+      <td>
+        <p>The Usage Names.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VaultCertificate" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.vaultcertificate">VaultCertificate</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.vaultcertificate">VaultCertificate</a></div>
+      </td>
+      <td>
+        <p>Describes a single certificate reference in a Key Vault, and where the
+certificate should reside on the VM.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VaultSecretGroup" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.vaultsecretgroup">VaultSecretGroup</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.vaultsecretgroup">VaultSecretGroup</a></div>
+      </td>
+      <td>
+        <p>Describes a set of certificates which are all in the same Key Vault.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualHardDisk" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualharddisk">VirtualHardDisk</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualharddisk">VirtualHardDisk</a></div>
+      </td>
+      <td>
+        <p>Describes the uri of a disk.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachine" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachine">VirtualMachine</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachine">VirtualMachine</a></div>
+      </td>
+      <td>
+        <p>Describes a Virtual Machine.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineAgentInstanceView" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineagentinstanceview">VirtualMachineAgentInstanceView</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineagentinstanceview">VirtualMachineAgentInstanceView</a></div>
+      </td>
+      <td>
+        <p>The instance view of the VM Agent running on the virtual machine.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineCaptureParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinecaptureparameters">VirtualMachineCaptureParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinecaptureparameters">VirtualMachineCaptureParameters</a></div>
+      </td>
+      <td>
+        <p>Capture Virtual Machine parameters.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineCaptureResult" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinecaptureresult">VirtualMachineCaptureResult</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinecaptureresult">VirtualMachineCaptureResult</a></div>
+      </td>
+      <td>
+        <p>Resource Id.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineExtension" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineextension">VirtualMachineExtension</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineextension">VirtualMachineExtension</a></div>
+      </td>
+      <td>
+        <p>Describes a Virtual Machine Extension.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineExtensionHandlerInstanceView" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineextensionhandlerinstanceview">VirtualMachineExtensionHandlerInstanceView</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineextensionhandlerinstanceview">VirtualMachineExtensionHandlerInstanceView</a></div>
+      </td>
+      <td>
+        <p>The instance view of a virtual machine extension handler.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineExtensionImage" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineextensionimage">VirtualMachineExtensionImage</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineextensionimage">VirtualMachineExtensionImage</a></div>
+      </td>
+      <td>
+        <p>Describes a Virtual Machine Extension Image.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineExtensionInstanceView" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineextensioninstanceview">VirtualMachineExtensionInstanceView</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineextensioninstanceview">VirtualMachineExtensionInstanceView</a></div>
+      </td>
+      <td>
+        <p>The instance view of a virtual machine extension.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineImage" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineimage">VirtualMachineImage</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineimage">VirtualMachineImage</a></div>
+      </td>
+      <td>
+        <p>Describes a Virtual Machine Image.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineImageResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineimageresource">VirtualMachineImageResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineimageresource">VirtualMachineImageResource</a></div>
+      </td>
+      <td>
+        <p>Virtual machine image resource information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineInstanceView" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineinstanceview">VirtualMachineInstanceView</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachineinstanceview">VirtualMachineInstanceView</a></div>
+      </td>
+      <td>
+        <p>The instance view of a virtual machine.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSet" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescaleset">VirtualMachineScaleSet</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescaleset">VirtualMachineScaleSet</a></div>
+      </td>
+      <td>
+        <p>Describes a Virtual Machine Scale Set.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetDataDisk" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetdatadisk">VirtualMachineScaleSetDataDisk</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetdatadisk">VirtualMachineScaleSetDataDisk</a></div>
+      </td>
+      <td>
+        <p>Describes a virtual machine scale set data disk.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetExtension" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetextension">VirtualMachineScaleSetExtension</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetextension">VirtualMachineScaleSetExtension</a></div>
+      </td>
+      <td>
+        <p>Describes a Virtual Machine Scale Set Extension.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetExtensionProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetextensionprofile">VirtualMachineScaleSetExtensionProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetextensionprofile">VirtualMachineScaleSetExtensionProfile</a></div>
+      </td>
+      <td>
+        <p>Describes a virtual machine scale set extension profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetInstanceView" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetinstanceview">VirtualMachineScaleSetInstanceView</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetinstanceview">VirtualMachineScaleSetInstanceView</a></div>
+      </td>
+      <td>
+        <p>The instance view of a virtual machine scale set.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetInstanceViewStatusesSummary" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetinstanceviewstatusessummary">VirtualMachineScaleSetInstanceViewStatusesSummary</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetinstanceviewstatusessummary">VirtualMachineScaleSetInstanceViewStatusesSummary</a></div>
+      </td>
+      <td>
+        <p>Instance view statuses summary for virtual machines of a virtual
+machine scale set.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetIPConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetipconfiguration">VirtualMachineScaleSetIPConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetipconfiguration">VirtualMachineScaleSetIPConfiguration</a></div>
+      </td>
+      <td>
+        <p>Describes a virtual machine scale set network profile&#39;s IP
+configuration.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetManagedDiskParameters" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetmanageddiskparameters">VirtualMachineScaleSetManagedDiskParameters</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetmanageddiskparameters">VirtualMachineScaleSetManagedDiskParameters</a></div>
+      </td>
+      <td>
+        <p>Describes the parameters of a ScaleSet managed disk.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetNetworkConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetnetworkconfiguration">VirtualMachineScaleSetNetworkConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetnetworkconfiguration">VirtualMachineScaleSetNetworkConfiguration</a></div>
+      </td>
+      <td>
+        <p>Describes a virtual machine scale set network profile&#39;s network
+configurations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetNetworkProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetnetworkprofile">VirtualMachineScaleSetNetworkProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetnetworkprofile">VirtualMachineScaleSetNetworkProfile</a></div>
+      </td>
+      <td>
+        <p>Describes a virtual machine scale set network profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetOSDisk" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetosdisk">VirtualMachineScaleSetOSDisk</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetosdisk">VirtualMachineScaleSetOSDisk</a></div>
+      </td>
+      <td>
+        <p>Describes a virtual machine scale set operating system disk.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetOSProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetosprofile">VirtualMachineScaleSetOSProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetosprofile">VirtualMachineScaleSetOSProfile</a></div>
+      </td>
+      <td>
+        <p>Describes a virtual machine scale set OS profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetSku" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetsku">VirtualMachineScaleSetSku</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetsku">VirtualMachineScaleSetSku</a></div>
+      </td>
+      <td>
+        <p>Describes an available virtual machine scale set sku.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetSkuCapacity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetskucapacity">VirtualMachineScaleSetSkuCapacity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetskucapacity">VirtualMachineScaleSetSkuCapacity</a></div>
+      </td>
+      <td>
+        <p>Describes scaling information of a sku.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetStorageProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetstorageprofile">VirtualMachineScaleSetStorageProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetstorageprofile">VirtualMachineScaleSetStorageProfile</a></div>
+      </td>
+      <td>
+        <p>Describes a virtual machine scale set storage profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetVM" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetvm">VirtualMachineScaleSetVM</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetvm">VirtualMachineScaleSetVM</a></div>
+      </td>
+      <td>
+        <p>Describes a virtual machine scale set virtual machine.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetVMExtensionsSummary" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetvmextensionssummary">VirtualMachineScaleSetVMExtensionsSummary</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetvmextensionssummary">VirtualMachineScaleSetVMExtensionsSummary</a></div>
+      </td>
+      <td>
+        <p>Extensions summary for virtual machines of a virtual machine scale set.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetVMInstanceIDs" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetvminstanceids">VirtualMachineScaleSetVMInstanceIDs</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetvminstanceids">VirtualMachineScaleSetVMInstanceIDs</a></div>
+      </td>
+      <td>
+        <p>Specifies a list of virtual machine instance IDs from the VM scale set.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetVMInstanceRequiredIDs" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetvminstancerequiredids">VirtualMachineScaleSetVMInstanceRequiredIDs</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetvminstancerequiredids">VirtualMachineScaleSetVMInstanceRequiredIDs</a></div>
+      </td>
+      <td>
+        <p>Specifies a list of virtual machine instance IDs from the VM scale set.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetVMInstanceView" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetvminstanceview">VirtualMachineScaleSetVMInstanceView</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetvminstanceview">VirtualMachineScaleSetVMInstanceView</a></div>
+      </td>
+      <td>
+        <p>The instance view of a virtual machine scale set VM.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetVMProfile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetvmprofile">VirtualMachineScaleSetVMProfile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetvmprofile">VirtualMachineScaleSetVMProfile</a></div>
+      </td>
+      <td>
+        <p>Describes a virtual machine scale set virtual machine profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineSize" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinesize">VirtualMachineSize</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinesize">VirtualMachineSize</a></div>
+      </td>
+      <td>
+        <p>Describes the properties of a VM size.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineSizeTypes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinesizetypes">VirtualMachineSizeTypes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinesizetypes">VirtualMachineSizeTypes</a></div>
+      </td>
+      <td>
+        <p>Defines values for VirtualMachineSizeTypes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineStatusCodeCount" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinestatuscodecount">VirtualMachineStatusCodeCount</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinestatuscodecount">VirtualMachineStatusCodeCount</a></div>
+      </td>
+      <td>
+        <p>The status code and count of the virtual machine scale set instance
+view status summary.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_WindowsConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.windowsconfiguration">WindowsConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.windowsconfiguration">WindowsConfiguration</a></div>
+      </td>
+      <td>
+        <p>Describes Windows Configuration of the OS Profile.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_WinRMConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.winrmconfiguration">WinRMConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.winrmconfiguration">WinRMConfiguration</a></div>
+      </td>
+      <td>
+        <p>Describes Windows Remote Management configuration of the VM</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_WinRMListener" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.winrmlistener">WinRMListener</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.winrmlistener">WinRMListener</a></div>
+      </td>
+      <td>
+        <p>Describes Protocol and thumbprint of Windows Remote Management listener</p>
+
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="enums">
+      <h2>Enums
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_Azure_Management_Compute_Models_AccessLevel" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.accesslevel">AccessLevel</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.accesslevel">AccessLevel</a></div>
+      </td>
+      <td>
+        <p>Defines values for AccessLevel.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_CachingTypes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.cachingtypes">CachingTypes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.cachingtypes">CachingTypes</a></div>
+      </td>
+      <td>
+        <p>Defines values for CachingTypes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ComponentNames" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.componentnames">ComponentNames</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.componentnames">ComponentNames</a></div>
+      </td>
+      <td>
+        <p>Defines values for ComponentNames.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ContainerServiceOchestratorTypes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.containerserviceochestratortypes">ContainerServiceOchestratorTypes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.containerserviceochestratortypes">ContainerServiceOchestratorTypes</a></div>
+      </td>
+      <td>
+        <p>Defines values for ContainerServiceOchestratorTypes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_DiskCreateOption" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.diskcreateoption">DiskCreateOption</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.diskcreateoption">DiskCreateOption</a></div>
+      </td>
+      <td>
+        <p>Defines values for DiskCreateOption.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_DiskCreateOptionTypes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.diskcreateoptiontypes">DiskCreateOptionTypes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.diskcreateoptiontypes">DiskCreateOptionTypes</a></div>
+      </td>
+      <td>
+        <p>Defines values for DiskCreateOptionTypes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_InstanceViewTypes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.instanceviewtypes">InstanceViewTypes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.instanceviewtypes">InstanceViewTypes</a></div>
+      </td>
+      <td>
+        <p>Defines values for InstanceViewTypes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_OperatingSystemStateTypes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.operatingsystemstatetypes">OperatingSystemStateTypes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.operatingsystemstatetypes">OperatingSystemStateTypes</a></div>
+      </td>
+      <td>
+        <p>Defines values for OperatingSystemStateTypes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_OperatingSystemTypes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.operatingsystemtypes">OperatingSystemTypes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.operatingsystemtypes">OperatingSystemTypes</a></div>
+      </td>
+      <td>
+        <p>Defines values for OperatingSystemTypes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_PassNames" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.passnames">PassNames</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.passnames">PassNames</a></div>
+      </td>
+      <td>
+        <p>Defines values for PassNames.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_ProtocolTypes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.protocoltypes">ProtocolTypes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.protocoltypes">ProtocolTypes</a></div>
+      </td>
+      <td>
+        <p>Defines values for ProtocolTypes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_SettingNames" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.settingnames">SettingNames</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.settingnames">SettingNames</a></div>
+      </td>
+      <td>
+        <p>Defines values for SettingNames.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_StatusLevelTypes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.statusleveltypes">StatusLevelTypes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.statusleveltypes">StatusLevelTypes</a></div>
+      </td>
+      <td>
+        <p>Defines values for StatusLevelTypes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_StorageAccountTypes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.storageaccounttypes">StorageAccountTypes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.storageaccounttypes">StorageAccountTypes</a></div>
+      </td>
+      <td>
+        <p>Defines values for StorageAccountTypes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_UpgradeMode" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.upgrademode">UpgradeMode</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.upgrademode">UpgradeMode</a></div>
+      </td>
+      <td>
+        <p>Defines values for UpgradeMode.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_Compute_Models_VirtualMachineScaleSetSkuScaleType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetskuscaletype">VirtualMachineScaleSetSkuScaleType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.compute.models.virtualmachinescalesetskuscaletype">VirtualMachineScaleSetSkuScaleType</a></div>
+      </td>
+      <td>
+        <p>Defines values for VirtualMachineScaleSetSkuScaleType.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/d1d5acab8c02cc720733.reference.js"></script>
+  </body>
+</html>

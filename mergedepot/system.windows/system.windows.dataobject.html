@@ -1,0 +1,2783 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="DataObject class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Windows/System.Windows.DataObject.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Windows/System.Windows.DataObject.yml">
+<meta name="APIName" content="System.Windows.DataObject">
+<meta name="APIName" content="System.Windows.DataObject..ctor">
+<meta name="APIName" content="System.Windows.DataObject.AddCopyingHandler">
+<meta name="APIName" content="System.Windows.DataObject.AddPastingHandler">
+<meta name="APIName" content="System.Windows.DataObject.AddSettingDataHandler">
+<meta name="APIName" content="System.Windows.DataObject.ContainsAudio">
+<meta name="APIName" content="System.Windows.DataObject.ContainsFileDropList">
+<meta name="APIName" content="System.Windows.DataObject.ContainsImage">
+<meta name="APIName" content="System.Windows.DataObject.ContainsText">
+<meta name="APIName" content="System.Windows.DataObject.CopyingEvent">
+<meta name="APIName" content="System.Windows.DataObject.GetAudioStream">
+<meta name="APIName" content="System.Windows.DataObject.GetData">
+<meta name="APIName" content="System.Windows.DataObject.GetDataPresent">
+<meta name="APIName" content="System.Windows.DataObject.GetFileDropList">
+<meta name="APIName" content="System.Windows.DataObject.GetFormats">
+<meta name="APIName" content="System.Windows.DataObject.GetImage">
+<meta name="APIName" content="System.Windows.DataObject.GetText">
+<meta name="APIName" content="System.Windows.DataObject.PastingEvent">
+<meta name="APIName" content="System.Windows.DataObject.RemoveCopyingHandler">
+<meta name="APIName" content="System.Windows.DataObject.RemovePastingHandler">
+<meta name="APIName" content="System.Windows.DataObject.RemoveSettingDataHandler">
+<meta name="APIName" content="System.Windows.DataObject.SetAudio">
+<meta name="APIName" content="System.Windows.DataObject.SetData">
+<meta name="APIName" content="System.Windows.DataObject.SetFileDropList">
+<meta name="APIName" content="System.Windows.DataObject.SetImage">
+<meta name="APIName" content="System.Windows.DataObject.SetText">
+<meta name="APIName" content="System.Windows.DataObject.SettingDataEvent">
+<meta name="APIName" content="System.Windows.DataObject.System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise">
+<meta name="APIName" content="System.Windows.DataObject.System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise">
+<meta name="APIName" content="System.Windows.DataObject.System.Runtime.InteropServices.ComTypes.IDataObject.EnumDAdvise">
+<meta name="APIName" content="System.Windows.DataObject.System.Runtime.InteropServices.ComTypes.IDataObject.EnumFormatEtc">
+<meta name="APIName" content="System.Windows.DataObject.System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc">
+<meta name="APIName" content="System.Windows.DataObject.System.Runtime.InteropServices.ComTypes.IDataObject.GetData">
+<meta name="APIName" content="System.Windows.DataObject.System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere">
+<meta name="APIName" content="System.Windows.DataObject.System.Runtime.InteropServices.ComTypes.IDataObject.QueryGetData">
+<meta name="APIName" content="System.Windows.DataObject.System.Runtime.InteropServices.ComTypes.IDataObject.SetData">
+<meta name="APILocation" content="PresentationCore.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="a78d138f-3937-0f67-fd2b-a5dbdd518dcb">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Windows.DataObject">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.windows/system.windows.dataobject" rel="canonical">
+    <title>DataObject class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Windows_DataObject">
+      <span class="lang-csharp">DataObject</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public sealed class DataObject : System.Runtime.InteropServices.ComTypes.IDataObject, System.Windows.IDataObject</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">DataObject</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject__ctor">DataObject()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject__ctor_System_Object_">DataObject(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject__ctor_System_String_System_Object_">DataObject(String,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject__ctor_System_Type_System_Object_">DataObject(Type,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject__ctor_System_String_System_Object_System_Boolean_">DataObject(String,Object,Boolean)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Fields
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_CopyingEvent">CopyingEvent</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_PastingEvent">PastingEvent</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_SettingDataEvent">SettingDataEvent</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_AddCopyingHandler_System_Windows_DependencyObject_System_Windows_DataObjectCopyingEventHandler_">AddCopyingHandler(DependencyObject,DataObjectCopyingEventHandler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_AddPastingHandler_System_Windows_DependencyObject_System_Windows_DataObjectPastingEventHandler_">AddPastingHandler(DependencyObject,DataObjectPastingEventHandler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_AddSettingDataHandler_System_Windows_DependencyObject_System_Windows_DataObjectSettingDataEventHandler_">AddSettingDataHandler(DependencyObject,DataObjectSettingDataEventHandler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_ContainsAudio">ContainsAudio()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_ContainsFileDropList">ContainsFileDropList()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_ContainsImage">ContainsImage()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_ContainsText">ContainsText()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_ContainsText_System_Windows_TextDataFormat_">ContainsText(TextDataFormat)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetAudioStream">GetAudioStream()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetData_System_String_">GetData(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetData_System_Type_">GetData(Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetData_System_String_System_Boolean_">GetData(String,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetDataPresent_System_String_">GetDataPresent(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetDataPresent_System_Type_">GetDataPresent(Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetDataPresent_System_String_System_Boolean_">GetDataPresent(String,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetFileDropList">GetFileDropList()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetFormats">GetFormats()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetFormats_System_Boolean_">GetFormats(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetImage">GetImage()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetText">GetText()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_GetText_System_Windows_TextDataFormat_">GetText(TextDataFormat)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_RemoveCopyingHandler_System_Windows_DependencyObject_System_Windows_DataObjectCopyingEventHandler_">RemoveCopyingHandler(DependencyObject,DataObjectCopyingEventHandler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_RemovePastingHandler_System_Windows_DependencyObject_System_Windows_DataObjectPastingEventHandler_">RemovePastingHandler(DependencyObject,DataObjectPastingEventHandler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_RemoveSettingDataHandler_System_Windows_DependencyObject_System_Windows_DataObjectSettingDataEventHandler_">RemoveSettingDataHandler(DependencyObject,DataObjectSettingDataEventHandler)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_SetAudio_System_Byte___">SetAudio(Byte[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_SetAudio_System_IO_Stream_">SetAudio(Stream)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_SetData_System_Object_">SetData(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_SetData_System_String_System_Object_">SetData(String,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_SetData_System_Type_System_Object_">SetData(Type,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_SetData_System_String_System_Object_System_Boolean_">SetData(String,Object,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_SetFileDropList_System_Collections_Specialized_StringCollection_">SetFileDropList(StringCollection)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_SetImage_System_Windows_Media_Imaging_BitmapSource_">SetImage(BitmapSource)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_SetText_System_String_">SetText(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_SetText_System_String_System_Windows_TextDataFormat_">SetText(String,TextDataFormat)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Explicit Interface Implementations
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_DAdvise_System_Runtime_InteropServices_ComTypes_FORMATETC__System_Runtime_InteropServices_ComTypes_ADVF_System_Runtime_InteropServices_ComTypes_IAdviseSink_System_Int32__">System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise(FORMATETC,ADVF,IAdviseSink,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_DUnadvise_System_Int32_">System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_EnumDAdvise_System_Runtime_InteropServices_ComTypes_IEnumSTATDATA__">System.Runtime.InteropServices.ComTypes.IDataObject.EnumDAdvise(IEnumSTATDATA)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_EnumFormatEtc_System_Runtime_InteropServices_ComTypes_DATADIR_">System.Runtime.InteropServices.ComTypes.IDataObject.EnumFormatEtc(DATADIR)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_GetCanonicalFormatEtc_System_Runtime_InteropServices_ComTypes_FORMATETC__System_Runtime_InteropServices_ComTypes_FORMATETC__">System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc(FORMATETC,FORMATETC)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_GetData_System_Runtime_InteropServices_ComTypes_FORMATETC__System_Runtime_InteropServices_ComTypes_STGMEDIUM__">System.Runtime.InteropServices.ComTypes.IDataObject.GetData(FORMATETC,STGMEDIUM)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_GetDataHere_System_Runtime_InteropServices_ComTypes_FORMATETC__System_Runtime_InteropServices_ComTypes_STGMEDIUM__">System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere(FORMATETC,STGMEDIUM)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_QueryGetData_System_Runtime_InteropServices_ComTypes_FORMATETC__">System.Runtime.InteropServices.ComTypes.IDataObject.QueryGetData(FORMATETC)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_SetData_System_Runtime_InteropServices_ComTypes_FORMATETC__System_Runtime_InteropServices_ComTypes_STGMEDIUM__System_Boolean_">System.Runtime.InteropServices.ComTypes.IDataObject.SetData(FORMATETC,STGMEDIUM,Boolean)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject__ctor">
+    
+            <a id="System_Windows_DataObject__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DataObject()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public DataObject ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject__ctor_System_Object_">
+    
+            <a id="System_Windows_DataObject__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DataObject(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public DataObject (object data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject__ctor_System_String_System_Object_">
+    
+            <a id="System_Windows_DataObject__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DataObject(String,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public DataObject (string format, object data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject__ctor_System_Type_System_Object_">
+    
+            <a id="System_Windows_DataObject__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DataObject(Type,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public DataObject (Type format, object data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject__ctor_System_String_System_Object_System_Boolean_">
+    
+            <a id="System_Windows_DataObject__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DataObject(String,Object,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public DataObject (string format, object data, bool autoConvert);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>autoConvert</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="fields">
+        <h2>Fields
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_CopyingEvent">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CopyingEvent</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly System.Windows.RoutedEvent CopyingEvent;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_PastingEvent">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PastingEvent</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly System.Windows.RoutedEvent PastingEvent;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_SettingDataEvent">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SettingDataEvent</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly System.Windows.RoutedEvent SettingDataEvent;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_AddCopyingHandler_System_Windows_DependencyObject_System_Windows_DataObjectCopyingEventHandler_">
+    
+            <a id="System_Windows_DataObject_AddCopyingHandler_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddCopyingHandler(DependencyObject,DataObjectCopyingEventHandler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void AddCopyingHandler (System.Windows.DependencyObject element, System.Windows.DataObjectCopyingEventHandler handler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>handler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.dataobjectcopyingeventhandler">DataObjectCopyingEventHandler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_AddPastingHandler_System_Windows_DependencyObject_System_Windows_DataObjectPastingEventHandler_">
+    
+            <a id="System_Windows_DataObject_AddPastingHandler_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddPastingHandler(DependencyObject,DataObjectPastingEventHandler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void AddPastingHandler (System.Windows.DependencyObject element, System.Windows.DataObjectPastingEventHandler handler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>handler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.dataobjectpastingeventhandler">DataObjectPastingEventHandler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_AddSettingDataHandler_System_Windows_DependencyObject_System_Windows_DataObjectSettingDataEventHandler_">
+    
+            <a id="System_Windows_DataObject_AddSettingDataHandler_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddSettingDataHandler(DependencyObject,DataObjectSettingDataEventHandler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void AddSettingDataHandler (System.Windows.DependencyObject element, System.Windows.DataObjectSettingDataEventHandler handler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>handler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.dataobjectsettingdataeventhandler">DataObjectSettingDataEventHandler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_ContainsAudio">
+    
+            <a id="System_Windows_DataObject_ContainsAudio_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContainsAudio()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ContainsAudio ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_ContainsFileDropList">
+    
+            <a id="System_Windows_DataObject_ContainsFileDropList_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContainsFileDropList()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ContainsFileDropList ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_ContainsImage">
+    
+            <a id="System_Windows_DataObject_ContainsImage_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContainsImage()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ContainsImage ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_ContainsText">
+    
+            <a id="System_Windows_DataObject_ContainsText_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContainsText()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ContainsText ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_ContainsText_System_Windows_TextDataFormat_">
+    
+            <a id="System_Windows_DataObject_ContainsText_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContainsText(TextDataFormat)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ContainsText (System.Windows.TextDataFormat format);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.textdataformat">TextDataFormat</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetAudioStream">
+    
+            <a id="System_Windows_DataObject_GetAudioStream_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetAudioStream()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.IO.Stream GetAudioStream ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.io/system.io.stream">Stream</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetData_System_String_">
+    
+            <a id="System_Windows_DataObject_GetData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetData(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public object GetData (string format);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetData_System_Type_">
+    
+            <a id="System_Windows_DataObject_GetData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetData(Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public object GetData (Type format);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetData_System_String_System_Boolean_">
+    
+            <a id="System_Windows_DataObject_GetData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetData(String,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public object GetData (string format, bool autoConvert);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>autoConvert</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetDataPresent_System_String_">
+    
+            <a id="System_Windows_DataObject_GetDataPresent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDataPresent(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool GetDataPresent (string format);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetDataPresent_System_Type_">
+    
+            <a id="System_Windows_DataObject_GetDataPresent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDataPresent(Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool GetDataPresent (Type format);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetDataPresent_System_String_System_Boolean_">
+    
+            <a id="System_Windows_DataObject_GetDataPresent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDataPresent(String,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool GetDataPresent (string format, bool autoConvert);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>autoConvert</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetFileDropList">
+    
+            <a id="System_Windows_DataObject_GetFileDropList_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetFileDropList()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.Specialized.StringCollection GetFileDropList ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.collections.specialized.stringcollection(v=vs.110).aspx">StringCollection</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetFormats">
+    
+            <a id="System_Windows_DataObject_GetFormats_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetFormats()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string[] GetFormats ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetFormats_System_Boolean_">
+    
+            <a id="System_Windows_DataObject_GetFormats_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetFormats(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string[] GetFormats (bool autoConvert);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>autoConvert</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetImage">
+    
+            <a id="System_Windows_DataObject_GetImage_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetImage()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Media.Imaging.BitmapSource GetImage ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.windows.media.imaging/system.windows.media.imaging.bitmapsource">BitmapSource</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetText">
+    
+            <a id="System_Windows_DataObject_GetText_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetText()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string GetText ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_GetText_System_Windows_TextDataFormat_">
+    
+            <a id="System_Windows_DataObject_GetText_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetText(TextDataFormat)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string GetText (System.Windows.TextDataFormat format);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.textdataformat">TextDataFormat</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_RemoveCopyingHandler_System_Windows_DependencyObject_System_Windows_DataObjectCopyingEventHandler_">
+    
+            <a id="System_Windows_DataObject_RemoveCopyingHandler_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveCopyingHandler(DependencyObject,DataObjectCopyingEventHandler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void RemoveCopyingHandler (System.Windows.DependencyObject element, System.Windows.DataObjectCopyingEventHandler handler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>handler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.dataobjectcopyingeventhandler">DataObjectCopyingEventHandler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_RemovePastingHandler_System_Windows_DependencyObject_System_Windows_DataObjectPastingEventHandler_">
+    
+            <a id="System_Windows_DataObject_RemovePastingHandler_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemovePastingHandler(DependencyObject,DataObjectPastingEventHandler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void RemovePastingHandler (System.Windows.DependencyObject element, System.Windows.DataObjectPastingEventHandler handler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>handler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.dataobjectpastingeventhandler">DataObjectPastingEventHandler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_RemoveSettingDataHandler_System_Windows_DependencyObject_System_Windows_DataObjectSettingDataEventHandler_">
+    
+            <a id="System_Windows_DataObject_RemoveSettingDataHandler_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveSettingDataHandler(DependencyObject,DataObjectSettingDataEventHandler)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void RemoveSettingDataHandler (System.Windows.DependencyObject element, System.Windows.DataObjectSettingDataEventHandler handler);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>handler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.dataobjectsettingdataeventhandler">DataObjectSettingDataEventHandler</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_SetAudio_System_Byte___">
+    
+            <a id="System_Windows_DataObject_SetAudio_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetAudio(Byte[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetAudio (byte[] audioBytes);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>audioBytes</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_SetAudio_System_IO_Stream_">
+    
+            <a id="System_Windows_DataObject_SetAudio_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetAudio(Stream)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetAudio (System.IO.Stream audioStream);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>audioStream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.io/system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_SetData_System_Object_">
+    
+            <a id="System_Windows_DataObject_SetData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetData(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetData (object data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_SetData_System_String_System_Object_">
+    
+            <a id="System_Windows_DataObject_SetData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetData(String,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetData (string format, object data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_SetData_System_Type_System_Object_">
+    
+            <a id="System_Windows_DataObject_SetData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetData(Type,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetData (Type format, object data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_SetData_System_String_System_Object_System_Boolean_">
+    
+            <a id="System_Windows_DataObject_SetData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetData(String,Object,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetData (string format, object data, bool autoConvert);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>autoConvert</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_SetFileDropList_System_Collections_Specialized_StringCollection_">
+    
+            <a id="System_Windows_DataObject_SetFileDropList_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetFileDropList(StringCollection)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetFileDropList (System.Collections.Specialized.StringCollection fileDropList);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>fileDropList</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.collections.specialized.stringcollection(v=vs.110).aspx">StringCollection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_SetImage_System_Windows_Media_Imaging_BitmapSource_">
+    
+            <a id="System_Windows_DataObject_SetImage_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetImage(BitmapSource)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetImage (System.Windows.Media.Imaging.BitmapSource image);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>image</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows.media.imaging/system.windows.media.imaging.bitmapsource">BitmapSource</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_SetText_System_String_">
+    
+            <a id="System_Windows_DataObject_SetText_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetText(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetText (string textData);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>textData</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_SetText_System_String_System_Windows_TextDataFormat_">
+    
+            <a id="System_Windows_DataObject_SetText_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetText(String,TextDataFormat)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetText (string textData, System.Windows.TextDataFormat format);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>textData</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.textdataformat">TextDataFormat</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="eii">
+        <h2>Explicit Interface Implementations
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_DAdvise_System_Runtime_InteropServices_ComTypes_FORMATETC__System_Runtime_InteropServices_ComTypes_ADVF_System_Runtime_InteropServices_ComTypes_IAdviseSink_System_Int32__">
+    
+            <a id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_DAdvise_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise(FORMATETC,ADVF,IAdviseSink,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">int IDataObject.DAdvise (ref System.Runtime.InteropServices.ComTypes.FORMATETC pFormatetc, System.Runtime.InteropServices.ComTypes.ADVF advf, System.Runtime.InteropServices.ComTypes.IAdviseSink pAdvSink, out int pdwConnection);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pFormatetc</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.formatetc(v=vs.110).aspx">FORMATETC</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>advf</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.advf(v=vs.110).aspx">ADVF</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pAdvSink</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.iadvisesink(v=vs.110).aspx">IAdviseSink</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pdwConnection</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_DUnadvise_System_Int32_">
+    
+            <a id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_DUnadvise_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IDataObject.DUnadvise (int dwConnection);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dwConnection</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_EnumDAdvise_System_Runtime_InteropServices_ComTypes_IEnumSTATDATA__">
+    
+            <a id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_EnumDAdvise_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Runtime.InteropServices.ComTypes.IDataObject.EnumDAdvise(IEnumSTATDATA)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">int IDataObject.EnumDAdvise (out System.Runtime.InteropServices.ComTypes.IEnumSTATDATA enumAdvise);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>enumAdvise</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.ienumstatdata(v=vs.110).aspx">IEnumSTATDATA</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_EnumFormatEtc_System_Runtime_InteropServices_ComTypes_DATADIR_">
+    
+            <a id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_EnumFormatEtc_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Runtime.InteropServices.ComTypes.IDataObject.EnumFormatEtc(DATADIR)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">System.Runtime.InteropServices.ComTypes.IEnumFORMATETC IDataObject.EnumFormatEtc (System.Runtime.InteropServices.ComTypes.DATADIR dwDirection);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dwDirection</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.datadir(v=vs.110).aspx">DATADIR</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.ienumformatetc(v=vs.110).aspx">IEnumFORMATETC</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_GetCanonicalFormatEtc_System_Runtime_InteropServices_ComTypes_FORMATETC__System_Runtime_InteropServices_ComTypes_FORMATETC__">
+    
+            <a id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_GetCanonicalFormatEtc_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc(FORMATETC,FORMATETC)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">int IDataObject.GetCanonicalFormatEtc (ref System.Runtime.InteropServices.ComTypes.FORMATETC pformatetcIn, out System.Runtime.InteropServices.ComTypes.FORMATETC pformatetcOut);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pformatetcIn</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.formatetc(v=vs.110).aspx">FORMATETC</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pformatetcOut</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.formatetc(v=vs.110).aspx">FORMATETC</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_GetData_System_Runtime_InteropServices_ComTypes_FORMATETC__System_Runtime_InteropServices_ComTypes_STGMEDIUM__">
+    
+            <a id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_GetData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Runtime.InteropServices.ComTypes.IDataObject.GetData(FORMATETC,STGMEDIUM)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IDataObject.GetData (ref System.Runtime.InteropServices.ComTypes.FORMATETC formatetc, out System.Runtime.InteropServices.ComTypes.STGMEDIUM medium);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>formatetc</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.formatetc(v=vs.110).aspx">FORMATETC</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>medium</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.stgmedium(v=vs.110).aspx">STGMEDIUM</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_GetDataHere_System_Runtime_InteropServices_ComTypes_FORMATETC__System_Runtime_InteropServices_ComTypes_STGMEDIUM__">
+    
+            <a id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_GetDataHere_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere(FORMATETC,STGMEDIUM)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IDataObject.GetDataHere (ref System.Runtime.InteropServices.ComTypes.FORMATETC formatetc, ref System.Runtime.InteropServices.ComTypes.STGMEDIUM medium);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>formatetc</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.formatetc(v=vs.110).aspx">FORMATETC</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>medium</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.stgmedium(v=vs.110).aspx">STGMEDIUM</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_QueryGetData_System_Runtime_InteropServices_ComTypes_FORMATETC__">
+    
+            <a id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_QueryGetData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Runtime.InteropServices.ComTypes.IDataObject.QueryGetData(FORMATETC)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">int IDataObject.QueryGetData (ref System.Runtime.InteropServices.ComTypes.FORMATETC formatetc);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>formatetc</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.formatetc(v=vs.110).aspx">FORMATETC</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_SetData_System_Runtime_InteropServices_ComTypes_FORMATETC__System_Runtime_InteropServices_ComTypes_STGMEDIUM__System_Boolean_">
+    
+            <a id="System_Windows_DataObject_System_Runtime_InteropServices_ComTypes_IDataObject_SetData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Runtime.InteropServices.ComTypes.IDataObject.SetData(FORMATETC,STGMEDIUM,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IDataObject.SetData (ref System.Runtime.InteropServices.ComTypes.FORMATETC pFormatetcIn, ref System.Runtime.InteropServices.ComTypes.STGMEDIUM pmedium, bool fRelease);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pFormatetcIn</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.formatetc(v=vs.110).aspx">FORMATETC</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pmedium</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.comtypes.stgmedium(v=vs.110).aspx">STGMEDIUM</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>fRelease</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

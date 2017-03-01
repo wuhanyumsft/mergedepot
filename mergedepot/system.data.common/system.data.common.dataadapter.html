@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="DataAdapter class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Data.Common/System.Data.Common.DataAdapter.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Data.Common/System.Data.Common.DataAdapter.yml">
+<meta name="APIName" content="System.Data.Common.DataAdapter">
+<meta name="APIName" content="System.Data.Common.DataAdapter..ctor">
+<meta name="APIName" content="System.Data.Common.DataAdapter.AcceptChangesDuringFill">
+<meta name="APIName" content="System.Data.Common.DataAdapter.AcceptChangesDuringUpdate">
+<meta name="APIName" content="System.Data.Common.DataAdapter.CloneInternals">
+<meta name="APIName" content="System.Data.Common.DataAdapter.ContinueUpdateOnError">
+<meta name="APIName" content="System.Data.Common.DataAdapter.CreateTableMappings">
+<meta name="APIName" content="System.Data.Common.DataAdapter.Dispose">
+<meta name="APIName" content="System.Data.Common.DataAdapter.Fill">
+<meta name="APIName" content="System.Data.Common.DataAdapter.FillError">
+<meta name="APIName" content="System.Data.Common.DataAdapter.add_FillError">
+<meta name="APIName" content="System.Data.Common.DataAdapter.remove_FillError">
+<meta name="APIName" content="System.Data.Common.DataAdapter.FillLoadOption">
+<meta name="APIName" content="System.Data.Common.DataAdapter.FillSchema">
+<meta name="APIName" content="System.Data.Common.DataAdapter.GetFillParameters">
+<meta name="APIName" content="System.Data.Common.DataAdapter.HasTableMappings">
+<meta name="APIName" content="System.Data.Common.DataAdapter.MissingMappingAction">
+<meta name="APIName" content="System.Data.Common.DataAdapter.MissingSchemaAction">
+<meta name="APIName" content="System.Data.Common.DataAdapter.OnFillError">
+<meta name="APIName" content="System.Data.Common.DataAdapter.ResetFillLoadOption">
+<meta name="APIName" content="System.Data.Common.DataAdapter.ReturnProviderSpecificTypes">
+<meta name="APIName" content="System.Data.Common.DataAdapter.ShouldSerializeAcceptChangesDuringFill">
+<meta name="APIName" content="System.Data.Common.DataAdapter.ShouldSerializeFillLoadOption">
+<meta name="APIName" content="System.Data.Common.DataAdapter.ShouldSerializeTableMappings">
+<meta name="APIName" content="System.Data.Common.DataAdapter.System.Data.IDataAdapter.TableMappings">
+<meta name="APIName" content="System.Data.Common.DataAdapter.TableMappings">
+<meta name="APIName" content="System.Data.Common.DataAdapter.Update">
+<meta name="APILocation" content="System.Data.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="5c774260-3918-3cd0-5d2f-296100f28d2e">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Data.Common.DataAdapter">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.data.common/system.data.common.dataadapter" rel="canonical">
+    <title>DataAdapter class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Data_Common_DataAdapter">
+      <span class="lang-csharp">DataAdapter</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public class DataAdapter : System.ComponentModel.Component, System.Data.IDataAdapter</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.componentmodel.component(v=vs.110).aspx">System.ComponentModel.Component</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">DataAdapter</div>
+        </div>
+      </li>
+    </ul>
+    
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter__ctor">DataAdapter()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter__ctor_System_Data_Common_DataAdapter_">DataAdapter(DataAdapter)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_AcceptChangesDuringFill">AcceptChangesDuringFill</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_AcceptChangesDuringUpdate">AcceptChangesDuringUpdate</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_ContinueUpdateOnError">ContinueUpdateOnError</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_FillLoadOption">FillLoadOption</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_MissingMappingAction">MissingMappingAction</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_MissingSchemaAction">MissingSchemaAction</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_ReturnProviderSpecificTypes">ReturnProviderSpecificTypes</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_TableMappings">TableMappings</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_CloneInternals">CloneInternals()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_CreateTableMappings">CreateTableMappings()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_Fill_System_Data_DataSet_">Fill(DataSet)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_Fill_System_Data_DataTable_System_Data_IDataReader_">Fill(DataTable,IDataReader)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_Fill_System_Data_DataTable___System_Data_IDataReader_System_Int32_System_Int32_">Fill(DataTable[],IDataReader,Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_Fill_System_Data_DataSet_System_String_System_Data_IDataReader_System_Int32_System_Int32_">Fill(DataSet,String,IDataReader,Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_FillSchema_System_Data_DataSet_System_Data_SchemaType_">FillSchema(DataSet,SchemaType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_FillSchema_System_Data_DataTable_System_Data_SchemaType_System_Data_IDataReader_">FillSchema(DataTable,SchemaType,IDataReader)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_FillSchema_System_Data_DataSet_System_Data_SchemaType_System_String_System_Data_IDataReader_">FillSchema(DataSet,SchemaType,String,IDataReader)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_GetFillParameters">GetFillParameters()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_HasTableMappings">HasTableMappings()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_OnFillError_System_Data_FillErrorEventArgs_">OnFillError(FillErrorEventArgs)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_ResetFillLoadOption">ResetFillLoadOption()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_ShouldSerializeAcceptChangesDuringFill">ShouldSerializeAcceptChangesDuringFill()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_ShouldSerializeFillLoadOption">ShouldSerializeFillLoadOption()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_ShouldSerializeTableMappings">ShouldSerializeTableMappings()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_Update_System_Data_DataSet_">Update(DataSet)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Events
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_FillError">FillError</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Explicit Interface Implementations
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Data_Common_DataAdapter_System_Data_IDataAdapter_TableMappings">System.Data.IDataAdapter.TableMappings</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter__ctor">
+    
+            <a id="System_Data_Common_DataAdapter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DataAdapter()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected DataAdapter ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter__ctor_System_Data_Common_DataAdapter_">
+    
+            <a id="System_Data_Common_DataAdapter__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DataAdapter(DataAdapter)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected DataAdapter (System.Data.Common.DataAdapter from);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>from</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.data.common.dataadapter">DataAdapter</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_AcceptChangesDuringFill">
+    
+            <a id="System_Data_Common_DataAdapter_AcceptChangesDuringFill_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AcceptChangesDuringFill</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool AcceptChangesDuringFill { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_AcceptChangesDuringUpdate">
+    
+            <a id="System_Data_Common_DataAdapter_AcceptChangesDuringUpdate_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AcceptChangesDuringUpdate</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool AcceptChangesDuringUpdate { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_ContinueUpdateOnError">
+    
+            <a id="System_Data_Common_DataAdapter_ContinueUpdateOnError_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContinueUpdateOnError</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ContinueUpdateOnError { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_FillLoadOption">
+    
+            <a id="System_Data_Common_DataAdapter_FillLoadOption_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FillLoadOption</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Data.LoadOption FillLoadOption { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data/system.data.loadoption">LoadOption</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_MissingMappingAction">
+    
+            <a id="System_Data_Common_DataAdapter_MissingMappingAction_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MissingMappingAction</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Data.MissingMappingAction MissingMappingAction { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data/system.data.missingmappingaction">MissingMappingAction</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_MissingSchemaAction">
+    
+            <a id="System_Data_Common_DataAdapter_MissingSchemaAction_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MissingSchemaAction</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Data.MissingSchemaAction MissingSchemaAction { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data/system.data.missingschemaaction">MissingSchemaAction</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_ReturnProviderSpecificTypes">
+    
+            <a id="System_Data_Common_DataAdapter_ReturnProviderSpecificTypes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReturnProviderSpecificTypes</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool ReturnProviderSpecificTypes { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_TableMappings">
+    
+            <a id="System_Data_Common_DataAdapter_TableMappings_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TableMappings</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Data.Common.DataTableMappingCollection TableMappings { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.datatablemappingcollection">DataTableMappingCollection</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_CloneInternals">
+    
+            <a id="System_Data_Common_DataAdapter_CloneInternals_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CloneInternals()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Common.DataAdapter CloneInternals ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.dataadapter">DataAdapter</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_CreateTableMappings">
+    
+            <a id="System_Data_Common_DataAdapter_CreateTableMappings_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreateTableMappings()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.Common.DataTableMappingCollection CreateTableMappings ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.data.common.datatablemappingcollection">DataTableMappingCollection</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_Dispose_System_Boolean_">
+    
+            <a id="System_Data_Common_DataAdapter_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_Fill_System_Data_DataSet_">
+    
+            <a id="System_Data_Common_DataAdapter_Fill_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Fill(DataSet)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int Fill (System.Data.DataSet dataSet);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dataSet</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.dataset">DataSet</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_Fill_System_Data_DataTable_System_Data_IDataReader_">
+    
+            <a id="System_Data_Common_DataAdapter_Fill_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Fill(DataTable,IDataReader)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual int Fill (System.Data.DataTable dataTable, System.Data.IDataReader dataReader);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dataTable</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.datatable">DataTable</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>dataReader</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.idatareader">IDataReader</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_Fill_System_Data_DataTable___System_Data_IDataReader_System_Int32_System_Int32_">
+    
+            <a id="System_Data_Common_DataAdapter_Fill_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Fill(DataTable[],IDataReader,Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual int Fill (System.Data.DataTable[] dataTables, System.Data.IDataReader dataReader, int startRecord, int maxRecords);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dataTables</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.datatable">DataTable</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>dataReader</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.idatareader">IDataReader</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>startRecord</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>maxRecords</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_Fill_System_Data_DataSet_System_String_System_Data_IDataReader_System_Int32_System_Int32_">
+    
+            <a id="System_Data_Common_DataAdapter_Fill_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Fill(DataSet,String,IDataReader,Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual int Fill (System.Data.DataSet dataSet, string srcTable, System.Data.IDataReader dataReader, int startRecord, int maxRecords);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dataSet</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.dataset">DataSet</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>srcTable</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>dataReader</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.idatareader">IDataReader</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>startRecord</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>maxRecords</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_FillSchema_System_Data_DataSet_System_Data_SchemaType_">
+    
+            <a id="System_Data_Common_DataAdapter_FillSchema_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FillSchema(DataSet,SchemaType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Data.DataTable[] FillSchema (System.Data.DataSet dataSet, System.Data.SchemaType schemaType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dataSet</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.dataset">DataSet</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>schemaType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.schematype">SchemaType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data/system.data.datatable">DataTable</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_FillSchema_System_Data_DataTable_System_Data_SchemaType_System_Data_IDataReader_">
+    
+            <a id="System_Data_Common_DataAdapter_FillSchema_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FillSchema(DataTable,SchemaType,IDataReader)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.DataTable FillSchema (System.Data.DataTable dataTable, System.Data.SchemaType schemaType, System.Data.IDataReader dataReader);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dataTable</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.datatable">DataTable</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>schemaType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.schematype">SchemaType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>dataReader</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.idatareader">IDataReader</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data/system.data.datatable">DataTable</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_FillSchema_System_Data_DataSet_System_Data_SchemaType_System_String_System_Data_IDataReader_">
+    
+            <a id="System_Data_Common_DataAdapter_FillSchema_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FillSchema(DataSet,SchemaType,String,IDataReader)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual System.Data.DataTable[] FillSchema (System.Data.DataSet dataSet, System.Data.SchemaType schemaType, string srcTable, System.Data.IDataReader dataReader);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dataSet</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.dataset">DataSet</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>schemaType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.schematype">SchemaType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>srcTable</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>dataReader</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.idatareader">IDataReader</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data/system.data.datatable">DataTable</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_GetFillParameters">
+    
+            <a id="System_Data_Common_DataAdapter_GetFillParameters_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetFillParameters()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Data.IDataParameter[] GetFillParameters ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data/system.data.idataparameter">IDataParameter</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_HasTableMappings">
+    
+            <a id="System_Data_Common_DataAdapter_HasTableMappings_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">HasTableMappings()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected bool HasTableMappings ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_OnFillError_System_Data_FillErrorEventArgs_">
+    
+            <a id="System_Data_Common_DataAdapter_OnFillError_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnFillError(FillErrorEventArgs)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void OnFillError (System.Data.FillErrorEventArgs value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.fillerroreventargs">FillErrorEventArgs</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_ResetFillLoadOption">
+    
+            <a id="System_Data_Common_DataAdapter_ResetFillLoadOption_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ResetFillLoadOption()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void ResetFillLoadOption ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_ShouldSerializeAcceptChangesDuringFill">
+    
+            <a id="System_Data_Common_DataAdapter_ShouldSerializeAcceptChangesDuringFill_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ShouldSerializeAcceptChangesDuringFill()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool ShouldSerializeAcceptChangesDuringFill ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_ShouldSerializeFillLoadOption">
+    
+            <a id="System_Data_Common_DataAdapter_ShouldSerializeFillLoadOption_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ShouldSerializeFillLoadOption()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool ShouldSerializeFillLoadOption ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_ShouldSerializeTableMappings">
+    
+            <a id="System_Data_Common_DataAdapter_ShouldSerializeTableMappings_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ShouldSerializeTableMappings()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual bool ShouldSerializeTableMappings ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_Update_System_Data_DataSet_">
+    
+            <a id="System_Data_Common_DataAdapter_Update_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Update(DataSet)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int Update (System.Data.DataSet dataSet);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dataSet</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.data/system.data.dataset">DataSet</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="events">
+        <h2>Events
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_FillError">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FillError</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event System.Data.FillErrorEventHandler FillError;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="eii">
+        <h2>Explicit Interface Implementations
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Data_Common_DataAdapter_System_Data_IDataAdapter_TableMappings">
+    
+            <a id="System_Data_Common_DataAdapter_System_Data_IDataAdapter_TableMappings_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.Data.IDataAdapter.TableMappings</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">System.Data.ITableMappingCollection System.Data.IDataAdapter.TableMappings { get; }</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.data/system.data.itablemappingcollection">ITableMappingCollection</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

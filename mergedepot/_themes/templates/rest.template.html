@@ -1,0 +1,81 @@
+<script type="x-template" id="rest-api-form">
+    <form class="sandbox">
+        <h6><% loc test.request %></h6>
+        <template v-for="param in parameters" class="control is-horizontal columns">
+            <template v-if="param.isList && !param.isArray">
+                <input-select :model.sync="param"></input-select>
+            </template>
+            <template v-else>
+                <input-text :model.sync="param"></input-text>
+            </template>
+        </template>
+
+        <p class="control is-horizontal on-right">
+            <a v-on:click="submitOperation" class="button is-primary is-small"><span class="icon icon-cloud"></span><% loc try.it %></a>
+        </p>
+        <div class="request" v-show="showRequest">
+            <h6><% loc sample.request %></h6>
+            <pre><code class="request nohighlight"></code></pre>
+        </div>
+
+        <div class="animation-progress-ring-20x20 progress" v-if="loading"></div>
+
+        <div class="response" v-show="showResponse">
+            <h6><% loc sample.response %></h6>
+            <pre><code class="response_body" v-bind:class="{ 'json': isJson}">{{sample_response}}</code></pre>
+            <span class="response_header_span" v-show="showResponseHeader">
+                <h6><% loc response.header %></h6>
+                <pre><code class="response_headers nohighlight"></code></pre>
+                <h6><% loc response.code %></h6>
+                <pre><code class="response_code nohighlight"></code></pre>
+            </span>
+        </div>
+
+    </form>
+</script>
+
+<script type="x-template" id="input-text">
+    <p class="control is-horizontal columns">
+        <label class="column is-3 label">{{model.name}}</label>
+        <template v-if="model.isObject || model.isArray">
+           <textarea class='column is-9 textarea' name='{{model.name}}'
+                     :class="{required: model.required, error: !model.validation.isValid}"
+                     :placeholder = "model.attrs.placeholder"
+                     v-model="model.value"
+           ></textarea>
+        </template>
+        <template v-else>
+            <input class="column is-9 input"
+                   :class="{required: model.required, error: !model.validation.isValid}"
+                   name="{{model.name}}"
+                   type="text "
+                   :placeholder = "model.attrs.placeholder"
+                   v-model="model.value"
+            />
+        </template>
+    </p>
+    <div class="control is-horizontal columns">
+        <div class="column is-3 label"></div>
+        <p class="column is-9 error error-label" v-show="!model.validation.isValid">{{model.validation.message}}</p>
+    </div>
+</script>
+
+<script type="x-template" id="input-select">
+    <p class="control is-horizontal columns">
+        <label class="column is-3 label">{{model.name}}</label>
+        <select class="column is-9 select"
+                :class="{required: model.required, error: !model.validation.isValid}"
+                name="{{model.name}}"
+                v-model="model.value"
+        >
+            <option value=''></option>
+            <option v-for="option in model.allowableValues.values" v-bind:value="option">
+                {{ option }}
+            </option>
+        </select>
+    </p>
+    <div class="control is-horizontal columns">
+        <div class="column is-3 label"></div>
+        <p class="column is-9 error error-label" v-show="!model.validation.isValid">{{model.validation.message}}</p>
+    </div>
+</script>

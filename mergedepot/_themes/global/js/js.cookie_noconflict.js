@@ -1,0 +1,1 @@
+msDocs.functions.cookies = Cookies.noConflict();

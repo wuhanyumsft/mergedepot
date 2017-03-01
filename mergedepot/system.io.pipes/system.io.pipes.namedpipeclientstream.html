@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="NamedPipeClientStream class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.IO.Pipes/System.IO.Pipes.NamedPipeClientStream.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO.Pipes/System.IO.Pipes.NamedPipeClientStream.yml">
+<meta name="APIName" content="System.IO.Pipes.NamedPipeClientStream">
+<meta name="APIName" content="System.IO.Pipes.NamedPipeClientStream..ctor">
+<meta name="APIName" content="System.IO.Pipes.NamedPipeClientStream.CheckPipePropertyOperations">
+<meta name="APIName" content="System.IO.Pipes.NamedPipeClientStream.Connect">
+<meta name="APIName" content="System.IO.Pipes.NamedPipeClientStream.ConnectAsync">
+<meta name="APIName" content="System.IO.Pipes.NamedPipeClientStream.Finalize">
+<meta name="APIName" content="System.IO.Pipes.NamedPipeClientStream.NumberOfServerInstances">
+<meta name="APILocation" content="System.Core.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="4c102342-1540-9082-7555-29bbaa3bc2b5">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.Pipes.NamedPipeClientStream">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.io.pipes/system.io.pipes.namedpipeclientstream" rel="canonical">
+    <title>NamedPipeClientStream class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_Pipes_NamedPipeClientStream">
+      <span class="lang-csharp">NamedPipeClientStream</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public sealed class NamedPipeClientStream : System.IO.Pipes.PipeStream</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject">MarshalByRefObject</a>
+          </div>
+        </li>
+        <li class="l2">
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream">Stream</a>
+          </div>
+        </li>
+        <li class="l3">
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream">System.IO.Pipes.PipeStream</a>
+          </div>
+        </li>
+      <li class="l4">
+        <div class="xref">
+          <div class="lang-csharp">NamedPipeClientStream</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_BeginRead_System_Byte___System_Int32_System_Int32_System_AsyncCallback_System_Object_">BeginRead(Byte[],Int32,Int32,AsyncCallback,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_BeginWrite_System_Byte___System_Int32_System_Int32_System_AsyncCallback_System_Object_">BeginWrite(Byte[],Int32,Int32,AsyncCallback,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_CanRead">CanRead</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_CanSeek">CanSeek</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_CanWrite">CanWrite</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_CheckReadOperations">CheckReadOperations()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_CheckWriteOperations">CheckWriteOperations()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_Dispose_System_Boolean_">Dispose(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_EndRead_System_IAsyncResult_">EndRead(IAsyncResult)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_EndWrite_System_IAsyncResult_">EndWrite(IAsyncResult)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_Flush">Flush()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_GetAccessControl">GetAccessControl()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_InBufferSize">InBufferSize</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_InitializeHandle_Microsoft_Win32_SafeHandles_SafePipeHandle_System_Boolean_System_Boolean_">InitializeHandle(SafePipeHandle,Boolean,Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_IsAsync">IsAsync</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_IsConnected">IsConnected</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_IsHandleExposed">IsHandleExposed</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_IsMessageComplete">IsMessageComplete</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_Length">Length</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_OutBufferSize">OutBufferSize</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_Position">Position</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_Read_System_Byte___System_Int32_System_Int32_">Read(Byte[],Int32,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_ReadByte">ReadByte()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_ReadMode">ReadMode</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_SafePipeHandle">SafePipeHandle</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_Seek_System_Int64_System_IO_SeekOrigin_">Seek(Int64,SeekOrigin)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_SetAccessControl_System_IO_Pipes_PipeSecurity_">SetAccessControl(PipeSecurity)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_SetLength_System_Int64_">SetLength(Int64)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_TransmissionMode">TransmissionMode</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_WaitForPipeDrain">WaitForPipeDrain()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_Write_System_Byte___System_Int32_System_Int32_">Write(Byte[],Int32,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.pipes.pipestream#System_IO_Pipes_PipeStream_WriteByte_System_Byte_">WriteByte(Byte)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_CanTimeout">CanTimeout</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_Close">Close()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_CopyTo_System_IO_Stream_">CopyTo(Stream)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_CopyTo_System_IO_Stream_System_Int32_">CopyTo(Stream,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_CopyToAsync_System_IO_Stream_">CopyToAsync(Stream)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_CopyToAsync_System_IO_Stream_System_Int32_">CopyToAsync(Stream,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_CopyToAsync_System_IO_Stream_System_Int32_System_Threading_CancellationToken_">CopyToAsync(Stream,Int32,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_CreateWaitHandle">CreateWaitHandle()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_Dispose">Dispose()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_FlushAsync">FlushAsync()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_FlushAsync_System_Threading_CancellationToken_">FlushAsync(CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_Null">Null</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_ObjectInvariant">ObjectInvariant()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_ReadAsync_System_Byte___System_Int32_System_Int32_">ReadAsync(Byte[],Int32,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_ReadAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">ReadAsync(Byte[],Int32,Int32,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_ReadTimeout">ReadTimeout</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_Synchronized_System_IO_Stream_">Synchronized(Stream)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_WriteAsync_System_Byte___System_Int32_System_Int32_">WriteAsync(Byte[],Int32,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_WriteAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_">WriteAsync(Byte[],Int32,Int32,CancellationToken)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.io/system.io.stream#System_IO_Stream_WriteTimeout">WriteTimeout</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_CreateObjRef_System_Type_">CreateObjRef(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_GetLifetimeService">GetLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_InitializeLifetimeService">InitializeLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_MemberwiseClone_System_Boolean_">MemberwiseClone(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream__ctor_System_String_">NamedPipeClientStream(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream__ctor_System_String_System_String_">NamedPipeClientStream(String,String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream__ctor_System_String_System_String_System_IO_Pipes_PipeDirection_">NamedPipeClientStream(String,String,PipeDirection)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream__ctor_System_IO_Pipes_PipeDirection_System_Boolean_System_Boolean_Microsoft_Win32_SafeHandles_SafePipeHandle_">NamedPipeClientStream(PipeDirection,Boolean,Boolean,SafePipeHandle)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream__ctor_System_String_System_String_System_IO_Pipes_PipeDirection_System_IO_Pipes_PipeOptions_">NamedPipeClientStream(String,String,PipeDirection,PipeOptions)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream__ctor_System_String_System_String_System_IO_Pipes_PipeDirection_System_IO_Pipes_PipeOptions_System_Security_Principal_TokenImpersonationLevel_">NamedPipeClientStream(String,String,PipeDirection,PipeOptions,TokenImpersonationLevel)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream__ctor_System_String_System_String_System_IO_Pipes_PipeAccessRights_System_IO_Pipes_PipeOptions_System_Security_Principal_TokenImpersonationLevel_System_IO_HandleInheritability_">NamedPipeClientStream(String,String,PipeAccessRights,PipeOptions,TokenImpersonationLevel,HandleInheritability)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream__ctor_System_String_System_String_System_IO_Pipes_PipeDirection_System_IO_Pipes_PipeOptions_System_Security_Principal_TokenImpersonationLevel_System_IO_HandleInheritability_">NamedPipeClientStream(String,String,PipeDirection,PipeOptions,TokenImpersonationLevel,HandleInheritability)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream_NumberOfServerInstances">NumberOfServerInstances</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream_CheckPipePropertyOperations">CheckPipePropertyOperations()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream_Connect">Connect()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream_Connect_System_Int32_">Connect(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream_ConnectAsync">ConnectAsync()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream_ConnectAsync_System_Int32_">ConnectAsync(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream_ConnectAsync_System_Threading_CancellationToken_">ConnectAsync(CancellationToken)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream_ConnectAsync_System_Int32_System_Threading_CancellationToken_">ConnectAsync(Int32,CancellationToken)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_IO_Pipes_NamedPipeClientStream_Finalize">Finalize()</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream__ctor_System_String_">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NamedPipeClientStream(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public NamedPipeClientStream (string pipeName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pipeName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream__ctor_System_String_System_String_">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NamedPipeClientStream(String,String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public NamedPipeClientStream (string serverName, string pipeName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>serverName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pipeName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream__ctor_System_String_System_String_System_IO_Pipes_PipeDirection_">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NamedPipeClientStream(String,String,PipeDirection)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public NamedPipeClientStream (string serverName, string pipeName, System.IO.Pipes.PipeDirection direction);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>serverName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pipeName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>direction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.pipes.pipedirection">PipeDirection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream__ctor_System_IO_Pipes_PipeDirection_System_Boolean_System_Boolean_Microsoft_Win32_SafeHandles_SafePipeHandle_">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NamedPipeClientStream(PipeDirection,Boolean,Boolean,SafePipeHandle)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public NamedPipeClientStream (System.IO.Pipes.PipeDirection direction, bool isAsync, bool isConnected, Microsoft.Win32.SafeHandles.SafePipeHandle safePipeHandle);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>direction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.pipes.pipedirection">PipeDirection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>isAsync</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>isConnected</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>safePipeHandle</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../microsoft.win32.safehandles/microsoft.win32.safehandles.safepipehandle">SafePipeHandle</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream__ctor_System_String_System_String_System_IO_Pipes_PipeDirection_System_IO_Pipes_PipeOptions_">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NamedPipeClientStream(String,String,PipeDirection,PipeOptions)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public NamedPipeClientStream (string serverName, string pipeName, System.IO.Pipes.PipeDirection direction, System.IO.Pipes.PipeOptions options);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>serverName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pipeName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>direction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.pipes.pipedirection">PipeDirection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>options</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.pipes.pipeoptions">PipeOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream__ctor_System_String_System_String_System_IO_Pipes_PipeDirection_System_IO_Pipes_PipeOptions_System_Security_Principal_TokenImpersonationLevel_">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NamedPipeClientStream(String,String,PipeDirection,PipeOptions,TokenImpersonationLevel)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public NamedPipeClientStream (string serverName, string pipeName, System.IO.Pipes.PipeDirection direction, System.IO.Pipes.PipeOptions options, System.Security.Principal.TokenImpersonationLevel impersonationLevel);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>serverName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pipeName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>direction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.pipes.pipedirection">PipeDirection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>options</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.pipes.pipeoptions">PipeOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>impersonationLevel</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.security.principal/system.security.principal.tokenimpersonationlevel">TokenImpersonationLevel</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream__ctor_System_String_System_String_System_IO_Pipes_PipeAccessRights_System_IO_Pipes_PipeOptions_System_Security_Principal_TokenImpersonationLevel_System_IO_HandleInheritability_">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NamedPipeClientStream(String,String,PipeAccessRights,PipeOptions,TokenImpersonationLevel,HandleInheritability)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public NamedPipeClientStream (string serverName, string pipeName, System.IO.Pipes.PipeAccessRights desiredAccessRights, System.IO.Pipes.PipeOptions options, System.Security.Principal.TokenImpersonationLevel impersonationLevel, System.IO.HandleInheritability inheritability);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>serverName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pipeName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>desiredAccessRights</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.pipes.pipeaccessrights">PipeAccessRights</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>options</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.pipes.pipeoptions">PipeOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>impersonationLevel</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.security.principal/system.security.principal.tokenimpersonationlevel">TokenImpersonationLevel</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inheritability</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.io/system.io.handleinheritability">HandleInheritability</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream__ctor_System_String_System_String_System_IO_Pipes_PipeDirection_System_IO_Pipes_PipeOptions_System_Security_Principal_TokenImpersonationLevel_System_IO_HandleInheritability_">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NamedPipeClientStream(String,String,PipeDirection,PipeOptions,TokenImpersonationLevel,HandleInheritability)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public NamedPipeClientStream (string serverName, string pipeName, System.IO.Pipes.PipeDirection direction, System.IO.Pipes.PipeOptions options, System.Security.Principal.TokenImpersonationLevel impersonationLevel, System.IO.HandleInheritability inheritability);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>serverName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>pipeName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>direction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.pipes.pipedirection">PipeDirection</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>options</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.pipes.pipeoptions">PipeOptions</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>impersonationLevel</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.security.principal/system.security.principal.tokenimpersonationlevel">TokenImpersonationLevel</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inheritability</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.io/system.io.handleinheritability">HandleInheritability</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream_NumberOfServerInstances">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream_NumberOfServerInstances_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">NumberOfServerInstances</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int NumberOfServerInstances { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream_CheckPipePropertyOperations">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream_CheckPipePropertyOperations_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CheckPipePropertyOperations()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void CheckPipePropertyOperations ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream_Connect">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream_Connect_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Connect()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Connect ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream_Connect_System_Int32_">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream_Connect_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Connect(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Connect (int timeout);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream_ConnectAsync">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream_ConnectAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ConnectAsync()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ConnectAsync ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream_ConnectAsync_System_Int32_">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream_ConnectAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ConnectAsync(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ConnectAsync (int timeout);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream_ConnectAsync_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream_ConnectAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ConnectAsync(CancellationToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ConnectAsync (System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream_ConnectAsync_System_Int32_System_Threading_CancellationToken_">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream_ConnectAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ConnectAsync(Int32,CancellationToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.Tasks.Task ConnectAsync (int timeout, System.Threading.CancellationToken cancellationToken);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.cancellationtoken">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task">Task</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_Pipes_NamedPipeClientStream_Finalize">
+    
+            <a id="System_IO_Pipes_NamedPipeClientStream_Finalize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Finalize()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">~NamedPipeClientStream ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

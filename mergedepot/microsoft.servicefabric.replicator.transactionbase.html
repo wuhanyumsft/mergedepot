@@ -1,0 +1,2203 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="TransactionBase class">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="service-fabric">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/8ece26063f2f27414f0bad873159ee6212f3448d/docs-ref-manual/Data/ServiceFabric/Microsoft.ServiceFabric.Replicator.TransactionBase.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-manual/Data/ServiceFabric/Microsoft.ServiceFabric.Replicator.TransactionBase.yml">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.DefaultCommitAcceptanceTimeout">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.CommitSequenceNumber">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.get_CommitSequenceNumber">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.Id">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.get_Id">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.LockContexts">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.get_LockContexts">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.State">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.get_State">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.MaxRetryDelay">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.get_MaxRetryDelay">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.RetryBackoffFactor">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.get_RetryBackoffFactor">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.LastTransactionId">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.get_LastTransactionId">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.set_LastTransactionId">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.TransactionLock">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.get_TransactionLock">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.set_TransactionLock">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.IsWriteTransaction">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.get_IsWriteTransaction">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.set_IsWriteTransaction">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.TransactionRetryDelay">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.get_TransactionRetryDelay">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.set_TransactionRetryDelay">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.Equality">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.op_Equality">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.GreaterThan">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.op_GreaterThan">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.GreaterThanOrEqual">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.op_GreaterThanOrEqual">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.Inequality">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.op_Inequality">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.LessThan">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.op_LessThan">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.LessThanOrEqual">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.op_LessThanOrEqual">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.AddLockContext">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.Dispose">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.Equals">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.GetHashCode">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.LookupLockContext">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.RemoveLockContext">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.ToString">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.ProcessException">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.ThrowIfNotPrimary">
+<meta name="APIName" content="Microsoft.ServiceFabric.Replicator.TransactionBase.ThrowIfNotPrimaryTransaction">
+<meta name="APILocation" content="Microsoft.ServiceFabric.Data.Impl.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2016-12-19 07:26 AM">
+<meta name="document_id" content="5670d004-02cd-3cbf-34a2-2fba3abe4bd5">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="An abstraction for a set of &amp;#39;operations&amp;#39; that can be all be committed or reverted atomically 
+">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=18">
+<meta name="ms.assetid" content="Microsoft.ServiceFabric.Replicator.TransactionBase">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.servicefabric.replicator.transactionbase" rel="canonical">
+    <title>TransactionBase class | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/d1d5acab8c02cc720733.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+							<li>
+								<a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&version=GBdevelop&line=18" ms.cmpnm="viewsource"><i class="icon icon-code"></i>View Code</a>
+							</li>
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_ServiceFabric_Replicator_TransactionBase">
+      <span class="lang-csharp">TransactionBase</span>
+      <span class="lang-vb">TransactionBase</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    		<div class="memberEditButton">
+    			<a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=17" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+    		</div>
+    	<p>An abstraction for a set of &#39;operations&#39; that can be all be committed or reverted atomically </p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract class TransactionBase : IDisposable</code><code class="vb lang-vb">Public MustInherit Class TransactionBase
+    Implements IDisposable</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">TransactionBase</div>
+          <div class="lang-vb">TransactionBase</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4>System.Object</h4>
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">ReferenceEquals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">ReferenceEquals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">GetType</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">GetType</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">MemberwiseClone</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">MemberwiseClone</a>()
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Fields
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_DefaultCommitAcceptanceTimeout">DefaultCommitAcceptanceTimeout</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_DefaultCommitAcceptanceTimeout">DefaultCommitAcceptanceTimeout</a></div>
+          </td>
+            <td>
+            <p>Default timeout for commit acceptance.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_CommitSequenceNumber">CommitSequenceNumber</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_CommitSequenceNumber">CommitSequenceNumber</a></div>
+          </td>
+            <td>
+            <p>Gets the commit sequence number.
+For atomic operations, commit sequence number equals the operation sequence number.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_Id">Id</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_Id">Id</a></div>
+          </td>
+            <td>
+            <p>Gets the transaction id.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_IsWriteTransaction">IsWriteTransaction</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_IsWriteTransaction">IsWriteTransaction</a></div>
+          </td>
+            <td>
+            <p>Whether or not this transaction is a write transaction.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_LastTransactionId">LastTransactionId</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_LastTransactionId">LastTransactionId</a></div>
+          </td>
+            <td>
+            <p>The last generated transaction Id.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_LockContexts">LockContexts</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_LockContexts">LockContexts</a></div>
+          </td>
+            <td>
+            <p>This is for internal use only.
+Gets the lock contexts.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_MaxRetryDelay">MaxRetryDelay</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_MaxRetryDelay">MaxRetryDelay</a></div>
+          </td>
+            <td>
+            <p>The maximum allowed delay for a retry operation.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_RetryBackoffFactor">RetryBackoffFactor</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_RetryBackoffFactor">RetryBackoffFactor</a></div>
+          </td>
+            <td>
+            <p>When performing backoff-retry, multiply the wait time by this factor.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_State">State</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_State">State</a></div>
+          </td>
+            <td>
+            <p>Gets the transaction state.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_TransactionLock">TransactionLock</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_TransactionLock">TransactionLock</a></div>
+          </td>
+            <td>
+            <p>Lock to be taken when generating unique transaction Ids.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_TransactionRetryDelay">TransactionRetryDelay</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_TransactionRetryDelay">TransactionRetryDelay</a></div>
+          </td>
+            <td>
+            <p>The current retry delay used in backoff-retry.  Will increase by a factor of <a class="xref" href="microsoft.servicefabric.replicator.transactionbase#Microsoft_ServiceFabric_Replicator_TransactionBase_RetryBackoffFactor">RetryBackoffFactor</a> for each additional retry.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_AddLockContext_Microsoft_ServiceFabric_Replicator_LockContext_">AddLockContext(LockContext)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_AddLockContext_Microsoft_ServiceFabric_Replicator_LockContext_">AddLockContext(LockContext)</a></div>
+          </td>
+            <td>
+            <p>Adds a lock context.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_Dispose">Dispose()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_Dispose">Dispose()</a></div>
+          </td>
+            <td>
+            <p>Releases all resources used by the Transaction.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_Equals_Microsoft_ServiceFabric_Replicator_TransactionBase_">Equals(TransactionBase)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_Equals_Microsoft_ServiceFabric_Replicator_TransactionBase_">Equals(TransactionBase)</a></div>
+          </td>
+            <td>
+            <p>Determines whether the specified Transaction is equal to the current transaction</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_Equals_System_Object_">Equals(Object)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_Equals_System_Object_">Equals(Object)</a></div>
+          </td>
+            <td>
+            <p>Determines whether the specified Transaction is equal to the current transaction</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_GetHashCode">GetHashCode()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_GetHashCode">GetHashCode()</a></div>
+          </td>
+            <td>
+            <p>Serves as a hash function for this type</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_LookupLockContext_Microsoft_ServiceFabric_Replicator_ILockManager_System_Object_">LookupLockContext(ILockManager, Object)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_LookupLockContext_Microsoft_ServiceFabric_Replicator_ILockManager_System_Object_">LookupLockContext(ILockManager, Object)</a></div>
+          </td>
+            <td>
+            <p>Finds the lock context in the lock manager</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_ProcessException_System_Exception_">ProcessException(Exception)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_ProcessException_System_Exception_">ProcessException(Exception)</a></div>
+          </td>
+            <td>
+            <p>The process exception.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_RemoveLockContext_Microsoft_ServiceFabric_Replicator_ILockManager_System_Object_">RemoveLockContext(ILockManager, Object)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_RemoveLockContext_Microsoft_ServiceFabric_Replicator_ILockManager_System_Object_">RemoveLockContext(ILockManager, Object)</a></div>
+          </td>
+            <td>
+            <p>This is for internal use only.
+Removes the lock context</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_RemoveLockContext_Microsoft_ServiceFabric_Replicator_LockContext_">RemoveLockContext(LockContext)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_RemoveLockContext_Microsoft_ServiceFabric_Replicator_LockContext_">RemoveLockContext(LockContext)</a></div>
+          </td>
+            <td>
+            <p>This is for internal use only.
+Removes the lock context</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_ThrowIfNotPrimary_System_Fabric_ReplicaRole_">ThrowIfNotPrimary(ReplicaRole)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_ThrowIfNotPrimary_System_Fabric_ReplicaRole_">ThrowIfNotPrimary(ReplicaRole)</a></div>
+          </td>
+            <td>
+            <p>The throw if not primary.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_ThrowIfNotPrimaryTransaction_System_Boolean_">ThrowIfNotPrimaryTransaction(Boolean)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_ThrowIfNotPrimaryTransaction_System_Boolean_">ThrowIfNotPrimaryTransaction(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Throw is the transaction is not a primary transaction</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_ToString">ToString()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_ToString">ToString()</a></div>
+          </td>
+            <td>
+            <p>Converts the value of this instance to a string</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Operators
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_op_Equality_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">Equality(TransactionBase, TransactionBase)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_op_Equality_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">Equality(TransactionBase, TransactionBase)</a></div>
+          </td>
+            <td>
+            <p>Determines whether the two Transactions are equal</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_op_GreaterThan_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">GreaterThan(TransactionBase, TransactionBase)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_op_GreaterThan_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">GreaterThan(TransactionBase, TransactionBase)</a></div>
+          </td>
+            <td>
+            <p>Determines whether one transaction is semantically &#39;greater&#39; than the other</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_op_GreaterThanOrEqual_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">GreaterThanOrEqual(TransactionBase, TransactionBase)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_op_GreaterThanOrEqual_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">GreaterThanOrEqual(TransactionBase, TransactionBase)</a></div>
+          </td>
+            <td>
+            <p>Determines whether one transaction is semantically &#39;greater or equal&#39; to the other</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_op_Inequality_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">Inequality(TransactionBase, TransactionBase)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_op_Inequality_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">Inequality(TransactionBase, TransactionBase)</a></div>
+          </td>
+            <td>
+            <p>Determines whether the 2 Transactions are equal </p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_op_LessThan_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">LessThan(TransactionBase, TransactionBase)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_op_LessThan_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">LessThan(TransactionBase, TransactionBase)</a></div>
+          </td>
+            <td>
+            <p>Determines whether one transaction is semantically &#39;lesser&#39; than the other</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_op_LessThanOrEqual_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">LessThanOrEqual(TransactionBase, TransactionBase)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Replicator_TransactionBase_op_LessThanOrEqual_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">LessThanOrEqual(TransactionBase, TransactionBase)</a></div>
+          </td>
+            <td>
+            <p>Determines whether one transaction is semantically &#39;lesser or equal&#39; to the other</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header enable-platform-filter" id="fields">
+        <h2>Fields
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_DefaultCommitAcceptanceTimeout">
+    
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=22" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">DefaultCommitAcceptanceTimeout</div>        
+            <div class="lang-vb">DefaultCommitAcceptanceTimeout</div>        
+          </div>
+    
+            <p>Default timeout for commit acceptance.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected static readonly TimeSpan DefaultCommitAcceptanceTimeout</code><code class="vb lang-vb">Protected Shared ReadOnly DefaultCommitAcceptanceTimeout As TimeSpan</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_CommitSequenceNumber">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_CommitSequenceNumber_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=105" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CommitSequenceNumber</div>        
+            <div class="lang-vb">CommitSequenceNumber</div>        
+          </div>
+    
+            <p>Gets the commit sequence number.
+For atomic operations, commit sequence number equals the operation sequence number.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public long CommitSequenceNumber { get; }</code><code class="vb lang-vb">Public ReadOnly Property CommitSequenceNumber As Long</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_Id">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_Id_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=123" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Id</div>        
+            <div class="lang-vb">Id</div>        
+          </div>
+    
+            <p>Gets the transaction id.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public long Id { get; }</code><code class="vb lang-vb">Public ReadOnly Property Id As Long</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_IsWriteTransaction">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_IsWriteTransaction_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=224" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsWriteTransaction</div>        
+            <div class="lang-vb">IsWriteTransaction</div>        
+          </div>
+    
+            <p>Whether or not this transaction is a write transaction.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected bool IsWriteTransaction { get; set; }</code><code class="vb lang-vb">Protected Property IsWriteTransaction As Boolean</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_LastTransactionId">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_LastTransactionId_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=204" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">LastTransactionId</div>        
+            <div class="lang-vb">LastTransactionId</div>        
+          </div>
+    
+            <p>The last generated transaction Id.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected static long LastTransactionId { get; set; }</code><code class="vb lang-vb">Protected Shared Property LastTransactionId As Long</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_LockContexts">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_LockContexts_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=132" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">LockContexts</div>        
+            <div class="lang-vb">LockContexts</div>        
+          </div>
+    
+            <p>This is for internal use only.
+Gets the lock contexts.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public List&lt;LockContext&gt; LockContexts { get; protected set; }</code><code class="vb lang-vb">Public Property LockContexts As List(Of LockContext)</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="microsoft.servicefabric.replicator.lockcontext">LockContext</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>(Of <a class="xref" href="microsoft.servicefabric.replicator.lockcontext">LockContext</a>)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_MaxRetryDelay">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_MaxRetryDelay_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=188" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">MaxRetryDelay</div>        
+            <div class="lang-vb">MaxRetryDelay</div>        
+          </div>
+    
+            <p>The maximum allowed delay for a retry operation.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected static int MaxRetryDelay { get; }</code><code class="vb lang-vb">Protected Shared ReadOnly Property MaxRetryDelay As Integer</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_RetryBackoffFactor">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_RetryBackoffFactor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=196" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">RetryBackoffFactor</div>        
+            <div class="lang-vb">RetryBackoffFactor</div>        
+          </div>
+    
+            <p>When performing backoff-retry, multiply the wait time by this factor.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected static int RetryBackoffFactor { get; }</code><code class="vb lang-vb">Protected Shared ReadOnly Property RetryBackoffFactor As Integer</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_State">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_State_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=137" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">State</div>        
+            <div class="lang-vb">State</div>        
+          </div>
+    
+            <p>Gets the transaction state.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public TransactionState State { get; protected set; }</code><code class="vb lang-vb">Public Property State As TransactionState</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionstate">TransactionState</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionstate">TransactionState</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_TransactionLock">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_TransactionLock_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=214" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">TransactionLock</div>        
+            <div class="lang-vb">TransactionLock</div>        
+          </div>
+    
+            <p>Lock to be taken when generating unique transaction Ids.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected static object TransactionLock { get; set; }</code><code class="vb lang-vb">Protected Shared Property TransactionLock As Object</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_TransactionRetryDelay">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_TransactionRetryDelay_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=234" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">TransactionRetryDelay</div>        
+            <div class="lang-vb">TransactionRetryDelay</div>        
+          </div>
+    
+            <p>The current retry delay used in backoff-retry.  Will increase by a factor of <a class="xref" href="microsoft.servicefabric.replicator.transactionbase#Microsoft_ServiceFabric_Replicator_TransactionBase_RetryBackoffFactor">RetryBackoffFactor</a> for each additional retry.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected int TransactionRetryDelay { get; set; }</code><code class="vb lang-vb">Protected Property TransactionRetryDelay As Integer</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_AddLockContext_Microsoft_ServiceFabric_Replicator_LockContext_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_AddLockContext_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=351" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddLockContext(LockContext)</div>        
+            <div class="lang-vb">AddLockContext(LockContext)</div>        
+          </div>
+    
+            <p>Adds a lock context.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void AddLockContext(LockContext lockContext)</code><code class="vb lang-vb">Public Sub AddLockContext(lockContext As LockContext)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>lockContext</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.lockcontext">LockContext</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.lockcontext">LockContext</a></div>
+                  </dd>
+                  </dl>
+                  <p>The lock context.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_Dispose">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_Dispose_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=365" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose()</div>        
+            <div class="lang-vb">Dispose()</div>        
+          </div>
+    
+            <p>Releases all resources used by the Transaction.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Dispose()</code><code class="vb lang-vb">Public Sub Dispose</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_Equals_Microsoft_ServiceFabric_Replicator_TransactionBase_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_Equals_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=392" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Equals(TransactionBase)</div>        
+            <div class="lang-vb">Equals(TransactionBase)</div>        
+          </div>
+    
+            <p>Determines whether the specified Transaction is equal to the current transaction</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool Equals(TransactionBase transaction)</code><code class="vb lang-vb">Public Function Equals(transaction As TransactionBase) As Boolean</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>transaction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>Transaction to check equality with</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </div>
+                  <p>&#39;true&#39; if both the transactions are equal</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_Equals_System_Object_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_Equals_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=376" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Equals(Object)</div>        
+            <div class="lang-vb">Equals(Object)</div>        
+          </div>
+    
+            <p>Determines whether the specified Transaction is equal to the current transaction</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool Equals(object obj)</code><code class="vb lang-vb">Public Overrides Function Equals(obj As Object) As Boolean</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>obj</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>Transaction to check equality with</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </div>
+                  <p>&#39;true&#39; if both the transactions are equal</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+          <h4>Overrides</h4>
+            <div class="lang-csharp">
+              <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Object.Equals(Object)</a>
+            </div>
+            <div class="lang-vb">
+              <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Object.Equals(Object)</a>
+            </div>
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_GetHashCode">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_GetHashCode_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=406" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetHashCode()</div>        
+            <div class="lang-vb">GetHashCode()</div>        
+          </div>
+    
+            <p>Serves as a hash function for this type</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int GetHashCode()</code><code class="vb lang-vb">Public Overrides Function GetHashCode As Integer</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                  </div>
+                  <p>A hash code for the current object</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+          <h4>Overrides</h4>
+            <div class="lang-csharp">
+              <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">Object.GetHashCode()</a>
+            </div>
+            <div class="lang-vb">
+              <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">Object.GetHashCode()</a>
+            </div>
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_LookupLockContext_Microsoft_ServiceFabric_Replicator_ILockManager_System_Object_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_LookupLockContext_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=417" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">LookupLockContext(ILockManager, Object)</div>        
+            <div class="lang-vb">LookupLockContext(ILockManager, Object)</div>        
+          </div>
+    
+            <p>Finds the lock context in the lock manager</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public LockContext LookupLockContext(ILockManager lockManager, object lockOrKey)</code><code class="vb lang-vb">Public Function LookupLockContext(lockManager As ILockManager, lockOrKey As Object) As LockContext</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>lockManager</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.ilockmanager">ILockManager</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.ilockmanager">ILockManager</a></div>
+                  </dd>
+                  </dl>
+                  <p>Lock manager object from which the lock is to be looked up</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>lockOrKey</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>name of the lock</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.lockcontext">LockContext</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.lockcontext">LockContext</a></div>
+                  </div>
+                  <p>LockContext object if found. null otherwise</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_ProcessException_System_Exception_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_ProcessException_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=672" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ProcessException(Exception)</div>        
+            <div class="lang-vb">ProcessException(Exception)</div>        
+          </div>
+    
+            <p>The process exception.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected static bool ProcessException(Exception e)</code><code class="vb lang-vb">Protected Shared Function ProcessException(e As Exception) As Boolean</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>e</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.exception(v=vs.110).aspx">Exception</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.exception(v=vs.110).aspx">Exception</a></div>
+                  </dd>
+                  </dl>
+                  <p>The e.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </div>
+                  <p>The <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_RemoveLockContext_Microsoft_ServiceFabric_Replicator_ILockManager_System_Object_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_RemoveLockContext_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=449" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveLockContext(ILockManager, Object)</div>        
+            <div class="lang-vb">RemoveLockContext(ILockManager, Object)</div>        
+          </div>
+    
+            <p>This is for internal use only.
+Removes the lock context</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public LockContext RemoveLockContext(ILockManager lockManager, object lockOrKey)</code><code class="vb lang-vb">Public Function RemoveLockContext(lockManager As ILockManager, lockOrKey As Object) As LockContext</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>lockManager</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.ilockmanager">ILockManager</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.ilockmanager">ILockManager</a></div>
+                  </dd>
+                  </dl>
+                  <p>Lock manager object which contains the lock to be removed</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>lockOrKey</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>name of the lock</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.lockcontext">LockContext</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.lockcontext">LockContext</a></div>
+                  </div>
+                  <p>LockContext object if found. null otherwise</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_RemoveLockContext_Microsoft_ServiceFabric_Replicator_LockContext_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_RemoveLockContext_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=483" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveLockContext(LockContext)</div>        
+            <div class="lang-vb">RemoveLockContext(LockContext)</div>        
+          </div>
+    
+            <p>This is for internal use only.
+Removes the lock context</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void RemoveLockContext(LockContext lockContext)</code><code class="vb lang-vb">Public Sub RemoveLockContext(lockContext As LockContext)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>lockContext</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.lockcontext">LockContext</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.lockcontext">LockContext</a></div>
+                  </dd>
+                  </dl>
+                  <p>The lock context to be removed</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_ThrowIfNotPrimary_System_Fabric_ReplicaRole_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_ThrowIfNotPrimary_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=688" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ThrowIfNotPrimary(ReplicaRole)</div>        
+            <div class="lang-vb">ThrowIfNotPrimary(ReplicaRole)</div>        
+          </div>
+    
+            <p>The throw if not primary.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void ThrowIfNotPrimary(ReplicaRole role)</code><code class="vb lang-vb">Protected Sub ThrowIfNotPrimary(role As ReplicaRole)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>role</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.replicarole">ReplicaRole</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.replicarole">ReplicaRole</a></div>
+                  </dd>
+                  </dl>
+                  <p>The role.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+              <h4>Exceptions</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.fabric.fabricnotprimaryexception">FabricNotPrimaryException</a></div>
+                      <div class="lang-vb"><a class="xref" href="system.fabric.fabricnotprimaryexception">FabricNotPrimaryException</a></div>
+                  </div>
+                  <p>Throws if role is not primary</p>
+
+                </li>
+              </ul>
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_ThrowIfNotPrimaryTransaction_System_Boolean_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_ThrowIfNotPrimaryTransaction_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=699" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ThrowIfNotPrimaryTransaction(Boolean)</div>        
+            <div class="lang-vb">ThrowIfNotPrimaryTransaction(Boolean)</div>        
+          </div>
+    
+            <p>Throw is the transaction is not a primary transaction</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void ThrowIfNotPrimaryTransaction(bool isPrimaryTransaction)</code><code class="vb lang-vb">Protected Sub ThrowIfNotPrimaryTransaction(isPrimaryTransaction As Boolean)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>isPrimaryTransaction</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_ToString">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_ToString_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=504" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ToString()</div>        
+            <div class="lang-vb">ToString()</div>        
+          </div>
+    
+            <p>Converts the value of this instance to a string</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string ToString()</code><code class="vb lang-vb">Public Overrides Function ToString As String</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </div>
+                  <p>A string that represents the current object</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+          <h4>Overrides</h4>
+            <div class="lang-csharp">
+              <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a>
+            </div>
+            <div class="lang-vb">
+              <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">Object.ToString()</a>
+            </div>
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="operators">
+        <h2>Operators
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_op_Equality_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_op_Equality_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=247" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Equality(TransactionBase, TransactionBase)</div>        
+            <div class="lang-vb">Equality(TransactionBase, TransactionBase)</div>        
+          </div>
+    
+            <p>Determines whether the two Transactions are equal</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool operator ==(TransactionBase left, TransactionBase right)</code><code class="vb lang-vb">Public Shared Operator =(left As TransactionBase, right As TransactionBase) As Boolean</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>left</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>First transaction</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>right</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>Second transaction</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </div>
+                  <p>&#39;true&#39; if both the transactions are equal</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_op_GreaterThan_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_op_GreaterThan_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=270" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">GreaterThan(TransactionBase, TransactionBase)</div>        
+            <div class="lang-vb">GreaterThan(TransactionBase, TransactionBase)</div>        
+          </div>
+    
+            <p>Determines whether one transaction is semantically &#39;greater&#39; than the other</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool operator&gt;(TransactionBase left, TransactionBase right)</code><code class="vb lang-vb">Public Shared Operator&gt;(left As TransactionBase, right As TransactionBase) As Boolean</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>left</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>First transaction</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>right</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>Second transaction</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </div>
+                  <p>&#39;true&#39; if &#39;left&#39;(First) transaction is &#39;greater&#39; than &#39;right&#39;(Second) transaction.
+&#39;greater&#39; could mean &#39;newer&#39;, &#39;larger data&#39; e.t.c
+This is an internal implementation detail that must not be relevant to the client</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_op_GreaterThanOrEqual_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_op_GreaterThanOrEqual_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=293" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">GreaterThanOrEqual(TransactionBase, TransactionBase)</div>        
+            <div class="lang-vb">GreaterThanOrEqual(TransactionBase, TransactionBase)</div>        
+          </div>
+    
+            <p>Determines whether one transaction is semantically &#39;greater or equal&#39; to the other</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool operator &gt;=(TransactionBase left, TransactionBase right)</code><code class="vb lang-vb">Public Shared Operator &gt;=(left As TransactionBase, right As TransactionBase) As Boolean</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>left</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>First transaction</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>right</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>Second transaction</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </div>
+                  <p>&#39;true&#39; if &#39;left&#39;(First) transaction is &#39;greater or equal&#39; to &#39;right&#39;(Second) transaction.
+&#39;greater or equal&#39; could mean &#39;newer&#39;, &#39;larger data&#39; e.t.c
+This is an internal implementation detail that must not be relevant to the client</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_op_Inequality_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_op_Inequality_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=304" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Inequality(TransactionBase, TransactionBase)</div>        
+            <div class="lang-vb">Inequality(TransactionBase, TransactionBase)</div>        
+          </div>
+    
+            <p>Determines whether the 2 Transactions are equal </p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool operator !=(TransactionBase left, TransactionBase right)</code><code class="vb lang-vb">Public Shared Operator &lt;&gt;(left As TransactionBase, right As TransactionBase) As Boolean</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>left</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>First transaction</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>right</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>Second transaction</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </div>
+                  <p>&#39;true&#39; if the two transactions are not equal</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_op_LessThan_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_op_LessThan_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=317" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">LessThan(TransactionBase, TransactionBase)</div>        
+            <div class="lang-vb">LessThan(TransactionBase, TransactionBase)</div>        
+          </div>
+    
+            <p>Determines whether one transaction is semantically &#39;lesser&#39; than the other</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool operator &lt;(TransactionBase left, TransactionBase right)</code><code class="vb lang-vb">Public Shared Operator &lt;(left As TransactionBase, right As TransactionBase) As Boolean</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>left</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>First transaction</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>right</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>Second transaction</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </div>
+                  <p>&#39;true&#39; if &#39;left&#39;(First) transaction is &#39;lesser&#39; than &#39;right&#39;(Second) transaction.
+&#39;lesser&#39; could mean &#39;older&#39;, &#39;smaller data&#39; e.t.c
+This is an internal implementation detail that must not be relevant to the client</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Replicator_TransactionBase_op_LessThanOrEqual_Microsoft_ServiceFabric_Replicator_TransactionBase_Microsoft_ServiceFabric_Replicator_TransactionBase_">
+    
+            <a id="Microsoft_ServiceFabric_Replicator_TransactionBase_op_LessThanOrEqual_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/Replicator/TransactionBase.cs&amp;version=GBdevelop&amp;line=340" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">LessThanOrEqual(TransactionBase, TransactionBase)</div>        
+            <div class="lang-vb">LessThanOrEqual(TransactionBase, TransactionBase)</div>        
+          </div>
+    
+            <p>Determines whether one transaction is semantically &#39;lesser or equal&#39; to the other</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool operator &lt;=(TransactionBase left, TransactionBase right)</code><code class="vb lang-vb">Public Shared Operator &lt;=(left As TransactionBase, right As TransactionBase) As Boolean</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>left</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>First transaction</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>right</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.replicator.transactionbase">TransactionBase</a></div>
+                  </dd>
+                  </dl>
+                  <p>Second transaction</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </div>
+                  <p>&#39;true&#39; if &#39;left&#39;(First) transaction is &#39;lesser or equal&#39; to the &#39;right&#39;(Second) transaction.
+&#39;lesser or equal&#39; could mean &#39;older&#39;, &#39;smaller data&#39; e.t.c
+This is an internal implementation detail that must not be relevant to the client</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+      <h2>Details</h2>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Namespace</h4>    
+          <div>Microsoft.ServiceFabric.Replicator</div>
+        </div>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Assembly</h4>    
+          <div>Microsoft.ServiceFabric.Data.Impl.dll</div>
+        </div>
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/d1d5acab8c02cc720733.reference.js"></script>
+  </body>
+</html>

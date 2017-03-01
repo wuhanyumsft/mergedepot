@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="WorkflowInstance class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Activities.Hosting/System.Activities.Hosting.WorkflowInstance.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Activities.Hosting/System.Activities.Hosting.WorkflowInstance.yml">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance..ctor">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.BeginFlushTrackingRecords">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.Controller">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.DefinitionIdentity">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.DisposeExtensions">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.EndFlushTrackingRecords">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.FlushTrackingRecords">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.GetActivitiesBlockingUpdate">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.GetExtension">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.GetExtensions">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.HostEnvironment">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.Id">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.Initialize">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.IsReadOnly">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.OnBeginAssociateKeys">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.OnBeginFlushTrackingRecords">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.OnBeginPersist">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.OnBeginResumeBookmark">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.OnDisassociateKeys">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.OnEndAssociateKeys">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.OnEndFlushTrackingRecords">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.OnEndPersist">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.OnEndResumeBookmark">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.OnNotifyPaused">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.OnNotifyUnhandledException">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.OnRequestAbort">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.RegisterExtensionManager">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.SupportsInstanceKeys">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.SynchronizationContext">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.ThrowIfReadOnly">
+<meta name="APIName" content="System.Activities.Hosting.WorkflowInstance.WorkflowDefinition">
+<meta name="APILocation" content="System.Activities.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="1bb75fc6-2d9c-0db3-7ab4-f783da92c634">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Activities.Hosting.WorkflowInstance">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.activities.hosting/system.activities.hosting.workflowinstance" rel="canonical">
+    <title>WorkflowInstance class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Activities_Hosting_WorkflowInstance">
+      <span class="lang-csharp">WorkflowInstance</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract class WorkflowInstance</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">WorkflowInstance</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance__ctor_System_Activities_Activity_">WorkflowInstance(Activity)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance__ctor_System_Activities_Activity_System_Activities_WorkflowIdentity_">WorkflowInstance(Activity,WorkflowIdentity)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_Controller">Controller</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_DefinitionIdentity">DefinitionIdentity</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_HostEnvironment">HostEnvironment</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_Id">Id</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_IsReadOnly">IsReadOnly</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_SupportsInstanceKeys">SupportsInstanceKeys</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_SynchronizationContext">SynchronizationContext</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_WorkflowDefinition">WorkflowDefinition</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_BeginFlushTrackingRecords_System_TimeSpan_System_AsyncCallback_System_Object_">BeginFlushTrackingRecords(TimeSpan,AsyncCallback,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_DisposeExtensions">DisposeExtensions()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_EndFlushTrackingRecords_System_IAsyncResult_">EndFlushTrackingRecords(IAsyncResult)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_FlushTrackingRecords_System_TimeSpan_">FlushTrackingRecords(TimeSpan)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_GetActivitiesBlockingUpdate_System_Object_System_Activities_DynamicUpdate_DynamicUpdateMap_">GetActivitiesBlockingUpdate(Object,DynamicUpdateMap)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_GetExtension__1">GetExtension()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_GetExtensions__1">GetExtensions()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_Initialize_System_Object_">Initialize(Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_Initialize_System_Collections_Generic_IDictionary_System_String_System_Object__System_Collections_Generic_IList_System_Activities_Handle__">Initialize(IDictionary&lt;String,Object&gt;,IList&lt;Handle&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_Initialize_System_Object_System_Activities_DynamicUpdate_DynamicUpdateMap_">Initialize(Object,DynamicUpdateMap)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_OnBeginAssociateKeys_System_Collections_Generic_ICollection_System_Runtime_DurableInstancing_InstanceKey__System_AsyncCallback_System_Object_">OnBeginAssociateKeys(ICollection&lt;InstanceKey&gt;,AsyncCallback,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_OnBeginFlushTrackingRecords_System_AsyncCallback_System_Object_">OnBeginFlushTrackingRecords(AsyncCallback,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_OnBeginPersist_System_AsyncCallback_System_Object_">OnBeginPersist(AsyncCallback,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_OnBeginResumeBookmark_System_Activities_Bookmark_System_Object_System_TimeSpan_System_AsyncCallback_System_Object_">OnBeginResumeBookmark(Bookmark,Object,TimeSpan,AsyncCallback,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_OnDisassociateKeys_System_Collections_Generic_ICollection_System_Runtime_DurableInstancing_InstanceKey__">OnDisassociateKeys(ICollection&lt;InstanceKey&gt;)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_OnEndAssociateKeys_System_IAsyncResult_">OnEndAssociateKeys(IAsyncResult)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_OnEndFlushTrackingRecords_System_IAsyncResult_">OnEndFlushTrackingRecords(IAsyncResult)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_OnEndPersist_System_IAsyncResult_">OnEndPersist(IAsyncResult)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_OnEndResumeBookmark_System_IAsyncResult_">OnEndResumeBookmark(IAsyncResult)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_OnNotifyPaused">OnNotifyPaused()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_OnNotifyUnhandledException_System_Exception_System_Activities_Activity_System_String_">OnNotifyUnhandledException(Exception,Activity,String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_OnRequestAbort_System_Exception_">OnRequestAbort(Exception)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_RegisterExtensionManager_System_Activities_Hosting_WorkflowInstanceExtensionManager_">RegisterExtensionManager(WorkflowInstanceExtensionManager)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Activities_Hosting_WorkflowInstance_ThrowIfReadOnly">ThrowIfReadOnly()</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance__ctor_System_Activities_Activity_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WorkflowInstance(Activity)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected WorkflowInstance (System.Activities.Activity workflowDefinition);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>workflowDefinition</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.activities/system.activities.activity">Activity</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance__ctor_System_Activities_Activity_System_Activities_WorkflowIdentity_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WorkflowInstance(Activity,WorkflowIdentity)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected WorkflowInstance (System.Activities.Activity workflowDefinition, System.Activities.WorkflowIdentity definitionIdentity);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>workflowDefinition</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.activities/system.activities.activity">Activity</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>definitionIdentity</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.activities/system.activities.workflowidentity">WorkflowIdentity</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_Controller">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_Controller_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Controller</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected System.Activities.Hosting.WorkflowInstance.WorkflowInstanceControl Controller { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.activities.hosting.workflowinstance.workflowinstancecontrol">WorkflowInstance+WorkflowInstanceControl</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_DefinitionIdentity">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_DefinitionIdentity_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DefinitionIdentity</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Activities.WorkflowIdentity DefinitionIdentity { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.activities/system.activities.workflowidentity">WorkflowIdentity</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_HostEnvironment">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_HostEnvironment_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">HostEnvironment</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Activities.LocationReferenceEnvironment HostEnvironment { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.activities/system.activities.locationreferenceenvironment">LocationReferenceEnvironment</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_Id">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_Id_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Id</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract Guid Id { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_IsReadOnly">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_IsReadOnly_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsReadOnly</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected bool IsReadOnly { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_SupportsInstanceKeys">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_SupportsInstanceKeys_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SupportsInstanceKeys</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract bool SupportsInstanceKeys { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_SynchronizationContext">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_SynchronizationContext_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SynchronizationContext</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Threading.SynchronizationContext SynchronizationContext { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading/system.threading.synchronizationcontext">SynchronizationContext</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_WorkflowDefinition">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_WorkflowDefinition_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WorkflowDefinition</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Activities.Activity WorkflowDefinition { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.activities/system.activities.activity">Activity</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_BeginFlushTrackingRecords_System_TimeSpan_System_AsyncCallback_System_Object_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_BeginFlushTrackingRecords_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BeginFlushTrackingRecords(TimeSpan,AsyncCallback,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected IAsyncResult BeginFlushTrackingRecords (TimeSpan timeout, AsyncCallback callback, object state);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.timespan">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>callback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.asynccallback">AsyncCallback</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_DisposeExtensions">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_DisposeExtensions_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DisposeExtensions()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void DisposeExtensions ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_EndFlushTrackingRecords_System_IAsyncResult_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_EndFlushTrackingRecords_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EndFlushTrackingRecords(IAsyncResult)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void EndFlushTrackingRecords (IAsyncResult result);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_FlushTrackingRecords_System_TimeSpan_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_FlushTrackingRecords_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FlushTrackingRecords(TimeSpan)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void FlushTrackingRecords (TimeSpan timeout);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.timespan">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_GetActivitiesBlockingUpdate_System_Object_System_Activities_DynamicUpdate_DynamicUpdateMap_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_GetActivitiesBlockingUpdate_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetActivitiesBlockingUpdate(Object,DynamicUpdateMap)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected static System.Collections.Generic.IList&lt;System.Activities.DynamicUpdate.ActivityBlockingUpdate&gt; GetActivitiesBlockingUpdate (object deserializedRuntimeState, System.Activities.DynamicUpdate.DynamicUpdateMap updateMap);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>deserializedRuntimeState</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>updateMap</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.activities.dynamicupdate/system.activities.dynamicupdate.dynamicupdatemap">DynamicUpdateMap</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="../system.activities.dynamicupdate/system.activities.dynamicupdate.activityblockingupdate">ActivityBlockingUpdate</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_GetExtension__1">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_GetExtension_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetExtension()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected T GetExtension&lt;T&gt; () where T : class;</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">T</span></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_GetExtensions__1">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_GetExtensions_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetExtensions()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected System.Collections.Generic.IEnumerable&lt;T&gt; GetExtensions&lt;T&gt; () where T : class;</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable<t></t></a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_Initialize_System_Object_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_Initialize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Initialize(Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void Initialize (object deserializedRuntimeState);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>deserializedRuntimeState</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_Initialize_System_Collections_Generic_IDictionary_System_String_System_Object__System_Collections_Generic_IList_System_Activities_Handle__">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_Initialize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Initialize(IDictionary&lt;String,Object&gt;,IList&lt;Handle&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void Initialize (System.Collections.Generic.IDictionary&lt;string,object&gt; workflowArgumentValues, System.Collections.Generic.IList&lt;System.Activities.Handle&gt; workflowExecutionProperties);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>workflowArgumentValues</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="../system/system.string">String</a>,<a class="xref" href="../system/system.object">Object</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>workflowExecutionProperties</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="../system.activities/system.activities.handle">Handle</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_Initialize_System_Object_System_Activities_DynamicUpdate_DynamicUpdateMap_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_Initialize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Initialize(Object,DynamicUpdateMap)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void Initialize (object deserializedRuntimeState, System.Activities.DynamicUpdate.DynamicUpdateMap updateMap);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>deserializedRuntimeState</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>updateMap</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.activities.dynamicupdate/system.activities.dynamicupdate.dynamicupdatemap">DynamicUpdateMap</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_OnBeginAssociateKeys_System_Collections_Generic_ICollection_System_Runtime_DurableInstancing_InstanceKey__System_AsyncCallback_System_Object_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_OnBeginAssociateKeys_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnBeginAssociateKeys(ICollection&lt;InstanceKey&gt;,AsyncCallback,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract IAsyncResult OnBeginAssociateKeys (System.Collections.Generic.ICollection&lt;System.Runtime.DurableInstancing.InstanceKey&gt; keys, AsyncCallback callback, object state);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>keys</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.icollection-1">ICollection</a>&lt;<span class="xref">InstanceKey</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>callback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.asynccallback">AsyncCallback</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_OnBeginFlushTrackingRecords_System_AsyncCallback_System_Object_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_OnBeginFlushTrackingRecords_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnBeginFlushTrackingRecords(AsyncCallback,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual IAsyncResult OnBeginFlushTrackingRecords (AsyncCallback callback, object state);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>callback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.asynccallback">AsyncCallback</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_OnBeginPersist_System_AsyncCallback_System_Object_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_OnBeginPersist_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnBeginPersist(AsyncCallback,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract IAsyncResult OnBeginPersist (AsyncCallback callback, object state);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>callback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.asynccallback">AsyncCallback</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_OnBeginResumeBookmark_System_Activities_Bookmark_System_Object_System_TimeSpan_System_AsyncCallback_System_Object_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_OnBeginResumeBookmark_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnBeginResumeBookmark(Bookmark,Object,TimeSpan,AsyncCallback,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract IAsyncResult OnBeginResumeBookmark (System.Activities.Bookmark bookmark, object value, TimeSpan timeout, AsyncCallback callback, object state);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>bookmark</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.activities/system.activities.bookmark">Bookmark</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.timespan">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>callback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.asynccallback">AsyncCallback</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>state</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">System.Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_OnDisassociateKeys_System_Collections_Generic_ICollection_System_Runtime_DurableInstancing_InstanceKey__">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_OnDisassociateKeys_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnDisassociateKeys(ICollection&lt;InstanceKey&gt;)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract void OnDisassociateKeys (System.Collections.Generic.ICollection&lt;System.Runtime.DurableInstancing.InstanceKey&gt; keys);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>keys</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.icollection-1">ICollection</a>&lt;<span class="xref">InstanceKey</span>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_OnEndAssociateKeys_System_IAsyncResult_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_OnEndAssociateKeys_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnEndAssociateKeys(IAsyncResult)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract void OnEndAssociateKeys (IAsyncResult result);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_OnEndFlushTrackingRecords_System_IAsyncResult_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_OnEndFlushTrackingRecords_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnEndFlushTrackingRecords(IAsyncResult)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void OnEndFlushTrackingRecords (IAsyncResult result);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_OnEndPersist_System_IAsyncResult_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_OnEndPersist_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnEndPersist(IAsyncResult)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract void OnEndPersist (IAsyncResult result);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_OnEndResumeBookmark_System_IAsyncResult_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_OnEndResumeBookmark_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnEndResumeBookmark(IAsyncResult)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract System.Activities.BookmarkResumptionResult OnEndResumeBookmark (IAsyncResult result);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.iasyncresult">IAsyncResult</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.activities/system.activities.bookmarkresumptionresult">BookmarkResumptionResult</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_OnNotifyPaused">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_OnNotifyPaused_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnNotifyPaused()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract void OnNotifyPaused ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_OnNotifyUnhandledException_System_Exception_System_Activities_Activity_System_String_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_OnNotifyUnhandledException_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnNotifyUnhandledException(Exception,Activity,String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract void OnNotifyUnhandledException (Exception exception, System.Activities.Activity source, string sourceInstanceId);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>exception</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.exception">Exception</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>source</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.activities/system.activities.activity">Activity</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>sourceInstanceId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_OnRequestAbort_System_Exception_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_OnRequestAbort_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnRequestAbort(Exception)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected abstract void OnRequestAbort (Exception reason);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reason</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.exception">Exception</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_RegisterExtensionManager_System_Activities_Hosting_WorkflowInstanceExtensionManager_">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_RegisterExtensionManager_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RegisterExtensionManager(WorkflowInstanceExtensionManager)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void RegisterExtensionManager (System.Activities.Hosting.WorkflowInstanceExtensionManager extensionManager);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>extensionManager</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.activities.hosting.workflowinstanceextensionmanager">WorkflowInstanceExtensionManager</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Activities_Hosting_WorkflowInstance_ThrowIfReadOnly">
+    
+            <a id="System_Activities_Hosting_WorkflowInstance_ThrowIfReadOnly_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ThrowIfReadOnly()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void ThrowIfReadOnly ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

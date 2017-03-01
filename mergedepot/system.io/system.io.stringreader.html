@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="StringReader class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/d432243688396e79347ab17831acbc0dd6d93fed/halfdotnet/System.IO/System.IO.StringReader.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO/System.IO.StringReader.yml">
+<meta name="APIName" content="System.IO.StringReader">
+<meta name="APIName" content="System.IO.StringReader..ctor">
+<meta name="APIName" content="System.IO.StringReader.Close">
+<meta name="APIName" content="System.IO.StringReader.Dispose">
+<meta name="APIName" content="System.IO.StringReader.Peek">
+<meta name="APIName" content="System.IO.StringReader.Read">
+<meta name="APIName" content="System.IO.StringReader.ReadAsync">
+<meta name="APIName" content="System.IO.StringReader.ReadBlockAsync">
+<meta name="APIName" content="System.IO.StringReader.ReadLine">
+<meta name="APIName" content="System.IO.StringReader.ReadLineAsync">
+<meta name="APIName" content="System.IO.StringReader.ReadToEnd">
+<meta name="APIName" content="System.IO.StringReader.ReadToEndAsync">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-15 07:39 AM">
+<meta name="document_id" content="d664707c-6e6b-6673-8e96-e4f6184ba21e">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Implements a  that reads from a string.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.StringReader">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.io/system.io.stringreader" rel="canonical">
+    <title>StringReader class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_StringReader">
+      <span class="lang-csharp">StringReader</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Implements a <see cref="T:System.IO.TextReader"> that reads from a string.<p>
+</see>
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public class StringReader : System.IO.TextReader</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject">MarshalByRefObject</a>
+          </div>
+        </li>
+        <li class="l2">
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textreader">System.IO.TextReader</a>
+          </div>
+        </li>
+      <li class="l3">
+        <div class="xref">
+          <div class="lang-csharp">StringReader</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textreader#System_IO_TextReader_Dispose">Dispose()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textreader#System_IO_TextReader_Null">Null</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textreader#System_IO_TextReader_ReadBlock_System_Char___System_Int32_System_Int32_">ReadBlock(Char[],Int32,Int32)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textreader#System_IO_TextReader_Synchronized_System_IO_TextReader_">Synchronized(TextReader)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_CreateObjRef_System_Type_">CreateObjRef(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_GetLifetimeService">GetLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_InitializeLifetimeService">InitializeLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_MemberwiseClone_System_Boolean_">MemberwiseClone(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <p>StringReader enables you to read a string synchronously or asynchronously. You can read a character at a time with the <a class="xref" href="system.io.stringreader#System_IO_StringReader_Read_">Read</a> or the <a href="assetId:///M:System.IO.StringReader.ReadAsync(System.Char[],System.Int32,System.Int32)?qualifyHint=False&amp;autoUpgrade=True">ReadAsync(Char[],â€‚Int32,â€‚Int32)</a> method, a line at a time using the <a class="xref" href="system.io.stringreader#System_IO_StringReader_ReadLine_">ReadLine</a> or the <a class="xref" href="system.io.stringreader#System_IO_StringReader_ReadLineAsync_">ReadLineAsync</a> method and an entire string using the <a class="xref" href="system.io.stringreader#System_IO_StringReader_ReadToEnd_">ReadToEnd</a> or the <a class="xref" href="system.io.stringreader#System_IO_StringReader_ReadToEndAsync_">ReadToEndAsync</a> method.  </p>
+<div class="IMPORTANT"><h5>Important</h5><p> This type implements the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <a class="xref" href="../system/system.idisposable#System_IDisposable_Dispose_">Dispose</a> method in a <code>try</code>/<code>catch</code> block. To dispose of it indirectly, use a language construct such as <code>using</code> (in C#) or <code>Using</code> (in Visual Basic). For more information, see the â€œUsing an Object that Implements IDisposableâ€ section in the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface topic.  </p>
+</div>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringReader__ctor_System_String_">StringReader(String)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StringReader"> class that reads from the specified string.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringReader_Close">Close()</a></div>
+          </td>
+            <td>
+            <p>Closes the <see cref="T:System.IO.StringReader">.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringReader_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.StringReader"> and optionally releases the managed resources.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringReader_Peek">Peek()</a></div>
+          </td>
+            <td>
+            <p>Returns the next available character but does not consume it.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringReader_Read">Read()</a></div>
+          </td>
+            <td>
+            <p>Reads the next character from the input string and advances the character position by one character.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringReader_Read_System_Char___System_Int32_System_Int32_">Read(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads a block of characters from the input string and advances the character position by .</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringReader_ReadAsync_System_Char___System_Int32_System_Int32_">ReadAsync(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads a specified maximum number of characters from the current string asynchronously and writes the data to a buffer, beginning at the specified index.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringReader_ReadBlockAsync_System_Char___System_Int32_System_Int32_">ReadBlockAsync(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads a specified maximum number of characters from the current string asynchronously and writes the data to a buffer, beginning at the specified index.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringReader_ReadLine">ReadLine()</a></div>
+          </td>
+            <td>
+            <p>Reads a line of characters from the current string and returns the data as a string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringReader_ReadLineAsync">ReadLineAsync()</a></div>
+          </td>
+            <td>
+            <p>Reads a line of characters asynchronously from the current string and returns the data as a string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringReader_ReadToEnd">ReadToEnd()</a></div>
+          </td>
+            <td>
+            <p>Reads all characters from the current position to the end of the string and returns them as a single string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StringReader_ReadToEndAsync">ReadToEndAsync()</a></div>
+          </td>
+            <td>
+            <p>Reads all characters from the current position to the end of the string asynchronously and returns them as a single string.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringReader__ctor_System_String_">
+    
+            <a id="System_IO_StringReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StringReader(String)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StringReader"> class that reads from the specified string.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StringReader (string s);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>s</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The string to which the <see cref="T:System.IO.StringReader"> should be initialized.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.stringreader> class.  
+  
+ [!CODE [System.IO.StringReaderWriter#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringReaderWriter#2)]
+    
+    
+        </xref:system.io.stringreader></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringReader_Close">
+    
+            <a id="System_IO_StringReader_Close_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Close()</div>        
+          </div>
+    
+            <p>Closes the <see cref="T:System.IO.StringReader">.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Close ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For an example of creating a file and writing text to a file, see <a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a>. For an example of reading text from a file, see <a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a>. For an example of reading from and writing to a binary file, see <a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a>.  </p>
+<p> This method overrides the <a class="xref" href="system.io.stream#System_IO_Stream_Close_">Close</a> method.  </p>
+<p> This implementation of <code>Close</code> calls the <a class="xref" href="system.io.stringreader#System_IO_StringReader_Dispose_">Dispose</a> method passing a <code>true</code> value.  </p>
+<p> Flushing the stream will not flush its underlying encoder unless you explicitly call <code>Close</code>. Setting <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> to <code>true</code> means that data will be flushed from the buffer to the stream, but the encoder state will not be flushed. This allows the encoder to keep its state (partial characters) so that it can encode the next block of characters correctly. This scenario affects UTF8 and UTF7 where certain characters can only be encoded after the encoder receives the adjacent character or characters.  </p>
+<p> Following a call to <code>Close</code>, other methods might throw an exception.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to read an entire string asynchronously.  
+  
+ [!CODE [System.IO.StringReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringreader#2)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringReader_Dispose_System_Boolean_">
+    
+            <a id="System_IO_StringReader_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.StringReader"> and optionally releases the managed resources.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only unmanaged resources.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>When the  parameter is <code>true</code>, this method releases all resources held by any managed objects that this <a class="xref" href="system.io.stringreader">StringReader</a> references. This method invokes the <code>Dispose</code> method of each referenced object.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to read an entire string asynchronously.  
+  
+ [!CODE [System.IO.StringReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringreader#2)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringReader_Peek">
+    
+            <a id="System_IO_StringReader_Peek_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Peek()</div>        
+          </div>
+    
+            <p>Returns the next available character but does not consume it.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int Peek ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>An integer representing the next character to be read, or -1 if no more characters are available or the stream does not support seeking.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The Peek method returns an integer value in order to determine whether the end of the file, or another error has occurred. This allows a user to first check if the returned value is -1 before casting it to a <a class="xref" href="../system/system.char">Char</a> type.  </p>
+<p> This method overrides the <a class="xref" href="system.io.textreader#System_IO_TextReader_Peek_">Peek</a> method.  </p>
+<p> The current position of the <code>StringReader</code> is not changed by this operation.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            The following example shows how to read an entire string asynchronously.  
+  
+ [!CODE [System.IO.StringReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringreader#2)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringReader_Read">
+    
+            <a id="System_IO_StringReader_Read_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Read()</div>        
+          </div>
+    
+            <p>Reads the next character from the input string and advances the character position by one character.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int Read ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The next character from the underlying string, or -1 if no more characters are available.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides the <a class="xref" href="system.io.textreader#System_IO_TextReader_Read_">Read</a> method.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.stringreader> class.  
+  
+ [!CODE [System.IO.StringReaderWriter#3](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringReaderWriter#3)]
+    
+    
+        </xref:system.io.stringreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringReader_Read_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StringReader_Read_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Read(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Reads a block of characters from the input string and advances the character position by .</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int Read (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>When this method returns, contains the specified character array with the values between  and ( +  - 1) replaced by the characters read from the current source.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The starting index in the buffer.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The number of characters to read.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The total number of characters read into the buffer. This can be less than the number of characters requested if that many characters are not currently available, or zero if the end of the underlying string has been reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.textreader#System_IO_TextReader_Read_">Read</a>.  </p>
+<p> The method will read up to  characters from the <a class="xref" href="system.io.stringreader">StringReader</a> into the  character array starting at position . Returns the actual number of characters read, or zero if the end of the string has been reached and no characters are read.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            The following example shows how to read an entire string asynchronously.  
+  
+ [!CODE [System.IO.StringReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringreader#2)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringReader_ReadAsync_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StringReader_ReadAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadAsync(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Reads a specified maximum number of characters from the current string asynchronously and writes the data to a buffer, beginning at the specified index.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task&lt;int&gt; ReadAsync (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>When this method returns, contains the specified character array with the values between  and ( +  - 1) replaced by the characters read from the current source.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The position in  at which to begin writing.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of characters to read. If the end of the string is reached before the specified number of characters is written into the buffer, the method returns.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </div>
+                  <p>A task that represents the asynchronous read operation. The value of the  parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the string has been reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The task completes after either the number of characters specified by the  parameter are read or the end of the string is reached.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to read the first 23 characters of a string asynchronously.  
+  
+ [!CODE [System.IO.StringReader#1](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringreader#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringReader_ReadBlockAsync_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StringReader_ReadBlockAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadBlockAsync(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Reads a specified maximum number of characters from the current string asynchronously and writes the data to a buffer, beginning at the specified index.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task&lt;int&gt; ReadBlockAsync (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>When this method returns, contains the specified character array with the values between  and ( +  - 1) replaced by the characters read from the current source.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The position in  at which to begin writing.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of characters to read. If the end of the string is reached before the specified number of characters is written into the buffer, the method returns.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </div>
+                  <p>A task that represents the asynchronous read operation. The value of the  parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the string has been reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The task does not complete until either the number of characters specified by the  parameter are read, or the end of the string has been reached.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to read an entire string asynchronously.  
+  
+ [!CODE [System.IO.StringReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringreader#2)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringReader_ReadLine">
+    
+            <a id="System_IO_StringReader_ReadLine_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadLine()</div>        
+          </div>
+    
+            <p>Reads a line of characters from the current string and returns the data as a string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string ReadLine ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The next line from the current string, or <code>null</code> if the end of the string is reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides the <a class="xref" href="system.io.textreader#System_IO_TextReader_ReadLine_">ReadLine</a> method.  </p>
+<p> A line is defined as a sequence of characters followed by a line feed (&quot;\n&quot;), a carriage return (&quot;\r&quot;), or a carriage return immediately followed by a line feed (&quot;\r\n&quot;). The string that is returned does not contain the terminating carriage return or line feed. The returned value is <code>null</code> if the end of the string has been reached.  </p>
+<p> If the current method throws an <a class="xref" href="../system/system.outofmemoryexception">OutOfMemoryException</a>, the reader&#39;s position in the underlying string is advanced by the number of characters the method was able to read, but the characters already read into the internal ReadLine buffer are discarded. Because the position of the reader in the string cannot be changed, the characters already read are unrecoverable, and can be accessed only by reinitializing the <a class="xref" href="system.io.stringreader">StringReader</a>. To avoid such a situation, use the <a class="xref" href="system.io.stringreader#System_IO_StringReader_Read_">Read</a> method and store the read characters in a preallocated buffer.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.stringreader> class.  
+  
+ [!CODE [System.IO.StringReaderWriter#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StringReaderWriter#2)]
+    
+    
+        </xref:system.io.stringreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringReader_ReadLineAsync">
+    
+            <a id="System_IO_StringReader_ReadLineAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadLineAsync()</div>        
+          </div>
+    
+            <p>Reads a line of characters asynchronously from the current string and returns the data as a string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task&lt;string&gt; ReadLineAsync ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </div>
+                  <p>A task that represents the asynchronous read operation. The value of the  parameter contains the next line from the string reader, or is <code>null</code> if all the characters have been read.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to read one line at a time from a string asynchronously.  
+  
+ [!CODE [System.IO.StringReader#3](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringreader#3)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringReader_ReadToEnd">
+    
+            <a id="System_IO_StringReader_ReadToEnd_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadToEnd()</div>        
+          </div>
+    
+            <p>Reads all characters from the current position to the end of the string and returns them as a single string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string ReadToEnd ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The content from the current position to the end of the underlying string.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides the <a class="xref" href="system.io.textreader#System_IO_TextReader_ReadToEnd_">ReadToEnd</a> method.  </p>
+<p> If the current method throws an <a class="xref" href="../system/system.outofmemoryexception">OutOfMemoryException</a>, the reader&#39;s position in the underlying string is advanced by the number of characters the method was able to read, but the characters already read into the internal ReadToEnd buffer are discarded. Because the position of the reader in the string cannot be changed, the characters already read are unrecoverable, and can be accessed only by reinitializing the <a class="xref" href="system.io.stringreader">StringReader</a>. To avoid such a situation, use the <a class="xref" href="system.io.stringreader#System_IO_StringReader_Read_">Read</a> method and store the read characters in a preallocated buffer.  </p>
+<p> The following table lists examples of other typical or related I/O tasks.  </p>
+<table>
+<thead>
+<tr>
+<th>To do this...</th>
+<th>See the example in this topic...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Write to a text file.</td>
+<td><a href="../Topic/How%20to:%20Write%20Text%20to%20a%20File.md">How to: Write Text to a File</a></td>
+</tr>
+<tr>
+<td>Read from a text file.</td>
+<td><a href="../Topic/How%20to:%20Read%20Text%20from%20a%20File.md">How to: Read Text from a File</a></td>
+</tr>
+<tr>
+<td>Append text to a file.</td>
+<td><a href="../Topic/How%20to:%20Open%20and%20Append%20to%20a%20Log%20File.md">How to: Open and Append to a Log File</a><br><br> <a class="xref" href="system.io.file#System_IO_File_AppendText_">AppendText</a><br><br> <a class="xref" href="system.io.fileinfo#System_IO_FileInfo_AppendText_">AppendText</a></td>
+</tr>
+<tr>
+<td>Get the size of a file.</td>
+<td><a class="xref" href="system.io.fileinfo#System_IO_FileInfo_Length_">Length</a></td>
+</tr>
+<tr>
+<td>Get the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_GetAttributes_">GetAttributes</a></td>
+</tr>
+<tr>
+<td>Set the attributes of a file.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_SetAttributes_">SetAttributes</a></td>
+</tr>
+<tr>
+<td>Determine if a file exists.</td>
+<td><a class="xref" href="system.io.file#System_IO_File_Exists_">Exists</a></td>
+</tr>
+<tr>
+<td>Read from a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+<tr>
+<td>Write to a binary file.</td>
+<td><a href="../Topic/How%20to:%20Read%20and%20Write%20to%20a%20Newly%20Created%20Data%20File.md">How to: Read and Write to a Newly Created Data File</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+            <h4>Example</h4>
+            This code example is part of a larger example provided for the <xref:system.io.textreader> class.  
+  
+ [!CODE [System.IO.TextReaderWriter#5](../CodeSnippet/VS_Snippets_CLR_System/system.IO.TextReaderWriter#5)]
+    
+    
+        </xref:system.io.textreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StringReader_ReadToEndAsync">
+    
+            <a id="System_IO_StringReader_ReadToEndAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadToEndAsync()</div>        
+          </div>
+    
+            <p>Reads all characters from the current position to the end of the string asynchronously and returns them as a single string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task&lt;string&gt; ReadToEndAsync ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </div>
+                  <p>A task that represents the asynchronous read operation. The value of the  parameter contains a string with the characters from the current position to the end of the string.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to read an entire string asynchronously.  
+  
+ [!CODE [System.IO.StringReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.io.stringreader#2)]
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

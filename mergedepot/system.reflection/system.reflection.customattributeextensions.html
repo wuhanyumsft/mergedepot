@@ -1,0 +1,2446 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="CustomAttributeExtensions class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Reflection/System.Reflection.CustomAttributeExtensions.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Reflection/System.Reflection.CustomAttributeExtensions.yml">
+<meta name="APIName" content="System.Reflection.CustomAttributeExtensions">
+<meta name="APIName" content="System.Reflection.CustomAttributeExtensions.GetCustomAttribute">
+<meta name="APIName" content="System.Reflection.CustomAttributeExtensions.GetCustomAttributes">
+<meta name="APIName" content="System.Reflection.CustomAttributeExtensions.IsDefined">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="f94baec9-805a-ddaa-e057-fd5b56642528">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Reflection.CustomAttributeExtensions">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.reflection/system.reflection.customattributeextensions" rel="canonical">
+    <title>CustomAttributeExtensions class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Reflection_CustomAttributeExtensions">
+      <span class="lang-csharp">CustomAttributeExtensions</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public static class CustomAttributeExtensions</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">CustomAttributeExtensions</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttribute_System_Reflection_Assembly__System_Type_">GetCustomAttribute(Assembly,Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttribute_System_Reflection_MemberInfo__System_Type_">GetCustomAttribute(MemberInfo,Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttribute_System_Reflection_Module__System_Type_">GetCustomAttribute(Module,Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttribute_System_Reflection_ParameterInfo__System_Type_">GetCustomAttribute(ParameterInfo,Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttribute_System_Reflection_MemberInfo__System_Type_System_Boolean_">GetCustomAttribute(MemberInfo,Type,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttribute_System_Reflection_ParameterInfo__System_Type_System_Boolean_">GetCustomAttribute(ParameterInfo,Type,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttribute__1_System_Reflection_Assembly__">GetCustomAttribute(Assembly)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttribute__1_System_Reflection_MemberInfo__">GetCustomAttribute(MemberInfo)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttribute__1_System_Reflection_Module__">GetCustomAttribute(Module)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttribute__1_System_Reflection_ParameterInfo__">GetCustomAttribute(ParameterInfo)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttribute__1_System_Reflection_MemberInfo__System_Boolean_">GetCustomAttribute(MemberInfo,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttribute__1_System_Reflection_ParameterInfo__System_Boolean_">GetCustomAttribute(ParameterInfo,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_Assembly__">GetCustomAttributes(Assembly)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_MemberInfo__">GetCustomAttributes(MemberInfo)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_Module__">GetCustomAttributes(Module)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_ParameterInfo__">GetCustomAttributes(ParameterInfo)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_Assembly__System_Type_">GetCustomAttributes(Assembly,Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_MemberInfo__System_Boolean_">GetCustomAttributes(MemberInfo,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_MemberInfo__System_Type_">GetCustomAttributes(MemberInfo,Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_Module__System_Type_">GetCustomAttributes(Module,Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_ParameterInfo__System_Boolean_">GetCustomAttributes(ParameterInfo,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_ParameterInfo__System_Type_">GetCustomAttributes(ParameterInfo,Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_MemberInfo__System_Type_System_Boolean_">GetCustomAttributes(MemberInfo,Type,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_ParameterInfo__System_Type_System_Boolean_">GetCustomAttributes(ParameterInfo,Type,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes__1_System_Reflection_Assembly__">GetCustomAttributes(Assembly)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes__1_System_Reflection_MemberInfo__">GetCustomAttributes(MemberInfo)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes__1_System_Reflection_Module__">GetCustomAttributes(Module)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes__1_System_Reflection_ParameterInfo__">GetCustomAttributes(ParameterInfo)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes__1_System_Reflection_MemberInfo__System_Boolean_">GetCustomAttributes(MemberInfo,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_GetCustomAttributes__1_System_Reflection_ParameterInfo__System_Boolean_">GetCustomAttributes(ParameterInfo,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_IsDefined_System_Reflection_Assembly__System_Type_">IsDefined(Assembly,Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_IsDefined_System_Reflection_MemberInfo__System_Type_">IsDefined(MemberInfo,Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_IsDefined_System_Reflection_Module__System_Type_">IsDefined(Module,Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_IsDefined_System_Reflection_ParameterInfo__System_Type_">IsDefined(ParameterInfo,Type)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_IsDefined_System_Reflection_MemberInfo__System_Type_System_Boolean_">IsDefined(MemberInfo,Type,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Reflection_CustomAttributeExtensions_IsDefined_System_Reflection_ParameterInfo__System_Type_System_Boolean_">IsDefined(ParameterInfo,Type,Boolean)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_System_Reflection_Assembly__System_Type_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttribute(Assembly,Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Attribute GetCustomAttribute (this System.Reflection.Assembly element, Type attributeType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.assembly">Assembly</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.attribute">Attribute</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_System_Reflection_MemberInfo__System_Type_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttribute(MemberInfo,Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Attribute GetCustomAttribute (this System.Reflection.MemberInfo element, Type attributeType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.memberinfo">MemberInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.attribute">Attribute</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_System_Reflection_Module__System_Type_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttribute(Module,Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Attribute GetCustomAttribute (this System.Reflection.Module element, Type attributeType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.module">Module</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.attribute">Attribute</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_System_Reflection_ParameterInfo__System_Type_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttribute(ParameterInfo,Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Attribute GetCustomAttribute (this System.Reflection.ParameterInfo element, Type attributeType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.parameterinfo">ParameterInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.attribute">Attribute</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_System_Reflection_MemberInfo__System_Type_System_Boolean_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttribute(MemberInfo,Type,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Attribute GetCustomAttribute (this System.Reflection.MemberInfo element, Type attributeType, bool inherit);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.memberinfo">MemberInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.attribute">Attribute</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_System_Reflection_ParameterInfo__System_Type_System_Boolean_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttribute(ParameterInfo,Type,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Attribute GetCustomAttribute (this System.Reflection.ParameterInfo element, Type attributeType, bool inherit);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.parameterinfo">ParameterInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.attribute">Attribute</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute__1_System_Reflection_Assembly__">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttribute(Assembly)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static T GetCustomAttribute&lt;T&gt; (this System.Reflection.Assembly element) where T : Attribute;</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.assembly">Assembly</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">T</span></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute__1_System_Reflection_MemberInfo__">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttribute(MemberInfo)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static T GetCustomAttribute&lt;T&gt; (this System.Reflection.MemberInfo element) where T : Attribute;</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.memberinfo">MemberInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">T</span></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute__1_System_Reflection_Module__">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttribute(Module)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static T GetCustomAttribute&lt;T&gt; (this System.Reflection.Module element) where T : Attribute;</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.module">Module</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">T</span></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute__1_System_Reflection_ParameterInfo__">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttribute(ParameterInfo)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static T GetCustomAttribute&lt;T&gt; (this System.Reflection.ParameterInfo element) where T : Attribute;</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.parameterinfo">ParameterInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">T</span></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute__1_System_Reflection_MemberInfo__System_Boolean_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttribute(MemberInfo,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static T GetCustomAttribute&lt;T&gt; (this System.Reflection.MemberInfo element, bool inherit) where T : Attribute;</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.memberinfo">MemberInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">T</span></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute__1_System_Reflection_ParameterInfo__System_Boolean_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttribute_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttribute(ParameterInfo,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static T GetCustomAttribute&lt;T&gt; (this System.Reflection.ParameterInfo element, bool inherit) where T : Attribute;</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.parameterinfo">ParameterInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">T</span></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_Assembly__">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(Assembly)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;Attribute&gt; GetCustomAttributes (this System.Reflection.Assembly element);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.assembly">Assembly</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.attribute">Attribute</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_MemberInfo__">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(MemberInfo)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;Attribute&gt; GetCustomAttributes (this System.Reflection.MemberInfo element);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.memberinfo">MemberInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.attribute">Attribute</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_Module__">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(Module)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;Attribute&gt; GetCustomAttributes (this System.Reflection.Module element);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.module">Module</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.attribute">Attribute</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_ParameterInfo__">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(ParameterInfo)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;Attribute&gt; GetCustomAttributes (this System.Reflection.ParameterInfo element);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.parameterinfo">ParameterInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.attribute">Attribute</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_Assembly__System_Type_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(Assembly,Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;Attribute&gt; GetCustomAttributes (this System.Reflection.Assembly element, Type attributeType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.assembly">Assembly</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.attribute">Attribute</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_MemberInfo__System_Boolean_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(MemberInfo,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;Attribute&gt; GetCustomAttributes (this System.Reflection.MemberInfo element, bool inherit);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.memberinfo">MemberInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.attribute">Attribute</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_MemberInfo__System_Type_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(MemberInfo,Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;Attribute&gt; GetCustomAttributes (this System.Reflection.MemberInfo element, Type attributeType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.memberinfo">MemberInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.attribute">Attribute</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_Module__System_Type_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(Module,Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;Attribute&gt; GetCustomAttributes (this System.Reflection.Module element, Type attributeType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.module">Module</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.attribute">Attribute</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_ParameterInfo__System_Boolean_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(ParameterInfo,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;Attribute&gt; GetCustomAttributes (this System.Reflection.ParameterInfo element, bool inherit);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.parameterinfo">ParameterInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.attribute">Attribute</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_ParameterInfo__System_Type_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(ParameterInfo,Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;Attribute&gt; GetCustomAttributes (this System.Reflection.ParameterInfo element, Type attributeType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.parameterinfo">ParameterInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.attribute">Attribute</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_MemberInfo__System_Type_System_Boolean_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(MemberInfo,Type,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;Attribute&gt; GetCustomAttributes (this System.Reflection.MemberInfo element, Type attributeType, bool inherit);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.memberinfo">MemberInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.attribute">Attribute</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_System_Reflection_ParameterInfo__System_Type_System_Boolean_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(ParameterInfo,Type,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;Attribute&gt; GetCustomAttributes (this System.Reflection.ParameterInfo element, Type attributeType, bool inherit);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.parameterinfo">ParameterInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../system/system.attribute">Attribute</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes__1_System_Reflection_Assembly__">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(Assembly)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;T&gt; GetCustomAttributes&lt;T&gt; (this System.Reflection.Assembly element) where T : Attribute;</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.assembly">Assembly</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable<t></t></a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes__1_System_Reflection_MemberInfo__">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(MemberInfo)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;T&gt; GetCustomAttributes&lt;T&gt; (this System.Reflection.MemberInfo element) where T : Attribute;</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.memberinfo">MemberInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable<t></t></a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes__1_System_Reflection_Module__">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(Module)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;T&gt; GetCustomAttributes&lt;T&gt; (this System.Reflection.Module element) where T : Attribute;</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.module">Module</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable<t></t></a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes__1_System_Reflection_ParameterInfo__">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(ParameterInfo)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;T&gt; GetCustomAttributes&lt;T&gt; (this System.Reflection.ParameterInfo element) where T : Attribute;</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.parameterinfo">ParameterInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable<t></t></a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes__1_System_Reflection_MemberInfo__System_Boolean_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(MemberInfo,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;T&gt; GetCustomAttributes&lt;T&gt; (this System.Reflection.MemberInfo element, bool inherit) where T : Attribute;</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.memberinfo">MemberInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable<t></t></a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes__1_System_Reflection_ParameterInfo__System_Boolean_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_GetCustomAttributes_T__"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCustomAttributes(ParameterInfo,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Collections.Generic.IEnumerable&lt;T&gt; GetCustomAttributes&lt;T&gt; (this System.Reflection.ParameterInfo element, bool inherit) where T : Attribute;</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.parameterinfo">ParameterInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable<t></t></a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_IsDefined_System_Reflection_Assembly__System_Type_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_IsDefined_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsDefined(Assembly,Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool IsDefined (this System.Reflection.Assembly element, Type attributeType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.assembly">Assembly</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_IsDefined_System_Reflection_MemberInfo__System_Type_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_IsDefined_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsDefined(MemberInfo,Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool IsDefined (this System.Reflection.MemberInfo element, Type attributeType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.memberinfo">MemberInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_IsDefined_System_Reflection_Module__System_Type_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_IsDefined_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsDefined(Module,Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool IsDefined (this System.Reflection.Module element, Type attributeType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.module">Module</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_IsDefined_System_Reflection_ParameterInfo__System_Type_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_IsDefined_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsDefined(ParameterInfo,Type)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool IsDefined (this System.Reflection.ParameterInfo element, Type attributeType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.parameterinfo">ParameterInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_IsDefined_System_Reflection_MemberInfo__System_Type_System_Boolean_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_IsDefined_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsDefined(MemberInfo,Type,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool IsDefined (this System.Reflection.MemberInfo element, Type attributeType, bool inherit);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.memberinfo">MemberInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Reflection_CustomAttributeExtensions_IsDefined_System_Reflection_ParameterInfo__System_Type_System_Boolean_">
+    
+            <a id="System_Reflection_CustomAttributeExtensions_IsDefined_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsDefined(ParameterInfo,Type,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool IsDefined (this System.Reflection.ParameterInfo element, Type attributeType, bool inherit);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>element</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.reflection.parameterinfo">ParameterInfo</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributeType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.type">Type</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>inherit</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Microsoft.Azure.Batch.Protocol.BatchRequests namespace">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="batch">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/8ece26063f2f27414f0bad873159ee6212f3448d/docs-ref-autogen/Data/Batch/Microsoft.Azure.Batch.Protocol.BatchRequests.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Data/Batch/Microsoft.Azure.Batch.Protocol.BatchRequests.yml">
+<meta name="updated_at" content="2016-12-19 07:26 AM">
+<meta name="document_id" content="c8ba02f1-8ec5-4ed8-b954-92b79c5bded8">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Azure.Batch.Protocol.BatchRequests">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.azure.batch.protocol.batchrequests" rel="canonical">
+    <title>Microsoft.Azure.Batch.Protocol.BatchRequests namespace | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/d1d5acab8c02cc720733.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              <!-- NAMESPACE -->
+    <h1 id="Microsoft_Azure_Batch_Protocol_BatchRequests">
+      <span class="lang-csharp">Microsoft.Azure.Batch.Protocol.BatchRequests</span>
+      <span class="lang-vb">Microsoft.Azure.Batch.Protocol.BatchRequests</span>
+        Namespace
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div>
+    <header class="header enable-platform-filter" id="classes">
+      <h2>Classes
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_AccountListNodeAgentSkusBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.accountlistnodeagentskusbatchrequest">AccountListNodeAgentSkusBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.accountlistnodeagentskusbatchrequest">AccountListNodeAgentSkusBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the AccountListNodeAgentSkus operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_AccountListNodeAgentSkusNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.accountlistnodeagentskusnextbatchrequest">AccountListNodeAgentSkusNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.accountlistnodeagentskusnextbatchrequest">AccountListNodeAgentSkusNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the AccountListNodeAgentSkusNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ApplicationGetBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.applicationgetbatchrequest">ApplicationGetBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.applicationgetbatchrequest">ApplicationGetBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ApplicationGet operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ApplicationListBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.applicationlistbatchrequest">ApplicationListBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.applicationlistbatchrequest">ApplicationListBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ApplicationList operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ApplicationListNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.applicationlistnextbatchrequest">ApplicationListNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.applicationlistnextbatchrequest">ApplicationListNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ApplicationListNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_CertificateAddBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.certificateaddbatchrequest">CertificateAddBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.certificateaddbatchrequest">CertificateAddBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the CertificateAdd operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_CertificateCancelDeletionBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.certificatecanceldeletionbatchrequest">CertificateCancelDeletionBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.certificatecanceldeletionbatchrequest">CertificateCancelDeletionBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the CertificateCancelDeletion operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_CertificateDeleteBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.certificatedeletebatchrequest">CertificateDeleteBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.certificatedeletebatchrequest">CertificateDeleteBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the CertificateDelete operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_CertificateGetBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.certificategetbatchrequest">CertificateGetBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.certificategetbatchrequest">CertificateGetBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the CertificateGet operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_CertificateListBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.certificatelistbatchrequest">CertificateListBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.certificatelistbatchrequest">CertificateListBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the CertificateList operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_CertificateListNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.certificatelistnextbatchrequest">CertificateListNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.certificatelistnextbatchrequest">CertificateListNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the CertificateListNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ComputeNodeAddUserBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodeadduserbatchrequest">ComputeNodeAddUserBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodeadduserbatchrequest">ComputeNodeAddUserBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ComputeNodeAddUser operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ComputeNodeDeleteUserBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodedeleteuserbatchrequest">ComputeNodeDeleteUserBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodedeleteuserbatchrequest">ComputeNodeDeleteUserBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ComputeNodeDeleteUser operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ComputeNodeDisableSchedulingBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodedisableschedulingbatchrequest">ComputeNodeDisableSchedulingBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodedisableschedulingbatchrequest">ComputeNodeDisableSchedulingBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ComputeNodeDisableScheduling operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ComputeNodeEnableSchedulingBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodeenableschedulingbatchrequest">ComputeNodeEnableSchedulingBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodeenableschedulingbatchrequest">ComputeNodeEnableSchedulingBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ComputeNodeEnableScheduling operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ComputeNodeGetBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodegetbatchrequest">ComputeNodeGetBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodegetbatchrequest">ComputeNodeGetBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ComputeNodeGet operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ComputeNodeGetRemoteDesktopBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodegetremotedesktopbatchrequest">ComputeNodeGetRemoteDesktopBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodegetremotedesktopbatchrequest">ComputeNodeGetRemoteDesktopBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ComputeNodeGetRemoteDesktop operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ComputeNodeGetRemoteLoginSettingsBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodegetremoteloginsettingsbatchrequest">ComputeNodeGetRemoteLoginSettingsBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodegetremoteloginsettingsbatchrequest">ComputeNodeGetRemoteLoginSettingsBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ComputeNodeGetRemoteLoginSettings operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ComputeNodeListBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodelistbatchrequest">ComputeNodeListBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodelistbatchrequest">ComputeNodeListBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ComputeNodeList operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ComputeNodeListNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodelistnextbatchrequest">ComputeNodeListNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodelistnextbatchrequest">ComputeNodeListNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ComputeNodeListNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ComputeNodeRebootBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenoderebootbatchrequest">ComputeNodeRebootBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenoderebootbatchrequest">ComputeNodeRebootBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ComputeNodeReboot operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ComputeNodeReimageBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodereimagebatchrequest">ComputeNodeReimageBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodereimagebatchrequest">ComputeNodeReimageBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ComputeNodeReimage operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_ComputeNodeUpdateUserBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodeupdateuserbatchrequest">ComputeNodeUpdateUserBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.computenodeupdateuserbatchrequest">ComputeNodeUpdateUserBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the ComputeNodeUpdateUser operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_FileDeleteFromComputeNodeBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filedeletefromcomputenodebatchrequest">FileDeleteFromComputeNodeBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filedeletefromcomputenodebatchrequest">FileDeleteFromComputeNodeBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the FileDeleteFromComputeNode operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_FileDeleteFromTaskBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filedeletefromtaskbatchrequest">FileDeleteFromTaskBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filedeletefromtaskbatchrequest">FileDeleteFromTaskBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the FileDeleteFromTask operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_FileGetFromComputeNodeBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filegetfromcomputenodebatchrequest">FileGetFromComputeNodeBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filegetfromcomputenodebatchrequest">FileGetFromComputeNodeBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the FileGetFromComputeNode operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_FileGetFromTaskBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filegetfromtaskbatchrequest">FileGetFromTaskBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filegetfromtaskbatchrequest">FileGetFromTaskBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the FileGetFromTask operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_FileGetNodeFilePropertiesFromComputeNodeBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filegetnodefilepropertiesfromcomputenodebatchrequest">FileGetNodeFilePropertiesFromComputeNodeBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filegetnodefilepropertiesfromcomputenodebatchrequest">FileGetNodeFilePropertiesFromComputeNodeBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the FileGetNodeFilePropertiesFromComputeNode operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_FileGetNodeFilePropertiesFromTaskBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filegetnodefilepropertiesfromtaskbatchrequest">FileGetNodeFilePropertiesFromTaskBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filegetnodefilepropertiesfromtaskbatchrequest">FileGetNodeFilePropertiesFromTaskBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the FileGetNodeFilePropertiesFromTask operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_FileListFromComputeNodeBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filelistfromcomputenodebatchrequest">FileListFromComputeNodeBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filelistfromcomputenodebatchrequest">FileListFromComputeNodeBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the FileListFromComputeNode operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_FileListFromComputeNodeNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filelistfromcomputenodenextbatchrequest">FileListFromComputeNodeNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filelistfromcomputenodenextbatchrequest">FileListFromComputeNodeNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the FileListFromComputeNodeNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_FileListFromTaskBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filelistfromtaskbatchrequest">FileListFromTaskBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filelistfromtaskbatchrequest">FileListFromTaskBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the FileListFromTask operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_FileListFromTaskNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filelistfromtasknextbatchrequest">FileListFromTaskNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.filelistfromtasknextbatchrequest">FileListFromTaskNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the FileListFromTaskNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobAddBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobaddbatchrequest">JobAddBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobaddbatchrequest">JobAddBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobAdd operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobDeleteBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobdeletebatchrequest">JobDeleteBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobdeletebatchrequest">JobDeleteBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobDelete operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobDisableBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobdisablebatchrequest">JobDisableBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobdisablebatchrequest">JobDisableBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobDisable operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobEnableBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobenablebatchrequest">JobEnableBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobenablebatchrequest">JobEnableBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobEnable operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobGetAllJobsLifetimeStatisticsBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobgetalljobslifetimestatisticsbatchrequest">JobGetAllJobsLifetimeStatisticsBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobgetalljobslifetimestatisticsbatchrequest">JobGetAllJobsLifetimeStatisticsBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobGetAllJobsLifetimeStatistics operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobGetBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobgetbatchrequest">JobGetBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobgetbatchrequest">JobGetBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobGet operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobListBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.joblistbatchrequest">JobListBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.joblistbatchrequest">JobListBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobList operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobListFromJobScheduleBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.joblistfromjobschedulebatchrequest">JobListFromJobScheduleBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.joblistfromjobschedulebatchrequest">JobListFromJobScheduleBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobListFromJobSchedule operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobListFromJobScheduleNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.joblistfromjobschedulenextbatchrequest">JobListFromJobScheduleNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.joblistfromjobschedulenextbatchrequest">JobListFromJobScheduleNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobListFromJobScheduleNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobListNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.joblistnextbatchrequest">JobListNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.joblistnextbatchrequest">JobListNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobListNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobListPreparationAndReleaseTaskStatusBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.joblistpreparationandreleasetaskstatusbatchrequest">JobListPreparationAndReleaseTaskStatusBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.joblistpreparationandreleasetaskstatusbatchrequest">JobListPreparationAndReleaseTaskStatusBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobListPreparationAndReleaseTaskStatus operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobListPreparationAndReleaseTaskStatusNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.joblistpreparationandreleasetaskstatusnextbatchrequest">JobListPreparationAndReleaseTaskStatusNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.joblistpreparationandreleasetaskstatusnextbatchrequest">JobListPreparationAndReleaseTaskStatusNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobListPreparationAndReleaseTaskStatusNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobPatchBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobpatchbatchrequest">JobPatchBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobpatchbatchrequest">JobPatchBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobPatch operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobScheduleAddBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduleaddbatchrequest">JobScheduleAddBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduleaddbatchrequest">JobScheduleAddBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobScheduleAdd operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobScheduleDeleteBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduledeletebatchrequest">JobScheduleDeleteBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduledeletebatchrequest">JobScheduleDeleteBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobScheduleDelete operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobScheduleDisableBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduledisablebatchrequest">JobScheduleDisableBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduledisablebatchrequest">JobScheduleDisableBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobScheduleDisable operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobScheduleEnableBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduleenablebatchrequest">JobScheduleEnableBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduleenablebatchrequest">JobScheduleEnableBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobScheduleEnable operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobScheduleExistsBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduleexistsbatchrequest">JobScheduleExistsBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduleexistsbatchrequest">JobScheduleExistsBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobScheduleExists operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobScheduleGetBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobschedulegetbatchrequest">JobScheduleGetBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobschedulegetbatchrequest">JobScheduleGetBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobScheduleGet operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobScheduleListBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobschedulelistbatchrequest">JobScheduleListBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobschedulelistbatchrequest">JobScheduleListBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobScheduleList operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobScheduleListNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobschedulelistnextbatchrequest">JobScheduleListNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobschedulelistnextbatchrequest">JobScheduleListNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobScheduleListNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobSchedulePatchBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobschedulepatchbatchrequest">JobSchedulePatchBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobschedulepatchbatchrequest">JobSchedulePatchBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobSchedulePatch operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobScheduleTerminateBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduleterminatebatchrequest">JobScheduleTerminateBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduleterminatebatchrequest">JobScheduleTerminateBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobScheduleTerminate operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobScheduleUpdateBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduleupdatebatchrequest">JobScheduleUpdateBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobscheduleupdatebatchrequest">JobScheduleUpdateBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobScheduleUpdate operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobTerminateBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobterminatebatchrequest">JobTerminateBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobterminatebatchrequest">JobTerminateBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobTerminate operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_JobUpdateBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobupdatebatchrequest">JobUpdateBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.jobupdatebatchrequest">JobUpdateBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the JobUpdate operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolAddBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.pooladdbatchrequest">PoolAddBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.pooladdbatchrequest">PoolAddBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolAdd operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolDeleteBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.pooldeletebatchrequest">PoolDeleteBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.pooldeletebatchrequest">PoolDeleteBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolDelete operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolDisableAutoScaleBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.pooldisableautoscalebatchrequest">PoolDisableAutoScaleBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.pooldisableautoscalebatchrequest">PoolDisableAutoScaleBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolDisableAutoScale operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolEnableAutoScaleBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolenableautoscalebatchrequest">PoolEnableAutoScaleBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolenableautoscalebatchrequest">PoolEnableAutoScaleBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolEnableAutoScale operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolEvaluateAutoScaleBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolevaluateautoscalebatchrequest">PoolEvaluateAutoScaleBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolevaluateautoscalebatchrequest">PoolEvaluateAutoScaleBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolEvaluateAutoScale operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolExistsBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolexistsbatchrequest">PoolExistsBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolexistsbatchrequest">PoolExistsBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolExists operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolGetAllPoolsLifetimeStatisticsBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolgetallpoolslifetimestatisticsbatchrequest">PoolGetAllPoolsLifetimeStatisticsBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolgetallpoolslifetimestatisticsbatchrequest">PoolGetAllPoolsLifetimeStatisticsBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolGetAllPoolsLifetimeStatistics operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolGetBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolgetbatchrequest">PoolGetBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolgetbatchrequest">PoolGetBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolGet operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolListBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poollistbatchrequest">PoolListBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poollistbatchrequest">PoolListBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolList operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolListNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poollistnextbatchrequest">PoolListNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poollistnextbatchrequest">PoolListNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolListNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolListPoolUsageMetricsBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poollistpoolusagemetricsbatchrequest">PoolListPoolUsageMetricsBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poollistpoolusagemetricsbatchrequest">PoolListPoolUsageMetricsBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolListPoolUsageMetrics operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolListPoolUsageMetricsNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poollistpoolusagemetricsnextbatchrequest">PoolListPoolUsageMetricsNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poollistpoolusagemetricsnextbatchrequest">PoolListPoolUsageMetricsNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolListPoolUsageMetricsNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolPatchBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolpatchbatchrequest">PoolPatchBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolpatchbatchrequest">PoolPatchBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolPatch operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolRemoveNodesBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolremovenodesbatchrequest">PoolRemoveNodesBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolremovenodesbatchrequest">PoolRemoveNodesBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolRemoveNodes operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolResizeBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolresizebatchrequest">PoolResizeBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolresizebatchrequest">PoolResizeBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolResize operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolStopResizeBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolstopresizebatchrequest">PoolStopResizeBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolstopresizebatchrequest">PoolStopResizeBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolStopResize operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolUpdatePropertiesBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolupdatepropertiesbatchrequest">PoolUpdatePropertiesBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolupdatepropertiesbatchrequest">PoolUpdatePropertiesBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolUpdateProperties operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_PoolUpgradeOSBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolupgradeosbatchrequest">PoolUpgradeOSBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.poolupgradeosbatchrequest">PoolUpgradeOSBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the PoolUpgradeOS operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_TaskAddBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskaddbatchrequest">TaskAddBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskaddbatchrequest">TaskAddBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the TaskAdd operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_TaskAddCollectionBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskaddcollectionbatchrequest">TaskAddCollectionBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskaddcollectionbatchrequest">TaskAddCollectionBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the TaskAddCollection operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_TaskDeleteBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskdeletebatchrequest">TaskDeleteBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskdeletebatchrequest">TaskDeleteBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the TaskDelete operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_TaskGetBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskgetbatchrequest">TaskGetBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskgetbatchrequest">TaskGetBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the TaskGet operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_TaskListBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.tasklistbatchrequest">TaskListBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.tasklistbatchrequest">TaskListBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the TaskList operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_TaskListNextBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.tasklistnextbatchrequest">TaskListNextBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.tasklistnextbatchrequest">TaskListNextBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the TaskListNext operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_TaskListSubtasksBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.tasklistsubtasksbatchrequest">TaskListSubtasksBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.tasklistsubtasksbatchrequest">TaskListSubtasksBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the TaskListSubtasks operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_TaskReactivateBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskreactivatebatchrequest">TaskReactivateBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskreactivatebatchrequest">TaskReactivateBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the TaskReactivate operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_TaskTerminateBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskterminatebatchrequest">TaskTerminateBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskterminatebatchrequest">TaskTerminateBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the TaskTerminate operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Protocol_BatchRequests_TaskUpdateBatchRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskupdatebatchrequest">TaskUpdateBatchRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.protocol.batchrequests.taskupdatebatchrequest">TaskUpdateBatchRequest</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest">IBatchRequest</a> for the TaskUpdate operation.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/d1d5acab8c02cc720733.reference.js"></script>
+  </body>
+</html>

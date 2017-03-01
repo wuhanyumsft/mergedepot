@@ -1,0 +1,2368 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="DeviceClient class">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="iot-hub">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/28fd18172a6f28068a43ec44affb2c89ee8fdc08/docs-ref-autogen/Data/Iot/Microsoft.Azure.Devices.Client.DeviceClient.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Data/Iot/Microsoft.Azure.Devices.Client.DeviceClient.yml">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.OperationTimeoutInMilliseconds">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.get_OperationTimeoutInMilliseconds">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.set_OperationTimeoutInMilliseconds">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.RetryPolicy">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.get_RetryPolicy">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.set_RetryPolicy">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.Create">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.OpenAsync">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.CloseAsync">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.ReceiveAsync">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.CompleteAsync">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.AbandonAsync">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.RejectAsync">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.SendEventAsync">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.SendEventBatchAsync">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.SetMethodHandlerAsync">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.SetMethodHandler">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.Dispose">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.SetDesiredPropertyUpdateCallback">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.GetTwinAsync">
+<meta name="APIName" content="Microsoft.Azure.Devices.Client.DeviceClient.UpdateReportedPropertiesAsync">
+<meta name="APILocation" content="Microsoft.Azure.Devices.Client.UWP.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-22 12:28 AM">
+<meta name="document_id" content="131baff3-0e7b-6c1c-e684-2c4512814eaf">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Contains methods that a device can use to send messages to and receive from the service.
+">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L93">
+<meta name="ms.assetid" content="Microsoft.Azure.Devices.Client.DeviceClient">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.azure.devices.client.deviceclient" rel="canonical">
+    <title>DeviceClient class | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/d1d5acab8c02cc720733.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="https://github.com/Azure/azure-iot-sdk-csharp/new/master/apiSpec/new?filename=Microsoft_Azure_Devices_Client_DeviceClient.md&value=---%0Auid%3A%20Microsoft.Azure.Devices.Client.DeviceClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+							<li>
+								<a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L93" ms.cmpnm="viewsource"><i class="icon icon-code"></i>View Code</a>
+							</li>
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Azure_Devices_Client_DeviceClient">
+      <span class="lang-csharp">DeviceClient</span>
+      <span class="lang-vb">DeviceClient</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    		<div class="memberEditButton">
+    			<a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L93" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+    		</div>
+    	<p>Contains methods that a device can use to send messages to and receive from the service.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public sealed class DeviceClient : IDisposable</code><code class="vb lang-vb">Public NotInheritable Class DeviceClient
+    Implements IDisposable</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">DeviceClient</div>
+          <div class="lang-vb">DeviceClient</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4>System.Object</h4>
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">GetHashCode</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">GetHashCode</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">GetType</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">GetType</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">MemberwiseClone</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">MemberwiseClone</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">ReferenceEquals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">ReferenceEquals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">ToString</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">ToString</a>()
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_OperationTimeoutInMilliseconds">OperationTimeoutInMilliseconds</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_OperationTimeoutInMilliseconds">OperationTimeoutInMilliseconds</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_RetryPolicy">RetryPolicy</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_RetryPolicy">RetryPolicy</a></div>
+          </td>
+            <td>
+            <p>Stores the retry strategy used in the operation retries.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_AbandonAsync_Microsoft_Azure_Devices_Client_Message_">AbandonAsync(Message)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_AbandonAsync_Microsoft_Azure_Devices_Client_Message_">AbandonAsync(Message)</a></div>
+          </td>
+            <td>
+            <p>Puts a received message back onto the device queue</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_AbandonAsync_System_String_">AbandonAsync(String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_AbandonAsync_System_String_">AbandonAsync(String)</a></div>
+          </td>
+            <td>
+            <p>Puts a received message back onto the device queue</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CloseAsync">CloseAsync()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CloseAsync">CloseAsync()</a></div>
+          </td>
+            <td>
+            <p>Close the DeviceClient instance</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CompleteAsync_Microsoft_Azure_Devices_Client_Message_">CompleteAsync(Message)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CompleteAsync_Microsoft_Azure_Devices_Client_Message_">CompleteAsync(Message)</a></div>
+          </td>
+            <td>
+            <p>Deletes a received message from the device queue</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CompleteAsync_System_String_">CompleteAsync(String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CompleteAsync_System_String_">CompleteAsync(String)</a></div>
+          </td>
+            <td>
+            <p>Deletes a received message from the device queue</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_Create_System_String_Microsoft_Azure_Devices_Client_IAuthenticationMethod_">Create(String, IAuthenticationMethod)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_Create_System_String_Microsoft_Azure_Devices_Client_IAuthenticationMethod_">Create(String, IAuthenticationMethod)</a></div>
+          </td>
+            <td>
+            <p>Create an Amqp DeviceClient from individual parameters</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_Create_System_String_Microsoft_Azure_Devices_Client_IAuthenticationMethod_Microsoft_Azure_Devices_Client_ITransportSettings___">Create(String, IAuthenticationMethod, ITransportSettings[])</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_Create_System_String_Microsoft_Azure_Devices_Client_IAuthenticationMethod_Microsoft_Azure_Devices_Client_ITransportSettings___">Create(String, IAuthenticationMethod, ITransportSettings())</a></div>
+          </td>
+            <td>
+            <p>Create a DeviceClient from individual parameters</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_Create_System_String_Microsoft_Azure_Devices_Client_IAuthenticationMethod_Microsoft_Azure_Devices_Client_TransportType_">Create(String, IAuthenticationMethod, TransportType)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_Create_System_String_Microsoft_Azure_Devices_Client_IAuthenticationMethod_Microsoft_Azure_Devices_Client_TransportType_">Create(String, IAuthenticationMethod, TransportType)</a></div>
+          </td>
+            <td>
+            <p>Create a DeviceClient from individual parameters</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_">CreateFromConnectionString(String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_">CreateFromConnectionString(String)</a></div>
+          </td>
+            <td>
+            <p>Create a DeviceClient using Amqp transport from the specified connection string</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_Microsoft_Azure_Devices_Client_ITransportSettings___">CreateFromConnectionString(String, ITransportSettings[])</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_Microsoft_Azure_Devices_Client_ITransportSettings___">CreateFromConnectionString(String, ITransportSettings())</a></div>
+          </td>
+            <td>
+            <p>Create DeviceClient from the specified connection string using a prioritized list of transports</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_Microsoft_Azure_Devices_Client_TransportType_">CreateFromConnectionString(String, TransportType)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_Microsoft_Azure_Devices_Client_TransportType_">CreateFromConnectionString(String, TransportType)</a></div>
+          </td>
+            <td>
+            <p>Create DeviceClient from the specified connection string using the specified transport type
+(PCL) Only Http transport is allowed</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_System_String_">CreateFromConnectionString(String, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_System_String_">CreateFromConnectionString(String, String)</a></div>
+          </td>
+            <td>
+            <p>Create a DeviceClient using Amqp transport from the specified connection string
+(WinRT) Create a DeviceClient using Http transport from the specified connection string</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_System_String_Microsoft_Azure_Devices_Client_ITransportSettings___">CreateFromConnectionString(String, String, ITransportSettings[])</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_System_String_Microsoft_Azure_Devices_Client_ITransportSettings___">CreateFromConnectionString(String, String, ITransportSettings())</a></div>
+          </td>
+            <td>
+            <p>Create DeviceClient from the specified connection string using the prioritized list of transports</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_System_String_Microsoft_Azure_Devices_Client_TransportType_">CreateFromConnectionString(String, String, TransportType)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_System_String_Microsoft_Azure_Devices_Client_TransportType_">CreateFromConnectionString(String, String, TransportType)</a></div>
+          </td>
+            <td>
+            <p>Create DeviceClient from the specified connection string using the specified transport type</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_Dispose">Dispose()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_Dispose">Dispose()</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_GetTwinAsync">GetTwinAsync()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_GetTwinAsync">GetTwinAsync()</a></div>
+          </td>
+            <td>
+            <p>Retrieve a device twin object for the current device.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_OpenAsync">OpenAsync()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_OpenAsync">OpenAsync()</a></div>
+          </td>
+            <td>
+            <p>Explicitly open the DeviceClient instance.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_ReceiveAsync">ReceiveAsync()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_ReceiveAsync">ReceiveAsync()</a></div>
+          </td>
+            <td>
+            <p>Receive a message from the device queue using the default timeout.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_ReceiveAsync_System_TimeSpan_">ReceiveAsync(TimeSpan)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_ReceiveAsync_System_TimeSpan_">ReceiveAsync(TimeSpan)</a></div>
+          </td>
+            <td>
+            <p>Receive a message from the device queue with the specified timeout</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_RejectAsync_Microsoft_Azure_Devices_Client_Message_">RejectAsync(Message)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_RejectAsync_Microsoft_Azure_Devices_Client_Message_">RejectAsync(Message)</a></div>
+          </td>
+            <td>
+            <p>Deletes a received message from the device queue and indicates to the server that the message could not be processed.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_RejectAsync_System_String_">RejectAsync(String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_RejectAsync_System_String_">RejectAsync(String)</a></div>
+          </td>
+            <td>
+            <p>Deletes a received message from the device queue and indicates to the server that the message could not be processed.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_SendEventAsync_Microsoft_Azure_Devices_Client_Message_">SendEventAsync(Message)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_SendEventAsync_Microsoft_Azure_Devices_Client_Message_">SendEventAsync(Message)</a></div>
+          </td>
+            <td>
+            <p>Sends an event to device hub</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_SendEventBatchAsync_System_Collections_Generic_IEnumerable_Microsoft_Azure_Devices_Client_Message__">SendEventBatchAsync(IEnumerable&lt;Message&gt;)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_SendEventBatchAsync_System_Collections_Generic_IEnumerable_Microsoft_Azure_Devices_Client_Message__">SendEventBatchAsync(IEnumerable(Of Message))</a></div>
+          </td>
+            <td>
+            <p>Sends a batch of events to device hub</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_SetDesiredPropertyUpdateCallback_Microsoft_Azure_Devices_Client_DesiredPropertyUpdateCallback_System_Object_">SetDesiredPropertyUpdateCallback(DesiredPropertyUpdateCallback, Object)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_SetDesiredPropertyUpdateCallback_Microsoft_Azure_Devices_Client_DesiredPropertyUpdateCallback_System_Object_">SetDesiredPropertyUpdateCallback(DesiredPropertyUpdateCallback, Object)</a></div>
+          </td>
+            <td>
+            <p>Set a callback that will be called whenever the client receives a state update 
+(desired or reported) from the service.  This has the side-effect of subscribing
+to the PATCH topic on the service.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_SetMethodHandler_System_String_Microsoft_Azure_Devices_Client_MethodCallback_System_Object_">SetMethodHandler(String, MethodCallback, Object)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_SetMethodHandler_System_String_Microsoft_Azure_Devices_Client_MethodCallback_System_Object_">SetMethodHandler(String, MethodCallback, Object)</a></div>
+          </td>
+            <td>
+            <p>Registers a new delgate for the named method. If a delegate is already associated with
+the named method, it will be replaced with the new delegate.</p>
+<param name="methodName">The name of the method to associate with the delegate.
+<param name="methodHandler">The delegate to be used when a method with the given name is called by the cloud service.
+<param name="userContext">generic parameter to be interpreted by the client code.
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_SetMethodHandlerAsync_System_String_Microsoft_Azure_Devices_Client_MethodCallback_System_Object_">SetMethodHandlerAsync(String, MethodCallback, Object)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_SetMethodHandlerAsync_System_String_Microsoft_Azure_Devices_Client_MethodCallback_System_Object_">SetMethodHandlerAsync(String, MethodCallback, Object)</a></div>
+          </td>
+            <td>
+            <p>Registers a new delgate for the named method. If a delegate is already associated with
+the named method, it will be replaced with the new delegate.</p>
+<param name="methodName">The name of the method to associate with the delegate.
+<param name="methodHandler">The delegate to be used when a method with the given name is called by the cloud service.
+<param name="userContext">generic parameter to be interpreted by the client code.
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_UpdateReportedPropertiesAsync_Microsoft_Azure_Devices_Shared_TwinCollection_">UpdateReportedPropertiesAsync(TwinCollection)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Devices_Client_DeviceClient_UpdateReportedPropertiesAsync_Microsoft_Azure_Devices_Shared_TwinCollection_">UpdateReportedPropertiesAsync(TwinCollection)</a></div>
+          </td>
+            <td>
+            <p>Push reported property changes up to the service.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_OperationTimeoutInMilliseconds">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_OperationTimeoutInMilliseconds_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L117" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">OperationTimeoutInMilliseconds</div>        
+            <div class="lang-vb">OperationTimeoutInMilliseconds</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public uint OperationTimeoutInMilliseconds { get; set; }</code><code class="vb lang-vb">Public Property OperationTimeoutInMilliseconds As UInteger</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uint32(v=vs.110).aspx">UInt32</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uint32(v=vs.110).aspx">UInt32</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_RetryPolicy">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_RetryPolicy_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L122" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">RetryPolicy</div>        
+            <div class="lang-vb">RetryPolicy</div>        
+          </div>
+    
+            <p>Stores the retry strategy used in the operation retries.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public RetryPolicyType RetryPolicy { get; set; }</code><code class="vb lang-vb">Public Property RetryPolicy As RetryPolicyType</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.retrypolicytype">RetryPolicyType</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.retrypolicytype">RetryPolicyType</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_AbandonAsync_Microsoft_Azure_Devices_Client_Message_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_AbandonAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L608" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">AbandonAsync(Message)</div>        
+            <div class="lang-vb">AbandonAsync(Message)</div>        
+          </div>
+    
+            <p>Puts a received message back onto the device queue</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task AbandonAsync(Message message)</code><code class="vb lang-vb">Public Function AbandonAsync(message As Message) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>message</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.message">Message</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.message">Message</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>The lock identifier for the previously received message</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_AbandonAsync_System_String_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_AbandonAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L594" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">AbandonAsync(String)</div>        
+            <div class="lang-vb">AbandonAsync(String)</div>        
+          </div>
+    
+            <p>Puts a received message back onto the device queue</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task AbandonAsync(string lockToken)</code><code class="vb lang-vb">Public Function AbandonAsync(lockToken As String) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>lockToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>The previously received message</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_CloseAsync">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_CloseAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L536" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CloseAsync()</div>        
+            <div class="lang-vb">CloseAsync()</div>        
+          </div>
+    
+            <p>Close the DeviceClient instance</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task CloseAsync()</code><code class="vb lang-vb">Public Function CloseAsync As Task</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_CompleteAsync_Microsoft_Azure_Devices_Client_Message_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_CompleteAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L580" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CompleteAsync(Message)</div>        
+            <div class="lang-vb">CompleteAsync(Message)</div>        
+          </div>
+    
+            <p>Deletes a received message from the device queue</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task CompleteAsync(Message message)</code><code class="vb lang-vb">Public Function CompleteAsync(message As Message) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>message</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.message">Message</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.message">Message</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>The previously received message</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_CompleteAsync_System_String_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_CompleteAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L565" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CompleteAsync(String)</div>        
+            <div class="lang-vb">CompleteAsync(String)</div>        
+          </div>
+    
+            <p>Deletes a received message from the device queue</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task CompleteAsync(string lockToken)</code><code class="vb lang-vb">Public Function CompleteAsync(lockToken As String) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>lockToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>The lock identifier for the previously received message</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_Create_System_String_Microsoft_Azure_Devices_Client_IAuthenticationMethod_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_Create_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L208" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Create(String, IAuthenticationMethod)</div>        
+            <div class="lang-vb">Create(String, IAuthenticationMethod)</div>        
+          </div>
+    
+            <p>Create an Amqp DeviceClient from individual parameters</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static DeviceClient Create(string hostname, IAuthenticationMethod authenticationMethod)</code><code class="vb lang-vb">Public Shared Function Create(hostname As String, authenticationMethod As IAuthenticationMethod) As DeviceClient</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostname</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The fully-qualified DNS hostname of IoT Hub</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>authenticationMethod</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.iauthenticationmethod">IAuthenticationMethod</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.iauthenticationmethod">IAuthenticationMethod</a></div>
+                  </dd>
+                  </dl>
+                  <p>The authentication method that is used</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                  </div>
+                  <p>DeviceClient</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_Create_System_String_Microsoft_Azure_Devices_Client_IAuthenticationMethod_Microsoft_Azure_Devices_Client_ITransportSettings___">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_Create_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L260" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Create(String, IAuthenticationMethod, ITransportSettings[])</div>        
+            <div class="lang-vb">Create(String, IAuthenticationMethod, ITransportSettings())</div>        
+          </div>
+    
+            <p>Create a DeviceClient from individual parameters</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static DeviceClient Create(string hostname, IAuthenticationMethod authenticationMethod, [ReadOnlyArray] ITransportSettings[] transportSettings)</code><code class="vb lang-vb">Public Shared Function Create(hostname As String, authenticationMethod As IAuthenticationMethod, transportSettings As ITransportSettings()) As DeviceClient</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostname</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The fully-qualified DNS hostname of IoT Hub</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>authenticationMethod</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.iauthenticationmethod">IAuthenticationMethod</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.iauthenticationmethod">IAuthenticationMethod</a></div>
+                  </dd>
+                  </dl>
+                  <p>The authentication method that is used</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>transportSettings</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.itransportsettings">ITransportSettings</a>[]</div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.itransportsettings">ITransportSettings</a>()</div>
+                  </dd>
+                  </dl>
+                  <p>Prioritized list of transportTypes and their settings</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                  </div>
+                  <p>DeviceClient</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_Create_System_String_Microsoft_Azure_Devices_Client_IAuthenticationMethod_Microsoft_Azure_Devices_Client_TransportType_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_Create_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L224" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Create(String, IAuthenticationMethod, TransportType)</div>        
+            <div class="lang-vb">Create(String, IAuthenticationMethod, TransportType)</div>        
+          </div>
+    
+            <p>Create a DeviceClient from individual parameters</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static DeviceClient Create(string hostname, IAuthenticationMethod authenticationMethod, TransportType transportType)</code><code class="vb lang-vb">Public Shared Function Create(hostname As String, authenticationMethod As IAuthenticationMethod, transportType As TransportType) As DeviceClient</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hostname</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The fully-qualified DNS hostname of IoT Hub</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>authenticationMethod</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.iauthenticationmethod">IAuthenticationMethod</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.iauthenticationmethod">IAuthenticationMethod</a></div>
+                  </dd>
+                  </dl>
+                  <p>The authentication method that is used</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>transportType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.transporttype">TransportType</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.transporttype">TransportType</a></div>
+                  </dd>
+                  </dl>
+                  <p>The transportType used (Http1 or Amqp)</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                  </div>
+                  <p>DeviceClient</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L293" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreateFromConnectionString(String)</div>        
+            <div class="lang-vb">CreateFromConnectionString(String)</div>        
+          </div>
+    
+            <p>Create a DeviceClient using Amqp transport from the specified connection string</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static DeviceClient CreateFromConnectionString(string connectionString)</code><code class="vb lang-vb">Public Shared Function CreateFromConnectionString(connectionString As String) As DeviceClient</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>connectionString</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>Connection string for the IoT hub (including DeviceId)</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                  </div>
+                  <p>DeviceClient</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_Microsoft_Azure_Devices_Client_ITransportSettings___">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L422" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreateFromConnectionString(String, ITransportSettings[])</div>        
+            <div class="lang-vb">CreateFromConnectionString(String, ITransportSettings())</div>        
+          </div>
+    
+            <p>Create DeviceClient from the specified connection string using a prioritized list of transports</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static DeviceClient CreateFromConnectionString(string connectionString, [ReadOnlyArray] ITransportSettings[] transportSettings)</code><code class="vb lang-vb">Public Shared Function CreateFromConnectionString(connectionString As String, transportSettings As ITransportSettings()) As DeviceClient</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>connectionString</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>Connection string for the IoT hub (with DeviceId)</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>transportSettings</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.itransportsettings">ITransportSettings</a>[]</div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.itransportsettings">ITransportSettings</a>()</div>
+                  </dd>
+                  </dl>
+                  <p>Prioritized list of transports and their settings</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                  </div>
+                  <p>DeviceClient</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_Microsoft_Azure_Devices_Client_TransportType_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L325" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreateFromConnectionString(String, TransportType)</div>        
+            <div class="lang-vb">CreateFromConnectionString(String, TransportType)</div>        
+          </div>
+    
+            <p>Create DeviceClient from the specified connection string using the specified transport type
+(PCL) Only Http transport is allowed</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static DeviceClient CreateFromConnectionString(string connectionString, TransportType transportType)</code><code class="vb lang-vb">Public Shared Function CreateFromConnectionString(connectionString As String, transportType As TransportType) As DeviceClient</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>connectionString</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>Connection string for the IoT hub (including DeviceId)</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>transportType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.transporttype">TransportType</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.transporttype">TransportType</a></div>
+                  </dd>
+                  </dl>
+                  <p>Specifies whether Amqp or Http transport is used</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                  </div>
+                  <p>DeviceClient</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_System_String_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L309" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreateFromConnectionString(String, String)</div>        
+            <div class="lang-vb">CreateFromConnectionString(String, String)</div>        
+          </div>
+    
+            <p>Create a DeviceClient using Amqp transport from the specified connection string
+(WinRT) Create a DeviceClient using Http transport from the specified connection string</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static DeviceClient CreateFromConnectionString(string connectionString, string deviceId)</code><code class="vb lang-vb">Public Shared Function CreateFromConnectionString(connectionString As String, deviceId As String) As DeviceClient</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>connectionString</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>IoT Hub-Scope Connection string for the IoT hub (without DeviceId)</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>deviceId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>Id of the Device</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                  </div>
+                  <p>DeviceClient</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_System_String_Microsoft_Azure_Devices_Client_ITransportSettings___">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L497" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreateFromConnectionString(String, String, ITransportSettings[])</div>        
+            <div class="lang-vb">CreateFromConnectionString(String, String, ITransportSettings())</div>        
+          </div>
+    
+            <p>Create DeviceClient from the specified connection string using the prioritized list of transports</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static DeviceClient CreateFromConnectionString(string connectionString, string deviceId, [ReadOnlyArray] ITransportSettings[] transportSettings)</code><code class="vb lang-vb">Public Shared Function CreateFromConnectionString(connectionString As String, deviceId As String, transportSettings As ITransportSettings()) As DeviceClient</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>connectionString</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>Connection string for the IoT hub (without DeviceId)</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>deviceId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>Id of the device</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>transportSettings</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.itransportsettings">ITransportSettings</a>[]</div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.itransportsettings">ITransportSettings</a>()</div>
+                  </dd>
+                  </dl>
+                  <p>Prioritized list of transportTypes and their settings</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                  </div>
+                  <p>DeviceClient</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_System_String_System_String_Microsoft_Azure_Devices_Client_TransportType_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_CreateFromConnectionString_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L396" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CreateFromConnectionString(String, String, TransportType)</div>        
+            <div class="lang-vb">CreateFromConnectionString(String, String, TransportType)</div>        
+          </div>
+    
+            <p>Create DeviceClient from the specified connection string using the specified transport type</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static DeviceClient CreateFromConnectionString(string connectionString, string deviceId, TransportType transportType)</code><code class="vb lang-vb">Public Shared Function CreateFromConnectionString(connectionString As String, deviceId As String, transportType As TransportType) As DeviceClient</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>connectionString</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>IoT Hub-Scope Connection string for the IoT hub (without DeviceId)</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>deviceId</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>Id of the device</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>transportType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.transporttype">TransportType</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.transporttype">TransportType</a></div>
+                  </dd>
+                  </dl>
+                  <p>The transportType used (Http1 or Amqp)</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.deviceclient">DeviceClient</a></div>
+                  </div>
+                  <p>DeviceClient</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_Dispose">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_Dispose_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L946" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose()</div>        
+            <div class="lang-vb">Dispose()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Dispose()</code><code class="vb lang-vb">Public Sub Dispose</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_GetTwinAsync">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_GetTwinAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L1085" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetTwinAsync()</div>        
+            <div class="lang-vb">GetTwinAsync()</div>        
+          </div>
+    
+            <p>Retrieve a device twin object for the current device.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task&lt;Twin&gt; GetTwinAsync()</code><code class="vb lang-vb">Public Function GetTwinAsync As Task(Of Twin)</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="microsoft.azure.devices.shared.twin">Twin</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="microsoft.azure.devices.shared.twin">Twin</a>)</div>
+                  </div>
+                  <p>The device twin object for the current device</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_OpenAsync">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_OpenAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L526" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">OpenAsync()</div>        
+            <div class="lang-vb">OpenAsync()</div>        
+          </div>
+    
+            <p>Explicitly open the DeviceClient instance.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task OpenAsync()</code><code class="vb lang-vb">Public Function OpenAsync As Task</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_ReceiveAsync">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_ReceiveAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L545" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReceiveAsync()</div>        
+            <div class="lang-vb">ReceiveAsync()</div>        
+          </div>
+    
+            <p>Receive a message from the device queue using the default timeout.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task&lt;Message&gt; ReceiveAsync()</code><code class="vb lang-vb">Public Function ReceiveAsync As Task(Of Message)</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="microsoft.azure.devices.client.message">Message</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="microsoft.azure.devices.client.message">Message</a>)</div>
+                  </div>
+                  <p>The receive message or null if there was no message until the default timeout</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_ReceiveAsync_System_TimeSpan_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_ReceiveAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L555" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReceiveAsync(TimeSpan)</div>        
+            <div class="lang-vb">ReceiveAsync(TimeSpan)</div>        
+          </div>
+    
+            <p>Receive a message from the device queue with the specified timeout</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task&lt;Message&gt; ReceiveAsync(TimeSpan timeout)</code><code class="vb lang-vb">Public Function ReceiveAsync(timeout As TimeSpan) As Task(Of Message)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="microsoft.azure.devices.client.message">Message</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="microsoft.azure.devices.client.message">Message</a>)</div>
+                  </div>
+                  <p>The receive message or null if there was no message until the specified time has elapsed</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_RejectAsync_Microsoft_Azure_Devices_Client_Message_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_RejectAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L636" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">RejectAsync(Message)</div>        
+            <div class="lang-vb">RejectAsync(Message)</div>        
+          </div>
+    
+            <p>Deletes a received message from the device queue and indicates to the server that the message could not be processed.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task RejectAsync(Message message)</code><code class="vb lang-vb">Public Function RejectAsync(message As Message) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>message</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.message">Message</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.message">Message</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>The lock identifier for the previously received message</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_RejectAsync_System_String_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_RejectAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L622" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">RejectAsync(String)</div>        
+            <div class="lang-vb">RejectAsync(String)</div>        
+          </div>
+    
+            <p>Deletes a received message from the device queue and indicates to the server that the message could not be processed.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task RejectAsync(string lockToken)</code><code class="vb lang-vb">Public Function RejectAsync(lockToken As String) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>lockToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>The previously received message</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_SendEventAsync_Microsoft_Azure_Devices_Client_Message_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_SendEventAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L650" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SendEventAsync(Message)</div>        
+            <div class="lang-vb">SendEventAsync(Message)</div>        
+          </div>
+    
+            <p>Sends an event to device hub</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task SendEventAsync(Message message)</code><code class="vb lang-vb">Public Function SendEventAsync(message As Message) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>message</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.message">Message</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.message">Message</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>The message containing the event</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_SendEventBatchAsync_System_Collections_Generic_IEnumerable_Microsoft_Azure_Devices_Client_Message__">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_SendEventBatchAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L664" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SendEventBatchAsync(IEnumerable&lt;Message&gt;)</div>        
+            <div class="lang-vb">SendEventBatchAsync(IEnumerable(Of Message))</div>        
+          </div>
+    
+            <p>Sends a batch of events to device hub</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task SendEventBatchAsync(IEnumerable&lt;Message&gt; messages)</code><code class="vb lang-vb">Public Function SendEventBatchAsync(messages As IEnumerable(Of Message)) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>messages</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>&lt;<a class="xref" href="microsoft.azure.devices.client.message">Message</a>&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx">IEnumerable</a>(Of <a class="xref" href="microsoft.azure.devices.client.message">Message</a>)</div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>The task containing the event</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_SetDesiredPropertyUpdateCallback_Microsoft_Azure_Devices_Client_DesiredPropertyUpdateCallback_System_Object_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_SetDesiredPropertyUpdateCallback_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L1058" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetDesiredPropertyUpdateCallback(DesiredPropertyUpdateCallback, Object)</div>        
+            <div class="lang-vb">SetDesiredPropertyUpdateCallback(DesiredPropertyUpdateCallback, Object)</div>        
+          </div>
+    
+            <p>Set a callback that will be called whenever the client receives a state update 
+(desired or reported) from the service.  This has the side-effect of subscribing
+to the PATCH topic on the service.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task SetDesiredPropertyUpdateCallback(DesiredPropertyUpdateCallback callback, object userContext)</code><code class="vb lang-vb">Public Function SetDesiredPropertyUpdateCallback(callback As DesiredPropertyUpdateCallback, userContext As Object) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>callback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.desiredpropertyupdatecallback">DesiredPropertyUpdateCallback</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.desiredpropertyupdatecallback">DesiredPropertyUpdateCallback</a></div>
+                  </dd>
+                  </dl>
+                  <p>Callback to call after the state update has been received and applied</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>userContext</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>Context object that will be passed into callback</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_SetMethodHandler_System_String_Microsoft_Azure_Devices_Client_MethodCallback_System_Object_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_SetMethodHandler_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L823" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetMethodHandler(String, MethodCallback, Object)</div>        
+            <div class="lang-vb">SetMethodHandler(String, MethodCallback, Object)</div>        
+          </div>
+    
+            <p>Registers a new delgate for the named method. If a delegate is already associated with
+the named method, it will be replaced with the new delegate.</p>
+<param name="methodName">The name of the method to associate with the delegate.
+<param name="methodHandler">The delegate to be used when a method with the given name is called by the cloud service.
+<param name="userContext">generic parameter to be interpreted by the client code.
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">[Obsolete(&quot;Please use SetMethodHandlerAsync.&quot;)]
+public void SetMethodHandler(string methodName, MethodCallback methodHandler, object userContext)</code><code class="vb lang-vb">&lt;Obsolete(&quot;Please use SetMethodHandlerAsync.&quot;)&gt;
+Public Sub SetMethodHandler(methodName As String, methodHandler As MethodCallback, userContext As Object)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>methodName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>methodHandler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.methodcallback">MethodCallback</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.methodcallback">MethodCallback</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>userContext</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_SetMethodHandlerAsync_System_String_Microsoft_Azure_Devices_Client_MethodCallback_System_Object_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_SetMethodHandlerAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L772" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetMethodHandlerAsync(String, MethodCallback, Object)</div>        
+            <div class="lang-vb">SetMethodHandlerAsync(String, MethodCallback, Object)</div>        
+          </div>
+    
+            <p>Registers a new delgate for the named method. If a delegate is already associated with
+the named method, it will be replaced with the new delegate.</p>
+<param name="methodName">The name of the method to associate with the delegate.
+<param name="methodHandler">The delegate to be used when a method with the given name is called by the cloud service.
+<param name="userContext">generic parameter to be interpreted by the client code.
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task SetMethodHandlerAsync(string methodName, MethodCallback methodHandler, object userContext)</code><code class="vb lang-vb">Public Function SetMethodHandlerAsync(methodName As String, methodHandler As MethodCallback, userContext As Object) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>methodName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>methodHandler</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.client.methodcallback">MethodCallback</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.client.methodcallback">MethodCallback</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>userContext</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Devices_Client_DeviceClient_UpdateReportedPropertiesAsync_Microsoft_Azure_Devices_Shared_TwinCollection_">
+    
+            <a id="Microsoft_Azure_Devices_Client_DeviceClient_UpdateReportedPropertiesAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-iot-sdk-csharp/blob/master/device/Microsoft.Azure.Devices.Client/DeviceClient.cs/#L1098" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">UpdateReportedPropertiesAsync(TwinCollection)</div>        
+            <div class="lang-vb">UpdateReportedPropertiesAsync(TwinCollection)</div>        
+          </div>
+    
+            <p>Push reported property changes up to the service.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task UpdateReportedPropertiesAsync(TwinCollection reportedProperties)</code><code class="vb lang-vb">Public Function UpdateReportedPropertiesAsync(reportedProperties As TwinCollection) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reportedProperties</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.azure.devices.shared.twincollection">TwinCollection</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.azure.devices.shared.twincollection">TwinCollection</a></div>
+                  </dd>
+                  </dl>
+                  <p>Reported properties to push</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+      <h2>Details</h2>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Namespace</h4>    
+          <div>Microsoft.Azure.Devices.Client</div>
+        </div>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Assembly</h4>    
+          <div>Microsoft.Azure.Devices.Client.UWP.dll</div>
+        </div>
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/d1d5acab8c02cc720733.reference.js"></script>
+  </body>
+</html>

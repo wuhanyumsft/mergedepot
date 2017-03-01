@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="FileDialog class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/Microsoft.Win32/Microsoft.Win32.FileDialog.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/Microsoft.Win32/Microsoft.Win32.FileDialog.yml">
+<meta name="APIName" content="Microsoft.Win32.FileDialog">
+<meta name="APIName" content="Microsoft.Win32.FileDialog..ctor">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.AddExtension">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.CheckFileExists">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.CheckPathExists">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.CustomPlaces">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.DefaultExt">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.DereferenceLinks">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.FileName">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.FileNames">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.FileOk">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.add_FileOk">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.remove_FileOk">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.Filter">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.FilterIndex">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.HookProc">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.InitialDirectory">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.OnFileOk">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.Options">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.Reset">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.RestoreDirectory">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.RunDialog">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.SafeFileName">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.SafeFileNames">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.Title">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.ToString">
+<meta name="APIName" content="Microsoft.Win32.FileDialog.ValidateNames">
+<meta name="APILocation" content="PresentationFramework.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="b9508973-ac37-d24b-d692-bb02a5f8119f">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Win32.FileDialog">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.win32/microsoft.win32.filedialog" rel="canonical">
+    <title>FileDialog class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Win32_FileDialog">
+      <span class="lang-csharp">FileDialog</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract class FileDialog : Microsoft.Win32.CommonDialog</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.win32.commondialog">Microsoft.Win32.CommonDialog</a>
+          </div>
+        </li>
+      <li class="l2">
+        <div class="xref">
+          <div class="lang-csharp">FileDialog</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.win32.commondialog#Microsoft_Win32_CommonDialog_CheckPermissionsToShowDialog">CheckPermissionsToShowDialog()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.win32.commondialog#Microsoft_Win32_CommonDialog_ShowDialog">ShowDialog()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.win32.commondialog#Microsoft_Win32_CommonDialog_ShowDialog_System_Windows_Window_">ShowDialog(Window)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="microsoft.win32.commondialog#Microsoft_Win32_CommonDialog_Tag">Tag</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog__ctor">FileDialog()</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_AddExtension">AddExtension</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_CheckFileExists">CheckFileExists</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_CheckPathExists">CheckPathExists</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_CustomPlaces">CustomPlaces</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_DefaultExt">DefaultExt</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_DereferenceLinks">DereferenceLinks</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_FileName">FileName</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_FileNames">FileNames</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_Filter">Filter</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_FilterIndex">FilterIndex</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_InitialDirectory">InitialDirectory</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_Options">Options</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_RestoreDirectory">RestoreDirectory</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_SafeFileName">SafeFileName</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_SafeFileNames">SafeFileNames</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_Title">Title</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_ValidateNames">ValidateNames</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_HookProc_System_IntPtr_System_Int32_System_IntPtr_System_IntPtr_">HookProc(IntPtr,Int32,IntPtr,IntPtr)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_OnFileOk_System_ComponentModel_CancelEventArgs_">OnFileOk(CancelEventArgs)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_Reset">Reset()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_RunDialog_System_IntPtr_">RunDialog(IntPtr)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_ToString">ToString()</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Events
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_Win32_FileDialog_FileOk">FileOk</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog__ctor">
+    
+            <a id="Microsoft_Win32_FileDialog__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FileDialog()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected FileDialog ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_AddExtension">
+    
+            <a id="Microsoft_Win32_FileDialog_AddExtension_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddExtension</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool AddExtension { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_CheckFileExists">
+    
+            <a id="Microsoft_Win32_FileDialog_CheckFileExists_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CheckFileExists</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool CheckFileExists { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_CheckPathExists">
+    
+            <a id="Microsoft_Win32_FileDialog_CheckPathExists_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CheckPathExists</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool CheckPathExists { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_CustomPlaces">
+    
+            <a id="Microsoft_Win32_FileDialog_CustomPlaces_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CustomPlaces</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.Generic.IList&lt;Microsoft.Win32.FileDialogCustomPlace&gt; CustomPlaces { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="microsoft.win32.filedialogcustomplace">FileDialogCustomPlace</a>&gt;</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_DefaultExt">
+    
+            <a id="Microsoft_Win32_FileDialog_DefaultExt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DefaultExt</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string DefaultExt { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_DereferenceLinks">
+    
+            <a id="Microsoft_Win32_FileDialog_DereferenceLinks_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DereferenceLinks</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool DereferenceLinks { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_FileName">
+    
+            <a id="Microsoft_Win32_FileDialog_FileName_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FileName</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string FileName { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_FileNames">
+    
+            <a id="Microsoft_Win32_FileDialog_FileNames_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FileNames</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string[] FileNames { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_Filter">
+    
+            <a id="Microsoft_Win32_FileDialog_Filter_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Filter</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Filter { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_FilterIndex">
+    
+            <a id="Microsoft_Win32_FileDialog_FilterIndex_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FilterIndex</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int FilterIndex { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_InitialDirectory">
+    
+            <a id="Microsoft_Win32_FileDialog_InitialDirectory_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">InitialDirectory</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string InitialDirectory { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_Options">
+    
+            <a id="Microsoft_Win32_FileDialog_Options_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Options</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected int Options { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_RestoreDirectory">
+    
+            <a id="Microsoft_Win32_FileDialog_RestoreDirectory_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RestoreDirectory</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool RestoreDirectory { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_SafeFileName">
+    
+            <a id="Microsoft_Win32_FileDialog_SafeFileName_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SafeFileName</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string SafeFileName { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_SafeFileNames">
+    
+            <a id="Microsoft_Win32_FileDialog_SafeFileNames_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SafeFileNames</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string[] SafeFileNames { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_Title">
+    
+            <a id="Microsoft_Win32_FileDialog_Title_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Title</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string Title { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_ValidateNames">
+    
+            <a id="Microsoft_Win32_FileDialog_ValidateNames_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ValidateNames</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ValidateNames { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_HookProc_System_IntPtr_System_Int32_System_IntPtr_System_IntPtr_">
+    
+            <a id="Microsoft_Win32_FileDialog_HookProc_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">HookProc(IntPtr,Int32,IntPtr,IntPtr)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override IntPtr HookProc (IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hwnd</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>msg</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>wParam</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>lParam</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_OnFileOk_System_ComponentModel_CancelEventArgs_">
+    
+            <a id="Microsoft_Win32_FileDialog_OnFileOk_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnFileOk(CancelEventArgs)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected void OnFileOk (System.ComponentModel.CancelEventArgs e);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>e</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.componentmodel.canceleventargs(v=vs.110).aspx">CancelEventArgs</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_Reset">
+    
+            <a id="Microsoft_Win32_FileDialog_Reset_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Reset()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Reset ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_RunDialog_System_IntPtr_">
+    
+            <a id="Microsoft_Win32_FileDialog_RunDialog_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RunDialog(IntPtr)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override bool RunDialog (IntPtr hwndOwner);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hwndOwner</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_ToString">
+    
+            <a id="Microsoft_Win32_FileDialog_ToString_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ToString()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string ToString ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="events">
+        <h2>Events
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Win32_FileDialog_FileOk">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FileOk</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event System.ComponentModel.CancelEventHandler FileOk;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

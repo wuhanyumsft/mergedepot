@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="VisualTreeHelper class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Windows.Media/System.Windows.Media.VisualTreeHelper.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Windows.Media/System.Windows.Media.VisualTreeHelper.yml">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetBitmapEffect">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetBitmapEffectInput">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetCacheMode">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetChild">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetChildrenCount">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetClip">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetContentBounds">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetDescendantBounds">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetDpi">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetDrawing">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetEdgeMode">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetEffect">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetOffset">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetOpacity">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetOpacityMask">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetParent">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetTransform">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetXSnappingGuidelines">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.GetYSnappingGuidelines">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.HitTest">
+<meta name="APIName" content="System.Windows.Media.VisualTreeHelper.SetRootDpi">
+<meta name="APILocation" content="PresentationCore.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="959dbb88-2297-b9b1-706f-f5f51df692a4">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Windows.Media.VisualTreeHelper">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.windows.media/system.windows.media.visualtreehelper" rel="canonical">
+    <title>VisualTreeHelper class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Windows_Media_VisualTreeHelper">
+      <span class="lang-csharp">VisualTreeHelper</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public static class VisualTreeHelper</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">VisualTreeHelper</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetBitmapEffect_System_Windows_Media_Visual_">GetBitmapEffect(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetBitmapEffectInput_System_Windows_Media_Visual_">GetBitmapEffectInput(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetCacheMode_System_Windows_Media_Visual_">GetCacheMode(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetChild_System_Windows_DependencyObject_System_Int32_">GetChild(DependencyObject,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetChildrenCount_System_Windows_DependencyObject_">GetChildrenCount(DependencyObject)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetClip_System_Windows_Media_Visual_">GetClip(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetContentBounds_System_Windows_Media_Media3D_Visual3D_">GetContentBounds(Visual3D)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetContentBounds_System_Windows_Media_Visual_">GetContentBounds(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetDescendantBounds_System_Windows_Media_Media3D_Visual3D_">GetDescendantBounds(Visual3D)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetDescendantBounds_System_Windows_Media_Visual_">GetDescendantBounds(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetDpi_System_Windows_Media_Visual_">GetDpi(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetDrawing_System_Windows_Media_Visual_">GetDrawing(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetEdgeMode_System_Windows_Media_Visual_">GetEdgeMode(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetEffect_System_Windows_Media_Visual_">GetEffect(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetOffset_System_Windows_Media_Visual_">GetOffset(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetOpacity_System_Windows_Media_Visual_">GetOpacity(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetOpacityMask_System_Windows_Media_Visual_">GetOpacityMask(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetParent_System_Windows_DependencyObject_">GetParent(DependencyObject)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetTransform_System_Windows_Media_Visual_">GetTransform(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetXSnappingGuidelines_System_Windows_Media_Visual_">GetXSnappingGuidelines(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_GetYSnappingGuidelines_System_Windows_Media_Visual_">GetYSnappingGuidelines(Visual)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_HitTest_System_Windows_Media_Visual_System_Windows_Point_">HitTest(Visual,Point)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_HitTest_System_Windows_Media_Media3D_Visual3D_System_Windows_Media_HitTestFilterCallback_System_Windows_Media_HitTestResultCallback_System_Windows_Media_Media3D_HitTestParameters3D_">HitTest(Visual3D,HitTestFilterCallback,HitTestResultCallback,HitTestParameters3D)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_HitTest_System_Windows_Media_Visual_System_Windows_Media_HitTestFilterCallback_System_Windows_Media_HitTestResultCallback_System_Windows_Media_HitTestParameters_">HitTest(Visual,HitTestFilterCallback,HitTestResultCallback,HitTestParameters)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_VisualTreeHelper_SetRootDpi_System_Windows_Media_Visual_System_Windows_DpiScale_">SetRootDpi(Visual,DpiScale)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetBitmapEffect_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetBitmapEffect_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetBitmapEffect(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.Effects.BitmapEffect GetBitmapEffect (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.windows.media.effects/system.windows.media.effects.bitmapeffect">BitmapEffect</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetBitmapEffectInput_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetBitmapEffectInput_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetBitmapEffectInput(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.Effects.BitmapEffectInput GetBitmapEffectInput (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.windows.media.effects/system.windows.media.effects.bitmapeffectinput">BitmapEffectInput</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetCacheMode_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetCacheMode_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCacheMode(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.CacheMode GetCacheMode (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.cachemode">CacheMode</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetChild_System_Windows_DependencyObject_System_Int32_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetChild_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetChild(DependencyObject,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.DependencyObject GetChild (System.Windows.DependencyObject reference, int childIndex);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>childIndex</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetChildrenCount_System_Windows_DependencyObject_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetChildrenCount_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetChildrenCount(DependencyObject)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static int GetChildrenCount (System.Windows.DependencyObject reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetClip_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetClip_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetClip(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.Geometry GetClip (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetContentBounds_System_Windows_Media_Media3D_Visual3D_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetContentBounds_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetContentBounds(Visual3D)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.Media3D.Rect3D GetContentBounds (System.Windows.Media.Media3D.Visual3D reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows.media.media3d/system.windows.media.media3d.visual3d">Visual3D</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.windows.media.media3d/system.windows.media.media3d.rect3d">Rect3D</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetContentBounds_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetContentBounds_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetContentBounds(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Rect GetContentBounds (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.rect(v=vs.110).aspx">Rect</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetDescendantBounds_System_Windows_Media_Media3D_Visual3D_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetDescendantBounds_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDescendantBounds(Visual3D)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.Media3D.Rect3D GetDescendantBounds (System.Windows.Media.Media3D.Visual3D reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows.media.media3d/system.windows.media.media3d.visual3d">Visual3D</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.windows.media.media3d/system.windows.media.media3d.rect3d">Rect3D</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetDescendantBounds_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetDescendantBounds_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDescendantBounds(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Rect GetDescendantBounds (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.rect(v=vs.110).aspx">Rect</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetDpi_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetDpi_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDpi(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.DpiScale GetDpi (System.Windows.Media.Visual visual);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>visual</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.dpiscale">DpiScale</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetDrawing_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetDrawing_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetDrawing(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.DrawingGroup GetDrawing (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.drawinggroup">DrawingGroup</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetEdgeMode_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetEdgeMode_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetEdgeMode(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.EdgeMode GetEdgeMode (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.edgemode">EdgeMode</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetEffect_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetEffect_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetEffect(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.Effects.Effect GetEffect (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.windows.media.effects/system.windows.media.effects.effect">Effect</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetOffset_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetOffset_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetOffset(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Vector GetOffset (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.vector(v=vs.110).aspx">Vector</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetOpacity_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetOpacity_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetOpacity(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static double GetOpacity (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetOpacityMask_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetOpacityMask_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetOpacityMask(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.Brush GetOpacityMask (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.brush">Brush</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetParent_System_Windows_DependencyObject_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetParent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetParent(DependencyObject)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.DependencyObject GetParent (System.Windows.DependencyObject reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx">DependencyObject</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetTransform_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetTransform_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetTransform(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.Transform GetTransform (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.transform">Transform</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetXSnappingGuidelines_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetXSnappingGuidelines_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetXSnappingGuidelines(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.DoubleCollection GetXSnappingGuidelines (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.doublecollection">DoubleCollection</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_GetYSnappingGuidelines_System_Windows_Media_Visual_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_GetYSnappingGuidelines_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetYSnappingGuidelines(Visual)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.DoubleCollection GetYSnappingGuidelines (System.Windows.Media.Visual reference);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.doublecollection">DoubleCollection</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_HitTest_System_Windows_Media_Visual_System_Windows_Point_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_HitTest_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">HitTest(Visual,Point)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.HitTestResult HitTest (System.Windows.Media.Visual reference, System.Windows.Point point);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>point</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.point(v=vs.110).aspx">Point</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.hittestresult">HitTestResult</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_HitTest_System_Windows_Media_Media3D_Visual3D_System_Windows_Media_HitTestFilterCallback_System_Windows_Media_HitTestResultCallback_System_Windows_Media_Media3D_HitTestParameters3D_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_HitTest_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">HitTest(Visual3D,HitTestFilterCallback,HitTestResultCallback,HitTestParameters3D)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void HitTest (System.Windows.Media.Media3D.Visual3D reference, System.Windows.Media.HitTestFilterCallback filterCallback, System.Windows.Media.HitTestResultCallback resultCallback, System.Windows.Media.Media3D.HitTestParameters3D hitTestParameters);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows.media.media3d/system.windows.media.media3d.visual3d">Visual3D</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>filterCallback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.hittestfiltercallback">HitTestFilterCallback</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>resultCallback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.hittestresultcallback">HitTestResultCallback</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>hitTestParameters</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows.media.media3d/system.windows.media.media3d.hittestparameters3d">HitTestParameters3D</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_HitTest_System_Windows_Media_Visual_System_Windows_Media_HitTestFilterCallback_System_Windows_Media_HitTestResultCallback_System_Windows_Media_HitTestParameters_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_HitTest_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">HitTest(Visual,HitTestFilterCallback,HitTestResultCallback,HitTestParameters)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void HitTest (System.Windows.Media.Visual reference, System.Windows.Media.HitTestFilterCallback filterCallback, System.Windows.Media.HitTestResultCallback resultCallback, System.Windows.Media.HitTestParameters hitTestParameters);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>reference</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>filterCallback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.hittestfiltercallback">HitTestFilterCallback</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>resultCallback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.hittestresultcallback">HitTestResultCallback</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>hitTestParameters</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.hittestparameters">HitTestParameters</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_VisualTreeHelper_SetRootDpi_System_Windows_Media_Visual_System_Windows_DpiScale_">
+    
+            <a id="System_Windows_Media_VisualTreeHelper_SetRootDpi_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetRootDpi(Visual,DpiScale)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static void SetRootDpi (System.Windows.Media.Visual visual, System.Windows.DpiScale dpiInfo);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>visual</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.visual">Visual</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>dpiInfo</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.windows/system.windows.dpiscale">DpiScale</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

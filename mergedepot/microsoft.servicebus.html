@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Microsoft.ServiceBus namespace">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="service-bus-messaging">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/8ece26063f2f27414f0bad873159ee6212f3448d/docs-ref-manual/Data/ServiceBus-messaging/Microsoft.ServiceBus.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-manual/Data/ServiceBus-messaging/Microsoft.ServiceBus.yml">
+<meta name="updated_at" content="2016-12-19 07:26 AM">
+<meta name="document_id" content="2aa7765d-4457-6ea9-7c57-212bfad229c0">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.ServiceBus">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.servicebus" rel="canonical">
+    <title>Microsoft.ServiceBus namespace | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/d1d5acab8c02cc720733.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              <!-- NAMESPACE -->
+    <h1 id="Microsoft_ServiceBus">
+      <span class="lang-csharp">Microsoft.ServiceBus</span>
+      <span class="lang-vb">Microsoft.ServiceBus</span>
+        Namespace
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div>
+    <header class="header enable-platform-filter" id="classes">
+      <h2>Classes
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_ServiceBus_AuthorizationFailedException" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.authorizationfailedexception">AuthorizationFailedException</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.authorizationfailedexception">AuthorizationFailedException</a></div>
+      </td>
+      <td>
+        <p>The exception that occurs when an authorization attempt fails. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_BasicHttpRelayBinding" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.basichttprelaybinding">BasicHttpRelayBinding</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.basichttprelaybinding">BasicHttpRelayBinding</a></div>
+      </td>
+      <td>
+        <p>Represents a binding that a client can use to configure endpoints that can communicate 
+with ASMX-based Web services and other services that conform to the WS-I Basic Profile 1.1. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_BasicHttpRelayMessageSecurity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.basichttprelaymessagesecurity">BasicHttpRelayMessageSecurity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.basichttprelaymessagesecurity">BasicHttpRelayMessageSecurity</a></div>
+      </td>
+      <td>
+        <p>Provides properties used to configure message-level security settings for <a class="xref" href="microsoft.servicebus.basichttprelaybinding">BasicHttpRelayBinding</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_BasicHttpRelaySecurity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.basichttprelaysecurity">BasicHttpRelaySecurity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.basichttprelaysecurity">BasicHttpRelaySecurity</a></div>
+      </td>
+      <td>
+        <p>Provides properties used to configure the security settings of a 
+<a class="xref" href="microsoft.servicebus.basichttprelaybinding">BasicHttpRelayBinding</a> binding.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_ConnectionStatusBehavior" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.connectionstatusbehavior">ConnectionStatusBehavior</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.connectionstatusbehavior">ConnectionStatusBehavior</a></div>
+      </td>
+      <td>
+        <p>An endpoint behavior that provides access to the connection status of a service listening on Azure Service Bus.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_ConnectivitySettings" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.connectivitysettings">ConnectivitySettings</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.connectivitysettings">ConnectivitySettings</a></div>
+      </td>
+      <td>
+        <p>Holds the connectivity settings effective for all Azure Service 
+Bus-based endpoints that are active in the current application domain. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_HttpRelayTransportBindingElement" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.httprelaytransportbindingelement">HttpRelayTransportBindingElement</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.httprelaytransportbindingelement">HttpRelayTransportBindingElement</a></div>
+      </td>
+      <td>
+        <p>Represents the binding element used to specify an HTTP transport for transmitting messages on the Azure Service Bus. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_HttpRelayTransportSecurity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.httprelaytransportsecurity">HttpRelayTransportSecurity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.httprelaytransportsecurity">HttpRelayTransportSecurity</a></div>
+      </td>
+      <td>
+        <p>Represents the transport-level security settings for the <a class="xref" href="microsoft.servicebus.wshttprelaybinding">WSHttpRelayBinding</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_HttpsRelayTransportBindingElement" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.httpsrelaytransportbindingelement">HttpsRelayTransportBindingElement</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.httpsrelaytransportbindingelement">HttpsRelayTransportBindingElement</a></div>
+      </td>
+      <td>
+        <p>Represents the binding element used to specify an HTTPS relay transport for transmitting messages.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_HybridConnectionStateChangedArgs" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.hybridconnectionstatechangedargs">HybridConnectionStateChangedArgs</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.hybridconnectionstatechangedargs">HybridConnectionStateChangedArgs</a></div>
+      </td>
+      <td>
+        <p>Represents the arguments to the hybrid connection state change.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_InvalidRequestException" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.invalidrequestexception">InvalidRequestException</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.invalidrequestexception">InvalidRequestException</a></div>
+      </td>
+      <td>
+        <p>The exception that is thrown when an invalid request occurs.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_IoTTokenProvider" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.iottokenprovider">IoTTokenProvider</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.iottokenprovider">IoTTokenProvider</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_MessageSecurityOverRelayConnection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.messagesecurityoverrelayconnection">MessageSecurityOverRelayConnection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.messagesecurityoverrelayconnection">MessageSecurityOverRelayConnection</a></div>
+      </td>
+      <td>
+        <p>Describes the message security on a relay connection for a binding.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_MessageSecurityOverRelayHttp" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.messagesecurityoverrelayhttp">MessageSecurityOverRelayHttp</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.messagesecurityoverrelayhttp">MessageSecurityOverRelayHttp</a></div>
+      </td>
+      <td>
+        <p>Enables setting message-level security properties on the <a class="xref" href="microsoft.servicebus.wshttprelaybinding">WSHttpRelayBinding</a> binding.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_MessageSecurityOverRelayOneway" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.messagesecurityoverrelayoneway">MessageSecurityOverRelayOneway</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.messagesecurityoverrelayoneway">MessageSecurityOverRelayOneway</a></div>
+      </td>
+      <td>
+        <p>The message security on a one-way connection over the Azure Service Bus relay.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_NamespaceManager" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.namespacemanager">NamespaceManager</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.namespacemanager">NamespaceManager</a></div>
+      </td>
+      <td>
+        <p>Represents an anchor class used in managing entities, such as queues, topics, subscriptions, and rules, in your 
+service namespace. You must provide service namespace address and access credentials in order to manage your service namespace.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_NamespaceManagerSettings" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.namespacemanagersettings">NamespaceManagerSettings</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.namespacemanagersettings">NamespaceManagerSettings</a></div>
+      </td>
+      <td>
+        <p>Contains the settings for the namespace manager.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_NetEventRelayBinding" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.neteventrelaybinding">NetEventRelayBinding</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.neteventrelaybinding">NetEventRelayBinding</a></div>
+      </td>
+      <td>
+        <p>Represents a binding that supports one-way event multicasting and allows any number 
+of event publishers and event consumers to rendezvous at the same endpoint. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_NetOnewayRelayBinding" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.netonewayrelaybinding">NetOnewayRelayBinding</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.netonewayrelaybinding">NetOnewayRelayBinding</a></div>
+      </td>
+      <td>
+        <p>Represents a binding for a secure, one-way connection through the cloud. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_NetOnewayRelaySecurity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.netonewayrelaysecurity">NetOnewayRelaySecurity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.netonewayrelaysecurity">NetOnewayRelaySecurity</a></div>
+      </td>
+      <td>
+        <p>The collection of security settings for a <a class="xref" href="microsoft.servicebus.netonewayrelaybinding">NetOnewayRelayBinding</a> binding.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_NetTcpRelayBinding" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.nettcprelaybinding">NetTcpRelayBinding</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.nettcprelaybinding">NetTcpRelayBinding</a></div>
+      </td>
+      <td>
+        <p>Provides a secure, reliable binding suitable for cross-computer communication.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_NetTcpRelayBindingBase" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.nettcprelaybindingbase">NetTcpRelayBindingBase</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.nettcprelaybindingbase">NetTcpRelayBindingBase</a></div>
+      </td>
+      <td>
+        <p>The base class for common methods for the <a class="xref" href="microsoft.servicebus.nettcprelaybinding">NetTcpRelayBinding</a> binding.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_NetTcpRelaySecurity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.nettcprelaysecurity">NetTcpRelaySecurity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.nettcprelaysecurity">NetTcpRelaySecurity</a></div>
+      </td>
+      <td>
+        <p>Specifies the types of transport-level and message-level security used by an endpoint configured with a 
+<a class="xref" href="microsoft.servicebus.nettcprelaybinding">NetTcpRelayBinding</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_NonDualMessageSecurityOverRelayHttp" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.nondualmessagesecurityoverrelayhttp">NonDualMessageSecurityOverRelayHttp</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.nondualmessagesecurityoverrelayhttp">NonDualMessageSecurityOverRelayHttp</a></div>
+      </td>
+      <td>
+        <p>Enables setting message-level security properties for a WS-Http relay binding.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_NoRetry" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.noretry">NoRetry</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.noretry">NoRetry</a></div>
+      </td>
+      <td>
+        <p>Represents a retry policy that performs no retries.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_OAuthTokenProvider" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.oauthtokenprovider">OAuthTokenProvider</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.oauthtokenprovider">OAuthTokenProvider</a></div>
+      </td>
+      <td>
+        <p>Provides authentication token for the service bus.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_RelayedOnewayTransportBindingElement" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.relayedonewaytransportbindingelement">RelayedOnewayTransportBindingElement</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.relayedonewaytransportbindingelement">RelayedOnewayTransportBindingElement</a></div>
+      </td>
+      <td>
+        <p>Represents the transport binding element used for one-way communication.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_RelayedOnewayTransportSecurity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.relayedonewaytransportsecurity">RelayedOnewayTransportSecurity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.relayedonewaytransportsecurity">RelayedOnewayTransportSecurity</a></div>
+      </td>
+      <td>
+        <p>Represents the transport security settings of a one-way binding.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_RelayNotFoundException" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.relaynotfoundexception">RelayNotFoundException</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.relaynotfoundexception">RelayNotFoundException</a></div>
+      </td>
+      <td>
+        <p>The exception that is thrown when the ServiceBus relay is not found.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_RetryExponential" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.retryexponential">RetryExponential</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.retryexponential">RetryExponential</a></div>
+      </td>
+      <td>
+        <p>Represents an implementation of a retry policy. For each time the messaging 
+operation must be retried, the delay between retries grows in a staggered, exponential manner.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_RetryPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.retrypolicy">RetryPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.retrypolicy">RetryPolicy</a></div>
+      </td>
+      <td>
+        <p>Represents an abstraction for retrying messaging operations. Users should not 
+implement this class, and instead should use one of the provided implementations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_SamlTokenProvider" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.samltokenprovider">SamlTokenProvider</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.samltokenprovider">SamlTokenProvider</a></div>
+      </td>
+      <td>
+        <p>Provides a set of methods that execute asynchronous SAML token retrieval operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_ServerErrorException" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.servererrorexception">ServerErrorException</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.servererrorexception">ServerErrorException</a></div>
+      </td>
+      <td>
+        <p>An exception that is thrown by the Azure Service Bus when an error occurs while processing a request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_ServiceBusConnectionStringBuilder" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.servicebusconnectionstringbuilder">ServiceBusConnectionStringBuilder</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.servicebusconnectionstringbuilder">ServiceBusConnectionStringBuilder</a></div>
+      </td>
+      <td>
+        <p>Creates and manages the contents of connection strings. You can use this class to construct a connection string 
+for creating client messaging entities. It can also be used to perform basic validation on an existing connection string.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_ServiceBusEnvironment" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.servicebusenvironment">ServiceBusEnvironment</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.servicebusenvironment">ServiceBusEnvironment</a></div>
+      </td>
+      <td>
+        <p>Describes the Service Bus environment. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_ServiceBusErrorData" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.servicebuserrordata">ServiceBusErrorData</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.servicebuserrordata">ServiceBusErrorData</a></div>
+      </td>
+      <td>
+        <p>Represents the data associated with the service bus error.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_ServiceRegistrySettings" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.serviceregistrysettings">ServiceRegistrySettings</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.serviceregistrysettings">ServiceRegistrySettings</a></div>
+      </td>
+      <td>
+        <p>Contains the settings for the Azure Service Bus registry.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_SharedAccessSignatureToken" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.sharedaccesssignaturetoken">SharedAccessSignatureToken</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.sharedaccesssignaturetoken">SharedAccessSignatureToken</a></div>
+      </td>
+      <td>
+        <p>Represents the shared access signature token.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_SharedAccessSignatureTokenProvider" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.sharedaccesssignaturetokenprovider">SharedAccessSignatureTokenProvider</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.sharedaccesssignaturetokenprovider">SharedAccessSignatureTokenProvider</a></div>
+      </td>
+      <td>
+        <p>Represents the shared access signature associated with the token provider.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_SharedSecretTokenProvider" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.sharedsecrettokenprovider">SharedSecretTokenProvider</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.sharedsecrettokenprovider">SharedSecretTokenProvider</a></div>
+      </td>
+      <td>
+        <p>Provides methods that return name/value pairs for web token 
+assertions, and that execute asynchronous shared secret token retrieval operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_SimpleWebSecurityToken" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.simplewebsecuritytoken">SimpleWebSecurityToken</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.simplewebsecuritytoken">SimpleWebSecurityToken</a></div>
+      </td>
+      <td>
+        <p>A security token that wraps a Simple Web Token.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_SimpleWebSecurityTokenSerializer" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.simplewebsecuritytokenserializer">SimpleWebSecurityTokenSerializer</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.simplewebsecuritytokenserializer">SimpleWebSecurityTokenSerializer</a></div>
+      </td>
+      <td>
+        <p>Represents a class to use to read and to write 
+<a class="xref" href="microsoft.servicebus.simplewebsecuritytoken">SimpleWebSecurityToken</a>, 
+<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.identitymodel.tokens.securitykeyidentifierclause(v=vs.110).aspx">SecurityKeyIdentifierClause</a>, and 
+<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.identitymodel.tokens.securitykeyidentifier(v=vs.110).aspx">SecurityKeyIdentifier</a> objects as XML.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_SimpleWebTokenProvider" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.simplewebtokenprovider">SimpleWebTokenProvider</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.simplewebtokenprovider">SimpleWebTokenProvider</a></div>
+      </td>
+      <td>
+        <p>Provides a set of methods that execute asynchronous simple Web token (SWT) retrieval operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_SocketConnectionPoolSettings" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.socketconnectionpoolsettings">SocketConnectionPoolSettings</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.socketconnectionpoolsettings">SocketConnectionPoolSettings</a></div>
+      </td>
+      <td>
+        <p>Represents the properties that control the behavior of the socket connection pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_TcpClientTransportTokenAssertionProviderBindingElement" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.tcpclienttransporttokenassertionproviderbindingelement">TcpClientTransportTokenAssertionProviderBindingElement</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.tcpclienttransporttokenassertionproviderbindingelement">TcpClientTransportTokenAssertionProviderBindingElement</a></div>
+      </td>
+      <td>
+        <p>Represents the transport binding element that supports channel security over an SSL stream for use in policy exports.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_TcpRelayTransportBindingElement" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.tcprelaytransportbindingelement">TcpRelayTransportBindingElement</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.tcprelaytransportbindingelement">TcpRelayTransportBindingElement</a></div>
+      </td>
+      <td>
+        <p>Represents the binding element for the TCP transport relay. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_TcpRelayTransportSecurity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.tcprelaytransportsecurity">TcpRelayTransportSecurity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.tcprelaytransportsecurity">TcpRelayTransportSecurity</a></div>
+      </td>
+      <td>
+        <p>Provides properties that control authentication parameters and protection level for the TCP transport relay binding. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_TokenConstants" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.tokenconstants">TokenConstants</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.tokenconstants">TokenConstants</a></div>
+      </td>
+      <td>
+        <p>Provides constants that represent parameter names, field names, 
+method names, and delimiters that are used in authentication requests.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_TokenProvider" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.tokenprovider">TokenProvider</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.tokenprovider">TokenProvider</a></div>
+      </td>
+      <td>
+        <p>Represents a security token provider with built-in factory methods returning some well-known token providers.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_TokenProvider_Key" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.tokenprovider.key">TokenProvider.Key</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.tokenprovider.key">TokenProvider.Key</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_TokenProviderException" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.tokenproviderexception">TokenProviderException</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.tokenproviderexception">TokenProviderException</a></div>
+      </td>
+      <td>
+        <p>Represents an exception regarding the token provider for the Service Bus.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_TransportClientEndpointBehavior" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.transportclientendpointbehavior">TransportClientEndpointBehavior</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.transportclientendpointbehavior">TransportClientEndpointBehavior</a></div>
+      </td>
+      <td>
+        <p>Describes the WCF endpoint behavior that is used to specify the Service Bus credentials for a particular endpoint.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_WebHttpRelayBinding" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.webhttprelaybinding">WebHttpRelayBinding</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.webhttprelaybinding">WebHttpRelayBinding</a></div>
+      </td>
+      <td>
+        <p>A binding used to configure endpoints for Web services that are exposed through HTTP requests instead of SOAP messages. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_WebHttpRelaySecurity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.webhttprelaysecurity">WebHttpRelaySecurity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.webhttprelaysecurity">WebHttpRelaySecurity</a></div>
+      </td>
+      <td>
+        <p>Specifies the types of security available to a service endpoint configured to receive HTTP requests. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_WindowsTokenProvider" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.windowstokenprovider">WindowsTokenProvider</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.windowstokenprovider">WindowsTokenProvider</a></div>
+      </td>
+      <td>
+        <p>Represents the token provider for the service bus.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_WS2007HttpRelayBinding" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.ws2007httprelaybinding">WS2007HttpRelayBinding</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.ws2007httprelaybinding">WS2007HttpRelayBinding</a></div>
+      </td>
+      <td>
+        <p>Represents an interoperable binding that derives from 
+<a class="xref" href="microsoft.servicebus.wshttprelaybinding">WSHttpRelayBinding</a> and provides support for the updated versions of the Security, ReliableSession, and TransactionFlow binding elements. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_WSHttpRelayBinding" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.wshttprelaybinding">WSHttpRelayBinding</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.wshttprelaybinding">WSHttpRelayBinding</a></div>
+      </td>
+      <td>
+        <p>Represents an interoperable binding that supports distributed transactions and secure, reliable sessions through the cloud. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_WSHttpRelayBindingBase" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.wshttprelaybindingbase">WSHttpRelayBindingBase</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.wshttprelaybindingbase">WSHttpRelayBindingBase</a></div>
+      </td>
+      <td>
+        <p>Provides the base class with members common to the 
+<a class="xref" href="microsoft.servicebus.wshttprelaybinding">WSHttpRelayBinding</a>. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_WSHttpRelaySecurity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.wshttprelaysecurity">WSHttpRelaySecurity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.wshttprelaysecurity">WSHttpRelaySecurity</a></div>
+      </td>
+      <td>
+        <p>Represents the security settings for the <a class="xref" href="microsoft.servicebus.wshttprelaybinding">WSHttpRelayBinding</a>.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="interfaces">
+      <h2>Interfaces
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_ServiceBus_IConnectionStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.iconnectionstatus">IConnectionStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.iconnectionstatus">IConnectionStatus</a></div>
+      </td>
+      <td>
+        <p>Describes the current status of a one-way connection.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_IHybridConnectionStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.ihybridconnectionstatus">IHybridConnectionStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.ihybridconnectionstatus">IHybridConnectionStatus</a></div>
+      </td>
+      <td>
+        <p>Provides access to the current connection state of a hybrid connection channel.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="enums">
+      <h2>Enums
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_ServiceBus_AuthorizationFailedException_FailureCode" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.authorizationfailedexception.failurecode">AuthorizationFailedException.FailureCode</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.authorizationfailedexception.failurecode">AuthorizationFailedException.FailureCode</a></div>
+      </td>
+      <td>
+        <p>Enumerates the possible causes of failure during authorization attempts.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_ConnectivityMode" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.connectivitymode">ConnectivityMode</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.connectivitymode">ConnectivityMode</a></div>
+      </td>
+      <td>
+        <p>Sets the underlying wire-level protocol used to communicate with Service Bus. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_DiscoveryType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.discoverytype">DiscoveryType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.discoverytype">DiscoveryType</a></div>
+      </td>
+      <td>
+        <p>Describes the publishing behavior of a service in the Service Registry.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_EndToEndBasicHttpSecurityMode" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.endtoendbasichttpsecuritymode">EndToEndBasicHttpSecurityMode</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.endtoendbasichttpsecuritymode">EndToEndBasicHttpSecurityMode</a></div>
+      </td>
+      <td>
+        <p>An enumeration type that specifies the modes of security that can be used with 
+<a class="xref" href="microsoft.servicebus.basichttprelaybinding">BasicHttpRelayBinding</a>. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_EndToEndSecurityMode" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.endtoendsecuritymode">EndToEndSecurityMode</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.endtoendsecuritymode">EndToEndSecurityMode</a></div>
+      </td>
+      <td>
+        <p>Determines the security settings for an Azure Service Bus binding 
+and describes the security relationship between the client and the service endpoint.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_EndToEndWebHttpSecurityMode" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.endtoendwebhttpsecuritymode">EndToEndWebHttpSecurityMode</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.endtoendwebhttpsecuritymode">EndToEndWebHttpSecurityMode</a></div>
+      </td>
+      <td>
+        <p>Specifies the types of security that can be used with the <a class="xref" href="microsoft.servicebus.webhttprelaybinding">WebHttpRelayBinding</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_ExceptionErrorCodes" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.exceptionerrorcodes">ExceptionErrorCodes</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.exceptionerrorcodes">ExceptionErrorCodes</a></div>
+      </td>
+      <td>
+        <p>Specifies the error codes of the exceptions.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_HybridConnectionState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.hybridconnectionstate">HybridConnectionState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.hybridconnectionstate">HybridConnectionState</a></div>
+      </td>
+      <td>
+        <p>Describes the current connection state for a hybrid connection.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_RelayClientAuthenticationType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.relayclientauthenticationtype">RelayClientAuthenticationType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.relayclientauthenticationtype">RelayClientAuthenticationType</a></div>
+      </td>
+      <td>
+        <p>Describes whether clients of a service are required to present a security 
+token issued by Azure Access Control to the Azure Service Bus when sending messages.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_RelayedOnewayConnectionMode" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.relayedonewayconnectionmode">RelayedOnewayConnectionMode</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.relayedonewayconnectionmode">RelayedOnewayConnectionMode</a></div>
+      </td>
+      <td>
+        <p>Represents the different types of one-way connections available through the Azure Access Control.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_RelayEventSubscriberAuthenticationType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.relayeventsubscriberauthenticationtype">RelayEventSubscriberAuthenticationType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.relayeventsubscriberauthenticationtype">RelayEventSubscriberAuthenticationType</a></div>
+      </td>
+      <td>
+        <p>Describes whether subscribers to a 
+<a class="xref" href="microsoft.servicebus.neteventrelaybinding">NetEventRelayBinding</a> are required to present a security token issued by the Azure Access Control service to the Azure Service Bus service when sending messages.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_RelayTransportProtectionMode" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.relaytransportprotectionmode">RelayTransportProtectionMode</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.relaytransportprotectionmode">RelayTransportProtectionMode</a></div>
+      </td>
+      <td>
+        <p>Describes the types of protection on a transport relay. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_RelayType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.relaytype">RelayType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.relaytype">RelayType</a></div>
+      </td>
+      <td>
+        <p>Specifies an enumeration of relay type.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_SocketSecurityRole" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.socketsecurityrole">SocketSecurityRole</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.socketsecurityrole">SocketSecurityRole</a></div>
+      </td>
+      <td>
+        <p>Describes the role for socket security. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_TcpRelayConnectionMode" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.tcprelayconnectionmode">TcpRelayConnectionMode</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.tcprelayconnectionmode">TcpRelayConnectionMode</a></div>
+      </td>
+      <td>
+        <p>Describes the connection mode for the <a class="xref" href="microsoft.servicebus.nettcprelaybinding">NetTcpRelayBinding</a>. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_ServiceBus_TokenScope" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.servicebus.tokenscope">TokenScope</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.servicebus.tokenscope">TokenScope</a></div>
+      </td>
+      <td>
+        <p>Enumerates the token scope for the service bus.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/d1d5acab8c02cc720733.reference.js"></script>
+  </body>
+</html>

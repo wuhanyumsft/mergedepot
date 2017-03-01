@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="ISymbolWriter interface">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Diagnostics.SymbolStore/System.Diagnostics.SymbolStore.ISymbolWriter.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Diagnostics.SymbolStore/System.Diagnostics.SymbolStore.ISymbolWriter.yml">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.Close">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.CloseMethod">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.CloseNamespace">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.CloseScope">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.DefineDocument">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.DefineField">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.DefineGlobalVariable">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.DefineLocalVariable">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.DefineParameter">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.DefineSequencePoints">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.Initialize">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.OpenMethod">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.OpenNamespace">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.OpenScope">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.SetMethodSourceRange">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.SetScopeRange">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.SetSymAttribute">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.SetUnderlyingWriter">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.SetUserEntryPoint">
+<meta name="APIName" content="System.Diagnostics.SymbolStore.ISymbolWriter.UsingNamespace">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="4187afe2-2496-3d5c-a822-0a760d3ec301">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Diagnostics.SymbolStore.ISymbolWriter">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.diagnostics.symbolstore/system.diagnostics.symbolstore.isymbolwriter" rel="canonical">
+    <title>ISymbolWriter interface | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Diagnostics_SymbolStore_ISymbolWriter">
+      <span class="lang-csharp">ISymbolWriter</span>
+        Interface
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public interface ISymbolWriter</code></pre>
+    
+    
+    
+    
+    
+    
+    
+    
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_Close">Close()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_CloseMethod">CloseMethod()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_CloseNamespace">CloseNamespace()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_CloseScope_System_Int32_">CloseScope(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_DefineDocument_System_String_System_Guid_System_Guid_System_Guid_">DefineDocument(String,Guid,Guid,Guid)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_DefineField_System_Diagnostics_SymbolStore_SymbolToken_System_String_System_Reflection_FieldAttributes_System_Byte___System_Diagnostics_SymbolStore_SymAddressKind_System_Int32_System_Int32_System_Int32_">DefineField(SymbolToken,String,FieldAttributes,Byte[],SymAddressKind,Int32,Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_DefineGlobalVariable_System_String_System_Reflection_FieldAttributes_System_Byte___System_Diagnostics_SymbolStore_SymAddressKind_System_Int32_System_Int32_System_Int32_">DefineGlobalVariable(String,FieldAttributes,Byte[],SymAddressKind,Int32,Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_DefineLocalVariable_System_String_System_Reflection_FieldAttributes_System_Byte___System_Diagnostics_SymbolStore_SymAddressKind_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_">DefineLocalVariable(String,FieldAttributes,Byte[],SymAddressKind,Int32,Int32,Int32,Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_DefineParameter_System_String_System_Reflection_ParameterAttributes_System_Int32_System_Diagnostics_SymbolStore_SymAddressKind_System_Int32_System_Int32_System_Int32_">DefineParameter(String,ParameterAttributes,Int32,SymAddressKind,Int32,Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_DefineSequencePoints_System_Diagnostics_SymbolStore_ISymbolDocumentWriter_System_Int32___System_Int32___System_Int32___System_Int32___System_Int32___">DefineSequencePoints(ISymbolDocumentWriter,Int32[],Int32[],Int32[],Int32[],Int32[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_Initialize_System_IntPtr_System_String_System_Boolean_">Initialize(IntPtr,String,Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_OpenMethod_System_Diagnostics_SymbolStore_SymbolToken_">OpenMethod(SymbolToken)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_OpenNamespace_System_String_">OpenNamespace(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_OpenScope_System_Int32_">OpenScope(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_SetMethodSourceRange_System_Diagnostics_SymbolStore_ISymbolDocumentWriter_System_Int32_System_Int32_System_Diagnostics_SymbolStore_ISymbolDocumentWriter_System_Int32_System_Int32_">SetMethodSourceRange(ISymbolDocumentWriter,Int32,Int32,ISymbolDocumentWriter,Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_SetScopeRange_System_Int32_System_Int32_System_Int32_">SetScopeRange(Int32,Int32,Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_SetSymAttribute_System_Diagnostics_SymbolStore_SymbolToken_System_String_System_Byte___">SetSymAttribute(SymbolToken,String,Byte[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_SetUnderlyingWriter_System_IntPtr_">SetUnderlyingWriter(IntPtr)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_SetUserEntryPoint_System_Diagnostics_SymbolStore_SymbolToken_">SetUserEntryPoint(SymbolToken)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Diagnostics_SymbolStore_ISymbolWriter_UsingNamespace_System_String_">UsingNamespace(String)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_Close">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_Close_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Close()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Close ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_CloseMethod">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_CloseMethod_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CloseMethod()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void CloseMethod ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_CloseNamespace">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_CloseNamespace_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CloseNamespace()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void CloseNamespace ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_CloseScope_System_Int32_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_CloseScope_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CloseScope(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void CloseScope (int endOffset);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>endOffset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_DefineDocument_System_String_System_Guid_System_Guid_System_Guid_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_DefineDocument_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DefineDocument(String,Guid,Guid,Guid)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Diagnostics.SymbolStore.ISymbolDocumentWriter DefineDocument (string url, Guid language, Guid languageVendor, Guid documentType);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>url</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>language</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>languageVendor</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>documentType</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.guid">Guid</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.diagnostics.symbolstore.isymboldocumentwriter">ISymbolDocumentWriter</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_DefineField_System_Diagnostics_SymbolStore_SymbolToken_System_String_System_Reflection_FieldAttributes_System_Byte___System_Diagnostics_SymbolStore_SymAddressKind_System_Int32_System_Int32_System_Int32_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_DefineField_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DefineField(SymbolToken,String,FieldAttributes,Byte[],SymAddressKind,Int32,Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void DefineField (System.Diagnostics.SymbolStore.SymbolToken parent, string name, System.Reflection.FieldAttributes attributes, byte[] signature, System.Diagnostics.SymbolStore.SymAddressKind addrKind, int addr1, int addr2, int addr3);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>parent</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.symbolstore.symboltoken">SymbolToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributes</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.reflection/system.reflection.fieldattributes">FieldAttributes</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>signature</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addrKind</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.symbolstore.symaddresskind">SymAddressKind</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addr1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addr2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addr3</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_DefineGlobalVariable_System_String_System_Reflection_FieldAttributes_System_Byte___System_Diagnostics_SymbolStore_SymAddressKind_System_Int32_System_Int32_System_Int32_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_DefineGlobalVariable_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DefineGlobalVariable(String,FieldAttributes,Byte[],SymAddressKind,Int32,Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void DefineGlobalVariable (string name, System.Reflection.FieldAttributes attributes, byte[] signature, System.Diagnostics.SymbolStore.SymAddressKind addrKind, int addr1, int addr2, int addr3);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributes</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.reflection/system.reflection.fieldattributes">FieldAttributes</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>signature</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addrKind</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.symbolstore.symaddresskind">SymAddressKind</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addr1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addr2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addr3</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_DefineLocalVariable_System_String_System_Reflection_FieldAttributes_System_Byte___System_Diagnostics_SymbolStore_SymAddressKind_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_DefineLocalVariable_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DefineLocalVariable(String,FieldAttributes,Byte[],SymAddressKind,Int32,Int32,Int32,Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void DefineLocalVariable (string name, System.Reflection.FieldAttributes attributes, byte[] signature, System.Diagnostics.SymbolStore.SymAddressKind addrKind, int addr1, int addr2, int addr3, int startOffset, int endOffset);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributes</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.reflection/system.reflection.fieldattributes">FieldAttributes</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>signature</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addrKind</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.symbolstore.symaddresskind">SymAddressKind</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addr1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addr2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addr3</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>startOffset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>endOffset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_DefineParameter_System_String_System_Reflection_ParameterAttributes_System_Int32_System_Diagnostics_SymbolStore_SymAddressKind_System_Int32_System_Int32_System_Int32_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_DefineParameter_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DefineParameter(String,ParameterAttributes,Int32,SymAddressKind,Int32,Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void DefineParameter (string name, System.Reflection.ParameterAttributes attributes, int sequence, System.Diagnostics.SymbolStore.SymAddressKind addrKind, int addr1, int addr2, int addr3);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>attributes</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.reflection/system.reflection.parameterattributes">ParameterAttributes</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>sequence</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addrKind</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.symbolstore.symaddresskind">SymAddressKind</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addr1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addr2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>addr3</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_DefineSequencePoints_System_Diagnostics_SymbolStore_ISymbolDocumentWriter_System_Int32___System_Int32___System_Int32___System_Int32___System_Int32___">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_DefineSequencePoints_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DefineSequencePoints(ISymbolDocumentWriter,Int32[],Int32[],Int32[],Int32[],Int32[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void DefineSequencePoints (System.Diagnostics.SymbolStore.ISymbolDocumentWriter document, int[] offsets, int[] lines, int[] columns, int[] endLines, int[] endColumns);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>document</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.symbolstore.isymboldocumentwriter">ISymbolDocumentWriter</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offsets</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>lines</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>columns</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>endLines</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>endColumns</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_Initialize_System_IntPtr_System_String_System_Boolean_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_Initialize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Initialize(IntPtr,String,Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Initialize (IntPtr emitter, string filename, bool fFullBuild);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>emitter</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>filename</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>fFullBuild</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_OpenMethod_System_Diagnostics_SymbolStore_SymbolToken_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_OpenMethod_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OpenMethod(SymbolToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void OpenMethod (System.Diagnostics.SymbolStore.SymbolToken method);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>method</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.symbolstore.symboltoken">SymbolToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_OpenNamespace_System_String_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_OpenNamespace_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OpenNamespace(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void OpenNamespace (string name);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_OpenScope_System_Int32_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_OpenScope_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OpenScope(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int OpenScope (int startOffset);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>startOffset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_SetMethodSourceRange_System_Diagnostics_SymbolStore_ISymbolDocumentWriter_System_Int32_System_Int32_System_Diagnostics_SymbolStore_ISymbolDocumentWriter_System_Int32_System_Int32_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_SetMethodSourceRange_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetMethodSourceRange(ISymbolDocumentWriter,Int32,Int32,ISymbolDocumentWriter,Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetMethodSourceRange (System.Diagnostics.SymbolStore.ISymbolDocumentWriter startDoc, int startLine, int startColumn, System.Diagnostics.SymbolStore.ISymbolDocumentWriter endDoc, int endLine, int endColumn);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>startDoc</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.symbolstore.isymboldocumentwriter">ISymbolDocumentWriter</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>startLine</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>startColumn</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>endDoc</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.symbolstore.isymboldocumentwriter">ISymbolDocumentWriter</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>endLine</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>endColumn</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_SetScopeRange_System_Int32_System_Int32_System_Int32_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_SetScopeRange_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetScopeRange(Int32,Int32,Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetScopeRange (int scopeID, int startOffset, int endOffset);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>scopeID</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>startOffset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>endOffset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_SetSymAttribute_System_Diagnostics_SymbolStore_SymbolToken_System_String_System_Byte___">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_SetSymAttribute_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetSymAttribute(SymbolToken,String,Byte[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetSymAttribute (System.Diagnostics.SymbolStore.SymbolToken parent, string name, byte[] data);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>parent</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.symbolstore.symboltoken">SymbolToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_SetUnderlyingWriter_System_IntPtr_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_SetUnderlyingWriter_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetUnderlyingWriter(IntPtr)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetUnderlyingWriter (IntPtr underlyingWriter);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>underlyingWriter</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.intptr">IntPtr</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_SetUserEntryPoint_System_Diagnostics_SymbolStore_SymbolToken_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_SetUserEntryPoint_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetUserEntryPoint(SymbolToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetUserEntryPoint (System.Diagnostics.SymbolStore.SymbolToken entryMethod);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>entryMethod</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.diagnostics.symbolstore.symboltoken">SymbolToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Diagnostics_SymbolStore_ISymbolWriter_UsingNamespace_System_String_">
+    
+            <a id="System_Diagnostics_SymbolStore_ISymbolWriter_UsingNamespace_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UsingNamespace(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void UsingNamespace (string fullName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>fullName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

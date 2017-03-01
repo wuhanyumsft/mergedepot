@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Logger class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/Microsoft.Build.Utilities/Microsoft.Build.Utilities.Logger.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/Microsoft.Build.Utilities/Microsoft.Build.Utilities.Logger.yml">
+<meta name="APIName" content="Microsoft.Build.Utilities.Logger">
+<meta name="APIName" content="Microsoft.Build.Utilities.Logger..ctor">
+<meta name="APIName" content="Microsoft.Build.Utilities.Logger.FormatErrorEvent">
+<meta name="APIName" content="Microsoft.Build.Utilities.Logger.FormatWarningEvent">
+<meta name="APIName" content="Microsoft.Build.Utilities.Logger.Initialize">
+<meta name="APIName" content="Microsoft.Build.Utilities.Logger.IsVerbosityAtLeast">
+<meta name="APIName" content="Microsoft.Build.Utilities.Logger.Parameters">
+<meta name="APIName" content="Microsoft.Build.Utilities.Logger.Shutdown">
+<meta name="APIName" content="Microsoft.Build.Utilities.Logger.Verbosity">
+<meta name="APILocation" content="Microsoft.Build.Utilities.v4.0.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="5d9eda08-58e6-4a05-bbcd-0b00f2ef440c">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="When overridden in a derived form, provides functionality for loggers that handle events raised by the MSBuild engine.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Build.Utilities.Logger">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.build.utilities/microsoft.build.utilities.logger" rel="canonical">
+    <title>Logger class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Build_Utilities_Logger">
+      <span class="lang-csharp">Logger</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>When overridden in a derived form, provides functionality for loggers that handle events raised by the <!-- BEGIN INCLUDE: Include content from &quot;../add/includes/vstecmsbuild-md.md&quot; -->MSBuild<!--END INCLUDE --> engine.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract class Logger : Microsoft.Build.Framework.ILogger</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">Logger</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <p>This abstract class provides default implementations for the methods and properties of the <a class="xref" href="../microsoft.build.framework/microsoft.build.framework.ilogger">ILogger</a> interface.  </p>
+<p> This class can only be instantiated in a derived form.</p>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Utilities_Logger__ctor">Logger()</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:Microsoft.Build.Utilities.Logger"> class.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Utilities_Logger_Parameters">Parameters</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the user-defined parameters of the logger.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Utilities_Logger_Verbosity">Verbosity</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the level of detail to show in the event log.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Utilities_Logger_FormatErrorEvent_Microsoft_Build_Framework_BuildErrorEventArgs_">FormatErrorEvent(BuildErrorEventArgs)</a></div>
+          </td>
+            <td>
+            <p>Generates an error message that is in the default format, from a <see cref="T:Microsoft.Build.Framework.BuildErrorEventArgs"> object.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Utilities_Logger_FormatWarningEvent_Microsoft_Build_Framework_BuildWarningEventArgs_">FormatWarningEvent(BuildWarningEventArgs)</a></div>
+          </td>
+            <td>
+            <p>Generates a warning message that is in the default format, from a <see cref="T:Microsoft.Build.Framework.BuildWarningEventArgs"> object.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Utilities_Logger_Initialize_Microsoft_Build_Framework_IEventSource_">Initialize(IEventSource)</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, subscribes the logger to specific events.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Utilities_Logger_IsVerbosityAtLeast_Microsoft_Build_Framework_LoggerVerbosity_">IsVerbosityAtLeast(LoggerVerbosity)</a></div>
+          </td>
+            <td>
+            <p>Determines whether the current <a class="xref" href="microsoft.build.utilities.logger#Microsoft_Build_Utilities_Logger_Verbosity_">Verbosity</a> setting is at least the value that is passed in.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Utilities_Logger_Shutdown">Shutdown()</a></div>
+          </td>
+            <td>
+            <p>When overridden in a derived class, releases the resources allocated to the logger at the time of initialization or during the build.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Utilities_Logger__ctor">
+    
+            <a id="Microsoft_Build_Utilities_Logger__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Logger()</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:Microsoft.Build.Utilities.Logger"> class.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected Logger ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Utilities_Logger_Parameters">
+    
+            <a id="Microsoft_Build_Utilities_Logger_Parameters_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Parameters</div>        
+          </div>
+    
+            <p>Gets or sets the user-defined parameters of the logger.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual string Parameters { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The logger parameters. This value can be <code>null</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If the derived class does not take parameters, then it can ignore this property.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Utilities_Logger_Verbosity">
+    
+            <a id="Microsoft_Build_Utilities_Logger_Verbosity_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Verbosity</div>        
+          </div>
+    
+            <p>Gets or sets the level of detail to show in the event log.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../microsoft.build.framework/microsoft.build.framework.loggerverbosity">LoggerVerbosity</a></div>
+                  </div>
+                  <p>One of the enumeration values. The default is <see cref="T:Microsoft.Build.Framework.LoggerVerbosity">.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>While a logger is free to choose the events it logs, following the verbosity guidelines creates a consistent user experience.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Utilities_Logger_FormatErrorEvent_Microsoft_Build_Framework_BuildErrorEventArgs_">
+    
+            <a id="Microsoft_Build_Utilities_Logger_FormatErrorEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FormatErrorEvent(BuildErrorEventArgs)</div>        
+          </div>
+    
+            <p>Generates an error message that is in the default format, from a <see cref="T:Microsoft.Build.Framework.BuildErrorEventArgs"> object.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual string FormatErrorEvent (Microsoft.Build.Framework.BuildErrorEventArgs args);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>args</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../microsoft.build.framework/microsoft.build.framework.builderroreventargs">BuildErrorEventArgs</a></div>
+                  </dd>
+                  </dl>
+                  <p>The arguments of the error event.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>A <a class="xref" href="../system/system.string">String</a> that represents an error message in canonical format.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Utilities_Logger_FormatWarningEvent_Microsoft_Build_Framework_BuildWarningEventArgs_">
+    
+            <a id="Microsoft_Build_Utilities_Logger_FormatWarningEvent_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FormatWarningEvent(BuildWarningEventArgs)</div>        
+          </div>
+    
+            <p>Generates a warning message that is in the default format, from a <see cref="T:Microsoft.Build.Framework.BuildWarningEventArgs"> object.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual string FormatWarningEvent (Microsoft.Build.Framework.BuildWarningEventArgs args);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>args</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../microsoft.build.framework/microsoft.build.framework.buildwarningeventargs">BuildWarningEventArgs</a></div>
+                  </dd>
+                  </dl>
+                  <p>The arguments of the warning event.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>A <a class="xref" href="../system/system.string">String</a> that represents a warning message in canonical format.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Utilities_Logger_Initialize_Microsoft_Build_Framework_IEventSource_">
+    
+            <a id="Microsoft_Build_Utilities_Logger_Initialize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Initialize(IEventSource)</div>        
+          </div>
+    
+            <p>When overridden in a derived class, subscribes the logger to specific events.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract void Initialize (Microsoft.Build.Framework.IEventSource eventSource);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>eventSource</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../microsoft.build.framework/microsoft.build.framework.ieventsource">IEventSource</a></div>
+                  </dd>
+                  </dl>
+                  <p>The available events that a logger can subscribe to.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method must be overridden in the derived class to perform initialization logic and to subscribe to build events published by <a class="xref" href="../microsoft.build.framework/microsoft.build.framework.ieventsource">IEventSource</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Utilities_Logger_IsVerbosityAtLeast_Microsoft_Build_Framework_LoggerVerbosity_">
+    
+            <a id="Microsoft_Build_Utilities_Logger_IsVerbosityAtLeast_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsVerbosityAtLeast(LoggerVerbosity)</div>        
+          </div>
+    
+            <p>Determines whether the current <a class="xref" href="microsoft.build.utilities.logger#Microsoft_Build_Utilities_Logger_Verbosity_">Verbosity</a> setting is at least the value that is passed in.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool IsVerbosityAtLeast (Microsoft.Build.Framework.LoggerVerbosity checkVerbosity);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>checkVerbosity</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../microsoft.build.framework/microsoft.build.framework.loggerverbosity">LoggerVerbosity</a></div>
+                  </dd>
+                  </dl>
+                  <p>The logger verbosity setting passed in.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the current logger verbosity setting is at least the value that is passed in; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Utilities_Logger_Shutdown">
+    
+            <a id="Microsoft_Build_Utilities_Logger_Shutdown_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Shutdown()</div>        
+          </div>
+    
+            <p>When overridden in a derived class, releases the resources allocated to the logger at the time of initialization or during the build.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Shutdown ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method can be overridden in the derived class to perform shutdown logic, such as releasing acquired resources.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

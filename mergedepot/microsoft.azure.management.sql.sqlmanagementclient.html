@@ -1,0 +1,2827 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="SqlManagementClient class">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="sql-database">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/5ae31a3a922410b87a8610c07baa6186a2b83d88/docs-ref-autogen/Sql/Microsoft.Azure.Management.Sql.SqlManagementClient.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Sql/Microsoft.Azure.Management.Sql.SqlManagementClient.yml">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ApiVersion">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ApiVersion">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.BaseUri">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_BaseUri">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.Credentials">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_Credentials">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.LongRunningOperationInitialTimeout">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_LongRunningOperationInitialTimeout">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.set_LongRunningOperationInitialTimeout">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.LongRunningOperationRetryTimeout">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_LongRunningOperationRetryTimeout">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.set_LongRunningOperationRetryTimeout">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.AuditingPolicy">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_AuditingPolicy">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.BlobAuditing">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_BlobAuditing">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.Capabilities">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_Capabilities">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.DatabaseActivation">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_DatabaseActivation">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.DatabaseAdvisors">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_DatabaseAdvisors">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.DatabaseBackup">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_DatabaseBackup">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.Databases">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_Databases">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.DatabaseRecommendedActions">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_DatabaseRecommendedActions">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.DataMasking">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_DataMasking">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ElasticPoolAdvisors">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ElasticPoolAdvisors">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ElasticPools">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ElasticPools">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ElasticPoolRecommendedActions">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ElasticPoolRecommendedActions">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.FailoverGroups">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_FailoverGroups">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.FirewallRules">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_FirewallRules">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ImportExport">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ImportExport">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.JobAccounts">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_JobAccounts">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.RecommendedElasticPools">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_RecommendedElasticPools">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.RecommendedIndexes">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_RecommendedIndexes">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.DatabaseReplicationLinks">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_DatabaseReplicationLinks">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.SecureConnection">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_SecureConnection">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.SecurityAlertPolicy">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_SecurityAlertPolicy">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ServerAdministrators">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ServerAdministrators">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ServerAdvisors">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ServerAdvisors">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.CommunicationLinks">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_CommunicationLinks">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ServerDisasterRecoveryConfigurations">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ServerDisasterRecoveryConfigurations">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ServerKey">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ServerKey">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.Servers">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_Servers">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ServerRecommendedActions">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ServerRecommendedActions">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ServerUpgrades">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ServerUpgrades">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ServiceObjectives">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ServiceObjectives">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.ServiceTierAdvisors">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_ServiceTierAdvisors">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.TransparentDataEncryption">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.get_TransparentDataEncryption">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient..ctor">
+<meta name="APIName" content="Microsoft.Azure.Management.Sql.SqlManagementClient.Clone">
+<meta name="APILocation" content="Microsoft.Azure.Management.Sql.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 12:26 AM">
+<meta name="document_id" content="83f7ad79-6d95-6131-4f7b-b7cfb6311bfc">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="The Windows Azure SQL Database management API provides a RESTful set of
+web services that interact with Windows Azure SQL Database services to
+manage your databases. The API enables users to create,â€¦">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="https://github.com/Azure/azure-sdk-for-net/blob/master/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L37">
+<meta name="ms.assetid" content="Microsoft.Azure.Management.Sql.SqlManagementClient">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.azure.management.sql.sqlmanagementclient" rel="canonical">
+    <title>SqlManagementClient class | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/d1d5acab8c02cc720733.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="https://github.com/Azure/azure-sdk-for-net/new/master/apiSpec/new?filename=Microsoft_Azure_Management_Sql_SqlManagementClient.md&value=---%0Auid%3A%20Microsoft.Azure.Management.Sql.SqlManagementClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+							<li>
+								<a href="https://github.com/Azure/azure-sdk-for-net/blob/master/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L37" ms.cmpnm="viewsource"><i class="icon icon-code"></i>View Code</a>
+							</li>
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Azure_Management_Sql_SqlManagementClient">
+      <span class="lang-csharp">SqlManagementClient</span>
+      <span class="lang-vb">SqlManagementClient</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    		<div class="memberEditButton">
+    			<a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L37" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+    		</div>
+    	<p>The Windows Azure SQL Database management API provides a RESTful set of
+web services that interact with Windows Azure SQL Database services to
+manage your databases. The API enables users to create, retrieve,
+update, and delete databases and servers.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public class SqlManagementClient : ServiceClient&lt;SqlManagementClient&gt;, ISqlManagementClient, IDisposable</code><code class="vb lang-vb">Public Class SqlManagementClient
+    Inherits ServiceClient(Of SqlManagementClient)
+    Implements ISqlManagementClient, IDisposable</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">SqlManagementClient</div>
+          <div class="lang-vb">SqlManagementClient</div>
+        </div>
+      </li>
+    </ul>
+    
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient__ctor">SqlManagementClient()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient__ctor">SqlManagementClient()</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the SqlManagementClient class.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_HttpClient_">SqlManagementClient(HttpClient)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_HttpClient_">SqlManagementClient(HttpClient)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the SqlManagementClient class.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_SubscriptionCloudCredentials_">SqlManagementClient(SubscriptionCloudCredentials)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_SubscriptionCloudCredentials_">SqlManagementClient(SubscriptionCloudCredentials)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the SqlManagementClient class.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_SubscriptionCloudCredentials_HttpClient_">SqlManagementClient(SubscriptionCloudCredentials, HttpClient)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_SubscriptionCloudCredentials_HttpClient_">SqlManagementClient(SubscriptionCloudCredentials, HttpClient)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the SqlManagementClient class.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_SubscriptionCloudCredentials_Uri_">SqlManagementClient(SubscriptionCloudCredentials, Uri)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_SubscriptionCloudCredentials_Uri_">SqlManagementClient(SubscriptionCloudCredentials, Uri)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the SqlManagementClient class.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_SubscriptionCloudCredentials_Uri_HttpClient_">SqlManagementClient(SubscriptionCloudCredentials, Uri, HttpClient)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_SubscriptionCloudCredentials_Uri_HttpClient_">SqlManagementClient(SubscriptionCloudCredentials, Uri, HttpClient)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the SqlManagementClient class.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ApiVersion">ApiVersion</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ApiVersion">ApiVersion</a></div>
+          </td>
+            <td>
+            <p>Gets the API version.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_AuditingPolicy">AuditingPolicy</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_AuditingPolicy">AuditingPolicy</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations to manage Azure SQL Database and
+Database Server Audit policy.  Contains operations to: Create,
+Retrieve and Update audit policy.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_BaseUri">BaseUri</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_BaseUri">BaseUri</a></div>
+          </td>
+            <td>
+            <p>Gets the URI used as the base for all cloud service requests.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_BlobAuditing">BlobAuditing</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_BlobAuditing">BlobAuditing</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations to manage Azure SQL Database and
+Server blob auditing. Contains operations to: Create, Retrieve and
+Update blob auditing settings.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_Capabilities">Capabilities</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_Capabilities">Capabilities</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for determining the set of
+capabilites available in a specified region.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_CommunicationLinks">CommunicationLinks</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_CommunicationLinks">CommunicationLinks</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Server
+communication links.  Contains operations to: Create, Retrieve,
+Update, and Delete.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_Credentials">Credentials</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_Credentials">Credentials</a></div>
+          </td>
+            <td>
+            <p>Gets subscription credentials which uniquely identify Microsoft
+Azure subscription. The subscription ID forms part of the URI for
+every service call.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseActivation">DatabaseActivation</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseActivation">DatabaseActivation</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating pertaining to
+activation on Azure SQL Data Warehouse databases. Contains
+operations to: Pause and Resume databases</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseAdvisors">DatabaseAdvisors</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseAdvisors">DatabaseAdvisors</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for managing Advisors for Azure SQL
+Databases. Contains operations to retrieve Advisors and update
+auto execute status of an Advisor.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseBackup">DatabaseBackup</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseBackup">DatabaseBackup</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Database
+database backups.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseRecommendedActions">DatabaseRecommendedActions</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseRecommendedActions">DatabaseRecommendedActions</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for managing recommended actions on
+Azure SQL Databases. Contains operations to retrieve recommended
+action and update its state.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseReplicationLinks">DatabaseReplicationLinks</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseReplicationLinks">DatabaseReplicationLinks</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Database
+Replication Links.  Contains operations to: Delete and Retrieve
+replication links.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_Databases">Databases</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_Databases">Databases</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Databases.
+Contains operations to: Create, Retrieve, Update, and Delete
+databases, and also includes the ability to get the event logs for
+a database.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_DataMasking">DataMasking</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_DataMasking">DataMasking</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Database
+data masking. Contains operations to: Create, Retrieve, Update,
+and Delete data masking rules, as well as Create, Retreive and
+Update data masking policy.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ElasticPoolAdvisors">ElasticPoolAdvisors</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ElasticPoolAdvisors">ElasticPoolAdvisors</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for managing Advisors for Azure SQL
+Elastic Database Pool. Contains operations to retrieve Advisors
+and update auto execute status of an Advisor.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ElasticPoolRecommendedActions">ElasticPoolRecommendedActions</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ElasticPoolRecommendedActions">ElasticPoolRecommendedActions</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for managing recommended actions on
+Azure SQL Elastic Database Pools. Contains operations to retrieve
+recommended action and update its state.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ElasticPools">ElasticPools</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ElasticPools">ElasticPools</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Database
+Elastic Pools.  Contains operations to: Create, Retrieve, Update,
+and Delete.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_FailoverGroups">FailoverGroups</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_FailoverGroups">FailoverGroups</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Database
+Failover Group.  Contains operations to: Create, Retrieve, Update,
+and Delete.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_FirewallRules">FirewallRules</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_FirewallRules">FirewallRules</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Database
+Server Firewall Rules.  Contains operations to: Create, Retrieve,
+Update, and Delete firewall rules.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ImportExport">ImportExport</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ImportExport">ImportExport</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for import/export on Azure SQL
+Databases.  Contains operations to: Import, Export, Get
+Import/Export status for a database.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_JobAccounts">JobAccounts</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_JobAccounts">JobAccounts</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Job
+Accounts. Contains operations to: Create, Retrieve, Update, and
+Delete Job Accounts</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_LongRunningOperationInitialTimeout">LongRunningOperationInitialTimeout</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_LongRunningOperationInitialTimeout">LongRunningOperationInitialTimeout</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the initial timeout for Long Running Operations.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_LongRunningOperationRetryTimeout">LongRunningOperationRetryTimeout</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_LongRunningOperationRetryTimeout">LongRunningOperationRetryTimeout</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the retry timeout for Long Running Operations.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_RecommendedElasticPools">RecommendedElasticPools</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_RecommendedElasticPools">RecommendedElasticPools</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL
+Recommended Elastic Pools.  Contains operations to: Retrieve.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_RecommendedIndexes">RecommendedIndexes</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_RecommendedIndexes">RecommendedIndexes</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for managing recommended indexes on
+Azure SQL Databases. Contains operations to retrieve recommended
+index and update state.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_SecureConnection">SecureConnection</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_SecureConnection">SecureConnection</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for managing Azure SQL Database
+secure connection.  Contains operations to: Create, Retrieve and
+Update secure connection policy .</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_SecurityAlertPolicy">SecurityAlertPolicy</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_SecurityAlertPolicy">SecurityAlertPolicy</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations to manage Azure SQL Database and
+Database Server Security Alert policy.  Contains operations to:
+Create, Retrieve and Update policy.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServerAdministrators">ServerAdministrators</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServerAdministrators">ServerAdministrators</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Server
+Active Directory Administrators.  Contains operations to: Create,
+Retrieve, Update, and Delete Azure SQL Server Active Directory
+Administrators.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServerAdvisors">ServerAdvisors</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServerAdvisors">ServerAdvisors</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for managing Advisors for Azure SQL
+Server. Contains operations to retrieve Advisors and update auto
+execute status of an Advisor.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServerDisasterRecoveryConfigurations">ServerDisasterRecoveryConfigurations</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServerDisasterRecoveryConfigurations">ServerDisasterRecoveryConfigurations</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Server
+disaster recovery configurations. Contains operations to: Create,
+Retrieve, Update, Failover, and Delete.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServerKey">ServerKey</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServerKey">ServerKey</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations of Azure SQL Database that interact
+with Azure Key Vault Server Keys. Contains operations to: Add,
+Delete, and Retrieve Server Ke.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServerRecommendedActions">ServerRecommendedActions</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServerRecommendedActions">ServerRecommendedActions</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for managing recommended actions on
+Azure SQL Server. Contains operations to retrieve recommended
+action and update its state.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_Servers">Servers</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_Servers">Servers</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Database
+Servers.  Contains operations to: Create, Retrieve, Update, and
+Delete servers.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServerUpgrades">ServerUpgrades</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServerUpgrades">ServerUpgrades</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for Azure SQL Database Server Upgrade</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServiceObjectives">ServiceObjectives</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServiceObjectives">ServiceObjectives</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on Azure SQL Database
+Service Objectives.   Contains operations to: Retrieve service
+objectives.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServiceTierAdvisors">ServiceTierAdvisors</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_ServiceTierAdvisors">ServiceTierAdvisors</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations for operating on service tier
+advisors.  Contains operations to: Retrieve.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_TransparentDataEncryption">TransparentDataEncryption</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_TransparentDataEncryption">TransparentDataEncryption</a></div>
+          </td>
+            <td>
+            <p>Represents all the operations of Azure SQL Database Transparent
+Data Encryption.  Contains operations to: Retrieve, and Update
+Transparent Data Encryption.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_Clone_ServiceClient_Microsoft_Azure_Management_Sql_SqlManagementClient__">Clone(ServiceClient&lt;SqlManagementClient&gt;)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Sql_SqlManagementClient_Clone_ServiceClient_Microsoft_Azure_Management_Sql_SqlManagementClient__">Clone(ServiceClient(Of SqlManagementClient))</a></div>
+          </td>
+            <td>
+            <p>Clones properties from current instance to another
+SqlManagementClient instance</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient__ctor">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L477" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SqlManagementClient()</div>        
+            <div class="lang-vb">SqlManagementClient()</div>        
+          </div>
+    
+            <p>Initializes a new instance of the SqlManagementClient class.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public SqlManagementClient()</code><code class="vb lang-vb">Public Sub New</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_HttpClient_">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L574" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SqlManagementClient(HttpClient)</div>        
+            <div class="lang-vb">SqlManagementClient(HttpClient)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the SqlManagementClient class.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public SqlManagementClient(HttpClient httpClient)</code><code class="vb lang-vb">Public Sub New(httpClient As HttpClient)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>httpClient</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">HttpClient</span></div>
+                    <div class="lang-vb"><span class="xref">HttpClient</span></div>
+                  </dd>
+                  </dl>
+                  <p>The Http client</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_SubscriptionCloudCredentials_">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L555" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SqlManagementClient(SubscriptionCloudCredentials)</div>        
+            <div class="lang-vb">SqlManagementClient(SubscriptionCloudCredentials)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the SqlManagementClient class.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public SqlManagementClient(SubscriptionCloudCredentials credentials)</code><code class="vb lang-vb">Public Sub New(credentials As SubscriptionCloudCredentials)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>credentials</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">SubscriptionCloudCredentials</span></div>
+                    <div class="lang-vb"><span class="xref">SubscriptionCloudCredentials</span></div>
+                  </dd>
+                  </dl>
+                  <p>Required. Gets subscription credentials which uniquely identify
+Microsoft Azure subscription. The subscription ID forms part of
+the URI for every service call.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_SubscriptionCloudCredentials_HttpClient_">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L658" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SqlManagementClient(SubscriptionCloudCredentials, HttpClient)</div>        
+            <div class="lang-vb">SqlManagementClient(SubscriptionCloudCredentials, HttpClient)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the SqlManagementClient class.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public SqlManagementClient(SubscriptionCloudCredentials credentials, HttpClient httpClient)</code><code class="vb lang-vb">Public Sub New(credentials As SubscriptionCloudCredentials, httpClient As HttpClient)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>credentials</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">SubscriptionCloudCredentials</span></div>
+                    <div class="lang-vb"><span class="xref">SubscriptionCloudCredentials</span></div>
+                  </dd>
+                  </dl>
+                  <p>Required. Gets subscription credentials which uniquely identify
+Microsoft Azure subscription. The subscription ID forms part of
+the URI for every service call.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>httpClient</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">HttpClient</span></div>
+                    <div class="lang-vb"><span class="xref">HttpClient</span></div>
+                  </dd>
+                  </dl>
+                  <p>The Http client</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_SubscriptionCloudCredentials_Uri_">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L530" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SqlManagementClient(SubscriptionCloudCredentials, Uri)</div>        
+            <div class="lang-vb">SqlManagementClient(SubscriptionCloudCredentials, Uri)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the SqlManagementClient class.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public SqlManagementClient(SubscriptionCloudCredentials credentials, Uri baseUri)</code><code class="vb lang-vb">Public Sub New(credentials As SubscriptionCloudCredentials, baseUri As Uri)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>credentials</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">SubscriptionCloudCredentials</span></div>
+                    <div class="lang-vb"><span class="xref">SubscriptionCloudCredentials</span></div>
+                  </dd>
+                  </dl>
+                  <p>Required. Gets subscription credentials which uniquely identify
+Microsoft Azure subscription. The subscription ID forms part of
+the URI for every service call.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>baseUri</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Uri</span></div>
+                    <div class="lang-vb"><span class="xref">Uri</span></div>
+                  </dd>
+                  </dl>
+                  <p>Optional. Gets the URI used as the base for all cloud service
+requests.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_SubscriptionCloudCredentials_Uri_HttpClient_">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient__ctor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L630" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SqlManagementClient(SubscriptionCloudCredentials, Uri, HttpClient)</div>        
+            <div class="lang-vb">SqlManagementClient(SubscriptionCloudCredentials, Uri, HttpClient)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the SqlManagementClient class.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public SqlManagementClient(SubscriptionCloudCredentials credentials, Uri baseUri, HttpClient httpClient)</code><code class="vb lang-vb">Public Sub New(credentials As SubscriptionCloudCredentials, baseUri As Uri, httpClient As HttpClient)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>credentials</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">SubscriptionCloudCredentials</span></div>
+                    <div class="lang-vb"><span class="xref">SubscriptionCloudCredentials</span></div>
+                  </dd>
+                  </dl>
+                  <p>Required. Gets subscription credentials which uniquely identify
+Microsoft Azure subscription. The subscription ID forms part of
+the URI for every service call.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>baseUri</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">Uri</span></div>
+                    <div class="lang-vb"><span class="xref">Uri</span></div>
+                  </dd>
+                  </dl>
+                  <p>Optional. Gets the URI used as the base for all cloud service
+requests.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>httpClient</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">HttpClient</span></div>
+                    <div class="lang-vb"><span class="xref">HttpClient</span></div>
+                  </dd>
+                  </dl>
+                  <p>The Http client</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ApiVersion">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ApiVersion_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L44" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ApiVersion</div>        
+            <div class="lang-vb">ApiVersion</div>        
+          </div>
+    
+            <p>Gets the API version.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string ApiVersion { get; }</code><code class="vb lang-vb">Public ReadOnly Property ApiVersion As String</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_AuditingPolicy">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_AuditingPolicy_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L100" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">AuditingPolicy</div>        
+            <div class="lang-vb">AuditingPolicy</div>        
+          </div>
+    
+            <p>Represents all the operations to manage Azure SQL Database and
+Database Server Audit policy.  Contains operations to: Create,
+Retrieve and Update audit policy.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IAuditingPolicyOperations AuditingPolicy { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property AuditingPolicy As IAuditingPolicyOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iauditingpolicyoperations">IAuditingPolicyOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iauditingpolicyoperations">IAuditingPolicyOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_BaseUri">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_BaseUri_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L54" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">BaseUri</div>        
+            <div class="lang-vb">BaseUri</div>        
+          </div>
+    
+            <p>Gets the URI used as the base for all cloud service requests.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Uri BaseUri { get; }</code><code class="vb lang-vb">Public ReadOnly Property BaseUri As Uri</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">Uri</span></div>
+                      <div class="lang-vb"><span class="xref">Uri</span></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_BlobAuditing">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_BlobAuditing_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L112" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">BlobAuditing</div>        
+            <div class="lang-vb">BlobAuditing</div>        
+          </div>
+    
+            <p>Represents all the operations to manage Azure SQL Database and
+Server blob auditing. Contains operations to: Create, Retrieve and
+Update blob auditing settings.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IBlobAuditingOperations BlobAuditing { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property BlobAuditing As IBlobAuditingOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iblobauditingoperations">IBlobAuditingOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iblobauditingoperations">IBlobAuditingOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_Capabilities">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_Capabilities_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L123" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Capabilities</div>        
+            <div class="lang-vb">Capabilities</div>        
+          </div>
+    
+            <p>Represents all the operations for determining the set of
+capabilites available in a specified region.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual ICapabilitiesOperations Capabilities { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property Capabilities As ICapabilitiesOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.icapabilitiesoperations">ICapabilitiesOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.icapabilitiesoperations">ICapabilitiesOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_CommunicationLinks">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_CommunicationLinks_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L376" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CommunicationLinks</div>        
+            <div class="lang-vb">CommunicationLinks</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Server
+communication links.  Contains operations to: Create, Retrieve,
+Update, and Delete.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IServerCommunicationLinkOperations CommunicationLinks { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property CommunicationLinks As IServerCommunicationLinkOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iservercommunicationlinkoperations">IServerCommunicationLinkOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iservercommunicationlinkoperations">IServerCommunicationLinkOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_Credentials">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_Credentials_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L66" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Credentials</div>        
+            <div class="lang-vb">Credentials</div>        
+          </div>
+    
+            <p>Gets subscription credentials which uniquely identify Microsoft
+Azure subscription. The subscription ID forms part of the URI for
+every service call.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public SubscriptionCloudCredentials Credentials { get; }</code><code class="vb lang-vb">Public ReadOnly Property Credentials As SubscriptionCloudCredentials</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">SubscriptionCloudCredentials</span></div>
+                      <div class="lang-vb"><span class="xref">SubscriptionCloudCredentials</span></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseActivation">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseActivation_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L135" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">DatabaseActivation</div>        
+            <div class="lang-vb">DatabaseActivation</div>        
+          </div>
+    
+            <p>Represents all the operations for operating pertaining to
+activation on Azure SQL Data Warehouse databases. Contains
+operations to: Pause and Resume databases</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IDatabaseActivationOperations DatabaseActivation { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property DatabaseActivation As IDatabaseActivationOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.idatabaseactivationoperations">IDatabaseActivationOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.idatabaseactivationoperations">IDatabaseActivationOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseAdvisors">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseAdvisors_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L147" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">DatabaseAdvisors</div>        
+            <div class="lang-vb">DatabaseAdvisors</div>        
+          </div>
+    
+            <p>Represents all the operations for managing Advisors for Azure SQL
+Databases. Contains operations to retrieve Advisors and update
+auto execute status of an Advisor.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IDatabaseAdvisorOperations DatabaseAdvisors { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property DatabaseAdvisors As IDatabaseAdvisorOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.idatabaseadvisoroperations">IDatabaseAdvisorOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.idatabaseadvisoroperations">IDatabaseAdvisorOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseBackup">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseBackup_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L158" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">DatabaseBackup</div>        
+            <div class="lang-vb">DatabaseBackup</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Database
+database backups.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IDatabaseBackupOperations DatabaseBackup { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property DatabaseBackup As IDatabaseBackupOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.idatabasebackupoperations">IDatabaseBackupOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.idatabasebackupoperations">IDatabaseBackupOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseRecommendedActions">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseRecommendedActions_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L183" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">DatabaseRecommendedActions</div>        
+            <div class="lang-vb">DatabaseRecommendedActions</div>        
+          </div>
+    
+            <p>Represents all the operations for managing recommended actions on
+Azure SQL Databases. Contains operations to retrieve recommended
+action and update its state.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IDatabaseRecommendedActionOperations DatabaseRecommendedActions { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property DatabaseRecommendedActions As IDatabaseRecommendedActionOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.idatabaserecommendedactionoperations">IDatabaseRecommendedActionOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.idatabaserecommendedactionoperations">IDatabaseRecommendedActionOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseReplicationLinks">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_DatabaseReplicationLinks_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L315" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">DatabaseReplicationLinks</div>        
+            <div class="lang-vb">DatabaseReplicationLinks</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Database
+Replication Links.  Contains operations to: Delete and Retrieve
+replication links.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IReplicationLinkOperations DatabaseReplicationLinks { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property DatabaseReplicationLinks As IReplicationLinkOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.ireplicationlinkoperations">IReplicationLinkOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.ireplicationlinkoperations">IReplicationLinkOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_Databases">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_Databases_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L171" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Databases</div>        
+            <div class="lang-vb">Databases</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Databases.
+Contains operations to: Create, Retrieve, Update, and Delete
+databases, and also includes the ability to get the event logs for
+a database.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IDatabaseOperations Databases { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property Databases As IDatabaseOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.idatabaseoperations">IDatabaseOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.idatabaseoperations">IDatabaseOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_DataMasking">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_DataMasking_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L196" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">DataMasking</div>        
+            <div class="lang-vb">DataMasking</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Database
+data masking. Contains operations to: Create, Retrieve, Update,
+and Delete data masking rules, as well as Create, Retreive and
+Update data masking policy.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IDataMaskingOperations DataMasking { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property DataMasking As IDataMaskingOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.idatamaskingoperations">IDataMaskingOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.idatamaskingoperations">IDataMaskingOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ElasticPoolAdvisors">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ElasticPoolAdvisors_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L208" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ElasticPoolAdvisors</div>        
+            <div class="lang-vb">ElasticPoolAdvisors</div>        
+          </div>
+    
+            <p>Represents all the operations for managing Advisors for Azure SQL
+Elastic Database Pool. Contains operations to retrieve Advisors
+and update auto execute status of an Advisor.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IElasticPoolAdvisorOperations ElasticPoolAdvisors { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property ElasticPoolAdvisors As IElasticPoolAdvisorOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.ielasticpooladvisoroperations">IElasticPoolAdvisorOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.ielasticpooladvisoroperations">IElasticPoolAdvisorOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ElasticPoolRecommendedActions">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ElasticPoolRecommendedActions_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L232" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ElasticPoolRecommendedActions</div>        
+            <div class="lang-vb">ElasticPoolRecommendedActions</div>        
+          </div>
+    
+            <p>Represents all the operations for managing recommended actions on
+Azure SQL Elastic Database Pools. Contains operations to retrieve
+recommended action and update its state.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IElasticPoolRecommendedActionOperations ElasticPoolRecommendedActions { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property ElasticPoolRecommendedActions As IElasticPoolRecommendedActionOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.ielasticpoolrecommendedactionoperations">IElasticPoolRecommendedActionOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.ielasticpoolrecommendedactionoperations">IElasticPoolRecommendedActionOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ElasticPools">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ElasticPools_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L220" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ElasticPools</div>        
+            <div class="lang-vb">ElasticPools</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Database
+Elastic Pools.  Contains operations to: Create, Retrieve, Update,
+and Delete.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IElasticPoolOperations ElasticPools { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property ElasticPools As IElasticPoolOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.ielasticpooloperations">IElasticPoolOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.ielasticpooloperations">IElasticPoolOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_FailoverGroups">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_FailoverGroups_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L244" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">FailoverGroups</div>        
+            <div class="lang-vb">FailoverGroups</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Database
+Failover Group.  Contains operations to: Create, Retrieve, Update,
+and Delete.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IFailoverGroupOperations FailoverGroups { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property FailoverGroups As IFailoverGroupOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.ifailovergroupoperations">IFailoverGroupOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.ifailovergroupoperations">IFailoverGroupOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_FirewallRules">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_FirewallRules_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L256" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">FirewallRules</div>        
+            <div class="lang-vb">FirewallRules</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Database
+Server Firewall Rules.  Contains operations to: Create, Retrieve,
+Update, and Delete firewall rules.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IFirewallRuleOperations FirewallRules { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property FirewallRules As IFirewallRuleOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.ifirewallruleoperations">IFirewallRuleOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.ifirewallruleoperations">IFirewallRuleOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ImportExport">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ImportExport_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L268" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ImportExport</div>        
+            <div class="lang-vb">ImportExport</div>        
+          </div>
+    
+            <p>Represents all the operations for import/export on Azure SQL
+Databases.  Contains operations to: Import, Export, Get
+Import/Export status for a database.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IImportExportOperations ImportExport { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property ImportExport As IImportExportOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iimportexportoperations">IImportExportOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iimportexportoperations">IImportExportOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_JobAccounts">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_JobAccounts_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L280" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">JobAccounts</div>        
+            <div class="lang-vb">JobAccounts</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Job
+Accounts. Contains operations to: Create, Retrieve, Update, and
+Delete Job Accounts</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IJobAccountOperations JobAccounts { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property JobAccounts As IJobAccountOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.ijobaccountoperations">IJobAccountOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.ijobaccountoperations">IJobAccountOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_LongRunningOperationInitialTimeout">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_LongRunningOperationInitialTimeout_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L76" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">LongRunningOperationInitialTimeout</div>        
+            <div class="lang-vb">LongRunningOperationInitialTimeout</div>        
+          </div>
+    
+            <p>Gets or sets the initial timeout for Long Running Operations.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int LongRunningOperationInitialTimeout { get; set; }</code><code class="vb lang-vb">Public Property LongRunningOperationInitialTimeout As Integer</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_LongRunningOperationRetryTimeout">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_LongRunningOperationRetryTimeout_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L87" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">LongRunningOperationRetryTimeout</div>        
+            <div class="lang-vb">LongRunningOperationRetryTimeout</div>        
+          </div>
+    
+            <p>Gets or sets the retry timeout for Long Running Operations.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int LongRunningOperationRetryTimeout { get; set; }</code><code class="vb lang-vb">Public Property LongRunningOperationRetryTimeout As Integer</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_RecommendedElasticPools">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_RecommendedElasticPools_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L291" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">RecommendedElasticPools</div>        
+            <div class="lang-vb">RecommendedElasticPools</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL
+Recommended Elastic Pools.  Contains operations to: Retrieve.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IRecommendedElasticPoolOperations RecommendedElasticPools { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property RecommendedElasticPools As IRecommendedElasticPoolOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.irecommendedelasticpooloperations">IRecommendedElasticPoolOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.irecommendedelasticpooloperations">IRecommendedElasticPoolOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_RecommendedIndexes">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_RecommendedIndexes_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L303" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">RecommendedIndexes</div>        
+            <div class="lang-vb">RecommendedIndexes</div>        
+          </div>
+    
+            <p>Represents all the operations for managing recommended indexes on
+Azure SQL Databases. Contains operations to retrieve recommended
+index and update state.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IRecommendedIndexOperations RecommendedIndexes { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property RecommendedIndexes As IRecommendedIndexOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.irecommendedindexoperations">IRecommendedIndexOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.irecommendedindexoperations">IRecommendedIndexOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_SecureConnection">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_SecureConnection_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L327" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SecureConnection</div>        
+            <div class="lang-vb">SecureConnection</div>        
+          </div>
+    
+            <p>Represents all the operations for managing Azure SQL Database
+secure connection.  Contains operations to: Create, Retrieve and
+Update secure connection policy .</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual ISecureConnectionPolicyOperations SecureConnection { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property SecureConnection As ISecureConnectionPolicyOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.isecureconnectionpolicyoperations">ISecureConnectionPolicyOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.isecureconnectionpolicyoperations">ISecureConnectionPolicyOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_SecurityAlertPolicy">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_SecurityAlertPolicy_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L339" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SecurityAlertPolicy</div>        
+            <div class="lang-vb">SecurityAlertPolicy</div>        
+          </div>
+    
+            <p>Represents all the operations to manage Azure SQL Database and
+Database Server Security Alert policy.  Contains operations to:
+Create, Retrieve and Update policy.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual ISecurityAlertPolicyOperations SecurityAlertPolicy { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property SecurityAlertPolicy As ISecurityAlertPolicyOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.isecurityalertpolicyoperations">ISecurityAlertPolicyOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.isecurityalertpolicyoperations">ISecurityAlertPolicyOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServerAdministrators">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServerAdministrators_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L352" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ServerAdministrators</div>        
+            <div class="lang-vb">ServerAdministrators</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Server
+Active Directory Administrators.  Contains operations to: Create,
+Retrieve, Update, and Delete Azure SQL Server Active Directory
+Administrators.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IServerAdministratorOperations ServerAdministrators { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property ServerAdministrators As IServerAdministratorOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iserveradministratoroperations">IServerAdministratorOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iserveradministratoroperations">IServerAdministratorOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServerAdvisors">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServerAdvisors_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L364" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ServerAdvisors</div>        
+            <div class="lang-vb">ServerAdvisors</div>        
+          </div>
+    
+            <p>Represents all the operations for managing Advisors for Azure SQL
+Server. Contains operations to retrieve Advisors and update auto
+execute status of an Advisor.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IServerAdvisorOperations ServerAdvisors { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property ServerAdvisors As IServerAdvisorOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iserveradvisoroperations">IServerAdvisorOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iserveradvisoroperations">IServerAdvisorOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServerDisasterRecoveryConfigurations">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServerDisasterRecoveryConfigurations_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L388" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ServerDisasterRecoveryConfigurations</div>        
+            <div class="lang-vb">ServerDisasterRecoveryConfigurations</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Server
+disaster recovery configurations. Contains operations to: Create,
+Retrieve, Update, Failover, and Delete.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IServerDisasterRecoveryConfigurationOperations ServerDisasterRecoveryConfigurations { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property ServerDisasterRecoveryConfigurations As IServerDisasterRecoveryConfigurationOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iserverdisasterrecoveryconfigurationoperations">IServerDisasterRecoveryConfigurationOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iserverdisasterrecoveryconfigurationoperations">IServerDisasterRecoveryConfigurationOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServerKey">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServerKey_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L400" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ServerKey</div>        
+            <div class="lang-vb">ServerKey</div>        
+          </div>
+    
+            <p>Represents all the operations of Azure SQL Database that interact
+with Azure Key Vault Server Keys. Contains operations to: Add,
+Delete, and Retrieve Server Ke.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IServerKeyOperations ServerKey { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property ServerKey As IServerKeyOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iserverkeyoperations">IServerKeyOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iserverkeyoperations">IServerKeyOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServerRecommendedActions">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServerRecommendedActions_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L424" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ServerRecommendedActions</div>        
+            <div class="lang-vb">ServerRecommendedActions</div>        
+          </div>
+    
+            <p>Represents all the operations for managing recommended actions on
+Azure SQL Server. Contains operations to retrieve recommended
+action and update its state.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IServerRecommendedActionOperations ServerRecommendedActions { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property ServerRecommendedActions As IServerRecommendedActionOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iserverrecommendedactionoperations">IServerRecommendedActionOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iserverrecommendedactionoperations">IServerRecommendedActionOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_Servers">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_Servers_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L412" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Servers</div>        
+            <div class="lang-vb">Servers</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Database
+Servers.  Contains operations to: Create, Retrieve, Update, and
+Delete servers.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IServerOperations Servers { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property Servers As IServerOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iserveroperations">IServerOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iserveroperations">IServerOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServerUpgrades">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServerUpgrades_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L434" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ServerUpgrades</div>        
+            <div class="lang-vb">ServerUpgrades</div>        
+          </div>
+    
+            <p>Represents all the operations for Azure SQL Database Server Upgrade</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IServerUpgradeOperations ServerUpgrades { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property ServerUpgrades As IServerUpgradeOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iserverupgradeoperations">IServerUpgradeOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iserverupgradeoperations">IServerUpgradeOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServiceObjectives">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServiceObjectives_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L446" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ServiceObjectives</div>        
+            <div class="lang-vb">ServiceObjectives</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on Azure SQL Database
+Service Objectives.   Contains operations to: Retrieve service
+objectives.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IServiceObjectiveOperations ServiceObjectives { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property ServiceObjectives As IServiceObjectiveOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iserviceobjectiveoperations">IServiceObjectiveOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iserviceobjectiveoperations">IServiceObjectiveOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServiceTierAdvisors">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_ServiceTierAdvisors_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L457" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ServiceTierAdvisors</div>        
+            <div class="lang-vb">ServiceTierAdvisors</div>        
+          </div>
+    
+            <p>Represents all the operations for operating on service tier
+advisors.  Contains operations to: Retrieve.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual IServiceTierAdvisorOperations ServiceTierAdvisors { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property ServiceTierAdvisors As IServiceTierAdvisorOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.iservicetieradvisoroperations">IServiceTierAdvisorOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.iservicetieradvisoroperations">IServiceTierAdvisorOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_TransparentDataEncryption">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_TransparentDataEncryption_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L469" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">TransparentDataEncryption</div>        
+            <div class="lang-vb">TransparentDataEncryption</div>        
+          </div>
+    
+            <p>Represents all the operations of Azure SQL Database Transparent
+Data Encryption.  Contains operations to: Retrieve, and Update
+Transparent Data Encryption.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual ITransparentDataEncryptionOperations TransparentDataEncryption { get; }</code><code class="vb lang-vb">Public Overridable ReadOnly Property TransparentDataEncryption As ITransparentDataEncryptionOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.sql.itransparentdataencryptionoperations">ITransparentDataEncryptionOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.sql.itransparentdataencryptionoperations">ITransparentDataEncryptionOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Sql_SqlManagementClient_Clone_ServiceClient_Microsoft_Azure_Management_Sql_SqlManagementClient__">
+    
+            <a id="Microsoft_Azure_Management_Sql_SqlManagementClient_Clone_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/Sql/SqlManagement/Generated/SqlManagementClient.cs/#L678" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Clone(ServiceClient&lt;SqlManagementClient&gt;)</div>        
+            <div class="lang-vb">Clone(ServiceClient(Of SqlManagementClient))</div>        
+          </div>
+    
+            <p>Clones properties from current instance to another
+SqlManagementClient instance</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void Clone(ServiceClient&lt;SqlManagementClient&gt; client)</code><code class="vb lang-vb">Protected Overrides Sub Clone(client As ServiceClient(Of SqlManagementClient))</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>client</dt>
+                  <dd>
+                    <div class="lang-csharp"><span class="xref">ServiceClient</span>&lt;<a class="xref" href="microsoft.azure.management.sql.sqlmanagementclient">SqlManagementClient</a>&gt;</div>
+                    <div class="lang-vb"><span class="xref">ServiceClient</span>(Of <a class="xref" href="microsoft.azure.management.sql.sqlmanagementclient">SqlManagementClient</a>)</div>
+                  </dd>
+                  </dl>
+                  <p>Instance of SqlManagementClient to clone to</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+      <h2>Details</h2>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Namespace</h4>    
+          <div>Microsoft.Azure.Management.Sql</div>
+        </div>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Assembly</h4>    
+          <div>Microsoft.Azure.Management.Sql.dll</div>
+        </div>
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/d1d5acab8c02cc720733.reference.js"></script>
+  </body>
+</html>

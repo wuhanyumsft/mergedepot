@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="IStateProvider interface">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="service-fabric">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/8ece26063f2f27414f0bad873159ee6212f3448d/docs-ref-manual/Data/ServiceFabric/System.Fabric.IStateProvider.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-manual/Data/ServiceFabric/System.Fabric.IStateProvider.yml">
+<meta name="APIName" content="System.Fabric.IStateProvider">
+<meta name="APIName" content="System.Fabric.IStateProvider.GetLastCommittedSequenceNumber">
+<meta name="APIName" content="System.Fabric.IStateProvider.UpdateEpochAsync">
+<meta name="APIName" content="System.Fabric.IStateProvider.OnDataLossAsync">
+<meta name="APIName" content="System.Fabric.IStateProvider.GetCopyContext">
+<meta name="APIName" content="System.Fabric.IStateProvider.GetCopyState">
+<meta name="APILocation" content="System.Fabric.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2016-12-19 07:26 AM">
+<meta name="document_id" content="bb9c40e5-fd50-05d7-9d41-49837e5299e0">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Defines the behavior that a service must implement to interact with the .
+">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Api/src/System/Fabric/IStateProvider.cs&amp;version=GBdevelop&amp;line=15">
+<meta name="ms.assetid" content="System.Fabric.IStateProvider">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.fabric.istateprovider" rel="canonical">
+    <title>IStateProvider interface | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/d1d5acab8c02cc720733.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+							<li>
+								<a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Api/src/System/Fabric/IStateProvider.cs&version=GBdevelop&line=15" ms.cmpnm="viewsource"><i class="icon icon-code"></i>View Code</a>
+							</li>
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Fabric_IStateProvider">
+      <span class="lang-csharp">IStateProvider</span>
+      <span class="lang-vb">IStateProvider</span>
+        Interface
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    		<div class="memberEditButton">
+    			<a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Api/src/System/Fabric/IStateProvider.cs&amp;version=GBdevelop&amp;line=14" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+    		</div>
+    	<p>Defines the behavior that a service must implement to interact with the <a class="xref" href="system.fabric.fabricreplicator">FabricReplicator</a>.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public interface IStateProvider</code><code class="vb lang-vb">Public Interface IStateProvider</code></pre>
+    
+    
+    
+    
+    
+    
+    
+    
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_Fabric_IStateProvider_GetCopyContext">GetCopyContext()</a></div>
+            <div class="lang-vb"><a href="#System_Fabric_IStateProvider_GetCopyContext">GetCopyContext()</a></div>
+          </td>
+            <td>
+            <p>Obtains context on a Secondary replica after it is created and opened to send context to the Primary replica.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_Fabric_IStateProvider_GetCopyState_System_Int64_System_Fabric_IOperationDataStream_">GetCopyState(Int64, IOperationDataStream)</a></div>
+            <div class="lang-vb"><a href="#System_Fabric_IStateProvider_GetCopyState_System_Int64_System_Fabric_IOperationDataStream_">GetCopyState(Int64, IOperationDataStream)</a></div>
+          </td>
+            <td>
+            <p>Obtains state on a Primary replica that is required to build a Secondary replica.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_Fabric_IStateProvider_GetLastCommittedSequenceNumber">GetLastCommittedSequenceNumber()</a></div>
+            <div class="lang-vb"><a href="#System_Fabric_IStateProvider_GetLastCommittedSequenceNumber">GetLastCommittedSequenceNumber()</a></div>
+          </td>
+            <td>
+            <p>Obtains the last sequence number that the service has committed. </p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_Fabric_IStateProvider_OnDataLossAsync_System_Threading_CancellationToken_">OnDataLossAsync(CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#System_Fabric_IStateProvider_OnDataLossAsync_System_Threading_CancellationToken_">OnDataLossAsync(CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Indicates that a write quorum of replicas in this replica set  has been lost, and that therefore data loss might have occurred. 
+The replica set consists of a majority of replicas, which includes the Primary replica. </p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_Fabric_IStateProvider_UpdateEpochAsync_System_Fabric_Epoch_System_Int64_System_Threading_CancellationToken_">UpdateEpochAsync(Epoch, Int64, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#System_Fabric_IStateProvider_UpdateEpochAsync_System_Fabric_Epoch_System_Int64_System_Threading_CancellationToken_">UpdateEpochAsync(Epoch, Int64, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Indicates to a replica that the configuration of a replica set has changed due to a change or attempted change to the Primary replica. 
+The change occurs due to failure or load balancing of the previous Primary replica. Epoch changes act as a barrier by segmenting operations 
+into the exact configuration periods in which they were sent by a specific Primary replica.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="System_Fabric_IStateProvider_GetCopyContext">
+    
+            <a id="System_Fabric_IStateProvider_GetCopyContext_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Api/src/System/Fabric/IStateProvider.cs&amp;version=GBdevelop&amp;line=92" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCopyContext()</div>        
+            <div class="lang-vb">GetCopyContext()</div>        
+          </div>
+    
+            <p>Obtains context on a Secondary replica after it is created and opened to send context to the Primary replica.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">IOperationDataStream GetCopyContext()</code><code class="vb lang-vb">Function GetCopyContext As IOperationDataStream</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.fabric.ioperationdatastream">IOperationDataStream</a></div>
+                      <div class="lang-vb"><a class="xref" href="system.fabric.ioperationdatastream">IOperationDataStream</a></div>
+                  </div>
+                  <p>Returns <a class="xref" href="system.fabric.ioperationdatastream">IOperationDataStream</a>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The Primary replica analyzes the context and sends back state via <a class="xref" href="system.fabric.istateprovider#System_Fabric_IStateProvider_GetCopyState_System_Int64_System_Fabric_IOperationDataStream_">GetCopyState(Int64, IOperationDataStream)</a>.</p>
+<p>
+<a class="xref" href="system.fabric.istateprovider#System_Fabric_IStateProvider_GetCopyContext">GetCopyContext()</a> is called on newly created, idle Secondary replicas and provides
+a mechanism to asynchronously establish a bidirectional conversation with the Primary replica. The Secondary replica sends <a class="xref" href="system.fabric.operationdata">OperationData</a>
+objects with which the Primary replica can determine the progress of collecting context on the Secondary replica. The Primary replica responds by sending the required state back.
+See <a class="xref" href="system.fabric.istateprovider#System_Fabric_IStateProvider_GetCopyState_System_Int64_System_Fabric_IOperationDataStream_">GetCopyState(Int64, IOperationDataStream)</a> at the Primary replica for the other half of the exchange. </p>
+<p>For in-memory services, the <a class="xref" href="system.fabric.istateprovider#System_Fabric_IStateProvider_GetCopyContext">GetCopyContext()</a> method is not called, 
+as the state of the Secondary replicas is known (they are empty and will require all of the state).</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="System_Fabric_IStateProvider_GetCopyState_System_Int64_System_Fabric_IOperationDataStream_">
+    
+            <a id="System_Fabric_IStateProvider_GetCopyState_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Api/src/System/Fabric/IStateProvider.cs&amp;version=GBdevelop&amp;line=116" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCopyState(Int64, IOperationDataStream)</div>        
+            <div class="lang-vb">GetCopyState(Int64, IOperationDataStream)</div>        
+          </div>
+    
+            <p>Obtains state on a Primary replica that is required to build a Secondary replica.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">IOperationDataStream GetCopyState(long upToSequenceNumber, IOperationDataStream copyContext)</code><code class="vb lang-vb">Function GetCopyState(upToSequenceNumber As Long, copyContext As IOperationDataStream) As IOperationDataStream</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>upToSequenceNumber</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum last sequence number (LSN) that should be placed in the copy stream via the <a class="xref" href="system.fabric.istatereplicator#System_Fabric_IStateReplicator_GetCopyStream">GetCopyStream()</a> method.
+LSNs greater than this number are delivered to the Secondary replica as a part of the replication stream via the <a class="xref" href="system.fabric.istatereplicator#System_Fabric_IStateReplicator_GetReplicationStream">GetReplicationStream()</a> method.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>copyContext</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.ioperationdatastream">IOperationDataStream</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.ioperationdatastream">IOperationDataStream</a></div>
+                  </dd>
+                  </dl>
+                  <p>An <a class="xref" href="system.fabric.ioperationdatastream">IOperationDataStream</a> that contains the <a class="xref" href="system.fabric.operationdata">OperationData</a> objects that are created by the Secondary replica. </p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.fabric.ioperationdatastream">IOperationDataStream</a></div>
+                      <div class="lang-vb"><a class="xref" href="system.fabric.ioperationdatastream">IOperationDataStream</a></div>
+                  </div>
+                  <p>Returns <a class="xref" href="system.fabric.ioperationdatastream">IOperationDataStream</a>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Just as <a class="xref" href="system.fabric.istateprovider#System_Fabric_IStateProvider_GetCopyContext">GetCopyContext()</a> enables the Secondary replica to send context to the Primary replica via
+an <a class="xref" href="system.fabric.ioperationdatastream">IOperationDataStream</a>, <a class="xref" href="system.fabric.istateprovider#System_Fabric_IStateProvider_GetCopyState_System_Int64_System_Fabric_IOperationDataStream_">GetCopyState(Int64, IOperationDataStream)</a> enables the Primary replica to respond with an <a class="xref" href="system.fabric.ioperationdatastream">IOperationDataStream</a>. The stream contains objects that are delivered to the Secondary replica via the <a class="xref" href="system.fabric.istatereplicator#System_Fabric_IStateReplicator_GetCopyStream">GetCopyStream()</a> method of the <a class="xref" href="system.fabric.fabricreplicator">FabricReplicator</a> class. The objects implement <a class="xref" href="system.fabric.ioperation">IOperation</a> and contain the specified data. </p>
+<p> When the Primary replica receives this call, it should create and return another <a class="xref" href="system.fabric.ioperationdatastream">IOperationDataStream</a> 
+that contains <a class="xref" href="system.fabric.operationdata">OperationData</a>. <a class="xref" href="system.fabric.operationdata">OperationData</a> represents the data/state that the Secondary replica
+requires to catch up to the provided <em>upToSequenceNumber</em> maximum LSN. 
+How much and which state has to be sent can be determined via the context information that the Secondary replica provides via 
+<a class="xref" href="system.fabric.istateprovider#System_Fabric_IStateProvider_GetCopyContext">GetCopyContext()</a> method.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="System_Fabric_IStateProvider_GetLastCommittedSequenceNumber">
+    
+            <a id="System_Fabric_IStateProvider_GetLastCommittedSequenceNumber_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Api/src/System/Fabric/IStateProvider.cs&amp;version=GBdevelop&amp;line=22" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetLastCommittedSequenceNumber()</div>        
+            <div class="lang-vb">GetLastCommittedSequenceNumber()</div>        
+          </div>
+    
+            <p>Obtains the last sequence number that the service has committed. </p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">long GetLastCommittedSequenceNumber()</code><code class="vb lang-vb">Function GetLastCommittedSequenceNumber As Long</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                  </div>
+                  <p>Returns <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="System_Fabric_IStateProvider_OnDataLossAsync_System_Threading_CancellationToken_">
+    
+            <a id="System_Fabric_IStateProvider_OnDataLossAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Api/src/System/Fabric/IStateProvider.cs&amp;version=GBdevelop&amp;line=73" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnDataLossAsync(CancellationToken)</div>        
+            <div class="lang-vb">OnDataLossAsync(CancellationToken)</div>        
+          </div>
+    
+            <p>Indicates that a write quorum of replicas in this replica set  has been lost, and that therefore data loss might have occurred. 
+The replica set consists of a majority of replicas, which includes the Primary replica. </p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;bool&gt; OnDataLossAsync(CancellationToken cancellationToken)</code><code class="vb lang-vb">Function OnDataLossAsync(cancellationToken As CancellationToken) As Task(Of Boolean)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a> object that the operation is observing. 
+It can be used to send a notification that the operation should be canceled. Note that cancellation is advisory and that the operation might still be completed even if it is canceled.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>)</div>
+                  </div>
+                  <p>Returns <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task&lt;TResult&gt;</a> of type <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>, that indicates whether the state provider as part of processing this notification has changed its state</p>        
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>When the Service Fabric runtime observes the failure of a quorum of replicas, which includes the Primary replica, 
+it elects a new Primary replica and immediately calls this method on the new Primary replica. A Primary replica that is informed of possible data loss
+can choose to restore its state from some external data source or can continue to run with the state that it currently has. If the service continues to run with its current state,
+it should return false from this method, which indicates that no state change has been made. If it has restored or altered its state,
+such as rolling back incomplete work, it should return true. If true is returned, then the state in other replicas must be assumed to be incorrect.
+Therefore, the Service Fabric runtime removes the other replicas from the replica set and recreates them.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="System_Fabric_IStateProvider_UpdateEpochAsync_System_Fabric_Epoch_System_Int64_System_Threading_CancellationToken_">
+    
+            <a id="System_Fabric_IStateProvider_UpdateEpochAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Api/src/System/Fabric/IStateProvider.cs&amp;version=GBdevelop&amp;line=52" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">UpdateEpochAsync(Epoch, Int64, CancellationToken)</div>        
+            <div class="lang-vb">UpdateEpochAsync(Epoch, Int64, CancellationToken)</div>        
+          </div>
+    
+            <p>Indicates to a replica that the configuration of a replica set has changed due to a change or attempted change to the Primary replica. 
+The change occurs due to failure or load balancing of the previous Primary replica. Epoch changes act as a barrier by segmenting operations 
+into the exact configuration periods in which they were sent by a specific Primary replica.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task UpdateEpochAsync(Epoch epoch, long previousEpochLastSequenceNumber, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function UpdateEpochAsync(epoch As Epoch, previousEpochLastSequenceNumber As Long, cancellationToken As CancellationToken) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>epoch</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.epoch">Epoch</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.epoch">Epoch</a></div>
+                  </dd>
+                  </dl>
+                  <p>The new <a class="xref" href="system.fabric.epoch">Epoch</a>.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>previousEpochLastSequenceNumber</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                  </dd>
+                  </dl>
+                  <p> The maximum sequence number (LSN) in the previous epoch.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a> object that the operation is observing. It can be used to send a notification 
+that the operation should be canceled. Note that cancellation is advisory and that the operation might still be completed even if it is canceled.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>Returns <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The information in the <a class="xref" href="system.fabric.istateprovider#System_Fabric_IStateProvider_UpdateEpochAsync_System_Fabric_Epoch_System_Int64_System_Threading_CancellationToken_">UpdateEpochAsync(Epoch, Int64, CancellationToken)</a> 
+method enables the service to maintain a progress vector, which is a list of each epoch that the replica has received, and the maximum LSN that they contained. </p>
+<p>
+    The progress vector data along with the current applied maximum LSN is useful for a Secondary replica to send during the copy operation to describe the state of the replica.</p> 
+<p>
+    Comparing progress vectors that are received from Secondary replicas during the copy operation enables Primary replicas to determine whether the Secondary replica is up-to-date, 
+    what state must be sent to the Secondary replica, and whether the Secondary replica has made false progress. </p>
+<p>False progress means that a secondary replica reports an LSN in a previous epoch was greater than the LSN that the Primary replica has in its progress vector. </p>
+
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+      <h2>Details</h2>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Namespace</h4>    
+          <div>System.Fabric</div>
+        </div>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Assembly</h4>    
+          <div>System.Fabric.dll</div>
+        </div>
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/d1d5acab8c02cc720733.reference.js"></script>
+  </body>
+</html>

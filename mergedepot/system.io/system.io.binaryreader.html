@@ -1,0 +1,2026 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="BinaryReader class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/System.IO/System.IO.BinaryReader.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO/System.IO.BinaryReader.yml">
+<meta name="APIName" content="System.IO.BinaryReader">
+<meta name="APIName" content="System.IO.BinaryReader..ctor">
+<meta name="APIName" content="System.IO.BinaryReader.BaseStream">
+<meta name="APIName" content="System.IO.BinaryReader.Close">
+<meta name="APIName" content="System.IO.BinaryReader.Dispose">
+<meta name="APIName" content="System.IO.BinaryReader.FillBuffer">
+<meta name="APIName" content="System.IO.BinaryReader.PeekChar">
+<meta name="APIName" content="System.IO.BinaryReader.Read">
+<meta name="APIName" content="System.IO.BinaryReader.Read7BitEncodedInt">
+<meta name="APIName" content="System.IO.BinaryReader.ReadBoolean">
+<meta name="APIName" content="System.IO.BinaryReader.ReadByte">
+<meta name="APIName" content="System.IO.BinaryReader.ReadBytes">
+<meta name="APIName" content="System.IO.BinaryReader.ReadChar">
+<meta name="APIName" content="System.IO.BinaryReader.ReadChars">
+<meta name="APIName" content="System.IO.BinaryReader.ReadDecimal">
+<meta name="APIName" content="System.IO.BinaryReader.ReadDouble">
+<meta name="APIName" content="System.IO.BinaryReader.ReadInt16">
+<meta name="APIName" content="System.IO.BinaryReader.ReadInt32">
+<meta name="APIName" content="System.IO.BinaryReader.ReadInt64">
+<meta name="APIName" content="System.IO.BinaryReader.ReadSByte">
+<meta name="APIName" content="System.IO.BinaryReader.ReadSingle">
+<meta name="APIName" content="System.IO.BinaryReader.ReadString">
+<meta name="APIName" content="System.IO.BinaryReader.ReadUInt16">
+<meta name="APIName" content="System.IO.BinaryReader.ReadUInt32">
+<meta name="APIName" content="System.IO.BinaryReader.ReadUInt64">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="1dd07140-7d6b-ea46-23a5-a0a090b02fa5">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Reads primitive data types as binary values in a specific encoding.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.BinaryReader">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.io/system.io.binaryreader" rel="canonical">
+    <title>BinaryReader class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_BinaryReader">
+      <span class="lang-csharp">BinaryReader</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Reads primitive data types as binary values in a specific encoding.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public class BinaryReader : IDisposable</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">BinaryReader</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <p>The BinaryReader class provides methods that simplify reading primitive data types from a stream. For example, you can use the <a class="xref" href="system.io.binaryreader#System_IO_BinaryReader_ReadBoolean_">ReadBoolean</a> method to read the next byte as a Boolean value and advance the current position in the stream by one byte. The class includes read methods that support different data types.  </p>
+<p> When you create a new instance of the BinaryReader class, you provide the stream to read from, and optionally specify the type of encoding and whether to leave the stream open after disposing the BinaryReader object. If you do not specify an encoding type, UTF-8 is used.  </p>
+<div class="IMPORTANT"><h5>Important</h5><p> This type implements the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <a class="xref" href="../system/system.idisposable#System_IDisposable_Dispose_">Dispose</a> method in a <code>try</code>/<code>catch</code> block. To dispose of it indirectly, use a language construct such as <code>using</code> (in C#) or <code>Using</code> (in Visual Basic). For more information, see the â€œUsing an Object that Implements IDisposableâ€ section in the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface topic.</p>
+</div>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader__ctor_System_IO_Stream_">BinaryReader(Stream)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryReader"> class based on the specified stream and using UTF-8 encoding.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader__ctor_System_IO_Stream_System_Text_Encoding_">BinaryReader(Stream,Encoding)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryReader"> class based on the specified stream and character encoding.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader__ctor_System_IO_Stream_System_Text_Encoding_System_Boolean_">BinaryReader(Stream,Encoding,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryReader"> class based on the specified stream and character encoding, and optionally leaves the stream open.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_BaseStream">BaseStream</a></div>
+          </td>
+            <td>
+            <p>Exposes access to the underlying stream of the <see cref="T:System.IO.BinaryReader">.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_Close">Close()</a></div>
+          </td>
+            <td>
+            <p>Closes the current reader and the underlying stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_Dispose">Dispose()</a></div>
+          </td>
+            <td>
+            <p>Releases all resources used by the current instance of the <see cref="T:System.IO.BinaryReader"> class.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.BinaryReader"> class and optionally releases the managed resources.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_FillBuffer_System_Int32_">FillBuffer(Int32)</a></div>
+          </td>
+            <td>
+            <p>Fills the internal buffer with the specified number of bytes read from the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_PeekChar">PeekChar()</a></div>
+          </td>
+            <td>
+            <p>Returns the next available character and does not advance the byte or character position.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_Read">Read()</a></div>
+          </td>
+            <td>
+            <p>Reads characters from the underlying stream and advances the current position of the stream in accordance with the <code>Encoding</code> used and the specific character being read from the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_Read_System_Byte___System_Int32_System_Int32_">Read(Byte[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads the specified number of bytes from the stream, starting from a specified point in the byte array.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_Read_System_Char___System_Int32_System_Int32_">Read(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads the specified number of characters from the stream, starting from a specified point in the character array.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_Read7BitEncodedInt">Read7BitEncodedInt()</a></div>
+          </td>
+            <td>
+            <p>Reads in a 32-bit integer in compressed format.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadBoolean">ReadBoolean()</a></div>
+          </td>
+            <td>
+            <p>Reads a <code>Boolean</code> value from the current stream and advances the current position of the stream by one byte.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadByte">ReadByte()</a></div>
+          </td>
+            <td>
+            <p>Reads the next byte from the current stream and advances the current position of the stream by one byte.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadBytes_System_Int32_">ReadBytes(Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads the specified number of bytes from the current stream into a byte array and advances the current position by that number of bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadChar">ReadChar()</a></div>
+          </td>
+            <td>
+            <p>Reads the next character from the current stream and advances the current position of the stream in accordance with the <code>Encoding</code> used and the specific character being read from the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadChars_System_Int32_">ReadChars(Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads the specified number of characters from the current stream, returns the data in a character array, and advances the current position in accordance with the <code>Encoding</code> used and the specific character being read from the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadDecimal">ReadDecimal()</a></div>
+          </td>
+            <td>
+            <p>Reads a decimal value from the current stream and advances the current position of the stream by sixteen bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadDouble">ReadDouble()</a></div>
+          </td>
+            <td>
+            <p>Reads an 8-byte floating point value from the current stream and advances the current position of the stream by eight bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadInt16">ReadInt16()</a></div>
+          </td>
+            <td>
+            <p>Reads a 2-byte signed integer from the current stream and advances the current position of the stream by two bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadInt32">ReadInt32()</a></div>
+          </td>
+            <td>
+            <p>Reads a 4-byte signed integer from the current stream and advances the current position of the stream by four bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadInt64">ReadInt64()</a></div>
+          </td>
+            <td>
+            <p>Reads an 8-byte signed integer from the current stream and advances the current position of the stream by eight bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadSByte">ReadSByte()</a></div>
+          </td>
+            <td>
+            <p>Reads a signed byte from this stream and advances the current position of the stream by one byte.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadSingle">ReadSingle()</a></div>
+          </td>
+            <td>
+            <p>Reads a 4-byte floating point value from the current stream and advances the current position of the stream by four bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadString">ReadString()</a></div>
+          </td>
+            <td>
+            <p>Reads a string from the current stream. The string is prefixed with the length, encoded as an integer seven bits at a time.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadUInt16">ReadUInt16()</a></div>
+          </td>
+            <td>
+            <p>Reads a 2-byte unsigned integer from the current stream using little-endian encoding and advances the position of the stream by two bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadUInt32">ReadUInt32()</a></div>
+          </td>
+            <td>
+            <p>Reads a 4-byte unsigned integer from the current stream and advances the position of the stream by four bytes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_BinaryReader_ReadUInt64">ReadUInt64()</a></div>
+          </td>
+            <td>
+            <p>Reads an 8-byte unsigned integer from the current stream and advances the position of the stream by eight bytes.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader__ctor_System_IO_Stream_">
+    
+            <a id="System_IO_BinaryReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BinaryReader(Stream)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryReader"> class based on the specified stream and using UTF-8 encoding.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public BinaryReader (System.IO.Stream input);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>input</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The input stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader__ctor_System_IO_Stream_System_Text_Encoding_">
+    
+            <a id="System_IO_BinaryReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BinaryReader(Stream,Encoding)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryReader"> class based on the specified stream and character encoding.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public BinaryReader (System.IO.Stream input, System.Text.Encoding encoding);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>input</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The input stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader__ctor_System_IO_Stream_System_Text_Encoding_System_Boolean_">
+    
+            <a id="System_IO_BinaryReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BinaryReader(Stream,Encoding,Boolean)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.BinaryReader"> class based on the specified stream and character encoding, and optionally leaves the stream open.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public BinaryReader (System.IO.Stream input, System.Text.Encoding encoding, bool leaveOpen);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>input</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The input stream.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>leaveOpen</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to leave the stream open after the <see cref="T:System.IO.BinaryReader"> object is disposed; otherwise, <code>false</code>.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_BaseStream">
+    
+            <a id="System_IO_BinaryReader_BaseStream_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BaseStream</div>        
+          </div>
+    
+            <p>Exposes access to the underlying stream of the <see cref="T:System.IO.BinaryReader">.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.IO.Stream BaseStream { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </div>
+                  <p>The underlying stream associated with the <code>BinaryReader</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <div class="CAUTION"><h5>Caution</h5><p> Using the underlying stream while reading or while using the <code>BinaryReader</code> can cause data loss and corruption. For example, the same bytes might be read more than once, bytes might be skipped, or character reading might become unpredictable.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write `Double` data to memory by using the `BinaryReader` and <xref:system.io.binarywriter> classes on top of the <xref:system.io.memorystream> class. `MemoryStream` only reads and writes `Byte` data.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWDouble#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </xref:system.io.memorystream></xref:system.io.binarywriter></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_Close">
+    
+            <a id="System_IO_BinaryReader_Close_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Close()</div>        
+          </div>
+    
+            <p>Closes the current reader and the underlying stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual void Close ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This implementation of <code>Close</code> calls the <a class="xref" href="system.io.binaryreader#System_IO_BinaryReader_Dispose_">Dispose</a> method passing a <code>true</code> value.  </p>
+<p> Flushing the stream will not flush its underlying encoder unless you explicitly call <a class="xref" href="system.io.stream#System_IO_Stream_Flush_">Flush</a> or <code>Close</code>. Setting <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> to <code>true</code> means that data will be flushed from the buffer to the stream, but the encoder state will not be flushed. This allows the encoder to keep its state (partial characters) so that it can encode the next block of characters correctly. This scenario affects UTF8 and UTF7 where certain characters can only be encoded after the encoder receives the adjacent character or characters.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_Dispose">
+    
+            <a id="System_IO_BinaryReader_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose()</div>        
+          </div>
+    
+            <p>Releases all resources used by the current instance of the <see cref="T:System.IO.BinaryReader"> class.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Dispose ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Call <code>Dispose</code> when you are finished using the <a class="xref" href="system.io.binaryreader">BinaryReader</a>. The <code>Dispose</code> method leaves the <a class="xref" href="system.io.binaryreader">BinaryReader</a> in an unusable state. After calling <code>Dispose</code>, you must release all references to the <a class="xref" href="system.io.binaryreader">BinaryReader</a> so the garbage collector can reclaim the memory that the <a class="xref" href="system.io.binaryreader">BinaryReader</a> was occupying.  </p>
+<p> For more information, see <a href="../topic/cleaning%20up%20unmanaged%20resources">Cleaning Up Unmanaged Resources</a> and <a href="../topic/implementing%20a%20dispose%20method">Implementing a Dispose Method</a>.  </p>
+<div class="NOTE"><h5>Note</h5><p> Always call <code>Dispose</code> before you release your last reference to the <a class="xref" href="system.io.binaryreader">BinaryReader</a>. Otherwise, the resources it is using will not be freed until the garbage collector calls the <a class="xref" href="system.io.binaryreader">BinaryReader</a> object&#39;s <code>Finalize</code> method.</p>
+</div>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_Dispose_System_Boolean_">
+    
+            <a id="System_IO_BinaryReader_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+            <p>Releases the unmanaged resources used by the <see cref="T:System.IO.BinaryReader"> class and optionally releases the managed resources.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only unmanaged resources.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method is called by <code>Dispose</code> and <a class="xref" href="../system/system.object#System_Object_Finalize_">Finalize</a>. By default, this method specifies the  parameter as <code>true</code>. <a class="xref" href="../system/system.object#System_Object_Finalize_">Finalize</a> specifies the  parameter as <code>false</code>.  </p>
+<p> When the  parameter is <code>true</code>, this method releases all resources held by any managed objects that this <a class="xref" href="system.io.binaryreader">BinaryReader</a> references. This method invokes the <code>Dispose</code> method of each referenced object.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_FillBuffer_System_Int32_">
+    
+            <a id="System_IO_BinaryReader_FillBuffer_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FillBuffer(Int32)</div>        
+          </div>
+    
+            <p>Fills the internal buffer with the specified number of bytes read from the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void FillBuffer (int numBytes);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>numBytes</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The number of bytes to be read.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The internal buffer size is the larger value between 16 and the value returned by <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetMaxByteCount_">GetMaxByteCount</a> for the specified encoding.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_PeekChar">
+    
+            <a id="System_IO_BinaryReader_PeekChar_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PeekChar()</div>        
+          </div>
+    
+            <p>Returns the next available character and does not advance the byte or character position.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int PeekChar ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The next available character, or -1 if no more characters are available or the stream does not support seeking.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If surrogate characters can be expected in the stream use the <a class="xref" href="system.io.binaryreader#System_IO_BinaryReader_ReadChars_">ReadChars</a> method, then set the stream back to the original position.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_Read">
+    
+            <a id="System_IO_BinaryReader_Read_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Read()</div>        
+          </div>
+    
+            <p>Reads characters from the underlying stream and advances the current position of the stream in accordance with the <code>Encoding</code> used and the specific character being read from the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int Read ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The next character from the input stream, or -1 if no characters are currently available.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to read and write data using memory as a backing store. This example displays a list of invalid file path characters to the console. Although the code tries to display a list of all invalid file path characters, not all of the characters are within the displayable set of characters. Because the list of invalid characters can vary based on the system, output for this code may also vary.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWChar2#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_Read_System_Byte___System_Int32_System_Int32_">
+    
+            <a id="System_IO_BinaryReader_Read_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Read(Byte[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Reads the specified number of bytes from the stream, starting from a specified point in the byte array.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int Read (byte[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to read data into.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The starting point in the buffer at which to begin reading into the buffer.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The number of bytes to read.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The number of bytes read into . This might be less than the number of bytes requested if that many bytes are not available, or it might be zero if the end of the stream is reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read operation.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to write binary data by using memory as a backing store. It displays a message to the console that indicates whether the data was written correctly.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWBytes2#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]  
+  
+ This example reads the contents of a file and displays each byte's numeric value in 16-column format. The end of the file that is being read is detected when the Read method returns zero bytes.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#6](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#6)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_Read_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_BinaryReader_Read_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Read(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Reads the specified number of characters from the stream, starting from a specified point in the character array.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int Read (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The buffer to read data into.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The starting point in the buffer at which to begin reading into the buffer.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The number of characters to read.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The total number of characters read into the buffer. This might be less than the number of characters requested if that many characters are not currently available, or it might be zero if the end of the stream is reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read operation.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to read and write data using memory as a backing store. This example displays a list of invalid file path characters to the console. Although the code tries to display a list of all invalid file path characters, not all of the characters are within the displayable set of characters. Because the list of invalid characters can vary based on the system, output for this code may also vary.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWChars2#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_Read7BitEncodedInt">
+    
+            <a id="System_IO_BinaryReader_Read7BitEncodedInt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Read7BitEncodedInt()</div>        
+          </div>
+    
+            <p>Reads in a 32-bit integer in compressed format.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected int Read7BitEncodedInt ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>A 32-bit integer in compressed format.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> If the integer will fit in seven bits, the integer takes only one byte of space. The integer is expected to have been written through <a class="xref" href="system.io.binarywriter#System_IO_BinaryWriter_Write7BitEncodedInt_">Write7BitEncodedInt</a>.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadBoolean">
+    
+            <a id="System_IO_BinaryReader_ReadBoolean_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadBoolean()</div>        
+          </div>
+    
+            <p>Reads a <code>Boolean</code> value from the current stream and advances the current position of the stream by one byte.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual bool ReadBoolean ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the byte is nonzero; otherwise, <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadByte">
+    
+            <a id="System_IO_BinaryReader_ReadByte_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadByte()</div>        
+          </div>
+    
+            <p>Reads the next byte from the current stream and advances the current position of the stream by one byte.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual byte ReadByte ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a></div>
+                  </div>
+                  <p>The next byte read from the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> Because of data formatting conflicts, using this method with the following encodings is not recommended:  </p>
+<ul>
+<li><p>UTF-7  </p>
+</li>
+<li><p>ISO-2022-JP  </p>
+</li>
+<li><p>ISCII  </p>
+<p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to write binary data using memory as a backing store, and then verify that the data was written correctly.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWByte#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadBytes_System_Int32_">
+    
+            <a id="System_IO_BinaryReader_ReadBytes_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadBytes(Int32)</div>        
+          </div>
+    
+            <p>Reads the specified number of bytes from the current stream into a byte array and advances the current position by that number of bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual byte[] ReadBytes (int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The number of bytes to read. This value must be 0 or a non-negative number or an exception will occur.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>A byte array containing data read from the underlying stream. This might be less than the number of bytes requested if the end of the stream is reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read operation.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to write binary data using memory as a backing store, and then verify that the data was written correctly.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWBytes1#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]  
+  
+ This example reads the contents of a file and displays it to the console as dump text. The end of the file that is being read is detected when the length of the <xref:system.byte> array returned from ReadBytes is zero.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#6](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#6)]
+    
+    
+        </xref:system.byte></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadChar">
+    
+            <a id="System_IO_BinaryReader_ReadChar_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadChar()</div>        
+          </div>
+    
+            <p>Reads the next character from the current stream and advances the current position of the stream in accordance with the <code>Encoding</code> used and the specific character being read from the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual char ReadChar ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a></div>
+                  </div>
+                  <p>A character read from the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If the ReadChar method attempts to read a surrogate character in the stream an exception will be raised and the position in the stream will advance. The position is restored to the original location before ReadChar was called if the stream is seekable; however, if the stream is unseekable, the position will not be corrected. If surrogate characters can be expected in the stream, use the <a class="xref" href="system.io.binaryreader#System_IO_BinaryReader_ReadChars_">ReadChars</a> method instead.  </p>
+<p> Because of data formatting conflicts, using this method with the following encodings is not recommended:  </p>
+<ul>
+<li><p>UTF-7  </p>
+</li>
+<li><p>ISO-2022-JP  </p>
+</li>
+<li><p>ISCII  </p>
+<p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+</li>
+</ul>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWChar1#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadChars_System_Int32_">
+    
+            <a id="System_IO_BinaryReader_ReadChars_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadChars(Int32)</div>        
+          </div>
+    
+            <p>Reads the specified number of characters from the current stream, returns the data in a character array, and advances the current position in accordance with the <code>Encoding</code> used and the specific character being read from the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual char[] ReadChars (int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The number of characters to read.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </div>
+                  <p>A character array containing data read from the underlying stream. This might be less than the number of characters requested if the end of the stream is reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read operation.  </p>
+<p> When reading from network streams, in some rare cases, the ReadChars method might read an extra character from the stream if the <a class="xref" href="system.io.binaryreader">BinaryReader</a> was constructed with Unicode encoding. If this occurs, you can use the <a class="xref" href="system.io.binaryreader#System_IO_BinaryReader_ReadBytes_">ReadBytes</a> method to read a fixed-length byte array, and then pass that array to the ReadChars method.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write data using memory as a backing store.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWChars1#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadDecimal">
+    
+            <a id="System_IO_BinaryReader_ReadDecimal_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadDecimal()</div>        
+          </div>
+    
+            <p>Reads a decimal value from the current stream and advances the current position of the stream by sixteen bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual decimal ReadDecimal ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.decimal">Decimal</a></div>
+                  </div>
+                  <p>A decimal value read from the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadDouble">
+    
+            <a id="System_IO_BinaryReader_ReadDouble_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadDouble()</div>        
+          </div>
+    
+            <p>Reads an 8-byte floating point value from the current stream and advances the current position of the stream by eight bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual double ReadDouble ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </div>
+                  <p>An 8-byte floating point value read from the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> <code>BinaryReader</code> reads this data type in little-endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example shows how to read and write `Double` data to memory by using the `BinaryReader` and <xref:system.io.binarywriter> classes on top of the <xref:system.io.memorystream> class. `MemoryStream` only reads and writes `Byte` data.  
+  
+ [!CODE [System.IO.BinaryReaderWriter.RWDouble#1](../../add/codesnippet/system.io.binaryreaderwriter.md)]
+    
+    
+        </xref:system.io.memorystream></xref:system.io.binarywriter></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadInt16">
+    
+            <a id="System_IO_BinaryReader_ReadInt16_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadInt16()</div>        
+          </div>
+    
+            <p>Reads a 2-byte signed integer from the current stream and advances the current position of the stream by two bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual short ReadInt16 ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int16">Int16</a></div>
+                  </div>
+                  <p>A 2-byte signed integer read from the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> <code>BinaryReader</code> reads this data type in little-endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadInt32">
+    
+            <a id="System_IO_BinaryReader_ReadInt32_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadInt32()</div>        
+          </div>
+    
+            <p>Reads a 4-byte signed integer from the current stream and advances the current position of the stream by four bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual int ReadInt32 ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>A 4-byte signed integer read from the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> <a class="xref" href="system.io.binaryreader">BinaryReader</a> reads this data type in little-endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadInt64">
+    
+            <a id="System_IO_BinaryReader_ReadInt64_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadInt64()</div>        
+          </div>
+    
+            <p>Reads an 8-byte signed integer from the current stream and advances the current position of the stream by eight bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual long ReadInt64 ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int64">Int64</a></div>
+                  </div>
+                  <p>An 8-byte signed integer read from the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> <code>BinaryReader</code> reads this data type in little-endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadSByte">
+    
+            <a id="System_IO_BinaryReader_ReadSByte_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadSByte()</div>        
+          </div>
+    
+            <p>Reads a signed byte from this stream and advances the current position of the stream by one byte.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual sbyte ReadSByte ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.sbyte">SByte</a></div>
+                  </div>
+                  <p>A signed byte read from the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadSingle">
+    
+            <a id="System_IO_BinaryReader_ReadSingle_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadSingle()</div>        
+          </div>
+    
+            <p>Reads a 4-byte floating point value from the current stream and advances the current position of the stream by four bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual float ReadSingle ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.single">Single</a></div>
+                  </div>
+                  <p>A 4-byte floating point value read from the current stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> <code>BinaryReader</code> reads this data type in little-endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadString">
+    
+            <a id="System_IO_BinaryReader_ReadString_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadString()</div>        
+          </div>
+    
+            <p>Reads a string from the current stream. The string is prefixed with the length, encoded as an integer seven bits at a time.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual string ReadString ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The string being read.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadUInt16">
+    
+            <a id="System_IO_BinaryReader_ReadUInt16_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadUInt16()</div>        
+          </div>
+    
+            <p>Reads a 2-byte unsigned integer from the current stream using little-endian encoding and advances the position of the stream by two bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual ushort ReadUInt16 ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.uint16">UInt16</a></div>
+                  </div>
+                  <p>A 2-byte unsigned integer read from this stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> <code>BinaryReader</code> reads this data type in little-endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadUInt32">
+    
+            <a id="System_IO_BinaryReader_ReadUInt32_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadUInt32()</div>        
+          </div>
+    
+            <p>Reads a 4-byte unsigned integer from the current stream and advances the position of the stream by four bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual uint ReadUInt32 ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.uint32">UInt32</a></div>
+                  </div>
+                  <p>A 4-byte unsigned integer read from this stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> <code>BinaryReader</code> reads this data type in little-endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_BinaryReader_ReadUInt64">
+    
+            <a id="System_IO_BinaryReader_ReadUInt64_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadUInt64()</div>        
+          </div>
+    
+            <p>Reads an 8-byte unsigned integer from the current stream and advances the position of the stream by eight bytes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual ulong ReadUInt64 ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.uint64">UInt64</a></div>
+                  </div>
+                  <p>An 8-byte unsigned integer read from this stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p><a class="xref" href="system.io.binaryreader">BinaryReader</a> does not restore the file position after an unsuccessful read.  </p>
+<p> <code>BinaryReader</code> reads this data type in little-endian format.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates how to store and retrieve application settings in a file.  
+  
+ [!CODE [System.IO.BinaryReaderWriter#1](../CodeSnippet/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter#1)]
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

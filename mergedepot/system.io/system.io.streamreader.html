@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="StreamReader class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/System.IO/System.IO.StreamReader.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.IO/System.IO.StreamReader.yml">
+<meta name="APIName" content="System.IO.StreamReader">
+<meta name="APIName" content="System.IO.StreamReader..ctor">
+<meta name="APIName" content="System.IO.StreamReader.BaseStream">
+<meta name="APIName" content="System.IO.StreamReader.Close">
+<meta name="APIName" content="System.IO.StreamReader.CurrentEncoding">
+<meta name="APIName" content="System.IO.StreamReader.DiscardBufferedData">
+<meta name="APIName" content="System.IO.StreamReader.Dispose">
+<meta name="APIName" content="System.IO.StreamReader.EndOfStream">
+<meta name="APIName" content="System.IO.StreamReader.Null">
+<meta name="APIName" content="System.IO.StreamReader.Peek">
+<meta name="APIName" content="System.IO.StreamReader.Read">
+<meta name="APIName" content="System.IO.StreamReader.ReadAsync">
+<meta name="APIName" content="System.IO.StreamReader.ReadBlock">
+<meta name="APIName" content="System.IO.StreamReader.ReadBlockAsync">
+<meta name="APIName" content="System.IO.StreamReader.ReadLine">
+<meta name="APIName" content="System.IO.StreamReader.ReadLineAsync">
+<meta name="APIName" content="System.IO.StreamReader.ReadToEnd">
+<meta name="APIName" content="System.IO.StreamReader.ReadToEndAsync">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="1eaec40b-9e39-f28e-a16b-fd32e82d72fe">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Implements a  that reads characters from a byte stream in a particular encoding.  
+ To browse the .NET Framework source code for this type, see the Reference Source.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.IO.StreamReader">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.io/system.io.streamreader" rel="canonical">
+    <title>StreamReader class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_IO_StreamReader">
+      <span class="lang-csharp">StreamReader</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Implements a <see cref="T:System.IO.TextReader"> that reads characters from a byte stream in a particular encoding.  <p>
+<p> To browse the .NET Framework source code for this type, see the <a href="http://referencesource.microsoft.com/#mscorlib/system/io/streamreader.cs#b5fe1efcec14de32">Reference Source</a>.</p>
+</see>
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public class StreamReader : System.IO.TextReader</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject">MarshalByRefObject</a>
+          </div>
+        </li>
+        <li class="l2">
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textreader">System.IO.TextReader</a>
+          </div>
+        </li>
+      <li class="l3">
+        <div class="xref">
+          <div class="lang-csharp">StreamReader</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textreader#System_IO_TextReader_Dispose">Dispose()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.io.textreader#System_IO_TextReader_Synchronized_System_IO_TextReader_">Synchronized(TextReader)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_CreateObjRef_System_Type_">CreateObjRef(Type)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_GetLifetimeService">GetLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_InitializeLifetimeService">InitializeLifetimeService()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.marshalbyrefobject#System_MarshalByRefObject_MemberwiseClone_System_Boolean_">MemberwiseClone(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <div class="NOTE"><h5>Note</h5><p> To view the .NET Framework source code for this type, see the <a href="http://referencesource.microsoft.com/#mscorlib/system/io/streamreader.cs#b5fe1efcec14de32">Reference Source</a>. You can browse through the source code online, download the reference for offline viewing, and step through the sources (including patches and updates) during debugging; see <a href="http://referencesource.microsoft.com/">instructions</a>.  </p>
+</div>
+<p> StreamReader is designed for character input in a particular encoding, whereas the <a class="xref" href="system.io.stream">Stream</a> class is designed for byte input and output. Use StreamReader for reading lines of information from a standard text file.  </p>
+<div class="IMPORTANT"><h5>Important</h5><p> This type implements the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface. When you have finished using the type, you should dispose of it either directly or indirectly. To dispose of the type directly, call its <a class="xref" href="../system/system.idisposable#System_IDisposable_Dispose_">Dispose</a> method in a <code>try</code>/<code>catch</code> block. To dispose of it indirectly, use a language construct such as <code>using</code> (in C#) or <code>Using</code> (in Visual Basic). For more information, see the â€œUsing an Object that Implements IDisposableâ€ section in the <a class="xref" href="../system/system.idisposable">IDisposable</a> interface topic.  </p>
+</div>
+<p> StreamReader defaults to UTF-8 encoding unless specified otherwise, instead of defaulting to the ANSI code page for the current system. UTF-8 handles Unicode characters correctly and provides consistent results on localized versions of the operating system. If you get the current character encoding using the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_CurrentEncoding_">CurrentEncoding</a> property, the value is not reliable until after the first <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Read_">Read</a> method, since encoding auto detection is not done until the first call to a <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Read_">Read</a> method.  </p>
+<p> By default, a StreamReader is not thread safe. See <a class="xref" href="system.io.textreader#System_IO_TextReader_Synchronized_">Synchronized</a> for a thread-safe wrapper.  </p>
+<p> The <a href="assetId:///M:System.IO.StreamReader.Read(System.Char[],System.Int32,System.Int32)?qualifyHint=False&amp;autoUpgrade=False">Read(Char[],â€‚Int32,â€‚Int32)</a> and <a href="assetId:///M:System.IO.StreamWriter.Write(System.Char[],System.Int32,System.Int32)?qualifyHint=False&amp;autoUpgrade=False">Write(Char[],â€‚Int32,â€‚Int32)</a> method overloads read and write the number of characters specified by the  parameter. These are to be distinguished from <a class="xref" href="system.io.bufferedstream#System_IO_BufferedStream_Read_">Read</a> and <a class="xref" href="system.io.bufferedstream#System_IO_BufferedStream_Write_">Write</a>, which read and write the number of bytes specified by the  parameter. Use the <a class="xref" href="system.io.bufferedstream">BufferedStream</a> methods only for reading and writing an integral number of byte array elements.  </p>
+<div class="NOTE"><h5>Note</h5><p> When reading from a <a class="xref" href="system.io.stream">Stream</a>, it is more efficient to use a buffer that is the same size as the internal buffer of the stream.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader__ctor_System_IO_Stream_">StreamReader(Stream)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified stream.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader__ctor_System_String_">StreamReader(String)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified file name.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader__ctor_System_IO_Stream_System_Boolean_">StreamReader(Stream,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified stream, with the specified byte order mark detection option.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader__ctor_System_IO_Stream_System_Text_Encoding_">StreamReader(Stream,Encoding)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified stream, with the specified character encoding.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader__ctor_System_String_System_Boolean_">StreamReader(String,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified file name, with the specified byte order mark detection option.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader__ctor_System_String_System_Text_Encoding_">StreamReader(String,Encoding)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified file name, with the specified character encoding.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader__ctor_System_IO_Stream_System_Text_Encoding_System_Boolean_">StreamReader(Stream,Encoding,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified stream, with the specified character encoding and byte order mark detection option.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader__ctor_System_String_System_Text_Encoding_System_Boolean_">StreamReader(String,Encoding,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified file name, with the specified character encoding and byte order mark detection option.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader__ctor_System_IO_Stream_System_Text_Encoding_System_Boolean_System_Int32_">StreamReader(Stream,Encoding,Boolean,Int32)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified stream, with the specified character encoding, byte order mark detection option, and buffer size.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader__ctor_System_String_System_Text_Encoding_System_Boolean_System_Int32_">StreamReader(String,Encoding,Boolean,Int32)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified file name, with the specified character encoding, byte order mark detection option, and buffer size.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader__ctor_System_IO_Stream_System_Text_Encoding_System_Boolean_System_Int32_System_Boolean_">StreamReader(Stream,Encoding,Boolean,Int32,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified stream based on the specified character encoding, byte order mark detection option, and buffer size, and optionally leaves the stream open.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Fields
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_Null">Null</a></div>
+          </td>
+            <td>
+            <p>A <see cref="T:System.IO.StreamReader"> object around an empty stream.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_BaseStream">BaseStream</a></div>
+          </td>
+            <td>
+            <p>Returns the underlying stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_CurrentEncoding">CurrentEncoding</a></div>
+          </td>
+            <td>
+            <p>Gets the current character encoding that the current <see cref="T:System.IO.StreamReader"> object is using.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_EndOfStream">EndOfStream</a></div>
+          </td>
+            <td>
+            <p>Gets a value that indicates whether the current stream position is at the end of the stream.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_Close">Close()</a></div>
+          </td>
+            <td>
+            <p>Closes the <see cref="T:System.IO.StreamReader"> object and the underlying stream, and releases any system resources associated with the reader.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_DiscardBufferedData">DiscardBufferedData()</a></div>
+          </td>
+            <td>
+            <p>Clears the internal buffer.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Closes the underlying stream, releases the unmanaged resources used by the <see cref="T:System.IO.StreamReader">, and optionally releases the managed resources.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_Peek">Peek()</a></div>
+          </td>
+            <td>
+            <p>Returns the next available character but does not consume it.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_Read">Read()</a></div>
+          </td>
+            <td>
+            <p>Reads the next character from the input stream and advances the character position by one character.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_Read_System_Char___System_Int32_System_Int32_">Read(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads a specified maximum of characters from the current stream into a buffer, beginning at the specified index.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_ReadAsync_System_Char___System_Int32_System_Int32_">ReadAsync(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads a specified maximum number of characters from the current stream asynchronously and writes the data to a buffer, beginning at the specified index.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_ReadBlock_System_Char___System_Int32_System_Int32_">ReadBlock(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads a specified maximum number of characters from the current stream and writes the data to a buffer, beginning at the specified index.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_ReadBlockAsync_System_Char___System_Int32_System_Int32_">ReadBlockAsync(Char[],Int32,Int32)</a></div>
+          </td>
+            <td>
+            <p>Reads a specified maximum number of characters from the current stream asynchronously and writes the data to a buffer, beginning at the specified index.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_ReadLine">ReadLine()</a></div>
+          </td>
+            <td>
+            <p>Reads a line of characters from the current stream and returns the data as a string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_ReadLineAsync">ReadLineAsync()</a></div>
+          </td>
+            <td>
+            <p>Reads a line of characters asynchronously from the current stream and returns the data as a string.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_ReadToEnd">ReadToEnd()</a></div>
+          </td>
+            <td>
+            <p>Reads all characters from the current position to the end of the stream.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#System_IO_StreamReader_ReadToEndAsync">ReadToEndAsync()</a></div>
+          </td>
+            <td>
+            <p>Reads all characters from the current position to the end of the stream asynchronously and returns them as one string.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader__ctor_System_IO_Stream_">
+    
+            <a id="System_IO_StreamReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamReader(Stream)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified stream.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamReader (System.IO.Stream stream);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to be read.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor initializes the encoding to <a class="xref" href="../system.text/system.text.utf8encoding">UTF8Encoding</a>, the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_BaseStream_">BaseStream</a> property using the  parameter, and the internal buffer size to 1024 bytes.  </p>
+<p> The <a class="xref" href="system.io.streamreader">StreamReader</a> object calls <a class="xref" href="system.io.stream#System_IO_Stream_Dispose">Dispose()</a> on the provided <a class="xref" href="system.io.stream">Stream</a> object when <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Dispose_">Dispose</a> is called.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this <xref:system.io.streamreader> constructor.  
+  
+ [!CODE [strmreader ctor1#1](../CodeSnippet/VS_Snippets_CLR/StrmReader Ctor1#1)]
+    
+    
+        </xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader__ctor_System_String_">
+    
+            <a id="System_IO_StreamReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamReader(String)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified file name.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamReader (string path);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The complete file path to be read.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The complete file path is specified by the  parameter. This constructor initializes the encoding to <a class="xref" href="../system.text/system.text.utf8encoding">UTF8Encoding</a> and the buffer size to 1024 bytes.  </p>
+<p> The  parameter can be a file name, including a file on a Universal Naming Convention (UNC) share.  </p>
+<p> The  parameter is not required to be a file stored on disk; it can be any part of a system that supports access using streams.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this <xref:system.io.streamreader> constructor.  
+  
+ [!CODE [strmreader ctor2#1](../CodeSnippet/VS_Snippets_CLR/StrmReader Ctor2#1)]
+    
+    
+        </xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader__ctor_System_IO_Stream_System_Boolean_">
+    
+            <a id="System_IO_StreamReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamReader(Stream,Boolean)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified stream, with the specified byte order mark detection option.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamReader (System.IO.Stream stream, bool detectEncodingFromByteOrderMarks);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to be read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>detectEncodingFromByteOrderMarks</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>Indicates whether to look for byte order marks at the beginning of the file.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor initializes the encoding to <a class="xref" href="../system.text/system.text.utf8encoding">UTF8Encoding</a>, the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_BaseStream_">BaseStream</a> property using the  parameter, and the internal buffer size to 1024 bytes.  </p>
+<p> The  parameter detects the encoding by looking at the first three bytes of the stream. It automatically recognizes UTF-8, little-endian Unicode, and big-endian Unicode text if the file starts with the appropriate byte order marks. See the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method for more information.  </p>
+<p> The <a class="xref" href="system.io.streamreader">StreamReader</a> object calls <a class="xref" href="system.io.stream#System_IO_Stream_Dispose">Dispose()</a> on the provided <a class="xref" href="system.io.stream">Stream</a> object when <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Dispose_">Dispose</a> is called.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this <xref:system.io.streamreader> constructor.  
+  
+ [!CODE [System.IO.StreamReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#2)]
+    
+    
+        </xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader__ctor_System_IO_Stream_System_Text_Encoding_">
+    
+            <a id="System_IO_StreamReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamReader(Stream,Encoding)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified stream, with the specified character encoding.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamReader (System.IO.Stream stream, System.Text.Encoding encoding);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to be read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The character encoding is set by the  parameter, and the buffer size is set to 1024 bytes. The <a class="xref" href="system.io.streamreader">StreamReader</a> object attempts to  detect the encoding by looking at the first three bytes of the stream. It automatically recognizes UTF-8, little-endian Unicode, and big-endian Unicode text if the file starts with the appropriate byte order marks. Otherwise, the user-provided encoding is used. See the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method for more information.  </p>
+<p> The <a class="xref" href="system.io.streamreader">StreamReader</a> object calls <a class="xref" href="system.io.stream#System_IO_Stream_Dispose">Dispose()</a> on the provided <a class="xref" href="system.io.stream">Stream</a> object when <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Dispose_">Dispose</a> is called.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this <xref:system.io.streamreader> constructor.  
+  
+ [!CODE [System.IO.StreamReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#2)]
+    
+    
+        </xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader__ctor_System_String_System_Boolean_">
+    
+            <a id="System_IO_StreamReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamReader(String,Boolean)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified file name, with the specified byte order mark detection option.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamReader (string path, bool detectEncodingFromByteOrderMarks);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The complete file path to be read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>detectEncodingFromByteOrderMarks</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>Indicates whether to look for byte order marks at the beginning of the file.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor initializes the encoding to <a class="xref" href="../system.text/system.text.utf8encoding">UTF8Encoding</a>, the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_BaseStream_">BaseStream</a> property using the  parameter, and the internal buffer size to 1024 bytes.  </p>
+<p> The  parameter can be a file name, including a file on a Universal Naming Convention (UNC) share.  </p>
+<p> The  parameter is not required to be a file stored on disk; it can be any part of a system that supports access using streams.  </p>
+<p> The  parameter detects the encoding by looking at the first three bytes of the stream. It automatically recognizes UTF-8, little-endian Unicode, and big-endian Unicode text if the file starts with the appropriate byte order marks. Otherwise, the <a class="xref" href="../system.text/system.text.utf8encoding">UTF8Encoding</a> is used. See the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method for more information.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this <xref:system.io.streamreader> constructor.  
+  
+ [!CODE [System.IO.StreamReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#2)]
+    
+    
+        </xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader__ctor_System_String_System_Text_Encoding_">
+    
+            <a id="System_IO_StreamReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamReader(String,Encoding)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified file name, with the specified character encoding.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamReader (string path, System.Text.Encoding encoding);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The complete file path to be read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor initializes the encoding as specified by the  parameter, and the internal buffer size to 1024 bytes. The <a class="xref" href="system.io.streamreader">StreamReader</a> object attempts to  detect the encoding by looking at the first three bytes of the stream. It automatically recognizes UTF-8, little-endian Unicode, and big-endian Unicode text if the file starts with the appropriate byte order marks. Otherwise, the user-provided encoding is used. See the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method for more information.  </p>
+<p> The  parameter can be a file name, including a file on a Universal Naming Convention (UNC) share.  </p>
+<p> The  parameter is not required to be a file stored on disk; it can be any part of a system that supports access using streams.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this <xref:system.io.streamreader> constructor.  
+  
+ [!CODE [System.IO.StreamReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#2)]
+    
+    
+        </xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader__ctor_System_IO_Stream_System_Text_Encoding_System_Boolean_">
+    
+            <a id="System_IO_StreamReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamReader(Stream,Encoding,Boolean)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified stream, with the specified character encoding and byte order mark detection option.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamReader (System.IO.Stream stream, System.Text.Encoding encoding, bool detectEncodingFromByteOrderMarks);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to be read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>detectEncodingFromByteOrderMarks</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>Indicates whether to look for byte order marks at the beginning of the file.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor initializes the encoding as specified by the  parameter, the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_BaseStream_">BaseStream</a> property using the  parameter, and the internal buffer size to 1024 bytes.  </p>
+<p> The  parameter detects the encoding by looking at the first three bytes of the stream. It automatically recognizes UTF-8, little-endian Unicode, and big-endian Unicode text if the file starts with the appropriate byte order marks. Otherwise, the user-provided encoding is used. See the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method for more information.  </p>
+<p> The <a class="xref" href="system.io.streamreader">StreamReader</a> object calls <a class="xref" href="system.io.stream#System_IO_Stream_Dispose">Dispose()</a> on the provided <a class="xref" href="system.io.stream">Stream</a> object when <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Dispose_">Dispose</a> is called.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this <xref:system.io.streamreader> constructor.  
+  
+ [!CODE [System.IO.StreamReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#2)]
+    
+    
+        </xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader__ctor_System_String_System_Text_Encoding_System_Boolean_">
+    
+            <a id="System_IO_StreamReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamReader(String,Encoding,Boolean)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified file name, with the specified character encoding and byte order mark detection option.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamReader (string path, System.Text.Encoding encoding, bool detectEncodingFromByteOrderMarks);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The complete file path to be read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>detectEncodingFromByteOrderMarks</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>Indicates whether to look for byte order marks at the beginning of the file.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor initializes the encoding as specified by the  parameter, and the internal buffer size to 1024 bytes.  </p>
+<p> The  parameter detects the encoding by looking at the first three bytes of the stream. It automatically recognizes UTF-8, little-endian Unicode, and big-endian Unicode text if the file starts with the appropriate byte order marks. Otherwise, the user-provided encoding is used. See the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method for more information.  </p>
+<p> The  parameter can be a file name, including a file on a Universal Naming Convention (UNC) share.  </p>
+<p> The  parameter is not required to be a file stored on disk; it can be any part of a system that supports access using streams.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this <xref:system.io.streamreader> constructor.  
+  
+ [!CODE [System.IO.StreamReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#2)]
+    
+    
+        </xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader__ctor_System_IO_Stream_System_Text_Encoding_System_Boolean_System_Int32_">
+    
+            <a id="System_IO_StreamReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamReader(Stream,Encoding,Boolean,Int32)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified stream, with the specified character encoding, byte order mark detection option, and buffer size.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamReader (System.IO.Stream stream, System.Text.Encoding encoding, bool detectEncodingFromByteOrderMarks, int bufferSize);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to be read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>detectEncodingFromByteOrderMarks</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>Indicates whether to look for byte order marks at the beginning of the file.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>bufferSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The minimum buffer size.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The buffer size, in number of 16-bit characters, is set by the  parameter. If  is less than the minimum allowable size (128 characters), the minimum allowable size is used.  </p>
+<p> This constructor allows you to change the encoding the first time you read from the <a class="xref" href="system.io.streamreader">StreamReader</a> object. The  parameter detects the encoding by looking at the first three bytes of the stream. It automatically recognizes UTF-8, little-endian Unicode, and big-endian Unicode text if the file starts with the appropriate byte order marks. Otherwise, the user-provided encoding is used. See the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method for more information.  </p>
+<p> The <a class="xref" href="system.io.streamreader">StreamReader</a> object calls <a class="xref" href="system.io.stream#System_IO_Stream_Dispose">Dispose()</a> on the provided <a class="xref" href="system.io.stream">Stream</a> object when <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Dispose_">Dispose</a> is called.  </p>
+<div class="NOTE"><h5>Note</h5><p> When reading from a <a class="xref" href="system.io.stream">Stream</a>, it is more efficient to use a buffer that is the same size as the internal buffer of the stream.  </p>
+</div>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this <xref:system.io.streamreader> constructor.  
+  
+ [!CODE [System.IO.StreamReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#2)]
+    
+    
+        </xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader__ctor_System_String_System_Text_Encoding_System_Boolean_System_Int32_">
+    
+            <a id="System_IO_StreamReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamReader(String,Encoding,Boolean,Int32)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified file name, with the specified character encoding, byte order mark detection option, and buffer size.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamReader (string path, System.Text.Encoding encoding, bool detectEncodingFromByteOrderMarks, int bufferSize);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>path</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The complete file path to be read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>detectEncodingFromByteOrderMarks</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>Indicates whether to look for byte order marks at the beginning of the file.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>bufferSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The minimum buffer size, in number of 16-bit characters.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This constructor initializes the encoding as specified by the  parameter.  </p>
+<p> This constructor allows you to change the encoding the first time you read from the <a class="xref" href="system.io.streamreader">StreamReader</a> object. The  parameter detects the encoding by looking at the first three bytes of the stream. It automatically recognizes UTF-8, little-endian Unicode, and big-endian Unicode text if the file starts with the appropriate byte order marks. Otherwise, the user-provided encoding is used. See the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method for more information.  </p>
+<p> The buffer size, in number of 16-bit characters, is set by the  parameter. If  is less than the minimum allowable size (128 characters), the minimum allowable size is used.  </p>
+<p> The  parameter can be a file name, including a file on a Universal Naming Convention (UNC) share.  </p>
+<p> The  parameter is not required to be a file stored on disk; it can be any part of a system that supports access using streams.  </p>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpretable, and could cause an exception to be thrown.  </p>
+</div>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates this <xref:system.io.streamreader> constructor.  
+  
+ [!CODE [System.IO.StreamReader#2](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#2)]
+    
+    
+        </xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader__ctor_System_IO_Stream_System_Text_Encoding_System_Boolean_System_Int32_System_Boolean_">
+    
+            <a id="System_IO_StreamReader__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StreamReader(Stream,Encoding,Boolean,Int32,Boolean)</div>        
+          </div>
+    
+            <p>Initializes a new instance of the <see cref="T:System.IO.StreamReader"> class for the specified stream based on the specified character encoding, byte order mark detection option, and buffer size, and optionally leaves the stream open.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public StreamReader (System.IO.Stream stream, System.Text.Encoding encoding, bool detectEncodingFromByteOrderMarks, int bufferSize, bool leaveOpen);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>The stream to read.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>encoding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </dd>
+                  </dl>
+                  <p>The character encoding to use.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>detectEncodingFromByteOrderMarks</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to look for byte order marks at the beginning of the file; otherwise, <code>false</code>.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>bufferSize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The minimum buffer size.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>leaveOpen</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to leave the stream open after the <see cref="T:System.IO.StreamReader"> object is disposed; otherwise, <code>false</code>.<p>
+</see>
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Unless you set the  parameter to <code>true</code>, the <a class="xref" href="system.io.streamreader">StreamReader</a> object calls <a class="xref" href="system.io.stream#System_IO_Stream_Dispose">Dispose()</a> on the provided <a class="xref" href="system.io.stream">Stream</a> object when <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Dispose_">Dispose</a> is called.  </p>
+<p> The buffer size, in number of 16-bit characters, is set by the  parameter. If  is less than the minimum allowable size (128 characters), the minimum allowable size is used.  </p>
+<p> This constructor enables you to change the encoding the first time you read from the <a class="xref" href="system.io.streamreader">StreamReader</a> object. If the  parameter is <code>true</code>, the constructor detects the encoding by looking at the first three bytes of the stream. It automatically recognizes UTF-8, little-endian Unicode, and big-endian Unicode text if the file starts with the appropriate byte order marks. Otherwise, the user-provided encoding is used. See the <a class="xref" href="../system.text/system.text.encoding#System_Text_Encoding_GetPreamble_">GetPreamble</a> method for more information.  </p>
+<div class="NOTE"><h5>Note</h5><p> When reading from a <a class="xref" href="system.io.stream">Stream</a>, it is more efficient to use a buffer that is the same size as the internal buffer of the stream.  </p>
+</div>
+<div class="CAUTION"><h5>Caution</h5><p> When you compile a set of characters with a particular cultural setting and retrieve those same characters with a different cultural setting, the characters might not be interpreted correctly, and could cause an exception to be thrown.</p>
+</div>
+
+    
+            <h4>Example</h4>
+            The following example uses an instance of StreamReader to read text from a file. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!CODE [readtextfile#1](../CodeSnippet/VS_Snippets_CLR/ReadTextFile#1)]  
+  
+ The following example instantiates a StreamReader object and calls its <xref:system.io.streamreader.readasync%2a> method to read a file asynchronously.  
+  
+ [!CODE [System.IO.StreamReader#51](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#51)]
+    
+    
+        </xref:system.io.streamreader.readasync%2a></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="fields">
+        <h2>Fields
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_Null">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Null</div>        
+          </div>
+    
+            <p>A <see cref="T:System.IO.StreamReader"> object around an empty stream.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly System.IO.StreamReader Null;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>When read methods are invoked on Null, zero is always returned. When <a class="xref" href="system.io.streamreader#System_IO_StreamReader_ReadLine_">ReadLine</a> is invoked on Null, <code>null</code> is returned.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example uses an instance of StreamReader to read text from a file. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!CODE [readtextfile#1](../CodeSnippet/VS_Snippets_CLR/ReadTextFile#1)]  
+  
+ The following example instantiates a StreamReader object and calls its <xref:system.io.streamreader.readasync%2a> method to read a file asynchronously.  
+  
+ [!CODE [System.IO.StreamReader#51](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#51)]
+    
+    
+        </xref:system.io.streamreader.readasync%2a></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_BaseStream">
+    
+            <a id="System_IO_StreamReader_BaseStream_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BaseStream</div>        
+          </div>
+    
+            <p>Returns the underlying stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.IO.Stream BaseStream { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.io.stream">Stream</a></div>
+                  </div>
+                  <p>The underlying stream.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>You use this property to access the underlying stream. The <a class="xref" href="system.io.streamreader">StreamReader</a> class buffers input from the underlying stream when you call one of the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Read_">Read</a> methods. If you manipulate the position of the underlying stream after reading data into the buffer, the position of the underlying stream might not match the position of the internal buffer. To reset the internal buffer, call the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_DiscardBufferedData_">DiscardBufferedData</a> method; however, this method slows performance and should be called only when absolutely necessary. The <a class="xref" href="system.io.streamreader">StreamReader</a> constructors that have the  parameter can change the encoding the first time you read from the <a class="xref" href="system.io.streamreader">StreamReader</a> object.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example uses an instance of StreamReader to read text from a file. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!CODE [readtextfile#1](../CodeSnippet/VS_Snippets_CLR/ReadTextFile#1)]  
+  
+ The following example instantiates a StreamReader object and calls its <xref:system.io.streamreader.readasync%2a> method to read a file asynchronously.  
+  
+ [!CODE [System.IO.StreamReader#51](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#51)]
+    
+    
+        </xref:system.io.streamreader.readasync%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_CurrentEncoding">
+    
+            <a id="System_IO_StreamReader_CurrentEncoding_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CurrentEncoding</div>        
+          </div>
+    
+            <p>Gets the current character encoding that the current <see cref="T:System.IO.StreamReader"> object is using.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Text.Encoding CurrentEncoding { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.text/system.text.encoding">Encoding</a></div>
+                  </div>
+                  <p>The current character encoding used by the current reader. The value can be different after the first call to any <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Read_">Read</a> method of <a class="xref" href="system.io.streamreader">StreamReader</a>, since encoding autodetection is not done until the first call to a <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Read_">Read</a> method.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example gets the encoding of the specified <xref:system.io.streamreader> object.  
+  
+ [!CODE [strmreader currentencoding#1](../CodeSnippet/VS_Snippets_CLR/StrmReader CurrentEncoding#1)]
+    
+    
+        </xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_EndOfStream">
+    
+            <a id="System_IO_StreamReader_EndOfStream_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EndOfStream</div>        
+          </div>
+    
+            <p>Gets a value that indicates whether the current stream position is at the end of the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool EndOfStream { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p><code>true</code> if the current stream position is at the end of the stream; otherwise <code>false</code>.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example uses an instance of StreamReader to read text from a file. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!CODE [readtextfile#1](../CodeSnippet/VS_Snippets_CLR/ReadTextFile#1)]  
+  
+ The following example instantiates a StreamReader object and calls its <xref:system.io.streamreader.readasync%2a> method to read a file asynchronously.  
+  
+ [!CODE [System.IO.StreamReader#51](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#51)]
+    
+    
+        </xref:system.io.streamreader.readasync%2a></li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_Close">
+    
+            <a id="System_IO_StreamReader_Close_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Close()</div>        
+          </div>
+    
+            <p>Closes the <see cref="T:System.IO.StreamReader"> object and the underlying stream, and releases any system resources associated with the reader.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void Close ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides the <a class="xref" href="system.io.textwriter#System_IO_TextWriter_Close_">Close</a> method.  </p>
+<p> This implementation of Close calls the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Dispose_">Dispose</a> method passing a <code>true</code> value.  </p>
+<p> Flushing the stream will not flush its underlying encoder unless you explicitly call Close. Setting <a class="xref" href="system.io.streamwriter#System_IO_StreamWriter_AutoFlush_">AutoFlush</a> to <code>true</code> means that data will be flushed from the buffer to the stream, but the encoder state will not be flushed. This allows the encoder to keep its state (partial characters) so that it can encode the next block of characters correctly. This scenario affects UTF8 and UTF7, where certain characters can be encoded only after the encoder receives the adjacent character or characters.  </p>
+<p> Following a call to Close, any operations on the reader might raise exceptions.</p>
+
+    
+            <h4>Example</h4>
+            The following example uses an instance of StreamReader to read text from a file. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!CODE [readtextfile#1](../CodeSnippet/VS_Snippets_CLR/ReadTextFile#1)]  
+  
+ The following example instantiates a StreamReader object and calls its <xref:system.io.streamreader.readasync%2a> method to read a file asynchronously.  
+  
+ [!CODE [System.IO.StreamReader#51](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#51)]
+    
+    
+        </xref:system.io.streamreader.readasync%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_DiscardBufferedData">
+    
+            <a id="System_IO_StreamReader_DiscardBufferedData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DiscardBufferedData()</div>        
+          </div>
+    
+            <p>Clears the internal buffer.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void DiscardBufferedData ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use the DiscardBufferedData method to reset the internal buffer for the <a class="xref" href="system.io.streamreader">StreamReader</a> object. You need to call this method only when the position of the internal buffer and the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_BaseStream_">BaseStream</a> do not match. These positions can become mismatched when you read data into the buffer and then seek a new position in the underlying stream. This method slows performance and should be used only when absolutely necessary, such as when you want to read a portion of the contents of a <a class="xref" href="system.io.streamreader">StreamReader</a> object more than once.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows a scenario where the DiscardBufferedData method must be called to synchronize the internal buffer and the underlying stream. The file in the example is used to illustrate position and consists of the text `abcdefghijklmnopqrstuvwxyz`. By calling DiscardBufferedData after the data is read, the example works as expected. After the first 15 characters are read, the position is reset to the offset value of 2 and all the remaining characters are read. If you remove the call to DiscardBufferedData, the example does not work as expected. The first 15 characters are read, but only the position of the underlying stream is reset. The internal buffer of the <xref:system.io.streamreader> object is still on the 16th character. Therefore, <xref:system.io.streamreader.readtoend%2a> returns all the characters in the buffer plus the characters in the underlying stream starting from the reset position.  
+  
+ [!CODE [System.IO.StreamReader#30](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#30)]
+    
+    
+        </xref:system.io.streamreader.readtoend%2a></xref:system.io.streamreader></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_Dispose_System_Boolean_">
+    
+            <a id="System_IO_StreamReader_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+            <p>Closes the underlying stream, releases the unmanaged resources used by the <see cref="T:System.IO.StreamReader">, and optionally releases the managed resources.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only unmanaged resources.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method is called by the public <a class="xref" href="../system/system.idisposable#System_IDisposable_Dispose_">Dispose</a> method and the <a class="xref" href="../system/system.object#System_Object_Finalize_">Finalize</a> method. <a class="xref" href="../system/system.idisposable#System_IDisposable_Dispose_">Dispose</a> invokes the protected Dispose method with the  parameter set to true. <a class="xref" href="../system/system.object#System_Object_Finalize_">Finalize</a> invokes Dispose with  set to false.  </p>
+<p> When the  parameter is <code>true</code>, this method releases all resources held by any managed objects that the <a class="xref" href="system.io.streamreader">StreamReader</a> object references. This method invokes the <a class="xref" href="../system/system.idisposable#System_IDisposable_Dispose_">Dispose</a> method of each referenced object.  </p>
+<p> .</p>
+
+    
+            <h4>Example</h4>
+            The following example uses an instance of StreamReader to read text from a file. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!CODE [readtextfile#1](../CodeSnippet/VS_Snippets_CLR/ReadTextFile#1)]  
+  
+ The following example instantiates a StreamReader object and calls its <xref:system.io.streamreader.readasync%2a> method to read a file asynchronously.  
+  
+ [!CODE [System.IO.StreamReader#51](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#51)]
+    
+    
+        </xref:system.io.streamreader.readasync%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_Peek">
+    
+            <a id="System_IO_StreamReader_Peek_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Peek()</div>        
+          </div>
+    
+            <p>Returns the next available character but does not consume it.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int Peek ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>An integer representing the next character to be read, or -1 if there are no characters to be read or if the stream does not support seeking.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The Peek method returns an integer value in order to determine whether the end of the file, or another error has occurred. This allows a user to first check if the returned value is -1 before casting it to a <a class="xref" href="../system/system.char">Char</a> type.  </p>
+<p> This method overrides <a class="xref" href="system.io.textreader#System_IO_TextReader_Peek_">Peek</a>.  </p>
+<p> The current position of the <a class="xref" href="system.io.streamreader">StreamReader</a> object is not changed by Peek.</p>
+
+    
+            <h4>Example</h4>
+            The following code example reads lines from a file until the end of the file is reached.  
+  
+ [!CODE [strmreader peek#1](../CodeSnippet/VS_Snippets_CLR/StrmReader Peek#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_Read">
+    
+            <a id="System_IO_StreamReader_Read_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Read()</div>        
+          </div>
+    
+            <p>Reads the next character from the input stream and advances the character position by one character.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int Read ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The next character from the input stream represented as an <a class="xref" href="../system/system.int32">Int32</a> object, or -1 if no more characters are available.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.textreader#System_IO_TextReader_Read_">Read</a>.  </p>
+<p> This method returns an integer so that it can return -1 if the end of the stream has been reached. If you manipulate the position of the underlying stream after reading data into the buffer, the position of the underlying stream might not match the position of the internal buffer. To reset the internal buffer, call the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_DiscardBufferedData_">DiscardBufferedData</a> method; however, this method slows performance and should be called only when absolutely necessary.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example demonstrates a simple use of the <xref:system.io.streamreader.read%2a> method.  
+  
+ [!CODE [strmreader read1#1](../CodeSnippet/VS_Snippets_CLR/StrmReader Read1#1)]  
+  
+ The following code example demonstrates reading a single character using the Read method overload, formatting the ASCII integer output as decimal and hexadecimal.  
+  
+ [!CODE [StrmRdrRead#1](../CodeSnippet/VS_Snippets_CLR/StrmRdrRead#1)]
+    
+    
+        </xref:system.io.streamreader.read%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_Read_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StreamReader_Read_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Read(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Reads a specified maximum of characters from the current stream into a buffer, beginning at the specified index.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int Read (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>When this method returns, contains the specified character array with the values between  and () replaced by the characters read from the current source.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The index of  at which to begin writing.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of characters to read.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The number of characters that have been read, or 0 if at the end of the stream and no data was read. The number will be less than or equal to the  parameter, depending on whether the data is available within the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.textreader#System_IO_TextReader_Read_">Read</a>.  </p>
+<p> This method returns an integer so that it can return 0 if the end of the stream has been reached.  </p>
+<p> When using the Read method, it is more efficient to use a buffer that is the same size as the internal buffer of the stream, where the internal buffer is set to your desired block size, and to always read less than the block size. If the size of the internal buffer was unspecified when the stream was constructed, its default size is 4 kilobytes (4096 bytes). If you manipulate the position of the underlying stream after reading data into the buffer, the position of the underlying stream might not match the position of the internal buffer. To reset the internal buffer, call the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_DiscardBufferedData_">DiscardBufferedData</a> method; however, this method slows performance and should be called only when absolutely necessary.  </p>
+<p> This method returns after either the number of characters specified by the  parameter are read, or the end of the file is reached. <a class="xref" href="system.io.textreader#System_IO_TextReader_ReadBlock_">ReadBlock</a> is a blocking version of <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Read_">Read</a>.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example reads five characters at a time until the end of the file is reached.  
+  
+ [!CODE [strmreader read2#1](../CodeSnippet/VS_Snippets_CLR/StrmReader Read2#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_ReadAsync_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StreamReader_ReadAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadAsync(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Reads a specified maximum number of characters from the current stream asynchronously and writes the data to a buffer, beginning at the specified index.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task&lt;int&gt; ReadAsync (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>When this method returns, contains the specified character array with the values between  and ( +  - 1) replaced by the characters read from the current source.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The position in  at which to begin writing.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of characters to read. If the end of the stream is reached before the specified number of characters is written into the buffer, the current method returns.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </div>
+                  <p>A task that represents the asynchronous read operation. The value of the  parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the stream has been reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The task completes after either the number of characters specified by the  parameter are read or the end of the stream is reached.</p>
+
+    
+            <h4>Example</h4>
+            The following example shows how to read all the characters in a file by using the ReadAsync method. It checks whether each character is a letter, digit, or white space before adding the character to an instance of the <xref:system.text.stringbuilder> class.  
+  
+ [!CODE [System.IO.StreamReader#42](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#42)]
+    
+    
+        </xref:system.text.stringbuilder></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_ReadBlock_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StreamReader_ReadBlock_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadBlock(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Reads a specified maximum number of characters from the current stream and writes the data to a buffer, beginning at the specified index.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int ReadBlock (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>When this method returns, contains the specified character array with the values between  and () replaced by the characters read from the current source.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The position in  at which to begin writing.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of characters to read.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>The number of characters that have been read. The number will be less than or equal to , depending on whether all input characters have been read.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The position of the underlying stream is advanced by the number of characters that were read into .  </p>
+<p> The method blocks until either  characters are read, or the end of the stream has been reached. This is a blocking version of <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Read_">Read</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following example uses an instance of StreamReader to read text from a file. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!CODE [readtextfile#1](../CodeSnippet/VS_Snippets_CLR/ReadTextFile#1)]  
+  
+ The following example instantiates a StreamReader object and calls its <xref:system.io.streamreader.readasync%2a> method to read a file asynchronously.  
+  
+ [!CODE [System.IO.StreamReader#51](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#51)]
+    
+    
+        </xref:system.io.streamreader.readasync%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_ReadBlockAsync_System_Char___System_Int32_System_Int32_">
+    
+            <a id="System_IO_StreamReader_ReadBlockAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadBlockAsync(Char[],Int32,Int32)</div>        
+          </div>
+    
+            <p>Reads a specified maximum number of characters from the current stream asynchronously and writes the data to a buffer, beginning at the specified index.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task&lt;int&gt; ReadBlockAsync (char[] buffer, int index, int count);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.char">Char</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>When this method returns, contains the specified character array with the values between  and ( +  - 1) replaced by the characters read from the current source.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>index</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The position in  at which to begin writing.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of characters to read. If the end of the stream is reached before the specified number of characters is written into the buffer, the method returns.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="../system/system.int32">Int32</a>&gt;</div>
+                  </div>
+                  <p>A task that represents the asynchronous read operation. The value of the  parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the stream has been reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The task does not complete until either the number of characters specified by the  parameter are read, or the end of the stream has been reached.</p>
+
+    
+            <h4>Example</h4>
+            The following example uses an instance of StreamReader to read text from a file. The constructor used in this example is not supported for use in [!INCLUDE[win8_appstore_long](../../add/includes/win8-appstore-long-md.md)] Apps.  
+  
+ [!CODE [readtextfile#1](../CodeSnippet/VS_Snippets_CLR/ReadTextFile#1)]  
+  
+ The following example instantiates a StreamReader object and calls its <xref:system.io.streamreader.readasync%2a> method to read a file asynchronously.  
+  
+ [!CODE [System.IO.StreamReader#51](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#51)]
+    
+    
+        </xref:system.io.streamreader.readasync%2a></li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_ReadLine">
+    
+            <a id="System_IO_StreamReader_ReadLine_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadLine()</div>        
+          </div>
+    
+            <p>Reads a line of characters from the current stream and returns the data as a string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string ReadLine ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The next line from the input stream, or <code>null</code> if the end of the input stream is reached.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>A line is defined as a sequence of characters followed by a line feed (&quot;\n&quot;), a carriage return (&quot;\r&quot;), or a carriage return immediately followed by a line feed (&quot;\r\n&quot;). The string that is returned does not contain the terminating carriage return or line feed. The returned value is <code>null</code> if the end of the input stream is reached.  </p>
+<p> This method overrides <a class="xref" href="system.io.textreader#System_IO_TextReader_ReadLine_">ReadLine</a>.  </p>
+<p> If the current method throws an <a class="xref" href="../system/system.outofmemoryexception">OutOfMemoryException</a>, the reader&#39;s position in the underlying <a class="xref" href="system.io.stream">Stream</a> object is advanced by the number of characters the method was able to read, but the characters already read into the internal ReadLine buffer are discarded. If you manipulate the position of the underlying stream after reading data into the buffer, the position of the underlying stream might not match the position of the internal buffer. To reset the internal buffer, call the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_DiscardBufferedData_">DiscardBufferedData</a> method; however, this method slows performance and should be called only when absolutely necessary.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example reads lines from a file until the end of the file is reached.  
+  
+ [!CODE [strmreader readline#1](../CodeSnippet/VS_Snippets_CLR/StrmReader ReadLine#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_ReadLineAsync">
+    
+            <a id="System_IO_StreamReader_ReadLineAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadLineAsync()</div>        
+          </div>
+    
+            <p>Reads a line of characters asynchronously from the current stream and returns the data as a string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task&lt;string&gt; ReadLineAsync ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </div>
+                  <p>A task that represents the asynchronous read operation. The value of the  parameter contains the next line from the stream, or is <code>null</code> if all the characters have been read.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to read the first line of a file by using the ReadLineAsync method.  
+  
+ [!CODE [System.IO.StreamReader#41](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#41)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_ReadToEnd">
+    
+            <a id="System_IO_StreamReader_ReadToEnd_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadToEnd()</div>        
+          </div>
+    
+            <p>Reads all characters from the current position to the end of the stream.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string ReadToEnd ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>The rest of the stream as a string, from the current position to the end. If the current position is at the end of the stream, returns an empty string (&quot;&quot;).</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method overrides <a class="xref" href="system.io.textreader#System_IO_TextReader_ReadToEnd_">ReadToEnd</a>.  </p>
+<p> ReadToEnd works best when you need to read all the input from the current position to the end of the stream. If more control is needed over how many characters are read from the stream, use the <a href="assetId:///M:System.IO.StreamReader.Read(System.Char[],System.Int32,System.Int32)?qualifyHint=False&amp;autoUpgrade=False">Read(Char[],â€‚Int32,â€‚Int32)</a> method overload, which generally results in better performance.  </p>
+<p> ReadToEnd assumes that the stream knows when it has reached an end. For interactive protocols in which the server sends data only when you ask for it and does not close the connection, ReadToEnd might block indefinitely because it does not reach an end, and should be avoided.  </p>
+<p> Note that when using the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_Read_">Read</a> method, it is more efficient to use a buffer that is the same size as the internal buffer of the stream. If the size of the buffer was unspecified when the stream was constructed, its default size is 4 kilobytes (4096 bytes).  </p>
+<p> If the current method throws an <a class="xref" href="../system/system.outofmemoryexception">OutOfMemoryException</a>, the reader&#39;s position in the underlying <a class="xref" href="system.io.stream">Stream</a> object is advanced by the number of characters the method was able to read, but the characters already read into the internal <a class="xref" href="system.io.streamreader#System_IO_StreamReader_ReadLine_">ReadLine</a> buffer are discarded. If you manipulate the position of the underlying stream after reading data into the buffer, the position of the underlying stream might not match the position of the internal buffer. To reset the internal buffer, call the <a class="xref" href="system.io.streamreader#System_IO_StreamReader_DiscardBufferedData_">DiscardBufferedData</a> method; however, this method slows performance and should be called only when absolutely necessary.  </p>
+<p> For a list of common I/O tasks, see <a href="../topic/common%20i-o%20tasks">Common I/O Tasks</a>.</p>
+
+    
+            <h4>Example</h4>
+            The following code example reads all the way to the end of a file in one operation.  
+  
+ [!CODE [strmreader readtoend#1](../CodeSnippet/VS_Snippets_CLR/StrmReader ReadToEnd#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_IO_StreamReader_ReadToEndAsync">
+    
+            <a id="System_IO_StreamReader_ReadToEndAsync_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReadToEndAsync()</div>        
+          </div>
+    
+            <p>Reads all characters from the current position to the end of the stream asynchronously and returns them as one string.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Threading.Tasks.Task&lt;string&gt; ReadToEndAsync ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.threading.tasks/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </div>
+                  <p>A task that represents the asynchronous read operation. The value of the  parameter contains a string with the characters from the current position to the end of the stream.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to read the contents of a file by using the ReadToEndAsync method.  
+  
+ [!CODE [System.IO.StreamReader#40](../CodeSnippet/VS_Snippets_CLR_System/system.IO.StreamReader#40)]
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

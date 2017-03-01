@@ -1,0 +1,2703 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="ReliableStateManagerImpl class">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="service-fabric">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/8ece26063f2f27414f0bad873159ee6212f3448d/docs-ref-manual/Data/ServiceFabric/Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-manual/Data/ServiceFabric/Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.yml">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl..ctor">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.TransactionChanged">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.add_TransactionChanged">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.remove_TransactionChanged">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.StateManagerChanged">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.add_StateManagerChanged">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.remove_StateManagerChanged">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.GetCurrentDataLossNumber">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.GetLastCommittedSequenceNumber">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IAsyncEnumerable&lt;Microsoft.ServiceFabric.Data.IReliableState&gt;.GetAsyncEnumerator">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IReliableStateManager.CreateTransaction">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync&lt;T&gt;">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IReliableStateManager.TryGetAsync&lt;T&gt;">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IStateProviderReplica.OnDataLossAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IStateProviderReplica.set_OnDataLossAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IStateProviderReplica.Initialize">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IStateProviderReplica.OpenAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IStateProviderReplica.ChangeRoleAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IStateProviderReplica.CloseAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IStateProviderReplica.Abort">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.Microsoft.ServiceFabric.Data.IReliableStateManager.TryAddStateSerializer&lt;T&gt;">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.BackupAsync">
+<meta name="APIName" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl.RestoreAsync">
+<meta name="APILocation" content="Microsoft.ServiceFabric.Data.Impl.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2016-12-19 07:26 AM">
+<meta name="document_id" content="4cf79055-3696-ffbe-866d-b57386c767ad">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Manages the reliable state for a service.
+">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=20">
+<meta name="ms.assetid" content="Microsoft.ServiceFabric.Data.ReliableStateManagerImpl">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.servicefabric.data.reliablestatemanagerimpl" rel="canonical">
+    <title>ReliableStateManagerImpl class | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/d1d5acab8c02cc720733.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+							<li>
+								<a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&version=GBdevelop&line=20" ms.cmpnm="viewsource"><i class="icon icon-code"></i>View Code</a>
+							</li>
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl">
+      <span class="lang-csharp">ReliableStateManagerImpl</span>
+      <span class="lang-vb">ReliableStateManagerImpl</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    		<div class="memberEditButton">
+    			<a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=19" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+    		</div>
+    	<p>Manages the reliable state for a service.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public class ReliableStateManagerImpl : IReliableStateManagerReplica, IStateProviderReplica, IReliableStateManager, IAsyncEnumerable&lt;IReliableState&gt;</code><code class="vb lang-vb">Public Class ReliableStateManagerImpl
+    Implements IReliableStateManagerReplica, IStateProviderReplica, IReliableStateManager, IAsyncEnumerable(Of IReliableState)</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">ReliableStateManagerImpl</div>
+          <div class="lang-vb">ReliableStateManagerImpl</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4>System.Object</h4>
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">ToString</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/7bxwbwt2(v=vs.110).aspx">ToString</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/bsc2ak47(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/w4hkze5k(v=vs.110).aspx">Equals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">ReferenceEquals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/hz2a0b8x(v=vs.110).aspx">ReferenceEquals</a>(<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.object(v=vs.110).aspx">Object</a>)
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">GetHashCode</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/zdee4b3y(v=vs.110).aspx">GetHashCode</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">GetType</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/dfwy45w9(v=vs.110).aspx">GetType</a>()
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">MemberwiseClone</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/57ctke0a(v=vs.110).aspx">MemberwiseClone</a>()
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl__ctor_System_Fabric_StatefulServiceContext_Microsoft_ServiceFabric_Data_ReliableStateManagerConfiguration_">ReliableStateManagerImpl(StatefulServiceContext, ReliableStateManagerConfiguration)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl__ctor_System_Fabric_StatefulServiceContext_Microsoft_ServiceFabric_Data_ReliableStateManagerConfiguration_">ReliableStateManagerImpl(StatefulServiceContext, ReliableStateManagerConfiguration)</a></div>
+          </td>
+            <td>
+            <p>Create a new ReliableStateManager</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(BackupOption, TimeSpan, CancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(BackupOption, TimeSpan, CancellationToken, Func(Of BackupInfo, CancellationToken, Task(Of Boolean)))</a></div>
+          </td>
+            <td>
+            <p>Performs a backup of all reliable state managed by this <a class="xref" href="microsoft.servicefabric.data.istateproviderreplica">IStateProviderReplica</a>.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(Func(Of BackupInfo, CancellationToken, Task(Of Boolean)))</a></div>
+          </td>
+            <td>
+            <p>Performs a full backup of all reliable state managed by this <a class="xref" href="microsoft.servicefabric.data.istateproviderreplica">IStateProviderReplica</a>.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_GetCurrentDataLossNumber">GetCurrentDataLossNumber()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_GetCurrentDataLossNumber">GetCurrentDataLossNumber()</a></div>
+          </td>
+            <td>
+            <p>Return the current data loss number.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_GetLastCommittedSequenceNumber">GetLastCommittedSequenceNumber()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_GetLastCommittedSequenceNumber">GetLastCommittedSequenceNumber()</a></div>
+          </td>
+            <td>
+            <p>Return the last committed sequence number.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_RestoreAsync_System_String_">RestoreAsync(String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_RestoreAsync_System_String_">RestoreAsync(String)</a></div>
+          </td>
+            <td>
+            <p>Restore a backup taken by <a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a> or 
+<a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(BackupOption, TimeSpan, CancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a>.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_RestoreAsync_System_String_Microsoft_ServiceFabric_Data_RestorePolicy_System_Threading_CancellationToken_">RestoreAsync(String, RestorePolicy, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_RestoreAsync_System_String_Microsoft_ServiceFabric_Data_RestorePolicy_System_Threading_CancellationToken_">RestoreAsync(String, RestorePolicy, CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Restore a backup taken by <a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a> or 
+<a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(BackupOption, TimeSpan, CancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a>.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Events
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_StateManagerChanged">StateManagerChanged</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_StateManagerChanged">StateManagerChanged</a></div>
+          </td>
+            <td>
+            <p>Occurs when State Manager&#39;s state changes.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_TransactionChanged">TransactionChanged</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_TransactionChanged">TransactionChanged</a></div>
+          </td>
+            <td>
+            <p>Occurs when a transaction&#39;s state changes.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Explicit Interface Implementations
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IAsyncEnumerable_Microsoft_ServiceFabric_Data_IReliableState__GetAsyncEnumerator">IAsyncEnumerable&lt;IReliableState&gt;.GetAsyncEnumerator()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IAsyncEnumerable_Microsoft_ServiceFabric_Data_IReliableState__GetAsyncEnumerator">Microsoft.ServiceFabric.Data.IAsyncEnumerable&lt;Microsoft.ServiceFabric.Data.IReliableState&gt;.GetAsyncEnumerator()</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_CreateTransaction">IReliableStateManager.CreateTransaction()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_CreateTransaction">Microsoft.ServiceFabric.Data.IReliableStateManager.CreateTransaction()</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_Microsoft_ServiceFabric_Data_ITransaction_System_String_">IReliableStateManager.GetOrAddAsync&lt;T&gt;(ITransaction, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_Microsoft_ServiceFabric_Data_ITransaction_System_String_">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(ITransaction, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_Microsoft_ServiceFabric_Data_ITransaction_System_String_System_TimeSpan_">IReliableStateManager.GetOrAddAsync&lt;T&gt;(ITransaction, String, TimeSpan)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_Microsoft_ServiceFabric_Data_ITransaction_System_String_System_TimeSpan_">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(ITransaction, String, TimeSpan)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_Microsoft_ServiceFabric_Data_ITransaction_System_Uri_">IReliableStateManager.GetOrAddAsync&lt;T&gt;(ITransaction, Uri)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_Microsoft_ServiceFabric_Data_ITransaction_System_Uri_">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(ITransaction, Uri)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_Microsoft_ServiceFabric_Data_ITransaction_System_Uri_System_TimeSpan_">IReliableStateManager.GetOrAddAsync&lt;T&gt;(ITransaction, Uri, TimeSpan)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_Microsoft_ServiceFabric_Data_ITransaction_System_Uri_System_TimeSpan_">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(ITransaction, Uri, TimeSpan)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_System_String_">IReliableStateManager.GetOrAddAsync&lt;T&gt;(String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_System_String_">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_System_String_System_TimeSpan_">IReliableStateManager.GetOrAddAsync&lt;T&gt;(String, TimeSpan)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_System_String_System_TimeSpan_">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(String, TimeSpan)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_System_Uri_">IReliableStateManager.GetOrAddAsync&lt;T&gt;(Uri)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_System_Uri_">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(Uri)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_System_Uri_System_TimeSpan_">IReliableStateManager.GetOrAddAsync&lt;T&gt;(Uri, TimeSpan)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_System_Uri_System_TimeSpan_">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(Uri, TimeSpan)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_Microsoft_ServiceFabric_Data_ITransaction_System_String_">IReliableStateManager.RemoveAsync(ITransaction, String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_Microsoft_ServiceFabric_Data_ITransaction_System_String_">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(ITransaction, String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_Microsoft_ServiceFabric_Data_ITransaction_System_String_System_TimeSpan_">IReliableStateManager.RemoveAsync(ITransaction, String, TimeSpan)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_Microsoft_ServiceFabric_Data_ITransaction_System_String_System_TimeSpan_">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(ITransaction, String, TimeSpan)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Uri_">IReliableStateManager.RemoveAsync(ITransaction, Uri)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Uri_">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(ITransaction, Uri)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Uri_System_TimeSpan_">IReliableStateManager.RemoveAsync(ITransaction, Uri, TimeSpan)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Uri_System_TimeSpan_">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(ITransaction, Uri, TimeSpan)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_System_String_">IReliableStateManager.RemoveAsync(String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_System_String_">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_System_String_System_TimeSpan_">IReliableStateManager.RemoveAsync(String, TimeSpan)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_System_String_System_TimeSpan_">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(String, TimeSpan)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_System_Uri_">IReliableStateManager.RemoveAsync(Uri)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_System_Uri_">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(Uri)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_System_Uri_System_TimeSpan_">IReliableStateManager.RemoveAsync(Uri, TimeSpan)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_System_Uri_System_TimeSpan_">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(Uri, TimeSpan)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_TryAddStateSerializer__1_Microsoft_ServiceFabric_Data_IStateSerializer___0__">IReliableStateManager.TryAddStateSerializer&lt;T&gt;(IStateSerializer&lt;T&gt;)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_TryAddStateSerializer__1_Microsoft_ServiceFabric_Data_IStateSerializer___0__">Microsoft.ServiceFabric.Data.IReliableStateManager.TryAddStateSerializer(Of T)(IStateSerializer(Of T))</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_TryGetAsync__1_System_String_">IReliableStateManager.TryGetAsync&lt;T&gt;(String)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_TryGetAsync__1_System_String_">Microsoft.ServiceFabric.Data.IReliableStateManager.TryGetAsync(Of T)(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_TryGetAsync__1_System_Uri_">IReliableStateManager.TryGetAsync&lt;T&gt;(Uri)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_TryGetAsync__1_System_Uri_">Microsoft.ServiceFabric.Data.IReliableStateManager.TryGetAsync(Of T)(Uri)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_Abort">IStateProviderReplica.Abort()</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_Abort">Microsoft.ServiceFabric.Data.IStateProviderReplica.Abort()</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_ChangeRoleAsync_System_Fabric_ReplicaRole_System_Threading_CancellationToken_">IStateProviderReplica.ChangeRoleAsync(ReplicaRole, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_ChangeRoleAsync_System_Fabric_ReplicaRole_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Data.IStateProviderReplica.ChangeRoleAsync(ReplicaRole, CancellationToken)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_CloseAsync_System_Threading_CancellationToken_">IStateProviderReplica.CloseAsync(CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_CloseAsync_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Data.IStateProviderReplica.CloseAsync(CancellationToken)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_Initialize_System_Fabric_StatefulServiceInitializationParameters_">IStateProviderReplica.Initialize(StatefulServiceInitializationParameters)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_Initialize_System_Fabric_StatefulServiceInitializationParameters_">Microsoft.ServiceFabric.Data.IStateProviderReplica.Initialize(StatefulServiceInitializationParameters)</a></div>
+          </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_OnDataLossAsync">IStateProviderReplica.OnDataLossAsync</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_OnDataLossAsync">Microsoft.ServiceFabric.Data.IStateProviderReplica.OnDataLossAsync</a></div>
+          </td>
+            <td>
+            <p>Called when the system suspects that the partition lost data.
+<a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_RestoreAsync_System_String_">RestoreAsync(String)</a> or
+<a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_RestoreAsync_System_String_Microsoft_ServiceFabric_Data_RestorePolicy_System_Threading_CancellationToken_">RestoreAsync(String, RestorePolicy, CancellationToken)</a> may be used here to restore state from backup.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_OpenAsync_System_Fabric_ReplicaOpenMode_System_Fabric_IStatefulServicePartition_System_Threading_CancellationToken_">IStateProviderReplica.OpenAsync(ReplicaOpenMode, IStatefulServicePartition, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_OpenAsync_System_Fabric_ReplicaOpenMode_System_Fabric_IStatefulServicePartition_System_Threading_CancellationToken_">Microsoft.ServiceFabric.Data.IStateProviderReplica.OpenAsync(ReplicaOpenMode, IStatefulServicePartition, CancellationToken)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl__ctor_System_Fabric_StatefulServiceContext_Microsoft_ServiceFabric_Data_ReliableStateManagerConfiguration_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl__ctor_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=49" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ReliableStateManagerImpl(StatefulServiceContext, ReliableStateManagerConfiguration)</div>        
+            <div class="lang-vb">ReliableStateManagerImpl(StatefulServiceContext, ReliableStateManagerConfiguration)</div>        
+          </div>
+    
+            <p>Create a new ReliableStateManager</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public ReliableStateManagerImpl(StatefulServiceContext serviceContext, ReliableStateManagerConfiguration configuration)</code><code class="vb lang-vb">Public Sub New(serviceContext As StatefulServiceContext, configuration As ReliableStateManagerConfiguration)</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>serviceContext</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.statefulservicecontext">StatefulServiceContext</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.statefulservicecontext">StatefulServiceContext</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>configuration</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.reliablestatemanagerconfiguration">ReliableStateManagerConfiguration</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.reliablestatemanagerconfiguration">ReliableStateManagerConfiguration</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_BackupAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=438" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">BackupAsync(BackupOption, TimeSpan, CancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</div>        
+            <div class="lang-vb">BackupAsync(BackupOption, TimeSpan, CancellationToken, Func(Of BackupInfo, CancellationToken, Task(Of Boolean)))</div>        
+          </div>
+    
+            <p>Performs a backup of all reliable state managed by this <a class="xref" href="microsoft.servicefabric.data.istateproviderreplica">IStateProviderReplica</a>.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task BackupAsync(BackupOption option, TimeSpan timeout, CancellationToken cancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;bool&gt;&gt; backupCallback)</code><code class="vb lang-vb">Public Function BackupAsync(option As BackupOption, timeout As TimeSpan, cancellationToken As CancellationToken, backupCallback As Func(Of BackupInfo, CancellationToken, Task(Of Boolean))) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>option</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.backupoption">BackupOption</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.backupoption">BackupOption</a></div>
+                  </dd>
+                  </dl>
+                  <p>The type of backup to perform.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  <p>The timeout for this operation.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>backupCallback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb534647(v=vs.110).aspx">Func</a>&lt;<a class="xref" href="microsoft.servicefabric.data.backupinfo">BackupInfo</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb534647(v=vs.110).aspx">Func</a>(Of <a class="xref" href="microsoft.servicefabric.data.backupinfo">BackupInfo</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>))</div>
+                  </dd>
+                  </dl>
+                  <p>Callback to be called when the backup folder has been created locally and is ready to be moved out of the node.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>Task that represents the asynchronous backup operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Boolean returned by the backupCallback indicate whether the service was able to successfully move the backup folder to an external location.
+If false is returned, BackupAsync throws InvalidOperationException with the relevant message indicating backupCallback returned false.
+Also, backup will be marked as unsuccessful.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_BackupAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=420" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</div>        
+            <div class="lang-vb">BackupAsync(Func(Of BackupInfo, CancellationToken, Task(Of Boolean)))</div>        
+          </div>
+    
+            <p>Performs a full backup of all reliable state managed by this <a class="xref" href="microsoft.servicefabric.data.istateproviderreplica">IStateProviderReplica</a>.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;bool&gt;&gt; backupCallback)</code><code class="vb lang-vb">Public Function BackupAsync(backupCallback As Func(Of BackupInfo, CancellationToken, Task(Of Boolean))) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>backupCallback</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb534647(v=vs.110).aspx">Func</a>&lt;<a class="xref" href="microsoft.servicefabric.data.backupinfo">BackupInfo</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb534647(v=vs.110).aspx">Func</a>(Of <a class="xref" href="microsoft.servicefabric.data.backupinfo">BackupInfo</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>))</div>
+                  </dd>
+                  </dl>
+                  <p>Callback to be called when the backup folder has been created locally and is ready to be moved out of the node.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>Task that represents the asynchronous backup operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>A FULL backup will be performed with a one-hour timeout.
+Boolean returned by the backupCallback indicate whether the service was able to successfully move the backup folder to an external location.
+If false is returned, BackupAsync throws InvalidOperationException with the relevant message indicating backupCallback returned false.
+Also, backup will be marked as unsuccessful.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_GetCurrentDataLossNumber">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_GetCurrentDataLossNumber_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=77" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetCurrentDataLossNumber()</div>        
+            <div class="lang-vb">GetCurrentDataLossNumber()</div>        
+          </div>
+    
+            <p>Return the current data loss number.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public long GetCurrentDataLossNumber()</code><code class="vb lang-vb">Public Function GetCurrentDataLossNumber As Long</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                  </div>
+                  <p>The current data loss number.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_GetLastCommittedSequenceNumber">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_GetLastCommittedSequenceNumber_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=86" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetLastCommittedSequenceNumber()</div>        
+            <div class="lang-vb">GetLastCommittedSequenceNumber()</div>        
+          </div>
+    
+            <p>Return the last committed sequence number.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public long GetLastCommittedSequenceNumber()</code><code class="vb lang-vb">Public Function GetLastCommittedSequenceNumber As Long</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int64(v=vs.110).aspx">Int64</a></div>
+                  </div>
+                  <p>The last committed sequence number.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_RestoreAsync_System_String_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_RestoreAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=460" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">RestoreAsync(String)</div>        
+            <div class="lang-vb">RestoreAsync(String)</div>        
+          </div>
+    
+            <p>Restore a backup taken by <a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a> or 
+<a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(BackupOption, TimeSpan, CancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a>.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task RestoreAsync(string backupFolderPath)</code><code class="vb lang-vb">Public Function RestoreAsync(backupFolderPath As String) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>backupFolderPath</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The directory where the replica is to be restored from.
+This parameter cannot be null, empty or contain just whitespace. 
+UNC paths may also be provided.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>Task that represents the asynchronous restore operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>A safe backup will be performed, meaning the restore will only be completed if the data to restore is ahead of state of the current replica.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_RestoreAsync_System_String_Microsoft_ServiceFabric_Data_RestorePolicy_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_RestoreAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=477" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">RestoreAsync(String, RestorePolicy, CancellationToken)</div>        
+            <div class="lang-vb">RestoreAsync(String, RestorePolicy, CancellationToken)</div>        
+          </div>
+    
+            <p>Restore a backup taken by <a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a> or 
+<a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_BackupAsync_Microsoft_ServiceFabric_Data_BackupOption_System_TimeSpan_System_Threading_CancellationToken_System_Func_Microsoft_ServiceFabric_Data_BackupInfo_System_Threading_CancellationToken_System_Threading_Tasks_Task_System_Boolean___">BackupAsync(BackupOption, TimeSpan, CancellationToken, Func&lt;BackupInfo, CancellationToken, Task&lt;Boolean&gt;&gt;)</a>.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Task RestoreAsync(string backupFolderPath, RestorePolicy restorePolicy, CancellationToken cancellationToken)</code><code class="vb lang-vb">Public Function RestoreAsync(backupFolderPath As String, restorePolicy As RestorePolicy, cancellationToken As CancellationToken) As Task</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>backupFolderPath</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The directory where the replica is to be restored from.
+This parameter cannot be null, empty or contain just whitespace. 
+UNC paths may also be provided.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>restorePolicy</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.restorepolicy">RestorePolicy</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.restorepolicy">RestorePolicy</a></div>
+                  </dd>
+                  </dl>
+                  <p>The restore policy.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The token to monitor for cancellation requests.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  <p>Task that represents the asynchronous restore operation.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="events">
+        <h2>Events
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_StateManagerChanged">
+    
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=67" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">StateManagerChanged</div>        
+            <div class="lang-vb">StateManagerChanged</div>        
+          </div>
+    
+            <p>Occurs when State Manager&#39;s state changes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event EventHandler&lt;NotifyStateManagerChangedEventArgs&gt; StateManagerChanged</code><code class="vb lang-vb">Public Event StateManagerChanged As EventHandler(Of NotifyStateManagerChangedEventArgs)</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_TransactionChanged">
+    
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=58" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">TransactionChanged</div>        
+            <div class="lang-vb">TransactionChanged</div>        
+          </div>
+    
+            <p>Occurs when a transaction&#39;s state changes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event EventHandler&lt;NotifyTransactionChangedEventArgs&gt; TransactionChanged</code><code class="vb lang-vb">Public Event TransactionChanged As EventHandler(Of NotifyTransactionChangedEventArgs)</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="eii">
+        <h2>Explicit Interface Implementations
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IAsyncEnumerable_Microsoft_ServiceFabric_Data_IReliableState__GetAsyncEnumerator">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IAsyncEnumerable_Microsoft_ServiceFabric_Data_IReliableState__GetAsyncEnumerator_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=99" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IAsyncEnumerable&lt;IReliableState&gt;.GetAsyncEnumerator()</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IAsyncEnumerable&lt;Microsoft.ServiceFabric.Data.IReliableState&gt;.GetAsyncEnumerator()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">IAsyncEnumerator&lt;IReliableState&gt; IAsyncEnumerable&lt;IReliableState&gt;.GetAsyncEnumerator()</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IAsyncEnumerable&lt;Microsoft.ServiceFabric.Data.IReliableState&gt;.GetAsyncEnumerator As IAsyncEnumerator(Of IReliableState) Implements IAsyncEnumerable(Of IReliableState).GetAsyncEnumerator</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.iasyncenumerator-1">IAsyncEnumerator</a>&lt;<a class="xref" href="microsoft.servicefabric.data.ireliablestate">IReliableState</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.iasyncenumerator-1">IAsyncEnumerator</a>(Of <a class="xref" href="microsoft.servicefabric.data.ireliablestate">IReliableState</a>)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_CreateTransaction">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_CreateTransaction_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=104" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.CreateTransaction()</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.CreateTransaction()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">ITransaction IReliableStateManager.CreateTransaction()</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.CreateTransaction As ITransaction Implements IReliableStateManager.CreateTransaction</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_Microsoft_ServiceFabric_Data_ITransaction_System_String_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=172" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.GetOrAddAsync&lt;T&gt;(ITransaction, String)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(ITransaction, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;T&gt; IReliableStateManager.GetOrAddAsync&lt;T&gt;(ITransaction tx, string name)where T : IReliableState</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T As IReliableState)(tx As ITransaction, name As String) As Task(Of T) Implements IReliableStateManager.GetOrAddAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tx</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of T)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_Microsoft_ServiceFabric_Data_ITransaction_System_String_System_TimeSpan_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=167" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.GetOrAddAsync&lt;T&gt;(ITransaction, String, TimeSpan)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(ITransaction, String, TimeSpan)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;T&gt; IReliableStateManager.GetOrAddAsync&lt;T&gt;(ITransaction tx, string name, TimeSpan timeout)where T : IReliableState</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T As IReliableState)(tx As ITransaction, name As String, timeout As TimeSpan) As Task(Of T) Implements IReliableStateManager.GetOrAddAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tx</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of T)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_Microsoft_ServiceFabric_Data_ITransaction_System_Uri_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=144" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.GetOrAddAsync&lt;T&gt;(ITransaction, Uri)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(ITransaction, Uri)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;T&gt; IReliableStateManager.GetOrAddAsync&lt;T&gt;(ITransaction tx, Uri name)where T : IReliableState</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T As IReliableState)(tx As ITransaction, name As Uri) As Task(Of T) Implements IReliableStateManager.GetOrAddAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tx</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of T)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_Microsoft_ServiceFabric_Data_ITransaction_System_Uri_System_TimeSpan_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=109" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.GetOrAddAsync&lt;T&gt;(ITransaction, Uri, TimeSpan)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(ITransaction, Uri, TimeSpan)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;T&gt; IReliableStateManager.GetOrAddAsync&lt;T&gt;(ITransaction tx, Uri name, TimeSpan timeout)where T : IReliableState</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T As IReliableState)(tx As ITransaction, name As Uri, timeout As TimeSpan) As Task(Of T) Implements IReliableStateManager.GetOrAddAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tx</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of T)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_System_String_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=187" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.GetOrAddAsync&lt;T&gt;(String)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;T&gt; IReliableStateManager.GetOrAddAsync&lt;T&gt;(string name)where T : IReliableState</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T As IReliableState)(name As String) As Task(Of T) Implements IReliableStateManager.GetOrAddAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of T)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_System_String_System_TimeSpan_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=177" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.GetOrAddAsync&lt;T&gt;(String, TimeSpan)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(String, TimeSpan)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;T&gt; IReliableStateManager.GetOrAddAsync&lt;T&gt;(string name, TimeSpan timeout)where T : IReliableState</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T As IReliableState)(name As String, timeout As TimeSpan) As Task(Of T) Implements IReliableStateManager.GetOrAddAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of T)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_System_Uri_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=182" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.GetOrAddAsync&lt;T&gt;(Uri)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(Uri)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;T&gt; IReliableStateManager.GetOrAddAsync&lt;T&gt;(Uri name)where T : IReliableState</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T As IReliableState)(name As Uri) As Task(Of T) Implements IReliableStateManager.GetOrAddAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of T)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync__1_System_Uri_System_TimeSpan_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_GetOrAddAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=149" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.GetOrAddAsync&lt;T&gt;(Uri, TimeSpan)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T)(Uri, TimeSpan)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;T&gt; IReliableStateManager.GetOrAddAsync&lt;T&gt;(Uri name, TimeSpan timeout)where T : IReliableState</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.GetOrAddAsync(Of T As IReliableState)(name As Uri, timeout As TimeSpan) As Task(Of T) Implements IReliableStateManager.GetOrAddAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;T&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of T)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_Microsoft_ServiceFabric_Data_ITransaction_System_String_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=231" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.RemoveAsync(ITransaction, String)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(ITransaction, String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IReliableStateManager.RemoveAsync(ITransaction tx, string name)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(tx As ITransaction, name As String) As Task Implements IReliableStateManager.RemoveAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tx</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_Microsoft_ServiceFabric_Data_ITransaction_System_String_System_TimeSpan_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=211" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.RemoveAsync(ITransaction, String, TimeSpan)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(ITransaction, String, TimeSpan)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IReliableStateManager.RemoveAsync(ITransaction tx, string name, TimeSpan timeout)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(tx As ITransaction, name As String, timeout As TimeSpan) As Task Implements IReliableStateManager.RemoveAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tx</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Uri_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=226" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.RemoveAsync(ITransaction, Uri)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(ITransaction, Uri)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IReliableStateManager.RemoveAsync(ITransaction tx, Uri name)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(tx As ITransaction, name As Uri) As Task Implements IReliableStateManager.RemoveAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tx</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_Microsoft_ServiceFabric_Data_ITransaction_System_Uri_System_TimeSpan_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=192" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.RemoveAsync(ITransaction, Uri, TimeSpan)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(ITransaction, Uri, TimeSpan)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IReliableStateManager.RemoveAsync(ITransaction tx, Uri name, TimeSpan timeout)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(tx As ITransaction, name As Uri, timeout As TimeSpan) As Task Implements IReliableStateManager.RemoveAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tx</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.itransaction">ITransaction</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_System_String_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=221" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.RemoveAsync(String)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IReliableStateManager.RemoveAsync(string name)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(name As String) As Task Implements IReliableStateManager.RemoveAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_System_String_System_TimeSpan_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=216" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.RemoveAsync(String, TimeSpan)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(String, TimeSpan)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IReliableStateManager.RemoveAsync(string name, TimeSpan timeout)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(name As String, timeout As TimeSpan) As Task Implements IReliableStateManager.RemoveAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_System_Uri_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=206" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.RemoveAsync(Uri)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(Uri)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IReliableStateManager.RemoveAsync(Uri name)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(name As Uri) As Task Implements IReliableStateManager.RemoveAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_System_Uri_System_TimeSpan_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_RemoveAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=197" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.RemoveAsync(Uri, TimeSpan)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(Uri, TimeSpan)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IReliableStateManager.RemoveAsync(Uri name, TimeSpan timeout)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.RemoveAsync(name As Uri, timeout As TimeSpan) As Task Implements IReliableStateManager.RemoveAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>timeout</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx">TimeSpan</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_TryAddStateSerializer__1_Microsoft_ServiceFabric_Data_IStateSerializer___0__">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_TryAddStateSerializer_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=356" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.TryAddStateSerializer&lt;T&gt;(IStateSerializer&lt;T&gt;)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.TryAddStateSerializer(Of T)(IStateSerializer(Of T))</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool IReliableStateManager.TryAddStateSerializer&lt;T&gt;(IStateSerializer&lt;T&gt; stateSerializer)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.TryAddStateSerializer(Of T)(stateSerializer As IStateSerializer(Of T)) As Boolean Implements IReliableStateManager.TryAddStateSerializer</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>stateSerializer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.servicefabric.data.istateserializer-1">IStateSerializer</a>&lt;T&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="microsoft.servicefabric.data.istateserializer-1">IStateSerializer</a>(Of T)</div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_TryGetAsync__1_System_String_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_TryGetAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=260" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.TryGetAsync&lt;T&gt;(String)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.TryGetAsync(Of T)(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;ConditionalValue&lt;T&gt;&gt; IReliableStateManager.TryGetAsync&lt;T&gt;(string name)where T : IReliableState</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.TryGetAsync(Of T As IReliableState)(name As String) As Task(Of ConditionalValue(Of T)) Implements IReliableStateManager.TryGetAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="microsoft.servicefabric.data.conditionalvalue-1">ConditionalValue</a>&lt;T&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="microsoft.servicefabric.data.conditionalvalue-1">ConditionalValue</a>(Of T))</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_TryGetAsync__1_System_Uri_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IReliableStateManager_TryGetAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=236" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IReliableStateManager.TryGetAsync&lt;T&gt;(Uri)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IReliableStateManager.TryGetAsync(Of T)(Uri)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;ConditionalValue&lt;T&gt;&gt; IReliableStateManager.TryGetAsync&lt;T&gt;(Uri name)where T : IReliableState</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IReliableStateManager.TryGetAsync(Of T As IReliableState)(name As Uri) As Task(Of ConditionalValue(Of T)) Implements IReliableStateManager.TryGetAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="microsoft.servicefabric.data.conditionalvalue-1">ConditionalValue</a>&lt;T&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="microsoft.servicefabric.data.conditionalvalue-1">ConditionalValue</a>(Of T))</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_Abort">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_Abort_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=308" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.Abort()</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.Abort()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IStateProviderReplica.Abort()</code><code class="vb lang-vb">Sub Microsoft.ServiceFabric.Data.IStateProviderReplica.Abort Implements IStateProviderReplica.Abort</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_ChangeRoleAsync_System_Fabric_ReplicaRole_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_ChangeRoleAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=298" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.ChangeRoleAsync(ReplicaRole, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.ChangeRoleAsync(ReplicaRole, CancellationToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IStateProviderReplica.ChangeRoleAsync(ReplicaRole newRole, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IStateProviderReplica.ChangeRoleAsync(newRole As ReplicaRole, cancellationToken As CancellationToken) As Task Implements IStateProviderReplica.ChangeRoleAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>newRole</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.replicarole">ReplicaRole</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.replicarole">ReplicaRole</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_CloseAsync_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_CloseAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=303" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.CloseAsync(CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.CloseAsync(CancellationToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task IStateProviderReplica.CloseAsync(CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IStateProviderReplica.CloseAsync(cancellationToken As CancellationToken) As Task Implements IStateProviderReplica.CloseAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx">Task</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_Initialize_System_Fabric_StatefulServiceInitializationParameters_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_Initialize_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=288" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.Initialize(StatefulServiceInitializationParameters)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.Initialize(StatefulServiceInitializationParameters)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">void IStateProviderReplica.Initialize(StatefulServiceInitializationParameters initializationParameters)</code><code class="vb lang-vb">Sub Microsoft.ServiceFabric.Data.IStateProviderReplica.Initialize(initializationParameters As StatefulServiceInitializationParameters) Implements IStateProviderReplica.Initialize</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>initializationParameters</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.statefulserviceinitializationparameters">StatefulServiceInitializationParameters</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.statefulserviceinitializationparameters">StatefulServiceInitializationParameters</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_OnDataLossAsync">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_OnDataLossAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=283" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.OnDataLossAsync</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.OnDataLossAsync</div>        
+          </div>
+    
+            <p>Called when the system suspects that the partition lost data.
+<a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_RestoreAsync_System_String_">RestoreAsync(String)</a> or
+<a class="xref" href="microsoft.servicefabric.data.istateproviderreplica#Microsoft_ServiceFabric_Data_IStateProviderReplica_RestoreAsync_System_String_Microsoft_ServiceFabric_Data_RestorePolicy_System_Threading_CancellationToken_">RestoreAsync(String, RestorePolicy, CancellationToken)</a> may be used here to restore state from backup.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Func&lt;CancellationToken, Task&lt;bool&gt;&gt; IStateProviderReplica.OnDataLossAsync { set; }</code><code class="vb lang-vb">ReadOnly WriteOnly Property Microsoft.ServiceFabric.Data.IStateProviderReplica.OnDataLossAsync As Func(Of CancellationToken, Task(Of Boolean)) Implements IStateProviderReplica.OnDataLossAsync</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx">Func</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx">Func</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>))</div>
+                  </div>
+                  <p>Task that represents the asynchronous operation.
+The boolean task result indicates whether or not state was restored, e.g. from a backup.
+True indicates that state was restored from an external source and false indicates that the state has not been changed.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Base implementation returns false from OnDataLoss indicating that state of the replica has not been modified during OnDataLossAsync call.
+In other words, replica has not been restored.</p>
+<p>If true is returned, rest of the replicas in the partition will be rebuilt by the Primary replica.</p>
+<p>During OnDataLossAsync, replica will not have read or write status granted.</p>
+
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_OpenAsync_System_Fabric_ReplicaOpenMode_System_Fabric_IStatefulServicePartition_System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_ServiceFabric_Data_ReliableStateManagerImpl_Microsoft_ServiceFabric_Data_IStateProviderReplica_OpenAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://msazure.visualstudio.com/DefaultCollection/One/_git/WindowsFabric?path=src/prod/src/managed/Microsoft.ServiceFabric.Data.Impl/ReliableStateManagerImpl.cs&amp;version=GBdevelop&amp;line=293" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">IStateProviderReplica.OpenAsync(ReplicaOpenMode, IStatefulServicePartition, CancellationToken)</div>        
+            <div class="lang-vb">Microsoft.ServiceFabric.Data.IStateProviderReplica.OpenAsync(ReplicaOpenMode, IStatefulServicePartition, CancellationToken)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;IReplicator&gt; IStateProviderReplica.OpenAsync(ReplicaOpenMode openMode, IStatefulServicePartition partition, CancellationToken cancellationToken)</code><code class="vb lang-vb">Function Microsoft.ServiceFabric.Data.IStateProviderReplica.OpenAsync(openMode As ReplicaOpenMode, partition As IStatefulServicePartition, cancellationToken As CancellationToken) As Task(Of IReplicator) Implements IStateProviderReplica.OpenAsync</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>openMode</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.replicaopenmode">ReplicaOpenMode</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.replicaopenmode">ReplicaOpenMode</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>partition</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.fabric.istatefulservicepartition">IStatefulServicePartition</a></div>
+                    <div class="lang-vb"><a class="xref" href="system.fabric.istatefulservicepartition">IStatefulServicePartition</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<a class="xref" href="system.fabric.ireplicator">IReplicator</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <a class="xref" href="system.fabric.ireplicator">IReplicator</a>)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+      <h2>Details</h2>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Namespace</h4>    
+          <div>Microsoft.ServiceFabric.Data</div>
+        </div>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Assembly</h4>    
+          <div>Microsoft.ServiceFabric.Data.Impl.dll</div>
+        </div>
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/d1d5acab8c02cc720733.reference.js"></script>
+  </body>
+</html>
