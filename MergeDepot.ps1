@@ -14,11 +14,9 @@ $currentFolder = Get-Location
 $MergeDepotToolSource = "$mergeDepotToolContainerUrl/MergeDepotTool.zip"
 $MergeDepotToolDestination = "$currentFolder\.optemp\MergeDepotTool.zip"
 
-Get-ChildItem
 echo 'Start Download!'
-Invoke-WebRequest -Uri $MergeDepotToolSource -OutFile $MergeDepotToolDestination
+Invoke-WebRequest -Uri $MergeDepotToolSource -OutFile $MergeDepotToolDestination | Write-Host
 echo 'Download Success!'
-Get-ChildItem
 
 $MergeDepotToolUnzipFolder = "$currentFolder\.optemp\MergeDepotTool"
 if((Test-Path "$MergeDepotToolUnzipFolder"))
@@ -26,25 +24,24 @@ if((Test-Path "$MergeDepotToolUnzipFolder"))
     Remove-Item $MergeDepotToolUnzipFolder -Force -Recurse
 }
 
-[System.IO.Compression.ZipFile]::ExtractToDirectory($MergeDepotToolDestination, $MergeDepotToolUnzipFolder)
+[System.IO.Compression.ZipFile]::ExtractToDirectory($MergeDepotToolDestination, $MergeDepotToolUnzipFolder) | Write-Host
 echo 'Extract Success!' 
-Get-ChildItem
 $MergeDepotTool = "$MergeDepotToolUnzipFolder\MergeDepot.exe"
 
 git checkout master 2>&1 | Write-Host
 git status
 
-# Call azure transform for every docset
+# Call merge depot
+echo "Clean merge depot"
+remove-item -path ".\mergedepot" -Force -Recurse
 echo "Start to call merge depot tool"
 &"$MergeDepotTool" "$currentFolder\mergedepot"
 echo "Finish calling merge depot tool"
 
 echo "Start to push to git repository"
 git config --global core.safecrlf false
-git status
-git add *
-git status
-git commit -m "update"
-git status
+git add * -A | Write-Host
+git commit -m "update" | Write-Host
 git push origin master 2>&1 | Write-Host
 echo "Finish pushing to git repository"
+
