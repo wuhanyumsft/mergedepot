@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="RSACryptoServiceProvider class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Security.Cryptography/System.Security.Cryptography.RSACryptoServiceProvider.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Security.Cryptography/System.Security.Cryptography.RSACryptoServiceProvider.yml">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider..ctor">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.CspKeyContainerInfo">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.Decrypt">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.DecryptValue">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.Dispose">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.Encrypt">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.EncryptValue">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.ExportCspBlob">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.HashData">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.ImportCspBlob">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.KeyExchangeAlgorithm">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.KeySize">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.PublicOnly">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.SignatureAlgorithm">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.SignData">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.SignHash">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.UseMachineKeyStore">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.VerifyData">
+<meta name="APIName" content="System.Security.Cryptography.RSACryptoServiceProvider.VerifyHash">
+<meta name="APILocation" content="mscorlib.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="45863373-0027-1e51-c33d-1da283869324">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Security.Cryptography.RSACryptoServiceProvider">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.security.cryptography/system.security.cryptography.rsacryptoserviceprovider" rel="canonical">
+    <title>RSACryptoServiceProvider class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Security_Cryptography_RSACryptoServiceProvider">
+      <span class="lang-csharp">RSACryptoServiceProvider</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.Runtime.InteropServices.ComVisible(true)]
+public sealed class RSACryptoServiceProvider : System.Security.Cryptography.RSA, System.Security.Cryptography.ICspAsymmetricAlgorithm</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">Object</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.asymmetricalgorithm">AsymmetricAlgorithm</a>
+          </div>
+        </li>
+        <li class="l2">
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.rsa">System.Security.Cryptography.RSA</a>
+          </div>
+        </li>
+      <li class="l3">
+        <div class="xref">
+          <div class="lang-csharp">RSACryptoServiceProvider</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.asymmetricalgorithm#System_Security_Cryptography_AsymmetricAlgorithm_Clear">Clear()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.asymmetricalgorithm#System_Security_Cryptography_AsymmetricAlgorithm_Dispose">Dispose()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.asymmetricalgorithm#System_Security_Cryptography_AsymmetricAlgorithm_KeySizeValue">KeySizeValue</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.asymmetricalgorithm#System_Security_Cryptography_AsymmetricAlgorithm_LegalKeySizes">LegalKeySizes</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.asymmetricalgorithm#System_Security_Cryptography_AsymmetricAlgorithm_LegalKeySizesValue">LegalKeySizesValue</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.rsa#System_Security_Cryptography_RSA_Create">Create()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.rsa#System_Security_Cryptography_RSA_Create_System_String_">Create(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.rsa#System_Security_Cryptography_RSA_FromXmlString_System_String_">FromXmlString(String)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.rsa#System_Security_Cryptography_RSA_SignData_System_Byte___System_Int32_System_Int32_System_Security_Cryptography_HashAlgorithmName_System_Security_Cryptography_RSASignaturePadding_">SignData(Byte[],Int32,Int32,HashAlgorithmName,RSASignaturePadding)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.rsa#System_Security_Cryptography_RSA_SignData_System_Byte___System_Security_Cryptography_HashAlgorithmName_System_Security_Cryptography_RSASignaturePadding_">SignData(Byte[],HashAlgorithmName,RSASignaturePadding)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.rsa#System_Security_Cryptography_RSA_SignData_System_IO_Stream_System_Security_Cryptography_HashAlgorithmName_System_Security_Cryptography_RSASignaturePadding_">SignData(Stream,HashAlgorithmName,RSASignaturePadding)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.rsa#System_Security_Cryptography_RSA_ToXmlString_System_Boolean_">ToXmlString(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.rsa#System_Security_Cryptography_RSA_VerifyData_System_Byte___System_Byte___System_Security_Cryptography_HashAlgorithmName_System_Security_Cryptography_RSASignaturePadding_">VerifyData(Byte[],Byte[],HashAlgorithmName,RSASignaturePadding)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.rsa#System_Security_Cryptography_RSA_VerifyData_System_Byte___System_Int32_System_Int32_System_Byte___System_Security_Cryptography_HashAlgorithmName_System_Security_Cryptography_RSASignaturePadding_">VerifyData(Byte[],Int32,Int32,Byte[],HashAlgorithmName,RSASignaturePadding)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="system.security.cryptography.rsa#System_Security_Cryptography_RSA_VerifyData_System_IO_Stream_System_Byte___System_Security_Cryptography_HashAlgorithmName_System_Security_Cryptography_RSASignaturePadding_">VerifyData(Stream,Byte[],HashAlgorithmName,RSASignaturePadding)</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider__ctor">RSACryptoServiceProvider()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider__ctor_System_Int32_">RSACryptoServiceProvider(Int32)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider__ctor_System_Security_Cryptography_CspParameters_">RSACryptoServiceProvider(CspParameters)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider__ctor_System_Int32_System_Security_Cryptography_CspParameters_">RSACryptoServiceProvider(Int32,CspParameters)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_CspKeyContainerInfo">CspKeyContainerInfo</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_KeyExchangeAlgorithm">KeyExchangeAlgorithm</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_KeySize">KeySize</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_PersistKeyInCsp">PersistKeyInCsp</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_PublicOnly">PublicOnly</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_SignatureAlgorithm">SignatureAlgorithm</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_UseMachineKeyStore">UseMachineKeyStore</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_Decrypt_System_Byte___System_Boolean_">Decrypt(Byte[],Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_Decrypt_System_Byte___System_Security_Cryptography_RSAEncryptionPadding_">Decrypt(Byte[],RSAEncryptionPadding)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_DecryptValue_System_Byte___">DecryptValue(Byte[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_Encrypt_System_Byte___System_Boolean_">Encrypt(Byte[],Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_Encrypt_System_Byte___System_Security_Cryptography_RSAEncryptionPadding_">Encrypt(Byte[],RSAEncryptionPadding)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_EncryptValue_System_Byte___">EncryptValue(Byte[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_ExportCspBlob_System_Boolean_">ExportCspBlob(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_ExportParameters_System_Boolean_">ExportParameters(Boolean)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_HashData_System_IO_Stream_System_Security_Cryptography_HashAlgorithmName_">HashData(Stream,HashAlgorithmName)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_HashData_System_Byte___System_Int32_System_Int32_System_Security_Cryptography_HashAlgorithmName_">HashData(Byte[],Int32,Int32,HashAlgorithmName)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_ImportCspBlob_System_Byte___">ImportCspBlob(Byte[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_ImportParameters_System_Security_Cryptography_RSAParameters_">ImportParameters(RSAParameters)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_SignData_System_Byte___System_Object_">SignData(Byte[],Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_SignData_System_IO_Stream_System_Object_">SignData(Stream,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_SignData_System_Byte___System_Int32_System_Int32_System_Object_">SignData(Byte[],Int32,Int32,Object)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_SignHash_System_Byte___System_String_">SignHash(Byte[],String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_SignHash_System_Byte___System_Security_Cryptography_HashAlgorithmName_System_Security_Cryptography_RSASignaturePadding_">SignHash(Byte[],HashAlgorithmName,RSASignaturePadding)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_VerifyData_System_Byte___System_Object_System_Byte___">VerifyData(Byte[],Object,Byte[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_VerifyHash_System_Byte___System_String_System_Byte___">VerifyHash(Byte[],String,Byte[])</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Security_Cryptography_RSACryptoServiceProvider_VerifyHash_System_Byte___System_Byte___System_Security_Cryptography_HashAlgorithmName_System_Security_Cryptography_RSASignaturePadding_">VerifyHash(Byte[],Byte[],HashAlgorithmName,RSASignaturePadding)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider__ctor">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RSACryptoServiceProvider()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public RSACryptoServiceProvider ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider__ctor_System_Int32_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RSACryptoServiceProvider(Int32)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public RSACryptoServiceProvider (int dwKeySize);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dwKeySize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider__ctor_System_Security_Cryptography_CspParameters_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RSACryptoServiceProvider(CspParameters)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public RSACryptoServiceProvider (System.Security.Cryptography.CspParameters parameters);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>parameters</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.security.cryptography.cspparameters">CspParameters</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider__ctor_System_Int32_System_Security_Cryptography_CspParameters_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RSACryptoServiceProvider(Int32,CspParameters)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public RSACryptoServiceProvider (int dwKeySize, System.Security.Cryptography.CspParameters parameters);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>dwKeySize</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>parameters</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.security.cryptography.cspparameters">CspParameters</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_CspKeyContainerInfo">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_CspKeyContainerInfo_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CspKeyContainerInfo</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Security.Cryptography.CspKeyContainerInfo CspKeyContainerInfo { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.security.cryptography.cspkeycontainerinfo">CspKeyContainerInfo</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_KeyExchangeAlgorithm">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_KeyExchangeAlgorithm_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">KeyExchangeAlgorithm</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string KeyExchangeAlgorithm { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_KeySize">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_KeySize_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">KeySize</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override int KeySize { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_PersistKeyInCsp">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_PersistKeyInCsp_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PersistKeyInCsp</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool PersistKeyInCsp { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_PublicOnly">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_PublicOnly_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">PublicOnly</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool PublicOnly { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_SignatureAlgorithm">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_SignatureAlgorithm_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SignatureAlgorithm</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string SignatureAlgorithm { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_UseMachineKeyStore">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_UseMachineKeyStore_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UseMachineKeyStore</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static bool UseMachineKeyStore { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_Decrypt_System_Byte___System_Boolean_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_Decrypt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Decrypt(Byte[],Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public byte[] Decrypt (byte[] rgb, bool fOAEP);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>rgb</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>fOAEP</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_Decrypt_System_Byte___System_Security_Cryptography_RSAEncryptionPadding_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_Decrypt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Decrypt(Byte[],RSAEncryptionPadding)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override byte[] Decrypt (byte[] data, System.Security.Cryptography.RSAEncryptionPadding padding);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>padding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.security.cryptography.rsaencryptionpadding">RSAEncryptionPadding</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_DecryptValue_System_Byte___">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_DecryptValue_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DecryptValue(Byte[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override byte[] DecryptValue (byte[] rgb);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>rgb</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_Dispose_System_Boolean_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_Encrypt_System_Byte___System_Boolean_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_Encrypt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Encrypt(Byte[],Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public byte[] Encrypt (byte[] rgb, bool fOAEP);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>rgb</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>fOAEP</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_Encrypt_System_Byte___System_Security_Cryptography_RSAEncryptionPadding_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_Encrypt_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Encrypt(Byte[],RSAEncryptionPadding)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override byte[] Encrypt (byte[] data, System.Security.Cryptography.RSAEncryptionPadding padding);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>padding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.security.cryptography.rsaencryptionpadding">RSAEncryptionPadding</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_EncryptValue_System_Byte___">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_EncryptValue_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">EncryptValue(Byte[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override byte[] EncryptValue (byte[] rgb);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>rgb</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_ExportCspBlob_System_Boolean_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_ExportCspBlob_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ExportCspBlob(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public byte[] ExportCspBlob (bool includePrivateParameters);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>includePrivateParameters</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_ExportParameters_System_Boolean_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_ExportParameters_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ExportParameters(Boolean)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override System.Security.Cryptography.RSAParameters ExportParameters (bool includePrivateParameters);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>includePrivateParameters</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.security.cryptography.rsaparameters">RSAParameters</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_HashData_System_IO_Stream_System_Security_Cryptography_HashAlgorithmName_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_HashData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">HashData(Stream,HashAlgorithmName)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override byte[] HashData (System.IO.Stream data, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.io/system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>hashAlgorithm</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.security.cryptography.hashalgorithmname">HashAlgorithmName</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_HashData_System_Byte___System_Int32_System_Int32_System_Security_Cryptography_HashAlgorithmName_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_HashData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">HashData(Byte[],Int32,Int32,HashAlgorithmName)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected override byte[] HashData (byte[] data, int offset, int count, System.Security.Cryptography.HashAlgorithmName hashAlgorithm);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>data</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>hashAlgorithm</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.security.cryptography.hashalgorithmname">HashAlgorithmName</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_ImportCspBlob_System_Byte___">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_ImportCspBlob_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ImportCspBlob(Byte[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void ImportCspBlob (byte[] keyBlob);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>keyBlob</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_ImportParameters_System_Security_Cryptography_RSAParameters_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_ImportParameters_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ImportParameters(RSAParameters)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override void ImportParameters (System.Security.Cryptography.RSAParameters parameters);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>parameters</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.security.cryptography.rsaparameters">RSAParameters</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_SignData_System_Byte___System_Object_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_SignData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SignData(Byte[],Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public byte[] SignData (byte[] buffer, object halg);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>halg</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_SignData_System_IO_Stream_System_Object_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_SignData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SignData(Stream,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public byte[] SignData (System.IO.Stream inputStream, object halg);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>inputStream</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.io/system.io.stream">Stream</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>halg</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_SignData_System_Byte___System_Int32_System_Int32_System_Object_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_SignData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SignData(Byte[],Int32,Int32,Object)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public byte[] SignData (byte[] buffer, int offset, int count, object halg);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>offset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>halg</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_SignHash_System_Byte___System_String_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_SignHash_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SignHash(Byte[],String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public byte[] SignHash (byte[] rgbHash, string str);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>rgbHash</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>str</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_SignHash_System_Byte___System_Security_Cryptography_HashAlgorithmName_System_Security_Cryptography_RSASignaturePadding_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_SignHash_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SignHash(Byte[],HashAlgorithmName,RSASignaturePadding)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override byte[] SignHash (byte[] hash, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hash</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>hashAlgorithm</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.security.cryptography.hashalgorithmname">HashAlgorithmName</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>padding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.security.cryptography.rsasignaturepadding">RSASignaturePadding</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_VerifyData_System_Byte___System_Object_System_Byte___">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_VerifyData_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VerifyData(Byte[],Object,Byte[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool VerifyData (byte[] buffer, object halg, byte[] signature);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>buffer</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>halg</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.object">Object</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>signature</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_VerifyHash_System_Byte___System_String_System_Byte___">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_VerifyHash_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VerifyHash(Byte[],String,Byte[])</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool VerifyHash (byte[] rgbHash, string str, byte[] rgbSignature);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>rgbHash</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>str</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>rgbSignature</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Security_Cryptography_RSACryptoServiceProvider_VerifyHash_System_Byte___System_Byte___System_Security_Cryptography_HashAlgorithmName_System_Security_Cryptography_RSASignaturePadding_">
+    
+            <a id="System_Security_Cryptography_RSACryptoServiceProvider_VerifyHash_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">VerifyHash(Byte[],Byte[],HashAlgorithmName,RSASignaturePadding)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override bool VerifyHash (byte[] hash, byte[] signature, System.Security.Cryptography.HashAlgorithmName hashAlgorithm, System.Security.Cryptography.RSASignaturePadding padding);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hash</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>signature</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.byte">Byte</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>hashAlgorithm</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.security.cryptography.hashalgorithmname">HashAlgorithmName</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>padding</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.security.cryptography.rsasignaturepadding">RSASignaturePadding</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

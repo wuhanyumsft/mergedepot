@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="IBuildEngine3 interface">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/Microsoft.Build.Framework/Microsoft.Build.Framework.IBuildEngine3.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/Microsoft.Build.Framework/Microsoft.Build.Framework.IBuildEngine3.yml">
+<meta name="APIName" content="Microsoft.Build.Framework.IBuildEngine3">
+<meta name="APIName" content="Microsoft.Build.Framework.IBuildEngine3.BuildProjectFilesInParallel">
+<meta name="APIName" content="Microsoft.Build.Framework.IBuildEngine3.Reacquire">
+<meta name="APIName" content="Microsoft.Build.Framework.IBuildEngine3.Yield">
+<meta name="APILocation" content="Microsoft.Build.Framework.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="5189e116-b83c-586d-bcf3-57631f48fb61">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="This interface extends IBuildEngine to provide a method allowing building project files in parallel.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Build.Framework.IBuildEngine3">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.build.framework/microsoft.build.framework.ibuildengine3" rel="canonical">
+    <title>IBuildEngine3 interface | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Build_Framework_IBuildEngine3">
+      <span class="lang-csharp">IBuildEngine3</span>
+        Interface
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>This interface extends IBuildEngine to provide a method allowing building project files in parallel.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public interface IBuildEngine3 : Microsoft.Build.Framework.IBuildEngine2</code></pre>
+    
+    
+    
+    
+    
+    
+    
+    
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IBuildEngine3_BuildProjectFilesInParallel_System_String___System_String___System_Collections_IDictionary___System_Collections_Generic_IList_System_String____System_String___System_Boolean_">BuildProjectFilesInParallel(String[],String[],IDictionary[],IList&lt;String&gt;,String[],Boolean)</a></div>
+          </td>
+            <td>
+            <p>Allows tasks to initiate a build on a project file</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IBuildEngine3_Reacquire">Reacquire()</a></div>
+          </td>
+            <td>
+            <p>Waits to reacquire control after yielding.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IBuildEngine3_Yield">Yield()</a></div>
+          </td>
+            <td>
+            <p>Informs the system that this task has a long-running out-of-process component and other work can be done in the build while that work completes.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IBuildEngine3_BuildProjectFilesInParallel_System_String___System_String___System_Collections_IDictionary___System_Collections_Generic_IList_System_String____System_String___System_Boolean_">
+    
+            <a id="Microsoft_Build_Framework_IBuildEngine3_BuildProjectFilesInParallel_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BuildProjectFilesInParallel(String[],String[],IDictionary[],IList&lt;String&gt;,String[],Boolean)</div>        
+          </div>
+    
+            <p>Allows tasks to initiate a build on a project file</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Framework.BuildEngineResult BuildProjectFilesInParallel (string[] projectFileNames, string[] targetNames, System.Collections.IDictionary[] globalProperties, System.Collections.Generic.IList&lt;string&gt;[] removeGlobalProperties, string[] toolsVersion, bool returnTargetOutputs);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>projectFileNames</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The project to build.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>targetNames</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>The targets in the project to build (can be null).</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>globalProperties</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections/system.collections.idictionary">IDictionary</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>An array of <a class="xref" href="../system.collections/system.collections.idictionary">IDictionary</a> of additional global properties to apply to the child project (array entries can be null).  </p>
+<p> The keys and should both be strings.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>removeGlobalProperties</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="../system/system.string">String</a>&gt;[]</div>
+                  </dd>
+                  </dl>
+                  <p>A list of global properties which should be removed.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>toolsVersion</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a>[]</div>
+                  </dd>
+                  </dl>
+                  <p>A tools version recognized by the Engine that will be used during this build (can be null).</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>returnTargetOutputs</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>Should the target outputs be returned in the BuildEngineResult.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.framework.buildengineresult">BuildEngineResult</a></div>
+                  </div>
+                  <p>If the build is successful, the outputs of the specified targets are returned.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IBuildEngine3_Reacquire">
+    
+            <a id="Microsoft_Build_Framework_IBuildEngine3_Reacquire_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Reacquire()</div>        
+          </div>
+    
+            <p>Waits to reacquire control after yielding.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Reacquire ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IBuildEngine3_Yield">
+    
+            <a id="Microsoft_Build_Framework_IBuildEngine3_Yield_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Yield()</div>        
+          </div>
+    
+            <p>Informs the system that this task has a long-running out-of-process component and other work can be done in the build while that work completes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Yield ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>There is only one node (msbuild.exe process) per CPU. Only one project, target, and task can build at any time on a node. If a task is waiting, for example, for a spawned tool or some other event to complete, the task can call Yield, which returns immediately. This lets the node build a target in another project, if any are available.  When the task is ready to continue, it should call <a class="xref" href="microsoft.build.framework.ibuildengine3#Microsoft_Build_Framework_IBuildEngine3_Reacquire_">Reacquire</a>. As a rough rule, if a task expects that an operation will take more than 20 or 30 seconds, it can choose to call <code>Yield</code> before it starts the operation, and <code>Reaquire</code> when the operation is complete.</p>
+
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

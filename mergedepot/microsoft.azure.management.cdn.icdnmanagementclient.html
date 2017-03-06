@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="ICdnManagementClient interface">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="cdn">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/a216401c7bd6476de586fb873cc3af3051787f03/docs-ref-autogen/Cdn/Microsoft.Azure.Management.Cdn.ICdnManagementClient.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Cdn/Microsoft.Azure.Management.Cdn.ICdnManagementClient.yml">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.BaseUri">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_BaseUri">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.set_BaseUri">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.SerializationSettings">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_SerializationSettings">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.DeserializationSettings">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_DeserializationSettings">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.Credentials">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_Credentials">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.SubscriptionId">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_SubscriptionId">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.set_SubscriptionId">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.ApiVersion">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_ApiVersion">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.AcceptLanguage">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_AcceptLanguage">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.set_AcceptLanguage">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.LongRunningOperationRetryTimeout">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_LongRunningOperationRetryTimeout">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.set_LongRunningOperationRetryTimeout">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.GenerateClientRequestId">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_GenerateClientRequestId">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.set_GenerateClientRequestId">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.Profiles">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_Profiles">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.Endpoints">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_Endpoints">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.Origins">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_Origins">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.CustomDomains">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_CustomDomains">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.EdgeNodes">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.get_EdgeNodes">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.CheckNameAvailabilityWithHttpMessagesAsync">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.ListResourceUsageWithHttpMessagesAsync">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.ListOperationsWithHttpMessagesAsync">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.ListResourceUsageNextWithHttpMessagesAsync">
+<meta name="APIName" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient.ListOperationsNextWithHttpMessagesAsync">
+<meta name="APILocation" content="Microsoft.Azure.Management.Cdn.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-24 12:22 AM">
+<meta name="document_id" content="4f8c4dd3-dc51-0fa7-205c-868c089903aa">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Use these APIs to manage Azure CDN resources through the Azure Resource
+Manager. You must make sure that requests made to these resources are
+secure.
+">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L27">
+<meta name="ms.assetid" content="Microsoft.Azure.Management.Cdn.ICdnManagementClient">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.azure.management.cdn.icdnmanagementclient" rel="canonical">
+    <title>ICdnManagementClient interface | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/3bcf2c9081582fac6994.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="https://github.com/Azure/azure-sdk-for-net/new/AutoRest/apiSpec/new?filename=Microsoft_Azure_Management_Cdn_ICdnManagementClient.md&value=---%0Auid%3A%20Microsoft.Azure.Management.Cdn.ICdnManagementClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+							<li>
+								<a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L27" ms.cmpnm="viewsource"><i class="icon icon-code"></i>View Code</a>
+							</li>
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Azure_Management_Cdn_ICdnManagementClient">
+      <span class="lang-csharp">ICdnManagementClient</span>
+      <span class="lang-vb">ICdnManagementClient</span>
+        Interface
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    		<div class="memberEditButton">
+    			<a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L27" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+    		</div>
+    	<p>Use these APIs to manage Azure CDN resources through the Azure Resource
+Manager. You must make sure that requests made to these resources are
+secure.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public interface ICdnManagementClient : IDisposable</code><code class="vb lang-vb">Public Interface ICdnManagementClient
+    Inherits IDisposable</code></pre>
+    
+    
+    
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4>System.IDisposable</h4>
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/es4s3w1d(v=vs.110).aspx">Dispose</a>()
+          </div>
+          <div class="lang-vb">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/es4s3w1d(v=vs.110).aspx">Dispose</a>()
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_AcceptLanguage">AcceptLanguage</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_AcceptLanguage">AcceptLanguage</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the preferred language for the response.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_ApiVersion">ApiVersion</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_ApiVersion">ApiVersion</a></div>
+          </td>
+            <td>
+            <p>Version of the API to be used with the client request. Current
+version is 2016-10-02.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_BaseUri">BaseUri</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_BaseUri">BaseUri</a></div>
+          </td>
+            <td>
+            <p>The base URI of the service.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_Credentials">Credentials</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_Credentials">Credentials</a></div>
+          </td>
+            <td>
+            <p>Credentials needed for the client to connect to Azure.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_CustomDomains">CustomDomains</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_CustomDomains">CustomDomains</a></div>
+          </td>
+            <td>
+            <p>Gets the ICustomDomainsOperations.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_DeserializationSettings">DeserializationSettings</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_DeserializationSettings">DeserializationSettings</a></div>
+          </td>
+            <td>
+            <p>Gets or sets json deserialization settings.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_EdgeNodes">EdgeNodes</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_EdgeNodes">EdgeNodes</a></div>
+          </td>
+            <td>
+            <p>Gets the IEdgeNodesOperations.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_Endpoints">Endpoints</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_Endpoints">Endpoints</a></div>
+          </td>
+            <td>
+            <p>Gets the IEndpointsOperations.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_GenerateClientRequestId">GenerateClientRequestId</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_GenerateClientRequestId">GenerateClientRequestId</a></div>
+          </td>
+            <td>
+            <p>When set to true a unique x-ms-client-request-id value is generated
+and included in each request. Default is true.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_LongRunningOperationRetryTimeout">LongRunningOperationRetryTimeout</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_LongRunningOperationRetryTimeout">LongRunningOperationRetryTimeout</a></div>
+          </td>
+            <td>
+            <p>Gets or sets the retry timeout in seconds for Long Running
+Operations. Default value is 30.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_Origins">Origins</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_Origins">Origins</a></div>
+          </td>
+            <td>
+            <p>Gets the IOriginsOperations.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_Profiles">Profiles</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_Profiles">Profiles</a></div>
+          </td>
+            <td>
+            <p>Gets the IProfilesOperations.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_SerializationSettings">SerializationSettings</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_SerializationSettings">SerializationSettings</a></div>
+          </td>
+            <td>
+            <p>Gets or sets json serialization settings.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_SubscriptionId">SubscriptionId</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_SubscriptionId">SubscriptionId</a></div>
+          </td>
+            <td>
+            <p>Azure Subscription ID.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_CheckNameAvailabilityWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">CheckNameAvailabilityWithHttpMessagesAsync(String, Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_CheckNameAvailabilityWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">CheckNameAvailabilityWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Check the availability of a resource name. This is needed for
+resources where name is globally unique, such as a CDN endpoint.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListOperationsNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ListOperationsNextWithHttpMessagesAsync(String, Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListOperationsNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ListOperationsNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Lists all of the available CDN REST API operations.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListOperationsWithHttpMessagesAsync_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ListOperationsWithHttpMessagesAsync(Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListOperationsWithHttpMessagesAsync_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ListOperationsWithHttpMessagesAsync(Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Lists all of the available CDN REST API operations.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListResourceUsageNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ListResourceUsageNextWithHttpMessagesAsync(String, Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListResourceUsageNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ListResourceUsageNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Check the quota and actual usage of the CDN profiles under the
+given subscription.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListResourceUsageWithHttpMessagesAsync_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ListResourceUsageWithHttpMessagesAsync(Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListResourceUsageWithHttpMessagesAsync_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">ListResourceUsageWithHttpMessagesAsync(Dictionary(Of String, List(Of String)), CancellationToken)</a></div>
+          </td>
+            <td>
+            <p>Check the quota and actual usage of the CDN profiles under the
+given subscription.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_AcceptLanguage">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_AcceptLanguage_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L63" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">AcceptLanguage</div>        
+            <div class="lang-vb">AcceptLanguage</div>        
+          </div>
+    
+            <p>Gets or sets the preferred language for the response.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">string AcceptLanguage { get; set; }</code><code class="vb lang-vb">Property AcceptLanguage As String</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_ApiVersion">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_ApiVersion_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L58" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ApiVersion</div>        
+            <div class="lang-vb">ApiVersion</div>        
+          </div>
+    
+            <p>Version of the API to be used with the client request. Current
+version is 2016-10-02.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">string ApiVersion { get; }</code><code class="vb lang-vb">ReadOnly Property ApiVersion As String</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_BaseUri">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_BaseUri_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L32" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">BaseUri</div>        
+            <div class="lang-vb">BaseUri</div>        
+          </div>
+    
+            <p>The base URI of the service.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Uri BaseUri { get; set; }</code><code class="vb lang-vb">Property BaseUri As Uri</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.uri(v=vs.110).aspx">Uri</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_Credentials">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_Credentials_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L47" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Credentials</div>        
+            <div class="lang-vb">Credentials</div>        
+          </div>
+    
+            <p>Credentials needed for the client to connect to Azure.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">ServiceClientCredentials Credentials { get; }</code><code class="vb lang-vb">ReadOnly Property Credentials As ServiceClientCredentials</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">Microsoft.Rest.ServiceClientCredentials</span></div>
+                      <div class="lang-vb"><span class="xref">Microsoft.Rest.ServiceClientCredentials</span></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_CustomDomains">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_CustomDomains_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L96" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CustomDomains</div>        
+            <div class="lang-vb">CustomDomains</div>        
+          </div>
+    
+            <p>Gets the ICustomDomainsOperations.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">ICustomDomainsOperations CustomDomains { get; }</code><code class="vb lang-vb">ReadOnly Property CustomDomains As ICustomDomainsOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.cdn.icustomdomainsoperations">ICustomDomainsOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.cdn.icustomdomainsoperations">ICustomDomainsOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_DeserializationSettings">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_DeserializationSettings_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L42" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">DeserializationSettings</div>        
+            <div class="lang-vb">DeserializationSettings</div>        
+          </div>
+    
+            <p>Gets or sets json deserialization settings.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">JsonSerializerSettings DeserializationSettings { get; }</code><code class="vb lang-vb">ReadOnly Property DeserializationSettings As JsonSerializerSettings</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">Newtonsoft.Json.JsonSerializerSettings</span></div>
+                      <div class="lang-vb"><span class="xref">Newtonsoft.Json.JsonSerializerSettings</span></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_EdgeNodes">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_EdgeNodes_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L101" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">EdgeNodes</div>        
+            <div class="lang-vb">EdgeNodes</div>        
+          </div>
+    
+            <p>Gets the IEdgeNodesOperations.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">IEdgeNodesOperations EdgeNodes { get; }</code><code class="vb lang-vb">ReadOnly Property EdgeNodes As IEdgeNodesOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.cdn.iedgenodesoperations">IEdgeNodesOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.cdn.iedgenodesoperations">IEdgeNodesOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_Endpoints">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_Endpoints_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L86" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Endpoints</div>        
+            <div class="lang-vb">Endpoints</div>        
+          </div>
+    
+            <p>Gets the IEndpointsOperations.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">IEndpointsOperations Endpoints { get; }</code><code class="vb lang-vb">ReadOnly Property Endpoints As IEndpointsOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.cdn.iendpointsoperations">IEndpointsOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.cdn.iendpointsoperations">IEndpointsOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_GenerateClientRequestId">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_GenerateClientRequestId_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L75" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">GenerateClientRequestId</div>        
+            <div class="lang-vb">GenerateClientRequestId</div>        
+          </div>
+    
+            <p>When set to true a unique x-ms-client-request-id value is generated
+and included in each request. Default is true.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">bool ? GenerateClientRequestId { get; set; }</code><code class="vb lang-vb">Property GenerateClientRequestId As Boolean?</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.boolean(v=vs.110).aspx">Boolean</a>)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_LongRunningOperationRetryTimeout">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_LongRunningOperationRetryTimeout_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L69" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">LongRunningOperationRetryTimeout</div>        
+            <div class="lang-vb">LongRunningOperationRetryTimeout</div>        
+          </div>
+    
+            <p>Gets or sets the retry timeout in seconds for Long Running
+Operations. Default value is 30.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">int ? LongRunningOperationRetryTimeout { get; set; }</code><code class="vb lang-vb">Property LongRunningOperationRetryTimeout As Integer?</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/b3h38hb0(v=vs.110).aspx">Nullable</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.int32(v=vs.110).aspx">Int32</a>)</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_Origins">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_Origins_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L91" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Origins</div>        
+            <div class="lang-vb">Origins</div>        
+          </div>
+    
+            <p>Gets the IOriginsOperations.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">IOriginsOperations Origins { get; }</code><code class="vb lang-vb">ReadOnly Property Origins As IOriginsOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.cdn.ioriginsoperations">IOriginsOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.cdn.ioriginsoperations">IOriginsOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_Profiles">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_Profiles_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L81" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">Profiles</div>        
+            <div class="lang-vb">Profiles</div>        
+          </div>
+    
+            <p>Gets the IProfilesOperations.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">IProfilesOperations Profiles { get; }</code><code class="vb lang-vb">ReadOnly Property Profiles As IProfilesOperations</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.cdn.iprofilesoperations">IProfilesOperations</a></div>
+                      <div class="lang-vb"><a class="xref" href="microsoft.azure.management.cdn.iprofilesoperations">IProfilesOperations</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_SerializationSettings">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_SerializationSettings_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L37" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SerializationSettings</div>        
+            <div class="lang-vb">SerializationSettings</div>        
+          </div>
+    
+            <p>Gets or sets json serialization settings.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">JsonSerializerSettings SerializationSettings { get; }</code><code class="vb lang-vb">ReadOnly Property SerializationSettings As JsonSerializerSettings</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><span class="xref">Newtonsoft.Json.JsonSerializerSettings</span></div>
+                      <div class="lang-vb"><span class="xref">Newtonsoft.Json.JsonSerializerSettings</span></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_SubscriptionId">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_SubscriptionId_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L52" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">SubscriptionId</div>        
+            <div class="lang-vb">SubscriptionId</div>        
+          </div>
+    
+            <p>Azure Subscription ID.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">string SubscriptionId { get; set; }</code><code class="vb lang-vb">Property SubscriptionId As String</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean enable-platform-filter">
+    
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_CheckNameAvailabilityWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_CheckNameAvailabilityWithHttpMessagesAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L116" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">CheckNameAvailabilityWithHttpMessagesAsync(String, Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</div>        
+            <div class="lang-vb">CheckNameAvailabilityWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
+          </div>
+    
+            <p>Check the availability of a resource name. This is needed for
+resources where name is globally unique, such as a CDN endpoint.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;CheckNameAvailabilityOutput&gt;&gt; CheckNameAvailabilityWithHttpMessagesAsync(string name, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function CheckNameAvailabilityWithHttpMessagesAsync(name As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of CheckNameAvailabilityOutput))</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The resource name to validate.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>customHeaders</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>))</div>
+                  </dd>
+                  </dl>
+                  <p>The headers that will be added to request.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The cancellation token.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.checknameavailabilityoutput">CheckNameAvailabilityOutput</a>&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>(Of <a class="xref" href="microsoft.azure.management.cdn.models.checknameavailabilityoutput">CheckNameAvailabilityOutput</a>))</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListOperationsNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListOperationsNextWithHttpMessagesAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L168" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ListOperationsNextWithHttpMessagesAsync(String, Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</div>        
+            <div class="lang-vb">ListOperationsNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
+          </div>
+    
+            <p>Lists all of the available CDN REST API operations.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;Operation&gt;&gt;&gt; ListOperationsNextWithHttpMessagesAsync(string nextPageLink, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function ListOperationsNextWithHttpMessagesAsync(nextPageLink As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of Operation)))</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>nextPageLink</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The NextLink from the previous successful call to List operation.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>customHeaders</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>))</div>
+                  </dd>
+                  </dl>
+                  <p>The headers that will be added to request.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The cancellation token.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>&lt;<span class="xref">Microsoft.Rest.Azure.IPage</span>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.operation">Operation</a>&gt;&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>(Of <span class="xref">Microsoft.Rest.Azure.IPage</span>(Of <a class="xref" href="microsoft.azure.management.cdn.models.operation">Operation</a>)))</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListOperationsWithHttpMessagesAsync_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListOperationsWithHttpMessagesAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L139" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ListOperationsWithHttpMessagesAsync(Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</div>        
+            <div class="lang-vb">ListOperationsWithHttpMessagesAsync(Dictionary(Of String, List(Of String)), CancellationToken)</div>        
+          </div>
+    
+            <p>Lists all of the available CDN REST API operations.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;Operation&gt;&gt;&gt; ListOperationsWithHttpMessagesAsync(Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function ListOperationsWithHttpMessagesAsync(customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of Operation)))</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>customHeaders</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>))</div>
+                  </dd>
+                  </dl>
+                  <p>The headers that will be added to request.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The cancellation token.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>&lt;<span class="xref">Microsoft.Rest.Azure.IPage</span>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.operation">Operation</a>&gt;&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>(Of <span class="xref">Microsoft.Rest.Azure.IPage</span>(Of <a class="xref" href="microsoft.azure.management.cdn.models.operation">Operation</a>)))</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListResourceUsageNextWithHttpMessagesAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListResourceUsageNextWithHttpMessagesAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L154" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ListResourceUsageNextWithHttpMessagesAsync(String, Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</div>        
+            <div class="lang-vb">ListResourceUsageNextWithHttpMessagesAsync(String, Dictionary(Of String, List(Of String)), CancellationToken)</div>        
+          </div>
+    
+            <p>Check the quota and actual usage of the CDN profiles under the
+given subscription.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;ResourceUsage&gt;&gt;&gt; ListResourceUsageNextWithHttpMessagesAsync(string nextPageLink, Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function ListResourceUsageNextWithHttpMessagesAsync(nextPageLink As String, customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of ResourceUsage)))</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>nextPageLink</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The NextLink from the previous successful call to List operation.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>customHeaders</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>))</div>
+                  </dd>
+                  </dl>
+                  <p>The headers that will be added to request.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The cancellation token.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>&lt;<span class="xref">Microsoft.Rest.Azure.IPage</span>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.resourceusage">ResourceUsage</a>&gt;&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>(Of <span class="xref">Microsoft.Rest.Azure.IPage</span>(Of <a class="xref" href="microsoft.azure.management.cdn.models.resourceusage">ResourceUsage</a>)))</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListResourceUsageWithHttpMessagesAsync_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___System_Threading_CancellationToken_">
+    
+            <a id="Microsoft_Azure_Management_Cdn_ICdnManagementClient_ListResourceUsageWithHttpMessagesAsync_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-net/blob/AutoRest/src/ResourceManagement/Cdn/Microsoft.Azure.Management.Cdn/Generated/ICdnManagementClient.cs/#L128" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">ListResourceUsageWithHttpMessagesAsync(Dictionary&lt;String, List&lt;String&gt;&gt;, CancellationToken)</div>        
+            <div class="lang-vb">ListResourceUsageWithHttpMessagesAsync(Dictionary(Of String, List(Of String)), CancellationToken)</div>        
+          </div>
+    
+            <p>Check the quota and actual usage of the CDN profiles under the
+given subscription.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">Task&lt;AzureOperationResponse&lt;IPage&lt;ResourceUsage&gt;&gt;&gt; ListResourceUsageWithHttpMessagesAsync(Dictionary&lt;string, List&lt;string&gt;&gt; customHeaders = null, CancellationToken cancellationToken = null)</code><code class="vb lang-vb">Function ListResourceUsageWithHttpMessagesAsync(customHeaders As Dictionary(Of String, List(Of String)) = Nothing, cancellationToken As CancellationToken = Nothing) As Task(Of AzureOperationResponse(Of IPage(Of ResourceUsage)))</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>customHeaders</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;&gt;</div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx">List</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>))</div>
+                  </dd>
+                  </dl>
+                  <p>The headers that will be added to request.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>cancellationToken</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                    <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.threading.cancellationtoken(v=vs.110).aspx">CancellationToken</a></div>
+                  </dd>
+                  </dl>
+                  <p>The cancellation token.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>&lt;<span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>&lt;<span class="xref">Microsoft.Rest.Azure.IPage</span>&lt;<a class="xref" href="microsoft.azure.management.cdn.models.resourceusage">ResourceUsage</a>&gt;&gt;&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/dd321424(v=vs.110).aspx">Task</a>(Of <span class="xref">Microsoft.Rest.Azure.AzureOperationResponse</span>(Of <span class="xref">Microsoft.Rest.Azure.IPage</span>(Of <a class="xref" href="microsoft.azure.management.cdn.models.resourceusage">ResourceUsage</a>)))</div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+      <h2>Details</h2>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Namespace</h4>    
+          <div>Microsoft.Azure.Management.Cdn</div>
+        </div>
+        <div class="lang-csharp lang-vb enable-lang-filter detailTile">
+          <h4>Assembly</h4>    
+          <div>Microsoft.Azure.Management.Cdn.dll</div>
+        </div>
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/3bcf2c9081582fac6994.reference.js"></script>
+  </body>
+</html>

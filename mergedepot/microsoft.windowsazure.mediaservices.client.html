@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Microsoft.WindowsAzure.MediaServices.Client namespace">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="media-services">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/e94ef2bde5332ae6306299662a592890e0d555d2/docs-ref-autogen/Data/MediaServices/Microsoft.WindowsAzure.MediaServices.Client.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Data/MediaServices/Microsoft.WindowsAzure.MediaServices.Client.yml">
+<meta name="updated_at" content="2017-02-13 06:19 AM">
+<meta name="document_id" content="d99eadfe-4e48-c658-0bbb-00fb72b8d9d7">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.WindowsAzure.MediaServices.Client">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.windowsazure.mediaservices.client" rel="canonical">
+    <title>Microsoft.WindowsAzure.MediaServices.Client namespace | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/3bcf2c9081582fac6994.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              <!-- NAMESPACE -->
+    <h1 id="Microsoft_WindowsAzure_MediaServices_Client">
+      <span class="lang-csharp">Microsoft.WindowsAzure.MediaServices.Client</span>
+      <span class="lang-vb">Microsoft.WindowsAzure.MediaServices.Client</span>
+        Namespace
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div>
+    <header class="header enable-platform-filter" id="classes">
+      <h2>Classes
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AccessPolicyBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.accesspolicybasecollection">AccessPolicyBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.accesspolicybasecollection">AccessPolicyBaseCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.iaccesspolicy">IAccessPolicy</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AcsTokenProvider" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.acstokenprovider">AcsTokenProvider</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.acstokenprovider">AcsTokenProvider</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AkamaiAccessControlData" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.akamaiaccesscontroldata">AkamaiAccessControlData</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.akamaiaccesscontroldata">AkamaiAccessControlData</a></div>
+      </td>
+      <td>
+        <p>Describes Akamai access control.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AkamaiSignatureHeaderAuthenticationKey" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.akamaisignatureheaderauthenticationkey">AkamaiSignatureHeaderAuthenticationKey</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.akamaisignatureheaderauthenticationkey">AkamaiSignatureHeaderAuthenticationKey</a></div>
+      </td>
+      <td>
+        <p>Information about Akamai Signature Header Authentication key.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AssetBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetbasecollection">AssetBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetbasecollection">AssetBaseCollection</a></div>
+      </td>
+      <td>
+        <p>Represents the base of all asset collections.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AssetBaseCollectionExtensions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetbasecollectionextensions">AssetBaseCollectionExtensions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetbasecollectionextensions">AssetBaseCollectionExtensions</a></div>
+      </td>
+      <td>
+        <p>Contains extension methods and helpers for the <a class="xref" href="microsoft.windowsazure.mediaservices.client.assetbasecollection">AssetBaseCollection</a> class..</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AssetCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetcollection">AssetCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetcollection">AssetCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.iasset">IAsset</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AssetFileBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetfilebasecollection">AssetFileBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetfilebasecollection">AssetFileBaseCollection</a></div>
+      </td>
+      <td>
+        <p>Provides a base class for all <a class="xref" href="microsoft.windowsazure.mediaservices.client.iassetfile">IAssetFile</a> collections.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AssetFilterBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetfilterbasecollection">AssetFilterBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetfilterbasecollection">AssetFilterBaseCollection</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AudioStream" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.audiostream">AudioStream</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.audiostream">AudioStream</a></div>
+      </td>
+      <td>
+        <p>Specifies an audio stream.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AzureMediaServicesClassFactory" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.azuremediaservicesclassfactory">AzureMediaServicesClassFactory</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.azuremediaservicesclassfactory">AzureMediaServicesClassFactory</a></div>
+      </td>
+      <td>
+        <p>A factory for creating the DataServiceContext connected to Windows Azure Media Services.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_BaseCollection_1" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.basecollection-1">BaseCollection</a>&lt;T&gt;</div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.basecollection-1">BaseCollection</a>(Of T)</div>
+      </td>
+      <td>
+        <p>Represents a base media collection.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_BaseEntity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.baseentity">BaseEntity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.baseentity">BaseEntity</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_BaseEntity_1" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.baseentity-1">BaseEntity</a>&lt;T&gt;</div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.baseentity-1">BaseEntity</a>(Of T)</div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_BlobTransferClient" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.blobtransferclient">BlobTransferClient</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.blobtransferclient">BlobTransferClient</a></div>
+      </td>
+      <td>
+        <p>Represents a client to operate on Windows Azure Blobs.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_BlobTransferCompleteEventArgs" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.blobtransfercompleteeventargs">BlobTransferCompleteEventArgs</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.blobtransfercompleteeventargs">BlobTransferCompleteEventArgs</a></div>
+      </td>
+      <td>
+        <p>Represents the information for blob transfer completion event.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_BlobTransferProgressChangedEventArgs" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.blobtransferprogresschangedeventargs">BlobTransferProgressChangedEventArgs</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.blobtransferprogresschangedeventargs">BlobTransferProgressChangedEventArgs</a></div>
+      </td>
+      <td>
+        <p>Represents the progress of a blob tranfer, used by <a class="xref" href="microsoft.windowsazure.mediaservices.client.blobtransferclient#Microsoft_WindowsAzure_MediaServices_Client_BlobTransferClient_TransferProgressChanged">TransferProgressChanged</a> event.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_Cache_1" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.cache-1">Cache</a>&lt;T&gt;</div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.cache-1">Cache</a>(Of T)</div>
+      </td>
+      <td>
+        <p>Extends standard MemoryCache making it strongly typed and adding
+conditional element loading if it is not present.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_CapacityBasedAccountSelectionStrategy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.capacitybasedaccountselectionstrategy">CapacityBasedAccountSelectionStrategy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.capacitybasedaccountselectionstrategy">CapacityBasedAccountSelectionStrategy</a></div>
+      </td>
+      <td>
+        <p>This IAccountSelectionStrategy implementation uses the number of used bytes in a storage account to help determine which storage account
+should be used to create the next asset.  It relies on the capacity metrics of the blob storage service to get the number of bytes used
+via the Wiindows Azure Media Services REST API.  If storage account metrics are not enabled for the storage account, then null is returned
+for the number of bytes used (these accounts are not used unless IncludeAccountsWithNoCapacityData is set to true).  Even knowing the 
+capacity of each storage account, the IAccountSelectionStrategy implementation still tries to spread out the new assets between the given 
+storage accounts.  This is especially important since the capacity is only calculated once per day by the storage service.  Thus, the
+IAccountSelectionStrategy implementation randomly selects from the available storage accounts but the probability of a storage account 
+being selected is based on the accounts remaining capacity.  For example, if there are two storage accounts to choose from where one account 
+is 50% full and the other account is 30% full then the implementation will pick the half full storage account 5 times out of 
+12 ((100 â€“ 50)/(200 â€“ 50 â€“ 30)) and the other storage account 7 times out of 12 ((100 â€“ 30)/(200 â€“ 50 â€“ 30)).  If the algorithm always 
+selected the storage account with the most available space, it would be used exclusively for 24 hours until the storage account metrics 
+were recalculated.  This weighted probability approach should spread the assets across the given storage accounts over time.  In order 
+to have a margin of safety, storage accounts that are too close to the limit will be given a zero probability of being selected.<br>This is controlled by the MaximumStorageAccountCapacity value.  Storage accounts that are at this capacity or greater will be considered
+full and will not be selected for new assets.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_CapacityBasedAccountSelectionStrategyListEntry" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.capacitybasedaccountselectionstrategylistentry">CapacityBasedAccountSelectionStrategyListEntry</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.capacitybasedaccountselectionstrategylistentry">CapacityBasedAccountSelectionStrategyListEntry</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelAccessControl" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelaccesscontrol">ChannelAccessControl</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelaccesscontrol">ChannelAccessControl</a></div>
+      </td>
+      <td>
+        <p>Specifies access control properties on the channel endpoints.
+This is the public class exposed to SDK interfaces and used by users</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelbasecollection">ChannelBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelbasecollection">ChannelBaseCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.ichannel">IChannel</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelCreationOptions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelcreationoptions">ChannelCreationOptions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelcreationoptions">ChannelCreationOptions</a></div>
+      </td>
+      <td>
+        <p>The options to create a channel, which contains
+all parameters and settings to configure a channel</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelEncoding" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelencoding">ChannelEncoding</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelencoding">ChannelEncoding</a></div>
+      </td>
+      <td>
+        <p>Specifies channel Encoding settings.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelEndpoint" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelendpoint">ChannelEndpoint</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelendpoint">ChannelEndpoint</a></div>
+      </td>
+      <td>
+        <p>Represents a channel streaming endpoint (ingest or preview)
+This is the public class exposed to SDK interfaces and used by users</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelInput" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelinput">ChannelInput</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelinput">ChannelInput</a></div>
+      </td>
+      <td>
+        <p>Describes Live channel input.
+This is the public class exposed to SDK interfaces and used by users</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelMetricsCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelmetricscollection">ChannelMetricsCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelmetricscollection">ChannelMetricsCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of Channel Metrics written to Azure Table Storage 
+by the Media Services Telemetry service.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelOutput" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channeloutput">ChannelOutput</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channeloutput">ChannelOutput</a></div>
+      </td>
+      <td>
+        <p>Describe the channel output</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelOutputHls" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channeloutputhls">ChannelOutputHls</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channeloutputhls">ChannelOutputHls</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelPreview" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelpreview">ChannelPreview</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelpreview">ChannelPreview</a></div>
+      </td>
+      <td>
+        <p>Specifies channel preview settings.
+This is the public class exposed to SDK interfaces and used by users</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelSlate" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelslate">ChannelSlate</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelslate">ChannelSlate</a></div>
+      </td>
+      <td>
+        <p>An entity class for storing the slate properties of a channel.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_CloudBaseCollection_1" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.cloudbasecollection-1">CloudBaseCollection</a>&lt;T&gt;</div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.cloudbasecollection-1">CloudBaseCollection</a>(Of T)</div>
+      </td>
+      <td>
+        <p>Represents a Base Collection that has a <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.data.services.client.dataservicecontext(v=vs.110).aspx">DataServiceContext</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_CloudMediaContext" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.cloudmediacontext">CloudMediaContext</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.cloudmediacontext">CloudMediaContext</a></div>
+      </td>
+      <td>
+        <p>Describes the context from which all entities in the Microsoft WindowsAzure Media Services platform can be accessed.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_CommonEncryption" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.commonencryption">CommonEncryption</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.commonencryption">CommonEncryption</a></div>
+      </td>
+      <td>
+        <p>Provides common encryption of content keys.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ComponentMonitoringSetting" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.componentmonitoringsetting">ComponentMonitoringSetting</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.componentmonitoringsetting">ComponentMonitoringSetting</a></div>
+      </td>
+      <td>
+        <p>The monitoring settings for a component.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ConfigurationEncryption" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.configurationencryption">ConfigurationEncryption</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.configurationencryption">ConfigurationEncryption</a></div>
+      </td>
+      <td>
+        <p>Provide encryption for configuration.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ContentKeyBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.contentkeybasecollection">ContentKeyBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.contentkeybasecollection">ContentKeyBaseCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of content keys.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ContentKeyCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.contentkeycollection">ContentKeyCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.contentkeycollection">ContentKeyCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.icontentkey">IContentKey</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_CopyBlobHelpers" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.copyblobhelpers">CopyBlobHelpers</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.copyblobhelpers">CopyBlobHelpers</a></div>
+      </td>
+      <td>
+        <p>Contains helper methods for copying blobs.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_CrossSiteAccessPolicies" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.crosssiteaccesspolicies">CrossSiteAccessPolicies</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.crosssiteaccesspolicies">CrossSiteAccessPolicies</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_DataServiceAsyncExtensions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.dataserviceasyncextensions">DataServiceAsyncExtensions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.dataserviceasyncextensions">DataServiceAsyncExtensions</a></div>
+      </td>
+      <td>
+        <p>Extension methods to DataService classes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_DownloadProgressChangedEventArgs" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.downloadprogresschangedeventargs">DownloadProgressChangedEventArgs</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.downloadprogresschangedeventargs">DownloadProgressChangedEventArgs</a></div>
+      </td>
+      <td>
+        <p>Describes the status of a download operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_EncodingReservedUnitCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.encodingreservedunitcollection">EncodingReservedUnitCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.encodingreservedunitcollection">EncodingReservedUnitCollection</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_EncryptionUtils" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.encryptionutils">EncryptionUtils</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.encryptionutils">EncryptionUtils</a></div>
+      </td>
+      <td>
+        <p>Provides helpers for encryption.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_EnvelopeEncryption" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.envelopeencryption">EnvelopeEncryption</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.envelopeencryption">EnvelopeEncryption</a></div>
+      </td>
+      <td>
+        <p>Provides envelope encryption.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ErrorDetail" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.errordetail">ErrorDetail</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.errordetail">ErrorDetail</a></div>
+      </td>
+      <td>
+        <p>Describes an error encountered during the execution of a task.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FileEncryption" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.fileencryption">FileEncryption</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.fileencryption">FileEncryption</a></div>
+      </td>
+      <td>
+        <p>Provides file encryption.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FileEncryptionTransform" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.fileencryptiontransform">FileEncryptionTransform</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.fileencryptiontransform">FileEncryptionTransform</a></div>
+      </td>
+      <td>
+        <p>Provides a file encryption transformation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FilterTrackBitrateRange" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertrackbitraterange">FilterTrackBitrateRange</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertrackbitraterange">FilterTrackBitrateRange</a></div>
+      </td>
+      <td>
+        <p>Define a bitrate range for track selection condition</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FilterTrackBitrateRangeCondition" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertrackbitraterangecondition">FilterTrackBitrateRangeCondition</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertrackbitraterangecondition">FilterTrackBitrateRangeCondition</a></div>
+      </td>
+      <td>
+        <p>Bitrate range condition</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FilterTrackFourCCCondition" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertrackfourcccondition">FilterTrackFourCCCondition</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertrackfourcccondition">FilterTrackFourCCCondition</a></div>
+      </td>
+      <td>
+        <p>FourCC condition</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FilterTrackLanguageCondition" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertracklanguagecondition">FilterTrackLanguageCondition</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertracklanguagecondition">FilterTrackLanguageCondition</a></div>
+      </td>
+      <td>
+        <p>Language condition</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FilterTrackNameCondition" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertracknamecondition">FilterTrackNameCondition</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertracknamecondition">FilterTrackNameCondition</a></div>
+      </td>
+      <td>
+        <p>Track Name condition</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FilterTrackPropertyBaseCondition" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertrackpropertybasecondition">FilterTrackPropertyBaseCondition</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertrackpropertybasecondition">FilterTrackPropertyBaseCondition</a></div>
+      </td>
+      <td>
+        <p>Base track property condition</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FilterTrackSelectStatement" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertrackselectstatement">FilterTrackSelectStatement</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertrackselectstatement">FilterTrackSelectStatement</a></div>
+      </td>
+      <td>
+        <p>Track select statement</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FilterTrackTypeCondition" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertracktypecondition">FilterTrackTypeCondition</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertracktypecondition">FilterTrackTypeCondition</a></div>
+      </td>
+      <td>
+        <p>Type condition for track</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FirstQuality" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.firstquality">FirstQuality</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.firstquality">FirstQuality</a></div>
+      </td>
+      <td>
+        <p>First Quality of Manifest Filter, indicates the first quality bitrate for HLS</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IAssetExtensions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iassetextensions">IAssetExtensions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iassetextensions">IAssetExtensions</a></div>
+      </td>
+      <td>
+        <p>Contains extension methods and helpers for the <a class="xref" href="microsoft.windowsazure.mediaservices.client.iasset">IAsset</a> interface.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IAssetFileExtensions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iassetfileextensions">IAssetFileExtensions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iassetfileextensions">IAssetFileExtensions</a></div>
+      </td>
+      <td>
+        <p>Contains extension methods and helpers for the <see cref="!:IAssetFiles"></see> interface.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IJobExtensions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ijobextensions">IJobExtensions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ijobextensions">IJobExtensions</a></div>
+      </td>
+      <td>
+        <p>Contains extension methods and helpers for the <a class="xref" href="microsoft.windowsazure.mediaservices.client.ijob">IJob</a> interface.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ILocatorExtensions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ilocatorextensions">ILocatorExtensions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ilocatorextensions">ILocatorExtensions</a></div>
+      </td>
+      <td>
+        <p>Contains extension methods and helpers for the <a class="xref" href="microsoft.windowsazure.mediaservices.client.ilocator">ILocator</a> interface.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IngestIngestManifestStatistics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ingestingestmanifeststatistics">IngestIngestManifestStatistics</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ingestingestmanifeststatistics">IngestIngestManifestStatistics</a></div>
+      </td>
+      <td>
+        <p>Represent static information about manifest</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IngestManifestAssetCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ingestmanifestassetcollection">IngestManifestAssetCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ingestmanifestassetcollection">IngestManifestAssetCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.iingestmanifestasset">IIngestManifestAsset</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IngestManifestCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ingestmanifestcollection">IngestManifestCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ingestmanifestcollection">IngestManifestCollection</a></div>
+      </td>
+      <td>
+        <p>Represents <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.linq.iqueryable(v=vs.110).aspx">IQueryable</a> collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.iingestmanifest">IIngestManifest</a>. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IngestManifestFileCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ingestmanifestfilecollection">IngestManifestFileCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ingestmanifestfilecollection">IngestManifestFileCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.iingestmanifestfile">IIngestManifestFile</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_InputAssetCollection_1" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.inputassetcollection-1">InputAssetCollection</a>&lt;T&gt;</div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.inputassetcollection-1">InputAssetCollection</a>(Of T)</div>
+      </td>
+      <td>
+        <p>Enumerable for task input assets.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IPRange" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iprange">IPRange</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iprange">IPRange</a></div>
+      </td>
+      <td>
+        <p>Represents an IP Range
+This is the public class exposed to SDK interfaces and used by users</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_JobBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobbasecollection">JobBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobbasecollection">JobBaseCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.ijob">IJob</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_JobBaseCollectionExtensions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobbasecollectionextensions">JobBaseCollectionExtensions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobbasecollectionextensions">JobBaseCollectionExtensions</a></div>
+      </td>
+      <td>
+        <p>Contains extension methods and helpers for the <a class="xref" href="microsoft.windowsazure.mediaservices.client.jobbasecollection">JobBaseCollection</a> class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_JobNotificationSubscriptionCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobnotificationsubscriptioncollection">JobNotificationSubscriptionCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobnotificationsubscriptioncollection">JobNotificationSubscriptionCollection</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_JobStateChangedEventArgs" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobstatechangedeventargs">JobStateChangedEventArgs</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobstatechangedeventargs">JobStateChangedEventArgs</a></div>
+      </td>
+      <td>
+        <p>Describes the change of state of an <a class="xref" href="microsoft.windowsazure.mediaservices.client.ijob">IJob</a> that was submitted.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_JobTemplateBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobtemplatebasecollection">JobTemplateBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobtemplatebasecollection">JobTemplateBaseCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.ijobtemplate">IJobTemplate</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_LocatorBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.locatorbasecollection">LocatorBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.locatorbasecollection">LocatorBaseCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.ilocator">ILocator</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_LocatorBaseCollectionExtensions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.locatorbasecollectionextensions">LocatorBaseCollectionExtensions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.locatorbasecollectionextensions">LocatorBaseCollectionExtensions</a></div>
+      </td>
+      <td>
+        <p>Contains extension methods and helpers for the <a class="xref" href="microsoft.windowsazure.mediaservices.client.locatorbasecollection">LocatorBaseCollection</a> class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MediaContextBase" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediacontextbase">MediaContextBase</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediacontextbase">MediaContextBase</a></div>
+      </td>
+      <td>
+        <p>Represents a base media context containing collections to operate on.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MediaDataServiceContext" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediadataservicecontext">MediaDataServiceContext</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediadataservicecontext">MediaDataServiceContext</a></div>
+      </td>
+      <td>
+        <p>Wraps System.Data.Services.Client.DataServiceContext.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MediaDataServiceResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediadataserviceresponse">MediaDataServiceResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediadataserviceresponse">MediaDataServiceResponse</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MediaEncoderStandardTaskPresetStrings" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaencoderstandardtaskpresetstrings">MediaEncoderStandardTaskPresetStrings</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaencoderstandardtaskpresetstrings">MediaEncoderStandardTaskPresetStrings</a></div>
+      </td>
+      <td>
+        <p>Contains string constants with the available Task Preset Strings for Media Encoder Standard (MES).
+For more information, please visit <a href="https://msdn.microsoft.com/library/azure/mt269960.aspx">https://msdn.microsoft.com/library/azure/mt269960.aspx</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MediaEncoderTaskPresetStrings" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaencodertaskpresetstrings">MediaEncoderTaskPresetStrings</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaencodertaskpresetstrings">MediaEncoderTaskPresetStrings</a></div>
+      </td>
+      <td>
+        <p>Contains string constants with the available Task Preset Strings for Windows Azure Media Encoder.
+For more information, please visit <a href="http://msdn.microsoft.com/library/windowsazure/jj129582.aspx">http://msdn.microsoft.com/library/windowsazure/jj129582.aspx</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MediaProcessorBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaprocessorbasecollection">MediaProcessorBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaprocessorbasecollection">MediaProcessorBaseCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.imediaprocessor">IMediaProcessor</a> objects.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MediaProcessorBaseCollectionExtensions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaprocessorbasecollectionextensions">MediaProcessorBaseCollectionExtensions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaprocessorbasecollectionextensions">MediaProcessorBaseCollectionExtensions</a></div>
+      </td>
+      <td>
+        <p>Contains extension methods and helpers for the <a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaprocessorbasecollection">MediaProcessorBaseCollection</a> class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MediaProcessorNames" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaprocessornames">MediaProcessorNames</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaprocessornames">MediaProcessorNames</a></div>
+      </td>
+      <td>
+        <p>Contains string constants with the available media processors&#39; names.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MediaServicesClassFactory" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaservicesclassfactory">MediaServicesClassFactory</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaservicesclassfactory">MediaServicesClassFactory</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MediaServicesCredentials" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaservicescredentials">MediaServicesCredentials</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaservicescredentials">MediaServicesCredentials</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MediaServicesExceptionParser" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaservicesexceptionparser">MediaServicesExceptionParser</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.mediaservicesexceptionparser">MediaServicesExceptionParser</a></div>
+      </td>
+      <td>
+        <p>Contains helper methods to parse Windows Azure Media Services error messages in XML format.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MonitoringConfigurationCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.monitoringconfigurationcollection">MonitoringConfigurationCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.monitoringconfigurationcollection">MonitoringConfigurationCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of monitoring configuration.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_NotificationEndPointCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.notificationendpointcollection">NotificationEndPointCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.notificationendpointcollection">NotificationEndPointCollection</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_OperationBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.operationbasecollection">OperationBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.operationbasecollection">OperationBaseCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.ioperation">IOperation</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_OutputAssetCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.outputassetcollection">OutputAssetCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.outputassetcollection">OutputAssetCollection</a></div>
+      </td>
+      <td>
+        <p>A collection of output assets.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_OutputAssetCollectionExtensions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.outputassetcollectionextensions">OutputAssetCollectionExtensions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.outputassetcollectionextensions">OutputAssetCollectionExtensions</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_PresentationTimeRange" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.presentationtimerange">PresentationTimeRange</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.presentationtimerange">PresentationTimeRange</a></div>
+      </td>
+      <td>
+        <p>Define a presentation time range</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_PresentationTimeRangeData" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.presentationtimerangedata">PresentationTimeRangeData</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.presentationtimerangedata">PresentationTimeRangeData</a></div>
+      </td>
+      <td>
+        <p>PresentationTimeRangeData holds PresentationTimeRange property from REST</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ProgramBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.programbasecollection">ProgramBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.programbasecollection">ProgramBaseCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.iprogram">IProgram</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ProgramCreationOptions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.programcreationoptions">ProgramCreationOptions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.programcreationoptions">ProgramCreationOptions</a></div>
+      </td>
+      <td>
+        <p>The options to create a channel program, which contains
+all parameters and settings to configure the program.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_RandomAccountSelectionStrategy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.randomaccountselectionstrategy">RandomAccountSelectionStrategy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.randomaccountselectionstrategy">RandomAccountSelectionStrategy</a></div>
+      </td>
+      <td>
+        <p>Represents simple pseudo random account selection based on the <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.random(v=vs.110).aspx">Random</a> class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_StorageAccountBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.storageaccountbasecollection">StorageAccountBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.storageaccountbasecollection">StorageAccountBaseCollection</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_StreamingConstants" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingconstants">StreamingConstants</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingconstants">StreamingConstants</a></div>
+      </td>
+      <td>
+        <p>Various constants.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_StreamingEndpointAccessControl" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingendpointaccesscontrol">StreamingEndpointAccessControl</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingendpointaccesscontrol">StreamingEndpointAccessControl</a></div>
+      </td>
+      <td>
+        <p>Describes Streaming Endpoint Ingest access control.
+This is the public class exposed to SDK interfaces and used by users</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_StreamingEndpointBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingendpointbasecollection">StreamingEndpointBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingendpointbasecollection">StreamingEndpointBaseCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of <a class="xref" href="microsoft.windowsazure.mediaservices.client.istreamingendpoint">IStreamingEndpoint</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_StreamingEndpointCacheControl" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingendpointcachecontrol">StreamingEndpointCacheControl</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingendpointcachecontrol">StreamingEndpointCacheControl</a></div>
+      </td>
+      <td>
+        <p>Describes streaming endpoint cache control.
+This is the public class exposed to SDK interfaces and used by users</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_StreamingEndpointCreationOptions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingendpointcreationoptions">StreamingEndpointCreationOptions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingendpointcreationoptions">StreamingEndpointCreationOptions</a></div>
+      </td>
+      <td>
+        <p>The options to create a streaming endpoint, which contains
+all parameters and settings to configure a streaming endpoint</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_StreamingEndPointRequestLogCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingendpointrequestlogcollection">StreamingEndPointRequestLogCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingendpointrequestlogcollection">StreamingEndPointRequestLogCollection</a></div>
+      </td>
+      <td>
+        <p>Represents a collection of Streaming EndPoint Metrics written to Azure Table Storage 
+by the Media Services Telemetry service.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_StreamingFilterBaseCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingfilterbasecollection">StreamingFilterBaseCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingfilterbasecollection">StreamingFilterBaseCollection</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_TaskCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.taskcollection">TaskCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.taskcollection">TaskCollection</a></div>
+      </td>
+      <td>
+        <p>A collection of tasks.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_TaskExtensions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.taskextensions">TaskExtensions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.taskextensions">TaskExtensions</a></div>
+      </td>
+      <td>
+        <p>Extension methods for a task.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_TaskHistoricalEvent" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.taskhistoricalevent">TaskHistoricalEvent</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.taskhistoricalevent">TaskHistoricalEvent</a></div>
+      </td>
+      <td>
+        <p>Represents a task history event</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_TaskNotificationSubscriptionCollection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.tasknotificationsubscriptioncollection">TaskNotificationSubscriptionCollection</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.tasknotificationsubscriptioncollection">TaskNotificationSubscriptionCollection</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_UploadProgressChangedEventArgs" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.uploadprogresschangedeventargs">UploadProgressChangedEventArgs</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.uploadprogresschangedeventargs">UploadProgressChangedEventArgs</a></div>
+      </td>
+      <td>
+        <p>Describes the status of a upload operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_VideoStream" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.videostream">VideoStream</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.videostream">VideoStream</a></div>
+      </td>
+      <td>
+        <p>Specifies a video stream.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="interfaces">
+      <h2>Interfaces
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IAccessPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iaccesspolicy">IAccessPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iaccesspolicy">IAccessPolicy</a></div>
+      </td>
+      <td>
+        <p>Defines an access policy to an <a class="xref" href="microsoft.windowsazure.mediaservices.client.iasset">IAsset</a> in the system.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IAccountSelectionStrategy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iaccountselectionstrategy">IAccountSelectionStrategy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iaccountselectionstrategy">IAccountSelectionStrategy</a></div>
+      </td>
+      <td>
+        <p>Defines account selection logic within asset creation scenarios.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IAsset" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iasset">IAsset</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iasset">IAsset</a></div>
+      </td>
+      <td>
+        <p>Represents an asset that can be an input to jobs or tasks.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IAssetFile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iassetfile">IAssetFile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iassetfile">IAssetFile</a></div>
+      </td>
+      <td>
+        <p>Represents a file belonging to an Asset.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IChannel" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ichannel">IChannel</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ichannel">IChannel</a></div>
+      </td>
+      <td>
+        <p>Describes a Channel.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IChannelHeartbeat" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ichannelheartbeat">IChannelHeartbeat</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ichannelheartbeat">IChannelHeartbeat</a></div>
+      </td>
+      <td>
+        <p>A channel heartbeat metric.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IComponentMonitoringSetting" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.icomponentmonitoringsetting">IComponentMonitoringSetting</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.icomponentmonitoringsetting">IComponentMonitoringSetting</a></div>
+      </td>
+      <td>
+        <p>The interface of monitoring settings for a component.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IContentKey" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.icontentkey">IContentKey</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.icontentkey">IContentKey</a></div>
+      </td>
+      <td>
+        <p>Represents a content key that can be used for encryption and decryption.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IEncodingReservedUnit" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iencodingreservedunit">IEncodingReservedUnit</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iencodingreservedunit">IEncodingReservedUnit</a></div>
+      </td>
+      <td>
+        <p>Represents Azure Encoding Reserved Unit in a system</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IFilterTrackPropertyCondition" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ifiltertrackpropertycondition">IFilterTrackPropertyCondition</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ifiltertrackpropertycondition">IFilterTrackPropertyCondition</a></div>
+      </td>
+      <td>
+        <p>Interface for track property condition</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IIngestManifest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iingestmanifest">IIngestManifest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iingestmanifest">IIngestManifest</a></div>
+      </td>
+      <td>
+        <p>Represents bulk ingest manifest</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IIngestManifestAsset" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iingestmanifestasset">IIngestManifestAsset</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iingestmanifestasset">IIngestManifestAsset</a></div>
+      </td>
+      <td>
+        <p>Represents an ingest manifest asset information describing what files need to be processed for a given asset</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IIngestManifestFile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iingestmanifestfile">IIngestManifestFile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iingestmanifestfile">IIngestManifestFile</a></div>
+      </td>
+      <td>
+        <p>Represents manifest file</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IIngestManifestStatistics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iingestmanifeststatistics">IIngestManifestStatistics</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iingestmanifeststatistics">IIngestManifestStatistics</a></div>
+      </td>
+      <td>
+        <p>Represent static information about manifest</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IJob" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ijob">IJob</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ijob">IJob</a></div>
+      </td>
+      <td>
+        <p>Describes a job in the system.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IJobNotificationSubscription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ijobnotificationsubscription">IJobNotificationSubscription</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ijobnotificationsubscription">IJobNotificationSubscription</a></div>
+      </td>
+      <td>
+        <p>Describes which notification of job state to subscribe, and where to retrieve notification.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IJobTemplate" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ijobtemplate">IJobTemplate</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ijobtemplate">IJobTemplate</a></div>
+      </td>
+      <td>
+        <p>Represents a JobTemplate that can be used to create Jobs.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ILocator" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ilocator">ILocator</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ilocator">ILocator</a></div>
+      </td>
+      <td>
+        <p>Represents the application of an access policy to an asset.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IMediaContextContainer" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.imediacontextcontainer">IMediaContextContainer</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.imediacontextcontainer">IMediaContextContainer</a></div>
+      </td>
+      <td>
+        <p>Provides initialization of a <a class="xref" href="microsoft.windowsazure.mediaservices.client.cloudmediacontext">CloudMediaContext</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IMediaDataServiceContext" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.imediadataservicecontext">IMediaDataServiceContext</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.imediadataservicecontext">IMediaDataServiceContext</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IMediaDataServiceResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.imediadataserviceresponse">IMediaDataServiceResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.imediadataserviceresponse">IMediaDataServiceResponse</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IMediaProcessor" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.imediaprocessor">IMediaProcessor</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.imediaprocessor">IMediaProcessor</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IMonitoringConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.imonitoringconfiguration">IMonitoringConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.imonitoringconfiguration">IMonitoringConfiguration</a></div>
+      </td>
+      <td>
+        <p>The monitoring configuration.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_INotificationEndPoint" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.inotificationendpoint">INotificationEndPoint</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.inotificationendpoint">INotificationEndPoint</a></div>
+      </td>
+      <td>
+        <p>Notification endpoint, to which the publisher pushes notification, from which
+the subscriber reads notification.</p>
+<p>The endpoint is provided by the application.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IOperation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ioperation">IOperation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ioperation">IOperation</a></div>
+      </td>
+      <td>
+        <p>Describes an Operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IProgram" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iprogram">IProgram</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.iprogram">IProgram</a></div>
+      </td>
+      <td>
+        <p>Describes a program.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IStorageAccount" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.istorageaccount">IStorageAccount</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.istorageaccount">IStorageAccount</a></div>
+      </td>
+      <td>
+        <p>Represents Azure storage account in a system</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IStreamingAssetFilter" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.istreamingassetfilter">IStreamingAssetFilter</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.istreamingassetfilter">IStreamingAssetFilter</a></div>
+      </td>
+      <td>
+        <p>Interface for asset level filter</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IStreamingEndpoint" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.istreamingendpoint">IStreamingEndpoint</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.istreamingendpoint">IStreamingEndpoint</a></div>
+      </td>
+      <td>
+        <p>Describes a Streaming Endpoint.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IStreamingEndPointRequestLog" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.istreamingendpointrequestlog">IStreamingEndPointRequestLog</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.istreamingendpointrequestlog">IStreamingEndPointRequestLog</a></div>
+      </td>
+      <td>
+        <p>A Streaming EndPoint request log metric.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IStreamingFilter" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.istreamingfilter">IStreamingFilter</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.istreamingfilter">IStreamingFilter</a></div>
+      </td>
+      <td>
+        <p>Interface for account level filter</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ITask" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.itask">ITask</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.itask">ITask</a></div>
+      </td>
+      <td>
+        <p>Describes a task within a job in the system.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ITaskNotificationSubscription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.itasknotificationsubscription">ITaskNotificationSubscription</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.itasknotificationsubscription">ITaskNotificationSubscription</a></div>
+      </td>
+      <td>
+        <p>Defines the notification endpoint task state changes and whether to include task progress for which to be notified.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ITaskTemplate" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.itasktemplate">ITaskTemplate</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.itasktemplate">ITaskTemplate</a></div>
+      </td>
+      <td>
+        <p>Represents a TaskTemplate.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ITokenProvider" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.itokenprovider">ITokenProvider</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.itokenprovider">ITokenProvider</a></div>
+      </td>
+      <td>
+        <p>A generic interface to a RFC6750 bearer token provider.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="enums">
+      <h2>Enums
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AccessPermissions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.accesspermissions">AccessPermissions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.accesspermissions">AccessPermissions</a></div>
+      </td>
+      <td>
+        <p>Specifies the permissions that an <a class="xref" href="microsoft.windowsazure.mediaservices.client.iaccesspolicy">IAccessPolicy</a> may grant.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AdMarkerSource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.admarkersource">AdMarkerSource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.admarkersource">AdMarkerSource</a></div>
+      </td>
+      <td>
+        <p>An enum for the options allowed for an ad marker source.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AssetCreationOptions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetcreationoptions">AssetCreationOptions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetcreationoptions">AssetCreationOptions</a></div>
+      </td>
+      <td>
+        <p>Specifies the the different options that an <a class="xref" href="microsoft.windowsazure.mediaservices.client.iasset">IAsset</a> can be created with.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AssetFileOptions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetfileoptions">AssetFileOptions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetfileoptions">AssetFileOptions</a></div>
+      </td>
+      <td>
+        <p>Specifies the the different options that an <a class="xref" href="microsoft.windowsazure.mediaservices.client.iassetfile">IAssetFile</a> can have.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AssetFormatOption" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetformatoption">AssetFormatOption</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetformatoption">AssetFormatOption</a></div>
+      </td>
+      <td>
+        <p>Specifies the the different format options that an <a class="xref" href="microsoft.windowsazure.mediaservices.client.iasset">IAsset</a> can be created with.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AssetState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetstate">AssetState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assetstate">AssetState</a></div>
+      </td>
+      <td>
+        <p>Specifies the allowed states of an asset.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_AssetType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assettype">AssetType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.assettype">AssetType</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_BlobTransferType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.blobtransfertype">BlobTransferType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.blobtransfertype">BlobTransferType</a></div>
+      </td>
+      <td>
+        <p>Specifies the type of the transfer.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelEncodingType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelencodingtype">ChannelEncodingType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelencodingtype">ChannelEncodingType</a></div>
+      </td>
+      <td>
+        <p>Specify the channel encoding type</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ChannelState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelstate">ChannelState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.channelstate">ChannelState</a></div>
+      </td>
+      <td>
+        <p>Specifies the state of a channel</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ContentKeyType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.contentkeytype">ContentKeyType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.contentkeytype">ContentKeyType</a></div>
+      </td>
+      <td>
+        <p>Specifies the type of a content key.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FilterTrackCompareOperator" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertrackcompareoperator">FilterTrackCompareOperator</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertrackcompareoperator">FilterTrackCompareOperator</a></div>
+      </td>
+      <td>
+        <p>Compare operator</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_FilterTrackType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertracktype">FilterTrackType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.filtertracktype">FilterTrackType</a></div>
+      </td>
+      <td>
+        <p>Type of Track</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IngestManifestFileState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ingestmanifestfilestate">IngestManifestFileState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ingestmanifestfilestate">IngestManifestFileState</a></div>
+      </td>
+      <td>
+        <p>Represents manifest asset file state</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_IngestManifestState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ingestmanifeststate">IngestManifestState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.ingestmanifeststate">IngestManifestState</a></div>
+      </td>
+      <td>
+        <p>Represents ingest manifest state.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_JobState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobstate">JobState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobstate">JobState</a></div>
+      </td>
+      <td>
+        <p>Specifies the possible Job states.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_JobTemplateType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobtemplatetype">JobTemplateType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.jobtemplatetype">JobTemplateType</a></div>
+      </td>
+      <td>
+        <p>Describes the types of job templates based on the accessiblity level.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_LocatorType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.locatortype">LocatorType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.locatortype">LocatorType</a></div>
+      </td>
+      <td>
+        <p>Specifies the available types locator.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MonitoringComponent" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.monitoringcomponent">MonitoringComponent</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.monitoringcomponent">MonitoringComponent</a></div>
+      </td>
+      <td>
+        <p>Monitoring Component Type</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_MonitoringLevel" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.monitoringlevel">MonitoringLevel</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.monitoringlevel">MonitoringLevel</a></div>
+      </td>
+      <td>
+        <p>The monitoring setting type</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_NotificationEndPointCredentialType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.notificationendpointcredentialtype">NotificationEndPointCredentialType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.notificationendpointcredentialtype">NotificationEndPointCredentialType</a></div>
+      </td>
+      <td>
+        <p>Type of notification endpoint.
+Added WebHook support </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_NotificationEndPointType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.notificationendpointtype">NotificationEndPointType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.notificationendpointtype">NotificationEndPointType</a></div>
+      </td>
+      <td>
+        <p>Type of notification endpoint.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_NotificationJobState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.notificationjobstate">NotificationJobState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.notificationjobstate">NotificationJobState</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_OperationState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.operationstate">OperationState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.operationstate">OperationState</a></div>
+      </td>
+      <td>
+        <p>Describes operation state.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ProgramState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.programstate">ProgramState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.programstate">ProgramState</a></div>
+      </td>
+      <td>
+        <p>Describes state of a program.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ProtectionKeyType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.protectionkeytype">ProtectionKeyType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.protectionkeytype">ProtectionKeyType</a></div>
+      </td>
+      <td>
+        <p>Describes the types of protection keys.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_ReservedUnitType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.reservedunittype">ReservedUnitType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.reservedunittype">ReservedUnitType</a></div>
+      </td>
+      <td>
+        <p>Specifies the type of the ReservedUnit.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_StreamingEndpointState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingendpointstate">StreamingEndpointState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingendpointstate">StreamingEndpointState</a></div>
+      </td>
+      <td>
+        <p>Describes the state of a streaming endpoint.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_StreamingProtocol" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingprotocol">StreamingProtocol</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.streamingprotocol">StreamingProtocol</a></div>
+      </td>
+      <td>
+        <p>The ingest streaming protocol.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_WindowsAzure_MediaServices_Client_TaskOptions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.windowsazure.mediaservices.client.taskoptions">TaskOptions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.windowsazure.mediaservices.client.taskoptions">TaskOptions</a></div>
+      </td>
+      <td>
+        <p>Specifies the options for creating Tasks.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/3bcf2c9081582fac6994.reference.js"></script>
+  </body>
+</html>

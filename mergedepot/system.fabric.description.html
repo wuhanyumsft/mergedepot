@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="System.Fabric.Description namespace">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="service-fabric">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/8ece26063f2f27414f0bad873159ee6212f3448d/docs-ref-manual/Data/ServiceFabric/System.Fabric.Description.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-manual/Data/ServiceFabric/System.Fabric.Description.yml">
+<meta name="updated_at" content="2016-12-19 07:26 AM">
+<meta name="document_id" content="0dd89eb6-97f1-69df-f146-528d3ed5ba63">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Fabric.Description">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.fabric.description" rel="canonical">
+    <title>System.Fabric.Description namespace | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/3bcf2c9081582fac6994.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              <!-- NAMESPACE -->
+    <h1 id="System_Fabric_Description">
+      <span class="lang-csharp">System.Fabric.Description</span>
+      <span class="lang-vb">System.Fabric.Description</span>
+        Namespace
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div>
+    <header class="header enable-platform-filter" id="classes">
+      <h2>Classes
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="System_Fabric_Description_ApplicationDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.applicationdescription">ApplicationDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.applicationdescription">ApplicationDescription</a></div>
+      </td>
+      <td>
+        <p>Describes an application to be created by using 
+<a class="xref" href="system.fabric.fabricclient.applicationmanagementclient#System_Fabric_FabricClient_ApplicationManagementClient_CreateApplicationAsync_System_Fabric_Description_ApplicationDescription_">CreateApplicationAsync(ApplicationDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ApplicationHealthQueryDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.applicationhealthquerydescription">ApplicationHealthQueryDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.applicationhealthquerydescription">ApplicationHealthQueryDescription</a></div>
+      </td>
+      <td>
+        <p>Represents the query input for getting application health. Used by 
+<a class="xref" href="system.fabric.fabricclient.healthclient#System_Fabric_FabricClient_HealthClient_GetApplicationHealthAsync_System_Fabric_Description_ApplicationHealthQueryDescription_">GetApplicationHealthAsync(ApplicationHealthQueryDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ApplicationMetricDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.applicationmetricdescription">ApplicationMetricDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.applicationmetricdescription">ApplicationMetricDescription</a></div>
+      </td>
+      <td>
+        <p>Specifies the application capacity for one metric.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ApplicationParameter" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.applicationparameter">ApplicationParameter</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.applicationparameter">ApplicationParameter</a></div>
+      </td>
+      <td>
+        <p>Provides an application parameter override to be applied when creating or upgrading an application.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ApplicationParameterList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.applicationparameterlist">ApplicationParameterList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.applicationparameterlist">ApplicationParameterList</a></div>
+      </td>
+      <td>
+        <p>Represents the list of application parameters applied to the current version of the application. Retrieved using 
+<a class="xref" href="system.fabric.fabricclient.queryclient#System_Fabric_FabricClient_QueryClient_GetApplicationListAsync_System_Uri_">GetApplicationListAsync(Uri)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ApplicationPrincipalsDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.applicationprincipalsdescription">ApplicationPrincipalsDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.applicationprincipalsdescription">ApplicationPrincipalsDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the application principals of the service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ApplicationUpdateDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.applicationupdatedescription">ApplicationUpdateDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.applicationupdatedescription">ApplicationUpdateDescription</a></div>
+      </td>
+      <td>
+        <p>Describes an update of application capacity that will be updated using</p>
+<a class="xref" href="system.fabric.fabricclient.applicationmanagementclient#System_Fabric_FabricClient_ApplicationManagementClient_UpdateApplicationAsync_System_Fabric_Description_ApplicationUpdateDescription_">UpdateApplicationAsync(ApplicationUpdateDescription)</a>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ApplicationUpgradeDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.applicationupgradedescription">ApplicationUpgradeDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.applicationupgradedescription">ApplicationUpgradeDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the upgrade policy and the application to be upgraded.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ApplicationUpgradeUpdateDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.applicationupgradeupdatedescription">ApplicationUpgradeUpdateDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.applicationupgradeupdatedescription">ApplicationUpgradeUpdateDescription</a></div>
+      </td>
+      <td>
+        <p>Used to modify the upgrade parameters describing the behavior of application upgrades. See 
+<a class="xref" href="system.fabric.fabricclient.applicationmanagementclient#System_Fabric_FabricClient_ApplicationManagementClient_UpdateApplicationUpgradeAsync_System_Fabric_Description_ApplicationUpgradeUpdateDescription_">UpdateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ClusterHealthChunkQueryDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.clusterhealthchunkquerydescription">ClusterHealthChunkQueryDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.clusterhealthchunkquerydescription">ClusterHealthChunkQueryDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the cluster health chunk query input.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ClusterHealthQueryDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.clusterhealthquerydescription">ClusterHealthQueryDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.clusterhealthquerydescription">ClusterHealthQueryDescription</a></div>
+      </td>
+      <td>
+        <p>Provides query input for getting <a class="xref" href="system.fabric.health.clusterhealth">ClusterHealth</a>. Used by 
+<a class="xref" href="system.fabric.fabricclient.healthclient#System_Fabric_FabricClient_HealthClient_GetClusterHealthAsync_System_Fabric_Description_ClusterHealthQueryDescription_">GetClusterHealthAsync(ClusterHealthQueryDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_CodePackageDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.codepackagedescription">CodePackageDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.codepackagedescription">CodePackageDescription</a></div>
+      </td>
+      <td>
+        <p>Describes a code package that includes its entry point.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ConfigurationPackageDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.configurationpackagedescription">ConfigurationPackageDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.configurationpackagedescription">ConfigurationPackageDescription</a></div>
+      </td>
+      <td>
+        <p>Describes a configuration package.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ConfigurationProperty" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.configurationproperty">ConfigurationProperty</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.configurationproperty">ConfigurationProperty</a></div>
+      </td>
+      <td>
+        <p>Specifies a name-value pair that is used to configure a service or application.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ConfigurationSection" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.configurationsection">ConfigurationSection</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.configurationsection">ConfigurationSection</a></div>
+      </td>
+      <td>
+        <p>Specifies a named collection of configuration properties.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ConfigurationSettings" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.configurationsettings">ConfigurationSettings</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.configurationsettings">ConfigurationSettings</a></div>
+      </td>
+      <td>
+        <p>Describes the configuration settings.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ConfigurationUpgradeDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.configurationupgradedescription">ConfigurationUpgradeDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.configurationupgradedescription">ConfigurationUpgradeDescription</a></div>
+      </td>
+      <td>
+        <p>Represents a class to encapsulate parameters describing a Service Fabric cluster configuration upgrade.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_DataPackageDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.datapackagedescription">DataPackageDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.datapackagedescription">DataPackageDescription</a></div>
+      </td>
+      <td>
+        <p>Describes a data package. </p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_DeleteApplicationDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.deleteapplicationdescription">DeleteApplicationDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.deleteapplicationdescription">DeleteApplicationDescription</a></div>
+      </td>
+      <td>
+        <p>Describes an application to be deleted by using 
+<a class="xref" href="system.fabric.fabricclient.applicationmanagementclient#System_Fabric_FabricClient_ApplicationManagementClient_DeleteApplicationAsync_System_Fabric_Description_DeleteApplicationDescription_System_TimeSpan_System_Threading_CancellationToken_">DeleteApplicationAsync(DeleteApplicationDescription, TimeSpan, CancellationToken)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_DeleteServiceDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.deleteservicedescription">DeleteServiceDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.deleteservicedescription">DeleteServiceDescription</a></div>
+      </td>
+      <td>
+        <p>Describes an service to be deleted by using 
+<a class="xref" href="system.fabric.fabricclient.servicemanagementclient#System_Fabric_FabricClient_ServiceManagementClient_DeleteServiceAsync_System_Fabric_Description_DeleteServiceDescription_System_TimeSpan_System_Threading_CancellationToken_">DeleteServiceAsync(DeleteServiceDescription, TimeSpan, CancellationToken)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_DeployedApplicationHealthQueryDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.deployedapplicationhealthquerydescription">DeployedApplicationHealthQueryDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.deployedapplicationhealthquerydescription">DeployedApplicationHealthQueryDescription</a></div>
+      </td>
+      <td>
+        <p>Describes query input for getting <a class="xref" href="system.fabric.health.deployedapplicationhealth">DeployedApplicationHealth</a>. Used by 
+<a class="xref" href="system.fabric.fabricclient.healthclient#System_Fabric_FabricClient_HealthClient_GetDeployedApplicationHealthAsync_System_Fabric_Description_DeployedApplicationHealthQueryDescription_">GetDeployedApplicationHealthAsync(DeployedApplicationHealthQueryDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_DeployedServicePackageHealthQueryDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.deployedservicepackagehealthquerydescription">DeployedServicePackageHealthQueryDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.deployedservicepackagehealthquerydescription">DeployedServicePackageHealthQueryDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the query input for getting <a class="xref" href="system.fabric.health.deployedservicepackagehealth">DeployedServicePackageHealth</a>. Used by 
+<a class="xref" href="system.fabric.fabricclient.healthclient#System_Fabric_FabricClient_HealthClient_GetDeployedServicePackageHealthAsync_System_Fabric_Description_DeployedServicePackageHealthQueryDescription_">GetDeployedServicePackageHealthAsync(DeployedServicePackageHealthQueryDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_DllHostEntryPointDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.dllhostentrypointdescription">DllHostEntryPointDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.dllhostentrypointdescription">DllHostEntryPointDescription</a></div>
+      </td>
+      <td>
+        <p>Reserved for future use.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_DllHostHostedDllDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.dllhosthosteddlldescription">DllHostHostedDllDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.dllhosthosteddlldescription">DllHostHostedDllDescription</a></div>
+      </td>
+      <td>
+        <p>Reserved for future use.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_DllHostHostedManagedDllDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.dllhosthostedmanageddlldescription">DllHostHostedManagedDllDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.dllhosthostedmanageddlldescription">DllHostHostedManagedDllDescription</a></div>
+      </td>
+      <td>
+        <p>Reserved for future use.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_DllHostHostedUnmanagedDllDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.dllhosthostedunmanageddlldescription">DllHostHostedUnmanagedDllDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.dllhosthostedunmanageddlldescription">DllHostHostedUnmanagedDllDescription</a></div>
+      </td>
+      <td>
+        <p>Reserved for future use.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_EndpointResourceDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.endpointresourcedescription">EndpointResourceDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.endpointresourcedescription">EndpointResourceDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the endpoint resource.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_EntryPointDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.entrypointdescription">EntryPointDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.entrypointdescription">EntryPointDescription</a></div>
+      </td>
+      <td>
+        <p>Describes an entry point that is associated with a code package.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ExeHostEntryPointDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.exehostentrypointdescription">ExeHostEntryPointDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.exehostentrypointdescription">ExeHostEntryPointDescription</a></div>
+      </td>
+      <td>
+        <p>Provides information about the executable entry point.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_FabricUpgradeDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.fabricupgradedescription">FabricUpgradeDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.fabricupgradedescription">FabricUpgradeDescription</a></div>
+      </td>
+      <td>
+        <p>Represents a class to encapsulate a Service Fabric upgrade description.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_FabricUpgradeUpdateDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.fabricupgradeupdatedescription">FabricUpgradeUpdateDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.fabricupgradeupdatedescription">FabricUpgradeUpdateDescription</a></div>
+      </td>
+      <td>
+        <p>Used to modify the upgrade parameters describing the behavior cluster upgrades.
+See <a class="xref" href="system.fabric.fabricclient.clustermanagementclient#System_Fabric_FabricClient_ClusterManagementClient_UpdateFabricUpgradeAsync_System_Fabric_Description_FabricUpgradeUpdateDescription_">UpdateFabricUpgradeAsync(FabricUpgradeUpdateDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_MonitoredRollingApplicationUpgradePolicyDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.monitoredrollingapplicationupgradepolicydescription">MonitoredRollingApplicationUpgradePolicyDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.monitoredrollingapplicationupgradepolicydescription">MonitoredRollingApplicationUpgradePolicyDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the behavior to use when performing an application upgrade.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_MonitoredRollingFabricUpgradePolicyDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.monitoredrollingfabricupgradepolicydescription">MonitoredRollingFabricUpgradePolicyDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.monitoredrollingfabricupgradepolicydescription">MonitoredRollingFabricUpgradePolicyDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the behavior to use when performing a cluster upgrade.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_MonitoredRollingUpgradePolicyDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.monitoredrollingupgradepolicydescription">MonitoredRollingUpgradePolicyDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.monitoredrollingupgradepolicydescription">MonitoredRollingUpgradePolicyDescription</a></div>
+      </td>
+      <td>
+        <p>Specifies the behavior to use when performing a monitored application or cluster upgrade.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_NamedPartitionSchemeDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.namedpartitionschemedescription">NamedPartitionSchemeDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.namedpartitionschemedescription">NamedPartitionSchemeDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the named partition scheme of the service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_NodeHealthQueryDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.nodehealthquerydescription">NodeHealthQueryDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.nodehealthquerydescription">NodeHealthQueryDescription</a></div>
+      </td>
+      <td>
+        <p>Describes query input for getting <a class="xref" href="system.fabric.health.nodehealth">NodeHealth</a>. Used by 
+<a class="xref" href="system.fabric.fabricclient.healthclient#System_Fabric_FabricClient_HealthClient_GetNodeHealthAsync_System_Fabric_Description_NodeHealthQueryDescription_">GetNodeHealthAsync(NodeHealthQueryDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_NodeStartDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.nodestartdescription">NodeStartDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.nodestartdescription">NodeStartDescription</a></div>
+      </td>
+      <td>
+        <p>Describes information about how a node should be started using StartNodeTransitionAsync().  </p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_NodeStopDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.nodestopdescription">NodeStopDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.nodestopdescription">NodeStopDescription</a></div>
+      </td>
+      <td>
+        <p>Describes information about how a node should be stopped using StartNodeTransitionAsync().  </p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_NodeTransitionDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.nodetransitiondescription">NodeTransitionDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.nodetransitiondescription">NodeTransitionDescription</a></div>
+      </td>
+      <td>
+        <p>Describes information about how a node should be transitioned, and is used with StartNodeTransitionAsync().<br>This object should not be used directly, the derived classes should be used.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_PackageDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.packagedescription">PackageDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.packagedescription">PackageDescription</a></div>
+      </td>
+      <td>
+        <p>Represents a base class for all package descriptions.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_PartitionHealthQueryDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.partitionhealthquerydescription">PartitionHealthQueryDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.partitionhealthquerydescription">PartitionHealthQueryDescription</a></div>
+      </td>
+      <td>
+        <p>Describes query input for getting <a class="xref" href="system.fabric.health.partitionhealth">PartitionHealth</a>. Used by 
+<a class="xref" href="system.fabric.fabricclient.healthclient#System_Fabric_FabricClient_HealthClient_GetPartitionHealthAsync_System_Fabric_Description_PartitionHealthQueryDescription_">GetPartitionHealthAsync(PartitionHealthQueryDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_PartitionSchemeDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.partitionschemedescription">PartitionSchemeDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.partitionschemedescription">PartitionSchemeDescription</a></div>
+      </td>
+      <td>
+        <p>Describes how the service is partitioned. This is the parent entity from which the actual partitioning scheme descriptions are derived.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ProvisionApplicationTypeDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.provisionapplicationtypedescription">ProvisionApplicationTypeDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.provisionapplicationtypedescription">ProvisionApplicationTypeDescription</a></div>
+      </td>
+      <td>
+        <p>Describes an application type to be provisioned by using 
+<a class="xref" href="system.fabric.fabricclient.applicationmanagementclient#System_Fabric_FabricClient_ApplicationManagementClient_ProvisionApplicationAsync_System_Fabric_Description_ProvisionApplicationTypeDescription_System_TimeSpan_System_Threading_CancellationToken_">ProvisionApplicationAsync(ProvisionApplicationTypeDescription, TimeSpan, CancellationToken)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ReplicaHealthQueryDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.replicahealthquerydescription">ReplicaHealthQueryDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.replicahealthquerydescription">ReplicaHealthQueryDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the query input for getting <a class="xref" href="system.fabric.health.replicahealth">ReplicaHealth</a>. Used by 
+<a class="xref" href="system.fabric.fabricclient.healthclient#System_Fabric_FabricClient_HealthClient_GetReplicaHealthAsync_System_Fabric_Description_ReplicaHealthQueryDescription_">GetReplicaHealthAsync(ReplicaHealthQueryDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_RollingUpgradeMonitoringPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.rollingupgrademonitoringpolicy">RollingUpgradeMonitoringPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.rollingupgrademonitoringpolicy">RollingUpgradeMonitoringPolicy</a></div>
+      </td>
+      <td>
+        <p>Represents a class to encapsulate a rolling upgrade monitoring policy.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_RollingUpgradePolicyDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.rollingupgradepolicydescription">RollingUpgradePolicyDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.rollingupgradepolicydescription">RollingUpgradePolicyDescription</a></div>
+      </td>
+      <td>
+        <p>Description of the rolling upgrade policy.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_RunAsPolicyDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.runaspolicydescription">RunAsPolicyDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.runaspolicydescription">RunAsPolicyDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the RunAsPolicy associated with a CodePackage specified in application manifest. </p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_SecurityGroupDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.securitygroupdescription">SecurityGroupDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.securitygroupdescription">SecurityGroupDescription</a></div>
+      </td>
+      <td>
+        <p>Represents a description of a security group.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_SecurityUserDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.securityuserdescription">SecurityUserDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.securityuserdescription">SecurityUserDescription</a></div>
+      </td>
+      <td>
+        <p>Represents a description for a security user.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceCorrelationDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.servicecorrelationdescription">ServiceCorrelationDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.servicecorrelationdescription">ServiceCorrelationDescription</a></div>
+      </td>
+      <td>
+        <p>Creates a particular correlation between services.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.servicedescription">ServiceDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.servicedescription">ServiceDescription</a></div>
+      </td>
+      <td>
+        <p> A ServiceDescription contains all of the information necessary to create a service. </p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceGroupDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.servicegroupdescription">ServiceGroupDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.servicegroupdescription">ServiceGroupDescription</a></div>
+      </td>
+      <td>
+        <p>Provides a collection of information that is necessary to create and describe a service group.  </p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceGroupMemberDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.servicegroupmemberdescription">ServiceGroupMemberDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.servicegroupmemberdescription">ServiceGroupMemberDescription</a></div>
+      </td>
+      <td>
+        <p>Describes a service that belongs to a service group.  </p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceGroupTypeDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.servicegrouptypedescription">ServiceGroupTypeDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.servicegrouptypedescription">ServiceGroupTypeDescription</a></div>
+      </td>
+      <td>
+        <p>Represents the type description of the Fabric service group.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceGroupTypeMemberDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.servicegrouptypememberdescription">ServiceGroupTypeMemberDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.servicegrouptypememberdescription">ServiceGroupTypeMemberDescription</a></div>
+      </td>
+      <td>
+        <p>Represents the type of member description for the service group.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceGroupUpdateDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.servicegroupupdatedescription">ServiceGroupUpdateDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.servicegroupupdatedescription">ServiceGroupUpdateDescription</a></div>
+      </td>
+      <td>
+        <p>Modifies the <a class="xref" href="system.fabric.description.servicegroupdescription">ServiceGroupDescription</a> of an existing service group.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceHealthQueryDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.servicehealthquerydescription">ServiceHealthQueryDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.servicehealthquerydescription">ServiceHealthQueryDescription</a></div>
+      </td>
+      <td>
+        <p>Provides query input for getting <a class="xref" href="system.fabric.health.servicehealth">ServiceHealth</a>. Used by 
+<a class="xref" href="system.fabric.fabricclient.healthclient#System_Fabric_FabricClient_HealthClient_GetServiceHealthAsync_System_Fabric_Description_ServiceHealthQueryDescription_">GetServiceHealthAsync(ServiceHealthQueryDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceLoadMetricDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.serviceloadmetricdescription">ServiceLoadMetricDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.serviceloadmetricdescription">ServiceLoadMetricDescription</a></div>
+      </td>
+      <td>
+        <p>Specifies a metric to load balance a service during runtime.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceNotificationFilterDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.servicenotificationfilterdescription">ServiceNotificationFilterDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.servicenotificationfilterdescription">ServiceNotificationFilterDescription</a></div>
+      </td>
+      <td>
+        <p>Represents a class that is used to describe a filter for service notification delivery, registered 
+via <a class="xref" href="system.fabric.fabricclient.servicemanagementclient#System_Fabric_FabricClient_ServiceManagementClient_RegisterServiceNotificationFilterAsync_System_Fabric_Description_ServiceNotificationFilterDescription_">RegisterServiceNotificationFilterAsync(ServiceNotificationFilterDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServicePlacementInvalidDomainPolicyDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.serviceplacementinvaliddomainpolicydescription">ServicePlacementInvalidDomainPolicyDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.serviceplacementinvaliddomainpolicydescription">ServicePlacementInvalidDomainPolicyDescription</a></div>
+      </td>
+      <td>
+        <p>Represents a policy which indicates that a particular fault or upgrade domain should not be used for placement of the instances or 
+replicas of the service this policy is applied to.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServicePlacementNonPartiallyPlaceServicePolicyDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.serviceplacementnonpartiallyplaceservicepolicydescription">ServicePlacementNonPartiallyPlaceServicePolicyDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.serviceplacementnonpartiallyplaceservicepolicydescription">ServicePlacementNonPartiallyPlaceServicePolicyDescription</a></div>
+      </td>
+      <td>
+        <p>
+Placement policy description that describes a service placement where all replicas must be able to be placed in order for any replicas to be created.
+</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServicePlacementPolicyDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.serviceplacementpolicydescription">ServicePlacementPolicyDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.serviceplacementpolicydescription">ServicePlacementPolicyDescription</a></div>
+      </td>
+      <td>
+        <p>Represents the base type for all PlacementPolicyDescription types in the cluster.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServicePlacementPreferPrimaryDomainPolicyDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.serviceplacementpreferprimarydomainpolicydescription">ServicePlacementPreferPrimaryDomainPolicyDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.serviceplacementpreferprimarydomainpolicydescription">ServicePlacementPreferPrimaryDomainPolicyDescription</a></div>
+      </td>
+      <td>
+        <p>Represents a <a class="xref" href="system.fabric.description.serviceplacementpolicydescription">ServicePlacementPolicyDescription</a> which indicates that the serviceâ€™s Primary replicas 
+should optimally be placed in a particular domain.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServicePlacementRequiredDomainPolicyDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.serviceplacementrequireddomainpolicydescription">ServicePlacementRequiredDomainPolicyDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.serviceplacementrequireddomainpolicydescription">ServicePlacementRequiredDomainPolicyDescription</a></div>
+      </td>
+      <td>
+        <p>
+Placement policy description that requires a replica to be placed in a particular domain.
+</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServicePlacementRequireDomainDistributionPolicyDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.serviceplacementrequiredomaindistributionpolicydescription">ServicePlacementRequireDomainDistributionPolicyDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.serviceplacementrequiredomaindistributionpolicydescription">ServicePlacementRequireDomainDistributionPolicyDescription</a></div>
+      </td>
+      <td>
+        <p>Specifies the placement policy which indicates that two replicas from the same partition should never be placed in the same fault or upgrade domain.<br>While this is not common it can expose the service to an increased risk of concurrent failures due to unplanned outages or other cases of subsequent/concurrent 
+failures. As an example, consider a case where replicas are deployed across different data center, with one replica per location. In the event that one of 
+the datacenters goes offline, normally the replica that was placed in that datacenter will be packed into one of the remaining datacenters. If this is not 
+desirable then this policy should be set.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceTypeDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.servicetypedescription">ServiceTypeDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.servicetypedescription">ServiceTypeDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the service type.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceUpdateDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.serviceupdatedescription">ServiceUpdateDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.serviceupdatedescription">ServiceUpdateDescription</a></div>
+      </td>
+      <td>
+        <p>Modifies the <a class="xref" href="system.fabric.description.servicedescription">ServiceDescription</a> of an existing service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_SingletonPartitionSchemeDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.singletonpartitionschemedescription">SingletonPartitionSchemeDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.singletonpartitionschemedescription">SingletonPartitionSchemeDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the partition scheme of a singleton-partitioned, or non-partitioned service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_StatefulServiceDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.statefulservicedescription">StatefulServiceDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.statefulservicedescription">StatefulServiceDescription</a></div>
+      </td>
+      <td>
+        <p>Represents the extend <a class="xref" href="system.fabric.description.servicedescription">ServiceDescription</a> to provide additional information necessary to create stateful services.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_StatefulServiceLoadMetricDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.statefulserviceloadmetricdescription">StatefulServiceLoadMetricDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.statefulserviceloadmetricdescription">StatefulServiceLoadMetricDescription</a></div>
+      </td>
+      <td>
+        <p>Specifies a metric for a stateful service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_StatefulServiceTypeDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.statefulservicetypedescription">StatefulServiceTypeDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.statefulservicetypedescription">StatefulServiceTypeDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the stateful service type.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_StatefulServiceUpdateDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.statefulserviceupdatedescription">StatefulServiceUpdateDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.statefulserviceupdatedescription">StatefulServiceUpdateDescription</a></div>
+      </td>
+      <td>
+        <p>Represents the <a class="xref" href="system.fabric.description.statefulserviceupdatedescription">StatefulServiceUpdateDescription</a> that is used to modify the 
+<a class="xref" href="system.fabric.description.statefulservicedescription">StatefulServiceDescription</a> of a running service via 
+<a class="xref" href="system.fabric.fabricclient.servicemanagementclient#System_Fabric_FabricClient_ServiceManagementClient_UpdateServiceAsync_System_Uri_System_Fabric_Description_ServiceUpdateDescription_">UpdateServiceAsync(Uri, ServiceUpdateDescription)</a>. 
+The properties specified will be applied to the running service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_StatelessServiceDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.statelessservicedescription">StatelessServiceDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.statelessservicedescription">StatelessServiceDescription</a></div>
+      </td>
+      <td>
+        <p>Extends <a class="xref" href="system.fabric.description.servicedescription">ServiceDescription</a> to provide additional information that is necessary to create a stateless service. </p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_StatelessServiceLoadMetricDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.statelessserviceloadmetricdescription">StatelessServiceLoadMetricDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.statelessserviceloadmetricdescription">StatelessServiceLoadMetricDescription</a></div>
+      </td>
+      <td>
+        <p>Specifies a metric for a stateless service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_StatelessServiceTypeDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.statelessservicetypedescription">StatelessServiceTypeDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.statelessservicetypedescription">StatelessServiceTypeDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the type of stateless service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_StatelessServiceUpdateDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.statelessserviceupdatedescription">StatelessServiceUpdateDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.statelessserviceupdatedescription">StatelessServiceUpdateDescription</a></div>
+      </td>
+      <td>
+        <p>Represents the <a class="xref" href="system.fabric.description.statelessservicedescription">StatelessServiceDescription</a> of a running service via 
+<a class="xref" href="system.fabric.fabricclient.servicemanagementclient#System_Fabric_FabricClient_ServiceManagementClient_UpdateServiceAsync_System_Uri_System_Fabric_Description_ServiceUpdateDescription_">UpdateServiceAsync(Uri, ServiceUpdateDescription)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_UniformInt64RangePartitionSchemeDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.uniformint64rangepartitionschemedescription">UniformInt64RangePartitionSchemeDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.uniformint64rangepartitionschemedescription">UniformInt64RangePartitionSchemeDescription</a></div>
+      </td>
+      <td>
+        <p>Describes a partitioning scheme where an integer range is allocated evenly across a number of partitions.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_UpgradePolicyDescription" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.upgradepolicydescription">UpgradePolicyDescription</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.upgradepolicydescription">UpgradePolicyDescription</a></div>
+      </td>
+      <td>
+        <p>Describes the upgrade policy of the service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_UpgradeUpdateDescriptionBase" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.upgradeupdatedescriptionbase">UpgradeUpdateDescriptionBase</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.upgradeupdatedescriptionbase">UpgradeUpdateDescriptionBase</a></div>
+      </td>
+      <td>
+        <p>Represents the base class for <a class="xref" href="system.fabric.description.applicationupgradeupdatedescription">ApplicationUpgradeUpdateDescription</a> and 
+<a class="xref" href="system.fabric.description.fabricupgradeupdatedescription">FabricUpgradeUpdateDescription</a>. Used to modify the upgrade parameters describing the behavior 
+of application or cluster upgrades. See <a class="xref" href="system.fabric.fabricclient.applicationmanagementclient#System_Fabric_FabricClient_ApplicationManagementClient_UpdateApplicationUpgradeAsync_System_Fabric_Description_ApplicationUpgradeUpdateDescription_">UpdateApplicationUpgradeAsync(ApplicationUpgradeUpdateDescription)</a> 
+and <a class="xref" href="system.fabric.fabricclient.clustermanagementclient#System_Fabric_FabricClient_ClusterManagementClient_UpdateFabricUpgradeAsync_System_Fabric_Description_FabricUpgradeUpdateDescription_">UpdateFabricUpgradeAsync(FabricUpgradeUpdateDescription)</a>.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="enums">
+      <h2>Enums
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="System_Fabric_Description_CodePackageEntryPointKind" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.codepackageentrypointkind">CodePackageEntryPointKind</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.codepackageentrypointkind">CodePackageEntryPointKind</a></div>
+      </td>
+      <td>
+        <p>Enumerates the possible types of entry points.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_DllHostHostedDllKind" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.dllhosthosteddllkind">DllHostHostedDllKind</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.dllhosthosteddllkind">DllHostHostedDllKind</a></div>
+      </td>
+      <td>
+        <p>Reserved for future use.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_DllHostIsolationPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.dllhostisolationpolicy">DllHostIsolationPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.dllhostisolationpolicy">DllHostIsolationPolicy</a></div>
+      </td>
+      <td>
+        <p>Reserved for future use.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_EndpointProtocol" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.endpointprotocol">EndpointProtocol</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.endpointprotocol">EndpointProtocol</a></div>
+      </td>
+      <td>
+        <p>Enumerates the kinds of endpoint protocols.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_EndpointType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.endpointtype">EndpointType</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.endpointtype">EndpointType</a></div>
+      </td>
+      <td>
+        <p>Enumerates the kinds of endpoint types.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ExeHostWorkingFolder" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.exehostworkingfolder">ExeHostWorkingFolder</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.exehostworkingfolder">ExeHostWorkingFolder</a></div>
+      </td>
+      <td>
+        <p>Enumerates the possible start folder types.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_PartitionScheme" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.partitionscheme">PartitionScheme</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.partitionscheme">PartitionScheme</a></div>
+      </td>
+      <td>
+        <p>Enumerates the ways that a service can be partitioned.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceCorrelationScheme" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.servicecorrelationscheme">ServiceCorrelationScheme</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.servicecorrelationscheme">ServiceCorrelationScheme</a></div>
+      </td>
+      <td>
+        <p>Indicates that this service is associated with another service, and describes the relationship with that service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceDescriptionKind" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.servicedescriptionkind">ServiceDescriptionKind</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.servicedescriptionkind">ServiceDescriptionKind</a></div>
+      </td>
+      <td>
+        <p>Enumerates the kinds of service descriptions.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServiceLoadMetricWeight" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.serviceloadmetricweight">ServiceLoadMetricWeight</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.serviceloadmetricweight">ServiceLoadMetricWeight</a></div>
+      </td>
+      <td>
+        <p>Describes the weight of a metric.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_ServicePlacementPolicyType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.serviceplacementpolicytype">ServicePlacementPolicyType</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.serviceplacementpolicytype">ServicePlacementPolicyType</a></div>
+      </td>
+      <td>
+        <p>Indicates the type of the specific <a class="xref" href="system.fabric.description.serviceplacementpolicydescription">ServicePlacementPolicyDescription</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Description_UpgradeKind" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.description.upgradekind">UpgradeKind</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.description.upgradekind">UpgradeKind</a></div>
+      </td>
+      <td>
+        <p>Enumerates the possible kinds of upgrade.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/3bcf2c9081582fac6994.reference.js"></script>
+  </body>
+</html>

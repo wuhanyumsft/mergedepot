@@ -1,0 +1,2977 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="ProjectCollection class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/c463338a38ee0cf171b48332bb4325e618b23055/halfdotnet/Microsoft.Build.Evaluation/Microsoft.Build.Evaluation.ProjectCollection.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/Microsoft.Build.Evaluation/Microsoft.Build.Evaluation.ProjectCollection.yml">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection..ctor">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.AddToolset">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.ContainsToolset">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.Count">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.DefaultToolsVersion">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.DisableMarkDirty">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.Dispose">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.Escape">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.GetGlobalProperty">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.GetLoadedProjects">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.GetToolset">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.GlobalProjectCollection">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.GlobalProperties">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.HostServices">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.IsBuildEnabled">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.LoadedProjects">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.LoadProject">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.Loggers">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.OnlyLogCriticalEvents">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.ProjectAdded">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.add_ProjectAdded">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.remove_ProjectAdded">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.ProjectChanged">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.add_ProjectChanged">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.remove_ProjectChanged">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.ProjectCollectionChanged">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.add_ProjectCollectionChanged">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.remove_ProjectCollectionChanged">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.ProjectXmlChanged">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.add_ProjectXmlChanged">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.remove_ProjectXmlChanged">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.RegisterForwardingLoggers">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.RegisterLogger">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.RegisterLoggers">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.RemoveAllToolsets">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.RemoveGlobalProperty">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.RemoveToolset">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.SetGlobalProperty">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.SkipEvaluation">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.ToolsetLocations">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.Toolsets">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.TryUnloadProject">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.Unescape">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.UnloadAllProjects">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.UnloadProject">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.UnregisterAllLoggers">
+<meta name="APIName" content="Microsoft.Build.Evaluation.ProjectCollection.Version">
+<meta name="APILocation" content="Microsoft.Build.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="4fbeb64d-26cc-6d39-0fb5-18c22eed818b">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Encapsulates a set of related projects, their toolsets, a default set of global properties, and the loggers that should be used to build them. A global version of this class acts as the default projeâ€¦">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Build.Evaluation.ProjectCollection">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.build.evaluation/microsoft.build.evaluation.projectcollection" rel="canonical">
+    <title>ProjectCollection class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Build_Evaluation_ProjectCollection">
+      <span class="lang-csharp">ProjectCollection</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Encapsulates a set of related projects, their toolsets, a default set of global properties, and the loggers that should be used to build them. A global version of this class acts as the default project collection.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public class ProjectCollection : IDisposable</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object">System.Object</a>
+          </div>
+        </li>
+      <li class="l1">
+        <div class="xref">
+          <div class="lang-csharp">ProjectCollection</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_">Equals(Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_Equals_System_Object_System_Object_">Equals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetHashCode">GetHashCode()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_GetType">GetType()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_MemberwiseClone">MemberwiseClone()</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ReferenceEquals_System_Object_System_Object_">ReferenceEquals(Object,Object)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system/system.object#System_Object_ToString">ToString()</a>
+          </div>
+          
+      </div>
+    
+    
+      <h2>Remarks</h2>
+      <p>Multiple project collections can exist within an app domain. However, these must not build concurrently.</p>
+
+    
+    
+    <h2>Constructors
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection__ctor">ProjectCollection()</a></div>
+          </td>
+            <td>
+            <p>Creates a project collection with no global properties or loggers. The project collection toolset is initialized from the configuration file and registry.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection__ctor_Microsoft_Build_Evaluation_ToolsetDefinitionLocations_">ProjectCollection(ToolsetDefinitionLocations)</a></div>
+          </td>
+            <td>
+            <p>Creates a project collection with no global properties or loggers. The project collection toolset is initialized from toolsets in the given locations.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection__ctor_System_Collections_Generic_IDictionary_System_String_System_String__">ProjectCollection(IDictionary&lt;String,String&gt;)</a></div>
+          </td>
+            <td>
+            <p>Instantiates a project collection with specified global properties, no loggers, and that reads toolset information from the configuration file and registry.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection__ctor_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Microsoft_Build_Framework_ILogger__Microsoft_Build_Evaluation_ToolsetDefinitionLocations_">ProjectCollection(IDictionary&lt;String,String&gt;,IEnumerable&lt;ILogger&gt;,ToolsetDefinitionLocations)</a></div>
+          </td>
+            <td>
+            <p>Instantiates a project collection with specified global properties and loggers and using the specified toolset locations.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection__ctor_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Microsoft_Build_Framework_ILogger__System_Collections_Generic_IEnumerable_Microsoft_Build_Logging_ForwardingLoggerRecord__Microsoft_Build_Evaluation_ToolsetDefinitionLocations_System_Int32_System_Boolean_">ProjectCollection(IDictionary&lt;String,String&gt;,IEnumerable&lt;ILogger&gt;,IEnumerable&lt;ForwardingLoggerRecord&gt;,ToolsetDefinitionLocations,Int32,Boolean)</a></div>
+          </td>
+            <td>
+            <p>Creates a project collection with specified global properties, loggers, node count, and onlyLogCriticalEvents value. The project collection toolset is initialized from toolsets in the given locations.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_Count">Count</a></div>
+          </td>
+            <td>
+            <p>Gets the number of projects currently loaded into this collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_DefaultToolsVersion">DefaultToolsVersion</a></div>
+          </td>
+            <td>
+            <p>Gets the default tools version of this project collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_DisableMarkDirty">DisableMarkDirty</a></div>
+          </td>
+            <td>
+            <p>Gets or sets a flag that determines whether <a class="xref" href="microsoft.build.evaluation.project#Microsoft_Build_Evaluation_Project_MarkDirty_">MarkDirty</a> is temporarily disabled on projects in this collection. This allows, for example, a global properties to be set without projects getting marked dirty for reevaluation as a consequence.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_GlobalProjectCollection">GlobalProjectCollection</a></div>
+          </td>
+            <td>
+            <p>Gets the global project collection object.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_GlobalProperties">GlobalProperties</a></div>
+          </td>
+            <td>
+            <p>Gets the read-only default global properties for all projects in this collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_HostServices">HostServices</a></div>
+          </td>
+            <td>
+            <p>Gets or sets an object that provides host services to tasks during builds of projects contained in the project collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_IsBuildEnabled">IsBuildEnabled</a></div>
+          </td>
+            <td>
+            <p>Gets or sets a property that selects by default whether the targets and tasks of projects in the project collection can be built.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_LoadedProjects">LoadedProjects</a></div>
+          </td>
+            <td>
+            <p>Gets all the projects currently loaded into this collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_Loggers">Loggers</a></div>
+          </td>
+            <td>
+            <p>Gets all loggers that projects in this collection can use for their builds.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_OnlyLogCriticalEvents">OnlyLogCriticalEvents</a></div>
+          </td>
+            <td>
+            <p>Gets or sets a switch that determines whether only critical events such as warnings and errors are logged.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_SkipEvaluation">SkipEvaluation</a></div>
+          </td>
+            <td>
+            <p>Gets or sets a flag the determines whether ReevaluateIfNecessary is temporarily disabled on projects in this collection. This is useful when the host expects to make a number of reads and writes to projects, and wants to temporarily sacrifice correctness for performance.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_ToolsetLocations">ToolsetLocations</a></div>
+          </td>
+            <td>
+            <p>Gets the locations used to find the toolsets.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_Toolsets">Toolsets</a></div>
+          </td>
+            <td>
+            <p>Gets the toolsets available to this project collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_Version">Version</a></div>
+          </td>
+            <td>
+            <p>Gets the file version of the assembly file that contains the MSBuild engine.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_AddToolset_Microsoft_Build_Evaluation_Toolset_">AddToolset(Toolset)</a></div>
+          </td>
+            <td>
+            <p>Adds a new toolset to the project collection. Replaces any existing toolset with the same tools version.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_ContainsToolset_System_String_">ContainsToolset(String)</a></div>
+          </td>
+            <td>
+            <p>Determines whether a toolset is defined for the given tools version.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_Dispose">Dispose()</a></div>
+          </td>
+            <td>
+            <p>Releases both managed and unmanaged resources.  Called when a host no longer needs the project collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_Dispose_System_Boolean_">Dispose(Boolean)</a></div>
+          </td>
+            <td>
+            <p>Releases both managed and unmanaged resources.  Called when a host no longer needs the project collection.. Shuts down any logging services that the project collection owns and releases the logger thread.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_Escape_System_String_">Escape(String)</a></div>
+          </td>
+            <td>
+            <p>Converts special characters in a string to MSBuild escape format.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_GetGlobalProperty_System_String_">GetGlobalProperty(String)</a></div>
+          </td>
+            <td>
+            <p>Get any global property on the project collection that has the specified name.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_GetLoadedProjects_System_String_">GetLoadedProjects(String)</a></div>
+          </td>
+            <td>
+            <p>Gets all projects whose project path matches the given path.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_GetToolset_System_String_">GetToolset(String)</a></div>
+          </td>
+            <td>
+            <p>Get the toolset with the specified tools version.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_LoadProject_System_String_">LoadProject(String)</a></div>
+          </td>
+            <td>
+            <p>Evaluates a project from the source code in the given project file. The source code is evaluated with the global properties and tools version of this project collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_LoadProject_System_Xml_XmlReader_">LoadProject(XmlReader)</a></div>
+          </td>
+            <td>
+            <p>Evaluates a project from the source code read from the given XML reader. The source code is evaluated with the global properties and tools version of this project collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_LoadProject_System_String_System_String_">LoadProject(String,String)</a></div>
+          </td>
+            <td>
+            <p>Evaluates a project from the source code read from the given project file. The source code is evaluated with the global properties of this project collection and the given tools version.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_LoadProject_System_Xml_XmlReader_System_String_">LoadProject(XmlReader,String)</a></div>
+          </td>
+            <td>
+            <p>Evaluates a project from the source code read from the given XML reader. The source code is evaluated with the global properties of this project collection and the given tools version.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_LoadProject_System_String_System_Collections_Generic_IDictionary_System_String_System_String__System_String_">LoadProject(String,IDictionary&lt;String,String&gt;,String)</a></div>
+          </td>
+            <td>
+            <p>Evaluates a project from the source code read from the given project file. The source code is evaluated with the given global properties and tools version.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_LoadProject_System_Xml_XmlReader_System_Collections_Generic_IDictionary_System_String_System_String__System_String_">LoadProject(XmlReader,IDictionary&lt;String,String&gt;,String)</a></div>
+          </td>
+            <td>
+            <p>Evaluates a project from the source code read from the given XML reader. The source code is evaluated with the given global properties and tools version.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_RegisterForwardingLoggers_System_Collections_Generic_IEnumerable_Microsoft_Build_Logging_ForwardingLoggerRecord__">RegisterForwardingLoggers(IEnumerable&lt;ForwardingLoggerRecord&gt;)</a></div>
+          </td>
+            <td>
+            <p>Adds the given remote loggers to the collection of remote loggers used for builds of projects in this collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_RegisterLogger_Microsoft_Build_Framework_ILogger_">RegisterLogger(ILogger)</a></div>
+          </td>
+            <td>
+            <p>Adds the given logger to the collection of loggers used for builds of projects in this collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_RegisterLoggers_System_Collections_Generic_IEnumerable_Microsoft_Build_Framework_ILogger__">RegisterLoggers(IEnumerable&lt;ILogger&gt;)</a></div>
+          </td>
+            <td>
+            <p>Adds the given loggers to the collection of loggers used for builds of projects in this collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_RemoveAllToolsets">RemoveAllToolsets()</a></div>
+          </td>
+            <td>
+            <p>Removes all toolsets from the project collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_RemoveGlobalProperty_System_String_">RemoveGlobalProperty(String)</a></div>
+          </td>
+            <td>
+            <p>Removes a global property from the set of default global properties.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_RemoveToolset_System_String_">RemoveToolset(String)</a></div>
+          </td>
+            <td>
+            <p>Removes a toolset from the project collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_SetGlobalProperty_System_String_System_String_">SetGlobalProperty(String,String)</a></div>
+          </td>
+            <td>
+            <p>Sets the value of a property in the default set of global properties.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_TryUnloadProject_Microsoft_Build_Construction_ProjectRootElement_">TryUnloadProject(ProjectRootElement)</a></div>
+          </td>
+            <td>
+            <p>Attempts to remove a project from the collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_Unescape_System_String_">Unescape(String)</a></div>
+          </td>
+            <td>
+            <p>Converts escaped characters in a string to MSBuild characters with special meaning.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_UnloadAllProjects">UnloadAllProjects()</a></div>
+          </td>
+            <td>
+            <p>Removes all projects in this project collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_UnloadProject_Microsoft_Build_Construction_ProjectRootElement_">UnloadProject(ProjectRootElement)</a></div>
+          </td>
+            <td>
+            <p>Removes a project root element from the project root cache.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_UnloadProject_Microsoft_Build_Evaluation_Project_">UnloadProject(Project)</a></div>
+          </td>
+            <td>
+            <p>Removes the given project from the project collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_UnregisterAllLoggers">UnregisterAllLoggers()</a></div>
+          </td>
+            <td>
+            <p>Removes all loggers from the collection of loggers used by project builds in this collection.</p>
+
+            </td>
+        </tr>
+    </table>
+    <h2>Events
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_ProjectAdded">ProjectAdded</a></div>
+          </td>
+            <td>
+            <p>Event that is fired when a project is added to the ProjectRootElementCache of this project collection.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_ProjectChanged">ProjectChanged</a></div>
+          </td>
+            <td>
+            <p>Raised when a <see cref="T:Microsoft.Build.Evaluation.Project"> contained by this instance is directly changed.<p>
+</see>
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_ProjectCollectionChanged">ProjectCollectionChanged</a></div>
+          </td>
+            <td>
+            <p>Raised when state is changed on this instance.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Evaluation_ProjectCollection_ProjectXmlChanged">ProjectXmlChanged</a></div>
+          </td>
+            <td>
+            <p>Raised when a <see cref="T:Microsoft.Build.Construction.ProjectRootElement"> contained by this instance is changed.<p>
+</see>
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="constructors">
+        <h2>Constructors
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection__ctor">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ProjectCollection()</div>        
+          </div>
+    
+            <p>Creates a project collection with no global properties or loggers. The project collection toolset is initialized from the configuration file and registry.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public ProjectCollection ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection__ctor_Microsoft_Build_Evaluation_ToolsetDefinitionLocations_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ProjectCollection(ToolsetDefinitionLocations)</div>        
+          </div>
+    
+            <p>Creates a project collection with no global properties or loggers. The project collection toolset is initialized from toolsets in the given locations.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public ProjectCollection (Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetLocations);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>toolsetLocations</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.toolsetdefinitionlocations">ToolsetDefinitionLocations</a></div>
+                  </dd>
+                  </dl>
+                  <p>The locations from which to load toolsets.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection__ctor_System_Collections_Generic_IDictionary_System_String_System_String__">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ProjectCollection(IDictionary&lt;String,String&gt;)</div>        
+          </div>
+    
+            <p>Instantiates a project collection with specified global properties, no loggers, and that reads toolset information from the configuration file and registry.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public ProjectCollection (System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>globalProperties</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="../system/system.string">String</a>,<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>The default global properties to use. May be null.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>May throw InvalidToolsetDefinitionException.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection__ctor_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Microsoft_Build_Framework_ILogger__Microsoft_Build_Evaluation_ToolsetDefinitionLocations_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ProjectCollection(IDictionary&lt;String,String&gt;,IEnumerable&lt;ILogger&gt;,ToolsetDefinitionLocations)</div>        
+          </div>
+    
+            <p>Instantiates a project collection with specified global properties and loggers and using the specified toolset locations.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public ProjectCollection (System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers, Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>globalProperties</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="../system/system.string">String</a>,<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>The default global properties to use. May be null.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>loggers</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../microsoft.build.framework/microsoft.build.framework.ilogger">ILogger</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>The loggers to register. May be null.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>toolsetDefinitionLocations</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.toolsetdefinitionlocations">ToolsetDefinitionLocations</a></div>
+                  </dd>
+                  </dl>
+                  <p>The locations from which to load toolsets.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>May throw InvalidToolsetDefinitionException.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection__ctor_System_Collections_Generic_IDictionary_System_String_System_String__System_Collections_Generic_IEnumerable_Microsoft_Build_Framework_ILogger__System_Collections_Generic_IEnumerable_Microsoft_Build_Logging_ForwardingLoggerRecord__Microsoft_Build_Evaluation_ToolsetDefinitionLocations_System_Int32_System_Boolean_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection__ctor_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ProjectCollection(IDictionary&lt;String,String&gt;,IEnumerable&lt;ILogger&gt;,IEnumerable&lt;ForwardingLoggerRecord&gt;,ToolsetDefinitionLocations,Int32,Boolean)</div>        
+          </div>
+    
+            <p>Creates a project collection with specified global properties, loggers, node count, and onlyLogCriticalEvents value. The project collection toolset is initialized from toolsets in the given locations.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public ProjectCollection (System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers, System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers, Microsoft.Build.Evaluation.ToolsetDefinitionLocations toolsetDefinitionLocations, int maxNodeCount, bool onlyLogCriticalEvents);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>globalProperties</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="../system/system.string">String</a>,<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>The default global properties to use. May be null.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>loggers</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../microsoft.build.framework/microsoft.build.framework.ilogger">ILogger</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>The loggers to register. May be null and specified to any build instead.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>remoteLoggers</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../microsoft.build.logging/microsoft.build.logging.forwardingloggerrecord">ForwardingLoggerRecord</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>Any remote loggers to register. May be null and specified to any build instead.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>toolsetDefinitionLocations</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.toolsetdefinitionlocations">ToolsetDefinitionLocations</a></div>
+                  </dd>
+                  </dl>
+                  <p>The locations from which to load toolsets.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>maxNodeCount</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </dd>
+                  </dl>
+                  <p>The maximum number of nodes to use for building.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>onlyLogCriticalEvents</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>If set to true, only critical events will be logged.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Throws InvalidProjectFileException if any of the global properties are reserved.</p>
+
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_Count">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_Count_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Count</div>        
+          </div>
+    
+            <p>Gets the number of projects currently loaded into this collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public int Count { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.int32">Int32</a></div>
+                  </div>
+                  <p>Returns the number of projects currently loaded into this collection.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_DefaultToolsVersion">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_DefaultToolsVersion_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DefaultToolsVersion</div>        
+          </div>
+    
+            <p>Gets the default tools version of this project collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string DefaultToolsVersion { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Returns the default tools version of this project collection, which is always defined.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This default value is obtained from the .exe.config file, from the system registry, or if neither is present, from the hard-coded tools version &quot;2.0&quot;.  </p>
+<p> The set method throws InvalidOperationException if a toolset with the provided tools version has not been defined.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_DisableMarkDirty">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_DisableMarkDirty_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">DisableMarkDirty</div>        
+          </div>
+    
+            <p>Gets or sets a flag that determines whether <a class="xref" href="microsoft.build.evaluation.project#Microsoft_Build_Evaluation_Project_MarkDirty_">MarkDirty</a> is temporarily disabled on projects in this collection. This allows, for example, a global properties to be set without projects getting marked dirty for reevaluation as a consequence.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool DisableMarkDirty { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>Returns a flag that determines whether <code>MarkDirty</code> is temporarily disabled.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_GlobalProjectCollection">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_GlobalProjectCollection_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GlobalProjectCollection</div>        
+          </div>
+    
+            <p>Gets the global project collection object.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Microsoft.Build.Evaluation.ProjectCollection GlobalProjectCollection { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.projectcollection">ProjectCollection</a></div>
+                  </div>
+                  <p>Returns the global project collection object. This is a singleton project collection with no global properties or loggers. Toolset information is obtained from the configuration file and registry.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Thread safe.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_GlobalProperties">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_GlobalProperties_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GlobalProperties</div>        
+          </div>
+    
+            <p>Gets the read-only default global properties for all projects in this collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.Generic.IDictionary&lt;string,string&gt; GlobalProperties { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="../system/system.string">String</a>,<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </div>
+                  <p>Returns the read-only default global properties for all projects in this collection.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Use <a class="xref" href="microsoft.build.evaluation.projectcollection#Microsoft_Build_Evaluation_ProjectCollection_SetGlobalProperty_">SetGlobalProperty</a> and <a class="xref" href="microsoft.build.evaluation.projectcollection#Microsoft_Build_Evaluation_ProjectCollection_RemoveGlobalProperty_">RemoveGlobalProperty</a> to add, set, and remove global properties.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_HostServices">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_HostServices_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">HostServices</div>        
+          </div>
+    
+            <p>Gets or sets an object that provides host services to tasks during builds of projects contained in the project collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Execution.HostServices HostServices { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../microsoft.build.execution/microsoft.build.execution.hostservices">HostServices</a></div>
+                  </div>
+                  <p>Returns the host services object.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>By default, returns HostServices, which may be null.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_IsBuildEnabled">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_IsBuildEnabled_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsBuildEnabled</div>        
+          </div>
+    
+            <p>Gets or sets a property that selects by default whether the targets and tasks of projects in the project collection can be built.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool IsBuildEnabled { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>Gets or sets a property that selects by default whether the targets and tasks of projects in this project collection can be built.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Can be used for security purposes. By default, a new project has the same IsBuildEnabled setting as the parent project collection that contains it. When IsBuildEnabled is false, the Build method on this project fails.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_LoadedProjects">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_LoadedProjects_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LoadedProjects</div>        
+          </div>
+    
+            <p>Gets all the projects currently loaded into this collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Project&gt; LoadedProjects { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="microsoft.build.evaluation.project">Project</a>&gt;</div>
+                  </div>
+                  <p>Returns all the projects currently loaded into this collection.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Each project has a unique combination of path, global properties, and tools version.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_Loggers">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_Loggers_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Loggers</div>        
+          </div>
+    
+            <p>Gets all loggers that projects in this collection can use for their builds.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.Generic.ICollection&lt;Microsoft.Build.Framework.ILogger&gt; Loggers { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="../microsoft.build.framework/microsoft.build.framework.ilogger">ILogger</a>&gt;</div>
+                  </div>
+                  <p>Returns all loggers that projects in this collection can use for their builds.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Loggers are added with the <a class="xref" href="microsoft.build.evaluation.projectcollection#Microsoft_Build_Evaluation_ProjectCollection_RegisterLogger_">RegisterLogger</a> method.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_OnlyLogCriticalEvents">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_OnlyLogCriticalEvents_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">OnlyLogCriticalEvents</div>        
+          </div>
+    
+            <p>Gets or sets a switch that determines whether only critical events such as warnings and errors are logged.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool OnlyLogCriticalEvents { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>If true, only critical events such as warnings and errors are logged; false otherwise.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_SkipEvaluation">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_SkipEvaluation_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SkipEvaluation</div>        
+          </div>
+    
+            <p>Gets or sets a flag the determines whether ReevaluateIfNecessary is temporarily disabled on projects in this collection. This is useful when the host expects to make a number of reads and writes to projects, and wants to temporarily sacrifice correctness for performance.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool SkipEvaluation { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>Returns a flag the determines whether ReevaluateIfNecessary is temporarily disabled.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_ToolsetLocations">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_ToolsetLocations_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ToolsetLocations</div>        
+          </div>
+    
+            <p>Gets the locations used to find the toolsets.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Evaluation.ToolsetDefinitionLocations ToolsetLocations { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.toolsetdefinitionlocations">ToolsetDefinitionLocations</a></div>
+                  </div>
+                  <p>Returns the locations used to find the toolsets.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_Toolsets">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_Toolsets_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Toolsets</div>        
+          </div>
+    
+            <p>Gets the toolsets available to this project collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Toolset&gt; Toolsets { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="microsoft.build.evaluation.toolset">Toolset</a>&gt;</div>
+                  </div>
+                  <p>Returns the toolsets available to this project collection.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_Version">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_Version_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Version</div>        
+          </div>
+    
+            <p>Gets the file version of the assembly file that contains the MSBuild engine.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static Version Version { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.version">Version</a></div>
+                  </div>
+                  <p>Returns the file version of the assembly file that contains the MSBuild engine.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This is the Windows file version (specifically the value of the ProductVersion resource), which is not necessarily the assembly version. To obtain the assembly version, use Constants.AssemblyVersion.  </p>
+<p> See also the &lt;xref:Microsoft.Build.Evaluation.ProjectCollection.ToolsetsVersion%2A&gt;.</p>
+
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_AddToolset_Microsoft_Build_Evaluation_Toolset_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_AddToolset_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AddToolset(Toolset)</div>        
+          </div>
+    
+            <p>Adds a new toolset to the project collection. Replaces any existing toolset with the same tools version.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void AddToolset (Microsoft.Build.Evaluation.Toolset toolset);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>toolset</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.toolset">Toolset</a></div>
+                  </dd>
+                  </dl>
+                  <p>The toolset to be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_ContainsToolset_System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_ContainsToolset_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ContainsToolset(String)</div>        
+          </div>
+    
+            <p>Determines whether a toolset is defined for the given tools version.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ContainsToolset (string toolsVersion);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>toolsVersion</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The tools version to search for.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>Returns true if there is a toolset defined for the given tools version; false otherwise.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_Dispose">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose()</div>        
+          </div>
+    
+            <p>Releases both managed and unmanaged resources.  Called when a host no longer needs the project collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void Dispose ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject() before the ProjectCollection goes out of scope.â€</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_Dispose_System_Boolean_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_Dispose_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Dispose(Boolean)</div>        
+          </div>
+    
+            <p>Releases both managed and unmanaged resources.  Called when a host no longer needs the project collection.. Shuts down any logging services that the project collection owns and releases the logger thread.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">protected virtual void Dispose (bool disposing);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>disposing</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </dd>
+                  </dl>
+                  <p>If true, releases both managed and unmanaged resources; otherwise releases only unmanaged resources..</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Follows the garbage disposal guidelines of .NET.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_Escape_System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_Escape_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Escape(String)</div>        
+          </div>
+    
+            <p>Converts special characters in a string to MSBuild escape format.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string Escape (string unescapedString);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>unescapedString</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The string to be converted.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Returns the converted string.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For example, &quot;%3b&quot; for &quot;;&quot;. Only characters that are especially significant to MSBuild parsing are converted. Callers can use this method to make a string safe to be parsed by other methods that would otherwise expand it. Callers can also use this method to make a string safe to be written to a project file.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_GetGlobalProperty_System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_GetGlobalProperty_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetGlobalProperty(String)</div>        
+          </div>
+    
+            <p>Get any global property on the project collection that has the specified name.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Execution.ProjectPropertyInstance GetGlobalProperty (string name);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The name of the property to be retrieved.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../microsoft.build.execution/microsoft.build.execution.projectpropertyinstance">ProjectPropertyInstance</a></div>
+                  </div>
+                  <p>Returns any global property on the project collection that has the specified name; otherwise returns null.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_GetLoadedProjects_System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_GetLoadedProjects_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetLoadedProjects(String)</div>        
+          </div>
+    
+            <p>Gets all projects whose project path matches the given path.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Project&gt; GetLoadedProjects (string fullPath);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>fullPath</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The path to a project file to be matched.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="microsoft.build.evaluation.project">Project</a>&gt;</div>
+                  </div>
+                  <p>Returns all projects whose project path matches the given path.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>There may be more than one project with the given path because projects are also distinguished by global properties and/or tools version.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_GetToolset_System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_GetToolset_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetToolset(String)</div>        
+          </div>
+    
+            <p>Get the toolset with the specified tools version.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Evaluation.Toolset GetToolset (string toolsVersion);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>toolsVersion</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The tools version to match.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.toolset">Toolset</a></div>
+                  </div>
+                  <p>Returns the toolset with the specified tools version. Returns null if no toolset matching this tools version exists.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_LoadProject_System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_LoadProject_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LoadProject(String)</div>        
+          </div>
+    
+            <p>Evaluates a project from the source code in the given project file. The source code is evaluated with the global properties and tools version of this project collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Evaluation.Project LoadProject (string fileName);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>fileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The project file to evaluate.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.project">Project</a></div>
+                  </div>
+                  <p>If an existing project in the collection has already been evaluated from the given project file, the existing project is returned. Otherwise, a new project is created, evaluated, added to the project collection, and returned.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_LoadProject_System_Xml_XmlReader_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_LoadProject_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LoadProject(XmlReader)</div>        
+          </div>
+    
+            <p>Evaluates a project from the source code read from the given XML reader. The source code is evaluated with the global properties and tools version of this project collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Evaluation.Project LoadProject (System.Xml.XmlReader xmlReader);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>xmlReader</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.xml.xmlreader(v=vs.110).aspx">XmlReader</a></div>
+                  </dd>
+                  </dl>
+                  <p>Xml reader to read project source code from.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.project">Project</a></div>
+                  </div>
+                  <p>Returns the new project.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The project is added to this project collection when either this project or the given project root is given the full path to a project file.  </p>
+<p> In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_LoadProject_System_String_System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_LoadProject_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LoadProject(String,String)</div>        
+          </div>
+    
+            <p>Evaluates a project from the source code read from the given project file. The source code is evaluated with the global properties of this project collection and the given tools version.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Evaluation.Project LoadProject (string fileName, string toolsVersion);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>fileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The project file to evaluate.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>toolsVersion</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The tools version to use. May be null.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.project">Project</a></div>
+                  </div>
+                  <p>If an existing project in the collection has already been evaluated from the given project file, and with the given tools version, then the existing project is returned. Otherwise, a new project is created, evaluated, added to the project collection, and returned.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_LoadProject_System_Xml_XmlReader_System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_LoadProject_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LoadProject(XmlReader,String)</div>        
+          </div>
+    
+            <p>Evaluates a project from the source code read from the given XML reader. The source code is evaluated with the global properties of this project collection and the given tools version.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Evaluation.Project LoadProject (System.Xml.XmlReader xmlReader, string toolsVersion);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>xmlReader</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.xml.xmlreader(v=vs.110).aspx">XmlReader</a></div>
+                  </dd>
+                  </dl>
+                  <p>Xml reader to read project source code from.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>toolsVersion</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The tools version to use. May be null.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.project">Project</a></div>
+                  </div>
+                  <p>Returns the new project.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The project is added to this project collection when either this project or the given project root is given the full path to a project file.  </p>
+<p> In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_LoadProject_System_String_System_Collections_Generic_IDictionary_System_String_System_String__System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_LoadProject_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LoadProject(String,IDictionary&lt;String,String&gt;,String)</div>        
+          </div>
+    
+            <p>Evaluates a project from the source code read from the given project file. The source code is evaluated with the given global properties and tools version.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Evaluation.Project LoadProject (string fileName, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>fileName</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The project file to be evaluated.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>globalProperties</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="../system/system.string">String</a>,<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>The global properties to use. May be null, in which case the containing project collection&#39;s global properties will be used.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>toolsVersion</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The tools version. May be null.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.project">Project</a></div>
+                  </div>
+                  <p>If an existing project in the collection has already been evaluated from the given project file, and with the given global properties and tools version, then the existing project is returned. Otherwise, a new project is created, evaluated, added to the project collection, and returned.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_LoadProject_System_Xml_XmlReader_System_Collections_Generic_IDictionary_System_String_System_String__System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_LoadProject_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">LoadProject(XmlReader,IDictionary&lt;String,String&gt;,String)</div>        
+          </div>
+    
+            <p>Evaluates a project from the source code read from the given XML reader. The source code is evaluated with the given global properties and tools version.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Microsoft.Build.Evaluation.Project LoadProject (System.Xml.XmlReader xmlReader, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>xmlReader</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.xml.xmlreader(v=vs.110).aspx">XmlReader</a></div>
+                  </dd>
+                  </dl>
+                  <p>Xml reader to read project from</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>globalProperties</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="../system/system.string">String</a>,<a class="xref" href="../system/system.string">String</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>The global properties to use. May be null in which case the containing project collection&#39;s global properties will be used.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>toolsVersion</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The tools version. May be null.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.project">Project</a></div>
+                  </div>
+                  <p>Returns the new project.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The project is added to this project collection when either this project or the given project root is given the full path to a project file.  </p>
+<p> In the MSBuild versions that were delivered with .Net 4.5 and Visual Studio 12.0, you must call UnloadProject before the ProjectCollection goes out of scope.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_RegisterForwardingLoggers_System_Collections_Generic_IEnumerable_Microsoft_Build_Logging_ForwardingLoggerRecord__">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_RegisterForwardingLoggers_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RegisterForwardingLoggers(IEnumerable&lt;ForwardingLoggerRecord&gt;)</div>        
+          </div>
+    
+            <p>Adds the given remote loggers to the collection of remote loggers used for builds of projects in this collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void RegisterForwardingLoggers (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; remoteLoggers);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>remoteLoggers</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../microsoft.build.logging/microsoft.build.logging.forwardingloggerrecord">ForwardingLoggerRecord</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>The remote loggers to add. May be null.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_RegisterLogger_Microsoft_Build_Framework_ILogger_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_RegisterLogger_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RegisterLogger(ILogger)</div>        
+          </div>
+    
+            <p>Adds the given logger to the collection of loggers used for builds of projects in this collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void RegisterLogger (Microsoft.Build.Framework.ILogger logger);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>logger</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../microsoft.build.framework/microsoft.build.framework.ilogger">ILogger</a></div>
+                  </dd>
+                  </dl>
+                  <p>The logger to add.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If the logger object is already in the collection, does nothing.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_RegisterLoggers_System_Collections_Generic_IEnumerable_Microsoft_Build_Framework_ILogger__">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_RegisterLoggers_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RegisterLoggers(IEnumerable&lt;ILogger&gt;)</div>        
+          </div>
+    
+            <p>Adds the given loggers to the collection of loggers used for builds of projects in this collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void RegisterLoggers (System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; loggers);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>loggers</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system.collections.generic/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../microsoft.build.framework/microsoft.build.framework.ilogger">ILogger</a>&gt;</div>
+                  </dd>
+                  </dl>
+                  <p>The loggers to be added. May be null.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>Skips any logger objects that are already in the collection.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_RemoveAllToolsets">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_RemoveAllToolsets_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveAllToolsets()</div>        
+          </div>
+    
+            <p>Removes all toolsets from the project collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void RemoveAllToolsets ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_RemoveGlobalProperty_System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_RemoveGlobalProperty_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveGlobalProperty(String)</div>        
+          </div>
+    
+            <p>Removes a global property from the set of default global properties.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool RemoveGlobalProperty (string name);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The name of the default global property to remove.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>Returns true if the global property is present before removal; false otherwise.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_RemoveToolset_System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_RemoveToolset_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">RemoveToolset(String)</div>        
+          </div>
+    
+            <p>Removes a toolset from the project collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool RemoveToolset (string toolsVersion);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>toolsVersion</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The toolset to be removed.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>Returns true if the toolset is present before removal; false otherwise.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_SetGlobalProperty_System_String_System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_SetGlobalProperty_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">SetGlobalProperty(String,String)</div>        
+          </div>
+    
+            <p>Sets the value of a property in the default set of global properties.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void SetGlobalProperty (string name, string value);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The name of the default global property to be added or set.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>value</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The new value of the default global property.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>If no matching property is found, the property is created and initialized with the given value.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_TryUnloadProject_Microsoft_Build_Construction_ProjectRootElement_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_TryUnloadProject_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TryUnloadProject(ProjectRootElement)</div>        
+          </div>
+    
+            <p>Attempts to remove a project from the collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool TryUnloadProject (Microsoft.Build.Construction.ProjectRootElement projectRootElement);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>projectRootElement</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../microsoft.build.construction/microsoft.build.construction.projectrootelement">ProjectRootElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>The root element of the project to unload.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>Returns true if the project was unloaded.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_Unescape_System_String_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_Unescape_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Unescape(String)</div>        
+          </div>
+    
+            <p>Converts escaped characters in a string to MSBuild characters with special meaning.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static string Unescape (string escapedString);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>escapedString</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>The string to be converted.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>Returns the converted string.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>For example, &quot;%3b&quot; is converted to &quot;;&quot;.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_UnloadAllProjects">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_UnloadAllProjects_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UnloadAllProjects()</div>        
+          </div>
+    
+            <p>Removes all projects in this project collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void UnloadAllProjects ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The host should call this method when it no longer needs the projects.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_UnloadProject_Microsoft_Build_Construction_ProjectRootElement_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_UnloadProject_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UnloadProject(ProjectRootElement)</div>        
+          </div>
+    
+            <p>Removes a project root element from the project root cache.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void UnloadProject (Microsoft.Build.Construction.ProjectRootElement projectRootElement);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>projectRootElement</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../microsoft.build.construction/microsoft.build.construction.projectrootelement">ProjectRootElement</a></div>
+                  </dd>
+                  </dl>
+                  <p>The project root element to unload.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This method is useful for the case where the host knows that all projects using this root element have been removed, and that any unsaved changes should be discarded.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_UnloadProject_Microsoft_Build_Evaluation_Project_">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_UnloadProject_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UnloadProject(Project)</div>        
+          </div>
+    
+            <p>Removes the given project from the project collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void UnloadProject (Microsoft.Build.Evaluation.Project project);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>project</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="microsoft.build.evaluation.project">Project</a></div>
+                  </dd>
+                  </dl>
+                  <p>The project to remove.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>The host should call this method when it no longer needs the project.  </p>
+<p> Throws InvalidOperationException if the given project is not present in the project collection.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_UnregisterAllLoggers">
+    
+            <a id="Microsoft_Build_Evaluation_ProjectCollection_UnregisterAllLoggers_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">UnregisterAllLoggers()</div>        
+          </div>
+    
+            <p>Removes all loggers from the collection of loggers used by project builds in this collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public void UnregisterAllLoggers ();</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="events">
+        <h2>Events
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_ProjectAdded">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ProjectAdded</div>        
+          </div>
+    
+            <p>Event that is fired when a project is added to the ProjectRootElementCache of this project collection.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Evaluation.ProjectCollection.ProjectAddedEventHandler ProjectAdded;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_ProjectChanged">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ProjectChanged</div>        
+          </div>
+    
+            <p>Raised when a <see cref="T:Microsoft.Build.Evaluation.Project"> contained by this instance is directly changed.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event EventHandler&lt;Microsoft.Build.Evaluation.ProjectChangedEventArgs&gt; ProjectChanged;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This event is NOT raised for direct project XML changes via the construction model.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_ProjectCollectionChanged">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ProjectCollectionChanged</div>        
+          </div>
+    
+            <p>Raised when state is changed on this instance.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event EventHandler&lt;Microsoft.Build.Evaluation.ProjectCollectionChangedEventArgs&gt; ProjectCollectionChanged;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This event is NOT raised for changes in individual projects.</p>
+
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Evaluation_ProjectCollection_ProjectXmlChanged">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ProjectXmlChanged</div>        
+          </div>
+    
+            <p>Raised when a <see cref="T:Microsoft.Build.Construction.ProjectRootElement"> contained by this instance is changed.<p>
+</see>
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event EventHandler&lt;Microsoft.Build.Evaluation.ProjectXmlChangedEventArgs&gt; ProjectXmlChanged;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+            <h4>Remarks</h4>
+            <p>This event is NOT raised for changes to global properties, or any other change that doesn&#39;t actually dirty the XML.</p>
+
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

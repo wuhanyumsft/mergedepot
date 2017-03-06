@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="IEventSource interface">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/Microsoft.Build.Framework/Microsoft.Build.Framework.IEventSource.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/Microsoft.Build.Framework/Microsoft.Build.Framework.IEventSource.yml">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.AnyEventRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_AnyEventRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_AnyEventRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.BuildFinished">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_BuildFinished">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_BuildFinished">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.BuildStarted">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_BuildStarted">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_BuildStarted">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.CustomEventRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_CustomEventRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_CustomEventRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.ErrorRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_ErrorRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_ErrorRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.MessageRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_MessageRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_MessageRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.ProjectFinished">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_ProjectFinished">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_ProjectFinished">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.ProjectStarted">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_ProjectStarted">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_ProjectStarted">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.StatusEventRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_StatusEventRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_StatusEventRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.TargetFinished">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_TargetFinished">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_TargetFinished">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.TargetStarted">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_TargetStarted">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_TargetStarted">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.TaskFinished">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_TaskFinished">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_TaskFinished">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.TaskStarted">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_TaskStarted">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_TaskStarted">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.WarningRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.add_WarningRaised">
+<meta name="APIName" content="Microsoft.Build.Framework.IEventSource.remove_WarningRaised">
+<meta name="APILocation" content="Microsoft.Build.Framework.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="5aca6930-3ec9-dc59-aba6-a50db847aa95">
+<meta name="pagetype" content="Reference">
+<meta name="description" content="Defines the events raised by the build engine. Loggers receive an object implementing this interface in their  method and use it to subscribe to the events they are interested in receiving.
+">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Build.Framework.IEventSource">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.build.framework/microsoft.build.framework.ieventsource" rel="canonical">
+    <title>IEventSource interface | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="Microsoft_Build_Framework_IEventSource">
+      <span class="lang-csharp">IEventSource</span>
+        Interface
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	<p>Defines the events raised by the build engine. Loggers receive an object implementing this interface in their <a class="xref" href="microsoft.build.framework.ilogger#Microsoft_Build_Framework_ILogger_Initialize_">Initialize</a> method and use it to subscribe to the events they are interested in receiving.</p>
+
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">public interface IEventSource</code></pre>
+    
+    
+    
+    
+    
+    
+    
+    
+    <h2>Events
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_AnyEventRaised">AnyEventRaised</a></div>
+          </td>
+            <td>
+            <p>Occurs when a build raises any other type of build event.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_BuildFinished">BuildFinished</a></div>
+          </td>
+            <td>
+            <p>Occurs when a build finishes.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_BuildStarted">BuildStarted</a></div>
+          </td>
+            <td>
+            <p>Occurs when a build starts.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_CustomEventRaised">CustomEventRaised</a></div>
+          </td>
+            <td>
+            <p>Occurs when a build raises a custom event.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_ErrorRaised">ErrorRaised</a></div>
+          </td>
+            <td>
+            <p>Occurs when a build raises an error.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_MessageRaised">MessageRaised</a></div>
+          </td>
+            <td>
+            <p>Occurs when a build raises a message.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_ProjectFinished">ProjectFinished</a></div>
+          </td>
+            <td>
+            <p>Occurs when a project finishes building.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_ProjectStarted">ProjectStarted</a></div>
+          </td>
+            <td>
+            <p>Occurs when a project starts building.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_StatusEventRaised">StatusEventRaised</a></div>
+          </td>
+            <td>
+            <p>Occurs when a build raises a status event.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_TargetFinished">TargetFinished</a></div>
+          </td>
+            <td>
+            <p>Occurs when a target finishes building.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_TargetStarted">TargetStarted</a></div>
+          </td>
+            <td>
+            <p>Occurs when a target starts building.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_TaskFinished">TaskFinished</a></div>
+          </td>
+            <td>
+            <p>Occurs when a task completes execution.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_TaskStarted">TaskStarted</a></div>
+          </td>
+            <td>
+            <p>Occurs when a task begins execution.</p>
+
+            </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Build_Framework_IEventSource_WarningRaised">WarningRaised</a></div>
+          </td>
+            <td>
+            <p>Occurs when a build raises a warning.</p>
+
+            </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="events">
+        <h2>Events
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_AnyEventRaised">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">AnyEventRaised</div>        
+          </div>
+    
+            <p>Occurs when a build raises any other type of build event.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.AnyEventHandler AnyEventRaised;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_BuildFinished">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BuildFinished</div>        
+          </div>
+    
+            <p>Occurs when a build finishes.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.BuildFinishedEventHandler BuildFinished;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_BuildStarted">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">BuildStarted</div>        
+          </div>
+    
+            <p>Occurs when a build starts.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.BuildStartedEventHandler BuildStarted;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_CustomEventRaised">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CustomEventRaised</div>        
+          </div>
+    
+            <p>Occurs when a build raises a custom event.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.CustomBuildEventHandler CustomEventRaised;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_ErrorRaised">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ErrorRaised</div>        
+          </div>
+    
+            <p>Occurs when a build raises an error.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.BuildErrorEventHandler ErrorRaised;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_MessageRaised">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MessageRaised</div>        
+          </div>
+    
+            <p>Occurs when a build raises a message.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.BuildMessageEventHandler MessageRaised;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_ProjectFinished">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ProjectFinished</div>        
+          </div>
+    
+            <p>Occurs when a project finishes building.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.ProjectFinishedEventHandler ProjectFinished;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_ProjectStarted">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ProjectStarted</div>        
+          </div>
+    
+            <p>Occurs when a project starts building.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.ProjectStartedEventHandler ProjectStarted;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_StatusEventRaised">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StatusEventRaised</div>        
+          </div>
+    
+            <p>Occurs when a build raises a status event.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.BuildStatusEventHandler StatusEventRaised;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_TargetFinished">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TargetFinished</div>        
+          </div>
+    
+            <p>Occurs when a target finishes building.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.TargetFinishedEventHandler TargetFinished;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_TargetStarted">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TargetStarted</div>        
+          </div>
+    
+            <p>Occurs when a target starts building.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.TargetStartedEventHandler TargetStarted;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_TaskFinished">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TaskFinished</div>        
+          </div>
+    
+            <p>Occurs when a task completes execution.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.TaskFinishedEventHandler TaskFinished;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_TaskStarted">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TaskStarted</div>        
+          </div>
+    
+            <p>Occurs when a task begins execution.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.TaskStartedEventHandler TaskStarted;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="Microsoft_Build_Framework_IEventSource_WarningRaised">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">WarningRaised</div>        
+          </div>
+    
+            <p>Occurs when a build raises a warning.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public event Microsoft.Build.Framework.BuildWarningEventHandler WarningRaised;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+            <h4>Example</h4>
+            The following example shows how to write a basic logger that responds to build events.  
+  
+ [!code-cs[msbuild_BasicLogger#1](../../add/codesnippet/CSharp/msbuild_BasicLogger/msbuild_BasicLogger.cs#1)]
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

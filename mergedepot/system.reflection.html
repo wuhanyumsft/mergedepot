@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="System.Reflection namespace">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/d432243688396e79347ab17831acbc0dd6d93fed/halfdotnet/System.Reflection.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Reflection.yml">
+<meta name="updated_at" content="2017-02-15 07:39 AM">
+<meta name="document_id" content="5576f740-aa5f-7519-a88c-d6a4e882c6d5">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="toc1.json">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Reflection">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.reflection" rel="canonical">
+    <title>System.Reflection namespace | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              <!-- NAMESPACE -->
+    <h1 id="System_Reflection">
+      <span class="lang-csharp">System.Reflection</span>
+        Namespace
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div>
+    <header class="header enable-platform-filter" id="classes">
+      <h2>Classes
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="System_Reflection_AmbiguousMatchException" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.ambiguousmatchexception">AmbiguousMatchException</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_Assembly" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assembly">Assembly</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyAlgorithmIdAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblyalgorithmidattribute">AssemblyAlgorithmIdAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyCompanyAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblycompanyattribute">AssemblyCompanyAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyConfigurationAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblyconfigurationattribute">AssemblyConfigurationAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyCopyrightAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblycopyrightattribute">AssemblyCopyrightAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyCultureAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblycultureattribute">AssemblyCultureAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyDefaultAliasAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblydefaultaliasattribute">AssemblyDefaultAliasAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyDelaySignAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblydelaysignattribute">AssemblyDelaySignAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyDescriptionAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblydescriptionattribute">AssemblyDescriptionAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyFileVersionAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblyfileversionattribute">AssemblyFileVersionAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyFlagsAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblyflagsattribute">AssemblyFlagsAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyInformationalVersionAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblyinformationalversionattribute">AssemblyInformationalVersionAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyKeyFileAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblykeyfileattribute">AssemblyKeyFileAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyKeyNameAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblykeynameattribute">AssemblyKeyNameAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyMetadataAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblymetadataattribute">AssemblyMetadataAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyName" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblyname">AssemblyName</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyNameProxy" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblynameproxy">AssemblyNameProxy</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyProductAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblyproductattribute">AssemblyProductAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblySignatureKeyAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblysignaturekeyattribute">AssemblySignatureKeyAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyTitleAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblytitleattribute">AssemblyTitleAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyTrademarkAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblytrademarkattribute">AssemblyTrademarkAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyVersionAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblyversionattribute">AssemblyVersionAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_Binder" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.binder">Binder</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ConstructorInfo" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.constructorinfo">ConstructorInfo</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_CustomAttributeData" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.customattributedata">CustomAttributeData</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_CustomAttributeExtensions" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.customattributeextensions">CustomAttributeExtensions</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_CustomAttributeFormatException" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.customattributeformatexception">CustomAttributeFormatException</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_DefaultMemberAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.defaultmemberattribute">DefaultMemberAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_EventInfo" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.eventinfo">EventInfo</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ExceptionHandlingClause" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.exceptionhandlingclause">ExceptionHandlingClause</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_FieldInfo" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.fieldinfo">FieldInfo</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_IntrospectionExtensions" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.introspectionextensions">IntrospectionExtensions</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_InvalidFilterCriteriaException" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.invalidfiltercriteriaexception">InvalidFilterCriteriaException</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_LocalVariableInfo" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.localvariableinfo">LocalVariableInfo</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ManifestResourceInfo" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.manifestresourceinfo">ManifestResourceInfo</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_MemberInfo" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.memberinfo">MemberInfo</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_MethodBase" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.methodbase">MethodBase</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_MethodBody" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.methodbody">MethodBody</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_MethodInfo" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.methodinfo">MethodInfo</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_Missing" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.missing">Missing</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_Module" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.module">Module</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ObfuscateAssemblyAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.obfuscateassemblyattribute">ObfuscateAssemblyAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ObfuscationAttribute" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.obfuscationattribute">ObfuscationAttribute</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ParameterInfo" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.parameterinfo">ParameterInfo</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_Pointer" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.pointer">Pointer</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_PropertyInfo" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.propertyinfo">PropertyInfo</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ReflectionContext" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.reflectioncontext">ReflectionContext</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ReflectionTypeLoadException" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.reflectiontypeloadexception">ReflectionTypeLoadException</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_RuntimeReflectionExtensions" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.runtimereflectionextensions">RuntimeReflectionExtensions</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_StrongNameKeyPair" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.strongnamekeypair">StrongNameKeyPair</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_TargetException" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.targetexception">TargetException</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_TargetInvocationException" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.targetinvocationexception">TargetInvocationException</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_TargetParameterCountException" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.targetparametercountexception">TargetParameterCountException</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_TypeDelegator" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.typedelegator">TypeDelegator</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_TypeInfo" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.typeinfo">TypeInfo</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="structs">
+      <h2>Structs
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="System_Reflection_CustomAttributeNamedArgument" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.customattributenamedargument">CustomAttributeNamedArgument</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_CustomAttributeTypedArgument" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.customattributetypedargument">CustomAttributeTypedArgument</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_InterfaceMapping" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.interfacemapping">InterfaceMapping</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ParameterModifier" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.parametermodifier">ParameterModifier</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="interfaces">
+      <h2>Interfaces
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="System_Reflection_ICustomAttributeProvider" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.icustomattributeprovider">ICustomAttributeProvider</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_IReflect" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.ireflect">IReflect</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_IReflectableType" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.ireflectabletype">IReflectableType</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="enums">
+      <h2>Enums
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="System_Reflection_AssemblyContentType" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblycontenttype">AssemblyContentType</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_AssemblyNameFlags" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.assemblynameflags">AssemblyNameFlags</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_BindingFlags" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.bindingflags">BindingFlags</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_CallingConventions" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.callingconventions">CallingConventions</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_EventAttributes" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.eventattributes">EventAttributes</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ExceptionHandlingClauseOptions" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.exceptionhandlingclauseoptions">ExceptionHandlingClauseOptions</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_FieldAttributes" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.fieldattributes">FieldAttributes</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_GenericParameterAttributes" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.genericparameterattributes">GenericParameterAttributes</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ImageFileMachine" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.imagefilemachine">ImageFileMachine</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_MemberTypes" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.membertypes">MemberTypes</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_MethodAttributes" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.methodattributes">MethodAttributes</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_MethodImplAttributes" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.methodimplattributes">MethodImplAttributes</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ParameterAttributes" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.parameterattributes">ParameterAttributes</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_PortableExecutableKinds" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.portableexecutablekinds">PortableExecutableKinds</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ProcessorArchitecture" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.processorarchitecture">ProcessorArchitecture</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_PropertyAttributes" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.propertyattributes">PropertyAttributes</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ResourceAttributes" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.resourceattributes">ResourceAttributes</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ResourceLocation" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.resourcelocation">ResourceLocation</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_TypeAttributes" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.typeattributes">TypeAttributes</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="delegates">
+      <h2>Delegates
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="System_Reflection_MemberFilter" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.memberfilter">MemberFilter</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_ModuleResolveEventHandler" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.moduleresolveeventhandler">ModuleResolveEventHandler</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+      <tr id="System_Reflection_TypeFilter" class="platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.reflection/system.reflection.typefilter">TypeFilter</a></div>
+      </td>
+      <td>
+        
+      </td>
+      </tr>
+    </table>
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>

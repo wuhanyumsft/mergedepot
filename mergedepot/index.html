@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Azure .NET SDK Packages">
+    <meta property="og:image" content="https://docs.microsoft.com/en-us/_themes/images/microsoft-header.png">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@docsmsft">
+    <meta name="twitter:title" content="Azure .NET SDK Packages">
+    <meta name="twitter:description" content="Azure .NET SDK Packages">
+    <meta name="twitter:image" content="https://docs.microsoft.com/en-us/_themes/images/microsoft-header.png">    
+    <meta name="twitter:image:alt" content="Microsoft Logo">
+    
+    <meta name="ms.devlang" content="dotnet">
+<meta name="author" content="CamSoper">
+<meta name="ms.author" content="casoper">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.date" content="03/02/2016">
+<meta name="ms.assetid" content="46ad4ac6-bc51-45c9-b6dd-394ed0af5424">
+<meta name="description" content="Azure .NET SDK Packages">
+<meta name="keywords" content="Azure .NET, Azure .NET API Reference, Azure .NET class library">
+<meta name="ms.technology" content="azure">
+<meta name="ms.prod" content="azure">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="updated_at" content="2017-03-03 10:05 PM">
+<meta name="gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/98e06110611b6e38141a6492caf271132b9e87c8/index.md">
+<meta name="original_content_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/index.md">
+<meta name="document_id" content="dc18276b-0172-e1b5-4ad7-c70d445d3cd6">
+<meta name="pagetype" content="Conceptual">
+<meta name="toc_rel" content="toc2.json">
+
+    
+    
+      
+    <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/index" rel="canonical">
+    <title>Azure .NET SDK Packages | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/3bcf2c9081582fac6994.conceptual.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: false
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                        
+                            <li>
+                                <a href="#comments-container" id="comments-link" ms.cmpnm="comments">
+                                    <i class="icon icon-comments"></i>Comments
+                                </a>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/index.md" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+      <div class="container" ms.pgarea="body">
+      
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">          
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav> 
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+          
+            <h1 id="azure-nuget-packages" sourcefile="index.md" sourcestartlinenumber="16" sourceendlinenumber="16">Azure NuGet Packages</h1>
+            <div class="metadata" ms.cmpgrp="page info">
+              <div class="info">
+                <div class="meta loading">
+                  
+                  <time class="date" datetime="3/2/2016 12:00:00 AM">2016-3-2</time>
+                  
+                  <span class="reading-time">2 min to read</span>
+                  
+                    <span class="contributors-text">Contributors</span>
+                    <ul class="contributors" ms.cmpgrp="contributors">
+                      
+                        
+                        
+                          <li><a href="https://github.com/CamSoper" title="Cam Soper" ms.cmpnm="contributorprofile"><img src="https://github.com/CamSoper.png?size=16" alt="Cam Soper"></a></li>
+                        
+                        
+                        
+                          <li><a href="https://github.com/bydoempire" title="Doug Erickson" ms.cmpnm="contributorprofile"><img src="https://github.com/bydoempire.png?size=16" alt="Doug Erickson"></a></li>
+                        
+                        
+                        
+                          <li><a href="https://github.com/qinezh" title="Qinen Zhu" ms.cmpnm="contributorprofile"><img src="https://github.com/qinezh.png?size=16" alt="Qinen Zhu"></a></li>
+                        
+                        
+                        
+                          <li><a href="https://github.com/allclark" title="Allen Clark" ms.cmpnm="contributorprofile"><img src="https://github.com/allclark.png?size=16" alt="Allen Clark"></a></li>
+                        
+                        
+                                                              
+                    </ul>
+                  
+                </div>
+                
+              </div>
+
+              <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                  <h3>In this article</h3>
+              </nav>
+
+            </div>
+          
+
+          <div><div class="content">
+<p>Use the libraries in the .NET SDK for Azure to manage and consume Azure services in your applications.</p>
+<p>The .NET SDK for Azure libraries all support <a href="https://docs.microsoft.com/dotnet/articles/standard/choosing-core-framework-server">.NET Framework</a>.  .NET Core support is provided by most packages.  You can verify .NET Core support by checking for a <em>.NETStandard</em> dependency, as you can see with <a href="https://www.nuget.org/packages/WindowsAzure.Storage">WindowsAzure.Storage</a>. Some of these packages are in preview, requiring you to opt into search and installation of preview NuGet packages.</p>
+<h2 id="packages">Packages</h2>
+<p><strong>Data plane</strong> packages are used to <strong>consume</strong> Azure services in your .NET applications.  <strong>Management plane</strong> packages are used to <strong>manage</strong> resources in Azure.  <strong>Fluent</strong> management plane packages (ending in <strong>*.Fluent</strong>) use a <a href="https://azure.microsoft.com/blog/simpler-azure-management-libraries-for-net/">simplified, easy-to-read syntax</a>. Use the fluent packages if you prefer the fluent syntax.</p>
+<div class="TIP"><h5>Tip</h5><p><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Fluent">Microsoft.Azure.Management.Fluent</a> is a rollup package that contains all of the fluent management libraries.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Data plane package</th>
+<th>Management plane package</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/analysis-services/">Analysis Services</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Analysis">Microsoft.Azure.Management.Analysis</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/api-management/">ApiManagement</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.ApiManagement">Microsoft.Azure.Management.ApiManagement</a></td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Authorization">Microsoft.Azure.Management.Authorization</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/automation/">Automation</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Automation">Microsoft.Azure.Management.Automation</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/active-directory">Azure Active Directory</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory">Microsoft.IdentityModel.Clients.ActiveDirectory</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/backup/">Backup</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServices.Backup">Microsoft.Azure.Management.RecoveryServices.Backup</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/batch/">Batch</a></td>
+<td><a href="https://www.nuget.org/packages/Azure.Batch">Azure.Batch</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Batch.Fluent">Microsoft.Azure.Management.Batch.Fluent</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Batch">Microsoft.Azure.Management.Batch</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/billing/">Billing</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Billing">Microsoft.Azure.Management.Billing</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/cdn/">CDN</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Cdn.Fluent">Microsoft.Azure.Management.Cdn.Fluent</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Cdn">Microsoft.Azure.Management.Cdn</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/cognitive-services/">Cognitive Services</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.CognitiveServices">Microsoft.Azure.Management.CognitiveServices</a></td>
+</tr>
+<tr>
+<td>Commerce</td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Commerce.UsageAggregates">Microsoft.Azure.Commerce.UsageAggregates</a></td>
+</tr>
+<tr>
+<td>Container Registry</td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.ContainerRegistry">Microsoft.Azure.Management.ContainerRegistry</a></td>
+</tr>
+<tr>
+<td>Customer Insights</td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.CustomerInsights">Microsoft.Azure.Management.CustomerInsights</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/data-factory/">Data Factory</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.DataFactories">Microsoft.Azure.Management.DataFactories</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/data-lake-analytics/">Data Lake Analytics</a></td>
+<td><a href="http://www.nuget.org/packages/Microsoft.Azure.Management.DataLake.Analytics">Microsoft.Azure.Management.DataLake.Analytics</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.DataLake.Analytics">Microsoft.Azure.Management.DataLake.Analytics</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/data-lake-store/">Data Lake Store</a></td>
+<td><a href="http://www.nuget.org/packages/Microsoft.Azure.Management.DataLake.Store">Microsoft.Azure.Management.DataLake.Store</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.DataLake.Store">Microsoft.Azure.Management.DataLake.Store</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.DataLake.StoreUploader">Microsoft.Azure.Management.DataLake.StoreUploader</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/devtest-lab/">DevTest Labs</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.DevTestLabs">Microsoft.Azure.Management.DevTestLabs</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/dns/">DNS</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Dns.Fluent">Microsoft.Azure.Management.Dns.Fluent</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Dns">Microsoft.Azure.Management.Dns</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/documentdb/">DocumentDB</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core">Microsoft.Azure.DocumentDB.Core</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/event-hubs/">Event Hubs</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.EventHubs">Microsoft.Azure.EventHubs</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.EventHubs.Processor">Microsoft.Azure.EventHubs.Processor</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Graph</td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Graph.RBAC">Microsoft.Azure.Graph.RBAC</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/hdinsight/">HD Insight</a></td>
+<td><a href="http://www.nuget.org/packages/Microsoft.Azure.Management.HDInsight.Job">Microsoft.Azure.Management.HDInsight.Job</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.HDInsight">Microsoft.Azure.Management.HDInsight</a></td>
+</tr>
+<tr>
+<td>Insights</td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Insights">Microsoft.Azure.Insights</a></td>
+</tr>
+<tr>
+<td>Intune</td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Intune">Microsoft.Azure.Management.Intune</a></td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core/">IoT Hub</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Devices">Microsoft.Azure.Devices</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Devices.Client">Microsoft.Azure.Devices.Client</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/key-vault/">Key Vault</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.KeyVault">Microsoft.Azure.KeyVault</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.KeyVault.Fluent">Microsoft.Azure.Management.KeyVault.Fluent</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.KeyVault">Microsoft.Azure.Management.KeyVault</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/logic-apps/">Logic Apps</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Logic">Microsoft.Azure.Management.Logic</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/machine-learning/">MachineLearning</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.MachineLearning">Microsoft.Azure.Management.MachineLearning</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/media-services/">Media Services</a></td>
+<td><a href="https://www.nuget.org/packages/windowsazure.mediaservices.extensions">windowsazure.mediaservices.extensions</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Media">Microsoft.Azure.Management.Media</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/notification-hubs/">Notification Hubs</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.NotificationHubs">Microsoft.Azure.NotificationHubs</a><br><a href="https://www.nuget.org/packages/WindowsAzure.Messaging.Managed">WindowsAzure.Messaging.Managed</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.NotificationHubs">Microsoft.Azure.Management.NotificationHubs</a></td>
+</tr>
+<tr>
+<td>Operational Insights</td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.OperationalInsights">Microsoft.Azure.Management.OperationalInsights</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/power-bi-embedded/">PowerBI Embedded</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.PowerBIEmbedded">Microsoft.Azure.Management.PowerBIEmbedded</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/site-recovery/">Recovery Services</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServices">Microsoft.Azure.Management.RecoveryServices</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/redis-cache/">Redis Cache</a></td>
+<td><a href="https://www.nuget.org/packages/StackExchange.Redis/">StackExchange.Redis</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Redis.Fluent">Microsoft.Azure.Management.Redis.Fluent</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Redis">Microsoft.Azure.Management.Redis</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/azure-resource-manager/">Resource Manager</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.ResourceManager.Fluent">Microsoft.Azure.Management.ResourceManager.Fluent</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.ResourceManager">Microsoft.Azure.Management.ResourceManager</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/scheduler/">Scheduler</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Scheduler">Microsoft.Azure.Management.Scheduler</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/search/">Search</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Search">Microsoft.Azure.Search</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Search">Microsoft.Azure.Management.Search</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/service-bus/">Service Bus</a></td>
+<td><a href="https://www.nuget.org/packages/WindowsAzure.ServiceBus/">WindowsAzure.ServiceBus</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.ServiceBus">Microsoft.Azure.Management.ServiceBus</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/service-bus-relay/">Service Bus Relay</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Relay">Microsoft.Azure.Relay</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/service-fabric/">Service Fabric</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.ServiceFabric">Microsoft.ServiceFabric</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/sql-database/">SQL Database</a></td>
+<td><a href="https://www.nuget.org/packages/System.Data.SqlClient/">System.Data.SqlClient/</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Sql.Fluent">Microsoft.Azure.Management.Sql.Fluent</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Sql">Microsoft.Azure.Management.Sql</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/storage/">Storage</a></td>
+<td><a href="http://www.nuget.org/packages/WindowsAzure.Storage">WindowsAzure.Storage</a></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Storage.Fluent">Microsoft.Azure.Management.Storage.Fluent</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Storage">Microsoft.Azure.Management.Storage</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Storage.DataMovement">Microsoft.Azure.Storage.DataMovement</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/stream-analytics/">Stream Analytics</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.StreamAnalytics">Microsoft.Azure.Management.StreamAnalytics</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/traffic-manager/">Traffic Manager</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.TrafficManager.Fluent">Microsoft.Azure.Management.TrafficManager.Fluent</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.TrafficManager">Microsoft.Azure.Management.TrafficManager</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/virtual-machines/">Virtual Machines</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Compute.Fluent">Microsoft.Azure.Management.Compute.Fluent</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Compute">Microsoft.Azure.Management.Compute</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/virtual-network/">Virtual Network</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Network.Fluent">Microsoft.Azure.Management.Network.Fluent</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Network">Microsoft.Azure.Management.Network</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/azure/app-service-web">Web Apps</a></td>
+<td></td>
+<td><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.AppService.Fluent">Microsoft.Azure.Management.AppService.Fluent</a><br><a href="https://www.nuget.org/packages/Microsoft.Azure.Management.Websites">Microsoft.Azure.Management.Websites</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="installation">Installation</h2>
+<h3 id="visual-studio">Visual Studio</h3>
+<p>If you&#39;re using Visual Studio, use the <strong>NuGet Package Manager Console</strong> to import the package into your project.</p>
+<ol>
+<li><p>With your Visual Studio solution open, launch the console by clicking <strong>Tools</strong>, followed by <strong>NuGet Packager Manager</strong>, and then click <strong>Package Manager Console</strong>.  </p>
+<p> <img src="media/index/package-manager.png" alt="Package Manager Console"></p>
+</li>
+<li><p>In the console window, use the <strong>Install-Package</strong> cmdlet to download and install the NuGet package.  For example, to include the latest version of the <a href="http://www.nuget.org/packages/Microsoft.Azure.Management.ResourceManager">Azure Resource Management Library</a> for .NET:</p>
+<pre><code class="lang-powershell"> Install-Package Microsoft.Azure.Management.ResourceManager -Pre
+</code></pre><p> To use a specific version, include the version number like this:</p>
+<pre><code class="lang-powershell"> Install-Package Microsoft.Azure.Management.ResourceMananger -Version 1.4.0-preview
+</code></pre></li>
+</ol>
+<h3 id="net-core">.NET Core</h3>
+<p>If you&#39;re using .NET Core with Visual Studio Code (or any other editor), edit your csproj file to add the package as a <strong>PackageReference</strong> element.  This example uses a specific version of <strong>Microsoft.Azure.Management.ResourceManager</strong>, which is the best practice, but NuGet <a href="/en-us/nuget/consume-packages/package-references-in-project-files#floating-versions">floating versions</a> are also supported.</p>
+<pre><code class="lang-xml">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+
+  &lt;PropertyGroup&gt;
+    &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+    &lt;TargetFramework&gt;netcoreapp1.1&lt;/TargetFramework&gt;
+  &lt;/PropertyGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;PackageReference Include=&quot;Microsoft.Azure.Management.ResourceManager&quot; Version=&quot;1.4.0-preview&quot; /&gt;
+  &lt;/ItemGroup&gt;
+
+&lt;/Project&gt;
+</code></pre><div class="TIP"><h5>Tip</h5><p>Previous versions of .NET Core used project.json files instead of csproj.  To learn about mapping project.json to csproj, <a href="/en-us/dotnet/articles/core/tools/project-json-to-csproj">see this document</a>.</p>
+</div>
+</div></div>
+
+          
+
+          <div id="comments-container" ms.pgarea="comments" role="form"></div>
+        </div>
+      </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container" role="complementary"></div>
+
+    </main>
+
+    <div id="footerPlaceholder"></div>    
+
+    
+    <script src="_themes/javascript/3bcf2c9081582fac6994.conceptual.js"></script>
+  </body>
+</html>

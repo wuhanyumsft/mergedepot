@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Microsoft.Azure.Management.RecoveryServices.Backup.Models namespace">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="recovery-services">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/e94ef2bde5332ae6306299662a592890e0d555d2/docs-ref-autogen/RecoveryServices/Microsoft.Azure.Management.RecoveryServices.Backup.Models.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/RecoveryServices/Microsoft.Azure.Management.RecoveryServices.Backup.Models.yml">
+<meta name="updated_at" content="2017-02-13 06:19 AM">
+<meta name="document_id" content="a5bd3589-59e5-5739-760b-32fd20670b4f">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Azure.Management.RecoveryServices.Backup.Models">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.azure.management.recoveryservices.backup.models" rel="canonical">
+    <title>Microsoft.Azure.Management.RecoveryServices.Backup.Models namespace | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/3bcf2c9081582fac6994.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              <!-- NAMESPACE -->
+    <h1 id="Microsoft_Azure_Management_RecoveryServices_Backup_Models">
+      <span class="lang-csharp">Microsoft.Azure.Management.RecoveryServices.Backup.Models</span>
+      <span class="lang-vb">Microsoft.Azure.Management.RecoveryServices.Backup.Models</span>
+        Namespace
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div>
+    <header class="header enable-platform-filter" id="classes">
+      <h2>Classes
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureBackupServerEngine" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azurebackupserverengine">AzureBackupServerEngine</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azurebackupserverengine">AzureBackupServerEngine</a></div>
+      </td>
+      <td>
+        <p>Backup engine type when Azure Backup Server is used to manage the
+backups.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSClassicComputeVMContainer" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasclassiccomputevmcontainer">AzureIaaSClassicComputeVMContainer</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasclassiccomputevmcontainer">AzureIaaSClassicComputeVMContainer</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload-specific backup item representing a classic virtual
+machine.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSClassicComputeVMProtectableItem" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasclassiccomputevmprotectableitem">AzureIaaSClassicComputeVMProtectableItem</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasclassiccomputevmprotectableitem">AzureIaaSClassicComputeVMProtectableItem</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload-specific backup item representing the Classic Compute
+VM.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSClassicComputeVMProtectedItem" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasclassiccomputevmprotecteditem">AzureIaaSClassicComputeVMProtectedItem</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasclassiccomputevmprotecteditem">AzureIaaSClassicComputeVMProtectedItem</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload-specific backup item representing the Classic Compute
+VM.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSComputeVMContainer" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaascomputevmcontainer">AzureIaaSComputeVMContainer</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaascomputevmcontainer">AzureIaaSComputeVMContainer</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload-specific backup item representing an Azure Resource
+Manager virtual machine.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSComputeVMProtectableItem" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaascomputevmprotectableitem">AzureIaaSComputeVMProtectableItem</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaascomputevmprotectableitem">AzureIaaSComputeVMProtectableItem</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload-specific backup item representing the Azure Resource
+Manager VM.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSComputeVMProtectedItem" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaascomputevmprotecteditem">AzureIaaSComputeVMProtectedItem</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaascomputevmprotecteditem">AzureIaaSComputeVMProtectedItem</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload-specific backup item representing the Azure Resource
+Manager VM.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSVMErrorInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmerrorinfo">AzureIaaSVMErrorInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmerrorinfo">AzureIaaSVMErrorInfo</a></div>
+      </td>
+      <td>
+        <p>Azure IaaS VM workload-specific error information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSVMJob" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmjob">AzureIaaSVMJob</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmjob">AzureIaaSVMJob</a></div>
+      </td>
+      <td>
+        <p>Azure IaaS VM workload-specifc job object.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSVMJobExtendedInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmjobextendedinfo">AzureIaaSVMJobExtendedInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmjobextendedinfo">AzureIaaSVMJobExtendedInfo</a></div>
+      </td>
+      <td>
+        <p>Azure IaaS VM workload-specific additional information for job.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSVMJobTaskDetails" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmjobtaskdetails">AzureIaaSVMJobTaskDetails</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmjobtaskdetails">AzureIaaSVMJobTaskDetails</a></div>
+      </td>
+      <td>
+        <p>Azure IaaS VM workload-specific job task details.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSVMProtectedItem" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmprotecteditem">AzureIaaSVMProtectedItem</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmprotecteditem">AzureIaaSVMProtectedItem</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload-specific backup item.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSVMProtectedItemExtendedInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmprotecteditemextendedinfo">AzureIaaSVMProtectedItemExtendedInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmprotecteditemextendedinfo">AzureIaaSVMProtectedItemExtendedInfo</a></div>
+      </td>
+      <td>
+        <p>Additional information on Azure IaaS VM specific backup item.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureIaaSVMProtectionPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmprotectionpolicy">AzureIaaSVMProtectionPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azureiaasvmprotectionpolicy">AzureIaaSVMProtectionPolicy</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload-specific backup policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureSqlContainer" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azuresqlcontainer">AzureSqlContainer</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azuresqlcontainer">AzureSqlContainer</a></div>
+      </td>
+      <td>
+        <p>Azure Sql workload-specific container.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureSqlProtectedItem" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azuresqlprotecteditem">AzureSqlProtectedItem</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azuresqlprotecteditem">AzureSqlProtectedItem</a></div>
+      </td>
+      <td>
+        <p>Azure SQL workload-specific backup item.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureSqlProtectedItemExtendedInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azuresqlprotecteditemextendedinfo">AzureSqlProtectedItemExtendedInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azuresqlprotecteditemextendedinfo">AzureSqlProtectedItemExtendedInfo</a></div>
+      </td>
+      <td>
+        <p>Additional information on Azure SQL specific backup item.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_AzureSqlProtectionPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azuresqlprotectionpolicy">AzureSqlProtectionPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.azuresqlprotectionpolicy">AzureSqlProtectionPolicy</a></div>
+      </td>
+      <td>
+        <p>Azure SQL workload-specific backup policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_BackupEngineBase" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.backupenginebase">BackupEngineBase</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.backupenginebase">BackupEngineBase</a></div>
+      </td>
+      <td>
+        <p>The base backup engine class. All workload specific backup engines
+derive from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_BackupEngineBaseResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.backupenginebaseresource">BackupEngineBaseResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.backupenginebaseresource">BackupEngineBaseResource</a></div>
+      </td>
+      <td>
+        <p>The base backup engine class. All workload specific backup engines
+derive from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_BackupRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.backuprequest">BackupRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.backuprequest">BackupRequest</a></div>
+      </td>
+      <td>
+        <p>Base class for backup request. Workload-specific backup requests are
+derived from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_BackupRequestResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.backuprequestresource">BackupRequestResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.backuprequestresource">BackupRequestResource</a></div>
+      </td>
+      <td>
+        <p>Base class for backup request. Workload-specific backup requests are
+derived from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_BEKDetails" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.bekdetails">BEKDetails</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.bekdetails">BEKDetails</a></div>
+      </td>
+      <td>
+        <p>BEK is bitlocker encrpytion key.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_BMSBackupEngineQueryObject" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.bmsbackupenginequeryobject">BMSBackupEngineQueryObject</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.bmsbackupenginequeryobject">BMSBackupEngineQueryObject</a></div>
+      </td>
+      <td>
+        <p>Query parameters to fetch list of backup engines.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_BMSContainerQueryObject" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.bmscontainerqueryobject">BMSContainerQueryObject</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.bmscontainerqueryobject">BMSContainerQueryObject</a></div>
+      </td>
+      <td>
+        <p>The query filters that can be used with the list containers API.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_BMSPOQueryObject" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.bmspoqueryobject">BMSPOQueryObject</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.bmspoqueryobject">BMSPOQueryObject</a></div>
+      </td>
+      <td>
+        <p>Filters to list items that can be backed up.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_BMSRPQueryObject" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.bmsrpqueryobject">BMSRPQueryObject</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.bmsrpqueryobject">BMSRPQueryObject</a></div>
+      </td>
+      <td>
+        <p>Filters to list backup copies.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ClientScriptForConnect" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.clientscriptforconnect">ClientScriptForConnect</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.clientscriptforconnect">ClientScriptForConnect</a></div>
+      </td>
+      <td>
+        <p>Client script details for file / folder restore.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_DailyRetentionFormat" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dailyretentionformat">DailyRetentionFormat</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dailyretentionformat">DailyRetentionFormat</a></div>
+      </td>
+      <td>
+        <p>Daily retention format.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_DailyRetentionSchedule" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dailyretentionschedule">DailyRetentionSchedule</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dailyretentionschedule">DailyRetentionSchedule</a></div>
+      </td>
+      <td>
+        <p>Daily retention schedule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_Day" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.day">Day</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.day">Day</a></div>
+      </td>
+      <td>
+        <p>Day of the week.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_DpmBackupEngine" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dpmbackupengine">DpmBackupEngine</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dpmbackupengine">DpmBackupEngine</a></div>
+      </td>
+      <td>
+        <p>Data Protection Manager (DPM) specific backup engine.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_DpmErrorInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dpmerrorinfo">DpmErrorInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dpmerrorinfo">DpmErrorInfo</a></div>
+      </td>
+      <td>
+        <p>DPM workload-specific error information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_DpmJob" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dpmjob">DpmJob</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dpmjob">DpmJob</a></div>
+      </td>
+      <td>
+        <p>DPM workload-specifc job object.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_DpmJobExtendedInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dpmjobextendedinfo">DpmJobExtendedInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dpmjobextendedinfo">DpmJobExtendedInfo</a></div>
+      </td>
+      <td>
+        <p>Additional information on the DPM workload-specific job.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_DpmJobTaskDetails" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dpmjobtaskdetails">DpmJobTaskDetails</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dpmjobtaskdetails">DpmJobTaskDetails</a></div>
+      </td>
+      <td>
+        <p>DPM workload-specific job task details.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_EncryptionDetails" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.encryptiondetails">EncryptionDetails</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.encryptiondetails">EncryptionDetails</a></div>
+      </td>
+      <td>
+        <p>Details needed if the VM was encrypted at the time of backup.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ExportJobsOperationResultInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.exportjobsoperationresultinfo">ExportJobsOperationResultInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.exportjobsoperationresultinfo">ExportJobsOperationResultInfo</a></div>
+      </td>
+      <td>
+        <p>This class is used to send blob details after exporting jobs.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_GenericRecoveryPoint" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.genericrecoverypoint">GenericRecoveryPoint</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.genericrecoverypoint">GenericRecoveryPoint</a></div>
+      </td>
+      <td>
+        <p>Generic backup copy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_GetProtectedItemQueryObject" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.getprotecteditemqueryobject">GetProtectedItemQueryObject</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.getprotecteditemqueryobject">GetProtectedItemQueryObject</a></div>
+      </td>
+      <td>
+        <p>Filters to list backup items.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_IaasVMBackupRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.iaasvmbackuprequest">IaasVMBackupRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.iaasvmbackuprequest">IaasVMBackupRequest</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload-specific backup request.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_IaaSVMContainer" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.iaasvmcontainer">IaaSVMContainer</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.iaasvmcontainer">IaaSVMContainer</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload-specific container.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_IaasVMILRRegistrationRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.iaasvmilrregistrationrequest">IaasVMILRRegistrationRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.iaasvmilrregistrationrequest">IaasVMILRRegistrationRequest</a></div>
+      </td>
+      <td>
+        <p>Restore files/folders from a backup copy of IaaS VM.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_IaaSVMProtectableItem" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.iaasvmprotectableitem">IaaSVMProtectableItem</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.iaasvmprotectableitem">IaaSVMProtectableItem</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload-specific backup item.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_IaasVMRecoveryPoint" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.iaasvmrecoverypoint">IaasVMRecoveryPoint</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.iaasvmrecoverypoint">IaasVMRecoveryPoint</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload specific backup copy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_IaasVMRestoreRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.iaasvmrestorerequest">IaasVMRestoreRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.iaasvmrestorerequest">IaasVMRestoreRequest</a></div>
+      </td>
+      <td>
+        <p>IaaS VM workload-specific restore.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ILRRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.ilrrequest">ILRRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.ilrrequest">ILRRequest</a></div>
+      </td>
+      <td>
+        <p>Parameters to restore file/folders API.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ILRRequestResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.ilrrequestresource">ILRRequestResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.ilrrequestresource">ILRRequestResource</a></div>
+      </td>
+      <td>
+        <p>Parameters to restore file/folders API.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_InstantItemRecoveryTarget" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.instantitemrecoverytarget">InstantItemRecoveryTarget</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.instantitemrecoverytarget">InstantItemRecoveryTarget</a></div>
+      </td>
+      <td>
+        <p>Target details for file / folder restore.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_Job" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.job">Job</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.job">Job</a></div>
+      </td>
+      <td>
+        <p>Defines workload agnostic properties for a job.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_JobQueryObject" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.jobqueryobject">JobQueryObject</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.jobqueryobject">JobQueryObject</a></div>
+      </td>
+      <td>
+        <p>Filters to list the jobs.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_JobResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.jobresource">JobResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.jobresource">JobResource</a></div>
+      </td>
+      <td>
+        <p>Defines workload agnostic properties for a job.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_KEKDetails" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.kekdetails">KEKDetails</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.kekdetails">KEKDetails</a></div>
+      </td>
+      <td>
+        <p>KEK is encryption key for BEK.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_KeyAndSecretDetails" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.keyandsecretdetails">KeyAndSecretDetails</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.keyandsecretdetails">KeyAndSecretDetails</a></div>
+      </td>
+      <td>
+        <p>BEK is bitlocker key.
+KEK is encryption key for BEK
+If the VM was encrypted then we will store follwing
+details :</p>
+<ol>
+<li>Secret(BEK) - Url + Backup Data + vaultId.</li>
+<li>Key(KEK) - Url + Backup Data + vaultId.
+BEK and KEK can potentiallty have different vault ids.</li>
+</ol>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_LongTermRetentionPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.longtermretentionpolicy">LongTermRetentionPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.longtermretentionpolicy">LongTermRetentionPolicy</a></div>
+      </td>
+      <td>
+        <p>Long term retention policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_LongTermSchedulePolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.longtermschedulepolicy">LongTermSchedulePolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.longtermschedulepolicy">LongTermSchedulePolicy</a></div>
+      </td>
+      <td>
+        <p>Long term policy schedule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_MabContainer" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabcontainer">MabContainer</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabcontainer">MabContainer</a></div>
+      </td>
+      <td>
+        <p>Container with items backed up using MAB backup engine.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_MabContainerExtendedInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabcontainerextendedinfo">MabContainerExtendedInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabcontainerextendedinfo">MabContainerExtendedInfo</a></div>
+      </td>
+      <td>
+        <p>Additional information of the container.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_MabErrorInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.maberrorinfo">MabErrorInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.maberrorinfo">MabErrorInfo</a></div>
+      </td>
+      <td>
+        <p>MAB workload-specific error information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_MabFileFolderProtectedItem" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabfilefolderprotecteditem">MabFileFolderProtectedItem</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabfilefolderprotecteditem">MabFileFolderProtectedItem</a></div>
+      </td>
+      <td>
+        <p>MAB workload-specific backup item.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_MabFileFolderProtectedItemExtendedInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabfilefolderprotecteditemextendedinfo">MabFileFolderProtectedItemExtendedInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabfilefolderprotecteditemextendedinfo">MabFileFolderProtectedItemExtendedInfo</a></div>
+      </td>
+      <td>
+        <p>Additional information on the backed up item.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_MabJob" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabjob">MabJob</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabjob">MabJob</a></div>
+      </td>
+      <td>
+        <p>MAB workload-specific job.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_MabJobExtendedInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabjobextendedinfo">MabJobExtendedInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabjobextendedinfo">MabJobExtendedInfo</a></div>
+      </td>
+      <td>
+        <p>Additional information for the MAB workload-specific job.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_MabJobTaskDetails" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabjobtaskdetails">MabJobTaskDetails</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabjobtaskdetails">MabJobTaskDetails</a></div>
+      </td>
+      <td>
+        <p>MAB workload-specific job task details.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_MabProtectionPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabprotectionpolicy">MabProtectionPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabprotectionpolicy">MabProtectionPolicy</a></div>
+      </td>
+      <td>
+        <p>Mab container-specific backup policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_MonthlyRetentionSchedule" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.monthlyretentionschedule">MonthlyRetentionSchedule</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.monthlyretentionschedule">MonthlyRetentionSchedule</a></div>
+      </td>
+      <td>
+        <p>Monthly retention schedule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_OperationResultInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationresultinfo">OperationResultInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationresultinfo">OperationResultInfo</a></div>
+      </td>
+      <td>
+        <p>Operation result info.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_OperationResultInfoBase" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationresultinfobase">OperationResultInfoBase</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationresultinfobase">OperationResultInfoBase</a></div>
+      </td>
+      <td>
+        <p>Base class for operation result info.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_OperationResultInfoBaseResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationresultinfobaseresource">OperationResultInfoBaseResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationresultinfobaseresource">OperationResultInfoBaseResource</a></div>
+      </td>
+      <td>
+        <p>Base class for operation result info.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_OperationStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatus">OperationStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatus">OperationStatus</a></div>
+      </td>
+      <td>
+        <p>Operation status.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_OperationStatusError" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatuserror">OperationStatusError</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatuserror">OperationStatusError</a></div>
+      </td>
+      <td>
+        <p>Error information associated with operation status call.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_OperationStatusExtendedInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatusextendedinfo">OperationStatusExtendedInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatusextendedinfo">OperationStatusExtendedInfo</a></div>
+      </td>
+      <td>
+        <p>Base class for additional information of operation status.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_OperationStatusJobExtendedInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatusjobextendedinfo">OperationStatusJobExtendedInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatusjobextendedinfo">OperationStatusJobExtendedInfo</a></div>
+      </td>
+      <td>
+        <p>Operation status job extended info.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_OperationStatusJobsExtendedInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatusjobsextendedinfo">OperationStatusJobsExtendedInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatusjobsextendedinfo">OperationStatusJobsExtendedInfo</a></div>
+      </td>
+      <td>
+        <p>Operation status extended info for list of jobs.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_OperationStatusProvisionILRExtendedInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatusprovisionilrextendedinfo">OperationStatusProvisionILRExtendedInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatusprovisionilrextendedinfo">OperationStatusProvisionILRExtendedInfo</a></div>
+      </td>
+      <td>
+        <p>Operation status extended info for ILR provision action.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_OperationWorkerResponse" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationworkerresponse">OperationWorkerResponse</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationworkerresponse">OperationWorkerResponse</a></div>
+      </td>
+      <td>
+        <p>This is the base class for operation result responses.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_Page_1" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.page-1">Page</a>&lt;T&gt;</div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.page-1">Page</a>(Of T)</div>
+      </td>
+      <td>
+        <p>Defines a page in Azure responses.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_Page1_1" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.page1-1">Page1</a>&lt;T&gt;</div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.page1-1">Page1</a>(Of T)</div>
+      </td>
+      <td>
+        <p>Defines a page in Azure responses.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ProtectedItem" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protecteditem">ProtectedItem</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protecteditem">ProtectedItem</a></div>
+      </td>
+      <td>
+        <p>Base class for backup items.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ProtectedItemQueryObject" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protecteditemqueryobject">ProtectedItemQueryObject</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protecteditemqueryobject">ProtectedItemQueryObject</a></div>
+      </td>
+      <td>
+        <p>Filters to list backup items.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ProtectedItemResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protecteditemresource">ProtectedItemResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protecteditemresource">ProtectedItemResource</a></div>
+      </td>
+      <td>
+        <p>Base class for backup items.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ProtectionContainer" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectioncontainer">ProtectionContainer</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectioncontainer">ProtectionContainer</a></div>
+      </td>
+      <td>
+        <p>Base class for container with backup items. Containers with specific
+workloads are derived from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ProtectionContainerResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectioncontainerresource">ProtectionContainerResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectioncontainerresource">ProtectionContainerResource</a></div>
+      </td>
+      <td>
+        <p>Base class for container with backup items. Containers with specific
+workloads are derived from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ProtectionPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectionpolicy">ProtectionPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectionpolicy">ProtectionPolicy</a></div>
+      </td>
+      <td>
+        <p>Base class for backup policy. Workload-specific backup policies are
+derived from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ProtectionPolicyQueryObject" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectionpolicyqueryobject">ProtectionPolicyQueryObject</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectionpolicyqueryobject">ProtectionPolicyQueryObject</a></div>
+      </td>
+      <td>
+        <p>Filters the list backup policies API.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ProtectionPolicyResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectionpolicyresource">ProtectionPolicyResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectionpolicyresource">ProtectionPolicyResource</a></div>
+      </td>
+      <td>
+        <p>Base class for backup policy. Workload-specific backup policies are
+derived from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_RecoveryPoint" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.recoverypoint">RecoveryPoint</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.recoverypoint">RecoveryPoint</a></div>
+      </td>
+      <td>
+        <p>Base class for backup copies. Workload-specific backup copies are
+derived from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_RecoveryPointResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.recoverypointresource">RecoveryPointResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.recoverypointresource">RecoveryPointResource</a></div>
+      </td>
+      <td>
+        <p>Base class for backup copies. Workload-specific backup copies are
+derived from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_Resource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.resource">Resource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.resource">Resource</a></div>
+      </td>
+      <td>
+        <p>Base for all resources.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ResourceList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.resourcelist">ResourceList</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.resourcelist">ResourceList</a></div>
+      </td>
+      <td>
+        <p>Base for all lists of resources.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_RestoreRequest" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.restorerequest">RestoreRequest</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.restorerequest">RestoreRequest</a></div>
+      </td>
+      <td>
+        <p>Base class for restore request. Workload-specific restore requests are
+derived from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_RestoreRequestResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.restorerequestresource">RestoreRequestResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.restorerequestresource">RestoreRequestResource</a></div>
+      </td>
+      <td>
+        <p>Base class for restore request. Workload-specific restore requests are
+derived from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_RetentionDuration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.retentionduration">RetentionDuration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.retentionduration">RetentionDuration</a></div>
+      </td>
+      <td>
+        <p>Retention duration.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_RetentionPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.retentionpolicy">RetentionPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.retentionpolicy">RetentionPolicy</a></div>
+      </td>
+      <td>
+        <p>Base class for retention policy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_SchedulePolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.schedulepolicy">SchedulePolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.schedulepolicy">SchedulePolicy</a></div>
+      </td>
+      <td>
+        <p>Base class for backup schedule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_SimpleRetentionPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.simpleretentionpolicy">SimpleRetentionPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.simpleretentionpolicy">SimpleRetentionPolicy</a></div>
+      </td>
+      <td>
+        <p>Simple policy retention.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_SimpleSchedulePolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.simpleschedulepolicy">SimpleSchedulePolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.simpleschedulepolicy">SimpleSchedulePolicy</a></div>
+      </td>
+      <td>
+        <p>Simple policy schedule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_WeeklyRetentionFormat" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.weeklyretentionformat">WeeklyRetentionFormat</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.weeklyretentionformat">WeeklyRetentionFormat</a></div>
+      </td>
+      <td>
+        <p>Weekly retention format.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_WeeklyRetentionSchedule" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.weeklyretentionschedule">WeeklyRetentionSchedule</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.weeklyretentionschedule">WeeklyRetentionSchedule</a></div>
+      </td>
+      <td>
+        <p>Weekly retention schedule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_WorkloadProtectableItem" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.workloadprotectableitem">WorkloadProtectableItem</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.workloadprotectableitem">WorkloadProtectableItem</a></div>
+      </td>
+      <td>
+        <p>Base class for backup item. Workload-specific backup items are derived
+from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_WorkloadProtectableItemResource" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.workloadprotectableitemresource">WorkloadProtectableItemResource</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.workloadprotectableitemresource">WorkloadProtectableItemResource</a></div>
+      </td>
+      <td>
+        <p>Base class for backup item. Workload-specific backup items are derived
+from this class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_YearlyRetentionSchedule" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.yearlyretentionschedule">YearlyRetentionSchedule</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.yearlyretentionschedule">YearlyRetentionSchedule</a></div>
+      </td>
+      <td>
+        <p>Yearly retention schedule.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="enums">
+      <h2>Enums
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_BackupItemType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.backupitemtype">BackupItemType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.backupitemtype">BackupItemType</a></div>
+      </td>
+      <td>
+        <p>Defines values for BackupItemType.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_BackupManagementType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.backupmanagementtype">BackupManagementType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.backupmanagementtype">BackupManagementType</a></div>
+      </td>
+      <td>
+        <p>Defines values for BackupManagementType.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_DataSourceType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.datasourcetype">DataSourceType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.datasourcetype">DataSourceType</a></div>
+      </td>
+      <td>
+        <p>Defines values for DataSourceType.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_DayOfWeek" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dayofweek">DayOfWeek</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.dayofweek">DayOfWeek</a></div>
+      </td>
+      <td>
+        <p>Defines values for DayOfWeek.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_HttpStatusCode" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.httpstatuscode">HttpStatusCode</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.httpstatuscode">HttpStatusCode</a></div>
+      </td>
+      <td>
+        <p>Defines values for HttpStatusCode.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_JobOperationType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.joboperationtype">JobOperationType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.joboperationtype">JobOperationType</a></div>
+      </td>
+      <td>
+        <p>Defines values for JobOperationType.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_JobStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.jobstatus">JobStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.jobstatus">JobStatus</a></div>
+      </td>
+      <td>
+        <p>Defines values for JobStatus.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_JobSupportedAction" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.jobsupportedaction">JobSupportedAction</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.jobsupportedaction">JobSupportedAction</a></div>
+      </td>
+      <td>
+        <p>Defines values for JobSupportedAction.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_MabServerType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabservertype">MabServerType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.mabservertype">MabServerType</a></div>
+      </td>
+      <td>
+        <p>Defines values for MabServerType.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_MonthOfYear" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.monthofyear">MonthOfYear</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.monthofyear">MonthOfYear</a></div>
+      </td>
+      <td>
+        <p>Defines values for MonthOfYear.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_OperationStatusValues" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatusvalues">OperationStatusValues</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.operationstatusvalues">OperationStatusValues</a></div>
+      </td>
+      <td>
+        <p>Defines values for OperationStatusValues.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ProtectedItemState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protecteditemstate">ProtectedItemState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protecteditemstate">ProtectedItemState</a></div>
+      </td>
+      <td>
+        <p>Defines values for ProtectedItemState.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ProtectionState" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectionstate">ProtectionState</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectionstate">ProtectionState</a></div>
+      </td>
+      <td>
+        <p>Defines values for ProtectionState.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ProtectionStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectionstatus">ProtectionStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.protectionstatus">ProtectionStatus</a></div>
+      </td>
+      <td>
+        <p>Defines values for ProtectionStatus.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_RecoveryType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.recoverytype">RecoveryType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.recoverytype">RecoveryType</a></div>
+      </td>
+      <td>
+        <p>Defines values for RecoveryType.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_RetentionDurationType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.retentiondurationtype">RetentionDurationType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.retentiondurationtype">RetentionDurationType</a></div>
+      </td>
+      <td>
+        <p>Defines values for RetentionDurationType.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_RetentionScheduleFormat" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.retentionscheduleformat">RetentionScheduleFormat</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.retentionscheduleformat">RetentionScheduleFormat</a></div>
+      </td>
+      <td>
+        <p>Defines values for RetentionScheduleFormat.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_ScheduleRunType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.scheduleruntype">ScheduleRunType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.scheduleruntype">ScheduleRunType</a></div>
+      </td>
+      <td>
+        <p>Defines values for ScheduleRunType.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_WeekOfMonth" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.weekofmonth">WeekOfMonth</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.weekofmonth">WeekOfMonth</a></div>
+      </td>
+      <td>
+        <p>Defines values for WeekOfMonth.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Management_RecoveryServices_Backup_Models_WorkloadType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.workloadtype">WorkloadType</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.management.recoveryservices.backup.models.workloadtype">WorkloadType</a></div>
+      </td>
+      <td>
+        <p>Defines values for WorkloadType.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/3bcf2c9081582fac6994.reference.js"></script>
+  </body>
+</html>

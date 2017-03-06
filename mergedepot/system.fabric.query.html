@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="System.Fabric.Query namespace">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="service-fabric">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/8ece26063f2f27414f0bad873159ee6212f3448d/docs-ref-manual/Data/ServiceFabric/System.Fabric.Query.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-manual/Data/ServiceFabric/System.Fabric.Query.yml">
+<meta name="updated_at" content="2016-12-19 07:26 AM">
+<meta name="document_id" content="64caaf21-f1d7-7b5f-cb42-3427cb0fafd5">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Fabric.Query">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.fabric.query" rel="canonical">
+    <title>System.Fabric.Query namespace | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/3bcf2c9081582fac6994.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              <!-- NAMESPACE -->
+    <h1 id="System_Fabric_Query">
+      <span class="lang-csharp">System.Fabric.Query</span>
+      <span class="lang-vb">System.Fabric.Query</span>
+        Namespace
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div>
+    <header class="header enable-platform-filter" id="classes">
+      <h2>Classes
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="System_Fabric_Query_Application" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.application">Application</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.application">Application</a></div>
+      </td>
+      <td>
+        <p>Describes an application instance.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ApplicationList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.applicationlist">ApplicationList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.applicationlist">ApplicationList</a></div>
+      </td>
+      <td>
+        <p>Represents the list of <a class="xref" href="system.fabric.query.application">Application</a> retrieved by calling 
+<a class="xref" href="system.fabric.fabricclient.queryclient#System_Fabric_FabricClient_QueryClient_GetApplicationListAsync_System_Uri_">GetApplicationListAsync(Uri)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ApplicationLoadInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.applicationloadinformation">ApplicationLoadInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.applicationloadinformation">ApplicationLoadInformation</a></div>
+      </td>
+      <td>
+        <p> Describes the load of an application instance that is retrieved using
+<a class="xref" href="system.fabric.fabricclient.queryclient#System_Fabric_FabricClient_QueryClient_GetApplicationLoadInformationAsync_System_String_">GetApplicationLoadInformationAsync(String)</a>
+</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ApplicationLoadMetricInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.applicationloadmetricinformation">ApplicationLoadMetricInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.applicationloadmetricinformation">ApplicationLoadMetricInformation</a></div>
+      </td>
+      <td>
+        <p>Represents the information about capacity and current load for one metric that services of the application are using.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ApplicationNameResult" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.applicationnameresult">ApplicationNameResult</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.applicationnameresult">ApplicationNameResult</a></div>
+      </td>
+      <td>
+        <p>Describes an application name.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ApplicationType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.applicationtype">ApplicationType</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.applicationtype">ApplicationType</a></div>
+      </td>
+      <td>
+        <p>Represents an application type.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ApplicationTypeList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.applicationtypelist">ApplicationTypeList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.applicationtypelist">ApplicationTypeList</a></div>
+      </td>
+      <td>
+        <p>Represents the list of the <a class="xref" href="system.fabric.query.applicationtype">ApplicationType</a> retrieved by calling 
+<a class="xref" href="system.fabric.fabricclient.queryclient#System_Fabric_FabricClient_QueryClient_GetApplicationTypeListAsync_System_String_">GetApplicationTypeListAsync(String)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ClusterLoadInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.clusterloadinformation">ClusterLoadInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.clusterloadinformation">ClusterLoadInformation</a></div>
+      </td>
+      <td>
+        <p>Represents the cluster load information.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_CodePackageEntryPoint" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.codepackageentrypoint">CodePackageEntryPoint</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.codepackageentrypoint">CodePackageEntryPoint</a></div>
+      </td>
+      <td>
+        <p>Represents a code package entry point.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_CodePackageEntryPointStatistics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.codepackageentrypointstatistics">CodePackageEntryPointStatistics</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.codepackageentrypointstatistics">CodePackageEntryPointStatistics</a></div>
+      </td>
+      <td>
+        <p>Represents a code package entry point statistic.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedApplication" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedapplication">DeployedApplication</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedapplication">DeployedApplication</a></div>
+      </td>
+      <td>
+        <p>Describes an instance of an applicationâ€™s service host running on a Service Fabric Node.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedApplicationList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedapplicationlist">DeployedApplicationList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedapplicationlist">DeployedApplicationList</a></div>
+      </td>
+      <td>
+        <p>Represents the list of <a class="xref" href="system.fabric.query.deployedapplication">DeployedApplication</a> objects.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedCodePackage" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedcodepackage">DeployedCodePackage</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedcodepackage">DeployedCodePackage</a></div>
+      </td>
+      <td>
+        <p>Represents a deployed code package.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedCodePackageList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedcodepackagelist">DeployedCodePackageList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedcodepackagelist">DeployedCodePackageList</a></div>
+      </td>
+      <td>
+        <p>Represents this list that can be modified only if this property is false.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedServicePackage" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedservicepackage">DeployedServicePackage</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedservicepackage">DeployedServicePackage</a></div>
+      </td>
+      <td>
+        <p>Represents a deployed service package.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedServicePackageList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedservicepackagelist">DeployedServicePackageList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedservicepackagelist">DeployedServicePackageList</a></div>
+      </td>
+      <td>
+        <p>Represents a list of <a class="xref" href="system.fabric.query.deployedservicepackage">DeployedServicePackage</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedServiceReplica" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedservicereplica">DeployedServiceReplica</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedservicereplica">DeployedServiceReplica</a></div>
+      </td>
+      <td>
+        <p>Represents the view of a replica on a node</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedServiceReplicaDetail" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedservicereplicadetail">DeployedServiceReplicaDetail</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedservicereplicadetail">DeployedServiceReplicaDetail</a></div>
+      </td>
+      <td>
+        <p>Represents a replica running in the code package.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedServiceReplicaList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedservicereplicalist">DeployedServiceReplicaList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedservicereplicalist">DeployedServiceReplicaList</a></div>
+      </td>
+      <td>
+        <p>Contains list of deployed service replica.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedServiceType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedservicetype">DeployedServiceType</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedservicetype">DeployedServiceType</a></div>
+      </td>
+      <td>
+        <p>Represents a deployed service type.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedServiceTypeList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedservicetypelist">DeployedServiceTypeList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedservicetypelist">DeployedServiceTypeList</a></div>
+      </td>
+      <td>
+        <p>Represents a list of <a class="xref" href="system.fabric.query.deployedservicetype">DeployedServiceType</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedStatefulServiceReplica" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedstatefulservicereplica">DeployedStatefulServiceReplica</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedstatefulservicereplica">DeployedStatefulServiceReplica</a></div>
+      </td>
+      <td>
+        <p>Represents a deployed stateful service replica.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedStatefulServiceReplicaDetail" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedstatefulservicereplicadetail">DeployedStatefulServiceReplicaDetail</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedstatefulservicereplicadetail">DeployedStatefulServiceReplicaDetail</a></div>
+      </td>
+      <td>
+        <p>Represents the information about a stateful replica running in a code package.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedStatelessServiceInstance" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedstatelessserviceinstance">DeployedStatelessServiceInstance</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedstatelessserviceinstance">DeployedStatelessServiceInstance</a></div>
+      </td>
+      <td>
+        <p>Represents a deployed stateless service instance.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_DeployedStatelessServiceInstanceDetail" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.deployedstatelessserviceinstancedetail">DeployedStatelessServiceInstanceDetail</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.deployedstatelessserviceinstancedetail">DeployedStatelessServiceInstanceDetail</a></div>
+      </td>
+      <td>
+        <p>Represents the information about a stateless instance running in a code package.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ImageStoreContentResult" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.imagestorecontentresult">ImageStoreContentResult</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.imagestorecontentresult">ImageStoreContentResult</a></div>
+      </td>
+      <td>
+        <p>A ImageStoreContentResult contains the information of image store content returned by list content query</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ImageStoreFileInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.imagestorefileinfo">ImageStoreFileInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.imagestorefileinfo">ImageStoreFileInfo</a></div>
+      </td>
+      <td>
+        <p>A ImageStoreFileInfo contains information about the native image store file</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ImageStoreFileVersion" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.imagestorefileversion">ImageStoreFileVersion</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.imagestorefileversion">ImageStoreFileVersion</a></div>
+      </td>
+      <td>
+        <p>A ImageStoreFileVersion contains version information about a native image store file</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ImageStoreFolderInfo" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.imagestorefolderinfo">ImageStoreFolderInfo</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.imagestorefolderinfo">ImageStoreFolderInfo</a></div>
+      </td>
+      <td>
+        <p>A ImageStoreFolderInfo contains information about a native image store folder</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_KeyValueStoreReplicaStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.keyvaluestorereplicastatus">KeyValueStoreReplicaStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.keyvaluestorereplicastatus">KeyValueStoreReplicaStatus</a></div>
+      </td>
+      <td>
+        <p>Query status for a key/value store replica</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_LoadMetricInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.loadmetricinformation">LoadMetricInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.loadmetricinformation">LoadMetricInformation</a></div>
+      </td>
+      <td>
+        <p>Represents the load metric information.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_LoadMetricReport" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.loadmetricreport">LoadMetricReport</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.loadmetricreport">LoadMetricReport</a></div>
+      </td>
+      <td>
+        <p>Represents the load metric report.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_Node" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.node">Node</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.node">Node</a></div>
+      </td>
+      <td>
+        <p>Represents a node.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_NodeDeactivationResult" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.nodedeactivationresult">NodeDeactivationResult</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.nodedeactivationresult">NodeDeactivationResult</a></div>
+      </td>
+      <td>
+        <p>Contains the detailed deactivation information about a node.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_NodeDeactivationTask" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.nodedeactivationtask">NodeDeactivationTask</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.nodedeactivationtask">NodeDeactivationTask</a></div>
+      </td>
+      <td>
+        <p>Specifies a node deactivation task.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_NodeDeactivationTaskId" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.nodedeactivationtaskid">NodeDeactivationTaskId</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.nodedeactivationtaskid">NodeDeactivationTaskId</a></div>
+      </td>
+      <td>
+        <p>Specifies the task ID of a node deactivation task.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_NodeList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.nodelist">NodeList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.nodelist">NodeList</a></div>
+      </td>
+      <td>
+        <p>Represents a list of Service Fabric nodes retrieved by calling <a class="xref" href="system.fabric.fabricclient.queryclient#System_Fabric_FabricClient_QueryClient_GetNodeListAsync">GetNodeListAsync()</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_NodeLoadInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.nodeloadinformation">NodeLoadInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.nodeloadinformation">NodeLoadInformation</a></div>
+      </td>
+      <td>
+        <p>Represents the data structure that holds a summary of all metrics and their load on a certain node.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_NodeLoadMetricInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.nodeloadmetricinformation">NodeLoadMetricInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.nodeloadmetricinformation">NodeLoadMetricInformation</a></div>
+      </td>
+      <td>
+        <p>Represents data structure that contains load information for a certain metric on a node.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_PagedList_1" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.pagedlist-1">PagedList</a>&lt;T&gt;</div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.pagedlist-1">PagedList</a>(Of T)</div>
+      </td>
+      <td>
+        <p>
+Represents a paged list that contains a list of items and a continuation token.
+</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_PagedListHelper" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.pagedlisthelper">PagedListHelper</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.pagedlisthelper">PagedListHelper</a></div>
+      </td>
+      <td>
+        <p>
+Extensions for paged list operations.
+</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_Partition" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.partition">Partition</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.partition">Partition</a></div>
+      </td>
+      <td>
+        <p>Represents a partition.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_PartitionLoadInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.partitionloadinformation">PartitionLoadInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.partitionloadinformation">PartitionLoadInformation</a></div>
+      </td>
+      <td>
+        <p>Represents the partition load information.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_PrimaryReplicatorStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.primaryreplicatorstatus">PrimaryReplicatorStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.primaryreplicatorstatus">PrimaryReplicatorStatus</a></div>
+      </td>
+      <td>
+        <p>Provides statistics about the Service Fabric Replicator, when it is functioning in a <a class="xref" href="system.fabric.replicarole#System_Fabric_ReplicaRole_Primary">Primary</a> role.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ProvisionedFabricCodeVersion" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.provisionedfabriccodeversion">ProvisionedFabricCodeVersion</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.provisionedfabriccodeversion">ProvisionedFabricCodeVersion</a></div>
+      </td>
+      <td>
+        <p>Represents a provisioned Service Fabric code (MSI) version retrieved by calling 
+<a class="xref" href="system.fabric.fabricclient.queryclient#System_Fabric_FabricClient_QueryClient_GetProvisionedFabricCodeVersionListAsync_System_String_">GetProvisionedFabricCodeVersionListAsync(String)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ProvisionedFabricCodeVersionList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.provisionedfabriccodeversionlist">ProvisionedFabricCodeVersionList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.provisionedfabriccodeversionlist">ProvisionedFabricCodeVersionList</a></div>
+      </td>
+      <td>
+        <p>Represents a list of provisioned Service Fabric code versions retrieved by calling 
+<a class="xref" href="system.fabric.fabricclient.queryclient#System_Fabric_FabricClient_QueryClient_GetProvisionedFabricConfigVersionListAsync">GetProvisionedFabricConfigVersionListAsync()</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ProvisionedFabricConfigVersion" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.provisionedfabricconfigversion">ProvisionedFabricConfigVersion</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.provisionedfabricconfigversion">ProvisionedFabricConfigVersion</a></div>
+      </td>
+      <td>
+        <p>Represents a provisioned Service Fabric configuration (Cluster Manifest) version retrieved by calling 
+<a class="xref" href="system.fabric.fabricclient.queryclient#System_Fabric_FabricClient_QueryClient_GetProvisionedFabricConfigVersionListAsync">GetProvisionedFabricConfigVersionListAsync()</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ProvisionedFabricConfigVersionList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.provisionedfabricconfigversionlist">ProvisionedFabricConfigVersionList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.provisionedfabricconfigversionlist">ProvisionedFabricConfigVersionList</a></div>
+      </td>
+      <td>
+        <p>Represents the list of provisioned Service Fabric configuration (Cluster Manifest) versions retrieved by 
+calling <a class="xref" href="system.fabric.fabricclient.queryclient#System_Fabric_FabricClient_QueryClient_GetProvisionedFabricConfigVersionListAsync_System_String_">GetProvisionedFabricConfigVersionListAsync(String)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_RemoteReplicatorAcknowledgementDetail" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.remotereplicatoracknowledgementdetail">RemoteReplicatorAcknowledgementDetail</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.remotereplicatoracknowledgementdetail">RemoteReplicatorAcknowledgementDetail</a></div>
+      </td>
+      <td>
+        <p>Provides additional details about the remote replicators for the primary replicator. Member of <a class="xref" href="system.fabric.query.remotereplicatorstatus">RemoteReplicatorStatus</a></p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_RemoteReplicatorAcknowledgementStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.remotereplicatoracknowledgementstatus">RemoteReplicatorAcknowledgementStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.remotereplicatoracknowledgementstatus">RemoteReplicatorAcknowledgementStatus</a></div>
+      </td>
+      <td>
+        <p>Provides additional details about the remote replicators from the primary replicator. Member of <a class="xref" href="system.fabric.query.remotereplicatorstatus">RemoteReplicatorStatus</a></p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_RemoteReplicatorStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.remotereplicatorstatus">RemoteReplicatorStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.remotereplicatorstatus">RemoteReplicatorStatus</a></div>
+      </td>
+      <td>
+        <p>Represents the state of the secondary replicator from the primary replicatorâ€™s point of view.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_Replica" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.replica">Replica</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.replica">Replica</a></div>
+      </td>
+      <td>
+        <p>Represents a query replica.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ReplicaLoadInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.replicaloadinformation">ReplicaLoadInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.replicaloadinformation">ReplicaLoadInformation</a></div>
+      </td>
+      <td>
+        <p>Represents the data structure that contains metric load information for a replica.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ReplicaStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.replicastatus">ReplicaStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.replicastatus">ReplicaStatus</a></div>
+      </td>
+      <td>
+        <p>Represents base class for query status of a replica</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ReplicatorQueueStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.replicatorqueuestatus">ReplicatorQueueStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.replicatorqueuestatus">ReplicatorQueueStatus</a></div>
+      </td>
+      <td>
+        <p>Provides various statistics of the queue used in the Service Fabric Replicator.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ReplicatorStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.replicatorstatus">ReplicatorStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.replicatorstatus">ReplicatorStatus</a></div>
+      </td>
+      <td>
+        <p>Provides statistics about the Service Fabric Replicator.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_SecondaryReplicatorStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.secondaryreplicatorstatus">SecondaryReplicatorStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.secondaryreplicatorstatus">SecondaryReplicatorStatus</a></div>
+      </td>
+      <td>
+        <p>Provides statistics about the Service Fabric Replicator, when it is functioning in a <a class="xref" href="system.fabric.replicarole#System_Fabric_ReplicaRole_ActiveSecondary">ActiveSecondary</a> role.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_Service" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.service">Service</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.service">Service</a></div>
+      </td>
+      <td>
+        <p>Represents a service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceGroupMember" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicegroupmember">ServiceGroupMember</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicegroupmember">ServiceGroupMember</a></div>
+      </td>
+      <td>
+        <p>The type that stores the service group member query.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceGroupMemberList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicegroupmemberlist">ServiceGroupMemberList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicegroupmemberlist">ServiceGroupMemberList</a></div>
+      </td>
+      <td>
+        <p>The service group member list that contains service group members.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceGroupMemberMember" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicegroupmembermember">ServiceGroupMemberMember</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicegroupmembermember">ServiceGroupMemberMember</a></div>
+      </td>
+      <td>
+        <p>The type that contains a service group member.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceGroupMemberMemberList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicegroupmembermemberlist">ServiceGroupMemberMemberList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicegroupmembermemberlist">ServiceGroupMemberMemberList</a></div>
+      </td>
+      <td>
+        <p>The service group member member list that contains service group member members.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceGroupMemberType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicegroupmembertype">ServiceGroupMemberType</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicegroupmembertype">ServiceGroupMemberType</a></div>
+      </td>
+      <td>
+        <p>The type that stores the type of service group member query result.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceGroupMemberTypeList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicegroupmembertypelist">ServiceGroupMemberTypeList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicegroupmembertypelist">ServiceGroupMemberTypeList</a></div>
+      </td>
+      <td>
+        <p>The service group member type list that contains the service group member types.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicelist">ServiceList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicelist">ServiceList</a></div>
+      </td>
+      <td>
+        <p>Represents a list of services retrieved by calling <a class="xref" href="system.fabric.fabricclient.queryclient#System_Fabric_FabricClient_QueryClient_GetServiceListAsync_System_Uri_">GetServiceListAsync(Uri)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceNameResult" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicenameresult">ServiceNameResult</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicenameresult">ServiceNameResult</a></div>
+      </td>
+      <td>
+        <p>Describes an service name.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServicePartitionList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicepartitionlist">ServicePartitionList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicepartitionlist">ServicePartitionList</a></div>
+      </td>
+      <td>
+        <p>Contains the partition information for a Service Fabric Service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceReplicaList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicereplicalist">ServiceReplicaList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicereplicalist">ServiceReplicaList</a></div>
+      </td>
+      <td>
+        <p>Contains the replica information for a Service Fabric Partition.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceType" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicetype">ServiceType</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicetype">ServiceType</a></div>
+      </td>
+      <td>
+        <p>Represents a service type.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceTypeList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicetypelist">ServiceTypeList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicetypelist">ServiceTypeList</a></div>
+      </td>
+      <td>
+        <p>Represents a list of service type.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_StatefulService" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.statefulservice">StatefulService</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.statefulservice">StatefulService</a></div>
+      </td>
+      <td>
+        <p>Represents a stateful service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_StatefulServicePartition" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.statefulservicepartition">StatefulServicePartition</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.statefulservicepartition">StatefulServicePartition</a></div>
+      </td>
+      <td>
+        <p>Represents a stateful service partition.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_StatefulServiceReplica" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.statefulservicereplica">StatefulServiceReplica</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.statefulservicereplica">StatefulServiceReplica</a></div>
+      </td>
+      <td>
+        <p>Represents a stateful service replica.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_StatelessService" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.statelessservice">StatelessService</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.statelessservice">StatelessService</a></div>
+      </td>
+      <td>
+        <p>Represents a stateless service.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_StatelessServiceInstance" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.statelessserviceinstance">StatelessServiceInstance</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.statelessserviceinstance">StatelessServiceInstance</a></div>
+      </td>
+      <td>
+        <p>Represents a stateless service instance.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_StatelessServicePartition" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.statelessservicepartition">StatelessServicePartition</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.statelessservicepartition">StatelessServicePartition</a></div>
+      </td>
+      <td>
+        <p>Represents a stateless service partition.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_TestCommandStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.testcommandstatus">TestCommandStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.testcommandstatus">TestCommandStatus</a></div>
+      </td>
+      <td>
+        <p>This class represents the status of a test command.  Calling <a class="xref" href="system.fabric.fabricclient.testmanagementclient#System_Fabric_FabricClient_TestManagementClient_GetTestCommandStatusListAsync_System_Fabric_Query_TestCommandStateFilter_System_Fabric_Query_TestCommandTypeFilter_System_TimeSpan_System_Threading_CancellationToken_">GetTestCommandStatusListAsync(TestCommandStateFilter, TestCommandTypeFilter, TimeSpan, CancellationToken)</a> returns an IList of this type of object.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_TestCommandStatusList" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.testcommandstatuslist">TestCommandStatusList</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.testcommandstatuslist">TestCommandStatusList</a></div>
+      </td>
+      <td>
+        <p>An <a class="xref" href="https://msdn.microsoft.com/en-us/library/5y536ey6(v=vs.110).aspx">IList&lt;T&gt;</a> of TestCommandStatus objects.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_UnplacedReplicaInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.unplacedreplicainformation">UnplacedReplicaInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.unplacedreplicainformation">UnplacedReplicaInformation</a></div>
+      </td>
+      <td>
+        <p>
+Contains information for an unplaced replica.
+</p>
+
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="enums">
+      <h2>Enums
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="System_Fabric_Query_ApplicationStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.applicationstatus">ApplicationStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.applicationstatus">ApplicationStatus</a></div>
+      </td>
+      <td>
+        <p>Specifies the status of the application.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ApplicationTypeStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.applicationtypestatus">ApplicationTypeStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.applicationtypestatus">ApplicationTypeStatus</a></div>
+      </td>
+      <td>
+        <p>Specifies the status of the application type.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_NodeStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.nodestatus">NodeStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.nodestatus">NodeStatus</a></div>
+      </td>
+      <td>
+        <p>Specifies the node status.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_NodeStatusFilter" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.nodestatusfilter">NodeStatusFilter</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.nodestatusfilter">NodeStatusFilter</a></div>
+      </td>
+      <td>
+        <p>Enumerates the filters used for matching the node status for nodes that should be returned by query.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ReplicaStatus_ReplicaKind" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.replicastatus.replicakind">ReplicaStatus.ReplicaKind</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.replicastatus.replicakind">ReplicaStatus.ReplicaKind</a></div>
+      </td>
+      <td>
+        <p>Represents kind of a replica.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ReplicatorOperationName" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.replicatoroperationname">ReplicatorOperationName</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.replicatoroperationname">ReplicatorOperationName</a></div>
+      </td>
+      <td>
+        <p>Represents the operation currently being executed by the Replicator, either via <a class="xref" href="system.fabric.ireplicator">IReplicator</a> 
+or <a class="xref" href="system.fabric.iprimaryreplicator">IPrimaryReplicator</a> interface.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceKind" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicekind">ServiceKind</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicekind">ServiceKind</a></div>
+      </td>
+      <td>
+        <p>Specifies the service kind.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceOperationName" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.serviceoperationname">ServiceOperationName</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.serviceoperationname">ServiceOperationName</a></div>
+      </td>
+      <td>
+        <p>Specifies the current active life-cycle operation on a stateful service replica or stateless service instance 
+retrieved by calling <a class="xref" href="system.fabric.fabricclient.queryclient#System_Fabric_FabricClient_QueryClient_GetDeployedReplicaListAsync_System_String_System_Uri_">GetDeployedReplicaListAsync(String, Uri)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServicePartitionStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicepartitionstatus">ServicePartitionStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicepartitionstatus">ServicePartitionStatus</a></div>
+      </td>
+      <td>
+        <p>Specifies the service partition status.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceReplicaStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicereplicastatus">ServiceReplicaStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicereplicastatus">ServiceReplicaStatus</a></div>
+      </td>
+      <td>
+        <p>Specifies the status of the replica.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceReplicaStatusFilter" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicereplicastatusfilter">ServiceReplicaStatusFilter</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicereplicastatusfilter">ServiceReplicaStatusFilter</a></div>
+      </td>
+      <td>
+        <p>Enumerates the filter used for matching the replica status for replicas that should be returned by query.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicestatus">ServiceStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicestatus">ServiceStatus</a></div>
+      </td>
+      <td>
+        <p>Represents the status of a service retrieved by calling <a class="xref" href="system.fabric.fabricclient.queryclient#System_Fabric_FabricClient_QueryClient_GetServiceListAsync_System_Uri_">GetServiceListAsync(Uri)</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_ServiceTypeRegistrationStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.servicetyperegistrationstatus">ServiceTypeRegistrationStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.servicetyperegistrationstatus">ServiceTypeRegistrationStatus</a></div>
+      </td>
+      <td>
+        <p>Specifies the service type registration status.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_TestCommandStateFilter" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.testcommandstatefilter">TestCommandStateFilter</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.testcommandstatefilter">TestCommandStateFilter</a></div>
+      </td>
+      <td>
+        <p>This is used when calling GetTestCommandStatusListAsync(), and indicates the filter to use on TestCommandState&#39;s.    Multiple filter values may be specified.</p>
+
+      </td>
+      </tr>
+      <tr id="System_Fabric_Query_TestCommandTypeFilter" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="system.fabric.query.testcommandtypefilter">TestCommandTypeFilter</a></div>
+          <div class="lang-vb"><a class="xref" href="system.fabric.query.testcommandtypefilter">TestCommandTypeFilter</a></div>
+      </td>
+      <td>
+        <p>This is used when calling GetTestCommandStatusListAsync(), and indicates the filter to use on TestCommandType&#39;s.    Multiple filter values may be specified.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/3bcf2c9081582fac6994.reference.js"></script>
+  </body>
+</html>

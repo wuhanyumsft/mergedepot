@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Geometry class">
+    <meta name="breadcrumb_path" content="/halfdotnet/toc.json">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="halfdotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.halfdotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/1953e5bf3b3df5c71a159a322e33cc682ce4add9/halfdotnet/System.Windows.Media/System.Windows.Media.Geometry.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/TianqiZhang/ECMA2YamlTestRepo/blob/migration/halfdotnet/System.Windows.Media/System.Windows.Media.Geometry.yml">
+<meta name="APIName" content="System.Windows.Media.Geometry">
+<meta name="APIName" content="System.Windows.Media.Geometry.Bounds">
+<meta name="APIName" content="System.Windows.Media.Geometry.Clone">
+<meta name="APIName" content="System.Windows.Media.Geometry.CloneCurrentValue">
+<meta name="APIName" content="System.Windows.Media.Geometry.Combine">
+<meta name="APIName" content="System.Windows.Media.Geometry.Empty">
+<meta name="APIName" content="System.Windows.Media.Geometry.FillContains">
+<meta name="APIName" content="System.Windows.Media.Geometry.FillContainsWithDetail">
+<meta name="APIName" content="System.Windows.Media.Geometry.GetArea">
+<meta name="APIName" content="System.Windows.Media.Geometry.GetFlattenedPathGeometry">
+<meta name="APIName" content="System.Windows.Media.Geometry.GetOutlinedPathGeometry">
+<meta name="APIName" content="System.Windows.Media.Geometry.GetRenderBounds">
+<meta name="APIName" content="System.Windows.Media.Geometry.GetWidenedPathGeometry">
+<meta name="APIName" content="System.Windows.Media.Geometry.IsEmpty">
+<meta name="APIName" content="System.Windows.Media.Geometry.MayHaveCurves">
+<meta name="APIName" content="System.Windows.Media.Geometry.Parse">
+<meta name="APIName" content="System.Windows.Media.Geometry.ShouldSerializeTransform">
+<meta name="APIName" content="System.Windows.Media.Geometry.StandardFlatteningTolerance">
+<meta name="APIName" content="System.Windows.Media.Geometry.StrokeContains">
+<meta name="APIName" content="System.Windows.Media.Geometry.StrokeContainsWithDetail">
+<meta name="APIName" content="System.Windows.Media.Geometry.System.IFormattable.ToString">
+<meta name="APIName" content="System.Windows.Media.Geometry.ToString">
+<meta name="APIName" content="System.Windows.Media.Geometry.Transform">
+<meta name="APIName" content="System.Windows.Media.Geometry.TransformProperty">
+<meta name="APILocation" content="PresentationCore.dll">
+<meta name="TopicType" content="apiref">
+<meta name="APIType" content="Assembly">
+<meta name="updated_at" content="2017-02-16 06:36 AM">
+<meta name="document_id" content="bd340106-46c4-432f-7da8-6622765d1816">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="../toc1.json">
+<meta name="platforms" content="net-11">
+<meta name="platforms" content="net-20">
+<meta name="platforms" content="netcore-10">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="System.Windows.Media.Geometry">
+
+    
+    
+      
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/system.windows.media/system.windows.media.geometry" rel="canonical">
+    <title>Geometry class | Microsoft Docs</title>
+    <link rel="stylesheet" href="../_themes/css/1799cb50375cce4bc4c6.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '../_themes/';
+	msDocs.data.brand = '';
+</script>
+
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="../_themes/global/js/polyfills/all.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="../_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+<script src="https://assets.onestore.ms/cdnfiles/external/uhf/long/6cd17f63f634a900b40eb670c61866e8e1385b9f/js/uhf-main.var.min.js" async="" defer=""></script>
+<script src="https://mem.gfx.ms/meversion?partner=msdocs&market=en-us" async="" defer=""></script>
+
+  <script src="../_themes/global/js/global.min.js?v=31"></script>
+
+  </head>
+  <body>
+
+
+
+<header id="header" ms.pgarea="header">
+    <div id="uhfPlaceHolder" class="c-me"></div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                                                
+                            <li id="contenteditbtn">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                        <li>
+                            <label for="platform-selector">Platform</label>									
+                            <select name="platform-selector" id="platform-selector">
+                                
+                                <option value="platform-net-11">net-11
+                                
+                                <option value="platform-net-20">net-20
+                                
+                                <option value="platform-netcore-10">netcore-10
+                                
+                            </select>
+                        </li>
+                    
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+
+</header>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              
+    <h1 id="System_Windows_Media_Geometry">
+      <span class="lang-csharp">Geometry</span>
+        Class
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div><h2>Syntax</h2>
+    
+    	<h3>Declaration</h3>
+    	<pre class="memberDeclaration"><code class="csharp lang-csharp">[System.ComponentModel.TypeConverter(typeof(System.Windows.Media.GeometryConverter))]
+[System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)]
+[System.Windows.Markup.ValueSerializer(typeof(System.Windows.Media.Converters.GeometryValueSerializer))]
+public abstract class Geometry : System.Windows.Media.Animation.Animatable, IFormattable</code></pre>
+    
+    
+    
+    <h3>Inheritance Hierarchy</h3>
+    <ul class="inheritance">
+        <li class="l0">
+          <div class="lang-csharp">
+            <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.freezable(v=vs.110).aspx">Freezable</a>
+          </div>
+        </li>
+        <li class="l1">
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.media.animation/system.windows.media.animation.animatable">System.Windows.Media.Animation.Animatable</a>
+          </div>
+        </li>
+      <li class="l2">
+        <div class="xref">
+          <div class="lang-csharp">Geometry</div>
+        </div>
+      </li>
+    </ul>
+    
+      <div class="referencebox inheritedMembers">
+        <h3>Inherited Members</h3>
+        <h4></h4>
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.media.animation/system.windows.media.animation.animatable#System_Windows_Media_Animation_Animatable_ApplyAnimationClock_System_Windows_DependencyProperty_System_Windows_Media_Animation_AnimationClock_">ApplyAnimationClock(DependencyProperty,AnimationClock)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.media.animation/system.windows.media.animation.animatable#System_Windows_Media_Animation_Animatable_ApplyAnimationClock_System_Windows_DependencyProperty_System_Windows_Media_Animation_AnimationClock_System_Windows_Media_Animation_HandoffBehavior_">ApplyAnimationClock(DependencyProperty,AnimationClock,HandoffBehavior)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.media.animation/system.windows.media.animation.animatable#System_Windows_Media_Animation_Animatable_BeginAnimation_System_Windows_DependencyProperty_System_Windows_Media_Animation_AnimationTimeline_">BeginAnimation(DependencyProperty,AnimationTimeline)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.media.animation/system.windows.media.animation.animatable#System_Windows_Media_Animation_Animatable_BeginAnimation_System_Windows_DependencyProperty_System_Windows_Media_Animation_AnimationTimeline_System_Windows_Media_Animation_HandoffBehavior_">BeginAnimation(DependencyProperty,AnimationTimeline,HandoffBehavior)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.media.animation/system.windows.media.animation.animatable#System_Windows_Media_Animation_Animatable_FreezeCore_System_Boolean_">FreezeCore(Boolean)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.media.animation/system.windows.media.animation.animatable#System_Windows_Media_Animation_Animatable_GetAnimationBaseValue_System_Windows_DependencyProperty_">GetAnimationBaseValue(DependencyProperty)</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.media.animation/system.windows.media.animation.animatable#System_Windows_Media_Animation_Animatable_HasAnimatedProperties">HasAnimatedProperties</a>
+          </div>
+          , 
+          <div class="lang-csharp">
+            <a class="xref" href="../system.windows.media.animation/system.windows.media.animation.animatable#System_Windows_Media_Animation_Animatable_ShouldSerializeStoredWeakReference_System_Windows_DependencyObject_">ShouldSerializeStoredWeakReference(DependencyObject)</a>
+          </div>
+          
+      </div>
+    
+    
+    
+    
+    <h2>Fields
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_TransformProperty">TransformProperty</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Properties
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_Bounds">Bounds</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_Empty">Empty</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_StandardFlatteningTolerance">StandardFlatteningTolerance</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_Transform">Transform</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Methods
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_Clone">Clone()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_CloneCurrentValue">CloneCurrentValue()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_Combine_System_Windows_Media_Geometry_System_Windows_Media_Geometry_System_Windows_Media_GeometryCombineMode_System_Windows_Media_Transform_">Combine(Geometry,Geometry,GeometryCombineMode,Transform)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_Combine_System_Windows_Media_Geometry_System_Windows_Media_Geometry_System_Windows_Media_GeometryCombineMode_System_Windows_Media_Transform_System_Double_System_Windows_Media_ToleranceType_">Combine(Geometry,Geometry,GeometryCombineMode,Transform,Double,ToleranceType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_FillContains_System_Windows_Media_Geometry_">FillContains(Geometry)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_FillContains_System_Windows_Point_">FillContains(Point)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_FillContains_System_Windows_Media_Geometry_System_Double_System_Windows_Media_ToleranceType_">FillContains(Geometry,Double,ToleranceType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_FillContains_System_Windows_Point_System_Double_System_Windows_Media_ToleranceType_">FillContains(Point,Double,ToleranceType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_FillContainsWithDetail_System_Windows_Media_Geometry_">FillContainsWithDetail(Geometry)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_FillContainsWithDetail_System_Windows_Media_Geometry_System_Double_System_Windows_Media_ToleranceType_">FillContainsWithDetail(Geometry,Double,ToleranceType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_GetArea">GetArea()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_GetArea_System_Double_System_Windows_Media_ToleranceType_">GetArea(Double,ToleranceType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_GetFlattenedPathGeometry">GetFlattenedPathGeometry()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_GetFlattenedPathGeometry_System_Double_System_Windows_Media_ToleranceType_">GetFlattenedPathGeometry(Double,ToleranceType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_GetOutlinedPathGeometry">GetOutlinedPathGeometry()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_GetOutlinedPathGeometry_System_Double_System_Windows_Media_ToleranceType_">GetOutlinedPathGeometry(Double,ToleranceType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_GetRenderBounds_System_Windows_Media_Pen_">GetRenderBounds(Pen)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_GetRenderBounds_System_Windows_Media_Pen_System_Double_System_Windows_Media_ToleranceType_">GetRenderBounds(Pen,Double,ToleranceType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_GetWidenedPathGeometry_System_Windows_Media_Pen_">GetWidenedPathGeometry(Pen)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_GetWidenedPathGeometry_System_Windows_Media_Pen_System_Double_System_Windows_Media_ToleranceType_">GetWidenedPathGeometry(Pen,Double,ToleranceType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_IsEmpty">IsEmpty()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_MayHaveCurves">MayHaveCurves()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_Parse_System_String_">Parse(String)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_ShouldSerializeTransform">ShouldSerializeTransform()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_StrokeContains_System_Windows_Media_Pen_System_Windows_Point_">StrokeContains(Pen,Point)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_StrokeContains_System_Windows_Media_Pen_System_Windows_Point_System_Double_System_Windows_Media_ToleranceType_">StrokeContains(Pen,Point,Double,ToleranceType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_StrokeContainsWithDetail_System_Windows_Media_Pen_System_Windows_Media_Geometry_">StrokeContainsWithDetail(Pen,Geometry)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_StrokeContainsWithDetail_System_Windows_Media_Pen_System_Windows_Media_Geometry_System_Double_System_Windows_Media_ToleranceType_">StrokeContainsWithDetail(Pen,Geometry,Double,ToleranceType)</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_ToString">ToString()</a></div>
+          </td>
+        </tr>
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_ToString_System_IFormatProvider_">ToString(IFormatProvider)</a></div>
+          </td>
+        </tr>
+    </table>
+    <h2>Explicit Interface Implementations
+     summary</h2>
+    
+    <table class="nameValue">
+        <tr class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+          <td colspan="2">
+            <div class="lang-csharp"><a href="#System_Windows_Media_Geometry_System_IFormattable_ToString_System_String_System_IFormatProvider_">System.IFormattable.ToString(String,IFormatProvider)</a></div>
+          </td>
+        </tr>
+    </table>
+    <section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="fields">
+        <h2>Fields
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_TransformProperty">
+    
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">TransformProperty</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static readonly System.Windows.DependencyProperty TransformProperty;</code></pre>
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="properties">
+        <h2>Properties
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_Bounds">
+    
+            <a id="System_Windows_Media_Geometry_Bounds_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Bounds</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Windows.Rect Bounds { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.rect(v=vs.110).aspx">Rect</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_Empty">
+    
+            <a id="System_Windows_Media_Geometry_Empty_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Empty</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.Geometry Empty { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_StandardFlatteningTolerance">
+    
+            <a id="System_Windows_Media_Geometry_StandardFlatteningTolerance_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StandardFlatteningTolerance</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static double StandardFlatteningTolerance { get; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_Transform">
+    
+            <a id="System_Windows_Media_Geometry_Transform_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Transform</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Media.Transform Transform { get; set; }</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.transform">Transform</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="methods">
+        <h2>Methods
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_Clone">
+    
+            <a id="System_Windows_Media_Geometry_Clone_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Clone()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Media.Geometry Clone ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_CloneCurrentValue">
+    
+            <a id="System_Windows_Media_Geometry_CloneCurrentValue_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">CloneCurrentValue()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Media.Geometry CloneCurrentValue ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_Combine_System_Windows_Media_Geometry_System_Windows_Media_Geometry_System_Windows_Media_GeometryCombineMode_System_Windows_Media_Transform_">
+    
+            <a id="System_Windows_Media_Geometry_Combine_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Combine(Geometry,Geometry,GeometryCombineMode,Transform)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.PathGeometry Combine (System.Windows.Media.Geometry geometry1, System.Windows.Media.Geometry geometry2, System.Windows.Media.GeometryCombineMode mode, System.Windows.Media.Transform transform);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>geometry1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>geometry2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>mode</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.geometrycombinemode">GeometryCombineMode</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>transform</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.transform">Transform</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.pathgeometry">PathGeometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_Combine_System_Windows_Media_Geometry_System_Windows_Media_Geometry_System_Windows_Media_GeometryCombineMode_System_Windows_Media_Transform_System_Double_System_Windows_Media_ToleranceType_">
+    
+            <a id="System_Windows_Media_Geometry_Combine_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Combine(Geometry,Geometry,GeometryCombineMode,Transform,Double,ToleranceType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.PathGeometry Combine (System.Windows.Media.Geometry geometry1, System.Windows.Media.Geometry geometry2, System.Windows.Media.GeometryCombineMode mode, System.Windows.Media.Transform transform, double tolerance, System.Windows.Media.ToleranceType type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>geometry1</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>geometry2</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>mode</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.geometrycombinemode">GeometryCombineMode</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>transform</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.transform">Transform</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>tolerance</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.tolerancetype">ToleranceType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.pathgeometry">PathGeometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_FillContains_System_Windows_Media_Geometry_">
+    
+            <a id="System_Windows_Media_Geometry_FillContains_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FillContains(Geometry)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool FillContains (System.Windows.Media.Geometry geometry);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>geometry</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_FillContains_System_Windows_Point_">
+    
+            <a id="System_Windows_Media_Geometry_FillContains_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FillContains(Point)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool FillContains (System.Windows.Point hitPoint);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hitPoint</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.point(v=vs.110).aspx">Point</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_FillContains_System_Windows_Media_Geometry_System_Double_System_Windows_Media_ToleranceType_">
+    
+            <a id="System_Windows_Media_Geometry_FillContains_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FillContains(Geometry,Double,ToleranceType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool FillContains (System.Windows.Media.Geometry geometry, double tolerance, System.Windows.Media.ToleranceType type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>geometry</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>tolerance</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.tolerancetype">ToleranceType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_FillContains_System_Windows_Point_System_Double_System_Windows_Media_ToleranceType_">
+    
+            <a id="System_Windows_Media_Geometry_FillContains_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FillContains(Point,Double,ToleranceType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool FillContains (System.Windows.Point hitPoint, double tolerance, System.Windows.Media.ToleranceType type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>hitPoint</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.point(v=vs.110).aspx">Point</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>tolerance</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.tolerancetype">ToleranceType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_FillContainsWithDetail_System_Windows_Media_Geometry_">
+    
+            <a id="System_Windows_Media_Geometry_FillContainsWithDetail_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FillContainsWithDetail(Geometry)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Media.IntersectionDetail FillContainsWithDetail (System.Windows.Media.Geometry geometry);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>geometry</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.intersectiondetail">IntersectionDetail</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_FillContainsWithDetail_System_Windows_Media_Geometry_System_Double_System_Windows_Media_ToleranceType_">
+    
+            <a id="System_Windows_Media_Geometry_FillContainsWithDetail_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">FillContainsWithDetail(Geometry,Double,ToleranceType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Windows.Media.IntersectionDetail FillContainsWithDetail (System.Windows.Media.Geometry geometry, double tolerance, System.Windows.Media.ToleranceType type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>geometry</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>tolerance</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.tolerancetype">ToleranceType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.intersectiondetail">IntersectionDetail</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_GetArea">
+    
+            <a id="System_Windows_Media_Geometry_GetArea_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetArea()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public double GetArea ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_GetArea_System_Double_System_Windows_Media_ToleranceType_">
+    
+            <a id="System_Windows_Media_Geometry_GetArea_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetArea(Double,ToleranceType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual double GetArea (double tolerance, System.Windows.Media.ToleranceType type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tolerance</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.tolerancetype">ToleranceType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_GetFlattenedPathGeometry">
+    
+            <a id="System_Windows_Media_Geometry_GetFlattenedPathGeometry_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetFlattenedPathGeometry()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Media.PathGeometry GetFlattenedPathGeometry ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.pathgeometry">PathGeometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_GetFlattenedPathGeometry_System_Double_System_Windows_Media_ToleranceType_">
+    
+            <a id="System_Windows_Media_Geometry_GetFlattenedPathGeometry_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetFlattenedPathGeometry(Double,ToleranceType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Windows.Media.PathGeometry GetFlattenedPathGeometry (double tolerance, System.Windows.Media.ToleranceType type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tolerance</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.tolerancetype">ToleranceType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.pathgeometry">PathGeometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_GetOutlinedPathGeometry">
+    
+            <a id="System_Windows_Media_Geometry_GetOutlinedPathGeometry_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetOutlinedPathGeometry()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Media.PathGeometry GetOutlinedPathGeometry ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.pathgeometry">PathGeometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_GetOutlinedPathGeometry_System_Double_System_Windows_Media_ToleranceType_">
+    
+            <a id="System_Windows_Media_Geometry_GetOutlinedPathGeometry_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetOutlinedPathGeometry(Double,ToleranceType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Windows.Media.PathGeometry GetOutlinedPathGeometry (double tolerance, System.Windows.Media.ToleranceType type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>tolerance</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.tolerancetype">ToleranceType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.pathgeometry">PathGeometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_GetRenderBounds_System_Windows_Media_Pen_">
+    
+            <a id="System_Windows_Media_Geometry_GetRenderBounds_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetRenderBounds(Pen)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Rect GetRenderBounds (System.Windows.Media.Pen pen);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pen</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.pen">Pen</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.rect(v=vs.110).aspx">Rect</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_GetRenderBounds_System_Windows_Media_Pen_System_Double_System_Windows_Media_ToleranceType_">
+    
+            <a id="System_Windows_Media_Geometry_GetRenderBounds_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetRenderBounds(Pen,Double,ToleranceType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Windows.Rect GetRenderBounds (System.Windows.Media.Pen pen, double tolerance, System.Windows.Media.ToleranceType type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pen</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.pen">Pen</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>tolerance</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.tolerancetype">ToleranceType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.rect(v=vs.110).aspx">Rect</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_GetWidenedPathGeometry_System_Windows_Media_Pen_">
+    
+            <a id="System_Windows_Media_Geometry_GetWidenedPathGeometry_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetWidenedPathGeometry(Pen)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Media.PathGeometry GetWidenedPathGeometry (System.Windows.Media.Pen pen);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pen</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.pen">Pen</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.pathgeometry">PathGeometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_GetWidenedPathGeometry_System_Windows_Media_Pen_System_Double_System_Windows_Media_ToleranceType_">
+    
+            <a id="System_Windows_Media_Geometry_GetWidenedPathGeometry_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">GetWidenedPathGeometry(Pen,Double,ToleranceType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public virtual System.Windows.Media.PathGeometry GetWidenedPathGeometry (System.Windows.Media.Pen pen, double tolerance, System.Windows.Media.ToleranceType type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pen</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.pen">Pen</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>tolerance</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.tolerancetype">ToleranceType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.pathgeometry">PathGeometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_IsEmpty">
+    
+            <a id="System_Windows_Media_Geometry_IsEmpty_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">IsEmpty()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract bool IsEmpty ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_MayHaveCurves">
+    
+            <a id="System_Windows_Media_Geometry_MayHaveCurves_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">MayHaveCurves()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public abstract bool MayHaveCurves ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_Parse_System_String_">
+    
+            <a id="System_Windows_Media_Geometry_Parse_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">Parse(String)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public static System.Windows.Media.Geometry Parse (string source);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>source</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_ShouldSerializeTransform">
+    
+            <a id="System_Windows_Media_Geometry_ShouldSerializeTransform_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ShouldSerializeTransform()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool ShouldSerializeTransform ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_StrokeContains_System_Windows_Media_Pen_System_Windows_Point_">
+    
+            <a id="System_Windows_Media_Geometry_StrokeContains_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StrokeContains(Pen,Point)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool StrokeContains (System.Windows.Media.Pen pen, System.Windows.Point hitPoint);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pen</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.pen">Pen</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>hitPoint</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.point(v=vs.110).aspx">Point</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_StrokeContains_System_Windows_Media_Pen_System_Windows_Point_System_Double_System_Windows_Media_ToleranceType_">
+    
+            <a id="System_Windows_Media_Geometry_StrokeContains_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StrokeContains(Pen,Point,Double,ToleranceType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public bool StrokeContains (System.Windows.Media.Pen pen, System.Windows.Point hitPoint, double tolerance, System.Windows.Media.ToleranceType type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pen</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.pen">Pen</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>hitPoint</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.windows.point(v=vs.110).aspx">Point</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>tolerance</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.tolerancetype">ToleranceType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.boolean">Boolean</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_StrokeContainsWithDetail_System_Windows_Media_Pen_System_Windows_Media_Geometry_">
+    
+            <a id="System_Windows_Media_Geometry_StrokeContainsWithDetail_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StrokeContainsWithDetail(Pen,Geometry)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Media.IntersectionDetail StrokeContainsWithDetail (System.Windows.Media.Pen pen, System.Windows.Media.Geometry geometry);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pen</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.pen">Pen</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>geometry</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.intersectiondetail">IntersectionDetail</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_StrokeContainsWithDetail_System_Windows_Media_Pen_System_Windows_Media_Geometry_System_Double_System_Windows_Media_ToleranceType_">
+    
+            <a id="System_Windows_Media_Geometry_StrokeContainsWithDetail_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">StrokeContainsWithDetail(Pen,Geometry,Double,ToleranceType)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public System.Windows.Media.IntersectionDetail StrokeContainsWithDetail (System.Windows.Media.Pen pen, System.Windows.Media.Geometry geometry, double tolerance, System.Windows.Media.ToleranceType type);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>pen</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.pen">Pen</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>geometry</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.geometry">Geometry</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>tolerance</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.double">Double</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="system.windows.media.tolerancetype">ToleranceType</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="system.windows.media.intersectiondetail">IntersectionDetail</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_ToString">
+    
+            <a id="System_Windows_Media_Geometry_ToString_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ToString()</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public override string ToString ();</code></pre>
+    
+    
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_ToString_System_IFormatProvider_">
+    
+            <a id="System_Windows_Media_Geometry_ToString_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">ToString(IFormatProvider)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string ToString (IFormatProvider provider);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>provider</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.iformatprovider">IFormatProvider</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section><section class="memberGroup">
+      <header class="header platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="eii">
+        <h2>Explicit Interface Implementations
+    </h2>
+      </header>
+    
+      <ul class="list-clean platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter">
+    
+        <li class=" platform-net-11 platform-net-20 platform-netcore-10 enable-platform-filter" id="System_Windows_Media_Geometry_System_IFormattable_ToString_System_String_System_IFormatProvider_">
+    
+            <a id="System_Windows_Media_Geometry_System_IFormattable_ToString_"></a>
+    
+    
+          <div class="memberName">
+            <div class="lang-csharp">System.IFormattable.ToString(String,IFormatProvider)</div>        
+          </div>
+    
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">string IFormattable.ToString (string format, IFormatProvider provider);</code></pre>
+    
+    
+              <h4>Parameters</h4>
+              <ul class="memberDetails">
+                <li>
+                  <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+                <li>
+                  <dl>
+                  <dt>provider</dt>
+                  <dd>
+                    <div class="lang-csharp"><a class="xref" href="../system/system.iformatprovider">IFormatProvider</a></div>
+                  </dd>
+                  </dl>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+              <h4>Returns</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="../system/system.string">String</a></div>
+                  </div>
+                  <p>To be added.</p>
+
+                </li>
+              </ul>
+    
+    
+    
+          
+    
+    
+    
+    
+        </li>
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="../_themes/javascript/1799cb50375cce4bc4c6.reference.js"></script>
+  </body>
+</html>
