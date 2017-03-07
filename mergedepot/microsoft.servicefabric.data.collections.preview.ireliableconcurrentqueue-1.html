@@ -504,8 +504,7 @@ from other transactions, the count also cannot be isolated from other transactio
 
     
             <h4>Example</h4>
-            
-This example shows how to monitor the queue's count infinitely, until the cancellation token is canceled.
+            <p>This example shows how to monitor the queue&#39;s count infinitely, until the cancellation token is canceled.</p>
 <pre><code>protected override async Task RunAsync(CancellationToken cancellationToken)
 {
     var concurrentQueue = await this.StateManager.GetOrAddAsync&lt;IReliableConcurrentQueue&lt;long&gt;&gt;(new Uri("fabric:/concurrentQueue"));
@@ -712,8 +711,7 @@ data structure, but without enforcing strict ordering (which would require reduc
 
     
             <h4>Example</h4>
-            
-This example shows how to dequeue and log infinitely with retry, until the cancellation token is canceled.  
+            <p>This example shows how to dequeue and log infinitely with retry, until the cancellation token is canceled.  </p>
 <pre><code>protected override async Task RunAsync(CancellationToken cancellationToken)
 {
     var concurrentQueue = await this.StateManager.GetOrAddAsync&lt;IReliableConcurrentQueue&lt;long&gt;&gt;(new Uri("fabric:/concurrentQueue"));
@@ -923,8 +921,7 @@ This includes the transaction in which the value was enqueued; as a consequence,
 
     
             <h4>Example</h4>
-            
-This example shows how to use <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_EnqueueAsync_Microsoft_ServiceFabric_Data_ITransaction__0_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">EnqueueAsync(ITransaction, T, CancellationToken, Nullable&lt;TimeSpan&gt;)</a> to enqueue a value with retry.
+            <p>This example shows how to use <a class="xref" href="microsoft.servicefabric.data.collections.preview.ireliableconcurrentqueue-1#Microsoft_ServiceFabric_Data_Collections_Preview_IReliableConcurrentQueue_1_EnqueueAsync_Microsoft_ServiceFabric_Data_ITransaction__0_System_Threading_CancellationToken_System_Nullable_System_TimeSpan__">EnqueueAsync(ITransaction, T, CancellationToken, Nullable&lt;TimeSpan&gt;)</a> to enqueue a value with retry.</p>
 <pre><code>protected override async Task RunAsync(CancellationToken cancellationToken)
 {
     var concurrentQueue = await this.StateManager.GetOrAddAsync&lt;IReliableConcurrentQueue&lt;long&gt;&gt;(new Uri("fabric:/concurrentQueue"));

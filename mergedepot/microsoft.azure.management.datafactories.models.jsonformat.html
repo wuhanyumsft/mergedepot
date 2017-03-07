@@ -30,7 +30,7 @@
 <meta name="site_name" content="Docs">
 <meta name="search.ms_product" content="Azure">
 <meta name="depot_name" content="Azure.azuredotnet">
-<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/8ece26063f2f27414f0bad873159ee6212f3448d/docs-ref-autogen/DataFactory/Microsoft.Azure.Management.DataFactories.Models.JsonFormat.yml">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/057c3116609df83deae7e28aa77bf8eb5b9bb234/docs-ref-autogen/DataFactory/Microsoft.Azure.Management.DataFactories.Models.JsonFormat.yml">
 <meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/DataFactory/Microsoft.Azure.Management.DataFactories.Models.JsonFormat.yml">
 <meta name="APIName" content="Microsoft.Azure.Management.DataFactories.Models.JsonFormat">
 <meta name="APIName" content="Microsoft.Azure.Management.DataFactories.Models.JsonFormat.FilePattern">
@@ -42,10 +42,16 @@
 <meta name="APIName" content="Microsoft.Azure.Management.DataFactories.Models.JsonFormat.EncodingName">
 <meta name="APIName" content="Microsoft.Azure.Management.DataFactories.Models.JsonFormat.get_EncodingName">
 <meta name="APIName" content="Microsoft.Azure.Management.DataFactories.Models.JsonFormat.set_EncodingName">
+<meta name="APIName" content="Microsoft.Azure.Management.DataFactories.Models.JsonFormat.JsonNodeReference">
+<meta name="APIName" content="Microsoft.Azure.Management.DataFactories.Models.JsonFormat.get_JsonNodeReference">
+<meta name="APIName" content="Microsoft.Azure.Management.DataFactories.Models.JsonFormat.set_JsonNodeReference">
+<meta name="APIName" content="Microsoft.Azure.Management.DataFactories.Models.JsonFormat.JsonPathDefinition">
+<meta name="APIName" content="Microsoft.Azure.Management.DataFactories.Models.JsonFormat.get_JsonPathDefinition">
+<meta name="APIName" content="Microsoft.Azure.Management.DataFactories.Models.JsonFormat.set_JsonPathDefinition">
 <meta name="APILocation" content="Microsoft.Azure.Management.DataFactories.dll">
 <meta name="TopicType" content="apiref">
 <meta name="APIType" content="Assembly">
-<meta name="updated_at" content="2016-12-19 07:26 AM">
+<meta name="updated_at" content="2017-03-07 05:52 AM">
 <meta name="document_id" content="99e8b9f0-5d0d-73d0-149f-c89241db8918">
 <meta name="pagetype" content="Reference">
 <meta name="description" content="The data stored in JSON format.
@@ -430,6 +436,28 @@ It is case-sensitive.</p>
         </tr>
         <tr class=" enable-platform-filter">
           <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_DataFactories_Models_JsonFormat_JsonNodeReference">JsonNodeReference</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_DataFactories_Models_JsonFormat_JsonNodeReference">JsonNodeReference</a></div>
+          </td>
+            <td>
+            <p>Optional. The JSONPath of the JSON array node to be flattened. 
+Reference: <a href="http://goessner.net/articles/JsonPath/">http://goessner.net/articles/JsonPath/</a>.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
+            <div class="lang-csharp"><a href="#Microsoft_Azure_Management_DataFactories_Models_JsonFormat_JsonPathDefinition">JsonPathDefinition</a></div>
+            <div class="lang-vb"><a href="#Microsoft_Azure_Management_DataFactories_Models_JsonFormat_JsonPathDefinition">JsonPathDefinition</a></div>
+          </td>
+            <td>
+            <p>Optional. The definition of the relative JSONPath in the original JSON objects for the targeted column in the converted row when converting JSON objects to rows. Example: { &quot;Column1&quot;: &quot;$.Column1Path&quot;}. 
+The JSONPath of the root items must start with a &quot;$&quot; character. All the other items in the flattened array defined by JsonNodeReference must not.</p>
+
+            </td>
+        </tr>
+        <tr class=" enable-platform-filter">
+          <td>
             <div class="lang-csharp"><a href="#Microsoft_Azure_Management_DataFactories_Models_JsonFormat_NestingSeparator">NestingSeparator</a></div>
             <div class="lang-vb"><a href="#Microsoft_Azure_Management_DataFactories_Models_JsonFormat_NestingSeparator">NestingSeparator</a></div>
           </td>
@@ -519,6 +547,86 @@ It is case-sensitive.</p>
                   <div class="single">                
                       <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
                       <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_DataFactories_Models_JsonFormat_JsonNodeReference">
+    
+            <a id="Microsoft_Azure_Management_DataFactories_Models_JsonFormat_JsonNodeReference_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/DataFactory/DataFactoryManagement/Customizations/Models/Datasets/StorageFormats/JsonFormat.cs/#L48" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">JsonNodeReference</div>        
+            <div class="lang-vb">JsonNodeReference</div>        
+          </div>
+    
+            <p>Optional. The JSONPath of the JSON array node to be flattened. 
+Reference: <a href="http://goessner.net/articles/JsonPath/">http://goessner.net/articles/JsonPath/</a>.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public string JsonNodeReference { get; set; }</code><code class="vb lang-vb">Public Property JsonNodeReference As String</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a></div>
+                  </div>
+                  
+                </li>
+              </ul>
+    
+    
+          
+    
+    
+    
+    
+        </li>
+        <li class=" enable-platform-filter" id="Microsoft_Azure_Management_DataFactories_Models_JsonFormat_JsonPathDefinition">
+    
+            <a id="Microsoft_Azure_Management_DataFactories_Models_JsonFormat_JsonPathDefinition_"></a>
+    
+            <div class="memberEditButton">
+              <a href="https://github.com/Azure/azure-sdk-for-netmaster/src/ResourceManagement/DataFactory/DataFactoryManagement/Customizations/Models/Datasets/StorageFormats/JsonFormat.cs/#L54" ms.cmpnm="editMember"><i class="icon icon-editor"></i>Edit</a>
+            </div>
+    
+          <div class="memberName">
+            <div class="lang-csharp">JsonPathDefinition</div>        
+            <div class="lang-vb">JsonPathDefinition</div>        
+          </div>
+    
+            <p>Optional. The definition of the relative JSONPath in the original JSON objects for the targeted column in the converted row when converting JSON objects to rows. Example: { &quot;Column1&quot;: &quot;$.Column1Path&quot;}. 
+The JSONPath of the root items must start with a &quot;$&quot; character. All the other items in the flattened array defined by JsonNodeReference must not.</p>
+
+    
+            <pre class="memberDeclaration"><code class="csharp lang-csharp">public Dictionary&lt;string, string&gt; JsonPathDefinition { get; set; }</code><code class="vb lang-vb">Public Property JsonPathDefinition As Dictionary(Of String, String)</code></pre>
+    
+    
+    
+    
+              <h4>Property Value</h4>
+              <ul class="memberDetails">
+                <li>
+                  <div class="single">                
+                      <div class="lang-csharp"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>&lt;<a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>&gt;</div>
+                      <div class="lang-vb"><a class="xref" href="https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">Dictionary</a>(Of <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>, <a class="xref" href="https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx">String</a>)</div>
                   </div>
                   
                 </li>
