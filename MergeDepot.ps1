@@ -1,5 +1,7 @@
 # Add specific step for azure
 # Download Azure Transform tool
+$ErrorActionPreference = "Stop"
+
 Add-type -AssemblyName "System.IO.Compression.FileSystem"
 $mergeDepotToolContainerUrl = "https://siwtest.blob.core.windows.net/mergedepot"
 
@@ -30,11 +32,11 @@ git checkout master 2>&1 | Write-Host
 git status
 
 # Call merge depot
-echo "Clean merge depot"
-Copy-Item ".\mergedepot\.manifest.json" -Destination ".\.optemp\.manifest.json"
-remove-item -path ".\mergedepot" -Force -Recurse
-New-Item "mergedepot" -ItemType Directory
-Copy-Item ".\.optemp\.manifest.json" -Destination ".\mergedepot\.manifest.json"
+# echo "Clean merge depot"
+# Copy-Item ".\mergedepot\.manifest.json" -Destination ".\.optemp\.manifest.json"
+# remove-item -path ".\mergedepot" -Force -Recurse
+# New-Item "mergedepot" -ItemType Directory
+# Copy-Item ".\.optemp\.manifest.json" -Destination ".\mergedepot\.manifest.json"
 
 echo "Start to call merge depot tool"
 &"$MergeDepotTool" "$currentFolder\mergedepot"
