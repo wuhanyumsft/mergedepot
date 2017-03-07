@@ -1,6 +1,5 @@
 # Add specific step for azure
 # Download Azure Transform tool
-$ErrorActionPreference = "Stop"
 
 Add-type -AssemblyName "System.IO.Compression.FileSystem"
 $mergeDepotToolContainerUrl = "https://siwtest.blob.core.windows.net/mergedepot"
