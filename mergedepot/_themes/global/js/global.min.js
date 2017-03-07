@@ -990,7 +990,6 @@ getUhfData();
 			var href;
 			var aCleanTitle;
 			var nodeSelected = false;
-			var displayName;
 
 			nodeMap.push(-1);
 
@@ -1002,14 +1001,6 @@ getUhfData();
 			for(var i=0; i<node.length; i++){
 				aNode = node[i];
 				aCleanTitle = cleanTitle(aNode.toc_title);
-				//if displayName exists on a TOC node, add it to the data-text attribute
-				if (aNode.displayName && aNode.displayName.length) {
-					displayName = cleanTitle(aNode.displayName);
-				}
-				else {
-					displayName = "";
-				}
-
 				nodeMap[nodeMap.length-1] = i;
 
 				var nextNode = document.createElement('li');
@@ -1042,7 +1033,7 @@ getUhfData();
 					titleHolder = document.createElement('span');
 				}
 
-				titleHolder.setAttribute('data-text', aCleanTitle.toLowerCase() + " " + displayName.toLowerCase());
+				titleHolder.setAttribute('data-text', aCleanTitle.toLowerCase());
 				titleHolder.innerHTML = breakDots(aCleanTitle);
 				nextNode.appendChild(titleHolder);
 
