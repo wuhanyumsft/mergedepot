@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+  
+
+
+  
+
+<html class="no-js reference" lang="en-us" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Microsoft.Azure.Batch namespace">
+    <meta name="ms.devlang" content="csharp">
+<meta name="author" content="erickson-doug">
+<meta name="ms.author" content="douge">
+<meta name="manager" content="douge">
+<meta name="breadcrumb_path" content="breadcrumb/toc.json">
+<meta name="ms.topic" content="managed-reference">
+<meta name="ms.service" content="batch">
+<meta name="ms.date" content="11/16/2016">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="azuredotnet">
+<meta name="version" content="0">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="Azure">
+<meta name="depot_name" content="Azure.azuredotnet">
+<meta name="ref_skeleton_gitcommit" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/a1ab19b44f26ae32dbc8fc4e96582806970d2c27/docs-ref-autogen/Data/Batch/Microsoft.Azure.Batch.yml">
+<meta name="original_ref_skeleton_git_url" content="https://github.com/Azure/azure-docs-sdk-dotnet/blob/master/docs-ref-autogen/Data/Batch/Microsoft.Azure.Batch.yml">
+<meta name="updated_at" content="2017-03-08 02:34 AM">
+<meta name="document_id" content="fc51d452-ec30-e7aa-787f-34144f31c4af">
+<meta name="pagetype" content="Reference">
+<meta name="toc_rel" content="toc2.json">
+<meta name="source_url" content="">
+<meta name="ms.assetid" content="Microsoft.Azure.Batch">
+
+    
+    
+      
+      <meta name="brand" content="azure">
+    
+    <link href="https://ppe.docs.microsoft.com/en-us/mergedepot/microsoft.azure.batch" rel="canonical">
+    <title>Microsoft.Azure.Batch namespace | Microsoft Docs</title>
+    <link rel="stylesheet" href="_themes/css/3bcf2c9081582fac6994.reference.css ">
+    <script>
+	var msDocs = {
+		data:{
+			contentLocale: 'en-us'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true
+		}
+	};
+	</script>
+
+<script>
+	msDocs.data.pathToTheme = '_themes/';
+	msDocs.data.brand = 'azure';
+</script>
+
+<link rel="stylesheet" href="_themes/global/css/azureHeader.css?v=4">
+<link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/">
+
+<!--[if lt IE 9]>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="_themes/global/js/polyfills/all.js"></script>
+	<script src="_themes/global/js/azureHeader/respond_and_ie8Setup_combine.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+<!--<![endif]-->
+<script>window.jQuery || document.write('<script src="_themes/global/js/jquery/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+  <script src="_themes/global/js/global.min.js?v=32"></script>
+  <script src="_themes/global/js/azureHeader/loader.js?v=4"></script>
+
+  </head>
+  <body>
+
+<div class="az_h default" ms.pgarea="header">
+	<div class="azure-header_holder">	
+		<div class="azure-header">	
+			<header class="azure-header_temp">
+				<div class="row column">
+					<a href="https://azure.microsoft.com/en-us/" class="logo" title="Microsoft Azure">
+						<svg x="0px" y="0px" width="165px" height="20px" viewbox="0 0 165 20">
+						<path fill="#29A5DE" d="M18,19H16V7.1C16,6.2,16,5,16.1,3.7h0c-0.2,0.8-0.4,1.4-0.5,1.7L9.5,19h-1l-6-13.5c-0.2-0.4-0.3-1-0.5-1.8
+						h0C2,4.4,2,5.5,2,7.1V19H0V1.3h2.7l5.4,12.3c0.4,0.9,0.7,1.7,0.8,2.1H9c0.4-1,0.6-1.7,0.9-2.2l5.5-12.3H18V19z"></path>
+						<path fill="#29A5DE" d="M22.8,3.1c-0.4,0-0.7-0.1-0.9-0.4s-0.4-0.6-0.4-0.9s0.1-0.7,0.4-0.9c0.3-0.3,0.6-0.4,0.9-0.4
+						c0.4,0,0.7,0.1,0.9,0.4c0.3,0.3,0.4,0.6,0.4,0.9c0,0.4-0.1,0.7-0.4,0.9C23.5,3,23.2,3.1,22.8,3.1z M23.8,19h-2V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M35.8,18.4c-1,0.6-2.1,0.9-3.5,0.9c-1.8,0-3.3-0.6-4.4-1.8c-1.1-1.2-1.7-2.7-1.7-4.6c0-2.1,0.6-3.7,1.8-5
+						C29.4,6.7,30.9,6,32.9,6C34,6,35,6.2,35.9,6.7v2.1c-0.9-0.7-1.9-1-3-1c-1.3,0-2.3,0.5-3.2,1.4c-0.8,0.9-1.2,2.1-1.2,3.6
+						c0,1.5,0.4,2.6,1.2,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.1,0,2.1-0.4,3.1-1.1V18.4z"></path>
+						<path fill="#29A5DE" d="M44.9,8.4C44.5,8.1,44,8,43.3,8c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M51.4,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5S49.7,6,51.7,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C54.8,18.6,53.3,19.3,51.4,19.3z M51.5,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C53.8,8.2,52.8,7.7,51.5,7.7z"></path>
+						<path fill="#29A5DE" d="M59.5,18.5v-2.2c1.1,0.8,2.3,1.2,3.6,1.2c1.8,0,2.7-0.6,2.7-1.8c0-0.3-0.1-0.6-0.2-0.9
+						c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.2-0.6-0.3-0.9-0.5c-0.3-0.1-0.7-0.3-1.1-0.4c-0.6-0.2-1-0.4-1.5-0.7c-0.4-0.2-0.8-0.5-1.1-0.8
+						c-0.3-0.3-0.5-0.6-0.6-1c-0.1-0.4-0.2-0.8-0.2-1.3c0-0.6,0.1-1.1,0.4-1.6C60.2,7.7,60.5,7.3,61,7c0.5-0.3,1-0.5,1.5-0.7
+						C63.1,6.1,63.7,6,64.3,6c1.1,0,2.1,0.2,2.9,0.6v2c-0.9-0.6-2-0.9-3.2-0.9c-0.4,0-0.7,0-1,0.1c-0.3,0.1-0.6,0.2-0.8,0.4
+						c-0.2,0.2-0.4,0.3-0.5,0.6c-0.1,0.2-0.2,0.5-0.2,0.7c0,0.3,0.1,0.6,0.2,0.8c0.1,0.2,0.3,0.4,0.5,0.6c0.2,0.2,0.5,0.3,0.8,0.5
+						c0.3,0.1,0.7,0.3,1.1,0.5c0.6,0.2,1.1,0.4,1.5,0.7c0.4,0.2,0.8,0.5,1.1,0.8c0.3,0.3,0.6,0.6,0.7,1c0.2,0.4,0.3,0.8,0.3,1.3
+						c0,0.6-0.1,1.2-0.4,1.6c-0.3,0.5-0.6,0.8-1.1,1.1c-0.5,0.3-1,0.5-1.6,0.7c-0.6,0.1-1.2,0.2-1.9,0.2C61.6,19.3,60.4,19,59.5,18.5z"></path>
+						<path fill="#29A5DE" d="M75.6,19.3c-1.9,0-3.4-0.6-4.5-1.8c-1.1-1.2-1.7-2.7-1.7-4.7c0-2.1,0.6-3.8,1.7-5C72.4,6.6,73.9,6,75.9,6
+						c1.9,0,3.4,0.6,4.4,1.7c1.1,1.2,1.6,2.8,1.6,4.8c0,2-0.6,3.6-1.7,4.8C79,18.6,77.5,19.3,75.6,19.3z M75.7,7.7
+						c-1.3,0-2.3,0.4-3.1,1.3c-0.8,0.9-1.1,2.1-1.1,3.7c0,1.5,0.4,2.7,1.1,3.5c0.8,0.9,1.8,1.3,3.1,1.3c1.3,0,2.3-0.4,3-1.3
+						c0.7-0.8,1.1-2,1.1-3.6c0-1.6-0.4-2.8-1.1-3.6C78.1,8.2,77,7.7,75.7,7.7z"></path>
+						<path fill="#29A5DE" d="M97.6,8.1V6.3h-3.2V2.6l-2,0.7v3.1h-2.6h-1.5h-1.4V4.4c0-1.8,0.7-2.7,2.1-2.7c0.5,0,0.9,0.1,1.3,0.3V0.2
+						C89.9,0.1,89.4,0,88.8,0c-1.1,0-2.1,0.4-2.9,1.2c-0.8,0.8-1.1,1.8-1.1,3.1v2h-2.2v1.7h2.2V19h2V8.1h1.4h1.5h2.6v7.5
+						c0,2.5,1.1,3.7,3.3,3.7c0.8,0,1.4-0.1,1.9-0.4v-1.7c-0.4,0.3-0.8,0.4-1.3,0.4c-0.7,0-1.1-0.2-1.4-0.5c-0.3-0.4-0.4-1-0.4-1.8V8.1
+						H97.6z"></path>
+						<path fill="#29A5DE" d="M119.9,19h-2.3l-1.9-5h-7.5l-1.8,5h-2.3L111,1.3h2.1L119.9,19z M115.1,12.1l-2.8-7.5
+						c-0.1-0.2-0.2-0.6-0.3-1.2h0c-0.1,0.5-0.2,0.9-0.3,1.2l-2.7,7.5H115.1z"></path>
+						<path fill="#29A5DE" d="M130.4,6.9l-7.5,10.3h7.4V19H120v-0.6l7.5-10.3h-6.8V6.3h9.7V6.9z"></path>
+						<path fill="#29A5DE" d="M142.6,19h-2v-2h0c-0.8,1.5-2.1,2.3-3.9,2.3c-3,0-4.5-1.8-4.5-5.4V6.3h2v7.2c0,2.7,1,4,3.1,4
+						c1,0,1.8-0.4,2.4-1.1c0.6-0.7,1-1.7,1-2.9V6.3h2V19z"></path>
+						<path fill="#29A5DE" d="M152.6,8.4c-0.4-0.3-0.9-0.4-1.5-0.4c-0.9,0-1.6,0.4-2.2,1.2c-0.6,0.8-0.9,1.9-0.9,3.3V19h-2V6.3h2v2.6h0
+						c0.3-0.9,0.7-1.6,1.3-2.1c0.6-0.5,1.3-0.7,2-0.7c0.5,0,0.9,0.1,1.2,0.2V8.4z"></path>
+						<path fill="#29A5DE" d="M164,13.1h-8.9c0,1.4,0.4,2.5,1.1,3.3c0.7,0.8,1.7,1.1,3,1.1c1.4,0,2.7-0.5,3.9-1.4V18
+						c-1.1,0.8-2.6,1.2-4.4,1.2c-1.8,0-3.2-0.6-4.2-1.7c-1-1.1-1.5-2.8-1.5-4.8c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.5-1.9,4.1-1.9
+						s2.9,0.5,3.8,1.6s1.4,2.6,1.4,4.4V13.1z M161.9,11.4c0-1.2-0.3-2.1-0.8-2.7c-0.6-0.6-1.3-1-2.3-1c-1,0-1.8,0.3-2.4,1
+						c-0.7,0.7-1.1,1.6-1.2,2.7H161.9z"></path>
+						</svg>
+					</a>
+					<a href="#" class="small-search" onclick="return false"><span class="icon icon-search"></span></a>
+				</div>
+			</header>
+		</div>
+	</div>
+    <div id="lca-cookie-notification" class="shell-notification" style="display:none;">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="cookie.consent.europe" class="notification-txt"></span>
+            <span class="notification-action">
+            <a id="privacystatement-link" tabindex="1" href="#"></a>
+            <a id="cookie-notification-close" tabindex="2">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>
+    </div>
+
+    
+    <div id="msdn-redirection-notification" class="shell-notification" style="display:none;" ms.cmpgrp="notifications">
+        <div class="shell-notification-grid-row shell-notification-clearfix">
+            <span id="msdn.redirection.text" class="notification-txt">You were redirected to this page from MSDN.  We are in the process of migrating all technical content to docs.microsoft.com.</span>
+            <span class="notification-action">
+            <a id="redirect-notification-close" tabindex="1">
+                <i class="shell-icon-close"></i>
+            </a>
+            </span>
+        </div>        
+    </div>
+
+    <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">    
+        <div id="sub-header-content">
+            <div class="content">
+                <ul class="breadcrumbs"></ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pageActionsHolder">
+        <div id="page-actions" role="complementary">
+            <div id="page-actions-content">
+                <ul class="action-list" ms.cmpgrp="pageactions">
+                    
+                    
+                        
+                            <li id="contenteditbtn" hidden="">
+                                <a href="" title="Edit This Document" ms.cmpnm="edit">
+                                    <i class="icon icon-editor"></i>Edit
+                                </a>
+                            </li>             
+                        
+                    
+					
+						
+					
+                    <li>
+                        <a href="#" class="sharebutton" title="Share This Document" ms.cmpnm="share"><i class="icon icon-share"></i>Share</a>
+                        <div class="share-container">
+                            
+                                <div><a href="" class="share-twitter" ms.cmpnm="twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+                                <div><a href="" class="share-facebook" ms.cmpnm="facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+                            
+                            
+                            
+                        </div>
+                    </li>
+                    <li class="typeSep">|</li>
+                    
+                    
+                        <li>
+                            <label for="lang-selector">Language</label>
+                            <select name="lang-selector" id="lang-selector">
+                                
+                                <option value="lang-csharp">C#
+                                
+                                <option value="lang-vb">VB
+                                
+                            </select>
+                        </li>
+                    
+                    <li>
+                        <label for="theme-selector">Theme</label>
+                        <select id="theme-selector">
+                            <option value="" class="removedOnload">
+                            <option value="">Light
+                            <option value="theme_night">Dark
+                        </select>
+                    </li>
+                </ul>
+
+                <nav id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+                    <h3>In this article</h3>
+                </nav>
+            
+            </div>
+        </div>        
+    </div>
+
+
+
+</div>
+
+    <main>
+		  <div class="container" ms.pgarea="body">        
+
+        <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+          <div id="sidebarContent">
+            <div class="filterHolder"></div>
+            <nav class="toc"></nav>          
+            <div class="pdfDownloadHolder"></div>
+          </div>
+          <div class="tocSpace"></div>
+        </div>
+
+        <div id="menu-nav" class="dropdown-container">
+          <div class="dropdown dropdown-full mobilenavi">
+            <select>
+            </select>
+          </div>
+        </div>
+		
+        <div id="main" role="main" ms.pgarea="content">
+          <div id="langDisclaimer" class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">This content is not available in your language but here is the English version.</span></div>
+                    
+              <!-- NAMESPACE -->
+    <h1 id="Microsoft_Azure_Batch">
+      <span class="lang-csharp">Microsoft.Azure.Batch</span>
+      <span class="lang-vb">Microsoft.Azure.Batch</span>
+        Namespace
+    </h1>
+    
+    
+    <nav id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+      <h3>In this Article</h3>
+    </nav><div class="summary">
+    	
+    </div>
+    <header class="header enable-platform-filter" id="classes">
+      <h2>Classes
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_Azure_Batch_AddTaskCollectionResultHandler" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.addtaskcollectionresulthandler">AddTaskCollectionResultHandler</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.addtaskcollectionresulthandler">AddTaskCollectionResultHandler</a></div>
+      </td>
+      <td>
+        <p>A <a class="xref" href="microsoft.azure.batch.batchclientbehavior">BatchClientBehavior</a> which you can use to specify under what conditions an operation to
+add multiple tasks to a job should retry, terminate or be considered successful.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_AddTaskCollectionTerminatedException" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.addtaskcollectionterminatedexception">AddTaskCollectionTerminatedException</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.addtaskcollectionterminatedexception">AddTaskCollectionTerminatedException</a></div>
+      </td>
+      <td>
+        <p>The exception that is thrown when the AddTaskCollection operation is terminated.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_AddTaskResult" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.addtaskresult">AddTaskResult</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.addtaskresult">AddTaskResult</a></div>
+      </td>
+      <td>
+        <p>Result for a single task added as part of a collection of tasks.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_AffinityInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.affinityinformation">AffinityInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.affinityinformation">AffinityInformation</a></div>
+      </td>
+      <td>
+        <p>A locality hint that can be used by the Batch service to select a compute node on which to start a new task.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ApplicationOperations" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.applicationoperations">ApplicationOperations</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.applicationoperations">ApplicationOperations</a></div>
+      </td>
+      <td>
+        <p>Performs application-related operations on an Azure Batch account.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ApplicationPackageReference" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.applicationpackagereference">ApplicationPackageReference</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.applicationpackagereference">ApplicationPackageReference</a></div>
+      </td>
+      <td>
+        <p>A reference to an application package to be deployed to compute nodes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ApplicationSummary" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.applicationsummary">ApplicationSummary</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.applicationsummary">ApplicationSummary</a></div>
+      </td>
+      <td>
+        <p>Contains information about an application in an Azure Batch account.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_AuthenticationTokenSettings" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.authenticationtokensettings">AuthenticationTokenSettings</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.authenticationtokensettings">AuthenticationTokenSettings</a></div>
+      </td>
+      <td>
+        <p>The settings for an authentication token that the task can use to perform Batch service operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_AutoPoolSpecification" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.autopoolspecification">AutoPoolSpecification</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.autopoolspecification">AutoPoolSpecification</a></div>
+      </td>
+      <td>
+        <p>Specifies characteristics for a temporary &#39;auto pool&#39;. The Batch service will create this auto pool, run all the 
+tasks for the job on it, and by default delete the pool once the job has completed.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_AutoScaleRun" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.autoscalerun">AutoScaleRun</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.autoscalerun">AutoScaleRun</a></div>
+      </td>
+      <td>
+        <p>The results and errors from an evaluation or execution of a pool autoscale formula.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_AutoScaleRunError" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.autoscalerunerror">AutoScaleRunError</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.autoscalerunerror">AutoScaleRunError</a></div>
+      </td>
+      <td>
+        <p>An error that occurred when executing or evaluating a pool autoscale formula.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_AutoUserSpecification" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.autouserspecification">AutoUserSpecification</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.autouserspecification">AutoUserSpecification</a></div>
+      </td>
+      <td>
+        <p>Specifies the parameters for the auto user that runs a task on the Batch service</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_BatchClient" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.batchclient">BatchClient</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.batchclient">BatchClient</a></div>
+      </td>
+      <td>
+        <p>A client for an Azure Batch account, used to access the Batch service.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_BatchClientBehavior" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.batchclientbehavior">BatchClientBehavior</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.batchclientbehavior">BatchClientBehavior</a></div>
+      </td>
+      <td>
+        <p>Derived classes modify operational behaviors of a Azure Batch Service client.  Derived classes can be called out of order and simultaneously by several threads.  Implementations should be threadsafe.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_BatchClientException" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.batchclientexception">BatchClientException</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.batchclientexception">BatchClientException</a></div>
+      </td>
+      <td>
+        <p>An exception thrown by the Batch client.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_BatchClientParallelOptions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.batchclientparalleloptions">BatchClientParallelOptions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.batchclientparalleloptions">BatchClientParallelOptions</a></div>
+      </td>
+      <td>
+        <p>Stores options that configure the operation of methods on Batch client parallel operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_BatchError" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.batcherror">BatchError</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.batcherror">BatchError</a></div>
+      </td>
+      <td>
+        <p>An error received from the Azure Batch service.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_BatchErrorDetail" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.batcherrordetail">BatchErrorDetail</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.batcherrordetail">BatchErrorDetail</a></div>
+      </td>
+      <td>
+        <p>An item of additional information included in a <a class="xref" href="microsoft.azure.batch.batcherror">BatchError</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_BatchErrorMessages" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.batcherrormessages">BatchErrorMessages</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.batcherrormessages">BatchErrorMessages</a></div>
+      </td>
+      <td>
+        <p>A strongly-typed resource class, for looking up localized strings, etc.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_BatchRequestTimeout" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.batchrequesttimeout">BatchRequestTimeout</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.batchrequesttimeout">BatchRequestTimeout</a></div>
+      </td>
+      <td>
+        <p>Class which provides easy access to the <a class="xref" href="microsoft.azure.batch.protocol.ibatchrequest#Microsoft_Azure_Batch_Protocol_IBatchRequest_Timeout">Timeout</a> property and the <a class="xref" href="microsoft.azure.batch.protocol.models.itimeoutoptions#Microsoft_Azure_Batch_Protocol_Models_ITimeoutOptions_Timeout">Timeout</a> property.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Certificate" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.certificate">Certificate</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.certificate">Certificate</a></div>
+      </td>
+      <td>
+        <p>A certificate that can be installed on compute nodes and can be used to authenticate operations on a node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_CertificateOperations" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.certificateoperations">CertificateOperations</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.certificateoperations">CertificateOperations</a></div>
+      </td>
+      <td>
+        <p>Performs certificate-related operations on an Azure Batch account.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_CertificateReference" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.certificatereference">CertificateReference</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.certificatereference">CertificateReference</a></div>
+      </td>
+      <td>
+        <p>Represents a certificate object of the Azure Batch service.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ClientRequestIdProvider" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.clientrequestidprovider">ClientRequestIdProvider</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.clientrequestidprovider">ClientRequestIdProvider</a></div>
+      </td>
+      <td>
+        <p>Interceptor which contains a function used to generate a client request id to set as <a class="xref" href="microsoft.azure.batch.protocol.models.ioptions#Microsoft_Azure_Batch_Protocol_Models_IOptions_ClientRequestId">ClientRequestId</a>.
+If there are multiple instances of this then the last set wins.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_CloudJob" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.cloudjob">CloudJob</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.cloudjob">CloudJob</a></div>
+      </td>
+      <td>
+        <p>An Azure Batch job.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_CloudJobSchedule" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.cloudjobschedule">CloudJobSchedule</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.cloudjobschedule">CloudJobSchedule</a></div>
+      </td>
+      <td>
+        <p>A job schedule that allows recurring jobs by specifying when to run jobs and a specification used to create each job.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_CloudPool" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.cloudpool">CloudPool</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.cloudpool">CloudPool</a></div>
+      </td>
+      <td>
+        <p>A pool in the Azure Batch service.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_CloudServiceConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.cloudserviceconfiguration">CloudServiceConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.cloudserviceconfiguration">CloudServiceConfiguration</a></div>
+      </td>
+      <td>
+        <p>The configuration for compute nodes in a pool based on the Azure Cloud Services platform.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_CloudTask" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.cloudtask">CloudTask</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.cloudtask">CloudTask</a></div>
+      </td>
+      <td>
+        <p>An Azure Batch task.  A task is a piece of work that is associated with a job and runs on a compute node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ComputeNode" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.computenode">ComputeNode</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.computenode">ComputeNode</a></div>
+      </td>
+      <td>
+        <p>Summarizes the state of a compute node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ComputeNodeError" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.computenodeerror">ComputeNodeError</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.computenodeerror">ComputeNodeError</a></div>
+      </td>
+      <td>
+        <p>An error encountered by an Azure Batch compute node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ComputeNodeInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.computenodeinformation">ComputeNodeInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.computenodeinformation">ComputeNodeInformation</a></div>
+      </td>
+      <td>
+        <p>The compute node information class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ComputeNodeUser" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.computenodeuser">ComputeNodeUser</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.computenodeuser">ComputeNodeUser</a></div>
+      </td>
+      <td>
+        <p>A user for a specific Azure Batch compute node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Constants" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.constants">Constants</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.constants">Constants</a></div>
+      </td>
+      <td>
+        <p>Contains constants for interacting with the Azure Batch service.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_DeleteCertificateError" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.deletecertificateerror">DeleteCertificateError</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.deletecertificateerror">DeleteCertificateError</a></div>
+      </td>
+      <td>
+        <p>An error encountered by the Batch service when deleting a certificate.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_DetailLevel" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.detaillevel">DetailLevel</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.detaillevel">DetailLevel</a></div>
+      </td>
+      <td>
+        <p>Controls the amount of detail requested from the Azure Batch service when listing or
+retrieving resources.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_EnvironmentSetting" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.environmentsetting">EnvironmentSetting</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.environmentsetting">EnvironmentSetting</a></div>
+      </td>
+      <td>
+        <p>An environment variable to be set on a task process, such as a job task, start task, job manager task, or job preparation 
+or release task.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ErrorMessage" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.errormessage">ErrorMessage</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.errormessage">ErrorMessage</a></div>
+      </td>
+      <td>
+        <p>An error message received in an Azure Batch error response.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ExitCodeMapping" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.exitcodemapping">ExitCodeMapping</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.exitcodemapping">ExitCodeMapping</a></div>
+      </td>
+      <td>
+        <p>A process exit code and how the Batch service should respond if a task exits with that exit code.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ExitCodeRangeMapping" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.exitcoderangemapping">ExitCodeRangeMapping</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.exitcoderangemapping">ExitCodeRangeMapping</a></div>
+      </td>
+      <td>
+        <p>A range of exit codes and how the Batch service should respond if a task exits with an exit code within that range.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ExitConditions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.exitconditions">ExitConditions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.exitconditions">ExitConditions</a></div>
+      </td>
+      <td>
+        <p>How the Batch service should respond when a task completes.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ExitOptions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.exitoptions">ExitOptions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.exitoptions">ExitOptions</a></div>
+      </td>
+      <td>
+        <p>How the Batch service should respond to a particular exit condition.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_FileProperties" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.fileproperties">FileProperties</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.fileproperties">FileProperties</a></div>
+      </td>
+      <td>
+        <p>The properties of a file on a compute node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_GetFileRequestByteRange" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.getfilerequestbyterange">GetFileRequestByteRange</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.getfilerequestbyterange">GetFileRequestByteRange</a></div>
+      </td>
+      <td>
+        <p>The byte range to retrieve in a file download operation.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ImageReference" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.imagereference">ImageReference</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.imagereference">ImageReference</a></div>
+      </td>
+      <td>
+        <p>A reference to an Azure Virtual Machines Marketplace image. To retrieve a list of images supported by the Batch service, 
+see <a class="xref" href="microsoft.azure.batch.pooloperations#Microsoft_Azure_Batch_PoolOperations_ListNodeAgentSkus_Microsoft_Azure_Batch_DetailLevel_System_Collections_Generic_IEnumerable_Microsoft_Azure_Batch_BatchClientBehavior__">ListNodeAgentSkus(DetailLevel, IEnumerable&lt;BatchClientBehavior&gt;)</a> and <a class="xref" href="microsoft.azure.batch.nodeagentsku#Microsoft_Azure_Batch_NodeAgentSku_VerifiedImageReferences">VerifiedImageReferences</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobConstraints" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobconstraints">JobConstraints</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobconstraints">JobConstraints</a></div>
+      </td>
+      <td>
+        <p>Specifies the execution constraints for a job.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobExecutionInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobexecutioninformation">JobExecutionInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobexecutioninformation">JobExecutionInformation</a></div>
+      </td>
+      <td>
+        <p>Information about the execution of an Azure Batch job.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobManagerTask" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobmanagertask">JobManagerTask</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobmanagertask">JobManagerTask</a></div>
+      </td>
+      <td>
+        <p>Represents an Azure Batch JobManager task. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobOperations" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.joboperations">JobOperations</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.joboperations">JobOperations</a></div>
+      </td>
+      <td>
+        <p>Performs operations on Azure Batch jobs.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobPreparationAndReleaseTaskExecutionInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobpreparationandreleasetaskexecutioninformation">JobPreparationAndReleaseTaskExecutionInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobpreparationandreleasetaskexecutioninformation">JobPreparationAndReleaseTaskExecutionInformation</a></div>
+      </td>
+      <td>
+        <p>The status of the Job Preparation task and Job Release task on a compute node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobPreparationTask" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobpreparationtask">JobPreparationTask</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobpreparationtask">JobPreparationTask</a></div>
+      </td>
+      <td>
+        <p>A Job Preparation task to run before any tasks of the job on any given compute node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobPreparationTaskExecutionInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobpreparationtaskexecutioninformation">JobPreparationTaskExecutionInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobpreparationtaskexecutioninformation">JobPreparationTaskExecutionInformation</a></div>
+      </td>
+      <td>
+        <p>Details about the execution of a <a class="xref" href="microsoft.azure.batch.cloudjob#Microsoft_Azure_Batch_CloudJob_JobPreparationTask">JobPreparationTask</a> on a compute 
+node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobReleaseTask" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobreleasetask">JobReleaseTask</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobreleasetask">JobReleaseTask</a></div>
+      </td>
+      <td>
+        <p>A Job Release task to run on job completion on any compute node where the job has run.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobReleaseTaskExecutionInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobreleasetaskexecutioninformation">JobReleaseTaskExecutionInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobreleasetaskexecutioninformation">JobReleaseTaskExecutionInformation</a></div>
+      </td>
+      <td>
+        <p>Details about the execution of a <a class="xref" href="microsoft.azure.batch.cloudjob#Microsoft_Azure_Batch_CloudJob_JobReleaseTask">JobReleaseTask</a> on a compute node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobScheduleExecutionInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobscheduleexecutioninformation">JobScheduleExecutionInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobscheduleexecutioninformation">JobScheduleExecutionInformation</a></div>
+      </td>
+      <td>
+        <p>The execution information for a job schedule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobScheduleOperations" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobscheduleoperations">JobScheduleOperations</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobscheduleoperations">JobScheduleOperations</a></div>
+      </td>
+      <td>
+        <p>Performs operations on Azure Batch job schedules.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobScheduleStatistics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobschedulestatistics">JobScheduleStatistics</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobschedulestatistics">JobScheduleStatistics</a></div>
+      </td>
+      <td>
+        <p>Resource usage statistics for a <a class="xref" href="microsoft.azure.batch.cloudjobschedule">CloudJobSchedule</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobSchedulingError" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobschedulingerror">JobSchedulingError</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobschedulingerror">JobSchedulingError</a></div>
+      </td>
+      <td>
+        <p>An error encountered by the Batch service when scheduling a job.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobSpecification" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobspecification">JobSpecification</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobspecification">JobSpecification</a></div>
+      </td>
+      <td>
+        <p>The <a class="xref" href="microsoft.azure.batch.cloudjobschedule#Microsoft_Azure_Batch_CloudJobSchedule_JobSpecification">JobSpecification</a> of a <a class="xref" href="microsoft.azure.batch.cloudjobschedule">CloudJobSchedule</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_JobStatistics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.jobstatistics">JobStatistics</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.jobstatistics">JobStatistics</a></div>
+      </td>
+      <td>
+        <p>Resource usage statistics for the job.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_MetadataItem" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.metadataitem">MetadataItem</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.metadataitem">MetadataItem</a></div>
+      </td>
+      <td>
+        <p>A name-value pair associated with a Batch service resource. The Batch service does not assign any meaning to this 
+metadata; it is solely for the use of user code.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_MultiInstanceSettings" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.multiinstancesettings">MultiInstanceSettings</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.multiinstancesettings">MultiInstanceSettings</a></div>
+      </td>
+      <td>
+        <p>Settings which specify how to run a multi-instance task. Multi-instance tasks are commonly used to support MPI tasks. 
+For more information see <a href="https://azure.microsoft.com/documentation/articles/batch-mpi/">https://azure.microsoft.com/documentation/articles/batch-mpi/</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_NameValuePair" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.namevaluepair">NameValuePair</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.namevaluepair">NameValuePair</a></div>
+      </td>
+      <td>
+        <p>Represents a name-value pair.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_NetworkConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.networkconfiguration">NetworkConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.networkconfiguration">NetworkConfiguration</a></div>
+      </td>
+      <td>
+        <p>The network configuration for a pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_NodeAgentSku" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.nodeagentsku">NodeAgentSku</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.nodeagentsku">NodeAgentSku</a></div>
+      </td>
+      <td>
+        <p>A node agent SKU supported by the Batch service. The Batch node agent is a program that runs on each node in the 
+pool, and provides the command-and-control interface between the node and the Batch service. There are different 
+implementations of the node agent, known as SKUs, for different operating systems.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_NodeFile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.nodefile">NodeFile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.nodefile">NodeFile</a></div>
+      </td>
+      <td>
+        <p>Exposes methods and properties to access files from Nodes or Tasks.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ODATADetailLevel" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.odatadetaillevel">ODATADetailLevel</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.odatadetaillevel">ODATADetailLevel</a></div>
+      </td>
+      <td>
+        <p>Controls the amount of detail requested from the Azure Batch service when listing or
+retrieving resources, using OData query clauses.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ODATAMonitorControl" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.odatamonitorcontrol">ODATAMonitorControl</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.odatamonitorcontrol">ODATAMonitorControl</a></div>
+      </td>
+      <td>
+        <p>Contains control settings used for optimal retrieval of state data via OData predicates.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_OSDisk" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.osdisk">OSDisk</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.osdisk">OSDisk</a></div>
+      </td>
+      <td>
+        <p>A reference to an OS disk image.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_PagedEnumerableExtensions" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.pagedenumerableextensions">PagedEnumerableExtensions</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.pagedenumerableextensions">PagedEnumerableExtensions</a></div>
+      </td>
+      <td>
+        <p>Provides a set of static (Shared in Visual Basic) methods for working with sequences that
+implement <a class="xref" href="microsoft.azure.batch.ipagedenumerable-1">IPagedEnumerable&lt;T&gt;</a>.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ParallelOperationsException" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.paralleloperationsexception">ParallelOperationsException</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.paralleloperationsexception">ParallelOperationsException</a></div>
+      </td>
+      <td>
+        <p>An exception raised when one or more operations in a parallel set of operations fails.<br>The <a class="xref" href="https://msdn.microsoft.com/en-us/library/dd386873(v=vs.110).aspx">InnerExceptions</a> collection contains the exceptions for each of the failed operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_PoolInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.poolinformation">PoolInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.poolinformation">PoolInformation</a></div>
+      </td>
+      <td>
+        <p>Specifies how a job should be assigned to a pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_PoolOperations" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.pooloperations">PoolOperations</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.pooloperations">PoolOperations</a></div>
+      </td>
+      <td>
+        <p>Performs pool-related operations on an Azure Batch account.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_PoolSpecification" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.poolspecification">PoolSpecification</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.poolspecification">PoolSpecification</a></div>
+      </td>
+      <td>
+        <p>The specification for a pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_PoolStatistics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.poolstatistics">PoolStatistics</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.poolstatistics">PoolStatistics</a></div>
+      </td>
+      <td>
+        <p>Contains utilization and resource usage statistics for the lifetime of a pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_PoolUsageMetrics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.poolusagemetrics">PoolUsageMetrics</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.poolusagemetrics">PoolUsageMetrics</a></div>
+      </td>
+      <td>
+        <p>The usage metrics for a single pool in a certain time range.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_RecentJob" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.recentjob">RecentJob</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.recentjob">RecentJob</a></div>
+      </td>
+      <td>
+        <p>Information about the most recent job under a job schedule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_RemoteLoginSettings" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.remoteloginsettings">RemoteLoginSettings</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.remoteloginsettings">RemoteLoginSettings</a></div>
+      </td>
+      <td>
+        <p>Gets the settings required for remote login to a compute node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ResizeError" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.resizeerror">ResizeError</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.resizeerror">ResizeError</a></div>
+      </td>
+      <td>
+        <p>An error that occurred when resizing a pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ResourceFile" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.resourcefile">ResourceFile</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.resourcefile">ResourceFile</a></div>
+      </td>
+      <td>
+        <p>A file to be downloaded to a compute node from Azure Blob Storage, such as task executables and task input data files.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ResourceStatistics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.resourcestatistics">ResourceStatistics</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.resourcestatistics">ResourceStatistics</a></div>
+      </td>
+      <td>
+        <p>The resource statistics data for the pool.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_RetryPolicyProvider" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.retrypolicyprovider">RetryPolicyProvider</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.retrypolicyprovider">RetryPolicyProvider</a></div>
+      </td>
+      <td>
+        <p>A RequestInterceptor that sets the RetryPolicy.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Schedule" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.schedule">Schedule</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.schedule">Schedule</a></div>
+      </td>
+      <td>
+        <p>A schedule.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_StartTask" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.starttask">StartTask</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.starttask">StartTask</a></div>
+      </td>
+      <td>
+        <p>A task which is run when a compute node joins a pool in the Azure Batch service, or when the compute node is rebooted 
+or reimaged.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_StartTaskInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.starttaskinformation">StartTaskInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.starttaskinformation">StartTaskInformation</a></div>
+      </td>
+      <td>
+        <p>Specifies the detailed runtime information of the start task, including current state, error details, exit code, 
+start time, end time, etc.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_SubtaskInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.subtaskinformation">SubtaskInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.subtaskinformation">SubtaskInformation</a></div>
+      </td>
+      <td>
+        <p>Information about an Azure Batch subtask.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_SynchronousMethodExceptionBehavior" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.synchronousmethodexceptionbehavior">SynchronousMethodExceptionBehavior</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.synchronousmethodexceptionbehavior">SynchronousMethodExceptionBehavior</a></div>
+      </td>
+      <td>
+        <p>A <a class="xref" href="microsoft.azure.batch.batchclientbehavior">BatchClientBehavior</a> which specifies how exceptions should be thrown from
+synchronous methods. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_TaskConstraints" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.taskconstraints">TaskConstraints</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.taskconstraints">TaskConstraints</a></div>
+      </td>
+      <td>
+        <p>Defines the constraints on a particular Azure Batch task.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_TaskDependencies" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.taskdependencies">TaskDependencies</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.taskdependencies">TaskDependencies</a></div>
+      </td>
+      <td>
+        <p>Specifies any dependencies of a task. Any task that is explicitly specified or within a dependency range must complete 
+before the dependant task will be scheduled.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_TaskExecutionInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.taskexecutioninformation">TaskExecutionInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.taskexecutioninformation">TaskExecutionInformation</a></div>
+      </td>
+      <td>
+        <p>Task execution information.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_TaskIdRange" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.taskidrange">TaskIdRange</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.taskidrange">TaskIdRange</a></div>
+      </td>
+      <td>
+        <p>A range of task ids that a <a class="xref" href="microsoft.azure.batch.cloudtask">CloudTask</a> depends on. All tasks with ids in the range must complete successfully 
+before the dependent task can be scheduled.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_TaskInformation" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.taskinformation">TaskInformation</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.taskinformation">TaskInformation</a></div>
+      </td>
+      <td>
+        <p>The compute node&#39;s task info class.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_TaskSchedulingError" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.taskschedulingerror">TaskSchedulingError</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.taskschedulingerror">TaskSchedulingError</a></div>
+      </td>
+      <td>
+        <p>Information about an error when scheduling a task.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_TaskSchedulingPolicy" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.taskschedulingpolicy">TaskSchedulingPolicy</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.taskschedulingpolicy">TaskSchedulingPolicy</a></div>
+      </td>
+      <td>
+        <p>A scheduling policy for a compute node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_TaskStateMonitor" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.taskstatemonitor">TaskStateMonitor</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.taskstatemonitor">TaskStateMonitor</a></div>
+      </td>
+      <td>
+        <p>Provides utilities to help monitor CloudTask states.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_TaskStatistics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.taskstatistics">TaskStatistics</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.taskstatistics">TaskStatistics</a></div>
+      </td>
+      <td>
+        <p>Resource usage statistics for the task.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_UsageStatistics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.usagestatistics">UsageStatistics</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.usagestatistics">UsageStatistics</a></div>
+      </td>
+      <td>
+        <p>Statistics related to pool usage data.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_UserAccount" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.useraccount">UserAccount</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.useraccount">UserAccount</a></div>
+      </td>
+      <td>
+        <p>Properties used to create a user on an Azure Batch node.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_UserIdentity" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.useridentity">UserIdentity</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.useridentity">UserIdentity</a></div>
+      </td>
+      <td>
+        <p>The definition of the user identity under which the task is run.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_Utilities" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.utilities">Utilities</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.utilities">Utilities</a></div>
+      </td>
+      <td>
+        <p>Tools and utilities for the Azure Batch Service.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_VirtualMachineConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.virtualmachineconfiguration">VirtualMachineConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.virtualmachineconfiguration">VirtualMachineConfiguration</a></div>
+      </td>
+      <td>
+        <p>The configuration for compute nodes in a pool based on the Azure Virtual Machines infrastructure.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_WindowsConfiguration" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.windowsconfiguration">WindowsConfiguration</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.windowsconfiguration">WindowsConfiguration</a></div>
+      </td>
+      <td>
+        <p>Windows operating system settings to apply to the virtual machine.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="interfaces">
+      <h2>Interfaces
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_Azure_Batch_IFileStagingArtifact" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.ifilestagingartifact">IFileStagingArtifact</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.ifilestagingartifact">IFileStagingArtifact</a></div>
+      </td>
+      <td>
+        <p>Contains information about a file staging process.  File staging is typically performed for
+a <a class="xref" href="microsoft.azure.batch.cloudtask">CloudTask</a> (see <a class="xref" href="microsoft.azure.batch.cloudtask#Microsoft_Azure_Batch_CloudTask_FilesToStage">FilesToStage</a>).</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_IInheritedBehaviors" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.iinheritedbehaviors">IInheritedBehaviors</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.iinheritedbehaviors">IInheritedBehaviors</a></div>
+      </td>
+      <td>
+        <p>Methods and properties that are inherited from the instantiating parent object.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_IPagedEnumerable_1" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.ipagedenumerable-1">IPagedEnumerable</a>&lt;T&gt;</div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.ipagedenumerable-1">IPagedEnumerable</a>(Of T)</div>
+      </td>
+      <td>
+        <p>Exposes enumerators for a paged collection. These enumerators support simple iteration over a paged collection of a specified type.</p>
+<p>Paged collections are backed by one or more calls to the Batch Service.<br>Each of these calls can return a variable sized page of data which is then consumed by the enumerator. </p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_IPagedEnumerator_1" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.ipagedenumerator-1">IPagedEnumerator</a>&lt;T&gt;</div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.ipagedenumerator-1">IPagedEnumerator</a>(Of T)</div>
+      </td>
+      <td>
+        <p>An enumerator which exposes an asynchronous mechanism for iteration.</p>
+<p>Enumerator instances are not threadsafe.</p>
+<p>Each enumerator fetches the collection from the server. 
+As a consequence, each enumerator can see different data (collection size, contents, etc.).</p>
+<p>Care should be taken to avoid multiple retrievals of the data from the server via casual use of foreach/ForeachAsync and other collection operations.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_IRefreshable" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.irefreshable">IRefreshable</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.irefreshable">IRefreshable</a></div>
+      </td>
+      <td>
+        <p>Provides a mechanism for refreshing a resource.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+    <header class="header enable-platform-filter" id="enums">
+      <h2>Enums
+    </h2>
+    </header>
+    
+    <table class="nameValue  enable-platform-filter">
+      <tr id="Microsoft_Azure_Batch_AddTaskResultStatus" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.addtaskresultstatus">AddTaskResultStatus</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.addtaskresultstatus">AddTaskResultStatus</a></div>
+      </td>
+      <td>
+        <p>Used by <a class="xref" href="microsoft.azure.batch.addtaskcollectionresulthandler">AddTaskCollectionResultHandler</a> to classify an <a class="xref" href="microsoft.azure.batch.addtaskresult">AddTaskResult</a> as successful or
+requiring a retry.</p>
+
+      </td>
+      </tr>
+      <tr id="Microsoft_Azure_Batch_ComputeNodeUserCommitSemantics" class="enable-platform-filter">
+      <td>
+          <div class="lang-csharp"><a class="xref" href="microsoft.azure.batch.computenodeusercommitsemantics">ComputeNodeUserCommitSemantics</a></div>
+          <div class="lang-vb"><a class="xref" href="microsoft.azure.batch.computenodeusercommitsemantics">ComputeNodeUserCommitSemantics</a></div>
+      </td>
+      <td>
+        <p>Informs the Commit() call that the state transfer between the client and server is 
+either a create-user or update-user operation.</p>
+
+      </td>
+      </tr>
+    </table>
+    
+
+          
+        </div>
+
+		  </div>
+
+      <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+      
+    </main>
+
+    <div id="footerPlaceholder"></div>
+
+    
+		<script src="_themes/javascript/3bcf2c9081582fac6994.reference.js"></script>
+  </body>
+</html>
